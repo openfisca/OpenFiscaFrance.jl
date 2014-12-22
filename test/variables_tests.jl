@@ -20,40 +20,19 @@
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 
-module OpenFiscaFrance
+PARENT1 = Role(1)
+PARENT2 = Role(2)
 
 
-export tax_benefit_system
-
-
-using Dates
-
-using OpenFiscaCore
-
-
-typealias Enumeration Dict{Int, String}
-
-
-variables_definition = VariableDefinition[]
-
-
-macro register_variable(variable_definition)
-  global variables_definition
-
-  return esc(:(push!(variables_definition, $variable_definition)))
-end
-
-
-famille = EntityDefinition("famille", index_variable_name = "idfam", role_variable_name ="quifam")
-foyer_fiscal = EntityDefinition("foyer_fiscal", index_variable_name = "idfoy", role_variable_name ="quifoy")
-individu = EntityDefinition("individu", is_person = true)
-menage = EntityDefinition("menage", index_variable_name = "idmen", role_variable_name ="quimen")
-
-
-include("input_variables.jl")
-
-
-tax_benefit_system = TaxBenefitSystem([famille, foyer_fiscal, individu, menage], variables_definition)
-
-
-end # module
+simulation = Simulation(tax_benefit_system, YearPeriod(2013))
+famille = get_entity(simulation, "famille")
+famille.count = 1
+famille.roles_count = 2
+famille.step_size = 1
+individu = get_entity(simulation, "individu")
+individu.count = 2
+individu.step_size = 2
+set_array_handle(simulation, "birth", [Date(1973, 1, 1), Date(1974, 1, 1)])
+set_array_handle(simulation, "idfam", [1, 1])
+set_array_handle(simulation, "quifam", [PARENT1, PARENT2])
+# @test_approx_eq(get_array(calculate(simulation, "age")), [Year(40), Year(39)])
