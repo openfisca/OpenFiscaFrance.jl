@@ -31,29 +31,45 @@ using Dates
 using OpenFiscaCore
 
 
-typealias Enumeration Dict{Int, String}
+# typealias Enumeration Dict{Int, String}
 
 
-variables_definition = VariableDefinition[]
+entity_definition_by_name = (String => EntityDefinition)[]
+variable_definition_by_name = (String => VariableDefinition)[]
 
 
-macro register_variable(variable_definition)
-  global variables_definition
-
-  return esc(:(push!(variables_definition, $variable_definition)))
+macro define_entity(entity, args...)
+  global entity_definition_by_name
+  entity_name = string(entity)
+  entity_definition = symbol(entity_name * "_definition")
+  return esc(quote
+    @assert !($entity_name in entity_definition_by_name)
+    $entity_definition = EntityDefinition($entity_name, $(args...))
+    entity_definition_by_name[$entity_name] = $entity_definition
+  end)
 end
 
 
-famille = EntityDefinition("famille", index_variable_name = "idfam", role_variable_name ="quifam")
-foyer_fiscal = EntityDefinition("foyer_fiscal", index_variable_name = "idfoy", role_variable_name ="quifoy")
-individu = EntityDefinition("individu", is_person = true)
-menage = EntityDefinition("menage", index_variable_name = "idmen", role_variable_name ="quimen")
+macro define_variable(variable, args...)
+  global variable_definition_by_name
+  variable_name = string(variable)
+  return esc(quote
+    @assert !($variable_name in variable_definition_by_name)
+    variable_definition_by_name[$variable_name] = VariableDefinition($variable_name, $(args...))
+  end)
+end
+
+
+@define_entity(famille, index_variable_name = "idfam", role_variable_name ="quifam")
+@define_entity(foyer_fiscal, index_variable_name = "idfoy", role_variable_name ="quifoy")
+@define_entity(individu, is_person = true)
+@define_entity(menage, index_variable_name = "idmen", role_variable_name ="quimen")
 
 
 include("input_variables.jl")
 
 
-tax_benefit_system = TaxBenefitSystem([famille, foyer_fiscal, individu, menage], variables_definition)
+tax_benefit_system = TaxBenefitSystem(entity_definition_by_name, variable_definition_by_name)
 
 
 end # module
