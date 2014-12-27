@@ -67,6 +67,7 @@ end
 
 
 include("input_variables.jl")
+include("parameters.jl")
 
 
 tax_benefit_system = TaxBenefitSystem(entity_definition_by_name, variable_definition_by_name)
