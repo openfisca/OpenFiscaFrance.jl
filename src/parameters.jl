@@ -26,7 +26,7 @@ al_R1_taux1 = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Taux pour 1 adulte",
+  description = "Allocations logement ; R1 (% du RMI) ; Taux pour 1 adulte",
 )
 
 al_R1_taux2 = Parameter{Float32}(
@@ -35,7 +35,7 @@ al_R1_taux2 = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Taux pour 2 adultes",
+  description = "Allocations logement ; R1 (% du RMI) ; Taux pour 2 adultes",
 )
 
 al_R1_taux3 = Parameter{Float32}(
@@ -44,7 +44,7 @@ al_R1_taux3 = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Taux pour 1 enfant",
+  description = "Allocations logement ; R1 (% du RMI) ; Taux pour 1 enfant",
 )
 
 al_R1_taux4 = Parameter{Float32}(
@@ -53,7 +53,7 @@ al_R1_taux4 = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Taux pour 2 enfants",
+  description = "Allocations logement ; R1 (% du RMI) ; Taux pour 2 enfants",
 )
 
 al_R1_taux5 = Parameter{Float32}(
@@ -62,7 +62,7 @@ al_R1_taux5 = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Taux par enfants supplémentaires",
+  description = "Allocations logement ; R1 (% du RMI) ; Taux par enfants supplémentaires",
 )
 
 al_R2_taux4 = Parameter{Float32}(
@@ -71,7 +71,7 @@ al_R2_taux4 = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Taux pour 2 enfants",
+  description = "Allocations logement ; R2 (% de la BMAF) ; Taux pour 2 enfants",
 )
 
 al_R2_taux5 = Parameter{Float32}(
@@ -80,7 +80,7 @@ al_R2_taux5 = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Taux par enfants supplémentaires",
+  description = "Allocations logement ; R2 (% de la BMAF) ; Taux par enfants supplémentaires",
 )
 
 al_TF_taux1 = Parameter{Float32}(
@@ -90,7 +90,7 @@ al_TF_taux1 = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Taux pour 1 adulte",
+  description = "Allocations logement ; Taux dépendant de la taille du ménage ; Taux pour 1 adulte",
 )
 
 al_TF_taux2 = Parameter{Float32}(
@@ -100,7 +100,7 @@ al_TF_taux2 = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Taux pour 2 adultes",
+  description = "Allocations logement ; Taux dépendant de la taille du ménage ; Taux pour 2 adultes",
 )
 
 al_TF_taux3 = Parameter{Float32}(
@@ -110,7 +110,7 @@ al_TF_taux3 = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Taux pour 1 enfant",
+  description = "Allocations logement ; Taux dépendant de la taille du ménage ; Taux pour 1 enfant",
 )
 
 al_TF_taux4 = Parameter{Float32}(
@@ -120,7 +120,7 @@ al_TF_taux4 = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Taux pour 2 enfants",
+  description = "Allocations logement ; Taux dépendant de la taille du ménage ; Taux pour 2 enfants",
 )
 
 al_TF_taux5 = Parameter{Float32}(
@@ -130,7 +130,7 @@ al_TF_taux5 = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Taux pour 3 enfants",
+  description = "Allocations logement ; Taux dépendant de la taille du ménage ; Taux pour 3 enfants",
 )
 
 al_TF_taux6 = Parameter{Float32}(
@@ -140,7 +140,7 @@ al_TF_taux6 = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Taux pour 4 enfants",
+  description = "Allocations logement ; Taux dépendant de la taille du ménage ; Taux pour 4 enfants",
 )
 
 al_TF_taux7 = Parameter{Float32}(
@@ -150,7 +150,7 @@ al_TF_taux7 = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Taux par enfant supplémentaire",
+  description = "Allocations logement ; Taux dépendant de la taille du ménage ; Taux par enfant supplémentaire",
 )
 
 al_TL_taux1 = Parameter{Float32}(
@@ -159,7 +159,7 @@ al_TL_taux1 = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Tranche 00-45%",
+  description = "Allocations logement ; Taux complémentaire ; Tranche 00-45%",
 )
 
 al_TL_taux2 = Parameter{Float32}(
@@ -169,7 +169,7 @@ al_TL_taux2 = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Tranche 45-75%",
+  description = "Allocations logement ; Taux complémentaire ; Tranche 45-75%",
 )
 
 al_TL_taux3 = Parameter{Float32}(
@@ -179,7 +179,7 @@ al_TL_taux3 = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Tranche 75-max",
+  description = "Allocations logement ; Taux complémentaire ; Tranche 75-max",
 )
 
 al_autres_D_enfch = Parameter{Int32}(
@@ -188,7 +188,7 @@ al_autres_D_enfch = Parameter{Int32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Enfants comptés à charge (pour scénario de réforme)",
+  description = "Allocations logement ; Autres dispositions communes ; Enfants comptés à charge (pour scénario de réforme)",
 )
 
 al_autres_abat_sal = Parameter{Float32}(
@@ -198,7 +198,7 @@ al_autres_abat_sal = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Abattement salarié",
+  description = "Allocations logement ; Autres dispositions communes ; Abattement salarié",
 )
 
 al_autres_nr_seuil = Parameter{Int32}(
@@ -209,7 +209,7 @@ al_autres_nr_seuil = Parameter{Int32}(
   unit = "currency",
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Seuil de non recouvrement",
+  description = "Allocations logement ; Autres dispositions communes ; Seuil de non recouvrement",
 )
 
 al_autres_nv_seuil = Parameter{Int32}(
@@ -221,7 +221,7 @@ al_autres_nv_seuil = Parameter{Int32}(
   unit = "currency",
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Seuil de non versement",
+  description = "Allocations logement ; Autres dispositions communes ; Seuil de non versement",
 )
 
 al_forfait_charges_fc1 = Parameter{Float32}(
@@ -239,7 +239,7 @@ al_forfait_charges_fc1 = Parameter{Float32}(
   unit = "currency",
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Cas général - isolé ou couple",
+  description = "Allocations logement ; Forfait de charge ; Cas général - isolé ou couple",
 )
 
 al_forfait_charges_fc2 = Parameter{Float32}(
@@ -257,7 +257,7 @@ al_forfait_charges_fc2 = Parameter{Float32}(
   unit = "currency",
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Cas général - par personne à charge supplémentaire",
+  description = "Allocations logement ; Forfait de charge ; Cas général - par personne à charge supplémentaire",
 )
 
 al_loyers_plafond_autre = Parameter{Float32}(
@@ -266,7 +266,7 @@ al_loyers_plafond_autre = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Si article L.351-15",
+  description = "Allocations logement ; Loyers plafond ; Si article L.351-15",
 )
 
 al_loyers_plafond_chambre = Parameter{Float32}(
@@ -275,7 +275,7 @@ al_loyers_plafond_chambre = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Si chambre",
+  description = "Allocations logement ; Loyers plafond ; Si chambre",
 )
 
 al_loyers_plafond_colocation = Parameter{Float32}(
@@ -284,7 +284,7 @@ al_loyers_plafond_colocation = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Si co-location",
+  description = "Allocations logement ; Loyers plafond ; Si co-location",
 )
 
 al_loyers_plafond_zone1_L1 = Parameter{Float32}(
@@ -304,7 +304,7 @@ al_loyers_plafond_zone1_L1 = Parameter{Float32}(
   unit = "currency",
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Zone 1 - 1 adulte",
+  description = "Allocations logement ; Loyers plafond ; Zone 1 ; Zone 1 - 1 adulte",
 )
 
 al_loyers_plafond_zone1_L2 = Parameter{Float32}(
@@ -324,7 +324,7 @@ al_loyers_plafond_zone1_L2 = Parameter{Float32}(
   unit = "currency",
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Zone 1 - 2 adultes",
+  description = "Allocations logement ; Loyers plafond ; Zone 1 ; Zone 1 - 2 adultes",
 )
 
 al_loyers_plafond_zone1_L3 = Parameter{Float32}(
@@ -344,7 +344,7 @@ al_loyers_plafond_zone1_L3 = Parameter{Float32}(
   unit = "currency",
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Zone 1 - 1 enfant",
+  description = "Allocations logement ; Loyers plafond ; Zone 1 ; Zone 1 - 1 enfant",
 )
 
 al_loyers_plafond_zone1_L4 = Parameter{Float32}(
@@ -364,7 +364,7 @@ al_loyers_plafond_zone1_L4 = Parameter{Float32}(
   unit = "currency",
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Zone 1 - enfants supplémentaires",
+  description = "Allocations logement ; Loyers plafond ; Zone 1 ; Zone 1 - enfants supplémentaires",
 )
 
 al_loyers_plafond_zone2_L1 = Parameter{Float32}(
@@ -384,7 +384,7 @@ al_loyers_plafond_zone2_L1 = Parameter{Float32}(
   unit = "currency",
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Zone 2 - 1 adulte",
+  description = "Allocations logement ; Loyers plafond ; Zone 2 ; Zone 2 - 1 adulte",
 )
 
 al_loyers_plafond_zone2_L2 = Parameter{Float32}(
@@ -404,7 +404,7 @@ al_loyers_plafond_zone2_L2 = Parameter{Float32}(
   unit = "currency",
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Zone 2 - 2 adultes",
+  description = "Allocations logement ; Loyers plafond ; Zone 2 ; Zone 2 - 2 adultes",
 )
 
 al_loyers_plafond_zone2_L3 = Parameter{Float32}(
@@ -424,7 +424,7 @@ al_loyers_plafond_zone2_L3 = Parameter{Float32}(
   unit = "currency",
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Zone 2 - 1 enfant",
+  description = "Allocations logement ; Loyers plafond ; Zone 2 ; Zone 2 - 1 enfant",
 )
 
 al_loyers_plafond_zone2_L4 = Parameter{Float32}(
@@ -444,7 +444,7 @@ al_loyers_plafond_zone2_L4 = Parameter{Float32}(
   unit = "currency",
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Zone 2 - enfants supplémentaires",
+  description = "Allocations logement ; Loyers plafond ; Zone 2 ; Zone 2 - enfants supplémentaires",
 )
 
 al_loyers_plafond_zone3_L1 = Parameter{Float32}(
@@ -464,7 +464,7 @@ al_loyers_plafond_zone3_L1 = Parameter{Float32}(
   unit = "currency",
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Zone 3 - 1 adulte",
+  description = "Allocations logement ; Loyers plafond ; Zone 3 ; Zone 3 - 1 adulte",
 )
 
 al_loyers_plafond_zone3_L2 = Parameter{Float32}(
@@ -484,7 +484,7 @@ al_loyers_plafond_zone3_L2 = Parameter{Float32}(
   unit = "currency",
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Zone 3 - 2 adultes",
+  description = "Allocations logement ; Loyers plafond ; Zone 3 ; Zone 3 - 2 adultes",
 )
 
 al_loyers_plafond_zone3_L3 = Parameter{Float32}(
@@ -504,7 +504,7 @@ al_loyers_plafond_zone3_L3 = Parameter{Float32}(
   unit = "currency",
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Zone 3 - 1 enfant",
+  description = "Allocations logement ; Loyers plafond ; Zone 3 ; Zone 3 - 1 enfant",
 )
 
 al_loyers_plafond_zone3_L4 = Parameter{Float32}(
@@ -524,7 +524,7 @@ al_loyers_plafond_zone3_L4 = Parameter{Float32}(
   unit = "currency",
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Zone 3 - enfants supplémentaires",
+  description = "Allocations logement ; Loyers plafond ; Zone 3 ; Zone 3 - enfants supplémentaires",
 )
 
 al_pp_min = Parameter{Float32}(
@@ -542,7 +542,7 @@ al_pp_min = Parameter{Float32}(
   unit = "currency",
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Participation minimale",
+  description = "Allocations logement ; Participation personnelle minimale ; Participation minimale",
 )
 
 al_pp_taux = Parameter{Float32}(
@@ -551,7 +551,7 @@ al_pp_taux = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Taux de participation",
+  description = "Allocations logement ; Participation personnelle minimale ; Taux de participation",
 )
 
 al_ressources_dar_1 = Parameter{Int32}(
@@ -562,7 +562,7 @@ al_ressources_dar_1 = Parameter{Int32}(
   unit = "currency",
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Abattement R. 351-6 (double activité)",
+  description = "Allocations logement ; Dispositions applicables aux ressources ; Abattement R. 351-6 (double activité)",
 )
 
 al_ressources_dar_10 = Parameter{Int32}(
@@ -575,7 +575,7 @@ al_ressources_dar_10 = Parameter{Int32}(
   unit = "currency",
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Abattement forfaitaire R351-11",
+  description = "Allocations logement ; Dispositions applicables aux ressources ; Abattement forfaitaire R351-11",
 )
 
 al_ressources_dar_2 = Parameter{Float32}(
@@ -588,7 +588,7 @@ al_ressources_dar_2 = Parameter{Float32}(
   unit = "currency",
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Plancher ressources APL en secteur accession R. 351-7-1",
+  description = "Allocations logement ; Dispositions applicables aux ressources ; Plancher ressources APL en secteur accession R. 351-7-1",
 )
 
 al_ressources_dar_2_2 = Parameter{Float32}(
@@ -599,7 +599,7 @@ al_ressources_dar_2_2 = Parameter{Float32}(
   unit = "currency",
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Plancher ressources AL en secteur accession R. 351-7-1",
+  description = "Allocations logement ; Dispositions applicables aux ressources ; Plancher ressources AL en secteur accession R. 351-7-1",
   comment = "non trouvé",
 )
 
@@ -610,7 +610,7 @@ al_ressources_dar_3 = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Coefficient R. 351-7-1",
+  description = "Allocations logement ; Dispositions applicables aux ressources ; Coefficient R. 351-7-1",
 )
 
 al_ressources_dar_4 = Parameter{Float32}(
@@ -626,7 +626,7 @@ al_ressources_dar_4 = Parameter{Float32}(
   unit = "currency",
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Montant R. 351-7-2",
+  description = "Allocations logement ; Dispositions applicables aux ressources ; Montant R. 351-7-2",
 )
 
 al_ressources_dar_5 = Parameter{Float32}(
@@ -639,7 +639,7 @@ al_ressources_dar_5 = Parameter{Float32}(
   unit = "currency",
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Minoration si titulaire d'une bourse de l'enseignement supérieur",
+  description = "Allocations logement ; Dispositions applicables aux ressources ; Minoration si titulaire d'une bourse de l'enseignement supérieur",
 )
 
 al_ressources_dar_6 = Parameter{Float32}(
@@ -653,7 +653,7 @@ al_ressources_dar_6 = Parameter{Float32}(
   unit = "currency",
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Demandes antérieures au 1er juillet",
+  description = "Allocations logement ; Dispositions applicables aux ressources ; Demandes antérieures au 1er juillet",
 )
 
 al_ressources_dar_7 = Parameter{Int32}(
@@ -665,7 +665,7 @@ al_ressources_dar_7 = Parameter{Int32}(
   unit = "currency",
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Majoration si 2 étudiants",
+  description = "Allocations logement ; Dispositions applicables aux ressources ; Majoration si 2 étudiants",
 )
 
 al_ressources_dar_8 = Parameter{Float32}(
@@ -681,7 +681,7 @@ al_ressources_dar_8 = Parameter{Float32}(
   unit = "currency",
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Montant 2ème alinéa du III de R. 351-7",
+  description = "Allocations logement ; Dispositions applicables aux ressources ; Montant 2ème alinéa du III de R. 351-7",
 )
 
 al_ressources_dar_9 = Parameter{Float32}(
@@ -697,7 +697,7 @@ al_ressources_dar_9 = Parameter{Float32}(
   unit = "currency",
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Montant 3ème alinéa du III de R. 351-7",
+  description = "Allocations logement ; Dispositions applicables aux ressources ; Montant 3ème alinéa du III de R. 351-7",
 )
 
 al_ressources_efress_dar_2a = Parameter{Float32}(
@@ -719,7 +719,7 @@ al_ressources_efress_dar_2a = Parameter{Float32}(
   unit = "currency",
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Évaluation forfaitaire des ressources pour un salarié R. 351-7",
+  description = "Allocations logement ; Dispositions applicables aux ressources ; Évaluation forfaitaire des ressources R. 351-7 ; Évaluation forfaitaire des ressources pour un salarié R. 351-7",
 )
 
 al_ressources_efress_dar_2b = Parameter{Float32}(
@@ -741,7 +741,7 @@ al_ressources_efress_dar_2b = Parameter{Float32}(
   unit = "currency",
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Évaluation forfaitaire des ressources pour un employeur ou un travailleur indépendant R. 351-7",
+  description = "Allocations logement ; Dispositions applicables aux ressources ; Évaluation forfaitaire des ressources R. 351-7 ; Évaluation forfaitaire des ressources pour un employeur ou un travailleur indépendant R. 351-7",
 )
 
 al_ressources_efress_dar_3a = Parameter{Float32}(
@@ -750,7 +750,7 @@ al_ressources_efress_dar_3a = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Coefficient multiplicateur du smic horaire brut au 31/12/n-2 (R. 351-7) pour un salarié",
+  description = "Allocations logement ; Dispositions applicables aux ressources ; Évaluation forfaitaire des ressources R. 351-7 ; Coefficient multiplicateur du smic horaire brut au 31/12/n-2 (R. 351-7) pour un salarié",
 )
 
 al_ressources_efress_dar_3b = Parameter{Float32}(
@@ -759,7 +759,7 @@ al_ressources_efress_dar_3b = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Coefficient multiplicateur du smic horaire brut au 01/07 précédent la date d'ouverture des droits (R. 351-7) pour un employeur ou un travailleur indépendant",
+  description = "Allocations logement ; Dispositions applicables aux ressources ; Évaluation forfaitaire des ressources R. 351-7 ; Coefficient multiplicateur du smic horaire brut au 01/07 précédent la date d'ouverture des droits (R. 351-7) pour un employeur ou un travailleur indépendant",
 )
 
 al_rmi = Parameter{Float32}(
@@ -784,7 +784,7 @@ al_rmi = Parameter{Float32}(
   unit = "currency",
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Revenu minimum d'insertion puis rsa socle n-2",
+  description = "Allocations logement ; Revenu minimum d'insertion puis rsa socle n-2",
 )
 
 bouclier_fiscal_taux = Parameter{Float32}(
@@ -794,7 +794,7 @@ bouclier_fiscal_taux = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Taux d'imposition maximal",
+  description = "Bouclier fiscal ; Taux d'imposition maximal",
 )
 
 bourses_education_bourse_college_coeff_enfant_supplementaire = Parameter{Float32}(
@@ -803,7 +803,7 @@ bourses_education_bourse_college_coeff_enfant_supplementaire = Parameter{Float32
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Coefficient à rajouter aux plafonds pour chaque enfant à charge",
+  description = "Bourses de l'Éducation nationale ; Bourse des collèges ; Coefficient à rajouter aux plafonds pour chaque enfant à charge",
 )
 
 bourses_education_bourse_college_montant_taux_1 = Parameter{Float32}(
@@ -813,7 +813,7 @@ bourses_education_bourse_college_montant_taux_1 = Parameter{Float32}(
   unit = "currency",
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Montant taux 1",
+  description = "Bourses de l'Éducation nationale ; Bourse des collèges ; Montant taux 1",
 )
 
 bourses_education_bourse_college_montant_taux_2 = Parameter{Float32}(
@@ -823,7 +823,7 @@ bourses_education_bourse_college_montant_taux_2 = Parameter{Float32}(
   unit = "currency",
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Montant taux 2",
+  description = "Bourses de l'Éducation nationale ; Bourse des collèges ; Montant taux 2",
 )
 
 bourses_education_bourse_college_montant_taux_3 = Parameter{Float32}(
@@ -833,7 +833,7 @@ bourses_education_bourse_college_montant_taux_3 = Parameter{Float32}(
   unit = "currency",
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Montant taux 3",
+  description = "Bourses de l'Éducation nationale ; Bourse des collèges ; Montant taux 3",
 )
 
 bourses_education_bourse_college_plafond_taux_1 = Parameter{Float32}(
@@ -843,7 +843,7 @@ bourses_education_bourse_college_plafond_taux_1 = Parameter{Float32}(
   unit = "currency",
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Plafond de référence pour le taux 1",
+  description = "Bourses de l'Éducation nationale ; Bourse des collèges ; Plafond de référence pour le taux 1",
 )
 
 bourses_education_bourse_college_plafond_taux_2 = Parameter{Float32}(
@@ -853,7 +853,7 @@ bourses_education_bourse_college_plafond_taux_2 = Parameter{Float32}(
   unit = "currency",
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Plafond de référence pour le taux 2",
+  description = "Bourses de l'Éducation nationale ; Bourse des collèges ; Plafond de référence pour le taux 2",
 )
 
 bourses_education_bourse_college_plafond_taux_3 = Parameter{Float32}(
@@ -863,7 +863,7 @@ bourses_education_bourse_college_plafond_taux_3 = Parameter{Float32}(
   unit = "currency",
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Plafond de référence pour le taux 3",
+  description = "Bourses de l'Éducation nationale ; Bourse des collèges ; Plafond de référence pour le taux 3",
 )
 
 cmu_abattement_chomage = Parameter{Float32}(
@@ -872,7 +872,7 @@ cmu_abattement_chomage = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Abattement sur les revenus d'activité en cas de chômage",
+  description = "Couverture Maladie Universelle ; Abattement sur les revenus d'activité en cas de chômage",
 )
 
 cmu_acs_16_49_ans = Parameter{Float32}(
@@ -882,7 +882,7 @@ cmu_acs_16_49_ans = Parameter{Float32}(
   unit = "currency",
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "ACS pour une personne âgée de 16 à 49 ans",
+  description = "Couverture Maladie Universelle ; ACS pour une personne âgée de 16 à 49 ans",
 )
 
 cmu_acs_50_59_ans = Parameter{Float32}(
@@ -892,7 +892,7 @@ cmu_acs_50_59_ans = Parameter{Float32}(
   unit = "currency",
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "ACS pour une personne âgée de 50 à 59 ans",
+  description = "Couverture Maladie Universelle ; ACS pour une personne âgée de 50 à 59 ans",
 )
 
 cmu_acs_moins_16_ans = Parameter{Float32}(
@@ -902,7 +902,7 @@ cmu_acs_moins_16_ans = Parameter{Float32}(
   unit = "currency",
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "ACS pour une personne âgée de moins de 16 ans",
+  description = "Couverture Maladie Universelle ; ACS pour une personne âgée de moins de 16 ans",
 )
 
 cmu_acs_plus_60_ans = Parameter{Float32}(
@@ -913,7 +913,7 @@ cmu_acs_plus_60_ans = Parameter{Float32}(
   unit = "currency",
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "ACS pour une personne âgée de plus de 60 ans",
+  description = "Couverture Maladie Universelle ; ACS pour une personne âgée de plus de 60 ans",
 )
 
 cmu_age_limite_pac = Parameter{Int32}(
@@ -922,7 +922,7 @@ cmu_age_limite_pac = Parameter{Int32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Âge limite des personnes à charge",
+  description = "Couverture Maladie Universelle ; Âge limite des personnes à charge",
 )
 
 cmu_coeff_p2 = Parameter{Float32}(
@@ -931,7 +931,7 @@ cmu_coeff_p2 = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Coefficient de majoration pour une deuxième personne",
+  description = "Couverture Maladie Universelle ; Coefficient de majoration pour une deuxième personne",
 )
 
 cmu_coeff_p3_p4 = Parameter{Float32}(
@@ -940,7 +940,7 @@ cmu_coeff_p3_p4 = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Coefficient de majoration pour une troisième ou quatrième personne",
+  description = "Couverture Maladie Universelle ; Coefficient de majoration pour une troisième ou quatrième personne",
 )
 
 cmu_coeff_p5_plus = Parameter{Float32}(
@@ -949,7 +949,7 @@ cmu_coeff_p5_plus = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Coefficient de majoration par personne supplémentaire",
+  description = "Couverture Maladie Universelle ; Coefficient de majoration par personne supplémentaire",
 )
 
 cmu_forfait_logement_taux_1p = Parameter{Float32}(
@@ -958,7 +958,7 @@ cmu_forfait_logement_taux_1p = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Pourcentage du RSA socle pour une personne (pour une personne)",
+  description = "Couverture Maladie Universelle ; Forfait logement pour propriétaire ou occupant à titre gratuit ; Pourcentage du RSA socle pour une personne (pour une personne)",
 )
 
 cmu_forfait_logement_taux_2p = Parameter{Float32}(
@@ -967,7 +967,7 @@ cmu_forfait_logement_taux_2p = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Pourcentage du RSA socle pour deux personnes (pour deux personnes)",
+  description = "Couverture Maladie Universelle ; Forfait logement pour propriétaire ou occupant à titre gratuit ; Pourcentage du RSA socle pour deux personnes (pour deux personnes)",
 )
 
 cmu_forfait_logement_taux_3p_plus = Parameter{Float32}(
@@ -976,7 +976,7 @@ cmu_forfait_logement_taux_3p_plus = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Pourcentage du RSA socle pour trois personnes (pour trois et plus personnes)",
+  description = "Couverture Maladie Universelle ; Forfait logement pour propriétaire ou occupant à titre gratuit ; Pourcentage du RSA socle pour trois personnes (pour trois et plus personnes)",
 )
 
 cmu_forfait_logement_al_taux_1p = Parameter{Float32}(
@@ -985,7 +985,7 @@ cmu_forfait_logement_al_taux_1p = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Pourcentage du RSA socle pour une personne (pour une personne)",
+  description = "Couverture Maladie Universelle ; Forfait logement pour bénéficiaire d'une aide au logement ; Pourcentage du RSA socle pour une personne (pour une personne)",
 )
 
 cmu_forfait_logement_al_taux_2p = Parameter{Float32}(
@@ -995,7 +995,7 @@ cmu_forfait_logement_al_taux_2p = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Pourcentage du RSA socle pour deux personnes (pour deux personnes)",
+  description = "Couverture Maladie Universelle ; Forfait logement pour bénéficiaire d'une aide au logement ; Pourcentage du RSA socle pour deux personnes (pour deux personnes)",
 )
 
 cmu_forfait_logement_al_taux_3p_plus = Parameter{Float32}(
@@ -1005,7 +1005,7 @@ cmu_forfait_logement_al_taux_3p_plus = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Pourcentage du RSA socle pour trois personnes (pour trois et plus personnes)",
+  description = "Couverture Maladie Universelle ; Forfait logement pour bénéficiaire d'une aide au logement ; Pourcentage du RSA socle pour trois personnes (pour trois et plus personnes)",
 )
 
 cmu_majoration_dom = Parameter{Float32}(
@@ -1014,7 +1014,7 @@ cmu_majoration_dom = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Coefficient de majoration du plafond CMU applicable aux DOM",
+  description = "Couverture Maladie Universelle ; Coefficient de majoration du plafond CMU applicable aux DOM",
 )
 
 cmu_majoration_plafond_acs = Parameter{Float32}(
@@ -1026,7 +1026,7 @@ cmu_majoration_plafond_acs = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Majoration pour du plafond CMU pour l'ACS",
+  description = "Couverture Maladie Universelle ; Majoration pour du plafond CMU pour l'ACS",
 )
 
 cmu_plafond_base = Parameter{Float32}(
@@ -1047,7 +1047,7 @@ cmu_plafond_base = Parameter{Float32}(
   unit = "currency",
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Plafond annuel pour une personne seule",
+  description = "Couverture Maladie Universelle ; Plafond annuel pour une personne seule",
 )
 
 cotsoc_accident_eleve = Parameter{Float32}(
@@ -1056,7 +1056,8 @@ cotsoc_accident_eleve = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Accident du travail (taux eleve)",
+  description = "Cotisations sociales ; Accident du travail ; Accident du travail (taux eleve)",
+  comment = "Wild distinction between the rates. TODO: handle the extreme diversity...",
 )
 
 cotsoc_accident_faible = Parameter{Float32}(
@@ -1066,7 +1067,8 @@ cotsoc_accident_faible = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Accident du travail (taux bureau)",
+  description = "Cotisations sociales ; Accident du travail ; Accident du travail (taux bureau)",
+  comment = "Wild distinction between the rates. TODO: handle the extreme diversity...",
 )
 
 cotsoc_accident_moyen = Parameter{Float32}(
@@ -1075,7 +1077,8 @@ cotsoc_accident_moyen = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Accident du travail (taux moyen)",
+  description = "Cotisations sociales ; Accident du travail ; Accident du travail (taux moyen)",
+  comment = "Wild distinction between the rates. TODO: handle the extreme diversity...",
 )
 
 cotsoc_accident_treseleve = Parameter{Float32}(
@@ -1084,7 +1087,8 @@ cotsoc_accident_treseleve = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Accident du travail (taux tres eleve)",
+  description = "Cotisations sociales ; Accident du travail ; Accident du travail (taux tres eleve)",
+  comment = "Wild distinction between the rates. TODO: handle the extreme diversity...",
 )
 
 cotsoc_assiette_cantines_titres_restaurants_seuil_prix_titre = Parameter{Float32}(
@@ -1094,7 +1098,7 @@ cotsoc_assiette_cantines_titres_restaurants_seuil_prix_titre = Parameter{Float32
   unit = "currency",
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Taux de prise en charge par l'entreprise maximum pour non intégration dans l'assiette des cotisations sociales",
+  description = "Cotisations sociales ; Paramètres régissant l'assiette des cotisations sociales ; Cantines et titres restaurants ; Taux de prise en charge par l'entreprise maximum pour non intégration dans l'assiette des cotisations sociales",
 )
 
 cotsoc_assiette_cantines_titres_restaurants_taux_maximum_exoneration = Parameter{Float32}(
@@ -1103,7 +1107,7 @@ cotsoc_assiette_cantines_titres_restaurants_taux_maximum_exoneration = Parameter
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Taux de prise en charge par l'entreprise maximum pour non intégration dans l'assiette des cotisations sociales",
+  description = "Cotisations sociales ; Paramètres régissant l'assiette des cotisations sociales ; Cantines et titres restaurants ; Taux de prise en charge par l'entreprise maximum pour non intégration dans l'assiette des cotisations sociales",
 )
 
 cotsoc_assiette_cantines_titres_restaurants_taux_minimum_exoneration = Parameter{Float32}(
@@ -1112,7 +1116,7 @@ cotsoc_assiette_cantines_titres_restaurants_taux_minimum_exoneration = Parameter
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Taux de prise en charge par l'entreprise minimum pour non intégration dans l'assiette des cotisations sociales",
+  description = "Cotisations sociales ; Paramètres régissant l'assiette des cotisations sociales ; Cantines et titres restaurants ; Taux de prise en charge par l'entreprise minimum pour non intégration dans l'assiette des cotisations sociales",
 )
 
 cotsoc_conge_individuel_formation_cdd = Parameter{Float32}(
@@ -1121,7 +1125,8 @@ cotsoc_conge_individuel_formation_cdd = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Taux pour les salariés en contrat à durée déterminée",
+  description = "Cotisations sociales ; Congé individuel de formation ; Taux pour les salariés en contrat à durée déterminée",
+  comment = "TODO: find a better place",
 )
 
 cotsoc_contribution_supplementaire_apprentissage_entre_1_2_pc_alternants = Parameter{Float32}(
@@ -1131,7 +1136,8 @@ cotsoc_contribution_supplementaire_apprentissage_entre_1_2_pc_alternants = Param
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Taux pour les entreprises comprenant 1%  à 2% d'atlernants",
+  description = "Cotisations sociales ; Contribution supplémentaire d'apprentissage ; Taux pour les entreprises comprenant 1%  à 2% d'atlernants",
+  comment = "TODO: find a better place",
 )
 
 cotsoc_contribution_supplementaire_apprentissage_entre_2_3_pc_alternants = Parameter{Float32}(
@@ -1140,7 +1146,8 @@ cotsoc_contribution_supplementaire_apprentissage_entre_2_3_pc_alternants = Param
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Taux pour les entreprises comprenant 1%  à 2% d'atlernants",
+  description = "Cotisations sociales ; Contribution supplémentaire d'apprentissage ; Taux pour les entreprises comprenant 1%  à 2% d'atlernants",
+  comment = "TODO: find a better place",
 )
 
 cotsoc_contribution_supplementaire_apprentissage_entre_3_4_pc_alternants = Parameter{Float32}(
@@ -1149,7 +1156,8 @@ cotsoc_contribution_supplementaire_apprentissage_entre_3_4_pc_alternants = Param
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Taux pour les entreprises comprenant 1%  à 2% d'atlernants",
+  description = "Cotisations sociales ; Contribution supplémentaire d'apprentissage ; Taux pour les entreprises comprenant 1%  à 2% d'atlernants",
+  comment = "TODO: find a better place",
 )
 
 cotsoc_contribution_supplementaire_apprentissage_entre_4_5_pc_alternants = Parameter{Float32}(
@@ -1159,7 +1167,8 @@ cotsoc_contribution_supplementaire_apprentissage_entre_4_5_pc_alternants = Param
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Taux pour les entreprises comprenant 1%  à 2% d'atlernants",
+  description = "Cotisations sociales ; Contribution supplémentaire d'apprentissage ; Taux pour les entreprises comprenant 1%  à 2% d'atlernants",
+  comment = "TODO: find a better place",
 )
 
 cotsoc_contribution_supplementaire_apprentissage_moins_2000_moins_1pc_alternants = Parameter{Float32}(
@@ -1169,7 +1178,8 @@ cotsoc_contribution_supplementaire_apprentissage_moins_2000_moins_1pc_alternants
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Taux pour les entreprises de moins de 2000 salariés et avec moins de 1% d'atlernants",
+  description = "Cotisations sociales ; Contribution supplémentaire d'apprentissage ; Taux pour les entreprises de moins de 2000 salariés et avec moins de 1% d'atlernants",
+  comment = "TODO: find a better place",
 )
 
 cotsoc_contribution_supplementaire_apprentissage_plus_2000_moins_1pc_alternants = Parameter{Float32}(
@@ -1179,7 +1189,8 @@ cotsoc_contribution_supplementaire_apprentissage_plus_2000_moins_1pc_alternants 
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Taux pour les entreprises de plus de 2000 salariés et avec moins de 1% d'atlernants",
+  description = "Cotisations sociales ; Contribution supplémentaire d'apprentissage ; Taux pour les entreprises de plus de 2000 salariés et avec moins de 1% d'atlernants",
+  comment = "TODO: find a better place",
 )
 
 cotsoc_contribution_supplementaire_apprentissage_plus_de_250 = Parameter{Float32}(
@@ -1189,7 +1200,8 @@ cotsoc_contribution_supplementaire_apprentissage_plus_de_250 = Parameter{Float32
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Taux pour les entreprises comprenant plus de 250 salariés",
+  description = "Cotisations sociales ; Contribution supplémentaire d'apprentissage ; Taux pour les entreprises comprenant plus de 250 salariés",
+  comment = "TODO: find a better place",
 )
 
 cotsoc_exo_bas_sal_cice_max = Parameter{Float32}(
@@ -1198,7 +1210,7 @@ cotsoc_exo_bas_sal_cice_max = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Plafond",
+  description = "Cotisations sociales ; Exonération sur les bas salaires ; Crédit d'impot compétitivité emploi ; Plafond",
 )
 
 cotsoc_exo_bas_sal_cice_taux = Parameter{Float32}(
@@ -1208,7 +1220,7 @@ cotsoc_exo_bas_sal_cice_taux = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Taux du CICE",
+  description = "Cotisations sociales ; Exonération sur les bas salaires ; Crédit d'impot compétitivité emploi ; Taux du CICE",
 )
 
 cotsoc_exo_bas_sal_fillon_seuil = Parameter{Float32}(
@@ -1217,7 +1229,7 @@ cotsoc_exo_bas_sal_fillon_seuil = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Point de sortie (en smic)",
+  description = "Cotisations sociales ; Exonération sur les bas salaires ; Exonération Fillon ; Point de sortie (en smic)",
 )
 
 cotsoc_exo_bas_sal_fillon_tx_max = Parameter{Float32}(
@@ -1226,7 +1238,7 @@ cotsoc_exo_bas_sal_fillon_tx_max = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Taux maximum (plus de 20 salariés)",
+  description = "Cotisations sociales ; Exonération sur les bas salaires ; Exonération Fillon ; Taux maximum (plus de 20 salariés)",
 )
 
 cotsoc_exo_bas_sal_fillon_tx_max2 = Parameter{Float32}(
@@ -1236,7 +1248,7 @@ cotsoc_exo_bas_sal_fillon_tx_max2 = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Taux maximum (moins de 20 salariés)",
+  description = "Cotisations sociales ; Exonération sur les bas salaires ; Exonération Fillon ; Taux maximum (moins de 20 salariés)",
 )
 
 cotsoc_gen_plaf_ss = Parameter{Int32}(
@@ -1259,7 +1271,7 @@ cotsoc_gen_plaf_ss = Parameter{Int32}(
   unit = "currency",
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Plafond de la sécurité sociale",
+  description = "Cotisations sociales ; Paramètres généraux ; Plafond de la sécurité sociale",
 )
 
 cotsoc_gen_plaf_th_1 = Parameter{Int32}(
@@ -1279,7 +1291,7 @@ cotsoc_gen_plaf_th_1 = Parameter{Int32}(
   unit = "currency",
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Plafond d'exonération de la taxe d'habitation: première part",
+  description = "Cotisations sociales ; Paramètres généraux ; Plafond d'exonération de la taxe d'habitation: première part",
 )
 
 cotsoc_gen_plaf_th_1_dom = Parameter{Int32}(
@@ -1299,7 +1311,7 @@ cotsoc_gen_plaf_th_1_dom = Parameter{Int32}(
   unit = "currency",
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Plafond d'exonération de la taxe d'habitation: première part DOM",
+  description = "Cotisations sociales ; Paramètres généraux ; Plafond d'exonération de la taxe d'habitation: première part DOM",
 )
 
 cotsoc_gen_plaf_th_1_guy = Parameter{Int32}(
@@ -1319,7 +1331,7 @@ cotsoc_gen_plaf_th_1_guy = Parameter{Int32}(
   unit = "currency",
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Plafond d'exonération de la taxe d'habitation: première part Guyane",
+  description = "Cotisations sociales ; Paramètres généraux ; Plafond d'exonération de la taxe d'habitation: première part Guyane",
 )
 
 cotsoc_gen_plaf_th_supp = Parameter{Int32}(
@@ -1339,7 +1351,7 @@ cotsoc_gen_plaf_th_supp = Parameter{Int32}(
   unit = "currency",
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Plafond d'exonération de la taxe d'habitation: demi-part supplémentaire",
+  description = "Cotisations sociales ; Paramètres généraux ; Plafond d'exonération de la taxe d'habitation: demi-part supplémentaire",
 )
 
 cotsoc_gen_plaf_th_supp1_dom = Parameter{Int32}(
@@ -1359,7 +1371,7 @@ cotsoc_gen_plaf_th_supp1_dom = Parameter{Int32}(
   unit = "currency",
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Plafond d'exonération de la taxe d'habitation: 1ère demi-part supplémentaire DOM",
+  description = "Cotisations sociales ; Paramètres généraux ; Plafond d'exonération de la taxe d'habitation: 1ère demi-part supplémentaire DOM",
 )
 
 cotsoc_gen_plaf_th_supp1_guy = Parameter{Int32}(
@@ -1379,7 +1391,7 @@ cotsoc_gen_plaf_th_supp1_guy = Parameter{Int32}(
   unit = "currency",
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Plafond d'exonération de la taxe d'habitation: 1ère demi-part supplémentaire Guyane",
+  description = "Cotisations sociales ; Paramètres généraux ; Plafond d'exonération de la taxe d'habitation: 1ère demi-part supplémentaire Guyane",
 )
 
 cotsoc_gen_smic_h_b = Parameter{Float32}(
@@ -1405,7 +1417,7 @@ cotsoc_gen_smic_h_b = Parameter{Float32}(
   unit = "currency",
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "SMIC horaire brut",
+  description = "Cotisations sociales ; Paramètres généraux ; SMIC horaire brut",
 )
 
 cotsoc_microsocial_cipav = Parameter{Float32}(
@@ -1414,7 +1426,7 @@ cotsoc_microsocial_cipav = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Taux professions libérales relevant du  CIPAV",
+  description = "Cotisations sociales ; Cotisations sociales pour régime micro-social ; Taux professions libérales relevant du  CIPAV",
 )
 
 cotsoc_microsocial_rsi = Parameter{Float32}(
@@ -1423,7 +1435,7 @@ cotsoc_microsocial_rsi = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Taux professions libérales relevant du RSI",
+  description = "Cotisations sociales ; Cotisations sociales pour régime micro-social ; Taux professions libérales relevant du RSI",
 )
 
 cotsoc_microsocial_servi = Parameter{Float32}(
@@ -1432,7 +1444,7 @@ cotsoc_microsocial_servi = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Taux pour les activités de prestations et de services",
+  description = "Cotisations sociales ; Cotisations sociales pour régime micro-social ; Taux pour les activités de prestations et de services",
 )
 
 cotsoc_microsocial_vente = Parameter{Float32}(
@@ -1441,10 +1453,10 @@ cotsoc_microsocial_vente = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Taux pour les activités de ventes",
+  description = "Cotisations sociales ; Cotisations sociales pour régime micro-social ; Taux pour les activités de ventes",
 )
 
-cotsoc_pat_cadre_agffc = RateTaxScale(
+cotsoc_pat_cadre_agffc = MarginalRateScale(
   [
     RateBracket(
       threshold = [
@@ -1473,10 +1485,10 @@ cotsoc_pat_cadre_agffc = RateTaxScale(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "AGFF",
+  description = "Cotisations sociales ; Patronales ; Spécifiques aux cadres ; AGFF",
 )
 
-cotsoc_pat_cadre_apec = RateTaxScale(
+cotsoc_pat_cadre_apec = MarginalRateScale(
   [
     RateBracket(
       threshold = [
@@ -1507,10 +1519,10 @@ cotsoc_pat_cadre_apec = RateTaxScale(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Chômage: APEC",
+  description = "Cotisations sociales ; Patronales ; Spécifiques aux cadres ; Chômage: APEC",
 )
 
-cotsoc_pat_cadre_arrco = RateTaxScale(
+cotsoc_pat_cadre_arrco = MarginalRateScale(
   [
     RateBracket(
       threshold = [
@@ -1595,10 +1607,10 @@ cotsoc_pat_cadre_arrco = RateTaxScale(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Retraite complémentaire",
+  description = "Cotisations sociales ; Patronales ; Spécifiques aux cadres ; Retraite complémentaire",
 )
 
-cotsoc_pat_cadre_cet = RateTaxScale(
+cotsoc_pat_cadre_cet = MarginalRateScale(
   [
     RateBracket(
       threshold = [
@@ -1627,10 +1639,10 @@ cotsoc_pat_cadre_cet = RateTaxScale(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Cotisation exceptionnelle temporaire",
+  description = "Cotisations sociales ; Patronales ; Spécifiques aux cadres ; Cotisation exceptionnelle temporaire",
 )
 
-cotsoc_pat_commun_apprentissage_node_apprentissage = RateTaxScale(
+cotsoc_pat_commun_apprentissage_node_apprentissage = MarginalRateScale(
   [
     RateBracket(
       threshold = [
@@ -1643,10 +1655,10 @@ cotsoc_pat_commun_apprentissage_node_apprentissage = RateTaxScale(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Taxe d'apprentissage (toutes entreprises)",
+  description = "Cotisations sociales ; Patronales ; Communes aux cadres et non cadres ; Taxes d'apprentissages ; Taxe d'apprentissage (toutes entreprises)",
 )
 
-cotsoc_pat_commun_apprentissage_node_apprentissage_250 = RateTaxScale(
+cotsoc_pat_commun_apprentissage_node_apprentissage_250 = MarginalRateScale(
   [
     RateBracket(
       threshold = [
@@ -1659,10 +1671,10 @@ cotsoc_pat_commun_apprentissage_node_apprentissage_250 = RateTaxScale(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Taxe d'apprentissage (plus de 250 salariés)",
+  description = "Cotisations sociales ; Patronales ; Communes aux cadres et non cadres ; Taxes d'apprentissages ; Taxe d'apprentissage (plus de 250 salariés)",
 )
 
-cotsoc_pat_commun_apprentissage_node_apprentissage_add = RateTaxScale(
+cotsoc_pat_commun_apprentissage_node_apprentissage_add = MarginalRateScale(
   [
     RateBracket(
       threshold = [
@@ -1679,10 +1691,10 @@ cotsoc_pat_commun_apprentissage_node_apprentissage_add = RateTaxScale(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Contribution additionnelle au développement de l'apprentissage (toutes entreprises)",
+  description = "Cotisations sociales ; Patronales ; Communes aux cadres et non cadres ; Taxes d'apprentissages ; Contribution additionnelle au développement de l'apprentissage (toutes entreprises)",
 )
 
-cotsoc_pat_commun_assedic = RateTaxScale(
+cotsoc_pat_commun_assedic = MarginalRateScale(
   [
     RateBracket(
       threshold = [
@@ -1723,10 +1735,10 @@ cotsoc_pat_commun_assedic = RateTaxScale(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Chômage ASSEDIC (non cadres et cadres)",
+  description = "Cotisations sociales ; Patronales ; Communes aux cadres et non cadres ; Chômage ASSEDIC (non cadres et cadres)",
 )
 
-cotsoc_pat_commun_chomfg = RateTaxScale(
+cotsoc_pat_commun_chomfg = MarginalRateScale(
   [
     RateBracket(
       threshold = [
@@ -1775,10 +1787,10 @@ cotsoc_pat_commun_chomfg = RateTaxScale(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Chômage: fond national de garantie des salaires (FNGS)",
+  description = "Cotisations sociales ; Patronales ; Communes aux cadres et non cadres ; Chômage: fond national de garantie des salaires (FNGS)",
 )
 
-cotsoc_pat_commun_construction_node_construction_20 = RateTaxScale(
+cotsoc_pat_commun_construction_node_construction_20 = MarginalRateScale(
   [
     RateBracket(
       threshold = [
@@ -1791,10 +1803,10 @@ cotsoc_pat_commun_construction_node_construction_20 = RateTaxScale(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Effort à la construction (plus de 20 salariés)",
+  description = "Cotisations sociales ; Patronales ; Communes aux cadres et non cadres ; Effort à la construction ; Effort à la construction (plus de 20 salariés)",
 )
 
-cotsoc_pat_commun_csa = RateTaxScale(
+cotsoc_pat_commun_csa = MarginalRateScale(
   [
     RateBracket(
       threshold = [
@@ -1807,10 +1819,10 @@ cotsoc_pat_commun_csa = RateTaxScale(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Contribution solidarité autonomie (dépendance)",
+  description = "Cotisations sociales ; Patronales ; Communes aux cadres et non cadres ; Contribution solidarité autonomie (dépendance)",
 )
 
-cotsoc_pat_commun_famille = RateTaxScale(
+cotsoc_pat_commun_famille = MarginalRateScale(
   [
     RateBracket(
       threshold = [
@@ -1825,10 +1837,10 @@ cotsoc_pat_commun_famille = RateTaxScale(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Allocation familiales",
+  description = "Cotisations sociales ; Patronales ; Communes aux cadres et non cadres ; Allocation familiales",
 )
 
-cotsoc_pat_commun_fnal1 = RateTaxScale(
+cotsoc_pat_commun_fnal1 = MarginalRateScale(
   [
     RateBracket(
       threshold = [
@@ -1849,10 +1861,10 @@ cotsoc_pat_commun_fnal1 = RateTaxScale(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Fonds national action logement (FNAL, tout employeur)",
+  description = "Cotisations sociales ; Patronales ; Communes aux cadres et non cadres ; Fonds national action logement (FNAL, tout employeur)",
 )
 
-cotsoc_pat_commun_fnal2 = RateTaxScale(
+cotsoc_pat_commun_fnal2 = MarginalRateScale(
   [
     RateBracket(
       threshold = [
@@ -1875,10 +1887,10 @@ cotsoc_pat_commun_fnal2 = RateTaxScale(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Fonds national action logement (FNAL, plus de 20 salariés)",
+  description = "Cotisations sociales ; Patronales ; Communes aux cadres et non cadres ; Fonds national action logement (FNAL, plus de 20 salariés)",
 )
 
-cotsoc_pat_commun_formprof_node_formprof_09 = RateTaxScale(
+cotsoc_pat_commun_formprof_node_formprof_09 = MarginalRateScale(
   [
     RateBracket(
       threshold = [
@@ -1895,10 +1907,10 @@ cotsoc_pat_commun_formprof_node_formprof_09 = RateTaxScale(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Formation professionnelle (0-9 salaries)",
+  description = "Cotisations sociales ; Patronales ; Communes aux cadres et non cadres ; Formation professionnelle ; Formation professionnelle (0-9 salaries)",
 )
 
-cotsoc_pat_commun_formprof_node_formprof_1019 = RateTaxScale(
+cotsoc_pat_commun_formprof_node_formprof_1019 = MarginalRateScale(
   [
     RateBracket(
       threshold = [
@@ -1917,10 +1929,10 @@ cotsoc_pat_commun_formprof_node_formprof_1019 = RateTaxScale(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Formation professionnelle (10-19 salaries)",
+  description = "Cotisations sociales ; Patronales ; Communes aux cadres et non cadres ; Formation professionnelle ; Formation professionnelle (10-19 salaries)",
 )
 
-cotsoc_pat_commun_formprof_node_formprof_20 = RateTaxScale(
+cotsoc_pat_commun_formprof_node_formprof_20 = MarginalRateScale(
   [
     RateBracket(
       threshold = [
@@ -1937,10 +1949,10 @@ cotsoc_pat_commun_formprof_node_formprof_20 = RateTaxScale(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Formation professionnelle (plus de 20 salariés)",
+  description = "Cotisations sociales ; Patronales ; Communes aux cadres et non cadres ; Formation professionnelle ; Formation professionnelle (plus de 20 salariés)",
 )
 
-cotsoc_pat_commun_maladie = RateTaxScale(
+cotsoc_pat_commun_maladie = MarginalRateScale(
   [
     RateBracket(
       threshold = [
@@ -1953,10 +1965,10 @@ cotsoc_pat_commun_maladie = RateTaxScale(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Maladie, maternité, invalidité, décès",
+  description = "Cotisations sociales ; Patronales ; Communes aux cadres et non cadres ; Maladie, maternité, invalidité, décès",
 )
 
-cotsoc_pat_commun_transport = RateTaxScale(
+cotsoc_pat_commun_transport = MarginalRateScale(
   [
     RateBracket(
       threshold = [
@@ -1969,10 +1981,10 @@ cotsoc_pat_commun_transport = RateTaxScale(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Transport (valeur non différenciée selon la localité, Lyon reférence)",
+  description = "Cotisations sociales ; Patronales ; Communes aux cadres et non cadres ; Transport (valeur non différenciée selon la localité, Lyon reférence)",
 )
 
-cotsoc_pat_commun_vieillessedeplaf = RateTaxScale(
+cotsoc_pat_commun_vieillessedeplaf = MarginalRateScale(
   [
     RateBracket(
       threshold = [
@@ -1987,10 +1999,10 @@ cotsoc_pat_commun_vieillessedeplaf = RateTaxScale(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Vieillesse déplafonnée",
+  description = "Cotisations sociales ; Patronales ; Communes aux cadres et non cadres ; Vieillesse déplafonnée",
 )
 
-cotsoc_pat_commun_vieillesseplaf = RateTaxScale(
+cotsoc_pat_commun_vieillesseplaf = MarginalRateScale(
   [
     RateBracket(
       threshold = [
@@ -2021,10 +2033,10 @@ cotsoc_pat_commun_vieillesseplaf = RateTaxScale(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Vieillesse plafonnée (régime de base)",
+  description = "Cotisations sociales ; Patronales ; Communes aux cadres et non cadres ; Vieillesse plafonnée (régime de base)",
 )
 
-cotsoc_pat_fonc_colloc_atiacl = RateTaxScale(
+cotsoc_pat_fonc_colloc_atiacl = MarginalRateScale(
   [
     RateBracket(
       threshold = [
@@ -2039,10 +2051,10 @@ cotsoc_pat_fonc_colloc_atiacl = RateTaxScale(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Allocations temporaires d'invalidité (hors NBI)",
+  description = "Cotisations sociales ; Patronales ; Spécifiques à la fonction publique ; Collectivités locales - Fonction publique hospitalière ; Allocations temporaires d'invalidité (hors NBI)",
 )
 
-cotsoc_pat_fonc_colloc_cnracl = RateTaxScale(
+cotsoc_pat_fonc_colloc_cnracl = MarginalRateScale(
   [
     RateBracket(
       threshold = [
@@ -2075,10 +2087,10 @@ cotsoc_pat_fonc_colloc_cnracl = RateTaxScale(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Retraites des agents des collectivités locales",
+  description = "Cotisations sociales ; Patronales ; Spécifiques à la fonction publique ; Collectivités locales - Fonction publique hospitalière ; Retraites des agents des collectivités locales",
 )
 
-cotsoc_pat_fonc_colloc_hospitaliere_feh = RateTaxScale(
+cotsoc_pat_fonc_colloc_hospitaliere_feh = MarginalRateScale(
   [
     RateBracket(
       threshold = [
@@ -2097,10 +2109,10 @@ cotsoc_pat_fonc_colloc_hospitaliere_feh = RateTaxScale(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Fonds pour l'emploi hospitalier",
+  description = "Cotisations sociales ; Patronales ; Spécifiques à la fonction publique ; Collectivités locales - Fonction publique hospitalière ; Propres à la fonction publique hospitalière ; Fonds pour l'emploi hospitalier",
 )
 
-cotsoc_pat_fonc_colloc_maladie = RateTaxScale(
+cotsoc_pat_fonc_colloc_maladie = MarginalRateScale(
   [
     RateBracket(
       threshold = [
@@ -2113,10 +2125,10 @@ cotsoc_pat_fonc_colloc_maladie = RateTaxScale(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Maladie",
+  description = "Cotisations sociales ; Patronales ; Spécifiques à la fonction publique ; Collectivités locales - Fonction publique hospitalière ; Maladie",
 )
 
-cotsoc_pat_fonc_colloc_rafp = RateTaxScale(
+cotsoc_pat_fonc_colloc_rafp = MarginalRateScale(
   [
     RateBracket(
       threshold = [
@@ -2129,10 +2141,10 @@ cotsoc_pat_fonc_colloc_rafp = RateTaxScale(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Régime additionnel de retraite (RAFP, totalité sauf TI et NBI, min 20% TI )",
+  description = "Cotisations sociales ; Patronales ; Spécifiques à la fonction publique ; Collectivités locales - Fonction publique hospitalière ; Régime additionnel de retraite (RAFP, totalité sauf TI et NBI, min 20% TI )",
 )
 
-cotsoc_pat_fonc_colloc_territoriale_fcppa = RateTaxScale(
+cotsoc_pat_fonc_colloc_territoriale_fcppa = MarginalRateScale(
   [
     RateBracket(
       threshold = [
@@ -2147,10 +2159,10 @@ cotsoc_pat_fonc_colloc_territoriale_fcppa = RateTaxScale(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Fonds de compensation de la cessation progressive d’activité",
+  description = "Cotisations sociales ; Patronales ; Spécifiques à la fonction publique ; Collectivités locales - Fonction publique hospitalière ; Propres à la fonction publique territoriale ; Fonds de compensation de la cessation progressive d’activité",
 )
 
-cotsoc_pat_fonc_contract_ircantec = RateTaxScale(
+cotsoc_pat_fonc_contract_ircantec = MarginalRateScale(
   [
     RateBracket(
       threshold = [
@@ -2213,10 +2225,10 @@ cotsoc_pat_fonc_contract_ircantec = RateTaxScale(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "IRCANTEC",
+  description = "Cotisations sociales ; Patronales ; Spécifiques à la fonction publique ; Agents non titulaires ; IRCANTEC",
 )
 
-cotsoc_pat_fonc_etat_ati = RateTaxScale(
+cotsoc_pat_fonc_etat_ati = MarginalRateScale(
   [
     RateBracket(
       threshold = [
@@ -2237,10 +2249,10 @@ cotsoc_pat_fonc_etat_ati = RateTaxScale(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Allocations temporaires d'invalidité (ATI)",
+  description = "Cotisations sociales ; Patronales ; Spécifiques à la fonction publique ; Etat ; Allocations temporaires d'invalidité (ATI)",
 )
 
-cotsoc_pat_fonc_etat_maladie = RateTaxScale(
+cotsoc_pat_fonc_etat_maladie = MarginalRateScale(
   [
     RateBracket(
       threshold = [
@@ -2253,10 +2265,10 @@ cotsoc_pat_fonc_etat_maladie = RateTaxScale(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Maladie",
+  description = "Cotisations sociales ; Patronales ; Spécifiques à la fonction publique ; Etat ; Maladie",
 )
 
-cotsoc_pat_fonc_etat_pension = RateTaxScale(
+cotsoc_pat_fonc_etat_pension = MarginalRateScale(
   [
     RateBracket(
       threshold = [
@@ -2285,10 +2297,10 @@ cotsoc_pat_fonc_etat_pension = RateTaxScale(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Pensions civiles (TI et NBI)",
+  description = "Cotisations sociales ; Patronales ; Spécifiques à la fonction publique ; Etat ; Pensions civiles (TI et NBI)",
 )
 
-cotsoc_pat_fonc_etat_rafp = RateTaxScale(
+cotsoc_pat_fonc_etat_rafp = MarginalRateScale(
   [
     RateBracket(
       threshold = [
@@ -2301,10 +2313,10 @@ cotsoc_pat_fonc_etat_rafp = RateTaxScale(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Régime additionnel de retraite (RAFP, totalité sauf TI et NBI, min 20% TI )",
+  description = "Cotisations sociales ; Patronales ; Spécifiques à la fonction publique ; Etat ; Régime additionnel de retraite (RAFP, totalité sauf TI et NBI, min 20% TI )",
 )
 
-cotsoc_pat_noncadre_agffnc = RateTaxScale(
+cotsoc_pat_noncadre_agffnc = MarginalRateScale(
   [
     RateBracket(
       threshold = [
@@ -2333,10 +2345,10 @@ cotsoc_pat_noncadre_agffnc = RateTaxScale(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Cotisation AGFF",
+  description = "Cotisations sociales ; Patronales ; Non cadres ; Cotisation AGFF",
 )
 
-cotsoc_pat_noncadre_arrco = RateTaxScale(
+cotsoc_pat_noncadre_arrco = MarginalRateScale(
   [
     RateBracket(
       threshold = [
@@ -2387,10 +2399,10 @@ cotsoc_pat_noncadre_arrco = RateTaxScale(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Retraite complémentaire",
+  description = "Cotisations sociales ; Patronales ; Non cadres ; Retraite complémentaire",
 )
 
-cotsoc_sal_arti_famille = RateTaxScale(
+cotsoc_sal_arti_famille = MarginalRateScale(
   [
     RateBracket(
       threshold = [
@@ -2403,10 +2415,10 @@ cotsoc_sal_arti_famille = RateTaxScale(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Cotisation Famille",
+  description = "Cotisations sociales ; Salariales ; Non salariés: artisans ; Cotisation Famille",
 )
 
-cotsoc_sal_arti_forprof = RateTaxScale(
+cotsoc_sal_arti_forprof = MarginalRateScale(
   [
     RateBracket(
       threshold = [
@@ -2421,10 +2433,10 @@ cotsoc_sal_arti_forprof = RateTaxScale(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Formation professionnelle",
+  description = "Cotisations sociales ; Salariales ; Non salariés: artisans ; Formation professionnelle",
 )
 
-cotsoc_sal_arti_indjour = RateTaxScale(
+cotsoc_sal_arti_indjour = MarginalRateScale(
   [
     RateBracket(
       threshold = [
@@ -2445,10 +2457,10 @@ cotsoc_sal_arti_indjour = RateTaxScale(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Sécurité sociale/ Indemnités journalières",
+  description = "Cotisations sociales ; Salariales ; Non salariés: artisans ; Sécurité sociale/ Indemnités journalières",
 )
 
-cotsoc_sal_arti_invdec = RateTaxScale(
+cotsoc_sal_arti_invdec = MarginalRateScale(
   [
     RateBracket(
       threshold = [
@@ -2471,10 +2483,10 @@ cotsoc_sal_arti_invdec = RateTaxScale(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Invalidité, décès",
+  description = "Cotisations sociales ; Salariales ; Non salariés: artisans ; Invalidité, décès",
 )
 
-cotsoc_sal_arti_maladie = RateTaxScale(
+cotsoc_sal_arti_maladie = MarginalRateScale(
   [
     RateBracket(
       threshold = [
@@ -2503,10 +2515,10 @@ cotsoc_sal_arti_maladie = RateTaxScale(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Sécurité sociale/ Maladie, maternité",
+  description = "Cotisations sociales ; Salariales ; Non salariés: artisans ; Sécurité sociale/ Maladie, maternité",
 )
 
-cotsoc_sal_arti_retrbase = RateTaxScale(
+cotsoc_sal_arti_retrbase = MarginalRateScale(
   [
     RateBracket(
       threshold = [
@@ -2539,10 +2551,10 @@ cotsoc_sal_arti_retrbase = RateTaxScale(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Retraite de base",
+  description = "Cotisations sociales ; Salariales ; Non salariés: artisans ; Retraite de base",
 )
 
-cotsoc_sal_arti_retrcompl = RateTaxScale(
+cotsoc_sal_arti_retrcompl = MarginalRateScale(
   [
     RateBracket(
       threshold = [
@@ -2575,10 +2587,10 @@ cotsoc_sal_arti_retrcompl = RateTaxScale(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Retraite complémentaire",
+  description = "Cotisations sociales ; Salariales ; Non salariés: artisans ; Retraite complémentaire",
 )
 
-cotsoc_sal_cadre_agff = RateTaxScale(
+cotsoc_sal_cadre_agff = MarginalRateScale(
   [
     RateBracket(
       threshold = [
@@ -2607,10 +2619,10 @@ cotsoc_sal_cadre_agff = RateTaxScale(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Cotisation AGFF",
+  description = "Cotisations sociales ; Salariales ; Spécifiques aux cadres ; Cotisation AGFF",
 )
 
-cotsoc_sal_cadre_agirc = RateTaxScale(
+cotsoc_sal_cadre_agirc = MarginalRateScale(
   [
     RateBracket(
       threshold = [
@@ -2683,10 +2695,10 @@ cotsoc_sal_cadre_agirc = RateTaxScale(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Retraite complémentaire AGIRC GMP (tranches B et C, avant 65 ans)",
+  description = "Cotisations sociales ; Salariales ; Spécifiques aux cadres ; Retraite complémentaire AGIRC GMP (tranches B et C, avant 65 ans)",
 )
 
-cotsoc_sal_cadre_apec = RateTaxScale(
+cotsoc_sal_cadre_apec = MarginalRateScale(
   [
     RateBracket(
       threshold = [
@@ -2717,10 +2729,10 @@ cotsoc_sal_cadre_apec = RateTaxScale(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Chômage-emploi APEC",
+  description = "Cotisations sociales ; Salariales ; Spécifiques aux cadres ; Chômage-emploi APEC",
 )
 
-cotsoc_sal_cadre_cet = RateTaxScale(
+cotsoc_sal_cadre_cet = MarginalRateScale(
   [
     RateBracket(
       threshold = [
@@ -2749,10 +2761,10 @@ cotsoc_sal_cadre_cet = RateTaxScale(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Cotisation exceptionelle temporaire",
+  description = "Cotisations sociales ; Salariales ; Spécifiques aux cadres ; Cotisation exceptionelle temporaire",
 )
 
-cotsoc_sal_comind_famille = RateTaxScale(
+cotsoc_sal_comind_famille = MarginalRateScale(
   [
     RateBracket(
       threshold = [
@@ -2765,10 +2777,10 @@ cotsoc_sal_comind_famille = RateTaxScale(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Famille",
+  description = "Cotisations sociales ; Salariales ; Non salariés: commerçants et industriels ; Famille",
 )
 
-cotsoc_sal_comind_forprofcom = RateTaxScale(
+cotsoc_sal_comind_forprofcom = MarginalRateScale(
   [
     RateBracket(
       threshold = [
@@ -2783,10 +2795,10 @@ cotsoc_sal_comind_forprofcom = RateTaxScale(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Formation professionnelle",
+  description = "Cotisations sociales ; Salariales ; Non salariés: commerçants et industriels ; Formation professionnelle",
 )
 
-cotsoc_sal_comind_indjour = RateTaxScale(
+cotsoc_sal_comind_indjour = MarginalRateScale(
   [
     RateBracket(
       threshold = [
@@ -2807,10 +2819,10 @@ cotsoc_sal_comind_indjour = RateTaxScale(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Sécurité sociale/ Indemnités journalières",
+  description = "Cotisations sociales ; Salariales ; Non salariés: commerçants et industriels ; Sécurité sociale/ Indemnités journalières",
 )
 
-cotsoc_sal_comind_invdec = RateTaxScale(
+cotsoc_sal_comind_invdec = MarginalRateScale(
   [
     RateBracket(
       threshold = [
@@ -2833,10 +2845,10 @@ cotsoc_sal_comind_invdec = RateTaxScale(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Invalidité, décès",
+  description = "Cotisations sociales ; Salariales ; Non salariés: commerçants et industriels ; Invalidité, décès",
 )
 
-cotsoc_sal_comind_maladie = RateTaxScale(
+cotsoc_sal_comind_maladie = MarginalRateScale(
   [
     RateBracket(
       threshold = [
@@ -2867,10 +2879,10 @@ cotsoc_sal_comind_maladie = RateTaxScale(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Sécurité sociale/ Maladie, maternité",
+  description = "Cotisations sociales ; Salariales ; Non salariés: commerçants et industriels ; Sécurité sociale/ Maladie, maternité",
 )
 
-cotsoc_sal_comind_retrbase = RateTaxScale(
+cotsoc_sal_comind_retrbase = MarginalRateScale(
   [
     RateBracket(
       threshold = [
@@ -2903,10 +2915,10 @@ cotsoc_sal_comind_retrbase = RateTaxScale(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Retraite de base",
+  description = "Cotisations sociales ; Salariales ; Non salariés: commerçants et industriels ; Retraite de base",
 )
 
-cotsoc_sal_comind_retrcompl = RateTaxScale(
+cotsoc_sal_comind_retrcompl = MarginalRateScale(
   [
     RateBracket(
       threshold = [
@@ -2939,10 +2951,10 @@ cotsoc_sal_comind_retrcompl = RateTaxScale(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Retraite complémentaire",
+  description = "Cotisations sociales ; Salariales ; Non salariés: commerçants et industriels ; Retraite complémentaire",
 )
 
-cotsoc_sal_commun_arrco = RateTaxScale(
+cotsoc_sal_commun_arrco = MarginalRateScale(
   [
     RateBracket(
       threshold = [
@@ -2975,10 +2987,10 @@ cotsoc_sal_commun_arrco = RateTaxScale(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Retraite complémentaire ARRCO",
+  description = "Cotisations sociales ; Salariales ; Communes aux cadres et non cadres ; Retraite complémentaire ARRCO",
 )
 
-cotsoc_sal_commun_assedic = RateTaxScale(
+cotsoc_sal_commun_assedic = MarginalRateScale(
   [
     RateBracket(
       threshold = [
@@ -3019,10 +3031,10 @@ cotsoc_sal_commun_assedic = RateTaxScale(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Chômage-emploi ASSEDIC",
+  description = "Cotisations sociales ; Salariales ; Communes aux cadres et non cadres ; Chômage-emploi ASSEDIC",
 )
 
-cotsoc_sal_commun_maladie = RateTaxScale(
+cotsoc_sal_commun_maladie = MarginalRateScale(
   [
     RateBracket(
       threshold = [
@@ -3039,10 +3051,10 @@ cotsoc_sal_commun_maladie = RateTaxScale(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Assurance maladie, maternité, invalidité, décès",
+  description = "Cotisations sociales ; Salariales ; Communes aux cadres et non cadres ; Assurance maladie, maternité, invalidité, décès",
 )
 
-cotsoc_sal_commun_vieillesse = RateTaxScale(
+cotsoc_sal_commun_vieillesse = MarginalRateScale(
   [
     RateBracket(
       threshold = [
@@ -3073,10 +3085,10 @@ cotsoc_sal_commun_vieillesse = RateTaxScale(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Vieillesse (régime de base de la retraite CNAV)",
+  description = "Cotisations sociales ; Salariales ; Communes aux cadres et non cadres ; Vieillesse (régime de base de la retraite CNAV)",
 )
 
-cotsoc_sal_commun_vieillessedeplaf = RateTaxScale(
+cotsoc_sal_commun_vieillessedeplaf = MarginalRateScale(
   [
     RateBracket(
       threshold = [
@@ -3091,10 +3103,10 @@ cotsoc_sal_commun_vieillessedeplaf = RateTaxScale(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Vieillesse déplafonnée (ancienne assurance veuvage transférée à la CNAV en 2004)",
+  description = "Cotisations sociales ; Salariales ; Communes aux cadres et non cadres ; Vieillesse déplafonnée (ancienne assurance veuvage transférée à la CNAV en 2004)",
 )
 
-cotsoc_sal_fonc_colloc_cnracl1 = RateTaxScale(
+cotsoc_sal_fonc_colloc_cnracl1 = MarginalRateScale(
   [
     RateBracket(
       threshold = [
@@ -3127,10 +3139,10 @@ cotsoc_sal_fonc_colloc_cnracl1 = RateTaxScale(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Retraites des agents des collectivités locales (taux hors NBI)",
+  description = "Cotisations sociales ; Salariales ; Spécifiques à la fonction publique ; Collectivités locales - Fonction publique hospitalière ; Retraites des agents des collectivités locales (taux hors NBI)",
 )
 
-cotsoc_sal_fonc_colloc_cnracl2 = RateTaxScale(
+cotsoc_sal_fonc_colloc_cnracl2 = MarginalRateScale(
   [
     RateBracket(
       threshold = [
@@ -3165,7 +3177,7 @@ cotsoc_sal_fonc_colloc_cnracl2 = RateTaxScale(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Retraites des agents des collectivités locales (taux NBI)",
+  description = "Cotisations sociales ; Salariales ; Spécifiques à la fonction publique ; Collectivités locales - Fonction publique hospitalière ; Retraites des agents des collectivités locales (taux NBI)",
 )
 
 cotsoc_sal_fonc_commun_ind_maj_ref = Parameter{Int32}(
@@ -3183,7 +3195,7 @@ cotsoc_sal_fonc_commun_ind_maj_ref = Parameter{Int32}(
   unit = "currency",
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Indice majoré de référence",
+  description = "Cotisations sociales ; Salariales ; Spécifiques à la fonction publique ; Commune à toutes les fonctions publiques ; Indice majoré de référence",
 )
 
 cotsoc_sal_fonc_commun_plafond_base_solidarite = Parameter{Float32}(
@@ -3193,7 +3205,7 @@ cotsoc_sal_fonc_commun_plafond_base_solidarite = Parameter{Float32}(
   unit = "currency",
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Plafond de la contribution exceptionnelle de solidarité",
+  description = "Cotisations sociales ; Salariales ; Spécifiques à la fonction publique ; Commune à toutes les fonctions publiques ; Plafond de la contribution exceptionnelle de solidarité",
 )
 
 cotsoc_sal_fonc_commun_pt_ind = Parameter{Float32}(
@@ -3216,10 +3228,10 @@ cotsoc_sal_fonc_commun_pt_ind = Parameter{Float32}(
   unit = "currency",
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Valeur annuelle point de FP",
+  description = "Cotisations sociales ; Salariales ; Spécifiques à la fonction publique ; Commune à toutes les fonctions publiques ; Valeur annuelle point de FP",
 )
 
-cotsoc_sal_fonc_commun_solidarite = RateTaxScale(
+cotsoc_sal_fonc_commun_solidarite = MarginalRateScale(
   [
     RateBracket(
       threshold = [
@@ -3240,11 +3252,11 @@ cotsoc_sal_fonc_commun_solidarite = RateTaxScale(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Contribution exceptionnelle de solidarité (seuil d'assujetissment variable)",
+  description = "Cotisations sociales ; Salariales ; Spécifiques à la fonction publique ; Commune à toutes les fonctions publiques ; Contribution exceptionnelle de solidarité (seuil d'assujetissment variable)",
   comment = "TODO: c'est une contribution donc à mettre avec la CSG/CRDS",
 )
 
-cotsoc_sal_fonc_contract_ircantec = RateTaxScale(
+cotsoc_sal_fonc_contract_ircantec = MarginalRateScale(
   [
     RateBracket(
       threshold = [
@@ -3333,10 +3345,10 @@ cotsoc_sal_fonc_contract_ircantec = RateTaxScale(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "IRCANTEC",
+  description = "Cotisations sociales ; Salariales ; Spécifiques à la fonction publique ; Agents non titulaires ; IRCANTEC",
 )
 
-cotsoc_sal_fonc_etat_pension = RateTaxScale(
+cotsoc_sal_fonc_etat_pension = MarginalRateScale(
   [
     RateBracket(
       threshold = [
@@ -3369,10 +3381,10 @@ cotsoc_sal_fonc_etat_pension = RateTaxScale(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Retenue pour pension civile (assiette=TI + NBI)",
+  description = "Cotisations sociales ; Salariales ; Spécifiques à la fonction publique ; Etat ; Retenue pour pension civile (assiette=TI + NBI)",
 )
 
-cotsoc_sal_fonc_etat_rafp = RateTaxScale(
+cotsoc_sal_fonc_etat_rafp = MarginalRateScale(
   [
     RateBracket(
       threshold = [
@@ -3385,7 +3397,7 @@ cotsoc_sal_fonc_etat_rafp = RateTaxScale(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Régime additionnel de retraite (RAFP, totalité sauf TI et NBI, min 20% TI )",
+  description = "Cotisations sociales ; Salariales ; Spécifiques à la fonction publique ; Etat ; Régime additionnel de retraite (RAFP, totalité sauf TI et NBI, min 20% TI )",
 )
 
 cotsoc_sal_fonc_etat_rafp_plaf_assiette = Parameter{Float32}(
@@ -3394,7 +3406,7 @@ cotsoc_sal_fonc_etat_rafp_plaf_assiette = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Plafond d'assiette",
+  description = "Cotisations sociales ; Salariales ; Spécifiques à la fonction publique ; Etat ; Plafond d'assiette",
 )
 
 cotsoc_sal_microsocial_cipav = Parameter{Float32}(
@@ -3406,7 +3418,7 @@ cotsoc_sal_microsocial_cipav = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Taux professions libérales relevant du  CIPAV",
+  description = "Cotisations sociales ; Salariales ; Régime micro-social ; Taux professions libérales relevant du  CIPAV",
 )
 
 cotsoc_sal_microsocial_rsi = Parameter{Float32}(
@@ -3416,7 +3428,7 @@ cotsoc_sal_microsocial_rsi = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Taux professions libérales relevant du RSI",
+  description = "Cotisations sociales ; Salariales ; Régime micro-social ; Taux professions libérales relevant du RSI",
 )
 
 cotsoc_sal_microsocial_servi = Parameter{Float32}(
@@ -3426,7 +3438,7 @@ cotsoc_sal_microsocial_servi = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Taux pour les activités de prestations et de services",
+  description = "Cotisations sociales ; Salariales ; Régime micro-social ; Taux pour les activités de prestations et de services",
 )
 
 cotsoc_sal_microsocial_vente = Parameter{Float32}(
@@ -3437,10 +3449,10 @@ cotsoc_sal_microsocial_vente = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Taux pour les activités de ventes",
+  description = "Cotisations sociales ; Salariales ; Régime micro-social ; Taux pour les activités de ventes",
 )
 
-cotsoc_sal_noncadre_agff = RateTaxScale(
+cotsoc_sal_noncadre_agff = MarginalRateScale(
   [
     RateBracket(
       threshold = [
@@ -3469,10 +3481,10 @@ cotsoc_sal_noncadre_agff = RateTaxScale(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Cotisation AGFF",
+  description = "Cotisations sociales ; Salariales ; Spécifiques aux non cadres ; Cotisation AGFF",
 )
 
-cotsoc_sal_noncadre_arrconc = RateTaxScale(
+cotsoc_sal_noncadre_arrconc = MarginalRateScale(
   [
     RateBracket(
       threshold = [
@@ -3511,7 +3523,7 @@ cotsoc_sal_noncadre_arrconc = RateTaxScale(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Retraite complémentaire ARRCO",
+  description = "Cotisations sociales ; Salariales ; Spécifiques aux non cadres ; Retraite complémentaire ARRCO",
 )
 
 cotsoc_taxes_sal_taux_guy = Parameter{Float32}(
@@ -3520,7 +3532,7 @@ cotsoc_taxes_sal_taux_guy = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Taxes sur les salaires : Guyane",
+  description = "Cotisations sociales ; Taxes sur les salaires ; Taxes sur les salaires : taux normal ; Taxes sur les salaires : Guyane",
 )
 
 cotsoc_taxes_sal_taux_metro = Parameter{Float32}(
@@ -3529,7 +3541,7 @@ cotsoc_taxes_sal_taux_metro = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Taxes sur les salaires : France métropolitaine",
+  description = "Cotisations sociales ; Taxes sur les salaires ; Taxes sur les salaires : taux normal ; Taxes sur les salaires : France métropolitaine",
 )
 
 cotsoc_taxes_sal_taux_mgr = Parameter{Float32}(
@@ -3538,10 +3550,10 @@ cotsoc_taxes_sal_taux_mgr = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Taxes sur les salaires : Guadeloupe, Martinique, Réunion",
+  description = "Cotisations sociales ; Taxes sur les salaires ; Taxes sur les salaires : taux normal ; Taxes sur les salaires : Guadeloupe, Martinique, Réunion",
 )
 
-cotsoc_taxes_sal_taux_maj = RateTaxScale(
+cotsoc_taxes_sal_taux_maj = MarginalRateScale(
   [
     RateBracket(
       threshold = [
@@ -3624,10 +3636,10 @@ cotsoc_taxes_sal_taux_maj = RateTaxScale(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Taxes sur les salaires : taux majorés (France métropolitaine seulement)",
+  description = "Cotisations sociales ; Taxes sur les salaires ; Taxes sur les salaires : taux majorés (France métropolitaine seulement)",
 )
 
-cotsoc_tehr = RateTaxScale(
+cotsoc_tehr = MarginalRateScale(
   [
     RateBracket(
       threshold = [
@@ -3640,10 +3652,10 @@ cotsoc_tehr = RateTaxScale(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Taxes exceptionnelles sur les hauts revenus",
+  description = "Cotisations sociales ; Taxes exceptionnelles sur les hauts revenus",
 )
 
-crds_act = RateTaxScale(
+crds_act = MarginalRateScale(
   [
     RateBracket(
       threshold = [
@@ -3678,7 +3690,7 @@ crds_act = RateTaxScale(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Revenus d'activité, du chômage et des préretraites",
+  description = "Contribution au remboursement de la dette sociale (CRDS) ; Revenus d'activité, du chômage et des préretraites",
 )
 
 crds_capital = Parameter{Float32}(
@@ -3687,10 +3699,10 @@ crds_capital = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Revenus du capital",
+  description = "Contribution au remboursement de la dette sociale (CRDS) ; Revenus du capital",
 )
 
-crds_rst = RateTaxScale(
+crds_rst = MarginalRateScale(
   [
     RateBracket(
       threshold = [
@@ -3703,10 +3715,10 @@ crds_rst = RateTaxScale(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Retraites et pensions d'invalidité",
+  description = "Contribution au remboursement de la dette sociale (CRDS) ; Retraites et pensions d'invalidité",
 )
 
-csg_act_deduc = RateTaxScale(
+csg_act_deduc = MarginalRateScale(
   [
     RateBracket(
       threshold = [
@@ -3737,10 +3749,10 @@ csg_act_deduc = RateTaxScale(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "CSG déductible",
+  description = "Contribution sociale généralisée (CSG) ; Revenus d'activité ; CSG déductible",
 )
 
-csg_act_impos = RateTaxScale(
+csg_act_impos = MarginalRateScale(
   [
     RateBracket(
       threshold = [
@@ -3773,7 +3785,7 @@ csg_act_impos = RateTaxScale(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "CSG imposable",
+  description = "Contribution sociale généralisée (CSG) ; Revenus d'activité ; CSG imposable",
 )
 
 csg_capital_deduc = Parameter{Float32}(
@@ -3784,7 +3796,7 @@ csg_capital_deduc = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "dont CSG déductible",
+  description = "Contribution sociale généralisée (CSG) ; Revenus du capital ; dont CSG déductible",
 )
 
 csg_capital_glob = Parameter{Float32}(
@@ -3794,7 +3806,7 @@ csg_capital_glob = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Taux global",
+  description = "Contribution sociale généralisée (CSG) ; Revenus du capital ; Taux global",
 )
 
 csg_chom_min_exo = Parameter{Float32}(
@@ -3803,10 +3815,10 @@ csg_chom_min_exo = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Revenu minimum imposable (en multiple du smic annuel brut)",
+  description = "Contribution sociale généralisée (CSG) ; Allocations chômage ; Revenu minimum imposable (en multiple du smic annuel brut)",
 )
 
-csg_chom_plein_deduc = RateTaxScale(
+csg_chom_plein_deduc = MarginalRateScale(
   [
     RateBracket(
       threshold = [
@@ -3841,10 +3853,10 @@ csg_chom_plein_deduc = RateTaxScale(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "CSG déductible",
+  description = "Contribution sociale généralisée (CSG) ; Allocations chômage ; Taux plein ; CSG déductible",
 )
 
-csg_chom_plein_impos = RateTaxScale(
+csg_chom_plein_impos = MarginalRateScale(
   [
     RateBracket(
       threshold = [
@@ -3879,10 +3891,10 @@ csg_chom_plein_impos = RateTaxScale(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "CSG non déductible",
+  description = "Contribution sociale généralisée (CSG) ; Allocations chômage ; Taux plein ; CSG non déductible",
 )
 
-csg_chom_reduit_deduc = RateTaxScale(
+csg_chom_reduit_deduc = MarginalRateScale(
   [
     RateBracket(
       threshold = [
@@ -3917,10 +3929,10 @@ csg_chom_reduit_deduc = RateTaxScale(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "CSG déductible",
+  description = "Contribution sociale généralisée (CSG) ; Allocations chômage ; Taux réduit ; CSG déductible",
 )
 
-csg_chom_reduit_impos = RateTaxScale(
+csg_chom_reduit_impos = MarginalRateScale(
   [
     RateBracket(
       threshold = [
@@ -3955,10 +3967,10 @@ csg_chom_reduit_impos = RateTaxScale(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "CSG imposable",
+  description = "Contribution sociale généralisée (CSG) ; Allocations chômage ; Taux réduit ; CSG imposable",
 )
 
-csg_indemn_deduc = RateTaxScale(
+csg_indemn_deduc = MarginalRateScale(
   [
     RateBracket(
       threshold = [
@@ -3971,10 +3983,10 @@ csg_indemn_deduc = RateTaxScale(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "CSG déductible",
+  description = "Contribution sociale généralisée (CSG) ; Indemnités journalières ; CSG déductible",
 )
 
-csg_indemn_impos = RateTaxScale(
+csg_indemn_impos = MarginalRateScale(
   [
     RateBracket(
       threshold = [
@@ -3987,10 +3999,10 @@ csg_indemn_impos = RateTaxScale(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "CSG non déductible",
+  description = "Contribution sociale généralisée (CSG) ; Indemnités journalières ; CSG non déductible",
 )
 
-csg_int_deduc = RateTaxScale(
+csg_int_deduc = MarginalRateScale(
   [
     RateBracket(
       threshold = [
@@ -4003,10 +4015,10 @@ csg_int_deduc = RateTaxScale(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "CSG déductible",
+  description = "Contribution sociale généralisée (CSG) ; Accessoires du salaire (intéressement etc) ; CSG déductible",
 )
 
-csg_int_impos = RateTaxScale(
+csg_int_impos = MarginalRateScale(
   [
     RateBracket(
       threshold = [
@@ -4019,10 +4031,10 @@ csg_int_impos = RateTaxScale(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "CSG imposable",
+  description = "Contribution sociale généralisée (CSG) ; Accessoires du salaire (intéressement etc) ; CSG imposable",
 )
 
-csg_preretraite_plein_deduc = RateTaxScale(
+csg_preretraite_plein_deduc = MarginalRateScale(
   [
     RateBracket(
       threshold = [
@@ -4039,10 +4051,10 @@ csg_preretraite_plein_deduc = RateTaxScale(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "CSG déductible",
+  description = "Contribution sociale généralisée (CSG) ; Allocations de préretraite ; Taux plein ; CSG déductible",
 )
 
-csg_preretraite_plein_impos = RateTaxScale(
+csg_preretraite_plein_impos = MarginalRateScale(
   [
     RateBracket(
       threshold = [
@@ -4057,10 +4069,10 @@ csg_preretraite_plein_impos = RateTaxScale(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "CSG non déductible",
+  description = "Contribution sociale généralisée (CSG) ; Allocations de préretraite ; Taux plein ; CSG non déductible",
 )
 
-csg_preretraite_reduit_deduc = RateTaxScale(
+csg_preretraite_reduit_deduc = MarginalRateScale(
   [
     RateBracket(
       threshold = [
@@ -4075,10 +4087,10 @@ csg_preretraite_reduit_deduc = RateTaxScale(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "CSG déductible",
+  description = "Contribution sociale généralisée (CSG) ; Allocations de préretraite ; Taux réduit ; CSG déductible",
 )
 
-csg_preretraite_reduit_impos = RateTaxScale(
+csg_preretraite_reduit_impos = MarginalRateScale(
   [
     RateBracket(
       threshold = [
@@ -4091,10 +4103,10 @@ csg_preretraite_reduit_impos = RateTaxScale(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "CSG non déductible",
+  description = "Contribution sociale généralisée (CSG) ; Allocations de préretraite ; Taux réduit ; CSG non déductible",
 )
 
-csg_retraite_plein_deduc = RateTaxScale(
+csg_retraite_plein_deduc = MarginalRateScale(
   [
     RateBracket(
       threshold = [
@@ -4111,10 +4123,10 @@ csg_retraite_plein_deduc = RateTaxScale(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "CSG déductible",
+  description = "Contribution sociale généralisée (CSG) ; Pensions de retraites et d'invalidité ; Taux plein ; CSG déductible",
 )
 
-csg_retraite_plein_impos = RateTaxScale(
+csg_retraite_plein_impos = MarginalRateScale(
   [
     RateBracket(
       threshold = [
@@ -4129,10 +4141,10 @@ csg_retraite_plein_impos = RateTaxScale(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "CSG non déductible",
+  description = "Contribution sociale généralisée (CSG) ; Pensions de retraites et d'invalidité ; Taux plein ; CSG non déductible",
 )
 
-csg_retraite_reduit_deduc = RateTaxScale(
+csg_retraite_reduit_deduc = MarginalRateScale(
   [
     RateBracket(
       threshold = [
@@ -4147,10 +4159,10 @@ csg_retraite_reduit_deduc = RateTaxScale(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "CSG déductible",
+  description = "Contribution sociale généralisée (CSG) ; Pensions de retraites et d'invalidité ; Taux réduit ; CSG déductible",
 )
 
-csg_retraite_reduit_impos = RateTaxScale(
+csg_retraite_reduit_impos = MarginalRateScale(
   [
     RateBracket(
       threshold = [
@@ -4163,7 +4175,7 @@ csg_retraite_reduit_impos = RateTaxScale(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "CSG non déductible",
+  description = "Contribution sociale généralisée (CSG) ; Pensions de retraites et d'invalidité ; Taux réduit ; CSG non déductible",
 )
 
 fam_aeeh_age = Parameter{Int32}(
@@ -4173,7 +4185,7 @@ fam_aeeh_age = Parameter{Int32}(
   unit = "year",
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Limite d'âge",
+  description = "Prestations familiales ; Allocation d'éducation de l'enfant handicapé / Allocation d'éducation spéciale ; Limite d'âge",
 )
 
 fam_aeeh_base = Parameter{Float32}(
@@ -4182,7 +4194,7 @@ fam_aeeh_base = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Allocation de base",
+  description = "Prestations familiales ; Allocation d'éducation de l'enfant handicapé / Allocation d'éducation spéciale ; Allocation de base",
 )
 
 fam_aeeh_cpl1 = Parameter{Float32}(
@@ -4191,7 +4203,7 @@ fam_aeeh_cpl1 = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Complément de catégorie 1",
+  description = "Prestations familiales ; Allocation d'éducation de l'enfant handicapé / Allocation d'éducation spéciale ; Complément de catégorie 1",
 )
 
 fam_aeeh_cpl2 = Parameter{Float32}(
@@ -4201,7 +4213,7 @@ fam_aeeh_cpl2 = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Complément de catégorie 2",
+  description = "Prestations familiales ; Allocation d'éducation de l'enfant handicapé / Allocation d'éducation spéciale ; Complément de catégorie 2",
 )
 
 fam_aeeh_cpl3 = Parameter{Float32}(
@@ -4210,7 +4222,7 @@ fam_aeeh_cpl3 = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Complément de catégorie 3",
+  description = "Prestations familiales ; Allocation d'éducation de l'enfant handicapé / Allocation d'éducation spéciale ; Complément de catégorie 3",
 )
 
 fam_aeeh_cpl3b = Parameter{Float32}(
@@ -4219,7 +4231,7 @@ fam_aeeh_cpl3b = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Seuil dépense b complément de catégorie 3",
+  description = "Prestations familiales ; Allocation d'éducation de l'enfant handicapé / Allocation d'éducation spéciale ; Seuil dépense b complément de catégorie 3",
 )
 
 fam_aeeh_cpl3c = Parameter{Float32}(
@@ -4228,7 +4240,7 @@ fam_aeeh_cpl3c = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Seuil dépense c complément de catégorie 3",
+  description = "Prestations familiales ; Allocation d'éducation de l'enfant handicapé / Allocation d'éducation spéciale ; Seuil dépense c complément de catégorie 3",
 )
 
 fam_aeeh_cpl4 = Parameter{Float32}(
@@ -4238,7 +4250,7 @@ fam_aeeh_cpl4 = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Complément de catégorie 4",
+  description = "Prestations familiales ; Allocation d'éducation de l'enfant handicapé / Allocation d'éducation spéciale ; Complément de catégorie 4",
 )
 
 fam_aeeh_cpl4b = Parameter{Float32}(
@@ -4248,7 +4260,7 @@ fam_aeeh_cpl4b = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Seuil dépense b complément de catégorie 4",
+  description = "Prestations familiales ; Allocation d'éducation de l'enfant handicapé / Allocation d'éducation spéciale ; Seuil dépense b complément de catégorie 4",
 )
 
 fam_aeeh_cpl4c = Parameter{Float32}(
@@ -4258,7 +4270,7 @@ fam_aeeh_cpl4c = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Seuil dépense c complément de catégorie 4",
+  description = "Prestations familiales ; Allocation d'éducation de l'enfant handicapé / Allocation d'éducation spéciale ; Seuil dépense c complément de catégorie 4",
 )
 
 fam_aeeh_cpl4d = Parameter{Float32}(
@@ -4268,7 +4280,7 @@ fam_aeeh_cpl4d = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Seuil dépense d complément de catégorie 4",
+  description = "Prestations familiales ; Allocation d'éducation de l'enfant handicapé / Allocation d'éducation spéciale ; Seuil dépense d complément de catégorie 4",
 )
 
 fam_aeeh_cpl5 = Parameter{Float32}(
@@ -4278,7 +4290,7 @@ fam_aeeh_cpl5 = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Complément de catégorie 5",
+  description = "Prestations familiales ; Allocation d'éducation de l'enfant handicapé / Allocation d'éducation spéciale ; Complément de catégorie 5",
 )
 
 fam_aeeh_cpl5a = Parameter{Float32}(
@@ -4288,7 +4300,7 @@ fam_aeeh_cpl5a = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Seuil dépense complément de catégorie 5",
+  description = "Prestations familiales ; Allocation d'éducation de l'enfant handicapé / Allocation d'éducation spéciale ; Seuil dépense complément de catégorie 5",
 )
 
 fam_aeeh_cpl6 = Parameter{Float32}(
@@ -4310,7 +4322,7 @@ fam_aeeh_cpl6 = Parameter{Float32}(
   unit = "currency",
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Complément de catégorie 6 (majoration pour assistance d’une tierce personne invalide de 3e catégorie)",
+  description = "Prestations familiales ; Allocation d'éducation de l'enfant handicapé / Allocation d'éducation spéciale ; Complément de catégorie 6 (majoration pour assistance d’une tierce personne invalide de 3e catégorie)",
 )
 
 fam_aeeh_maj2 = Parameter{Float32}(
@@ -4320,7 +4332,7 @@ fam_aeeh_maj2 = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Majoration (parent isolé) de catégorie 2",
+  description = "Prestations familiales ; Allocation d'éducation de l'enfant handicapé / Allocation d'éducation spéciale ; Majoration (parent isolé) de catégorie 2",
 )
 
 fam_aeeh_maj3 = Parameter{Float32}(
@@ -4330,7 +4342,7 @@ fam_aeeh_maj3 = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Majoration (parent isolé) de catégorie 3",
+  description = "Prestations familiales ; Allocation d'éducation de l'enfant handicapé / Allocation d'éducation spéciale ; Majoration (parent isolé) de catégorie 3",
 )
 
 fam_aeeh_maj4 = Parameter{Float32}(
@@ -4340,7 +4352,7 @@ fam_aeeh_maj4 = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Majoration (parent isolé) de catégorie 4",
+  description = "Prestations familiales ; Allocation d'éducation de l'enfant handicapé / Allocation d'éducation spéciale ; Majoration (parent isolé) de catégorie 4",
 )
 
 fam_aeeh_maj5 = Parameter{Float32}(
@@ -4350,7 +4362,7 @@ fam_aeeh_maj5 = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Majoration (parent isolé) de catégorie 5",
+  description = "Prestations familiales ; Allocation d'éducation de l'enfant handicapé / Allocation d'éducation spéciale ; Majoration (parent isolé) de catégorie 5",
 )
 
 fam_aeeh_maj6 = Parameter{Float32}(
@@ -4360,7 +4372,7 @@ fam_aeeh_maj6 = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Majoration (parent isolé) de catégorie 6",
+  description = "Prestations familiales ; Allocation d'éducation de l'enfant handicapé / Allocation d'éducation spéciale ; Majoration (parent isolé) de catégorie 6",
 )
 
 fam_af_age1 = Parameter{Int32}(
@@ -4370,7 +4382,7 @@ fam_af_age1 = Parameter{Int32}(
   unit = "year",
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Âge mininimal pour toucher les AF",
+  description = "Prestations familiales ; Allocations familiales ; Âge mininimal pour toucher les AF",
 )
 
 fam_af_age2 = Parameter{Int32}(
@@ -4380,7 +4392,7 @@ fam_af_age2 = Parameter{Int32}(
   unit = "year",
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Âge maximal pour toucher les AF (hors forfait)",
+  description = "Prestations familiales ; Allocations familiales ; Âge maximal pour toucher les AF (hors forfait)",
 )
 
 fam_af_age3 = Parameter{Int32}(
@@ -4390,7 +4402,7 @@ fam_af_age3 = Parameter{Int32}(
   unit = "year",
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Âge maximal pour toucher les AF (forfait datant de 2003-07-01 inclus )",
+  description = "Prestations familiales ; Allocations familiales ; Âge maximal pour toucher les AF (forfait datant de 2003-07-01 inclus )",
 )
 
 fam_af_bmaf = Parameter{Float32}(
@@ -4413,7 +4425,7 @@ fam_af_bmaf = Parameter{Float32}(
   unit = "currency",
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Base mensuelle des allocations familiales",
+  description = "Prestations familiales ; Allocations familiales ; Base mensuelle des allocations familiales",
 )
 
 fam_af_bmaf_n_2 = Parameter{Float32}(
@@ -4438,7 +4450,7 @@ fam_af_bmaf_n_2 = Parameter{Float32}(
   unit = "currency",
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Bmaf de l'année n-2",
+  description = "Prestations familiales ; Allocations familiales ; Bmaf de l'année n-2",
 )
 
 fam_af_crds = Parameter{Float32}(
@@ -4447,7 +4459,7 @@ fam_af_crds = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Taux de crds",
+  description = "Prestations familiales ; Allocations familiales ; Taux de crds",
 )
 
 fam_af_maj_age_age1 = Parameter{Int32}(
@@ -4457,7 +4469,7 @@ fam_af_maj_age_age1 = Parameter{Int32}(
   unit = "year",
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Âge de début de la 1ere majoration",
+  description = "Prestations familiales ; Allocations familiales ; Majorations pour âge ; Âge de début de la 1ere majoration",
 )
 
 fam_af_maj_age_age2 = Parameter{Int32}(
@@ -4468,7 +4480,7 @@ fam_af_maj_age_age2 = Parameter{Int32}(
   unit = "year",
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Âge de début de la 2ème majoration",
+  description = "Prestations familiales ; Allocations familiales ; Majorations pour âge ; Âge de début de la 2ème majoration",
 )
 
 fam_af_maj_age_taux1 = Parameter{Float32}(
@@ -4478,7 +4490,7 @@ fam_af_maj_age_taux1 = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "1ère majoration pour âge",
+  description = "Prestations familiales ; Allocations familiales ; Majorations pour âge ; 1ère majoration pour âge",
 )
 
 fam_af_maj_age_taux2 = Parameter{Float32}(
@@ -4487,7 +4499,7 @@ fam_af_maj_age_taux2 = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "2ème majoration pour âge (14 ans pour les enfants né après le 30/04/97)",
+  description = "Prestations familiales ; Allocations familiales ; Majorations pour âge ; 2ème majoration pour âge (14 ans pour les enfants né après le 30/04/97)",
 )
 
 fam_af_seuil_rev_taux = Parameter{Float32}(
@@ -4496,7 +4508,7 @@ fam_af_seuil_rev_taux = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Seuil de revenu pour être considéré comme enfant à charge (en smic)",
+  description = "Prestations familiales ; Allocations familiales ; Seuil de revenu pour être considéré comme enfant à charge (en smic)",
 )
 
 fam_af_taux_enf1 = Parameter{Float32}(
@@ -4505,7 +4517,7 @@ fam_af_taux_enf1 = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Premier enfant à charge",
+  description = "Prestations familiales ; Allocations familiales ; Taux (% de la BMAF) ; Premier enfant à charge",
 )
 
 fam_af_taux_enf2 = Parameter{Float32}(
@@ -4514,7 +4526,7 @@ fam_af_taux_enf2 = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Deuxième enfant à charge",
+  description = "Prestations familiales ; Allocations familiales ; Taux (% de la BMAF) ; Deuxième enfant à charge",
 )
 
 fam_af_taux_enf3 = Parameter{Float32}(
@@ -4523,7 +4535,7 @@ fam_af_taux_enf3 = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Troisième enfant à charge et suivants",
+  description = "Prestations familiales ; Allocations familiales ; Taux (% de la BMAF) ; Troisième enfant à charge et suivants",
 )
 
 fam_af_taux_forfait = Parameter{Float32}(
@@ -4533,7 +4545,7 @@ fam_af_taux_forfait = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Allocation forfaitaire par enfant de 20 ans",
+  description = "Prestations familiales ; Allocations familiales ; Taux (% de la BMAF) ; Allocation forfaitaire par enfant de 20 ans",
 )
 
 fam_afeama_age1 = Parameter{Int32}(
@@ -4543,7 +4555,7 @@ fam_afeama_age1 = Parameter{Int32}(
   unit = "year",
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Limite d'âge (stricte) pour bénéficier de l'AFEAMA",
+  description = "Prestations familiales ; Aide à la famille pour l'emploi d'une assistante maternelle agréée ; Limite d'âge (stricte) pour bénéficier de l'AFEAMA",
 )
 
 fam_afeama_mult_seuil1 = Parameter{Float32}(
@@ -4552,7 +4564,7 @@ fam_afeama_mult_seuil1 = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Premier plafond de ressources pour un enfant (en % du plafond ARS)",
+  description = "Prestations familiales ; Aide à la famille pour l'emploi d'une assistante maternelle agréée ; Premier plafond de ressources pour un enfant (en % du plafond ARS)",
 )
 
 fam_afeama_mult_seuil2 = Parameter{Float32}(
@@ -4561,7 +4573,7 @@ fam_afeama_mult_seuil2 = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Second plafond de ressources pour un enfant",
+  description = "Prestations familiales ; Aide à la famille pour l'emploi d'une assistante maternelle agréée ; Second plafond de ressources pour un enfant",
 )
 
 fam_afeama_taux_maxi = Parameter{Float32}(
@@ -4570,7 +4582,7 @@ fam_afeama_taux_maxi = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Montant maximal (en pourcentage de la BMAF)",
+  description = "Prestations familiales ; Aide à la famille pour l'emploi d'une assistante maternelle agréée ; Montant maximal (en pourcentage de la BMAF)",
 )
 
 fam_afeama_taux_med = Parameter{Float32}(
@@ -4579,7 +4591,7 @@ fam_afeama_taux_med = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Montant median (en pourcentage de la BMAF)",
+  description = "Prestations familiales ; Aide à la famille pour l'emploi d'une assistante maternelle agréée ; Montant median (en pourcentage de la BMAF)",
 )
 
 fam_afeama_taux_mini = Parameter{Float32}(
@@ -4588,7 +4600,7 @@ fam_afeama_taux_mini = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Montant minimal (en pourcentage de la BMAF)",
+  description = "Prestations familiales ; Aide à la famille pour l'emploi d'une assistante maternelle agréée ; Montant minimal (en pourcentage de la BMAF)",
 )
 
 fam_aged_age1 = Parameter{Int32}(
@@ -4598,7 +4610,7 @@ fam_aged_age1 = Parameter{Int32}(
   unit = "year",
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Première limite d'âge (stricte) pour bénéficier de l'AGED",
+  description = "Prestations familiales ; Allocation de garde d'enfant à domicile (AGED) ; Première limite d'âge (stricte) pour bénéficier de l'AGED",
 )
 
 fam_aged_age2 = Parameter{Int32}(
@@ -4608,7 +4620,7 @@ fam_aged_age2 = Parameter{Int32}(
   unit = "year",
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Seconde limite d'âge (stricte) pour bénéficier de l'AGED",
+  description = "Prestations familiales ; Allocation de garde d'enfant à domicile (AGED) ; Seconde limite d'âge (stricte) pour bénéficier de l'AGED",
 )
 
 fam_aged_remb_plaf1 = Parameter{Float32}(
@@ -4620,7 +4632,7 @@ fam_aged_remb_plaf1 = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Plafond des remboursements trimestriels (sans conditions de resources)",
+  description = "Prestations familiales ; Allocation de garde d'enfant à domicile (AGED) ; Plafond des remboursements trimestriels (sans conditions de resources)",
 )
 
 fam_aged_remb_plaf2 = Parameter{Float32}(
@@ -4632,7 +4644,7 @@ fam_aged_remb_plaf2 = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Plafond des remboursements trimestriels (sous conditions de resources)",
+  description = "Prestations familiales ; Allocation de garde d'enfant à domicile (AGED) ; Plafond des remboursements trimestriels (sous conditions de resources)",
 )
 
 fam_aged_remb_plaf3 = Parameter{Float32}(
@@ -4645,7 +4657,7 @@ fam_aged_remb_plaf3 = Parameter{Float32}(
   unit = "currency",
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Plafond des remboursements trimestriels (entre les deux limites d'âge ou APE taux partiel)",
+  description = "Prestations familiales ; Allocation de garde d'enfant à domicile (AGED) ; Plafond des remboursements trimestriels (entre les deux limites d'âge ou APE taux partiel)",
 )
 
 fam_aged_remb_taux1 = Parameter{Float32}(
@@ -4654,7 +4666,7 @@ fam_aged_remb_taux1 = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Taux de remboursement des cotisations (sans condition de ressources)",
+  description = "Prestations familiales ; Allocation de garde d'enfant à domicile (AGED) ; Taux de remboursement des cotisations (sans condition de ressources)",
 )
 
 fam_aged_remb_taux2 = Parameter{Float32}(
@@ -4663,7 +4675,7 @@ fam_aged_remb_taux2 = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Taux de remboursement des cotisations (sous condition de ressources)",
+  description = "Prestations familiales ; Allocation de garde d'enfant à domicile (AGED) ; Taux de remboursement des cotisations (sous condition de ressources)",
 )
 
 fam_aged_remb_taux3 = Parameter{Float32}(
@@ -4672,7 +4684,7 @@ fam_aged_remb_taux3 = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Taux de remboursements des cotisations (entre les deux limites d'âge ou APE taux partiel)",
+  description = "Prestations familiales ; Allocation de garde d'enfant à domicile (AGED) ; Taux de remboursements des cotisations (entre les deux limites d'âge ou APE taux partiel)",
 )
 
 fam_aged_revenus_plaf = Parameter{Float32}(
@@ -4684,7 +4696,7 @@ fam_aged_revenus_plaf = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Plafond des revenus nets catégoriels annuels",
+  description = "Prestations familiales ; Allocation de garde d'enfant à domicile (AGED) ; Plafond des revenus nets catégoriels annuels",
 )
 
 fam_ape_age = Parameter{Int32}(
@@ -4694,7 +4706,7 @@ fam_ape_age = Parameter{Int32}(
   unit = "year",
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Limite d'âge (stricte) pour bénéficier de l'APE",
+  description = "Prestations familiales ; Allocation parentale d'éducation (APE) ; Limite d'âge (stricte) pour bénéficier de l'APE",
 )
 
 fam_ape_tx_50 = Parameter{Float32}(
@@ -4703,7 +4715,7 @@ fam_ape_tx_50 = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Activité au plus égale au mi-temps de la durée légale du travail (en % de la bmaf)",
+  description = "Prestations familiales ; Allocation parentale d'éducation (APE) ; Activité au plus égale au mi-temps de la durée légale du travail (en % de la bmaf)",
 )
 
 fam_ape_tx_80 = Parameter{Float32}(
@@ -4712,7 +4724,7 @@ fam_ape_tx_80 = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Activité entre 50% et 80% de la durée légale du travail (en % de la bmaf)",
+  description = "Prestations familiales ; Allocation parentale d'éducation (APE) ; Activité entre 50% et 80% de la durée légale du travail (en % de la bmaf)",
 )
 
 fam_ape_tx_inactif = Parameter{Float32}(
@@ -4721,7 +4733,7 @@ fam_ape_tx_inactif = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Cessation complète d'activité à plein temps (en % de la bmaf)",
+  description = "Prestations familiales ; Allocation parentale d'éducation (APE) ; Cessation complète d'activité à plein temps (en % de la bmaf)",
 )
 
 fam_apje_age = Parameter{Float32}(
@@ -4730,7 +4742,7 @@ fam_apje_age = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Âge limite inférieur",
+  description = "Prestations familiales ; Allocation pour jeune enfant (APJE) ; Âge limite inférieur",
 )
 
 fam_apje_plaf = Parameter{Int32}(
@@ -4745,7 +4757,7 @@ fam_apje_plaf = Parameter{Int32}(
   unit = "currency",
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Plafond de ressources",
+  description = "Prestations familiales ; Allocation pour jeune enfant (APJE) ; Plafond de ressources",
 )
 
 fam_apje_plaf_maj = Parameter{Int32}(
@@ -4760,7 +4772,7 @@ fam_apje_plaf_maj = Parameter{Int32}(
   unit = "currency",
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Majoration du plafond pour biactifs ou isolé",
+  description = "Prestations familiales ; Allocation pour jeune enfant (APJE) ; Majoration du plafond pour biactifs ou isolé",
 )
 
 fam_apje_plaf_tx1 = Parameter{Float32}(
@@ -4769,7 +4781,7 @@ fam_apje_plaf_tx1 = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Majoration du plafond pour les 2 premiers enfants",
+  description = "Prestations familiales ; Allocation pour jeune enfant (APJE) ; Majoration du plafond pour les 2 premiers enfants",
 )
 
 fam_apje_plaf_tx2 = Parameter{Float32}(
@@ -4778,7 +4790,7 @@ fam_apje_plaf_tx2 = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Majoration du plafond à partir du 3ème enfant",
+  description = "Prestations familiales ; Allocation pour jeune enfant (APJE) ; Majoration du plafond à partir du 3ème enfant",
 )
 
 fam_apje_taux = Parameter{Float32}(
@@ -4787,7 +4799,7 @@ fam_apje_taux = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Taux de l'APJE",
+  description = "Prestations familiales ; Allocation pour jeune enfant (APJE) ; Taux de l'APJE",
 )
 
 fam_ars_agec = Parameter{Int32}(
@@ -4797,7 +4809,7 @@ fam_ars_agec = Parameter{Int32}(
   unit = "year",
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Âge d'entrée au collège",
+  description = "Prestations familiales ; Allocation de rentrée scolaire ; Âge d'entrée au collège",
 )
 
 fam_ars_agel = Parameter{Int32}(
@@ -4807,7 +4819,7 @@ fam_ars_agel = Parameter{Int32}(
   unit = "year",
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Âge d'entrée au lycée",
+  description = "Prestations familiales ; Allocation de rentrée scolaire ; Âge d'entrée au lycée",
 )
 
 fam_ars_agep = Parameter{Int32}(
@@ -4817,7 +4829,7 @@ fam_ars_agep = Parameter{Int32}(
   unit = "year",
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Âge d'entrée à l'école primaire",
+  description = "Prestations familiales ; Allocation de rentrée scolaire ; Âge d'entrée à l'école primaire",
 )
 
 fam_ars_ages = Parameter{Int32}(
@@ -4827,7 +4839,7 @@ fam_ars_ages = Parameter{Int32}(
   unit = "year",
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Âge de sortie du lycée",
+  description = "Prestations familiales ; Allocation de rentrée scolaire ; Âge de sortie du lycée",
 )
 
 fam_ars_plaf = Parameter{Int32}(
@@ -4849,7 +4861,7 @@ fam_ars_plaf = Parameter{Int32}(
   unit = "currency",
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Plafond de ressources",
+  description = "Prestations familiales ; Allocation de rentrée scolaire ; Plafond de ressources",
 )
 
 fam_ars_plaf_enf_supp = Parameter{Float32}(
@@ -4858,7 +4870,7 @@ fam_ars_plaf_enf_supp = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Majoration du plafond de ressources par enfant à charge",
+  description = "Prestations familiales ; Allocation de rentrée scolaire ; Majoration du plafond de ressources par enfant à charge",
 )
 
 fam_ars_seuil_nv = Parameter{Int32}(
@@ -4868,7 +4880,7 @@ fam_ars_seuil_nv = Parameter{Int32}(
   unit = "currency",
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Seuil de non versement",
+  description = "Prestations familiales ; Allocation de rentrée scolaire ; Seuil de non versement",
 )
 
 fam_ars_tx0610 = Parameter{Float32}(
@@ -4879,7 +4891,7 @@ fam_ars_tx0610 = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Taux pour les écoliers (en % de bmaf)",
+  description = "Prestations familiales ; Allocation de rentrée scolaire ; Taux pour les écoliers (en % de bmaf)",
 )
 
 fam_ars_tx1114 = Parameter{Float32}(
@@ -4890,7 +4902,7 @@ fam_ars_tx1114 = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Taux pour les collégiens (en % de bmaf)",
+  description = "Prestations familiales ; Allocation de rentrée scolaire ; Taux pour les collégiens (en % de bmaf)",
 )
 
 fam_ars_tx1518 = Parameter{Float32}(
@@ -4901,7 +4913,7 @@ fam_ars_tx1518 = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Taux pour les lycéens (en % de bmaf)",
+  description = "Prestations familiales ; Allocation de rentrée scolaire ; Taux pour les lycéens (en % de bmaf)",
 )
 
 fam_asf_taux1 = Parameter{Float32}(
@@ -4911,7 +4923,7 @@ fam_asf_taux1 = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Orphelin de père ou de mère (un seul parent manquant) ou situation assimilée: beaux parents ou pension alimentaire non versée",
+  description = "Prestations familiales ; Allocation de soutien familial ; Orphelin de père ou de mère (un seul parent manquant) ou situation assimilée: beaux parents ou pension alimentaire non versée",
 )
 
 fam_asf_taux2 = Parameter{Float32}(
@@ -4921,7 +4933,7 @@ fam_asf_taux2 = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Orphelin (de père et de mère), ou situation assimilée",
+  description = "Prestations familiales ; Allocation de soutien familial ; Orphelin (de père et de mère), ou situation assimilée",
 )
 
 fam_cf_age1 = Parameter{Int32}(
@@ -4931,7 +4943,7 @@ fam_cf_age1 = Parameter{Int32}(
   unit = "year",
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Âge limite inférieur",
+  description = "Prestations familiales ; Complément familial ; Âge limite inférieur",
 )
 
 fam_cf_age2 = Parameter{Int32}(
@@ -4943,7 +4955,7 @@ fam_cf_age2 = Parameter{Int32}(
   unit = "year",
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Âge limite supérieur",
+  description = "Prestations familiales ; Complément familial ; Âge limite supérieur",
 )
 
 fam_cf_plaf = Parameter{Int32}(
@@ -4966,7 +4978,7 @@ fam_cf_plaf = Parameter{Int32}(
   unit = "currency",
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Plafond de ressources",
+  description = "Prestations familiales ; Complément familial ; Plafond de ressources",
 )
 
 fam_cf_plaf_maj = Parameter{Int32}(
@@ -4989,7 +5001,7 @@ fam_cf_plaf_maj = Parameter{Int32}(
   unit = "currency",
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Majoration du plafond pour biactifs ou isolé",
+  description = "Prestations familiales ; Complément familial ; Majoration du plafond pour biactifs ou isolé",
 )
 
 fam_cf_plaf_tx1 = Parameter{Float32}(
@@ -4998,7 +5010,7 @@ fam_cf_plaf_tx1 = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Majoration du plafond pour les 2 premiers enfants",
+  description = "Prestations familiales ; Complément familial ; Majoration du plafond pour les 2 premiers enfants",
 )
 
 fam_cf_plaf_tx2 = Parameter{Float32}(
@@ -5007,7 +5019,7 @@ fam_cf_plaf_tx2 = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Majoration du plafond à partir du 3ème enfant",
+  description = "Prestations familiales ; Complément familial ; Majoration du plafond à partir du 3ème enfant",
 )
 
 fam_cf_tx = Parameter{Float32}(
@@ -5016,7 +5028,7 @@ fam_cf_tx = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Taux du complément familial",
+  description = "Prestations familiales ; Complément familial ; Taux du complément familial",
 )
 
 fam_paje_base_age = Parameter{Int32}(
@@ -5026,7 +5038,7 @@ fam_paje_base_age = Parameter{Int32}(
   unit = "year",
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Limite d'âge (stricte) pour bénéficier de la PAJE",
+  description = "Prestations familiales ; Prestation d'accueil du jeune enfant ; Allocation de base ; Limite d'âge (stricte) pour bénéficier de la PAJE",
 )
 
 fam_paje_base_plaf = Parameter{Int32}(
@@ -5046,7 +5058,7 @@ fam_paje_base_plaf = Parameter{Int32}(
   unit = "currency",
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Plafond de ressources",
+  description = "Prestations familiales ; Prestation d'accueil du jeune enfant ; Allocation de base ; Plafond de ressources",
 )
 
 fam_paje_base_plaf_maj = Parameter{Int32}(
@@ -5066,7 +5078,7 @@ fam_paje_base_plaf_maj = Parameter{Int32}(
   unit = "currency",
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Majoration pour biactifs et isolés",
+  description = "Prestations familiales ; Prestation d'accueil du jeune enfant ; Allocation de base ; Majoration pour biactifs et isolés",
 )
 
 fam_paje_base_plaf_tx1 = Parameter{Float32}(
@@ -5075,7 +5087,7 @@ fam_paje_base_plaf_tx1 = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Majoration du plafond pour les 2 premiers enfants",
+  description = "Prestations familiales ; Prestation d'accueil du jeune enfant ; Allocation de base ; Majoration du plafond pour les 2 premiers enfants",
 )
 
 fam_paje_base_plaf_tx2 = Parameter{Float32}(
@@ -5084,7 +5096,7 @@ fam_paje_base_plaf_tx2 = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Majoration du plafond à partir du 3ème enfant",
+  description = "Prestations familiales ; Prestation d'accueil du jeune enfant ; Allocation de base ; Majoration du plafond à partir du 3ème enfant",
 )
 
 fam_paje_base_taux = Parameter{Float32}(
@@ -5093,7 +5105,7 @@ fam_paje_base_taux = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Allocation de base (en % de la bmaf)",
+  description = "Prestations familiales ; Prestation d'accueil du jeune enfant ; Allocation de base ; Allocation de base (en % de la bmaf)",
 )
 
 fam_paje_clca_age = Parameter{Int32}(
@@ -5103,7 +5115,7 @@ fam_paje_clca_age = Parameter{Int32}(
   unit = "year",
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Limite d'âge (stricte)",
+  description = "Prestations familiales ; Prestation d'accueil du jeune enfant ; Complément libre choix d'activité ; Limite d'âge (stricte)",
 )
 
 fam_paje_clca_avecab_tx_inactif = Parameter{Float32}(
@@ -5112,7 +5124,7 @@ fam_paje_clca_avecab_tx_inactif = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Taux pour les personnes inactives percevant l'allocation de base de la PAJE",
+  description = "Prestations familiales ; Prestation d'accueil du jeune enfant ; Complément libre choix d'activité ; Taux pour les personnes inactives percevant l'allocation de base de la PAJE",
 )
 
 fam_paje_clca_avecab_tx_partiel1 = Parameter{Float32}(
@@ -5121,7 +5133,7 @@ fam_paje_clca_avecab_tx_partiel1 = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Taux pour les personnes à temps partiel inf. à 50% percevant l'allocation de base de la PAJE",
+  description = "Prestations familiales ; Prestation d'accueil du jeune enfant ; Complément libre choix d'activité ; Taux pour les personnes à temps partiel inf. à 50% percevant l'allocation de base de la PAJE",
 )
 
 fam_paje_clca_avecab_tx_partiel2 = Parameter{Float32}(
@@ -5130,7 +5142,7 @@ fam_paje_clca_avecab_tx_partiel2 = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Taux pour les personnes à temps partiel 50pc-80pc percevant l'allocation de base de la PAJE",
+  description = "Prestations familiales ; Prestation d'accueil du jeune enfant ; Complément libre choix d'activité ; Taux pour les personnes à temps partiel 50pc-80pc percevant l'allocation de base de la PAJE",
 )
 
 fam_paje_clca_duree1 = Parameter{Int32}(
@@ -5140,7 +5152,7 @@ fam_paje_clca_duree1 = Parameter{Int32}(
   unit = "month",
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Durée (en mois) de versement pour le premier enfant",
+  description = "Prestations familiales ; Prestation d'accueil du jeune enfant ; Complément libre choix d'activité ; Durée (en mois) de versement pour le premier enfant",
 )
 
 fam_paje_clca_sansab_tx_inactif = Parameter{Float32}(
@@ -5150,7 +5162,7 @@ fam_paje_clca_sansab_tx_inactif = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Taux pour les personnes inactives ne percevant pas l'allocation de base de la PAJE",
+  description = "Prestations familiales ; Prestation d'accueil du jeune enfant ; Complément libre choix d'activité ; Taux pour les personnes inactives ne percevant pas l'allocation de base de la PAJE",
 )
 
 fam_paje_clca_sansab_tx_partiel1 = Parameter{Float32}(
@@ -5160,7 +5172,7 @@ fam_paje_clca_sansab_tx_partiel1 = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Taux pour les personnes à temps partiel inf. à 50% ne percevant pas l'allocation de base de la PAJE",
+  description = "Prestations familiales ; Prestation d'accueil du jeune enfant ; Complément libre choix d'activité ; Taux pour les personnes à temps partiel inf. à 50% ne percevant pas l'allocation de base de la PAJE",
 )
 
 fam_paje_clca_sansab_tx_partiel2 = Parameter{Float32}(
@@ -5170,7 +5182,7 @@ fam_paje_clca_sansab_tx_partiel2 = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Taux pour les personnes à temps partiel 50%-80% ne percevant pas l'allocation de base de la PAJE",
+  description = "Prestations familiales ; Prestation d'accueil du jeune enfant ; Complément libre choix d'activité ; Taux pour les personnes à temps partiel 50%-80% ne percevant pas l'allocation de base de la PAJE",
 )
 
 fam_paje_clmg_age1 = Parameter{Int32}(
@@ -5180,7 +5192,7 @@ fam_paje_clmg_age1 = Parameter{Int32}(
   unit = "year",
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Limite d'âge (stricte) pour une prestation pleine",
+  description = "Prestations familiales ; Prestation d'accueil du jeune enfant ; Complément de libre choix du mode de garde ; Limite d'âge (stricte) pour une prestation pleine",
 )
 
 fam_paje_clmg_age2 = Parameter{Int32}(
@@ -5190,7 +5202,7 @@ fam_paje_clmg_age2 = Parameter{Int32}(
   unit = "year",
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Limite d'âge (stricte) pour une prestation réduite",
+  description = "Prestations familiales ; Prestation d'accueil du jeune enfant ; Complément de libre choix du mode de garde ; Limite d'âge (stricte) pour une prestation réduite",
 )
 
 fam_paje_clmg_ass_mat1 = Parameter{Float32}(
@@ -5199,7 +5211,7 @@ fam_paje_clmg_ass_mat1 = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Taux pour recours à une assistante maternelle, une association, une entreprise ou une microcréche avant le premier plafond",
+  description = "Prestations familiales ; Prestation d'accueil du jeune enfant ; Complément de libre choix du mode de garde ; Taux pour recours à une assistante maternelle, une association, une entreprise ou une microcréche avant le premier plafond",
 )
 
 fam_paje_clmg_ass_mat2 = Parameter{Float32}(
@@ -5208,7 +5220,7 @@ fam_paje_clmg_ass_mat2 = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Taux pour recours à une assistante maternelle, une association, une entreprise ou une microcréche avant le second plafond",
+  description = "Prestations familiales ; Prestation d'accueil du jeune enfant ; Complément de libre choix du mode de garde ; Taux pour recours à une assistante maternelle, une association, une entreprise ou une microcréche avant le second plafond",
 )
 
 fam_paje_clmg_ass_mat3 = Parameter{Float32}(
@@ -5217,7 +5229,7 @@ fam_paje_clmg_ass_mat3 = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Taux pour recours à une assistante maternelle, une association, une entreprise ou une microcréche après le second plafond",
+  description = "Prestations familiales ; Prestation d'accueil du jeune enfant ; Complément de libre choix du mode de garde ; Taux pour recours à une assistante maternelle, une association, une entreprise ou une microcréche après le second plafond",
 )
 
 fam_paje_clmg_domi1 = Parameter{Float32}(
@@ -5226,7 +5238,7 @@ fam_paje_clmg_domi1 = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Taux pour recours à une garde à domicile avant le premier plafond",
+  description = "Prestations familiales ; Prestation d'accueil du jeune enfant ; Complément de libre choix du mode de garde ; Taux pour recours à une garde à domicile avant le premier plafond",
 )
 
 fam_paje_clmg_domi2 = Parameter{Float32}(
@@ -5235,7 +5247,7 @@ fam_paje_clmg_domi2 = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Taux pour recours à une garde à domicile avant le second plafond",
+  description = "Prestations familiales ; Prestation d'accueil du jeune enfant ; Complément de libre choix du mode de garde ; Taux pour recours à une garde à domicile avant le second plafond",
 )
 
 fam_paje_clmg_domi3 = Parameter{Float32}(
@@ -5244,7 +5256,7 @@ fam_paje_clmg_domi3 = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Taux pour recours à une garde à domicile après le second plafond",
+  description = "Prestations familiales ; Prestation d'accueil du jeune enfant ; Complément de libre choix du mode de garde ; Taux pour recours à une garde à domicile après le second plafond",
 )
 
 fam_paje_clmg_empl_dir1 = Parameter{Float32}(
@@ -5253,7 +5265,7 @@ fam_paje_clmg_empl_dir1 = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Taux pour recours à un emploi direct avant le premier plafond",
+  description = "Prestations familiales ; Prestation d'accueil du jeune enfant ; Complément de libre choix du mode de garde ; Taux pour recours à un emploi direct avant le premier plafond",
 )
 
 fam_paje_clmg_empl_dir2 = Parameter{Float32}(
@@ -5262,7 +5274,7 @@ fam_paje_clmg_empl_dir2 = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Taux pour recours à un emploi direct avant le second plafond",
+  description = "Prestations familiales ; Prestation d'accueil du jeune enfant ; Complément de libre choix du mode de garde ; Taux pour recours à un emploi direct avant le second plafond",
 )
 
 fam_paje_clmg_empl_dir3 = Parameter{Float32}(
@@ -5271,7 +5283,7 @@ fam_paje_clmg_empl_dir3 = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Taux pour recours à un emploi direct après le second plafond",
+  description = "Prestations familiales ; Prestation d'accueil du jeune enfant ; Complément de libre choix du mode de garde ; Taux pour recours à un emploi direct après le second plafond",
 )
 
 fam_paje_clmg_seuil11 = Parameter{Int32}(
@@ -5290,7 +5302,7 @@ fam_paje_clmg_seuil11 = Parameter{Int32}(
   unit = "currency",
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Premier plafond de ressources pour un enfant",
+  description = "Prestations familiales ; Prestation d'accueil du jeune enfant ; Complément de libre choix du mode de garde ; Premier plafond de ressources pour un enfant",
 )
 
 fam_paje_clmg_seuil12 = Parameter{Int32}(
@@ -5309,7 +5321,7 @@ fam_paje_clmg_seuil12 = Parameter{Int32}(
   unit = "currency",
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Premier plafond de ressources pour deux enfants",
+  description = "Prestations familiales ; Prestation d'accueil du jeune enfant ; Complément de libre choix du mode de garde ; Premier plafond de ressources pour deux enfants",
 )
 
 fam_paje_clmg_seuil1sup = Parameter{Int32}(
@@ -5328,7 +5340,7 @@ fam_paje_clmg_seuil1sup = Parameter{Int32}(
   unit = "currency",
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Premier plafond de ressources: maj. enfant suppl.",
+  description = "Prestations familiales ; Prestation d'accueil du jeune enfant ; Complément de libre choix du mode de garde ; Premier plafond de ressources: maj. enfant suppl.",
 )
 
 fam_paje_clmg_seuil21 = Parameter{Int32}(
@@ -5347,7 +5359,7 @@ fam_paje_clmg_seuil21 = Parameter{Int32}(
   unit = "currency",
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Second plafond de ressources pour un enfant",
+  description = "Prestations familiales ; Prestation d'accueil du jeune enfant ; Complément de libre choix du mode de garde ; Second plafond de ressources pour un enfant",
 )
 
 fam_paje_clmg_seuil22 = Parameter{Int32}(
@@ -5366,7 +5378,7 @@ fam_paje_clmg_seuil22 = Parameter{Int32}(
   unit = "currency",
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Second plafond de ressources pour deux enfants",
+  description = "Prestations familiales ; Prestation d'accueil du jeune enfant ; Complément de libre choix du mode de garde ; Second plafond de ressources pour deux enfants",
 )
 
 fam_paje_clmg_seuil2sup = Parameter{Int32}(
@@ -5385,7 +5397,7 @@ fam_paje_clmg_seuil2sup = Parameter{Int32}(
   unit = "currency",
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Second plafond de ressources: maj. enfant suppl.",
+  description = "Prestations familiales ; Prestation d'accueil du jeune enfant ; Complément de libre choix du mode de garde ; Second plafond de ressources: maj. enfant suppl.",
 )
 
 fam_paje_colca_age = Parameter{Int32}(
@@ -5395,7 +5407,7 @@ fam_paje_colca_age = Parameter{Int32}(
   unit = "year",
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Age limite (strict) de perception",
+  description = "Prestations familiales ; Prestation d'accueil du jeune enfant ; Complément optionnel libre choix d'activité ; Age limite (strict) de perception",
 )
 
 fam_paje_colca_avecab = Parameter{Float32}(
@@ -5404,7 +5416,7 @@ fam_paje_colca_avecab = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Taux de la prestation en cas de perception de l'allocation de base de la PAJE",
+  description = "Prestations familiales ; Prestation d'accueil du jeune enfant ; Complément optionnel libre choix d'activité ; Taux de la prestation en cas de perception de l'allocation de base de la PAJE",
 )
 
 fam_paje_colca_sansab = Parameter{Float32}(
@@ -5413,7 +5425,7 @@ fam_paje_colca_sansab = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Taux de la prestation en cas de non perception de l'allocation de base de la PAJE",
+  description = "Prestations familiales ; Prestation d'accueil du jeune enfant ; Complément optionnel libre choix d'activité ; Taux de la prestation en cas de non perception de l'allocation de base de la PAJE",
 )
 
 fam_paje_nais_adopt = Parameter{Float32}(
@@ -5422,7 +5434,7 @@ fam_paje_nais_adopt = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "facteur multitplicatif de la prime à l'adoption",
+  description = "Prestations familiales ; Prestation d'accueil du jeune enfant ; Prime à la naissance ; facteur multitplicatif de la prime à l'adoption",
 )
 
 fam_paje_nais_prime_tx = Parameter{Float32}(
@@ -5431,7 +5443,7 @@ fam_paje_nais_prime_tx = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Prime à la naissance et à l'adoption",
+  description = "Prestations familiales ; Prestation d'accueil du jeune enfant ; Prime à la naissance ; Prime à la naissance et à l'adoption",
 )
 
 fonc_IM_100 = Parameter{Float32}(
@@ -5458,7 +5470,7 @@ fonc_IM_100 = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Indice 100 majoré",
+  description = "Traitement des fonctionnaires ; Indice 100 majoré",
 )
 
 fonc_IM_min = Parameter{Int32}(
@@ -5484,7 +5496,7 @@ fonc_IM_min = Parameter{Int32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Indice de traitement minimum",
+  description = "Traitement des fonctionnaires ; Indice de traitement minimum",
 )
 
 fonc_indem_resid_min = Parameter{Int32}(
@@ -5500,7 +5512,7 @@ fonc_indem_resid_min = Parameter{Int32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Indemnité de résidence : plancher (en indice majoré)",
+  description = "Traitement des fonctionnaires ; Indemnité de résidence ; Indemnité de résidence : plancher (en indice majoré)",
 )
 
 fonc_indem_resid_taux_zone1 = Parameter{Float32}(
@@ -5509,7 +5521,7 @@ fonc_indem_resid_taux_zone1 = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Indemnité de résidence zone 1 : taux",
+  description = "Traitement des fonctionnaires ; Indemnité de résidence ; Indemnité de résidence : taux ; Indemnité de résidence zone 1 : taux",
 )
 
 fonc_indem_resid_taux_zone2 = Parameter{Float32}(
@@ -5518,7 +5530,7 @@ fonc_indem_resid_taux_zone2 = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Indemnité de résidence zone 2 : taux",
+  description = "Traitement des fonctionnaires ; Indemnité de résidence ; Indemnité de résidence : taux ; Indemnité de résidence zone 2 : taux",
 )
 
 fonc_indem_resid_taux_zone3 = Parameter{Float32}(
@@ -5527,7 +5539,7 @@ fonc_indem_resid_taux_zone3 = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Indemnité de résidence zone 3 : taux",
+  description = "Traitement des fonctionnaires ; Indemnité de résidence ; Indemnité de résidence : taux ; Indemnité de résidence zone 3 : taux",
 )
 
 fonc_supp_fam_IM_max = Parameter{Int32}(
@@ -5536,7 +5548,7 @@ fonc_supp_fam_IM_max = Parameter{Int32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Indice majoré plafond",
+  description = "Traitement des fonctionnaires ; Supplément familial de traitement ; Indice majoré plafond",
 )
 
 fonc_supp_fam_IM_min = Parameter{Int32}(
@@ -5547,7 +5559,7 @@ fonc_supp_fam_IM_min = Parameter{Int32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Indice majoré plancher",
+  description = "Traitement des fonctionnaires ; Supplément familial de traitement ; Indice majoré plancher",
 )
 
 fonc_supp_fam_fixe_enf1 = Parameter{Float32}(
@@ -5556,7 +5568,7 @@ fonc_supp_fam_fixe_enf1 = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "1er enfant",
+  description = "Traitement des fonctionnaires ; Supplément familial de traitement ; Part fixe ; 1er enfant",
 )
 
 fonc_supp_fam_fixe_enf2 = Parameter{Float32}(
@@ -5565,7 +5577,7 @@ fonc_supp_fam_fixe_enf2 = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "2 enfants",
+  description = "Traitement des fonctionnaires ; Supplément familial de traitement ; Part fixe ; 2 enfants",
 )
 
 fonc_supp_fam_fixe_enfsupp = Parameter{Float32}(
@@ -5574,7 +5586,7 @@ fonc_supp_fam_fixe_enfsupp = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Enfant supplémentaire",
+  description = "Traitement des fonctionnaires ; Supplément familial de traitement ; Part fixe ; Enfant supplémentaire",
 )
 
 fonc_supp_fam_prop_enf2 = Parameter{Float32}(
@@ -5583,7 +5595,7 @@ fonc_supp_fam_prop_enf2 = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Pour 2 enfants",
+  description = "Traitement des fonctionnaires ; Supplément familial de traitement ; Part proportionnelle au traitement ; Pour 2 enfants",
 )
 
 fonc_supp_fam_prop_enf3 = Parameter{Float32}(
@@ -5592,7 +5604,7 @@ fonc_supp_fam_prop_enf3 = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Pour 3 enfants",
+  description = "Traitement des fonctionnaires ; Supplément familial de traitement ; Part proportionnelle au traitement ; Pour 3 enfants",
 )
 
 fonc_supp_fam_prop_enfsupp = Parameter{Float32}(
@@ -5601,7 +5613,7 @@ fonc_supp_fam_prop_enfsupp = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Par nfant supplémentaire",
+  description = "Traitement des fonctionnaires ; Supplément familial de traitement ; Part proportionnelle au traitement ; Par nfant supplémentaire",
 )
 
 ir_abattements_speciaux_enf_montant = Parameter{Int32}(
@@ -5621,7 +5633,7 @@ ir_abattements_speciaux_enf_montant = Parameter{Int32}(
   unit = "currency",
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Enfants à charge (par personne rattachée)",
+  description = "Impôt sur le revenu ; Abattements spéciaux ; Enfants à charge (par personne rattachée)",
 )
 
 ir_abattements_speciaux_inv_max1 = Parameter{Int32}(
@@ -5642,7 +5654,7 @@ ir_abattements_speciaux_inv_max1 = Parameter{Int32}(
   unit = "currency",
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Âgé ou invalide - 1er cas limite",
+  description = "Impôt sur le revenu ; Abattements spéciaux ; Âgé ou invalide - 1er cas limite",
 )
 
 ir_abattements_speciaux_inv_max2 = Parameter{Int32}(
@@ -5663,7 +5675,7 @@ ir_abattements_speciaux_inv_max2 = Parameter{Int32}(
   unit = "currency",
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Âgé ou invalide - 2ème cas limite",
+  description = "Impôt sur le revenu ; Abattements spéciaux ; Âgé ou invalide - 2ème cas limite",
 )
 
 ir_abattements_speciaux_inv_montant = Parameter{Int32}(
@@ -5683,7 +5695,7 @@ ir_abattements_speciaux_inv_montant = Parameter{Int32}(
   unit = "currency",
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Âgé ou invalide - montant",
+  description = "Impôt sur le revenu ; Abattements spéciaux ; Âgé ou invalide - montant",
 )
 
 ir_autre_D_enfJ = Parameter{Bool}(
@@ -5692,7 +5704,7 @@ ir_autre_D_enfJ = Parameter{Bool}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Indicatrice pour rattachement d'enfant majeur",
+  description = "Impôt sur le revenu ; Variables pour scénario de réforme ; Indicatrice pour rattachement d'enfant majeur",
 )
 
 ir_autre_alloc_imp = Parameter{Bool}(
@@ -5701,7 +5713,7 @@ ir_autre_alloc_imp = Parameter{Bool}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Allocations familiales imposables",
+  description = "Impôt sur le revenu ; Variables pour scénario de réforme ; Allocations familiales imposables",
 )
 
 ir_autre_finpfl = Parameter{Bool}(
@@ -5710,7 +5722,7 @@ ir_autre_finpfl = Parameter{Bool}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Indicatrice pour imposition des revenus du capital au barème",
+  description = "Impôt sur le revenu ; Variables pour scénario de réforme ; Indicatrice pour imposition des revenus du capital au barème",
 )
 
 ir_autre_hsup_exo = Parameter{Bool}(
@@ -5721,10 +5733,10 @@ ir_autre_hsup_exo = Parameter{Bool}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Exonération des heures supplémentaires",
+  description = "Impôt sur le revenu ; Variables pour scénario de réforme ; Exonération des heures supplémentaires",
 )
 
-ir_bareme = RateTaxScale(
+ir_bareme = MarginalRateScale(
   [
     RateBracket(
       threshold = [
@@ -5928,10 +5940,10 @@ ir_bareme = RateTaxScale(
   unit = "currency",
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Tranches de l'IR",
+  description = "Impôt sur le revenu ; Tranches de l'IR",
 )
 
-ir_cehr = RateTaxScale(
+ir_cehr = MarginalRateScale(
   [
     RateBracket(
       threshold = [
@@ -5961,10 +5973,10 @@ ir_cehr = RateTaxScale(
   unit = "currency",
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Contribution exceptionnelle sur les hauts revenus",
+  description = "Impôt sur le revenu ; Contribution exceptionnelle sur les hauts revenus",
 )
 
-ir_cesthra = RateTaxScale(
+ir_cesthra = MarginalRateScale(
   [
     RateBracket(
       threshold = [
@@ -5986,7 +5998,7 @@ ir_cesthra = RateTaxScale(
   unit = "currency",
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Contribution exceptionnelle de solidarité sur les très hauts revenus d'activité",
+  description = "Impôt sur le revenu ; Contribution exceptionnelle de solidarité sur les très hauts revenus d'activité",
 )
 
 ir_charges_deductibles_acc75a_max = Parameter{Int32}(
@@ -6005,7 +6017,7 @@ ir_charges_deductibles_acc75a_max = Parameter{Int32}(
   unit = "currency",
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Maximum par personne",
+  description = "Impôt sur le revenu ; Charges déductibles ; Frais d'acceuil d'une personne de plus de 75 ans ; Maximum par personne",
 )
 
 ir_charges_deductibles_cinema_max = Parameter{Int32}(
@@ -6015,7 +6027,7 @@ ir_charges_deductibles_cinema_max = Parameter{Int32}(
   unit = "currency",
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Maximum",
+  description = "Impôt sur le revenu ; Charges déductibles ; Souscription en faveur du cinéma ou de l'audiovisuel (case AA) ; Maximum",
 )
 
 ir_charges_deductibles_cinema_taux = Parameter{Float32}(
@@ -6024,7 +6036,7 @@ ir_charges_deductibles_cinema_taux = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Taux",
+  description = "Impôt sur le revenu ; Charges déductibles ; Souscription en faveur du cinéma ou de l'audiovisuel (case AA) ; Taux",
 )
 
 ir_charges_deductibles_deduc_perp_max = Parameter{Int32}(
@@ -6042,7 +6054,7 @@ ir_charges_deductibles_deduc_perp_max = Parameter{Int32}(
   unit = "currency",
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Maximum par personne",
+  description = "Impôt sur le revenu ; Charges déductibles ; Déduction pour versements sur PERP ; Maximum par personne",
 )
 
 ir_charges_deductibles_deduc_perp_min = Parameter{Int32}(
@@ -6060,7 +6072,7 @@ ir_charges_deductibles_deduc_perp_min = Parameter{Int32}(
   unit = "currency",
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Minimum par personne",
+  description = "Impôt sur le revenu ; Charges déductibles ; Déduction pour versements sur PERP ; Minimum par personne",
 )
 
 ir_charges_deductibles_ecodev_max = Parameter{Int32}(
@@ -6070,7 +6082,7 @@ ir_charges_deductibles_ecodev_max = Parameter{Int32}(
   unit = "currency",
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Limite de y euros par personne",
+  description = "Impôt sur le revenu ; Charges déductibles ; Compte épargne codéveloppement ; Limite de y euros par personne",
 )
 
 ir_charges_deductibles_ecodev_taux = Parameter{Float32}(
@@ -6079,7 +6091,7 @@ ir_charges_deductibles_ecodev_taux = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Limite de x % du revenu",
+  description = "Impôt sur le revenu ; Charges déductibles ; Compte épargne codéveloppement ; Limite de x % du revenu",
 )
 
 ir_charges_deductibles_grorep_max = Parameter{Int32}(
@@ -6089,7 +6101,7 @@ ir_charges_deductibles_grorep_max = Parameter{Int32}(
   unit = "currency",
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Plafond des dépenses",
+  description = "Impôt sur le revenu ; Charges déductibles ; Grosses réparations des nus-propriétaires ; Plafond des dépenses",
 )
 
 ir_charges_deductibles_penalim_max = Parameter{Int32}(
@@ -6108,7 +6120,7 @@ ir_charges_deductibles_penalim_max = Parameter{Int32}(
   unit = "currency",
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Limite par enfant",
+  description = "Impôt sur le revenu ; Charges déductibles ; Pensions alimentaires ; Limite par enfant",
 )
 
 ir_charges_deductibles_penalim_taux_jgt_2006 = Parameter{Float32}(
@@ -6117,7 +6129,7 @@ ir_charges_deductibles_penalim_taux_jgt_2006 = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Majoration (si ouverture du droit) si jugement avant 2006",
+  description = "Impôt sur le revenu ; Charges déductibles ; Pensions alimentaires ; Majoration (si ouverture du droit) si jugement avant 2006",
 )
 
 ir_charges_deductibles_percap_max_cb = Parameter{Int32}(
@@ -6127,7 +6139,7 @@ ir_charges_deductibles_percap_max_cb = Parameter{Int32}(
   unit = "currency",
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Case CB",
+  description = "Impôt sur le revenu ; Charges déductibles ; Pertes en capital consécutives à la souscription au capital de sociétés nouvelles ou de sociétés en difficulté (cases CB et DA) ; Case CB",
 )
 
 ir_charges_deductibles_percap_max_da = Parameter{Int32}(
@@ -6137,7 +6149,7 @@ ir_charges_deductibles_percap_max_da = Parameter{Int32}(
   unit = "currency",
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Case DA",
+  description = "Impôt sur le revenu ; Charges déductibles ; Pertes en capital consécutives à la souscription au capital de sociétés nouvelles ou de sociétés en difficulté (cases CB et DA) ; Case DA",
 )
 
 ir_charges_deductibles_sofipe_max = Parameter{Float32}(
@@ -6146,7 +6158,7 @@ ir_charges_deductibles_sofipe_max = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Maximum",
+  description = "Impôt sur le revenu ; Charges déductibles ; Souscription au capital des SOFIPECHE (case CC) ; Maximum",
 )
 
 ir_charges_deductibles_sofipe_taux = Parameter{Float32}(
@@ -6155,7 +6167,7 @@ ir_charges_deductibles_sofipe_taux = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Taux",
+  description = "Impôt sur le revenu ; Charges déductibles ; Souscription au capital des SOFIPECHE (case CC) ; Taux",
 )
 
 ir_credits_impot_accult_taux = Parameter{Float32}(
@@ -6164,7 +6176,7 @@ ir_credits_impot_accult_taux = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Taux",
+  description = "Impôt sur le revenu ; Crédits d'impôt ; Acquisition de biens culturels ; Taux",
 )
 
 ir_credits_impot_acqgpl_mont_up = Parameter{Int32}(
@@ -6174,7 +6186,7 @@ ir_credits_impot_acqgpl_mont_up = Parameter{Int32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Case UP",
+  description = "Impôt sur le revenu ; Crédits d'impôt ; Dépenses d'acquisition ou de transformation d'un véhicule GPL ou mixte ; Case UP",
 )
 
 ir_credits_impot_acqgpl_mont_uq = Parameter{Int32}(
@@ -6184,7 +6196,7 @@ ir_credits_impot_acqgpl_mont_uq = Parameter{Int32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Case UQ",
+  description = "Impôt sur le revenu ; Crédits d'impôt ; Dépenses d'acquisition ou de transformation d'un véhicule GPL ou mixte ; Case UQ",
 )
 
 ir_credits_impot_aidmob_montant = Parameter{Int32}(
@@ -6194,7 +6206,7 @@ ir_credits_impot_aidmob_montant = Parameter{Int32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Montant par personne",
+  description = "Impôt sur le revenu ; Crédits d'impôt ; Crédit d'impôt aide à la mobilité ; Montant par personne",
 )
 
 ir_credits_impot_aidper_max = Parameter{Int32}(
@@ -6205,7 +6217,7 @@ ir_credits_impot_aidper_max = Parameter{Int32}(
   unit = "currency",
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Plafond",
+  description = "Impôt sur le revenu ; Crédits d'impôt ; Dépenses en faveur de l'aide aux personnes ; Plafond",
 )
 
 ir_credits_impot_aidper_pac1 = Parameter{Int32}(
@@ -6215,7 +6227,7 @@ ir_credits_impot_aidper_pac1 = Parameter{Int32}(
   unit = "currency",
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Majoration du plafond pour le 1er enfant",
+  description = "Impôt sur le revenu ; Crédits d'impôt ; Dépenses en faveur de l'aide aux personnes ; Majoration du plafond pour le 1er enfant",
 )
 
 ir_credits_impot_aidper_pac2 = Parameter{Int32}(
@@ -6226,7 +6238,7 @@ ir_credits_impot_aidper_pac2 = Parameter{Int32}(
   unit = "currency",
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Majoration du plafond pour le 2eme enfant",
+  description = "Impôt sur le revenu ; Crédits d'impôt ; Dépenses en faveur de l'aide aux personnes ; Majoration du plafond pour le 2eme enfant",
 )
 
 ir_credits_impot_aidper_pac3 = Parameter{Int32}(
@@ -6237,7 +6249,7 @@ ir_credits_impot_aidper_pac3 = Parameter{Int32}(
   unit = "currency",
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Majoration du plafond par enfant supplémentaire",
+  description = "Impôt sur le revenu ; Crédits d'impôt ; Dépenses en faveur de l'aide aux personnes ; Majoration du plafond par enfant supplémentaire",
 )
 
 ir_credits_impot_aidper_taux_sf = Parameter{Float32}(
@@ -6247,7 +6259,7 @@ ir_credits_impot_aidper_taux_sf = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Taux (SF)",
+  description = "Impôt sur le revenu ; Crédits d'impôt ; Dépenses en faveur de l'aide aux personnes ; Taux (SF)",
 )
 
 ir_credits_impot_aidper_taux_wi = Parameter{Float32}(
@@ -6256,7 +6268,7 @@ ir_credits_impot_aidper_taux_wi = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Taux (WI)",
+  description = "Impôt sur le revenu ; Crédits d'impôt ; Dépenses en faveur de l'aide aux personnes ; Taux (WI)",
 )
 
 ir_credits_impot_aidper_taux_wj = Parameter{Float32}(
@@ -6265,7 +6277,7 @@ ir_credits_impot_aidper_taux_wj = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Taux (WJ)",
+  description = "Impôt sur le revenu ; Crédits d'impôt ; Dépenses en faveur de l'aide aux personnes ; Taux (WJ)",
 )
 
 ir_credits_impot_aidper_taux_wl = Parameter{Float32}(
@@ -6275,7 +6287,7 @@ ir_credits_impot_aidper_taux_wl = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Taux (WL)",
+  description = "Impôt sur le revenu ; Crédits d'impôt ; Dépenses en faveur de l'aide aux personnes ; Taux (WL)",
 )
 
 ir_credits_impot_aidper_taux_wr = Parameter{Float32}(
@@ -6285,7 +6297,7 @@ ir_credits_impot_aidper_taux_wr = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Taux (WL)",
+  description = "Impôt sur le revenu ; Crédits d'impôt ; Dépenses en faveur de l'aide aux personnes ; Taux (WL)",
 )
 
 ir_credits_impot_assloy_taux = Parameter{Float32}(
@@ -6296,7 +6308,7 @@ ir_credits_impot_assloy_taux = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Taux",
+  description = "Impôt sur le revenu ; Crédits d'impôt ; Primes d'assurances pour loyers impayés ; Taux",
 )
 
 ir_credits_impot_cotsyn_credit_seuil = Parameter{Float32}(
@@ -6305,7 +6317,7 @@ ir_credits_impot_cotsyn_credit_seuil = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Seuil",
+  description = "Impôt sur le revenu ; Crédits d'impôt ; Cotisations syndicales ; Seuil",
 )
 
 ir_credits_impot_cotsyn_credit_taux = Parameter{Float32}(
@@ -6314,7 +6326,7 @@ ir_credits_impot_cotsyn_credit_taux = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Cotisations syndicales",
+  description = "Impôt sur le revenu ; Crédits d'impôt ; Cotisations syndicales ; Cotisations syndicales",
 )
 
 ir_credits_impot_divide_max = Parameter{Int32}(
@@ -6324,7 +6336,7 @@ ir_credits_impot_divide_max = Parameter{Int32}(
   unit = "currency",
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Plafond",
+  description = "Impôt sur le revenu ; Crédits d'impôt ; Dividendes ; Plafond",
 )
 
 ir_credits_impot_divide_taux = Parameter{Float32}(
@@ -6334,7 +6346,7 @@ ir_credits_impot_divide_taux = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Taux",
+  description = "Impôt sur le revenu ; Crédits d'impôt ; Dividendes ; Taux",
 )
 
 ir_credits_impot_drbail_taux = Parameter{Float32}(
@@ -6343,7 +6355,7 @@ ir_credits_impot_drbail_taux = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Taux",
+  description = "Impôt sur le revenu ; Crédits d'impôt ; taxe additionnelle de droit au bail ; Taux",
 )
 
 ir_credits_impot_garext_max = Parameter{Int32}(
@@ -6352,7 +6364,7 @@ ir_credits_impot_garext_max = Parameter{Int32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Plafond",
+  description = "Impôt sur le revenu ; Crédits d'impôt ; Frais de garde des enfants à l'extérieur du domicile ; Plafond",
 )
 
 ir_credits_impot_garext_taux = Parameter{Float32}(
@@ -6362,7 +6374,7 @@ ir_credits_impot_garext_taux = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Taux",
+  description = "Impôt sur le revenu ; Crédits d'impôt ; Frais de garde des enfants à l'extérieur du domicile ; Taux",
 )
 
 ir_credits_impot_inthab_add = Parameter{Int32}(
@@ -6372,7 +6384,7 @@ ir_credits_impot_inthab_add = Parameter{Int32}(
   unit = "currency",
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Par enfant à charge",
+  description = "Impôt sur le revenu ; Crédits d'impôt ; Intérêts des emprunts pour l'habitation principale ; Par enfant à charge",
 )
 
 ir_credits_impot_inthab_max = Parameter{Int32}(
@@ -6382,7 +6394,7 @@ ir_credits_impot_inthab_max = Parameter{Int32}(
   unit = "currency",
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Plafond",
+  description = "Impôt sur le revenu ; Crédits d'impôt ; Intérêts des emprunts pour l'habitation principale ; Plafond",
 )
 
 ir_credits_impot_inthab_taux1 = Parameter{Float32}(
@@ -6391,7 +6403,7 @@ ir_credits_impot_inthab_taux1 = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Taux 1",
+  description = "Impôt sur le revenu ; Crédits d'impôt ; Intérêts des emprunts pour l'habitation principale ; Taux 1",
 )
 
 ir_credits_impot_inthab_taux2 = Parameter{Float32}(
@@ -6400,7 +6412,7 @@ ir_credits_impot_inthab_taux2 = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Taux 2",
+  description = "Impôt sur le revenu ; Crédits d'impôt ; Intérêts des emprunts pour l'habitation principale ; Taux 2",
 )
 
 ir_credits_impot_inthab_taux3 = Parameter{Float32}(
@@ -6410,7 +6422,7 @@ ir_credits_impot_inthab_taux3 = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Taux 3",
+  description = "Impôt sur le revenu ; Crédits d'impôt ; Intérêts des emprunts pour l'habitation principale ; Taux 3",
 )
 
 ir_credits_impot_inthab_taux4 = Parameter{Float32}(
@@ -6419,7 +6431,7 @@ ir_credits_impot_inthab_taux4 = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Taux 4",
+  description = "Impôt sur le revenu ; Crédits d'impôt ; Intérêts des emprunts pour l'habitation principale ; Taux 4",
 )
 
 ir_credits_impot_inthab_taux5 = Parameter{Float32}(
@@ -6428,7 +6440,7 @@ ir_credits_impot_inthab_taux5 = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Taux 5",
+  description = "Impôt sur le revenu ; Crédits d'impôt ; Intérêts des emprunts pour l'habitation principale ; Taux 5",
 )
 
 ir_credits_impot_inthab_taux6 = Parameter{Float32}(
@@ -6437,7 +6449,7 @@ ir_credits_impot_inthab_taux6 = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Taux 6",
+  description = "Impôt sur le revenu ; Crédits d'impôt ; Intérêts des emprunts pour l'habitation principale ; Taux 6",
 )
 
 ir_credits_impot_jeunes_age = Parameter{Int32}(
@@ -6447,7 +6459,7 @@ ir_credits_impot_jeunes_age = Parameter{Int32}(
   unit = "currency",
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Âge limite",
+  description = "Impôt sur le revenu ; Crédits d'impôt ; Crédit jeunes actifs ; Âge limite",
 )
 
 ir_credits_impot_jeunes_int = Parameter{Int32}(
@@ -6457,7 +6469,7 @@ ir_credits_impot_jeunes_int = Parameter{Int32}(
   unit = "currency",
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Seuil intemédiaire de revenus",
+  description = "Impôt sur le revenu ; Crédits d'impôt ; Crédit jeunes actifs ; Seuil intemédiaire de revenus",
 )
 
 ir_credits_impot_jeunes_max = Parameter{Int32}(
@@ -6467,7 +6479,7 @@ ir_credits_impot_jeunes_max = Parameter{Int32}(
   unit = "currency",
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Plafond de revenus",
+  description = "Impôt sur le revenu ; Crédits d'impôt ; Crédit jeunes actifs ; Plafond de revenus",
 )
 
 ir_credits_impot_jeunes_min = Parameter{Int32}(
@@ -6477,7 +6489,7 @@ ir_credits_impot_jeunes_min = Parameter{Int32}(
   unit = "currency",
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Plancher de revenus",
+  description = "Impôt sur le revenu ; Crédits d'impôt ; Crédit jeunes actifs ; Plancher de revenus",
 )
 
 ir_credits_impot_jeunes_montant = Parameter{Int32}(
@@ -6486,7 +6498,7 @@ ir_credits_impot_jeunes_montant = Parameter{Int32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "montant",
+  description = "Impôt sur le revenu ; Crédits d'impôt ; Crédit jeunes actifs ; montant",
 )
 
 ir_credits_impot_jeunes_nonvers = Parameter{Float32}(
@@ -6495,7 +6507,7 @@ ir_credits_impot_jeunes_nonvers = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Seuil de non versement",
+  description = "Impôt sur le revenu ; Crédits d'impôt ; Crédit jeunes actifs ; Seuil de non versement",
 )
 
 ir_credits_impot_jeunes_rfr_maj = Parameter{Int32}(
@@ -6505,7 +6517,7 @@ ir_credits_impot_jeunes_rfr_maj = Parameter{Int32}(
   unit = "currency",
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Majoration du revenu fiscal de référence plafond (par demi-part supplémentaire)",
+  description = "Impôt sur le revenu ; Crédits d'impôt ; Crédit jeunes actifs ; Majoration du revenu fiscal de référence plafond (par demi-part supplémentaire)",
 )
 
 ir_credits_impot_jeunes_rfr_mult = Parameter{Float32}(
@@ -6514,7 +6526,7 @@ ir_credits_impot_jeunes_rfr_mult = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Multiplicateur du RFR plafond pour couple",
+  description = "Impôt sur le revenu ; Crédits d'impôt ; Crédit jeunes actifs ; Multiplicateur du RFR plafond pour couple",
 )
 
 ir_credits_impot_jeunes_rfr_plaf = Parameter{Int32}(
@@ -6524,7 +6536,7 @@ ir_credits_impot_jeunes_rfr_plaf = Parameter{Int32}(
   unit = "currency",
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Revenu fiscal de référence plafond (personne seule)",
+  description = "Impôt sur le revenu ; Crédits d'impôt ; Crédit jeunes actifs ; Revenu fiscal de référence plafond (personne seule)",
 )
 
 ir_credits_impot_jeunes_taux = Parameter{Float32}(
@@ -6533,7 +6545,7 @@ ir_credits_impot_jeunes_taux = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "taux",
+  description = "Impôt sur le revenu ; Crédits d'impôt ; Crédit jeunes actifs ; taux",
 )
 
 ir_credits_impot_percvm_taux = Parameter{Float32}(
@@ -6542,7 +6554,7 @@ ir_credits_impot_percvm_taux = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Taux",
+  description = "Impôt sur le revenu ; Crédits d'impôt ; Crédit d’impôt pertes sur cessions de valeurs mobilières ; Taux",
 )
 
 ir_credits_impot_ppe_TP_nbh = Parameter{Int32}(
@@ -6552,7 +6564,7 @@ ir_credits_impot_ppe_TP_nbh = Parameter{Int32}(
   unit = "hour",
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Nombre d'heure du temps plein",
+  description = "Impôt sur le revenu ; Crédits d'impôt ; Prime pour l'emploi ; Nombre d'heure du temps plein",
 )
 
 ir_credits_impot_ppe_TP_nbj = Parameter{Int32}(
@@ -6562,7 +6574,7 @@ ir_credits_impot_ppe_TP_nbj = Parameter{Int32}(
   unit = "day",
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Nombre de jour du temps plein",
+  description = "Impôt sur le revenu ; Crédits d'impôt ; Prime pour l'emploi ; Nombre de jour du temps plein",
 )
 
 ir_credits_impot_ppe_abatns = Parameter{Float32}(
@@ -6571,7 +6583,7 @@ ir_credits_impot_ppe_abatns = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Abatement non salarié",
+  description = "Impôt sur le revenu ; Crédits d'impôt ; Prime pour l'emploi ; Abatement non salarié",
 )
 
 ir_credits_impot_ppe_eligi1 = Parameter{Int32}(
@@ -6587,7 +6599,7 @@ ir_credits_impot_ppe_eligi1 = Parameter{Int32}(
   unit = "currency",
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Seuil d'éligibilité - célibataire",
+  description = "Impôt sur le revenu ; Crédits d'impôt ; Prime pour l'emploi ; Seuil d'éligibilité - célibataire",
 )
 
 ir_credits_impot_ppe_eligi2 = Parameter{Int32}(
@@ -6603,7 +6615,7 @@ ir_credits_impot_ppe_eligi2 = Parameter{Int32}(
   unit = "currency",
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Seuil d'éligibilité - couple",
+  description = "Impôt sur le revenu ; Crédits d'impôt ; Prime pour l'emploi ; Seuil d'éligibilité - couple",
 )
 
 ir_credits_impot_ppe_eligi3 = Parameter{Int32}(
@@ -6619,7 +6631,7 @@ ir_credits_impot_ppe_eligi3 = Parameter{Int32}(
   unit = "currency",
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Seuil d'éligibilité - majoration par demi-part",
+  description = "Impôt sur le revenu ; Crédits d'impôt ; Prime pour l'emploi ; Seuil d'éligibilité - majoration par demi-part",
 )
 
 ir_credits_impot_ppe_monact = Parameter{Int32}(
@@ -6634,7 +6646,7 @@ ir_credits_impot_ppe_monact = Parameter{Int32}(
   unit = "currency",
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Prime monoactivité",
+  description = "Impôt sur le revenu ; Crédits d'impôt ; Prime pour l'emploi ; Prime monoactivité",
 )
 
 ir_credits_impot_ppe_mono_pac = Parameter{Int32}(
@@ -6644,7 +6656,7 @@ ir_credits_impot_ppe_mono_pac = Parameter{Int32}(
   unit = "currency",
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Prime 1er personne à charge, famille monoparentale",
+  description = "Impôt sur le revenu ; Crédits d'impôt ; Prime pour l'emploi ; Prime 1er personne à charge, famille monoparentale",
 )
 
 ir_credits_impot_ppe_pac = Parameter{Int32}(
@@ -6659,7 +6671,7 @@ ir_credits_impot_ppe_pac = Parameter{Int32}(
   unit = "currency",
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Prime personne à charge",
+  description = "Impôt sur le revenu ; Crédits d'impôt ; Prime pour l'emploi ; Prime personne à charge",
 )
 
 ir_credits_impot_ppe_seuil1 = Parameter{Int32}(
@@ -6675,7 +6687,7 @@ ir_credits_impot_ppe_seuil1 = Parameter{Int32}(
   unit = "currency",
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Seuil première tranche",
+  description = "Impôt sur le revenu ; Crédits d'impôt ; Prime pour l'emploi ; Seuil première tranche",
 )
 
 ir_credits_impot_ppe_seuil2 = Parameter{Int32}(
@@ -6691,7 +6703,7 @@ ir_credits_impot_ppe_seuil2 = Parameter{Int32}(
   unit = "currency",
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Seuil deuxième tranche",
+  description = "Impôt sur le revenu ; Crédits d'impôt ; Prime pour l'emploi ; Seuil deuxième tranche",
 )
 
 ir_credits_impot_ppe_seuil3 = Parameter{Int32}(
@@ -6707,7 +6719,7 @@ ir_credits_impot_ppe_seuil3 = Parameter{Int32}(
   unit = "currency",
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Seuil troisième tranche",
+  description = "Impôt sur le revenu ; Crédits d'impôt ; Prime pour l'emploi ; Seuil troisième tranche",
 )
 
 ir_credits_impot_ppe_seuil4 = Parameter{Int32}(
@@ -6723,7 +6735,7 @@ ir_credits_impot_ppe_seuil4 = Parameter{Int32}(
   unit = "currency",
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Seuil quatrième tranche",
+  description = "Impôt sur le revenu ; Crédits d'impôt ; Prime pour l'emploi ; Seuil quatrième tranche",
 )
 
 ir_credits_impot_ppe_seuil5 = Parameter{Int32}(
@@ -6739,7 +6751,7 @@ ir_credits_impot_ppe_seuil5 = Parameter{Int32}(
   unit = "currency",
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Point de sortie pour les couples monoactifs",
+  description = "Impôt sur le revenu ; Crédits d'impôt ; Prime pour l'emploi ; Point de sortie pour les couples monoactifs",
 )
 
 ir_credits_impot_ppe_taux1 = Parameter{Float32}(
@@ -6751,7 +6763,7 @@ ir_credits_impot_ppe_taux1 = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Taux première tranche",
+  description = "Impôt sur le revenu ; Crédits d'impôt ; Prime pour l'emploi ; Taux première tranche",
 )
 
 ir_credits_impot_ppe_taux2 = Parameter{Float32}(
@@ -6763,7 +6775,7 @@ ir_credits_impot_ppe_taux2 = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Taux deuxième tranche",
+  description = "Impôt sur le revenu ; Crédits d'impôt ; Prime pour l'emploi ; Taux deuxième tranche",
 )
 
 ir_credits_impot_ppe_taux3 = Parameter{Float32}(
@@ -6773,7 +6785,7 @@ ir_credits_impot_ppe_taux3 = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Taux troisième tranche",
+  description = "Impôt sur le revenu ; Crédits d'impôt ; Prime pour l'emploi ; Taux troisième tranche",
 )
 
 ir_credits_impot_ppe_versmin = Parameter{Int32}(
@@ -6784,7 +6796,7 @@ ir_credits_impot_ppe_versmin = Parameter{Int32}(
   unit = "currency",
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Versement minimum",
+  description = "Impôt sur le revenu ; Crédits d'impôt ; Prime pour l'emploi ; Versement minimum",
 )
 
 ir_credits_impot_preetu_max = Parameter{Int32}(
@@ -6793,7 +6805,7 @@ ir_credits_impot_preetu_max = Parameter{Int32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Plafond",
+  description = "Impôt sur le revenu ; Crédits d'impôt ; Souscription de prêts étudiants ; Plafond",
 )
 
 ir_credits_impot_preetu_taux = Parameter{Float32}(
@@ -6802,7 +6814,7 @@ ir_credits_impot_preetu_taux = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Taux",
+  description = "Impôt sur le revenu ; Crédits d'impôt ; Souscription de prêts étudiants ; Taux",
 )
 
 ir_credits_impot_prlire_taux = Parameter{Float32}(
@@ -6811,7 +6823,7 @@ ir_credits_impot_prlire_taux = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Taux",
+  description = "Impôt sur le revenu ; Crédits d'impôt ; Prélèvement libératoire à restituer ; Taux",
 )
 
 ir_credits_impot_quaenv_max = Parameter{Int32}(
@@ -6821,7 +6833,7 @@ ir_credits_impot_quaenv_max = Parameter{Int32}(
   unit = "currency",
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Plafond",
+  description = "Impôt sur le revenu ; Crédits d'impôt ; Dépenses en faveur des économies d'énergies ; Plafond",
 )
 
 ir_credits_impot_quaenv_pac1 = Parameter{Int32}(
@@ -6830,7 +6842,7 @@ ir_credits_impot_quaenv_pac1 = Parameter{Int32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Majoration du plafond pour le 1er enfant",
+  description = "Impôt sur le revenu ; Crédits d'impôt ; Dépenses en faveur des économies d'énergies ; Majoration du plafond pour le 1er enfant",
 )
 
 ir_credits_impot_quaenv_pac2 = Parameter{Int32}(
@@ -6840,7 +6852,7 @@ ir_credits_impot_quaenv_pac2 = Parameter{Int32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Majoration du plafond pour le 2nd enfant",
+  description = "Impôt sur le revenu ; Crédits d'impôt ; Dépenses en faveur des économies d'énergies ; Majoration du plafond pour le 2nd enfant",
 )
 
 ir_credits_impot_quaenv_pac3 = Parameter{Int32}(
@@ -6850,7 +6862,7 @@ ir_credits_impot_quaenv_pac3 = Parameter{Int32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Majoration du plafond par enfant supplémentaire",
+  description = "Impôt sur le revenu ; Crédits d'impôt ; Dépenses en faveur des économies d'énergies ; Majoration du plafond par enfant supplémentaire",
 )
 
 ir_credits_impot_quaenv_taux10 = Parameter{Float32}(
@@ -6859,7 +6871,7 @@ ir_credits_impot_quaenv_taux10 = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Taux 10%",
+  description = "Impôt sur le revenu ; Crédits d'impôt ; Dépenses en faveur des économies d'énergies ; Taux 10%",
 )
 
 ir_credits_impot_quaenv_taux11 = Parameter{Float32}(
@@ -6868,7 +6880,7 @@ ir_credits_impot_quaenv_taux11 = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Taux 11%",
+  description = "Impôt sur le revenu ; Crédits d'impôt ; Dépenses en faveur des économies d'énergies ; Taux 11%",
 )
 
 ir_credits_impot_quaenv_taux15 = Parameter{Float32}(
@@ -6877,7 +6889,7 @@ ir_credits_impot_quaenv_taux15 = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Taux 15%",
+  description = "Impôt sur le revenu ; Crédits d'impôt ; Dépenses en faveur des économies d'énergies ; Taux 15%",
 )
 
 ir_credits_impot_quaenv_taux17 = Parameter{Float32}(
@@ -6886,7 +6898,7 @@ ir_credits_impot_quaenv_taux17 = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Taux 17%",
+  description = "Impôt sur le revenu ; Crédits d'impôt ; Dépenses en faveur des économies d'énergies ; Taux 17%",
 )
 
 ir_credits_impot_quaenv_taux18 = Parameter{Float32}(
@@ -6895,7 +6907,7 @@ ir_credits_impot_quaenv_taux18 = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Taux 18%",
+  description = "Impôt sur le revenu ; Crédits d'impôt ; Dépenses en faveur des économies d'énergies ; Taux 18%",
 )
 
 ir_credits_impot_quaenv_taux23 = Parameter{Float32}(
@@ -6904,7 +6916,7 @@ ir_credits_impot_quaenv_taux23 = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Taux 23%",
+  description = "Impôt sur le revenu ; Crédits d'impôt ; Dépenses en faveur des économies d'énergies ; Taux 23%",
 )
 
 ir_credits_impot_quaenv_taux26 = Parameter{Float32}(
@@ -6913,7 +6925,7 @@ ir_credits_impot_quaenv_taux26 = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Taux 26%",
+  description = "Impôt sur le revenu ; Crédits d'impôt ; Dépenses en faveur des économies d'énergies ; Taux 26%",
 )
 
 ir_credits_impot_quaenv_taux32 = Parameter{Float32}(
@@ -6922,7 +6934,7 @@ ir_credits_impot_quaenv_taux32 = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Taux 32%",
+  description = "Impôt sur le revenu ; Crédits d'impôt ; Dépenses en faveur des économies d'énergies ; Taux 32%",
 )
 
 ir_credits_impot_quaenv_taux34 = Parameter{Float32}(
@@ -6931,7 +6943,7 @@ ir_credits_impot_quaenv_taux34 = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Taux 34%",
+  description = "Impôt sur le revenu ; Crédits d'impôt ; Dépenses en faveur des économies d'énergies ; Taux 34%",
 )
 
 ir_credits_impot_quaenv_taux40 = Parameter{Float32}(
@@ -6940,7 +6952,7 @@ ir_credits_impot_quaenv_taux40 = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Taux 40%",
+  description = "Impôt sur le revenu ; Crédits d'impôt ; Dépenses en faveur des économies d'énergies ; Taux 40%",
 )
 
 ir_credits_impot_quaenv_taux_sb = Parameter{Float32}(
@@ -6950,7 +6962,7 @@ ir_credits_impot_quaenv_taux_sb = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Taux (SB)",
+  description = "Impôt sur le revenu ; Crédits d'impôt ; Dépenses en faveur des économies d'énergies ; Taux (SB)",
 )
 
 ir_credits_impot_quaenv_taux_sc = Parameter{Float32}(
@@ -6960,7 +6972,7 @@ ir_credits_impot_quaenv_taux_sc = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Taux (SC)",
+  description = "Impôt sur le revenu ; Crédits d'impôt ; Dépenses en faveur des économies d'énergies ; Taux (SC)",
 )
 
 ir_credits_impot_quaenv_taux_sd = Parameter{Float32}(
@@ -6971,7 +6983,7 @@ ir_credits_impot_quaenv_taux_sd = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Taux (SD)",
+  description = "Impôt sur le revenu ; Crédits d'impôt ; Dépenses en faveur des économies d'énergies ; Taux (SD)",
 )
 
 ir_credits_impot_quaenv_taux_se = Parameter{Float32}(
@@ -6982,7 +6994,7 @@ ir_credits_impot_quaenv_taux_se = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Taux (SE)",
+  description = "Impôt sur le revenu ; Crédits d'impôt ; Dépenses en faveur des économies d'énergies ; Taux (SE)",
 )
 
 ir_credits_impot_quaenv_taux_sh = Parameter{Float32}(
@@ -6993,7 +7005,7 @@ ir_credits_impot_quaenv_taux_sh = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Taux (SH)",
+  description = "Impôt sur le revenu ; Crédits d'impôt ; Dépenses en faveur des économies d'énergies ; Taux (SH)",
 )
 
 ir_credits_impot_quaenv_taux_tt = Parameter{Float32}(
@@ -7002,7 +7014,7 @@ ir_credits_impot_quaenv_taux_tt = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Taux (TT)",
+  description = "Impôt sur le revenu ; Crédits d'impôt ; Dépenses en faveur des économies d'énergies ; Taux (TT)",
 )
 
 ir_credits_impot_quaenv_taux_tu = Parameter{Float32}(
@@ -7011,7 +7023,7 @@ ir_credits_impot_quaenv_taux_tu = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Taux (TU)",
+  description = "Impôt sur le revenu ; Crédits d'impôt ; Dépenses en faveur des économies d'énergies ; Taux (TU)",
 )
 
 ir_credits_impot_quaenv_taux_tv = Parameter{Float32}(
@@ -7020,7 +7032,7 @@ ir_credits_impot_quaenv_taux_tv = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Taux (TV)",
+  description = "Impôt sur le revenu ; Crédits d'impôt ; Dépenses en faveur des économies d'énergies ; Taux (TV)",
 )
 
 ir_credits_impot_quaenv_taux_tw = Parameter{Float32}(
@@ -7029,7 +7041,7 @@ ir_credits_impot_quaenv_taux_tw = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Taux (TW)",
+  description = "Impôt sur le revenu ; Crédits d'impôt ; Dépenses en faveur des économies d'énergies ; Taux (TW)",
 )
 
 ir_credits_impot_quaenv_taux_tx = Parameter{Float32}(
@@ -7038,7 +7050,7 @@ ir_credits_impot_quaenv_taux_tx = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Taux (TX)",
+  description = "Impôt sur le revenu ; Crédits d'impôt ; Dépenses en faveur des économies d'énergies ; Taux (TX)",
 )
 
 ir_credits_impot_quaenv_taux_ty = Parameter{Float32}(
@@ -7047,7 +7059,7 @@ ir_credits_impot_quaenv_taux_ty = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Taux (TY)",
+  description = "Impôt sur le revenu ; Crédits d'impôt ; Dépenses en faveur des économies d'énergies ; Taux (TY)",
 )
 
 ir_credits_impot_quaenv_taux_vt = Parameter{Float32}(
@@ -7056,7 +7068,7 @@ ir_credits_impot_quaenv_taux_vt = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Taux (VT)",
+  description = "Impôt sur le revenu ; Crédits d'impôt ; Dépenses en faveur des économies d'énergies ; Taux (VT)",
 )
 
 ir_credits_impot_quaenv_taux_vu = Parameter{Float32}(
@@ -7065,7 +7077,7 @@ ir_credits_impot_quaenv_taux_vu = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Taux (VU)",
+  description = "Impôt sur le revenu ; Crédits d'impôt ; Dépenses en faveur des économies d'énergies ; Taux (VU)",
 )
 
 ir_credits_impot_quaenv_taux_vv = Parameter{Float32}(
@@ -7074,7 +7086,7 @@ ir_credits_impot_quaenv_taux_vv = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Taux (VV)",
+  description = "Impôt sur le revenu ; Crédits d'impôt ; Dépenses en faveur des économies d'énergies ; Taux (VV)",
 )
 
 ir_credits_impot_quaenv_taux_vw = Parameter{Float32}(
@@ -7083,7 +7095,7 @@ ir_credits_impot_quaenv_taux_vw = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Taux (VW)",
+  description = "Impôt sur le revenu ; Crédits d'impôt ; Dépenses en faveur des économies d'énergies ; Taux (VW)",
 )
 
 ir_credits_impot_quaenv_taux_vy = Parameter{Float32}(
@@ -7092,7 +7104,7 @@ ir_credits_impot_quaenv_taux_vy = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Taux (VY)",
+  description = "Impôt sur le revenu ; Crédits d'impôt ; Dépenses en faveur des économies d'énergies ; Taux (VY)",
 )
 
 ir_credits_impot_quaenv_taux_vz = Parameter{Float32}(
@@ -7101,7 +7113,7 @@ ir_credits_impot_quaenv_taux_vz = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Taux (VZ)",
+  description = "Impôt sur le revenu ; Crédits d'impôt ; Dépenses en faveur des économies d'énergies ; Taux (VZ)",
 )
 
 ir_credits_impot_quaenv_taux_wf = Parameter{Float32}(
@@ -7112,7 +7124,7 @@ ir_credits_impot_quaenv_taux_wf = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Taux (WF)",
+  description = "Impôt sur le revenu ; Crédits d'impôt ; Dépenses en faveur des économies d'énergies ; Taux (WF)",
 )
 
 ir_credits_impot_quaenv_taux_wg = Parameter{Float32}(
@@ -7122,7 +7134,7 @@ ir_credits_impot_quaenv_taux_wg = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Taux (WG)",
+  description = "Impôt sur le revenu ; Crédits d'impôt ; Dépenses en faveur des économies d'énergies ; Taux (WG)",
 )
 
 ir_credits_impot_quaenv_taux_wh = Parameter{Float32}(
@@ -7133,7 +7145,7 @@ ir_credits_impot_quaenv_taux_wh = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Taux (WH)",
+  description = "Impôt sur le revenu ; Crédits d'impôt ; Dépenses en faveur des économies d'énergies ; Taux (WH)",
 )
 
 ir_credits_impot_quaenv_taux_wk = Parameter{Float32}(
@@ -7143,7 +7155,7 @@ ir_credits_impot_quaenv_taux_wk = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Taux (WK)",
+  description = "Impôt sur le revenu ; Crédits d'impôt ; Dépenses en faveur des économies d'énergies ; Taux (WK)",
 )
 
 ir_credits_impot_quaenv_taux_wq = Parameter{Float32}(
@@ -7153,7 +7165,7 @@ ir_credits_impot_quaenv_taux_wq = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Taux (WQ)",
+  description = "Impôt sur le revenu ; Crédits d'impôt ; Dépenses en faveur des économies d'énergies ; Taux (WQ)",
 )
 
 ir_crl_seuil = Parameter{Int32}(
@@ -7163,7 +7175,7 @@ ir_crl_seuil = Parameter{Int32}(
   unit = "currency",
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Seuil",
+  description = "Impôt sur le revenu ; Contribution sur les revenus locatifs ; Seuil",
 )
 
 ir_crl_taux = Parameter{Float32}(
@@ -7172,7 +7184,7 @@ ir_crl_taux = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Taux",
+  description = "Impôt sur le revenu ; Contribution sur les revenus locatifs ; Taux",
 )
 
 ir_decote_seuil = Parameter{Int32}(
@@ -7193,7 +7205,7 @@ ir_decote_seuil = Parameter{Int32}(
   unit = "currency",
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Seuil de la décôte",
+  description = "Impôt sur le revenu ; Décote ; Seuil de la décôte",
 )
 
 ir_microfoncier_max = Parameter{Int32}(
@@ -7203,7 +7215,7 @@ ir_microfoncier_max = Parameter{Int32}(
   unit = "currency",
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Si revenu inférieur à",
+  description = "Impôt sur le revenu ; Microfoncier ; Si revenu inférieur à",
 )
 
 ir_microfoncier_taux = Parameter{Float32}(
@@ -7214,7 +7226,7 @@ ir_microfoncier_taux = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Abattemment",
+  description = "Impôt sur le revenu ; Microfoncier ; Abattemment",
 )
 
 ir_non_imposable_seuil = Parameter{Int32}(
@@ -7233,7 +7245,7 @@ ir_non_imposable_seuil = Parameter{Int32}(
   unit = "currency",
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Seuil de non imposabilité",
+  description = "Impôt sur le revenu ; Condition de non imposabilité ; Seuil de non imposabilité",
 )
 
 ir_non_imposable_supp = Parameter{Int32}(
@@ -7253,7 +7265,7 @@ ir_non_imposable_supp = Parameter{Int32}(
   unit = "currency",
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Supplément par part_seuil 1ère tranche",
+  description = "Impôt sur le revenu ; Condition de non imposabilité ; Supplément par part_seuil 1ère tranche",
 )
 
 ir_plafond_qf_celib = Parameter{Int32}(
@@ -7272,7 +7284,7 @@ ir_plafond_qf_celib = Parameter{Int32}(
   unit = "currency",
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Non mariés ou PACS",
+  description = "Impôt sur le revenu ; Plafonnement du quotient familial ; Non mariés ou PACS",
 )
 
 ir_plafond_qf_celib_enf = Parameter{Int32}(
@@ -7292,7 +7304,7 @@ ir_plafond_qf_celib_enf = Parameter{Int32}(
   unit = "currency",
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Cas célibataires avec enfant(s)",
+  description = "Impôt sur le revenu ; Plafonnement du quotient familial ; Cas célibataires avec enfant(s)",
 )
 
 ir_plafond_qf_marpac = Parameter{Int32}(
@@ -7313,7 +7325,7 @@ ir_plafond_qf_marpac = Parameter{Int32}(
   unit = "currency",
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Mariés ou PACS",
+  description = "Impôt sur le revenu ; Plafonnement du quotient familial ; Mariés ou PACS",
 )
 
 ir_plafond_qf_reduc_postplafond = Parameter{Int32}(
@@ -7333,7 +7345,7 @@ ir_plafond_qf_reduc_postplafond = Parameter{Int32}(
   unit = "currency",
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Réduction post plafond",
+  description = "Impôt sur le revenu ; Plafonnement du quotient familial ; Réduction post plafond",
 )
 
 ir_plafond_qf_veuf = Parameter{Int32}(
@@ -7353,7 +7365,7 @@ ir_plafond_qf_veuf = Parameter{Int32}(
   unit = "currency",
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Veuf avec enfants à charge",
+  description = "Impôt sur le revenu ; Plafonnement du quotient familial ; Veuf avec enfants à charge",
 )
 
 ir_plus_values_caprisque = Parameter{Float32}(
@@ -7365,7 +7377,7 @@ ir_plus_values_caprisque = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Capital risque (VL)",
+  description = "Impôt sur le revenu ; Impôt sur les plus values à taux forfaitaires ; Capital risque (VL)",
 )
 
 ir_plus_values_pea = Parameter{Float32}(
@@ -7374,7 +7386,7 @@ ir_plus_values_pea = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Clôture PEA avant 2 ans (3VM)",
+  description = "Impôt sur le revenu ; Impôt sur les plus values à taux forfaitaires ; Clôture PEA avant 2 ans (3VM)",
 )
 
 ir_plus_values_pvce = Parameter{Float32}(
@@ -7383,7 +7395,7 @@ ir_plus_values_pvce = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Plus value de cession (RPNS) 16%",
+  description = "Impôt sur le revenu ; Impôt sur les plus values à taux forfaitaires ; Plus value de cession (RPNS) 16%",
 )
 
 ir_plus_values_taux1 = Parameter{Float32}(
@@ -7395,7 +7407,7 @@ ir_plus_values_taux1 = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Plus values de cession de valeurs mobilières",
+  description = "Impôt sur le revenu ; Impôt sur les plus values à taux forfaitaires ; Plus values de cession de valeurs mobilières",
 )
 
 ir_plus_values_taux2 = Parameter{Float32}(
@@ -7404,7 +7416,7 @@ ir_plus_values_taux2 = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Actions gratuites 18%",
+  description = "Impôt sur le revenu ; Impôt sur les plus values à taux forfaitaires ; Actions gratuites 18%",
 )
 
 ir_plus_values_taux3 = Parameter{Float32}(
@@ -7413,7 +7425,7 @@ ir_plus_values_taux3 = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Actions gratuites 30%",
+  description = "Impôt sur le revenu ; Impôt sur les plus values à taux forfaitaires ; Actions gratuites 30%",
 )
 
 ir_plus_values_taux4 = Parameter{Float32}(
@@ -7423,7 +7435,7 @@ ir_plus_values_taux4 = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Actions gratuites 40%",
+  description = "Impôt sur le revenu ; Impôt sur les plus values à taux forfaitaires ; Actions gratuites 40%",
 )
 
 ir_pv_immo_ann_det1 = Parameter{Int32}(
@@ -7432,7 +7444,7 @@ ir_pv_immo_ann_det1 = Parameter{Int32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Nombre d'années pleines de détentions minimale (1er seuil)",
+  description = "Impôt sur le revenu ; Plus-values immobilières ; Nombre d'années pleines de détentions minimale (1er seuil)",
 )
 
 ir_pv_immo_ann_det2 = Parameter{Int32}(
@@ -7441,7 +7453,7 @@ ir_pv_immo_ann_det2 = Parameter{Int32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Nombre d'années pleines de détentions 2e seuil",
+  description = "Impôt sur le revenu ; Plus-values immobilières ; Nombre d'années pleines de détentions 2e seuil",
 )
 
 ir_pv_immo_ann_det3 = Parameter{Int32}(
@@ -7450,7 +7462,7 @@ ir_pv_immo_ann_det3 = Parameter{Int32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Nombre d'années pleines de détentions 3e seuil",
+  description = "Impôt sur le revenu ; Plus-values immobilières ; Nombre d'années pleines de détentions 3e seuil",
 )
 
 ir_pv_immo_taux = Parameter{Float32}(
@@ -7461,7 +7473,7 @@ ir_pv_immo_taux = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Taux d'imposition",
+  description = "Impôt sur le revenu ; Plus-values immobilières ; Taux d'imposition",
 )
 
 ir_pv_immo_taux1 = Parameter{Float32}(
@@ -7471,7 +7483,7 @@ ir_pv_immo_taux1 = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Pas annuel du taux (après seuil 1)",
+  description = "Impôt sur le revenu ; Plus-values immobilières ; Pas annuel du taux (après seuil 1)",
 )
 
 ir_pv_immo_taux2 = Parameter{Float32}(
@@ -7480,7 +7492,7 @@ ir_pv_immo_taux2 = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Pas annuel du taux (après seuil 2)",
+  description = "Impôt sur le revenu ; Plus-values immobilières ; Pas annuel du taux (après seuil 2)",
 )
 
 ir_pv_immo_taux3 = Parameter{Float32}(
@@ -7489,7 +7501,7 @@ ir_pv_immo_taux3 = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Pas annuel du taux (après seuil 3)",
+  description = "Impôt sur le revenu ; Plus-values immobilières ; Pas annuel du taux (après seuil 3)",
 )
 
 ir_quotient_familial_cdcd = Parameter{Float32}(
@@ -7499,7 +7511,7 @@ ir_quotient_familial_cdcd = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Enfant issu du conjoint décédé",
+  description = "Impôt sur le revenu ; Parts de quotient familial ; Enfant issu du conjoint décédé",
 )
 
 ir_quotient_familial_conj = Parameter{Float32}(
@@ -7508,7 +7520,7 @@ ir_quotient_familial_conj = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Conjoint d'un couple marié ou pacsé",
+  description = "Impôt sur le revenu ; Parts de quotient familial ; Conjoint d'un couple marié ou pacsé",
 )
 
 ir_quotient_familial_enf1 = Parameter{Float32}(
@@ -7517,7 +7529,7 @@ ir_quotient_familial_enf1 = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Enfant de rang 1 ou 2",
+  description = "Impôt sur le revenu ; Parts de quotient familial ; Enfant de rang 1 ou 2",
 )
 
 ir_quotient_familial_enf2 = Parameter{Float32}(
@@ -7526,7 +7538,7 @@ ir_quotient_familial_enf2 = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Enfant de rang 3 ou plus",
+  description = "Impôt sur le revenu ; Parts de quotient familial ; Enfant de rang 3 ou plus",
 )
 
 ir_quotient_familial_inv1 = Parameter{Float32}(
@@ -7535,7 +7547,7 @@ ir_quotient_familial_inv1 = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Enfant invalides (cases G ou I)",
+  description = "Impôt sur le revenu ; Parts de quotient familial ; Enfant invalides (cases G ou I)",
 )
 
 ir_quotient_familial_inv2 = Parameter{Float32}(
@@ -7544,7 +7556,7 @@ ir_quotient_familial_inv2 = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Adultes invalides (case R)",
+  description = "Impôt sur le revenu ; Parts de quotient familial ; Adultes invalides (case R)",
 )
 
 ir_quotient_familial_isol = Parameter{Float32}(
@@ -7553,7 +7565,7 @@ ir_quotient_familial_isol = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Parent isolé",
+  description = "Impôt sur le revenu ; Parts de quotient familial ; Parent isolé",
 )
 
 ir_quotient_familial_not31a = Parameter{Float32}(
@@ -7562,7 +7574,7 @@ ir_quotient_familial_not31a = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Note 3 : Case P",
+  description = "Impôt sur le revenu ; Parts de quotient familial ; Note 3 : Case P",
 )
 
 ir_quotient_familial_not31b = Parameter{Float32}(
@@ -7571,7 +7583,7 @@ ir_quotient_familial_not31b = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Note 3 : case W ou G",
+  description = "Impôt sur le revenu ; Parts de quotient familial ; Note 3 : case W ou G",
 )
 
 ir_quotient_familial_not32 = Parameter{Float32}(
@@ -7580,7 +7592,7 @@ ir_quotient_familial_not32 = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Note 3: personne seule ayant élevé des enfants",
+  description = "Impôt sur le revenu ; Parts de quotient familial ; Note 3: personne seule ayant élevé des enfants",
 )
 
 ir_quotient_familial_not41 = Parameter{Float32}(
@@ -7589,7 +7601,7 @@ ir_quotient_familial_not41 = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Note 4 : contribuables invalides",
+  description = "Impôt sur le revenu ; Parts de quotient familial ; Note 4 : contribuables invalides",
 )
 
 ir_quotient_familial_not42 = Parameter{Float32}(
@@ -7598,7 +7610,7 @@ ir_quotient_familial_not42 = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Note 4 : anciens combattants",
+  description = "Impôt sur le revenu ; Parts de quotient familial ; Note 4 : anciens combattants",
 )
 
 ir_quotient_familial_not6 = Parameter{Float32}(
@@ -7607,7 +7619,7 @@ ir_quotient_familial_not6 = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Note 6",
+  description = "Impôt sur le revenu ; Parts de quotient familial ; Note 6",
 )
 
 ir_recouvrement_min = Parameter{Int32}(
@@ -7617,7 +7629,7 @@ ir_recouvrement_min = Parameter{Int32}(
   unit = "currency",
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Seuil de recouvrement après imputations",
+  description = "Impôt sur le revenu ; Mise en recouvrement de l'impôt ; Seuil de recouvrement après imputations",
 )
 
 ir_recouvrement_seuil = Parameter{Int32}(
@@ -7627,7 +7639,7 @@ ir_recouvrement_seuil = Parameter{Int32}(
   unit = "currency",
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Seuil de recouvrement avant imputations",
+  description = "Impôt sur le revenu ; Mise en recouvrement de l'impôt ; Seuil de recouvrement avant imputations",
 )
 
 ir_reductions_impots_adhcga_max = Parameter{Int32}(
@@ -7637,7 +7649,7 @@ ir_reductions_impots_adhcga_max = Parameter{Int32}(
   unit = "currency",
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Plafond par exploitation",
+  description = "Impôt sur le revenu ; Réduction d'impôt ; Frais de comptabilité et d'adhésion CGA ; Plafond par exploitation",
 )
 
 ir_reductions_impots_assvie_max = Parameter{Int32}(
@@ -7647,7 +7659,7 @@ ir_reductions_impots_assvie_max = Parameter{Int32}(
   unit = "currency",
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Plafond",
+  description = "Impôt sur le revenu ; Réduction d'impôt ; Assurance-vie ; Plafond",
 )
 
 ir_reductions_impots_assvie_pac = Parameter{Int32}(
@@ -7657,7 +7669,7 @@ ir_reductions_impots_assvie_pac = Parameter{Int32}(
   unit = "currency",
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Par enfant à charge",
+  description = "Impôt sur le revenu ; Réduction d'impôt ; Assurance-vie ; Par enfant à charge",
 )
 
 ir_reductions_impots_assvie_taux = Parameter{Float32}(
@@ -7666,7 +7678,7 @@ ir_reductions_impots_assvie_taux = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Taux",
+  description = "Impôt sur le revenu ; Réduction d'impôt ; Assurance-vie ; Taux",
 )
 
 ir_reductions_impots_cappme_seuil = Parameter{Int32}(
@@ -7677,7 +7689,7 @@ ir_reductions_impots_cappme_seuil = Parameter{Int32}(
   unit = "currency",
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Seuil",
+  description = "Impôt sur le revenu ; Réduction d'impôt ; Souscriptions au capital des PME ; Seuil",
 )
 
 ir_reductions_impots_cappme_seuil_tpe = Parameter{Int32}(
@@ -7687,7 +7699,7 @@ ir_reductions_impots_cappme_seuil_tpe = Parameter{Int32}(
   unit = "currency",
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Seuil TPE",
+  description = "Impôt sur le revenu ; Réduction d'impôt ; Souscriptions au capital des PME ; Seuil TPE",
 )
 
 ir_reductions_impots_cappme_taux = Parameter{Float32}(
@@ -7698,7 +7710,7 @@ ir_reductions_impots_cappme_taux = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Taux",
+  description = "Impôt sur le revenu ; Réduction d'impôt ; Souscriptions au capital des PME ; Taux",
 )
 
 ir_reductions_impots_cappme_taux18 = Parameter{Float32}(
@@ -7707,7 +7719,7 @@ ir_reductions_impots_cappme_taux18 = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Taux 18%",
+  description = "Impôt sur le revenu ; Réduction d'impôt ; Souscriptions au capital des PME ; Taux 18%",
 )
 
 ir_reductions_impots_cappme_taux22 = Parameter{Float32}(
@@ -7716,7 +7728,7 @@ ir_reductions_impots_cappme_taux22 = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Taux 22%",
+  description = "Impôt sur le revenu ; Réduction d'impôt ; Souscriptions au capital des PME ; Taux 22%",
 )
 
 ir_reductions_impots_cappme_taux25 = Parameter{Float32}(
@@ -7725,7 +7737,7 @@ ir_reductions_impots_cappme_taux25 = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Taux 25%",
+  description = "Impôt sur le revenu ; Réduction d'impôt ; Souscriptions au capital des PME ; Taux 25%",
 )
 
 ir_reductions_impots_cotsyn_seuil = Parameter{Float32}(
@@ -7734,7 +7746,7 @@ ir_reductions_impots_cotsyn_seuil = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Seuil",
+  description = "Impôt sur le revenu ; Réduction d'impôt ; Cotisations syndicales ; Seuil",
 )
 
 ir_reductions_impots_cotsyn_taux = Parameter{Float32}(
@@ -7746,7 +7758,7 @@ ir_reductions_impots_cotsyn_taux = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "taux de cotisations syndicales",
+  description = "Impôt sur le revenu ; Réduction d'impôt ; Cotisations syndicales ; taux de cotisations syndicales",
 )
 
 ir_reductions_impots_creaen_base = Parameter{Int32}(
@@ -7756,7 +7768,7 @@ ir_reductions_impots_creaen_base = Parameter{Int32}(
   unit = "currency",
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Aides aux créateurs d'entreprises",
+  description = "Impôt sur le revenu ; Réduction d'impôt ; Aides aux créateurs d'entreprises (à compléter) ; Aides aux créateurs d'entreprises",
 )
 
 ir_reductions_impots_creaen_hand = Parameter{Int32}(
@@ -7766,7 +7778,7 @@ ir_reductions_impots_creaen_hand = Parameter{Int32}(
   unit = "currency",
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Par personne handicapée",
+  description = "Impôt sur le revenu ; Réduction d'impôt ; Aides aux créateurs d'entreprises (à compléter) ; Par personne handicapée",
 )
 
 ir_reductions_impots_daepad_max = Parameter{Int32}(
@@ -7778,7 +7790,7 @@ ir_reductions_impots_daepad_max = Parameter{Int32}(
   unit = "currency",
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Plafond",
+  description = "Impôt sur le revenu ; Réduction d'impôt ; Dépenses d'accueil dans un établissement pour personnes âgées dépendantes ; Plafond",
 )
 
 ir_reductions_impots_daepad_taux = Parameter{Float32}(
@@ -7787,7 +7799,7 @@ ir_reductions_impots_daepad_taux = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Taux",
+  description = "Impôt sur le revenu ; Réduction d'impôt ; Dépenses d'accueil dans un établissement pour personnes âgées dépendantes ; Taux",
 )
 
 ir_reductions_impots_deffor_max = Parameter{Int32}(
@@ -7797,7 +7809,7 @@ ir_reductions_impots_deffor_max = Parameter{Int32}(
   unit = "currency",
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Plafond",
+  description = "Impôt sur le revenu ; Réduction d'impôt ; Défense des forêts contre l'incendie ; Plafond",
 )
 
 ir_reductions_impots_deffor_taux = Parameter{Float32}(
@@ -7806,7 +7818,7 @@ ir_reductions_impots_deffor_taux = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Taux",
+  description = "Impôt sur le revenu ; Réduction d'impôt ; Défense des forêts contre l'incendie ; Taux",
 )
 
 ir_reductions_impots_dfppce_max = Parameter{Float32}(
@@ -7818,7 +7830,7 @@ ir_reductions_impots_dfppce_max = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Plafond",
+  description = "Impôt sur le revenu ; Réduction d'impôt ; Dons aux autres oeuvres et dons effectués pour le financement des partis politiques et des campagnes électorales ; Plafond",
 )
 
 ir_reductions_impots_dfppce_max_niv = Parameter{Int32}(
@@ -7827,7 +7839,7 @@ ir_reductions_impots_dfppce_max_niv = Parameter{Int32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Plafond en niveau par foyer",
+  description = "Impôt sur le revenu ; Réduction d'impôt ; Dons aux autres oeuvres et dons effectués pour le financement des partis politiques et des campagnes électorales ; Plafond en niveau par foyer",
 )
 
 ir_reductions_impots_dfppce_taux = Parameter{Float32}(
@@ -7839,7 +7851,7 @@ ir_reductions_impots_dfppce_taux = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Taux",
+  description = "Impôt sur le revenu ; Réduction d'impôt ; Dons aux autres oeuvres et dons effectués pour le financement des partis politiques et des campagnes électorales ; Taux",
 )
 
 ir_reductions_impots_doment_iDOMe_taux1 = Parameter{Float32}(
@@ -7849,7 +7861,7 @@ ir_reductions_impots_doment_iDOMe_taux1 = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Investissements dans les DOM-TOM dans le cadre d'une entreprise",
+  description = "Impôt sur le revenu ; Réduction d'impôt ; Investissements dans les DOM-TOM dans le cadre d'une entreprise (à compléter) ; Investissements dans les DOM-TOM dans le cadre d'une entreprise",
 )
 
 ir_reductions_impots_doment_iDOMe_taux2 = Parameter{Float32}(
@@ -7858,7 +7870,7 @@ ir_reductions_impots_doment_iDOMe_taux2 = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Investissements dans les DOM-TOM dans le cadre d'une entreprise",
+  description = "Impôt sur le revenu ; Réduction d'impôt ; Investissements dans les DOM-TOM dans le cadre d'une entreprise (à compléter) ; Investissements dans les DOM-TOM dans le cadre d'une entreprise",
 )
 
 ir_reductions_impots_doment_iDOMls_taux = Parameter{Float32}(
@@ -7868,7 +7880,7 @@ ir_reductions_impots_doment_iDOMls_taux = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Investissements dans les DOM-TOM dans le logement social",
+  description = "Impôt sur le revenu ; Réduction d'impôt ; Investissements dans les DOM-TOM dans le cadre d'une entreprise (à compléter) ; Investissements dans les DOM-TOM dans le logement social",
 )
 
 ir_reductions_impots_domlog_taux1 = Parameter{Float32}(
@@ -7877,7 +7889,7 @@ ir_reductions_impots_domlog_taux1 = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Premier taux",
+  description = "Impôt sur le revenu ; Réduction d'impôt ; Investissement OUTRE-MER dans le secteur du logement (à compléter) ; Premier taux",
 )
 
 ir_reductions_impots_domlog_taux2 = Parameter{Float32}(
@@ -7886,7 +7898,7 @@ ir_reductions_impots_domlog_taux2 = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Second taux",
+  description = "Impôt sur le revenu ; Réduction d'impôt ; Investissement OUTRE-MER dans le secteur du logement (à compléter) ; Second taux",
 )
 
 ir_reductions_impots_donapd_max = Parameter{Int32}(
@@ -7906,7 +7918,7 @@ ir_reductions_impots_donapd_max = Parameter{Int32}(
   unit = "currency",
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Plafond des dépenses",
+  description = "Impôt sur le revenu ; Réduction d'impôt ; Dons effectués à des organises d'aide aux personnes en difficulté ; Plafond des dépenses",
 )
 
 ir_reductions_impots_donapd_taux = Parameter{Float32}(
@@ -7918,7 +7930,7 @@ ir_reductions_impots_donapd_taux = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Taux de la réduction d'impôt",
+  description = "Impôt sur le revenu ; Réduction d'impôt ; Dons effectués à des organises d'aide aux personnes en difficulté ; Taux de la réduction d'impôt",
 )
 
 ir_reductions_impots_duflot_plafond = Parameter{Int32}(
@@ -7928,7 +7940,7 @@ ir_reductions_impots_duflot_plafond = Parameter{Int32}(
   unit = "currency",
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Plafond",
+  description = "Impôt sur le revenu ; Réduction d'impôt ; Investissements locatifs intermédiaires ; Plafond",
 )
 
 ir_reductions_impots_duflot_taux_m = Parameter{Float32}(
@@ -7937,7 +7949,7 @@ ir_reductions_impots_duflot_taux_m = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Taux métropole",
+  description = "Impôt sur le revenu ; Réduction d'impôt ; Investissements locatifs intermédiaires ; Taux métropole",
 )
 
 ir_reductions_impots_duflot_taux_om = Parameter{Float32}(
@@ -7946,7 +7958,7 @@ ir_reductions_impots_duflot_taux_om = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Taux outre-mer",
+  description = "Impôt sur le revenu ; Réduction d'impôt ; Investissements locatifs intermédiaires ; Taux outre-mer",
 )
 
 ir_reductions_impots_ecodev_base = Parameter{Float32}(
@@ -7955,7 +7967,7 @@ ir_reductions_impots_ecodev_base = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Limite de x % du revenu",
+  description = "Impôt sur le revenu ; Réduction d'impôt ; Sommes versées sur un compte épargne codéveloppement (case 7UH) ; Limite de x % du revenu",
 )
 
 ir_reductions_impots_ecodev_max = Parameter{Int32}(
@@ -7965,7 +7977,7 @@ ir_reductions_impots_ecodev_max = Parameter{Int32}(
   unit = "currency",
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Maximum",
+  description = "Impôt sur le revenu ; Réduction d'impôt ; Sommes versées sur un compte épargne codéveloppement (case 7UH) ; Maximum",
 )
 
 ir_reductions_impots_ecodev_taux = Parameter{Float32}(
@@ -7974,7 +7986,7 @@ ir_reductions_impots_ecodev_taux = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Taux",
+  description = "Impôt sur le revenu ; Réduction d'impôt ; Sommes versées sur un compte épargne codéveloppement (case 7UH) ; Taux",
 )
 
 ir_reductions_impots_ecpess_col = Parameter{Int32}(
@@ -7984,7 +7996,7 @@ ir_reductions_impots_ecpess_col = Parameter{Int32}(
   unit = "currency",
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Collège",
+  description = "Impôt sur le revenu ; Réduction d'impôt ; Enfants à charge poursuivant leurs études secondaires ou supérieures ; Collège",
 )
 
 ir_reductions_impots_ecpess_lyc = Parameter{Int32}(
@@ -7994,7 +8006,7 @@ ir_reductions_impots_ecpess_lyc = Parameter{Int32}(
   unit = "currency",
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Lycée",
+  description = "Impôt sur le revenu ; Réduction d'impôt ; Enfants à charge poursuivant leurs études secondaires ou supérieures ; Lycée",
 )
 
 ir_reductions_impots_ecpess_sup = Parameter{Int32}(
@@ -8004,7 +8016,7 @@ ir_reductions_impots_ecpess_sup = Parameter{Int32}(
   unit = "currency",
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Supérieur",
+  description = "Impôt sur le revenu ; Réduction d'impôt ; Enfants à charge poursuivant leurs études secondaires ou supérieures ; Supérieur",
 )
 
 ir_reductions_impots_garext_max = Parameter{Int32}(
@@ -8014,7 +8026,7 @@ ir_reductions_impots_garext_max = Parameter{Int32}(
   unit = "currency",
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Plafond",
+  description = "Impôt sur le revenu ; Réduction d'impôt ; Garde des enfants à l'extérieur du domicile ; Plafond",
 )
 
 ir_reductions_impots_garext_taux = Parameter{Float32}(
@@ -8024,7 +8036,7 @@ ir_reductions_impots_garext_taux = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Taux",
+  description = "Impôt sur le revenu ; Réduction d'impôt ; Garde des enfants à l'extérieur du domicile ; Taux",
 )
 
 ir_reductions_impots_intagr_max = Parameter{Int32}(
@@ -8034,7 +8046,7 @@ ir_reductions_impots_intagr_max = Parameter{Int32}(
   unit = "currency",
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Plafond",
+  description = "Impôt sur le revenu ; Réduction d'impôt ; Intérêts pour paiement différé accordé aux agriculteurs ; Plafond",
 )
 
 ir_reductions_impots_intagr_taux = Parameter{Float32}(
@@ -8043,7 +8055,7 @@ ir_reductions_impots_intagr_taux = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Taux",
+  description = "Impôt sur le revenu ; Réduction d'impôt ; Intérêts pour paiement différé accordé aux agriculteurs ; Taux",
 )
 
 ir_reductions_impots_intcon_max = Parameter{Int32}(
@@ -8053,7 +8065,7 @@ ir_reductions_impots_intcon_max = Parameter{Int32}(
   unit = "currency",
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Plafond",
+  description = "Impôt sur le revenu ; Réduction d'impôt ; Intérêts des prêts à la consommation (UH) ; Plafond",
 )
 
 ir_reductions_impots_intcon_taux = Parameter{Float32}(
@@ -8062,7 +8074,7 @@ ir_reductions_impots_intcon_taux = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Taux",
+  description = "Impôt sur le revenu ; Réduction d'impôt ; Intérêts des prêts à la consommation (UH) ; Taux",
 )
 
 ir_reductions_impots_intemp_max = Parameter{Int32}(
@@ -8072,7 +8084,7 @@ ir_reductions_impots_intemp_max = Parameter{Int32}(
   unit = "currency",
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Maximum",
+  description = "Impôt sur le revenu ; Réduction d'impôt ; Intérêts d'emprunts (WG) ; Maximum",
 )
 
 ir_reductions_impots_intemp_pac = Parameter{Int32}(
@@ -8082,7 +8094,7 @@ ir_reductions_impots_intemp_pac = Parameter{Int32}(
   unit = "currency",
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Par personne à charge",
+  description = "Impôt sur le revenu ; Réduction d'impôt ; Intérêts d'emprunts (WG) ; Par personne à charge",
 )
 
 ir_reductions_impots_intemp_taux = Parameter{Float32}(
@@ -8091,7 +8103,7 @@ ir_reductions_impots_intemp_taux = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Taux",
+  description = "Impôt sur le revenu ; Réduction d'impôt ; Intérêts d'emprunts (WG) ; Taux",
 )
 
 ir_reductions_impots_invfor_iforges_seuil = Parameter{Int32}(
@@ -8101,6 +8113,7 @@ ir_reductions_impots_invfor_iforges_seuil = Parameter{Int32}(
   unit = "currency",
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
+  description = "Impôt sur le revenu ; Réduction d'impôt ; Investissements forestiers (UN, à compléter)",
 )
 
 ir_reductions_impots_invfor_ifortra_seuil = Parameter{Int32}(
@@ -8110,6 +8123,7 @@ ir_reductions_impots_invfor_ifortra_seuil = Parameter{Int32}(
   unit = "currency",
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
+  description = "Impôt sur le revenu ; Réduction d'impôt ; Investissements forestiers (UN, à compléter)",
 )
 
 ir_reductions_impots_invfor_report10 = Parameter{Float32}(
@@ -8119,7 +8133,7 @@ ir_reductions_impots_invfor_report10 = Parameter{Float32}(
   unit = "currency",
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Report des excédents 2010",
+  description = "Impôt sur le revenu ; Réduction d'impôt ; Investissements forestiers (UN, à compléter) ; Report des excédents 2010",
 )
 
 ir_reductions_impots_invfor_report11 = Parameter{Float32}(
@@ -8129,7 +8143,7 @@ ir_reductions_impots_invfor_report11 = Parameter{Float32}(
   unit = "currency",
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Report des excédents 2011",
+  description = "Impôt sur le revenu ; Réduction d'impôt ; Investissements forestiers (UN, à compléter) ; Report des excédents 2011",
 )
 
 ir_reductions_impots_invfor_report12 = Parameter{Float32}(
@@ -8139,7 +8153,7 @@ ir_reductions_impots_invfor_report12 = Parameter{Float32}(
   unit = "currency",
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Report des excédents 2011",
+  description = "Impôt sur le revenu ; Réduction d'impôt ; Investissements forestiers (UN, à compléter) ; Report des excédents 2011",
 )
 
 ir_reductions_impots_invfor_seuil = Parameter{Int32}(
@@ -8149,7 +8163,7 @@ ir_reductions_impots_invfor_seuil = Parameter{Int32}(
   unit = "currency",
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Seuil",
+  description = "Impôt sur le revenu ; Réduction d'impôt ; Investissements forestiers (UN, à compléter) ; Seuil",
 )
 
 ir_reductions_impots_invfor_taux = Parameter{Float32}(
@@ -8160,7 +8174,7 @@ ir_reductions_impots_invfor_taux = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Taux",
+  description = "Impôt sur le revenu ; Réduction d'impôt ; Investissements forestiers (UN, à compléter) ; Taux",
 )
 
 ir_reductions_impots_invfor_taux_ass = Parameter{Float32}(
@@ -8171,7 +8185,7 @@ ir_reductions_impots_invfor_taux_ass = Parameter{Float32}(
   unit = "currency",
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Taux pour les assurances",
+  description = "Impôt sur le revenu ; Réduction d'impôt ; Investissements forestiers (UN, à compléter) ; Taux pour les assurances",
 )
 
 ir_reductions_impots_invlst_seuil1 = Parameter{Int32}(
@@ -8181,7 +8195,7 @@ ir_reductions_impots_invlst_seuil1 = Parameter{Int32}(
   unit = "currency",
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Seuil1",
+  description = "Impôt sur le revenu ; Réduction d'impôt ; Investissements locatifs dans le secteur touristique ; Seuil1",
 )
 
 ir_reductions_impots_invlst_seuil2 = Parameter{Int32}(
@@ -8192,7 +8206,7 @@ ir_reductions_impots_invlst_seuil2 = Parameter{Int32}(
   unit = "currency",
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Seuil2",
+  description = "Impôt sur le revenu ; Réduction d'impôt ; Investissements locatifs dans le secteur touristique ; Seuil2",
 )
 
 ir_reductions_impots_invlst_seuil3 = Parameter{Int32}(
@@ -8203,7 +8217,7 @@ ir_reductions_impots_invlst_seuil3 = Parameter{Int32}(
   unit = "currency",
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Seuil3",
+  description = "Impôt sur le revenu ; Réduction d'impôt ; Investissements locatifs dans le secteur touristique ; Seuil3",
 )
 
 ir_reductions_impots_invlst_taux_xa = Parameter{Float32}(
@@ -8212,7 +8226,7 @@ ir_reductions_impots_invlst_taux_xa = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Taux (XA)",
+  description = "Impôt sur le revenu ; Réduction d'impôt ; Investissements locatifs dans le secteur touristique ; Taux (XA)",
 )
 
 ir_reductions_impots_invlst_taux_xb = Parameter{Float32}(
@@ -8221,7 +8235,7 @@ ir_reductions_impots_invlst_taux_xb = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Taux (XB)",
+  description = "Impôt sur le revenu ; Réduction d'impôt ; Investissements locatifs dans le secteur touristique ; Taux (XB)",
 )
 
 ir_reductions_impots_invlst_taux_xc = Parameter{Float32}(
@@ -8230,7 +8244,7 @@ ir_reductions_impots_invlst_taux_xc = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Taux (XC)",
+  description = "Impôt sur le revenu ; Réduction d'impôt ; Investissements locatifs dans le secteur touristique ; Taux (XC)",
   comment = "TODO: check boxes (XC...XO) over the years",
 )
 
@@ -8241,7 +8255,7 @@ ir_reductions_impots_invlst_taux_xd = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Taux (XD)",
+  description = "Impôt sur le revenu ; Réduction d'impôt ; Investissements locatifs dans le secteur touristique ; Taux (XD)",
 )
 
 ir_reductions_impots_invlst_taux_xe = Parameter{Float32}(
@@ -8252,7 +8266,7 @@ ir_reductions_impots_invlst_taux_xe = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Taux (XE)",
+  description = "Impôt sur le revenu ; Réduction d'impôt ; Investissements locatifs dans le secteur touristique ; Taux (XE)",
 )
 
 ir_reductions_impots_invlst_taux_xf = Parameter{Float32}(
@@ -8262,7 +8276,7 @@ ir_reductions_impots_invlst_taux_xf = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Taux (XF)",
+  description = "Impôt sur le revenu ; Réduction d'impôt ; Investissements locatifs dans le secteur touristique ; Taux (XF)",
 )
 
 ir_reductions_impots_invlst_taux_xg = Parameter{Float32}(
@@ -8273,7 +8287,7 @@ ir_reductions_impots_invlst_taux_xg = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Taux (XG)",
+  description = "Impôt sur le revenu ; Réduction d'impôt ; Investissements locatifs dans le secteur touristique ; Taux (XG)",
 )
 
 ir_reductions_impots_invlst_taux_xh = Parameter{Float32}(
@@ -8284,7 +8298,7 @@ ir_reductions_impots_invlst_taux_xh = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Taux (XH)",
+  description = "Impôt sur le revenu ; Réduction d'impôt ; Investissements locatifs dans le secteur touristique ; Taux (XH)",
 )
 
 ir_reductions_impots_invlst_taux_xi = Parameter{Float32}(
@@ -8295,7 +8309,7 @@ ir_reductions_impots_invlst_taux_xi = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Taux (XI)",
+  description = "Impôt sur le revenu ; Réduction d'impôt ; Investissements locatifs dans le secteur touristique ; Taux (XI)",
 )
 
 ir_reductions_impots_invlst_taux_xj = Parameter{Float32}(
@@ -8306,7 +8320,7 @@ ir_reductions_impots_invlst_taux_xj = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Taux (XJ)",
+  description = "Impôt sur le revenu ; Réduction d'impôt ; Investissements locatifs dans le secteur touristique ; Taux (XJ)",
 )
 
 ir_reductions_impots_invlst_taux_xk = Parameter{Float32}(
@@ -8318,7 +8332,7 @@ ir_reductions_impots_invlst_taux_xk = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Taux (XK)",
+  description = "Impôt sur le revenu ; Réduction d'impôt ; Investissements locatifs dans le secteur touristique ; Taux (XK)",
 )
 
 ir_reductions_impots_invlst_taux_xl = Parameter{Float32}(
@@ -8327,7 +8341,7 @@ ir_reductions_impots_invlst_taux_xl = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Taux (XL)",
+  description = "Impôt sur le revenu ; Réduction d'impôt ; Investissements locatifs dans le secteur touristique ; Taux (XL)",
 )
 
 ir_reductions_impots_invlst_taux_xm = Parameter{Float32}(
@@ -8337,7 +8351,7 @@ ir_reductions_impots_invlst_taux_xm = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Taux (XM)",
+  description = "Impôt sur le revenu ; Réduction d'impôt ; Investissements locatifs dans le secteur touristique ; Taux (XM)",
 )
 
 ir_reductions_impots_invlst_taux_xn = Parameter{Float32}(
@@ -8347,7 +8361,7 @@ ir_reductions_impots_invlst_taux_xn = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Taux (XN)",
+  description = "Impôt sur le revenu ; Réduction d'impôt ; Investissements locatifs dans le secteur touristique ; Taux (XN)",
 )
 
 ir_reductions_impots_invlst_taux_xo = Parameter{Float32}(
@@ -8357,7 +8371,7 @@ ir_reductions_impots_invlst_taux_xo = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Taux (XO)",
+  description = "Impôt sur le revenu ; Réduction d'impôt ; Investissements locatifs dans le secteur touristique ; Taux (XO)",
 )
 
 ir_reductions_impots_invlst_taux_xp = Parameter{Float32}(
@@ -8366,7 +8380,7 @@ ir_reductions_impots_invlst_taux_xp = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Taux (XP)",
+  description = "Impôt sur le revenu ; Réduction d'impôt ; Investissements locatifs dans le secteur touristique ; Taux (XP)",
 )
 
 ir_reductions_impots_invlst_taux_xq = Parameter{Float32}(
@@ -8375,7 +8389,7 @@ ir_reductions_impots_invlst_taux_xq = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Taux (XQ)",
+  description = "Impôt sur le revenu ; Réduction d'impôt ; Investissements locatifs dans le secteur touristique ; Taux (XQ)",
 )
 
 ir_reductions_impots_invlst_taux_xr = Parameter{Float32}(
@@ -8384,7 +8398,7 @@ ir_reductions_impots_invlst_taux_xr = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Taux (XR)",
+  description = "Impôt sur le revenu ; Réduction d'impôt ; Investissements locatifs dans le secteur touristique ; Taux (XR)",
 )
 
 ir_reductions_impots_invlst_taux_xx = Parameter{Float32}(
@@ -8393,7 +8407,7 @@ ir_reductions_impots_invlst_taux_xx = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Taux (XX)",
+  description = "Impôt sur le revenu ; Réduction d'impôt ; Investissements locatifs dans le secteur touristique ; Taux (XX)",
 )
 
 ir_reductions_impots_invlst_taux_xz = Parameter{Float32}(
@@ -8402,7 +8416,7 @@ ir_reductions_impots_invlst_taux_xz = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Taux (XZ)",
+  description = "Impôt sur le revenu ; Réduction d'impôt ; Investissements locatifs dans le secteur touristique ; Taux (XZ)",
 )
 
 ir_reductions_impots_invrev_seuil_gs = Parameter{Int32}(
@@ -8412,7 +8426,7 @@ ir_reductions_impots_invrev_seuil_gs = Parameter{Int32}(
   unit = "currency",
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Case GS",
+  description = "Impôt sur le revenu ; Réduction d'impôt ; Investissements locatifs dans les résidences de tourisme situées dans une zone de revitalisation rurale ; Case GS",
 )
 
 ir_reductions_impots_invrev_seuil_gu = Parameter{Int32}(
@@ -8422,7 +8436,7 @@ ir_reductions_impots_invrev_seuil_gu = Parameter{Int32}(
   unit = "currency",
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Case GU",
+  description = "Impôt sur le revenu ; Réduction d'impôt ; Investissements locatifs dans les résidences de tourisme situées dans une zone de revitalisation rurale ; Case GU",
 )
 
 ir_reductions_impots_invrev_seuil_xg = Parameter{Int32}(
@@ -8432,7 +8446,7 @@ ir_reductions_impots_invrev_seuil_xg = Parameter{Int32}(
   unit = "currency",
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Case XG",
+  description = "Impôt sur le revenu ; Réduction d'impôt ; Investissements locatifs dans les résidences de tourisme situées dans une zone de revitalisation rurale ; Case XG",
 )
 
 ir_reductions_impots_invrev_taux_gs = Parameter{Float32}(
@@ -8441,7 +8455,7 @@ ir_reductions_impots_invrev_taux_gs = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "case GS",
+  description = "Impôt sur le revenu ; Réduction d'impôt ; Investissements locatifs dans les résidences de tourisme situées dans une zone de revitalisation rurale ; case GS",
 )
 
 ir_reductions_impots_invrev_taux_gt = Parameter{Float32}(
@@ -8450,7 +8464,7 @@ ir_reductions_impots_invrev_taux_gt = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Case GT",
+  description = "Impôt sur le revenu ; Réduction d'impôt ; Investissements locatifs dans les résidences de tourisme situées dans une zone de revitalisation rurale ; Case GT",
 )
 
 ir_reductions_impots_invrev_taux_gu = Parameter{Float32}(
@@ -8459,7 +8473,7 @@ ir_reductions_impots_invrev_taux_gu = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Case GU",
+  description = "Impôt sur le revenu ; Réduction d'impôt ; Investissements locatifs dans les résidences de tourisme situées dans une zone de revitalisation rurale ; Case GU",
 )
 
 ir_reductions_impots_invrev_taux_gv = Parameter{Float32}(
@@ -8468,7 +8482,7 @@ ir_reductions_impots_invrev_taux_gv = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Case GV",
+  description = "Impôt sur le revenu ; Réduction d'impôt ; Investissements locatifs dans les résidences de tourisme situées dans une zone de revitalisation rurale ; Case GV",
 )
 
 ir_reductions_impots_invrev_taux_xg = Parameter{Float32}(
@@ -8477,7 +8491,7 @@ ir_reductions_impots_invrev_taux_xg = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Case XG",
+  description = "Impôt sur le revenu ; Réduction d'impôt ; Investissements locatifs dans les résidences de tourisme situées dans une zone de revitalisation rurale ; Case XG",
 )
 
 ir_reductions_impots_locmeu_max = Parameter{Int32}(
@@ -8488,7 +8502,7 @@ ir_reductions_impots_locmeu_max = Parameter{Int32}(
   unit = "currency",
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Maximum",
+  description = "Impôt sur le revenu ; Réduction d'impôt ; Investissement en vue de la location meublée non professionnelle dans certains établissements ou résidences (cases 7IJ à 7IS ; Maximum",
 )
 
 ir_reductions_impots_locmeu_taux = Parameter{Float32}(
@@ -8498,7 +8512,7 @@ ir_reductions_impots_locmeu_taux = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Taux",
+  description = "Impôt sur le revenu ; Réduction d'impôt ; Investissement en vue de la location meublée non professionnelle dans certains établissements ou résidences (cases 7IJ à 7IS ; Taux",
 )
 
 ir_reductions_impots_locmeu_taux11 = Parameter{Float32}(
@@ -8507,7 +8521,7 @@ ir_reductions_impots_locmeu_taux11 = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "taux 11%",
+  description = "Impôt sur le revenu ; Réduction d'impôt ; Investissement en vue de la location meublée non professionnelle dans certains établissements ou résidences (cases 7IJ à 7IS ; taux 11%",
 )
 
 ir_reductions_impots_locmeu_taux18 = Parameter{Float32}(
@@ -8516,7 +8530,7 @@ ir_reductions_impots_locmeu_taux18 = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "taux 18%",
+  description = "Impôt sur le revenu ; Réduction d'impôt ; Investissement en vue de la location meublée non professionnelle dans certains établissements ou résidences (cases 7IJ à 7IS ; taux 18%",
 )
 
 ir_reductions_impots_locmeu_taux20 = Parameter{Float32}(
@@ -8525,7 +8539,7 @@ ir_reductions_impots_locmeu_taux20 = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "taux 20%",
+  description = "Impôt sur le revenu ; Réduction d'impôt ; Investissement en vue de la location meublée non professionnelle dans certains établissements ou résidences (cases 7IJ à 7IS ; taux 20%",
 )
 
 ir_reductions_impots_mohist_max = Parameter{Int32}(
@@ -8535,7 +8549,7 @@ ir_reductions_impots_mohist_max = Parameter{Int32}(
   unit = "currency",
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Plafond",
+  description = "Impôt sur le revenu ; Réduction d'impôt ; Travaux de conservation et de restauration d'objets classées monuments historiques ; Plafond",
 )
 
 ir_reductions_impots_mohist_taux = Parameter{Float32}(
@@ -8546,7 +8560,7 @@ ir_reductions_impots_mohist_taux = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Taux",
+  description = "Impôt sur le revenu ; Réduction d'impôt ; Travaux de conservation et de restauration d'objets classées monuments historiques ; Taux",
 )
 
 ir_reductions_impots_patnat_max = Parameter{Int32}(
@@ -8556,7 +8570,7 @@ ir_reductions_impots_patnat_max = Parameter{Int32}(
   unit = "currency",
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Plafond",
+  description = "Impôt sur le revenu ; Réduction d'impôt ; Dépenses de protection du patrimoine naturel ; Plafond",
 )
 
 ir_reductions_impots_patnat_taux = Parameter{Float32}(
@@ -8567,7 +8581,7 @@ ir_reductions_impots_patnat_taux = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Taux",
+  description = "Impôt sur le revenu ; Réduction d'impôt ; Dépenses de protection du patrimoine naturel ; Taux",
 )
 
 ir_reductions_impots_prcomp_seuil = Parameter{Int32}(
@@ -8577,7 +8591,7 @@ ir_reductions_impots_prcomp_seuil = Parameter{Int32}(
   unit = "currency",
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Seuil",
+  description = "Impôt sur le revenu ; Réduction d'impôt ; Prestations compensatoires ; Seuil",
 )
 
 ir_reductions_impots_prcomp_taux = Parameter{Float32}(
@@ -8586,7 +8600,7 @@ ir_reductions_impots_prcomp_taux = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Taux",
+  description = "Impôt sur le revenu ; Réduction d'impôt ; Prestations compensatoires ; Taux",
 )
 
 ir_reductions_impots_repsoc_seuil = Parameter{Int32}(
@@ -8597,7 +8611,7 @@ ir_reductions_impots_repsoc_seuil = Parameter{Int32}(
   unit = "currency",
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Seuil",
+  description = "Impôt sur le revenu ; Réduction d'impôt ; Intérêts d'emprunts pour reprises de société ; Seuil",
 )
 
 ir_reductions_impots_repsoc_taux = Parameter{Float32}(
@@ -8606,7 +8620,7 @@ ir_reductions_impots_repsoc_taux = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Taux",
+  description = "Impôt sur le revenu ; Réduction d'impôt ; Intérêts d'emprunts pour reprises de société ; Taux",
 )
 
 ir_reductions_impots_resimm_max = Parameter{Int32}(
@@ -8616,7 +8630,7 @@ ir_reductions_impots_resimm_max = Parameter{Int32}(
   unit = "currency",
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Plafond",
+  description = "Impôt sur le revenu ; Réduction d'impôt ; Travaux de restauration immobilière ; Plafond",
 )
 
 ir_reductions_impots_resimm_taux_ra = Parameter{Float32}(
@@ -8626,7 +8640,7 @@ ir_reductions_impots_resimm_taux_ra = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Taux_RA",
+  description = "Impôt sur le revenu ; Réduction d'impôt ; Travaux de restauration immobilière ; Taux_RA",
 )
 
 ir_reductions_impots_resimm_taux_rb = Parameter{Float32}(
@@ -8636,7 +8650,7 @@ ir_reductions_impots_resimm_taux_rb = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Taux_RB",
+  description = "Impôt sur le revenu ; Réduction d'impôt ; Travaux de restauration immobilière ; Taux_RB",
 )
 
 ir_reductions_impots_resimm_taux_rc = Parameter{Float32}(
@@ -8645,7 +8659,7 @@ ir_reductions_impots_resimm_taux_rc = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Taux_RC",
+  description = "Impôt sur le revenu ; Réduction d'impôt ; Travaux de restauration immobilière ; Taux_RC",
 )
 
 ir_reductions_impots_resimm_taux_rd = Parameter{Float32}(
@@ -8654,7 +8668,7 @@ ir_reductions_impots_resimm_taux_rd = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Taux_RD",
+  description = "Impôt sur le revenu ; Réduction d'impôt ; Travaux de restauration immobilière ; Taux_RD",
 )
 
 ir_reductions_impots_resimm_taux_re = Parameter{Float32}(
@@ -8663,7 +8677,7 @@ ir_reductions_impots_resimm_taux_re = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Taux_RE",
+  description = "Impôt sur le revenu ; Réduction d'impôt ; Travaux de restauration immobilière ; Taux_RE",
 )
 
 ir_reductions_impots_resimm_taux_rf = Parameter{Float32}(
@@ -8672,7 +8686,7 @@ ir_reductions_impots_resimm_taux_rf = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Taux_RF",
+  description = "Impôt sur le revenu ; Réduction d'impôt ; Travaux de restauration immobilière ; Taux_RF",
 )
 
 ir_reductions_impots_resimm_taux_sx = Parameter{Float32}(
@@ -8681,7 +8695,7 @@ ir_reductions_impots_resimm_taux_sx = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Taux_SX",
+  description = "Impôt sur le revenu ; Réduction d'impôt ; Travaux de restauration immobilière ; Taux_SX",
 )
 
 ir_reductions_impots_resimm_taux_sy = Parameter{Float32}(
@@ -8690,7 +8704,7 @@ ir_reductions_impots_resimm_taux_sy = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Taux_SY",
+  description = "Impôt sur le revenu ; Réduction d'impôt ; Travaux de restauration immobilière ; Taux_SY",
 )
 
 ir_reductions_impots_rsceha_seuil1 = Parameter{Int32}(
@@ -8701,7 +8715,7 @@ ir_reductions_impots_rsceha_seuil1 = Parameter{Int32}(
   unit = "currency",
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Premier seuil",
+  description = "Impôt sur le revenu ; Réduction d'impôt ; Rentes de survie et contrats d'épargne handicap ; Premier seuil",
 )
 
 ir_reductions_impots_rsceha_seuil2 = Parameter{Int32}(
@@ -8712,7 +8726,7 @@ ir_reductions_impots_rsceha_seuil2 = Parameter{Int32}(
   unit = "currency",
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Second seuil",
+  description = "Impôt sur le revenu ; Réduction d'impôt ; Rentes de survie et contrats d'épargne handicap ; Second seuil",
 )
 
 ir_reductions_impots_rsceha_taux = Parameter{Float32}(
@@ -8721,7 +8735,7 @@ ir_reductions_impots_rsceha_taux = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Taux",
+  description = "Impôt sur le revenu ; Réduction d'impôt ; Rentes de survie et contrats d'épargne handicap ; Taux",
 )
 
 ir_reductions_impots_saldom_max1 = Parameter{Int32}(
@@ -8734,7 +8748,7 @@ ir_reductions_impots_saldom_max1 = Parameter{Int32}(
   unit = "currency",
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Plafond cas général",
+  description = "Impôt sur le revenu ; Réduction d'impôt ; Sommes versées pour l'emploi d'un salariés à domicile (à compléter) ; Plafond cas général",
 )
 
 ir_reductions_impots_saldom_max1_1ereAnnee = Parameter{Int32}(
@@ -8744,7 +8758,7 @@ ir_reductions_impots_saldom_max1_1ereAnnee = Parameter{Int32}(
   unit = "currency",
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Plafond 1ère année",
+  description = "Impôt sur le revenu ; Réduction d'impôt ; Sommes versées pour l'emploi d'un salariés à domicile (à compléter) ; Plafond 1ère année",
 )
 
 ir_reductions_impots_saldom_max2 = Parameter{Int32}(
@@ -8754,7 +8768,7 @@ ir_reductions_impots_saldom_max2 = Parameter{Int32}(
   unit = "currency",
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Plafond du plafond",
+  description = "Impôt sur le revenu ; Réduction d'impôt ; Sommes versées pour l'emploi d'un salariés à domicile (à compléter) ; Plafond du plafond",
 )
 
 ir_reductions_impots_saldom_max2_1ereAnnee = Parameter{Int32}(
@@ -8764,7 +8778,7 @@ ir_reductions_impots_saldom_max2_1ereAnnee = Parameter{Int32}(
   unit = "currency",
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Plafond du plafond 1ère année",
+  description = "Impôt sur le revenu ; Réduction d'impôt ; Sommes versées pour l'emploi d'un salariés à domicile (à compléter) ; Plafond du plafond 1ère année",
 )
 
 ir_reductions_impots_saldom_max3 = Parameter{Int32}(
@@ -8775,7 +8789,7 @@ ir_reductions_impots_saldom_max3 = Parameter{Int32}(
   unit = "currency",
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Plafond si présence d'un invalide",
+  description = "Impôt sur le revenu ; Réduction d'impôt ; Sommes versées pour l'emploi d'un salariés à domicile (à compléter) ; Plafond si présence d'un invalide",
 )
 
 ir_reductions_impots_saldom_pac = Parameter{Int32}(
@@ -8785,7 +8799,7 @@ ir_reductions_impots_saldom_pac = Parameter{Int32}(
   unit = "currency",
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Par enfant mineur à charge",
+  description = "Impôt sur le revenu ; Réduction d'impôt ; Sommes versées pour l'emploi d'un salariés à domicile (à compléter) ; Par enfant mineur à charge",
 )
 
 ir_reductions_impots_saldom_taux = Parameter{Float32}(
@@ -8794,7 +8808,7 @@ ir_reductions_impots_saldom_taux = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Taux",
+  description = "Impôt sur le revenu ; Réduction d'impôt ; Sommes versées pour l'emploi d'un salariés à domicile (à compléter) ; Taux",
 )
 
 ir_reductions_impots_scelli_max = Parameter{Int32}(
@@ -8804,7 +8818,7 @@ ir_reductions_impots_scelli_max = Parameter{Int32}(
   unit = "currency",
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Plafond",
+  description = "Impôt sur le revenu ; Réduction d'impôt ; Investissements locatifs neufs: dispositif SCELLIER ; Plafond",
 )
 
 ir_reductions_impots_scelli_taux1 = Parameter{Float32}(
@@ -8813,7 +8827,7 @@ ir_reductions_impots_scelli_taux1 = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Taux 1",
+  description = "Impôt sur le revenu ; Réduction d'impôt ; Investissements locatifs neufs: dispositif SCELLIER ; Taux 1",
 )
 
 ir_reductions_impots_scelli_taux13 = Parameter{Float32}(
@@ -8822,7 +8836,7 @@ ir_reductions_impots_scelli_taux13 = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Taux 13%",
+  description = "Impôt sur le revenu ; Réduction d'impôt ; Investissements locatifs neufs: dispositif SCELLIER ; Taux 13%",
 )
 
 ir_reductions_impots_scelli_taux15 = Parameter{Float32}(
@@ -8831,7 +8845,7 @@ ir_reductions_impots_scelli_taux15 = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Taux 15%",
+  description = "Impôt sur le revenu ; Réduction d'impôt ; Investissements locatifs neufs: dispositif SCELLIER ; Taux 15%",
 )
 
 ir_reductions_impots_scelli_taux2 = Parameter{Float32}(
@@ -8840,7 +8854,7 @@ ir_reductions_impots_scelli_taux2 = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Taux 2",
+  description = "Impôt sur le revenu ; Réduction d'impôt ; Investissements locatifs neufs: dispositif SCELLIER ; Taux 2",
 )
 
 ir_reductions_impots_scelli_taux22 = Parameter{Float32}(
@@ -8849,7 +8863,7 @@ ir_reductions_impots_scelli_taux22 = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Taux 22%",
+  description = "Impôt sur le revenu ; Réduction d'impôt ; Investissements locatifs neufs: dispositif SCELLIER ; Taux 22%",
 )
 
 ir_reductions_impots_scelli_taux24 = Parameter{Float32}(
@@ -8858,7 +8872,7 @@ ir_reductions_impots_scelli_taux24 = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Taux 24%",
+  description = "Impôt sur le revenu ; Réduction d'impôt ; Investissements locatifs neufs: dispositif SCELLIER ; Taux 24%",
 )
 
 ir_reductions_impots_scelli_taux36 = Parameter{Float32}(
@@ -8867,7 +8881,7 @@ ir_reductions_impots_scelli_taux36 = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Taux 36%",
+  description = "Impôt sur le revenu ; Réduction d'impôt ; Investissements locatifs neufs: dispositif SCELLIER ; Taux 36%",
 )
 
 ir_reductions_impots_scelli_taux6 = Parameter{Float32}(
@@ -8876,7 +8890,7 @@ ir_reductions_impots_scelli_taux6 = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Taux 6%",
+  description = "Impôt sur le revenu ; Réduction d'impôt ; Investissements locatifs neufs: dispositif SCELLIER ; Taux 6%",
 )
 
 ir_reductions_impots_sofica_max = Parameter{Int32}(
@@ -8886,7 +8900,7 @@ ir_reductions_impots_sofica_max = Parameter{Int32}(
   unit = "currency",
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Plafond",
+  description = "Impôt sur le revenu ; Réduction d'impôt ; Souscription au capital de SOFICA ; Plafond",
 )
 
 ir_reductions_impots_sofica_taux1 = Parameter{Float32}(
@@ -8895,7 +8909,7 @@ ir_reductions_impots_sofica_taux1 = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Plafond (en % du RNG)",
+  description = "Impôt sur le revenu ; Réduction d'impôt ; Souscription au capital de SOFICA ; Plafond (en % du RNG)",
 )
 
 ir_reductions_impots_sofica_taux2 = Parameter{Float32}(
@@ -8906,7 +8920,7 @@ ir_reductions_impots_sofica_taux2 = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Taux2",
+  description = "Impôt sur le revenu ; Réduction d'impôt ; Souscription au capital de SOFICA ; Taux2",
 )
 
 ir_reductions_impots_sofica_taux3 = Parameter{Float32}(
@@ -8917,7 +8931,7 @@ ir_reductions_impots_sofica_taux3 = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Taux3",
+  description = "Impôt sur le revenu ; Réduction d'impôt ; Souscription au capital de SOFICA ; Taux3",
 )
 
 ir_reductions_impots_sofipe_base = Parameter{Float32}(
@@ -8926,7 +8940,7 @@ ir_reductions_impots_sofipe_base = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "base",
+  description = "Impôt sur le revenu ; Réduction d'impôt ; Souscription au capital d'une SOFIPECHE ; base",
 )
 
 ir_reductions_impots_sofipe_max = Parameter{Int32}(
@@ -8936,7 +8950,7 @@ ir_reductions_impots_sofipe_max = Parameter{Int32}(
   unit = "currency",
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Plafond",
+  description = "Impôt sur le revenu ; Réduction d'impôt ; Souscription au capital d'une SOFIPECHE ; Plafond",
 )
 
 ir_reductions_impots_sofipe_taux = Parameter{Float32}(
@@ -8946,7 +8960,7 @@ ir_reductions_impots_sofipe_taux = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Taux",
+  description = "Impôt sur le revenu ; Réduction d'impôt ; Souscription au capital d'une SOFIPECHE ; Taux",
 )
 
 ir_reductions_impots_spfcpi_max = Parameter{Int32}(
@@ -8957,7 +8971,7 @@ ir_reductions_impots_spfcpi_max = Parameter{Int32}(
   unit = "currency",
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Plafond",
+  description = "Impôt sur le revenu ; Réduction d'impôt ; Souscription de parts de fonds communs de placement dans l'innovation ou de fonds d'investissement de proximité ; Plafond",
 )
 
 ir_reductions_impots_spfcpi_taux1 = Parameter{Float32}(
@@ -8968,7 +8982,7 @@ ir_reductions_impots_spfcpi_taux1 = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Premier taux",
+  description = "Impôt sur le revenu ; Réduction d'impôt ; Souscription de parts de fonds communs de placement dans l'innovation ou de fonds d'investissement de proximité ; Premier taux",
 )
 
 ir_reductions_impots_spfcpi_taux2 = Parameter{Float32}(
@@ -8979,7 +8993,7 @@ ir_reductions_impots_spfcpi_taux2 = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Second taux",
+  description = "Impôt sur le revenu ; Réduction d'impôt ; Souscription de parts de fonds communs de placement dans l'innovation ou de fonds d'investissement de proximité ; Second taux",
 )
 
 ir_reductions_impots_spfcpi_taux3 = Parameter{Float32}(
@@ -8989,7 +9003,7 @@ ir_reductions_impots_spfcpi_taux3 = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Troisième taux",
+  description = "Impôt sur le revenu ; Réduction d'impôt ; Souscription de parts de fonds communs de placement dans l'innovation ou de fonds d'investissement de proximité ; Troisième taux",
 )
 
 ir_rpns_cga_max = Parameter{Int32}(
@@ -9003,7 +9017,7 @@ ir_rpns_cga_max = Parameter{Int32}(
   unit = "currency",
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Abattement centre de gestion agréé ou association aggréé///si revenu inférieur à",
+  description = "Impôt sur le revenu ; Revenus des professions non salariées ; Abattement centre de gestion agréé ou association aggréé///si revenu inférieur à",
 )
 
 ir_rpns_cga_taux = Parameter{Float32}(
@@ -9013,7 +9027,7 @@ ir_rpns_cga_taux = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Taux de l'abattement CGA-AA",
+  description = "Impôt sur le revenu ; Revenus des professions non salariées ; Taux de l'abattement CGA-AA",
 )
 
 ir_rpns_cga_taux2 = Parameter{Float32}(
@@ -9023,7 +9037,7 @@ ir_rpns_cga_taux2 = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Taux de la pénalité non CGA-AA",
+  description = "Impôt sur le revenu ; Revenus des professions non salariées ; Taux de la pénalité non CGA-AA",
 )
 
 ir_rpns_def_agri_seuil = Parameter{Int32}(
@@ -9040,7 +9054,7 @@ ir_rpns_def_agri_seuil = Parameter{Int32}(
   unit = "currency",
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Déficit agricole///%cf art 156 du CGI",
+  description = "Impôt sur le revenu ; Revenus des professions non salariées ; Déficit agricole///%cf art 156 du CGI",
 )
 
 ir_rpns_def_fonc_seuil = Parameter{Int32}(
@@ -9050,7 +9064,7 @@ ir_rpns_def_fonc_seuil = Parameter{Int32}(
   unit = "currency",
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Déficit foncier art 156-I-3 du CGI",
+  description = "Impôt sur le revenu ; Revenus des professions non salariées ; Déficit foncier art 156-I-3 du CGI",
 )
 
 ir_rpns_microentreprise_servi_max = Parameter{Int32}(
@@ -9065,7 +9079,7 @@ ir_rpns_microentreprise_servi_max = Parameter{Int32}(
   unit = "currency",
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Maximum",
+  description = "Impôt sur le revenu ; Revenus des professions non salariées ; Régime microentreprise/Spécial bnc ; Activité de service ; Maximum",
 )
 
 ir_rpns_microentreprise_servi_min = Parameter{Int32}(
@@ -9075,7 +9089,7 @@ ir_rpns_microentreprise_servi_min = Parameter{Int32}(
   unit = "currency",
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Minimum",
+  description = "Impôt sur le revenu ; Revenus des professions non salariées ; Régime microentreprise/Spécial bnc ; Activité de service ; Minimum",
 )
 
 ir_rpns_microentreprise_servi_taux = Parameter{Float32}(
@@ -9086,7 +9100,7 @@ ir_rpns_microentreprise_servi_taux = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Taux",
+  description = "Impôt sur le revenu ; Revenus des professions non salariées ; Régime microentreprise/Spécial bnc ; Activité de service ; Taux",
 )
 
 ir_rpns_microentreprise_specialbnc_max = Parameter{Int32}(
@@ -9101,7 +9115,7 @@ ir_rpns_microentreprise_specialbnc_max = Parameter{Int32}(
   unit = "currency",
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Maximum",
+  description = "Impôt sur le revenu ; Revenus des professions non salariées ; Régime microentreprise/Spécial bnc ; Régime spécial BNC ; Maximum",
 )
 
 ir_rpns_microentreprise_specialbnc_min = Parameter{Int32}(
@@ -9111,7 +9125,7 @@ ir_rpns_microentreprise_specialbnc_min = Parameter{Int32}(
   unit = "currency",
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Minimum",
+  description = "Impôt sur le revenu ; Revenus des professions non salariées ; Régime microentreprise/Spécial bnc ; Régime spécial BNC ; Minimum",
 )
 
 ir_rpns_microentreprise_specialbnc_taux = Parameter{Float32}(
@@ -9123,7 +9137,7 @@ ir_rpns_microentreprise_specialbnc_taux = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Taux",
+  description = "Impôt sur le revenu ; Revenus des professions non salariées ; Régime microentreprise/Spécial bnc ; Régime spécial BNC ; Taux",
 )
 
 ir_rpns_microentreprise_vente_max = Parameter{Int32}(
@@ -9138,7 +9152,7 @@ ir_rpns_microentreprise_vente_max = Parameter{Int32}(
   unit = "currency",
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Maximum",
+  description = "Impôt sur le revenu ; Revenus des professions non salariées ; Régime microentreprise/Spécial bnc ; Activité de vente ; Maximum",
 )
 
 ir_rpns_microentreprise_vente_min = Parameter{Int32}(
@@ -9148,7 +9162,7 @@ ir_rpns_microentreprise_vente_min = Parameter{Int32}(
   unit = "currency",
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Minimum",
+  description = "Impôt sur le revenu ; Revenus des professions non salariées ; Régime microentreprise/Spécial bnc ; Activité de vente ; Minimum",
 )
 
 ir_rpns_microentreprise_vente_taux = Parameter{Float32}(
@@ -9160,7 +9174,7 @@ ir_rpns_microentreprise_vente_taux = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Taux",
+  description = "Impôt sur le revenu ; Revenus des professions non salariées ; Régime microentreprise/Spécial bnc ; Activité de vente ; Taux",
 )
 
 ir_rpns_microsocial_bnc = Parameter{Float32}(
@@ -9169,7 +9183,7 @@ ir_rpns_microsocial_bnc = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Taux professions libérales relevant du RSI/CIPAV (bnc)",
+  description = "Impôt sur le revenu ; Revenus des professions non salariées ; Régime micro-social ; Taux professions libérales relevant du RSI/CIPAV (bnc)",
 )
 
 ir_rpns_microsocial_servi = Parameter{Float32}(
@@ -9178,7 +9192,7 @@ ir_rpns_microsocial_servi = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Taux pour les activités de prestations et de services",
+  description = "Impôt sur le revenu ; Revenus des professions non salariées ; Régime micro-social ; Taux pour les activités de prestations et de services",
 )
 
 ir_rpns_microsocial_vente = Parameter{Float32}(
@@ -9187,7 +9201,7 @@ ir_rpns_microsocial_vente = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Taux pour les activités de ventes",
+  description = "Impôt sur le revenu ; Revenus des professions non salariées ; Régime micro-social ; Taux pour les activités de ventes",
 )
 
 ir_rpns_taux16 = Parameter{Float32}(
@@ -9196,7 +9210,7 @@ ir_rpns_taux16 = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Revenus taxés à 16% (logiciels originaux)",
+  description = "Impôt sur le revenu ; Revenus des professions non salariées ; Revenus taxés à 16% (logiciels originaux)",
 )
 
 ir_rvcm_abat_assvie = Parameter{Int32}(
@@ -9206,7 +9220,7 @@ ir_rvcm_abat_assvie = Parameter{Int32}(
   unit = "currency",
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Abattement produits des contrats d'assurance vie",
+  description = "Impôt sur le revenu ; Revenus des valeurs et capitaux mobiliers ; Abattement produits des contrats d'assurance vie",
 )
 
 ir_rvcm_abatmob = Parameter{Int32}(
@@ -9218,7 +9232,7 @@ ir_rvcm_abatmob = Parameter{Int32}(
   unit = "currency",
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Abattement capitaux mobiliers - Max",
+  description = "Impôt sur le revenu ; Revenus des valeurs et capitaux mobiliers ; Abattement capitaux mobiliers - Max",
 )
 
 ir_rvcm_abatmob_taux = Parameter{Float32}(
@@ -9228,7 +9242,7 @@ ir_rvcm_abatmob_taux = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Abattement capitaux mobiliers - Taux",
+  description = "Impôt sur le revenu ; Revenus des valeurs et capitaux mobiliers ; Abattement capitaux mobiliers - Taux",
 )
 
 ir_rvcm_majGO = Parameter{Float32}(
@@ -9238,7 +9252,7 @@ ir_rvcm_majGO = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "majoration case GO",
+  description = "Impôt sur le revenu ; Revenus des valeurs et capitaux mobiliers ; majoration case GO",
 )
 
 ir_rvcm_prelevement_liberatoire_action = Parameter{Float32}(
@@ -9250,7 +9264,7 @@ ir_rvcm_prelevement_liberatoire_action = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Revenus des actions et parts soumis au prélèvement libératoire de 18% (case DA)",
+  description = "Impôt sur le revenu ; Revenus des valeurs et capitaux mobiliers ; Prélèvement libératoire ; Revenus des actions et parts soumis au prélèvement libératoire de 18% (case DA)",
 )
 
 ir_rvcm_prelevement_liberatoire_assvie = Parameter{Float32}(
@@ -9259,7 +9273,7 @@ ir_rvcm_prelevement_liberatoire_assvie = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Produits des contrats d'assurance vie (case DH)",
+  description = "Impôt sur le revenu ; Revenus des valeurs et capitaux mobiliers ; Prélèvement libératoire ; Produits des contrats d'assurance vie (case DH)",
 )
 
 ir_rvcm_prelevement_liberatoire_autre = Parameter{Float32}(
@@ -9271,10 +9285,10 @@ ir_rvcm_prelevement_liberatoire_autre = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Autres produits de placement (case EE)",
+  description = "Impôt sur le revenu ; Revenus des valeurs et capitaux mobiliers ; Prélèvement libératoire ; Autres produits de placement (case EE)",
 )
 
-ir_teicaa = RateTaxScale(
+ir_teicaa = MarginalRateScale(
   [
     RateBracket(
       threshold = [
@@ -9304,7 +9318,7 @@ ir_teicaa = RateTaxScale(
   unit = "currency",
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Taxe exceptionnelle sur l'indemnité compensatrice des agents d'assurance",
+  description = "Impôt sur le revenu ; Taxe exceptionnelle sur l'indemnité compensatrice des agents d'assurance",
 )
 
 ir_tspr_abatpen_max = Parameter{Int32}(
@@ -9324,7 +9338,7 @@ ir_tspr_abatpen_max = Parameter{Int32}(
   unit = "currency",
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Abattement maximum pour l'ensemble du foyer",
+  description = "Impôt sur le revenu ; Total salaires pensions et rentes ; Abattement sur les pensions ; Abattement maximum pour l'ensemble du foyer",
 )
 
 ir_tspr_abatpen_min = Parameter{Int32}(
@@ -9343,7 +9357,7 @@ ir_tspr_abatpen_min = Parameter{Int32}(
   unit = "currency",
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Abattement minimum par bénéficiaire",
+  description = "Impôt sur le revenu ; Total salaires pensions et rentes ; Abattement sur les pensions ; Abattement minimum par bénéficiaire",
 )
 
 ir_tspr_abatpen_taux = Parameter{Float32}(
@@ -9352,7 +9366,7 @@ ir_tspr_abatpen_taux = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Taux de l'abattement",
+  description = "Impôt sur le revenu ; Total salaires pensions et rentes ; Abattement sur les pensions ; Taux de l'abattement",
 )
 
 ir_tspr_abatpro_max = Parameter{Int32}(
@@ -9373,7 +9387,7 @@ ir_tspr_abatpro_max = Parameter{Int32}(
   unit = "currency",
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Abattement maximum",
+  description = "Impôt sur le revenu ; Total salaires pensions et rentes ; Abattement forfaitaire pour frais professionnels ; Abattement maximum",
 )
 
 ir_tspr_abatpro_min = Parameter{Int32}(
@@ -9392,7 +9406,7 @@ ir_tspr_abatpro_min = Parameter{Int32}(
   unit = "currency",
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Abattement minimum - Cas général",
+  description = "Impôt sur le revenu ; Total salaires pensions et rentes ; Abattement forfaitaire pour frais professionnels ; Abattement minimum - Cas général",
 )
 
 ir_tspr_abatpro_min2 = Parameter{Int32}(
@@ -9411,7 +9425,7 @@ ir_tspr_abatpro_min2 = Parameter{Int32}(
   unit = "currency",
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Abattement minimum - Demandeur d'emploi",
+  description = "Impôt sur le revenu ; Total salaires pensions et rentes ; Abattement forfaitaire pour frais professionnels ; Abattement minimum - Demandeur d'emploi",
 )
 
 ir_tspr_abatpro_taux = Parameter{Float32}(
@@ -9420,7 +9434,7 @@ ir_tspr_abatpro_taux = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Taux de l'abattement",
+  description = "Impôt sur le revenu ; Total salaires pensions et rentes ; Abattement forfaitaire pour frais professionnels ; Taux de l'abattement",
 )
 
 ir_tspr_abatsalpen_max = Parameter{Int32}(
@@ -9434,7 +9448,7 @@ ir_tspr_abatsalpen_max = Parameter{Int32}(
   unit = "currency",
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Abattement maximum",
+  description = "Impôt sur le revenu ; Total salaires pensions et rentes ; Abattement 20% ; Abattement maximum",
 )
 
 ir_tspr_abatsalpen_taux = Parameter{Float32}(
@@ -9443,7 +9457,7 @@ ir_tspr_abatsalpen_taux = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Taux de l'abattement",
+  description = "Impôt sur le revenu ; Total salaires pensions et rentes ; Abattement 20% ; Taux de l'abattement",
 )
 
 ir_tspr_abatviag_taux1 = Parameter{Float32}(
@@ -9452,7 +9466,7 @@ ir_tspr_abatviag_taux1 = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Moins de 50 ans",
+  description = "Impôt sur le revenu ; Total salaires pensions et rentes ; Rentes viagères à titre onéreux ; Moins de 50 ans",
 )
 
 ir_tspr_abatviag_taux2 = Parameter{Float32}(
@@ -9461,7 +9475,7 @@ ir_tspr_abatviag_taux2 = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "De 50 à 59 ans",
+  description = "Impôt sur le revenu ; Total salaires pensions et rentes ; Rentes viagères à titre onéreux ; De 50 à 59 ans",
 )
 
 ir_tspr_abatviag_taux3 = Parameter{Float32}(
@@ -9470,7 +9484,7 @@ ir_tspr_abatviag_taux3 = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "De 60 à 69 ans",
+  description = "Impôt sur le revenu ; Total salaires pensions et rentes ; Rentes viagères à titre onéreux ; De 60 à 69 ans",
 )
 
 ir_tspr_abatviag_taux4 = Parameter{Float32}(
@@ -9479,10 +9493,10 @@ ir_tspr_abatviag_taux4 = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "À partir de 70 ans",
+  description = "Impôt sur le revenu ; Total salaires pensions et rentes ; Rentes viagères à titre onéreux ; À partir de 70 ans",
 )
 
-isf_bareme = RateTaxScale(
+isf_bareme = MarginalRateScale(
   [
     RateBracket(
       threshold = [
@@ -9632,7 +9646,8 @@ isf_bareme = RateTaxScale(
   unit = "currency",
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Impôt de solidarité",
+  description = "Impôt de solidarité sur la fortune (ISF) ; Impôt de solidarité",
+  comment = "Réforme sarkozy jamais appliquée",
 )
 
 isf_decote_base = Parameter{Float32}(
@@ -9641,7 +9656,8 @@ isf_decote_base = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Base montant décote",
+  description = "Impôt de solidarité sur la fortune (ISF) ; Décôte de l'ISF ; Base montant décote",
+  comment = "Réforme sarkozy jamais appliquée",
 )
 
 isf_decote_max = Parameter{Float32}(
@@ -9651,7 +9667,8 @@ isf_decote_max = Parameter{Float32}(
   unit = "currency",
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Plafond de la décote",
+  description = "Impôt de solidarité sur la fortune (ISF) ; Décôte de l'ISF ; Plafond de la décote",
+  comment = "Réforme sarkozy jamais appliquée",
 )
 
 isf_decote_min = Parameter{Float32}(
@@ -9661,7 +9678,8 @@ isf_decote_min = Parameter{Float32}(
   unit = "currency",
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Plancher de la décote",
+  description = "Impôt de solidarité sur la fortune (ISF) ; Décôte de l'ISF ; Plancher de la décote",
+  comment = "Réforme sarkozy jamais appliquée",
 )
 
 isf_decote_taux = Parameter{Float32}(
@@ -9670,7 +9688,8 @@ isf_decote_taux = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Taux de la décote",
+  description = "Impôt de solidarité sur la fortune (ISF) ; Décôte de l'ISF ; Taux de la décote",
+  comment = "Réforme sarkozy jamais appliquée",
 )
 
 isf_droits_soc_taux1 = Parameter{Float32}(
@@ -9679,7 +9698,8 @@ isf_droits_soc_taux1 = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Taux parts et actions détenues par les salariés et mandataires sociaux",
+  description = "Impôt de solidarité sur la fortune (ISF) ; Droits sociaux ; Taux parts et actions détenues par les salariés et mandataires sociaux",
+  comment = "Réforme sarkozy jamais appliquée ; parts actions détenus par salariés et mandataires sociaux intro en 2006",
 )
 
 isf_droits_soc_taux2 = Parameter{Float32}(
@@ -9689,7 +9709,8 @@ isf_droits_soc_taux2 = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Taux parts et actions avec engagement de conservation de 6 ans minimum",
+  description = "Impôt de solidarité sur la fortune (ISF) ; Droits sociaux ; Taux parts et actions avec engagement de conservation de 6 ans minimum",
+  comment = "Réforme sarkozy jamais appliquée ; parts actions détenus par salariés et mandataires sociaux intro en 2006",
 )
 
 isf_forf_mob_taux = Parameter{Float32}(
@@ -9698,7 +9719,8 @@ isf_forf_mob_taux = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Taux forfait mobilier",
+  description = "Impôt de solidarité sur la fortune (ISF) ; Forfait mobilier ; Taux forfait mobilier",
+  comment = "Réforme sarkozy jamais appliquée",
 )
 
 isf_nonbat_seuil = Parameter{Int32}(
@@ -9709,7 +9731,8 @@ isf_nonbat_seuil = Parameter{Int32}(
   unit = "currency",
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Seuil biens ruraux",
+  description = "Impôt de solidarité sur la fortune (ISF) ; Immeubles non bâtis ; Seuil biens ruraux",
+  comment = "Réforme sarkozy jamais appliquée",
 )
 
 isf_nonbat_taux_f = Parameter{Float32}(
@@ -9718,7 +9741,8 @@ isf_nonbat_taux_f = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Taux bois et forêts",
+  description = "Impôt de solidarité sur la fortune (ISF) ; Immeubles non bâtis ; Taux bois et forêts",
+  comment = "Réforme sarkozy jamais appliquée",
 )
 
 isf_nonbat_taux_r1 = Parameter{Float32}(
@@ -9727,7 +9751,8 @@ isf_nonbat_taux_r1 = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Taux biens ruraux",
+  description = "Impôt de solidarité sur la fortune (ISF) ; Immeubles non bâtis ; Taux biens ruraux",
+  comment = "Réforme sarkozy jamais appliquée",
 )
 
 isf_nonbat_taux_r2 = Parameter{Float32}(
@@ -9736,7 +9761,8 @@ isf_nonbat_taux_r2 = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Taux biens ruraux",
+  description = "Impôt de solidarité sur la fortune (ISF) ; Immeubles non bâtis ; Taux biens ruraux",
+  comment = "Réforme sarkozy jamais appliquée",
 )
 
 isf_plaf_seuil1 = Parameter{Int32}(
@@ -9753,7 +9779,8 @@ isf_plaf_seuil1 = Parameter{Int32}(
   unit = "currency",
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Premier seuil pour calcul du plafonnement",
+  description = "Impôt de solidarité sur la fortune (ISF) ; Plafonnement de l'ISF ; Premier seuil pour calcul du plafonnement",
+  comment = "Réforme sarkozy jamais appliquée",
 )
 
 isf_plaf_seuil2 = Parameter{Int32}(
@@ -9770,7 +9797,8 @@ isf_plaf_seuil2 = Parameter{Int32}(
   unit = "currency",
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Second seuil pour calcul du plafonnement",
+  description = "Impôt de solidarité sur la fortune (ISF) ; Plafonnement de l'ISF ; Second seuil pour calcul du plafonnement",
+  comment = "Réforme sarkozy jamais appliquée",
 )
 
 isf_plaf_taux = Parameter{Float32}(
@@ -9781,7 +9809,8 @@ isf_plaf_taux = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Taux appliqué quand le montant de l'ISF avant plafonnement est supérieur au second seuil",
+  description = "Impôt de solidarité sur la fortune (ISF) ; Plafonnement de l'ISF ; Taux appliqué quand le montant de l'ISF avant plafonnement est supérieur au second seuil",
+  comment = "Réforme sarkozy jamais appliquée",
 )
 
 isf_plafonnement_taux = Parameter{Float32}(
@@ -9792,7 +9821,8 @@ isf_plafonnement_taux = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Taux appliqué aux revenus et produits de l'année pour le calcul du plafonnement",
+  description = "Impôt de solidarité sur la fortune (ISF) ; Revenus et produits de l'année ; Taux appliqué aux revenus et produits de l'année pour le calcul du plafonnement",
+  comment = "Réforme sarkozy jamais appliquée",
 )
 
 isf_pme_max = Parameter{Int32}(
@@ -9805,8 +9835,8 @@ isf_pme_max = Parameter{Int32}(
   unit = "currency",
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Plafond pour investissement dans les PME",
-  comment = "ce type de réductions apparaît seulement en 2008 ##",
+  description = "Impôt de solidarité sur la fortune (ISF) ; Investissement PME ; Plafond pour investissement dans les PME",
+  comment = "Réforme sarkozy jamais appliquée ; ce type de réductions apparaît seulement en 2008 ##",
 )
 
 isf_pme_taux1 = Parameter{Float32}(
@@ -9816,7 +9846,8 @@ isf_pme_taux1 = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Taux pour investissement direct soc, holdings, fip, fcpi",
+  description = "Impôt de solidarité sur la fortune (ISF) ; Investissement PME ; Taux pour investissement direct soc, holdings, fip, fcpi",
+  comment = "Réforme sarkozy jamais appliquée",
 )
 
 isf_pme_taux2 = Parameter{Float32}(
@@ -9826,7 +9857,8 @@ isf_pme_taux2 = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Taux pour dons à certains organismes d'intérêt général",
+  description = "Impôt de solidarité sur la fortune (ISF) ; Investissement PME ; Taux pour dons à certains organismes d'intérêt général",
+  comment = "Réforme sarkozy jamais appliquée",
 )
 
 isf_reduc_pac_reduc_1 = Parameter{Int32}(
@@ -9838,7 +9870,8 @@ isf_reduc_pac_reduc_1 = Parameter{Int32}(
   unit = "currency",
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Réduction pac sans garde alternée",
+  description = "Impôt de solidarité sur la fortune (ISF) ; Réductions pour personnes à charges ; Réduction pac sans garde alternée",
+  comment = "Réforme sarkozy jamais appliquée",
 )
 
 isf_reduc_pac_reduc_2 = Parameter{Int32}(
@@ -9850,7 +9883,8 @@ isf_reduc_pac_reduc_2 = Parameter{Int32}(
   unit = "currency",
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Réduction pac avec garde alternée",
+  description = "Impôt de solidarité sur la fortune (ISF) ; Réductions pour personnes à charges ; Réduction pac avec garde alternée",
+  comment = "Réforme sarkozy jamais appliquée",
 )
 
 isf_res_princ_taux = Parameter{Float32}(
@@ -9860,7 +9894,8 @@ isf_res_princ_taux = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Taux d'abattement résidence principale",
+  description = "Impôt de solidarité sur la fortune (ISF) ; Immeubles bâtis ; Taux d'abattement résidence principale",
+  comment = "Réforme sarkozy jamais appliquée",
 )
 
 lps_abatt_conj = Parameter{Int32}(
@@ -9870,7 +9905,7 @@ lps_abatt_conj = Parameter{Int32}(
   unit = "currency",
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Abattement forfaitaire sur le revenu si conjoint",
+  description = "Fusion IR - CSG (à la Landais, Piketty, Saez) ; Abattement forfaitaire sur le revenu si conjoint",
 )
 
 lps_abatt_enfant = Parameter{Int32}(
@@ -9880,10 +9915,10 @@ lps_abatt_enfant = Parameter{Int32}(
   unit = "currency",
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Abattement forfaitaire sur le revenu par enfant",
+  description = "Fusion IR - CSG (à la Landais, Piketty, Saez) ; Abattement forfaitaire sur le revenu par enfant",
 )
 
-lps_bareme = RateTaxScale(
+lps_bareme = MarginalRateScale(
   [
     RateBracket(
       threshold = [
@@ -9897,7 +9932,7 @@ lps_bareme = RateTaxScale(
   unit = "currency",
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Barème appliqué à l'assiette de la CSG",
+  description = "Fusion IR - CSG (à la Landais, Piketty, Saez) ; Barème appliqué à l'assiette de la CSG",
 )
 
 lps_credit_enfant = Parameter{Int32}(
@@ -9907,7 +9942,7 @@ lps_credit_enfant = Parameter{Int32}(
   unit = "currency",
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Crédit d'impôt forfaitaire par enfant",
+  description = "Fusion IR - CSG (à la Landais, Piketty, Saez) ; Crédit d'impôt forfaitaire par enfant",
 )
 
 lps_reduc_conj = Parameter{Int32}(
@@ -9917,7 +9952,7 @@ lps_reduc_conj = Parameter{Int32}(
   unit = "currency",
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Réduction d'impôt forfaitaire si conjoint",
+  description = "Fusion IR - CSG (à la Landais, Piketty, Saez) ; Réduction d'impôt forfaitaire si conjoint",
 )
 
 lps_reduc_enfant = Parameter{Int32}(
@@ -9927,7 +9962,7 @@ lps_reduc_enfant = Parameter{Int32}(
   unit = "currency",
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Réduction d'impôt forfaitaire par enfant",
+  description = "Fusion IR - CSG (à la Landais, Piketty, Saez) ; Réduction d'impôt forfaitaire par enfant",
 )
 
 minim_aah_age_legal_retraite = Parameter{Float32}(
@@ -9942,7 +9977,7 @@ minim_aah_age_legal_retraite = Parameter{Float32}(
   unit = "year",
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Âge légal de départ à la retraite",
+  description = "Minima sociaux ; Allocation pour adulte handicapé (AAH) ; Âge légal de départ à la retraite",
 )
 
 minim_aah_montant = Parameter{Float32}(
@@ -9971,7 +10006,7 @@ minim_aah_montant = Parameter{Float32}(
   unit = "currency",
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Montant mensuel de l'allocation adulte handicapé",
+  description = "Minima sociaux ; Allocation pour adulte handicapé (AAH) ; Montant mensuel de l'allocation adulte handicapé",
 )
 
 minim_aah_tx_plaf_supp = Parameter{Float32}(
@@ -9980,7 +10015,7 @@ minim_aah_tx_plaf_supp = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Majoration de plafond pour personne à charge (en pourcentage du plafond de base)",
+  description = "Minima sociaux ; Allocation pour adulte handicapé (AAH) ; Majoration de plafond pour personne à charge (en pourcentage du plafond de base)",
 )
 
 minim_aefa_forf2008 = Parameter{Float32}(
@@ -9990,7 +10025,7 @@ minim_aefa_forf2008 = Parameter{Float32}(
   unit = "currency",
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Montant de l'aide forfaitaire exceptionnelle de 2008",
+  description = "Minima sociaux ; Aide exceptionnelle de fin d'année ; Montant de l'aide forfaitaire exceptionnelle de 2008",
 )
 
 minim_aefa_mon_maj = Parameter{Float32}(
@@ -10000,7 +10035,7 @@ minim_aefa_mon_maj = Parameter{Float32}(
   unit = "currency",
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Montant majoré",
+  description = "Minima sociaux ; Aide exceptionnelle de fin d'année ; Montant majoré",
 )
 
 minim_aefa_mon_seul = Parameter{Float32}(
@@ -10010,7 +10045,7 @@ minim_aefa_mon_seul = Parameter{Float32}(
   unit = "currency",
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Montant de l'aide pour une personne seule",
+  description = "Minima sociaux ; Aide exceptionnelle de fin d'année ; Montant de l'aide pour une personne seule",
 )
 
 minim_aefa_tx_2p = Parameter{Float32}(
@@ -10019,7 +10054,7 @@ minim_aefa_tx_2p = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Taux pour la seconde personne",
+  description = "Minima sociaux ; Aide exceptionnelle de fin d'année ; Taux pour la seconde personne",
 )
 
 minim_aefa_tx_3pac = Parameter{Float32}(
@@ -10028,7 +10063,7 @@ minim_aefa_tx_3pac = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Taux au delà de la troisième personne à charge incluse",
+  description = "Minima sociaux ; Aide exceptionnelle de fin d'année ; Taux au delà de la troisième personne à charge incluse",
 )
 
 minim_aefa_tx_supp = Parameter{Float32}(
@@ -10037,7 +10072,7 @@ minim_aefa_tx_supp = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Taux personne supplémentaire",
+  description = "Minima sociaux ; Aide exceptionnelle de fin d'année ; Taux personne supplémentaire",
 )
 
 minim_api_age = Parameter{Int32}(
@@ -10047,7 +10082,7 @@ minim_api_age = Parameter{Int32}(
   unit = "year",
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Limite d'âge des enfants ouvrant droit",
+  description = "Minima sociaux ; Allocation parent isolé ; Limite d'âge des enfants ouvrant droit",
 )
 
 minim_api_age_pac = Parameter{Int32}(
@@ -10058,7 +10093,7 @@ minim_api_age_pac = Parameter{Int32}(
   unit = "year",
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Limite d'âge des enfants comptés à charge",
+  description = "Minima sociaux ; Allocation parent isolé ; Limite d'âge des enfants comptés à charge",
 )
 
 minim_api_base = Parameter{Float32}(
@@ -10067,7 +10102,7 @@ minim_api_base = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Taux de l'API sans enfant (femme enceinte, en pourcentage de la BMAF)",
+  description = "Minima sociaux ; Allocation parent isolé ; Taux de l'API sans enfant (femme enceinte, en pourcentage de la BMAF)",
 )
 
 minim_api_enf_sup = Parameter{Float32}(
@@ -10076,7 +10111,7 @@ minim_api_enf_sup = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Majoration de taux par enfant supplémentaire (en pourcentage de la BMAF)",
+  description = "Minima sociaux ; Allocation parent isolé ; Majoration de taux par enfant supplémentaire (en pourcentage de la BMAF)",
 )
 
 minim_asi_montant_couple = Parameter{Float32}(
@@ -10099,7 +10134,7 @@ minim_asi_montant_couple = Parameter{Float32}(
   unit = "currency",
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Montant annuel couple",
+  description = "Minima sociaux ; Allocation supplémentaire d'invalidité ; Montant annuel couple",
 )
 
 minim_asi_montant_seul = Parameter{Float32}(
@@ -10122,7 +10157,7 @@ minim_asi_montant_seul = Parameter{Float32}(
   unit = "currency",
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Montant annuel personne seule",
+  description = "Minima sociaux ; Allocation supplémentaire d'invalidité ; Montant annuel personne seule",
 )
 
 minim_asi_plaf_couple = Parameter{Float32}(
@@ -10145,7 +10180,7 @@ minim_asi_plaf_couple = Parameter{Float32}(
   unit = "currency",
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Plafond de ressources (allocation comprise) pour un couple",
+  description = "Minima sociaux ; Allocation supplémentaire d'invalidité ; Plafond de ressources (allocation comprise) pour un couple",
 )
 
 minim_asi_plaf_seul = Parameter{Float32}(
@@ -10169,7 +10204,7 @@ minim_asi_plaf_seul = Parameter{Float32}(
   unit = "currency",
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Plafond de ressources (allocation comprise) pour une personne seule",
+  description = "Minima sociaux ; Allocation supplémentaire d'invalidité ; Plafond de ressources (allocation comprise) pour une personne seule",
 )
 
 minim_aspa_age_min = Parameter{Int32}(
@@ -10179,7 +10214,7 @@ minim_aspa_age_min = Parameter{Int32}(
   unit = "year",
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Âge minimal requis",
+  description = "Minima sociaux ; Allocation solidarité aux personne agées (ASPA - Minimum vieillesse) ; Âge minimal requis",
 )
 
 minim_aspa_maj_3enf = Parameter{Float32}(
@@ -10189,7 +10224,7 @@ minim_aspa_maj_3enf = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Majoration pour 3 enfants",
+  description = "Minima sociaux ; Allocation solidarité aux personne agées (ASPA - Minimum vieillesse) ; Majoration pour 3 enfants",
 )
 
 minim_aspa_montant_couple = Parameter{Float32}(
@@ -10213,7 +10248,7 @@ minim_aspa_montant_couple = Parameter{Float32}(
   unit = "currency",
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Montant annuel pour un couple marié",
+  description = "Minima sociaux ; Allocation solidarité aux personne agées (ASPA - Minimum vieillesse) ; Montant annuel pour un couple marié",
 )
 
 minim_aspa_montant_seul = Parameter{Float32}(
@@ -10237,7 +10272,7 @@ minim_aspa_montant_seul = Parameter{Float32}(
   unit = "currency",
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Montant annuel pour une personne seule",
+  description = "Minima sociaux ; Allocation solidarité aux personne agées (ASPA - Minimum vieillesse) ; Montant annuel pour une personne seule",
 )
 
 minim_aspa_plaf_couple = Parameter{Float32}(
@@ -10261,7 +10296,7 @@ minim_aspa_plaf_couple = Parameter{Float32}(
   unit = "currency",
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Plafond de ressources annuelles pour un couple",
+  description = "Minima sociaux ; Allocation solidarité aux personne agées (ASPA - Minimum vieillesse) ; Plafond de ressources annuelles pour un couple",
 )
 
 minim_aspa_plaf_seul = Parameter{Float32}(
@@ -10285,7 +10320,7 @@ minim_aspa_plaf_seul = Parameter{Float32}(
   unit = "currency",
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Plafond de ressources annuelles pour une personne seule",
+  description = "Minima sociaux ; Allocation solidarité aux personne agées (ASPA - Minimum vieillesse) ; Plafond de ressources annuelles pour une personne seule",
 )
 
 minim_ass_montant_maj = Parameter{Float32}(
@@ -10308,7 +10343,7 @@ minim_ass_montant_maj = Parameter{Float32}(
   unit = "currency",
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Montant journalier majoré",
+  description = "Minima sociaux ; Allocation de solidarité spécifique ; Montant journalier majoré",
 )
 
 minim_ass_montant_plein = Parameter{Float32}(
@@ -10331,7 +10366,7 @@ minim_ass_montant_plein = Parameter{Float32}(
   unit = "currency",
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Montant journalier à taux plein",
+  description = "Minima sociaux ; Allocation de solidarité spécifique ; Montant journalier à taux plein",
 )
 
 minim_ass_plaf_coup = Parameter{Float32}(
@@ -10350,7 +10385,7 @@ minim_ass_plaf_coup = Parameter{Float32}(
   unit = "currency",
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Plafond de ressources pour un couple (mensuel)",
+  description = "Minima sociaux ; Allocation de solidarité spécifique ; Plafond de ressources pour un couple (mensuel)",
 )
 
 minim_ass_plaf_seul = Parameter{Float32}(
@@ -10369,7 +10404,7 @@ minim_ass_plaf_seul = Parameter{Float32}(
   unit = "currency",
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Plafond de ressources pour une personne seule (mensuel)",
+  description = "Minima sociaux ; Allocation de solidarité spécifique ; Plafond de ressources pour une personne seule (mensuel)",
 )
 
 minim_caah_cpltx = Parameter{Float32}(
@@ -10378,7 +10413,7 @@ minim_caah_cpltx = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Taux du montant mensuel du complément aux adultes handicapés (avant 2005)",
+  description = "Minima sociaux ; Complément de l'allocation pour adulte handicapé (CAAH) ; Taux du montant mensuel du complément aux adultes handicapés (avant 2005)",
 )
 
 minim_caah_cpltx_1 = Parameter{Float32}(
@@ -10388,7 +10423,7 @@ minim_caah_cpltx_1 = Parameter{Float32}(
   unit = "currency",
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Montant mensuel du complément de ressources aux adultes handicapés (à partir de 2007)",
+  description = "Minima sociaux ; Complément de l'allocation pour adulte handicapé (CAAH) ; Montant mensuel du complément de ressources aux adultes handicapés (à partir de 2007)",
 )
 
 minim_caah_grph = Parameter{Float32}(
@@ -10412,7 +10447,7 @@ minim_caah_grph = Parameter{Float32}(
   unit = "currency",
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Garantie de ressources pour les personnes handicapées (cpltx_1+aah)",
+  description = "Minima sociaux ; Complément de l'allocation pour adulte handicapé (CAAH) ; Garantie de ressources pour les personnes handicapées (cpltx_1+aah)",
 )
 
 minim_caah_mva = Parameter{Float32}(
@@ -10424,7 +10459,7 @@ minim_caah_mva = Parameter{Float32}(
   unit = "currency",
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Majoration pour la vie autonome",
+  description = "Minima sociaux ; Complément de l'allocation pour adulte handicapé (CAAH) ; Majoration pour la vie autonome",
 )
 
 minim_rmi_D_enfch = Parameter{Int32}(
@@ -10433,7 +10468,7 @@ minim_rmi_D_enfch = Parameter{Int32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Enfants comptés à charge",
+  description = "Minima sociaux ; Revenu de solidarité active ; Enfants comptés à charge",
 )
 
 minim_rmi_RMI_fixe = Parameter{Bool}(
@@ -10442,7 +10477,7 @@ minim_rmi_RMI_fixe = Parameter{Bool}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Fixe le Rmi dans les simulations",
+  description = "Minima sociaux ; Revenu de solidarité active ; Fixe le Rmi dans les simulations",
 )
 
 minim_rmi_age_pac = Parameter{Int32}(
@@ -10452,7 +10487,7 @@ minim_rmi_age_pac = Parameter{Int32}(
   unit = "year",
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Limite d'âge des enfants comptés à charge",
+  description = "Minima sociaux ; Revenu de solidarité active ; Limite d'âge des enfants comptés à charge",
 )
 
 minim_rmi_forfait_asf_taux1 = Parameter{Float32}(
@@ -10461,7 +10496,7 @@ minim_rmi_forfait_asf_taux1 = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Orphelin de père ou de mère (un seul parent manquant) ou situation assimilée: beaux parents ou pension alimentaire non versée",
+  description = "Minima sociaux ; Revenu de solidarité active ; Forfait Allocation de Soutien Familial ; Orphelin de père ou de mère (un seul parent manquant) ou situation assimilée: beaux parents ou pension alimentaire non versée",
 )
 
 minim_rmi_forfait_asf_taux2 = Parameter{Float32}(
@@ -10470,7 +10505,7 @@ minim_rmi_forfait_asf_taux2 = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Orphelin (de père et de mère), ou situation assimilée",
+  description = "Minima sociaux ; Revenu de solidarité active ; Forfait Allocation de Soutien Familial ; Orphelin (de père et de mère), ou situation assimilée",
 )
 
 minim_rmi_forfait_logement_taux1 = Parameter{Float32}(
@@ -10479,7 +10514,7 @@ minim_rmi_forfait_logement_taux1 = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Fofait logement pour 1 personne (en % du rsa_socle)",
+  description = "Minima sociaux ; Revenu de solidarité active ; Forfait logement ; Fofait logement pour 1 personne (en % du rsa_socle)",
 )
 
 minim_rmi_forfait_logement_taux2 = Parameter{Float32}(
@@ -10488,7 +10523,7 @@ minim_rmi_forfait_logement_taux2 = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Forfait logement pour 2 personnes",
+  description = "Minima sociaux ; Revenu de solidarité active ; Forfait logement ; Forfait logement pour 2 personnes",
 )
 
 minim_rmi_forfait_logement_taux3 = Parameter{Float32}(
@@ -10497,7 +10532,7 @@ minim_rmi_forfait_logement_taux3 = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Forfait logement pour 3 personnes ou plus",
+  description = "Minima sociaux ; Revenu de solidarité active ; Forfait logement ; Forfait logement pour 3 personnes ou plus",
 )
 
 minim_rmi_majo_rsa_age = Parameter{Int32}(
@@ -10508,7 +10543,7 @@ minim_rmi_majo_rsa_age = Parameter{Int32}(
   unit = "year",
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Âge limite du benjamin pour un versement sans condition de durée",
+  description = "Minima sociaux ; Revenu de solidarité active ; Majoration du RSA socle pour parent isolé ; Âge limite du benjamin pour un versement sans condition de durée",
 )
 
 minim_rmi_majo_rsa_pac0 = Parameter{Float32}(
@@ -10518,7 +10553,7 @@ minim_rmi_majo_rsa_pac0 = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Taux de la majoration du RSA socle pour une femme enceinte sans enfant (en pourcentage du rsa de base pour un célibataire sans personne à charge)",
+  description = "Minima sociaux ; Revenu de solidarité active ; Majoration du RSA socle pour parent isolé ; Taux de la majoration du RSA socle pour une femme enceinte sans enfant (en pourcentage du rsa de base pour un célibataire sans personne à charge)",
 )
 
 minim_rmi_majo_rsa_pac_enf_sup = Parameter{Float32}(
@@ -10528,7 +10563,7 @@ minim_rmi_majo_rsa_pac_enf_sup = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Majoration du RSA socle par enfant supplémentaire (en pourcentage du rsa de base)",
+  description = "Minima sociaux ; Revenu de solidarité active ; Majoration du RSA socle pour parent isolé ; Majoration du RSA socle par enfant supplémentaire (en pourcentage du rsa de base)",
 )
 
 minim_rmi_patrimoine_abattement_valeur_locative_immo_non_loue = Parameter{Float32}(
@@ -10537,7 +10572,7 @@ minim_rmi_patrimoine_abattement_valeur_locative_immo_non_loue = Parameter{Float3
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Abattement appliqué sur la valeur locative des biens immobiliers non loués",
+  description = "Minima sociaux ; Revenu de solidarité active ; Revenus liés au patrimoine ; Abattement appliqué sur la valeur locative des biens immobiliers non loués",
 )
 
 minim_rmi_patrimoine_abattement_valeur_locative_terrains_non_loue = Parameter{Float32}(
@@ -10546,7 +10581,7 @@ minim_rmi_patrimoine_abattement_valeur_locative_terrains_non_loue = Parameter{Fl
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Abattement appliqué sur la valeur locative des terrains non loués",
+  description = "Minima sociaux ; Revenu de solidarité active ; Revenus liés au patrimoine ; Abattement appliqué sur la valeur locative des terrains non loués",
 )
 
 minim_rmi_patrimoine_taux_interet_forfaitaire_epargne_non_remunere = Parameter{Float32}(
@@ -10555,7 +10590,7 @@ minim_rmi_patrimoine_taux_interet_forfaitaire_epargne_non_remunere = Parameter{F
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Taux d'intérêt forfaitaire appliqué à l'épargne non rémunérée",
+  description = "Minima sociaux ; Revenu de solidarité active ; Revenus liés au patrimoine ; Taux d'intérêt forfaitaire appliqué à l'épargne non rémunérée",
 )
 
 minim_rmi_pente = Parameter{Float32}(
@@ -10565,7 +10600,7 @@ minim_rmi_pente = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Pente du RSA",
+  description = "Minima sociaux ; Revenu de solidarité active ; Pente du RSA",
 )
 
 minim_rmi_pfInBRrmi = Parameter{Bool}(
@@ -10574,7 +10609,7 @@ minim_rmi_pfInBRrmi = Parameter{Bool}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Prise en compte des PF dans la BR du RMI",
+  description = "Minima sociaux ; Revenu de solidarité active ; Prise en compte des PF dans la BR du RMI",
 )
 
 minim_rmi_psa = Parameter{Int32}(
@@ -10584,7 +10619,7 @@ minim_rmi_psa = Parameter{Int32}(
   unit = "currency",
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Prime de solidarité active",
+  description = "Minima sociaux ; Revenu de solidarité active ; Prime de solidarité active",
 )
 
 minim_rmi_rmi = Parameter{Float32}(
@@ -10609,7 +10644,7 @@ minim_rmi_rmi = Parameter{Float32}(
   unit = "currency",
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Rsa socle",
+  description = "Minima sociaux ; Revenu de solidarité active ; Rsa socle",
 )
 
 minim_rmi_rsa_nv = Parameter{Int32}(
@@ -10619,7 +10654,7 @@ minim_rmi_rsa_nv = Parameter{Int32}(
   unit = "currency",
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Seuil de non versement",
+  description = "Minima sociaux ; Revenu de solidarité active ; Seuil de non versement",
 )
 
 minim_rmi_txp2 = Parameter{Float32}(
@@ -10628,7 +10663,7 @@ minim_rmi_txp2 = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Taux pour une 2nde personne",
+  description = "Minima sociaux ; Revenu de solidarité active ; Taux pour une 2nde personne",
 )
 
 minim_rmi_txp3 = Parameter{Float32}(
@@ -10637,7 +10672,7 @@ minim_rmi_txp3 = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Taux pour une 3e personne",
+  description = "Minima sociaux ; Revenu de solidarité active ; Taux pour une 3e personne",
 )
 
 minim_rmi_txps = Parameter{Float32}(
@@ -10646,7 +10681,7 @@ minim_rmi_txps = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Taux par personne supplémentaire",
+  description = "Minima sociaux ; Revenu de solidarité active ; Taux par personne supplémentaire",
 )
 
 prelsoc_add_pat = Parameter{Float32}(
@@ -10655,7 +10690,7 @@ prelsoc_add_pat = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Contribution additionnelle solidarité autonomie (revenus du patrimoine)",
+  description = "Prélèvement social et contributions additionnelles ; Contribution additionnelle solidarité autonomie (revenus du patrimoine)",
 )
 
 prelsoc_add_ret = Parameter{Float32}(
@@ -10664,7 +10699,7 @@ prelsoc_add_ret = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Contribution additionnelle solidarité autonomie (pensions de retraites, pré-retraites et invalidité)",
+  description = "Prélèvement social et contributions additionnelles ; Contribution additionnelle solidarité autonomie (pensions de retraites, pré-retraites et invalidité)",
 )
 
 prelsoc_base_pat = Parameter{Float32}(
@@ -10676,7 +10711,7 @@ prelsoc_base_pat = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Prélèvement social (revenus du patrimoine)",
+  description = "Prélèvement social et contributions additionnelles ; Prélèvement social (revenus du patrimoine)",
 )
 
 prelsoc_base_plac = Parameter{Float32}(
@@ -10689,7 +10724,7 @@ prelsoc_base_plac = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Prélèvement social (revenus des produits de placement)",
+  description = "Prélèvement social et contributions additionnelles ; Prélèvement social (revenus des produits de placement)",
 )
 
 prelsoc_rsa = Parameter{Float32}(
@@ -10699,7 +10734,7 @@ prelsoc_rsa = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Contribution au financement du revenu de solidarité active",
+  description = "Prélèvement social et contributions additionnelles ; Contribution au financement du revenu de solidarité active",
 )
 
 tns_auto_entrepreneur_achat_revente = Parameter{Float32}(
@@ -10708,7 +10743,7 @@ tns_auto_entrepreneur_achat_revente = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Activité de type Achat-Revente",
+  description = "Travailleurs non-salariés ; Taux global de cotisations sociales et formation à appliquer au CA de l'auto-entrepreneur ; Activité de type Achat-Revente",
 )
 
 tns_auto_entrepreneur_bic = Parameter{Float32}(
@@ -10717,7 +10752,7 @@ tns_auto_entrepreneur_bic = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Activité de type BIC",
+  description = "Travailleurs non-salariés ; Taux global de cotisations sociales et formation à appliquer au CA de l'auto-entrepreneur ; Activité de type BIC",
 )
 
 tns_auto_entrepreneur_bnc = Parameter{Float32}(
@@ -10726,7 +10761,7 @@ tns_auto_entrepreneur_bnc = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Activité de type BNC",
+  description = "Travailleurs non-salariés ; Taux global de cotisations sociales et formation à appliquer au CA de l'auto-entrepreneur ; Activité de type BNC",
 )
 
 tns_micro_entreprise_abattement_forfaitaire_fp_achat_revente = Parameter{Float32}(
@@ -10735,7 +10770,7 @@ tns_micro_entreprise_abattement_forfaitaire_fp_achat_revente = Parameter{Float32
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Activité de type Achat-Revente",
+  description = "Travailleurs non-salariés ; Micro-entreprise ; Abattement forfaitaire pour frais professionnels du régime de la micro-entreprise ; Activité de type Achat-Revente",
 )
 
 tns_micro_entreprise_abattement_forfaitaire_fp_bic = Parameter{Float32}(
@@ -10744,7 +10779,7 @@ tns_micro_entreprise_abattement_forfaitaire_fp_bic = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Activité de type BIC",
+  description = "Travailleurs non-salariés ; Micro-entreprise ; Abattement forfaitaire pour frais professionnels du régime de la micro-entreprise ; Activité de type BIC",
 )
 
 tns_micro_entreprise_abattement_forfaitaire_fp_bnc = Parameter{Float32}(
@@ -10753,7 +10788,7 @@ tns_micro_entreprise_abattement_forfaitaire_fp_bnc = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Activité de type BNC",
+  description = "Travailleurs non-salariés ; Micro-entreprise ; Abattement forfaitaire pour frais professionnels du régime de la micro-entreprise ; Activité de type BNC",
 )
 
 tns_micro_entreprise_cotisations_sociales = Parameter{Float32}(
@@ -10762,5 +10797,5 @@ tns_micro_entreprise_cotisations_sociales = Parameter{Float32}(
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Taux moyen des cotisations sociales sur les revenus de la micro-entreprise",
+  description = "Travailleurs non-salariés ; Micro-entreprise ; Taux moyen des cotisations sociales sur les revenus de la micro-entreprise",
 )
