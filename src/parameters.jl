@@ -790,7 +790,7 @@ al_rmi = Parameter{Float32}(
 bouclier_fiscal_taux = Parameter{Float32}(
   [
     DateRangeValue(Date(2006, 01, 01), Date(2006, 12, 31), 0.6),
-    DateRangeValue(Date(2007, 01, 01), Date(2010, 12, 31), 0.5),
+    DateRangeValue(Date(2007, 01, 01), Date(2010, 12, 31), 0.5, comment = "Suppression du bouclier fiscal à compter des revenus réalisés en 2011."),
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
@@ -1052,7 +1052,7 @@ cmu_plafond_base = Parameter{Float32}(
 
 cotsoc_accident_eleve = Parameter{Float32}(
   [
-    DateRangeValue(Date(2012, 01, 01), Date(2014, 12, 31), 0.05),
+    DateRangeValue(Date(2012, 01, 01), Date(2014, 12, 31), 0.05, comment = "TODO: update, get more info..."),
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
@@ -1071,7 +1071,7 @@ cotsoc_accident_faible = Parameter{Float32}(
 
 cotsoc_accident_moyen = Parameter{Float32}(
   [
-    DateRangeValue(Date(2012, 01, 01), Date(2014, 12, 31), 0.03),
+    DateRangeValue(Date(2012, 01, 01), Date(2014, 12, 31), 0.03, comment = "TODO: update, get more info..."),
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
@@ -1080,7 +1080,7 @@ cotsoc_accident_moyen = Parameter{Float32}(
 
 cotsoc_accident_treseleve = Parameter{Float32}(
   [
-    DateRangeValue(Date(2012, 01, 01), Date(2014, 12, 31), 0.1),
+    DateRangeValue(Date(2012, 01, 01), Date(2014, 12, 31), 0.1, comment = "TODO: update, get more info.."),
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
@@ -1117,7 +1117,7 @@ cotsoc_assiette_cantines_titres_restaurants_taux_minimum_exoneration = Parameter
 
 cotsoc_conge_individuel_formation_cdd = Parameter{Float32}(
   [
-    DateRangeValue(Date(2010, 01, 01), Date(2015, 12, 31), 0.01),
+    DateRangeValue(Date(2010, 01, 01), Date(2015, 12, 31), 0.01, comment = "TODO: dates inconnues"),
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
@@ -1184,8 +1184,8 @@ cotsoc_contribution_supplementaire_apprentissage_plus_2000_moins_1pc_alternants 
 
 cotsoc_contribution_supplementaire_apprentissage_plus_de_250 = Parameter{Float32}(
   [
-    DateRangeValue(Date(2010, 01, 01), Date(2012, 12, 31), 0.001),
-    DateRangeValue(Date(2013, 01, 01), Date(2015, 12, 31), 0.001),
+    DateRangeValue(Date(2010, 01, 01), Date(2012, 12, 31), 0.001, comment = "TODO check and check for coherence with previous taux"),
+    DateRangeValue(Date(2013, 01, 01), Date(2015, 12, 31), 0.001, comment = "TODO check and check for coherence with previous taux"),
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
@@ -1444,6 +1444,1730 @@ cotsoc_microsocial_vente = Parameter{Float32}(
   description = "Taux pour les activités de ventes",
 )
 
+cotsoc_pat_cadre_agffc = RateTaxScale(
+  [
+    RateBracket(
+      threshold = [
+        DateRangeValue(Date(2001, 04, 01), Date(2014, 12, 31), 0.0),
+      ],
+      rate = [
+        DateRangeValue(Date(2001, 04, 01), Date(2014, 12, 31), 0.012),
+      ],
+    ),
+    RateBracket(
+      threshold = [
+        DateRangeValue(Date(2001, 04, 01), Date(2014, 12, 31), 1.0),
+      ],
+      rate = [
+        DateRangeValue(Date(2001, 04, 01), Date(2014, 12, 31), 0.013),
+      ],
+    ),
+    RateBracket(
+      threshold = [
+        DateRangeValue(Date(2001, 04, 01), Date(2014, 12, 31), 4.0),
+      ],
+      rate = [
+        DateRangeValue(Date(2001, 04, 01), Date(2014, 12, 31), 0.0),
+      ],
+    ),
+  ],
+  check_start_date = Date(2006, 01, 01),
+  check_stop_date = Date(2013, 12, 31),
+  description = "AGFF",
+)
+
+cotsoc_pat_cadre_apec = RateTaxScale(
+  [
+    RateBracket(
+      threshold = [
+        DateRangeValue(Date(1993, 07, 01), Date(2014, 12, 31), 0.0),
+      ],
+      rate = [
+        DateRangeValue(Date(2011, 01, 01), Date(2014, 12, 31), 0.00036),
+
+        DateRangeValue(Date(1993, 07, 01), Date(2010, 12, 31), 0.0),
+      ],
+    ),
+    RateBracket(
+      threshold = [
+        DateRangeValue(Date(1993, 07, 01), Date(2014, 12, 31), 1.0),
+      ],
+      rate = [
+        DateRangeValue(Date(1993, 07, 01), Date(2014, 12, 31), 0.00036),
+      ],
+    ),
+    RateBracket(
+      threshold = [
+        DateRangeValue(Date(1993, 07, 01), Date(2014, 12, 31), 4.0),
+      ],
+      rate = [
+        DateRangeValue(Date(1993, 07, 01), Date(2014, 12, 31), 0.0),
+      ],
+    ),
+  ],
+  check_start_date = Date(2006, 01, 01),
+  check_stop_date = Date(2013, 12, 31),
+  description = "Chômage: APEC",
+)
+
+cotsoc_pat_cadre_arrco = RateTaxScale(
+  [
+    RateBracket(
+      threshold = [
+        DateRangeValue(Date(1993, 01, 01), Date(2015, 12, 31), 0.0),
+      ],
+      rate = [
+        DateRangeValue(Date(2015, 01, 01), Date(2015, 12, 31), 0.0465),
+
+        DateRangeValue(Date(2014, 01, 01), Date(2014, 12, 31), 0.0458),
+
+        DateRangeValue(Date(1999, 01, 01), Date(2013, 12, 31), 0.045),
+
+        DateRangeValue(Date(1998, 01, 01), Date(1998, 12, 31), 0.04125),
+
+        DateRangeValue(Date(1997, 01, 01), Date(1997, 12, 31), 0.0375),
+
+        DateRangeValue(Date(1996, 01, 01), Date(1996, 12, 31), 0.03375),
+
+        DateRangeValue(Date(1993, 01, 01), Date(1995, 12, 31), 0.02952),
+      ],
+    ),
+    RateBracket(
+      threshold = [
+        DateRangeValue(Date(1993, 01, 01), Date(2015, 12, 31), 1.0),
+      ],
+      rate = [
+        DateRangeValue(Date(2015, 01, 01), Date(2015, 12, 31), 0.1275),
+
+        DateRangeValue(Date(2014, 01, 01), Date(2014, 12, 31), 0.1268),
+
+        DateRangeValue(Date(2006, 01, 01), Date(2013, 12, 31), 0.126),
+
+        DateRangeValue(Date(1999, 01, 01), Date(2005, 12, 31), 0.125),
+
+        DateRangeValue(Date(1998, 01, 01), Date(1998, 12, 31), 0.11875),
+
+        DateRangeValue(Date(1997, 01, 01), Date(1997, 12, 31), 0.1125),
+
+        DateRangeValue(Date(1996, 01, 01), Date(1996, 12, 31), 0.10625),
+
+        DateRangeValue(Date(1995, 01, 01), Date(1995, 12, 31), 0.1),
+
+        DateRangeValue(Date(1994, 01, 01), Date(1994, 12, 31), 0.0847),
+
+        DateRangeValue(Date(1993, 01, 01), Date(1993, 12, 31), 0.0702),
+      ],
+    ),
+    RateBracket(
+      threshold = [
+        DateRangeValue(Date(1993, 01, 01), Date(2015, 12, 31), 4.0),
+      ],
+      rate = [
+        DateRangeValue(Date(2015, 01, 01), Date(2015, 12, 31), 0.1275),
+
+        DateRangeValue(Date(2014, 01, 01), Date(2014, 12, 31), 0.1268),
+
+        DateRangeValue(Date(2006, 01, 01), Date(2013, 12, 31), 0.126),
+
+        DateRangeValue(Date(1999, 01, 01), Date(2005, 12, 31), 0.125),
+
+        DateRangeValue(Date(1998, 01, 01), Date(1998, 12, 31), 0.11875),
+
+        DateRangeValue(Date(1997, 01, 01), Date(1997, 12, 31), 0.1125),
+
+        DateRangeValue(Date(1996, 01, 01), Date(1996, 12, 31), 0.10625),
+
+        DateRangeValue(Date(1995, 01, 01), Date(1995, 12, 31), 0.1),
+
+        DateRangeValue(Date(1994, 01, 01), Date(1994, 12, 31), 0.0847),
+
+        DateRangeValue(Date(1993, 01, 01), Date(1993, 12, 31), 0.0702),
+      ],
+    ),
+    RateBracket(
+      threshold = [
+        DateRangeValue(Date(1993, 01, 01), Date(2014, 12, 31), 8.0),
+      ],
+      rate = [
+        DateRangeValue(Date(1993, 01, 01), Date(2014, 12, 31), 0.0),
+      ],
+    ),
+  ],
+  check_start_date = Date(2006, 01, 01),
+  check_stop_date = Date(2013, 12, 31),
+  description = "Retraite complémentaire",
+)
+
+cotsoc_pat_cadre_cet = RateTaxScale(
+  [
+    RateBracket(
+      threshold = [
+        DateRangeValue(Date(1997, 01, 01), Date(2014, 12, 31), 0.0),
+      ],
+      rate = [
+        DateRangeValue(Date(2001, 01, 01), Date(2014, 12, 31), 0.0022),
+
+        DateRangeValue(Date(2000, 01, 01), Date(2000, 12, 31), 0.0017),
+
+        DateRangeValue(Date(1999, 01, 01), Date(1999, 12, 31), 0.0013),
+
+        DateRangeValue(Date(1998, 01, 01), Date(1998, 12, 31), 0.0009),
+
+        DateRangeValue(Date(1997, 01, 01), Date(1997, 12, 31), 0.00044),
+      ],
+    ),
+    RateBracket(
+      threshold = [
+        DateRangeValue(Date(1997, 01, 01), Date(2014, 12, 31), 8.0),
+      ],
+      rate = [
+        DateRangeValue(Date(1997, 01, 01), Date(2014, 12, 31), 0.0),
+      ],
+    ),
+  ],
+  check_start_date = Date(2006, 01, 01),
+  check_stop_date = Date(2013, 12, 31),
+  description = "Cotisation exceptionnelle temporaire",
+)
+
+cotsoc_pat_commun_apprentissage_node_apprentissage = RateTaxScale(
+  [
+    RateBracket(
+      threshold = [
+        DateRangeValue(Date(1993, 07, 01), Date(2014, 12, 31), 0.0),
+      ],
+      rate = [
+        DateRangeValue(Date(1993, 07, 01), Date(2014, 12, 31), 0.005),
+      ],
+    ),
+  ],
+  check_start_date = Date(2006, 01, 01),
+  check_stop_date = Date(2013, 12, 31),
+  description = "Taxe d'apprentissage (toutes entreprises)",
+)
+
+cotsoc_pat_commun_apprentissage_node_apprentissage_250 = RateTaxScale(
+  [
+    RateBracket(
+      threshold = [
+        DateRangeValue(Date(1993, 07, 01), Date(2014, 12, 31), 0.0),
+      ],
+      rate = [
+        DateRangeValue(Date(1993, 07, 01), Date(2014, 12, 31), 0.005),
+      ],
+    ),
+  ],
+  check_start_date = Date(2006, 01, 01),
+  check_stop_date = Date(2013, 12, 31),
+  description = "Taxe d'apprentissage (plus de 250 salariés)",
+)
+
+cotsoc_pat_commun_apprentissage_node_apprentissage_add = RateTaxScale(
+  [
+    RateBracket(
+      threshold = [
+        DateRangeValue(Date(2004, 01, 01), Date(2014, 12, 31), 0.0),
+      ],
+      rate = [
+        DateRangeValue(Date(2006, 01, 01), Date(2014, 12, 31), 0.0018),
+
+        DateRangeValue(Date(2005, 01, 01), Date(2005, 12, 31), 0.0012),
+
+        DateRangeValue(Date(2004, 01, 01), Date(2004, 12, 31), 0.0006),
+      ],
+    ),
+  ],
+  check_start_date = Date(2006, 01, 01),
+  check_stop_date = Date(2013, 12, 31),
+  description = "Contribution additionnelle au développement de l'apprentissage (toutes entreprises)",
+)
+
+cotsoc_pat_commun_assedic = RateTaxScale(
+  [
+    RateBracket(
+      threshold = [
+        DateRangeValue(Date(1993, 07, 01), Date(2014, 12, 31), 0.0),
+      ],
+      rate = [
+        DateRangeValue(Date(2007, 01, 01), Date(2014, 12, 31), 0.04),
+
+        DateRangeValue(Date(2006, 01, 01), Date(2006, 12, 31), 0.0404),
+
+        DateRangeValue(Date(2003, 01, 01), Date(2005, 12, 31), 0.04),
+
+        DateRangeValue(Date(2002, 07, 01), Date(2002, 12, 31), 0.037),
+
+        DateRangeValue(Date(2002, 01, 01), Date(2002, 06, 30), 0.036),
+
+        DateRangeValue(Date(2001, 04, 01), Date(2001, 12, 31), 0.037),
+
+        DateRangeValue(Date(2001, 01, 01), Date(2001, 03, 31), 0.0499),
+
+        DateRangeValue(Date(1997, 01, 01), Date(2000, 12, 31), 0.0526),
+
+        DateRangeValue(Date(1994, 01, 01), Date(1996, 12, 31), 0.0547),
+
+        DateRangeValue(Date(1993, 08, 01), Date(1993, 12, 31), 0.0538),
+
+        DateRangeValue(Date(1993, 07, 01), Date(1993, 07, 31), 0.0483),
+      ],
+    ),
+    RateBracket(
+      threshold = [
+        DateRangeValue(Date(1993, 07, 01), Date(2014, 12, 31), 4.0),
+      ],
+      rate = [
+        DateRangeValue(Date(1993, 07, 01), Date(2014, 12, 31), 0.0),
+      ],
+    ),
+  ],
+  check_start_date = Date(2006, 01, 01),
+  check_stop_date = Date(2013, 12, 31),
+  description = "Chômage ASSEDIC (non cadres et cadres)",
+)
+
+cotsoc_pat_commun_chomfg = RateTaxScale(
+  [
+    RateBracket(
+      threshold = [
+        DateRangeValue(Date(1993, 07, 01), Date(2014, 03, 31), 0.0),
+      ],
+      rate = [
+        DateRangeValue(Date(2011, 04, 01), Date(2014, 03, 31), 0.003),
+
+        DateRangeValue(Date(2009, 11, 01), Date(2011, 03, 31), 0.004),
+
+        DateRangeValue(Date(2009, 08, 01), Date(2009, 10, 31), 0.003),
+
+        DateRangeValue(Date(2006, 07, 01), Date(2009, 07, 31), 0.0015),
+
+        DateRangeValue(Date(2006, 01, 01), Date(2006, 06, 30), 0.0025),
+
+        DateRangeValue(Date(2005, 04, 01), Date(2005, 12, 31), 0.0035),
+
+        DateRangeValue(Date(2003, 09, 01), Date(2005, 03, 31), 0.0045),
+
+        DateRangeValue(Date(2003, 01, 01), Date(2003, 08, 31), 0.0035),
+
+        DateRangeValue(Date(2002, 07, 01), Date(2002, 12, 31), 0.003),
+
+        DateRangeValue(Date(2002, 01, 01), Date(2002, 06, 30), 0.002),
+
+        DateRangeValue(Date(2001, 01, 01), Date(2001, 12, 31), 0.001),
+
+        DateRangeValue(Date(2000, 07, 01), Date(2000, 12, 31), 0.0015),
+
+        DateRangeValue(Date(1999, 07, 01), Date(2000, 06, 30), 0.002),
+
+        DateRangeValue(Date(1995, 07, 01), Date(1999, 06, 30), 0.0025),
+
+        DateRangeValue(Date(1993, 07, 01), Date(1995, 06, 30), 0.0035),
+      ],
+    ),
+    RateBracket(
+      threshold = [
+        DateRangeValue(Date(1993, 07, 01), Date(2014, 03, 31), 4.0),
+      ],
+      rate = [
+        DateRangeValue(Date(1993, 07, 01), Date(2014, 03, 31), 0.0),
+      ],
+    ),
+  ],
+  check_start_date = Date(2006, 01, 01),
+  check_stop_date = Date(2013, 12, 31),
+  description = "Chômage: fond national de garantie des salaires (FNGS)",
+)
+
+cotsoc_pat_commun_construction_node_construction_20 = RateTaxScale(
+  [
+    RateBracket(
+      threshold = [
+        DateRangeValue(Date(1992, 01, 01), Date(2014, 12, 31), 0.0),
+      ],
+      rate = [
+        DateRangeValue(Date(1992, 01, 01), Date(2014, 12, 31), 0.0045),
+      ],
+    ),
+  ],
+  check_start_date = Date(2006, 01, 01),
+  check_stop_date = Date(2013, 12, 31),
+  description = "Effort à la construction (plus de 20 salariés)",
+)
+
+cotsoc_pat_commun_csa = RateTaxScale(
+  [
+    RateBracket(
+      threshold = [
+        DateRangeValue(Date(2004, 07, 01), Date(2014, 12, 31), 0.0),
+      ],
+      rate = [
+        DateRangeValue(Date(2004, 07, 01), Date(2014, 12, 31), 0.003),
+      ],
+    ),
+  ],
+  check_start_date = Date(2006, 01, 01),
+  check_stop_date = Date(2013, 12, 31),
+  description = "Contribution solidarité autonomie (dépendance)",
+)
+
+cotsoc_pat_commun_famille = RateTaxScale(
+  [
+    RateBracket(
+      threshold = [
+        DateRangeValue(Date(1993, 07, 01), Date(2014, 12, 31), 0.0),
+      ],
+      rate = [
+        DateRangeValue(Date(2014, 01, 01), Date(2014, 12, 31), 0.0525),
+
+        DateRangeValue(Date(1993, 07, 01), Date(2013, 12, 31), 0.054),
+      ],
+    ),
+  ],
+  check_start_date = Date(2006, 01, 01),
+  check_stop_date = Date(2013, 12, 31),
+  description = "Allocation familiales",
+)
+
+cotsoc_pat_commun_fnal1 = RateTaxScale(
+  [
+    RateBracket(
+      threshold = [
+        DateRangeValue(Date(1993, 07, 01), Date(2014, 12, 31), 0.0),
+      ],
+      rate = [
+        DateRangeValue(Date(1993, 07, 01), Date(2014, 12, 31), 0.001),
+      ],
+    ),
+    RateBracket(
+      threshold = [
+        DateRangeValue(Date(1993, 07, 01), Date(2014, 12, 31), 1.0),
+      ],
+      rate = [
+        DateRangeValue(Date(1993, 07, 01), Date(2014, 12, 31), 0.0),
+      ],
+    ),
+  ],
+  check_start_date = Date(2006, 01, 01),
+  check_stop_date = Date(2013, 12, 31),
+  description = "Fonds national action logement (FNAL, tout employeur)",
+)
+
+cotsoc_pat_commun_fnal2 = RateTaxScale(
+  [
+    RateBracket(
+      threshold = [
+        DateRangeValue(Date(1991, 07, 01), Date(2014, 12, 31), 0.0),
+      ],
+      rate = [
+        DateRangeValue(Date(1991, 07, 01), Date(2014, 12, 31), 0.004),
+      ],
+    ),
+    RateBracket(
+      threshold = [
+        DateRangeValue(Date(1991, 07, 01), Date(2014, 12, 31), 1.0),
+      ],
+      rate = [
+        DateRangeValue(Date(2011, 01, 01), Date(2014, 12, 31), 0.005),
+
+        DateRangeValue(Date(1991, 07, 01), Date(2010, 12, 31), 0.004),
+      ],
+    ),
+  ],
+  check_start_date = Date(2006, 01, 01),
+  check_stop_date = Date(2013, 12, 31),
+  description = "Fonds national action logement (FNAL, plus de 20 salariés)",
+)
+
+cotsoc_pat_commun_formprof_node_formprof_09 = RateTaxScale(
+  [
+    RateBracket(
+      threshold = [
+        DateRangeValue(Date(1992, 01, 01), Date(2013, 12, 31), 0.0),
+      ],
+      rate = [
+        DateRangeValue(Date(2005, 01, 01), Date(2013, 12, 31), 0.0055),
+
+        DateRangeValue(Date(2004, 01, 01), Date(2004, 12, 31), 0.004),
+
+        DateRangeValue(Date(1993, 07, 01), Date(2003, 12, 31), 0.0015),
+      ],
+    ),
+  ],
+  check_start_date = Date(2006, 01, 01),
+  check_stop_date = Date(2013, 12, 31),
+  description = "Formation professionnelle (0-9 salaries)",
+)
+
+cotsoc_pat_commun_formprof_node_formprof_1019 = RateTaxScale(
+  [
+    RateBracket(
+      threshold = [
+        DateRangeValue(Date(1992, 07, 01), Date(2013, 12, 31), 0.0),
+      ],
+      rate = [
+        DateRangeValue(Date(2005, 08, 04), Date(2013, 12, 01), 0.0105),
+
+        DateRangeValue(Date(2004, 01, 01), Date(2005, 08, 03), 0.016),
+
+        DateRangeValue(Date(1993, 01, 01), Date(2003, 12, 31), 0.015),
+
+        DateRangeValue(Date(1992, 01, 01), Date(1992, 12, 31), 0.014),
+      ],
+    ),
+  ],
+  check_start_date = Date(2006, 01, 01),
+  check_stop_date = Date(2013, 12, 31),
+  description = "Formation professionnelle (10-19 salaries)",
+)
+
+cotsoc_pat_commun_formprof_node_formprof_20 = RateTaxScale(
+  [
+    RateBracket(
+      threshold = [
+        DateRangeValue(Date(1993, 07, 01), Date(2014, 12, 31), 0.0),
+      ],
+      rate = [
+        DateRangeValue(Date(2004, 01, 01), Date(2013, 12, 31), 0.016),
+
+        DateRangeValue(Date(1993, 01, 01), Date(2003, 12, 31), 0.015),
+
+        DateRangeValue(Date(1992, 01, 01), Date(1992, 12, 31), 0.014),
+      ],
+    ),
+  ],
+  check_start_date = Date(2006, 01, 01),
+  check_stop_date = Date(2013, 12, 31),
+  description = "Formation professionnelle (plus de 20 salariés)",
+)
+
+cotsoc_pat_commun_maladie = RateTaxScale(
+  [
+    RateBracket(
+      threshold = [
+        DateRangeValue(Date(1992, 07, 01), Date(2014, 12, 31), 0.0),
+      ],
+      rate = [
+        DateRangeValue(Date(1992, 07, 01), Date(2014, 12, 31), 0.128),
+      ],
+    ),
+  ],
+  check_start_date = Date(2006, 01, 01),
+  check_stop_date = Date(2013, 12, 31),
+  description = "Maladie, maternité, invalidité, décès",
+)
+
+cotsoc_pat_commun_transport = RateTaxScale(
+  [
+    RateBracket(
+      threshold = [
+        DateRangeValue(Date(2003, 01, 01), Date(2014, 12, 31), 0.0),
+      ],
+      rate = [
+        DateRangeValue(Date(2003, 01, 01), Date(2014, 12, 31), 0.0175),
+      ],
+    ),
+  ],
+  check_start_date = Date(2006, 01, 01),
+  check_stop_date = Date(2013, 12, 31),
+  description = "Transport (valeur non différenciée selon la localité, Lyon reférence)",
+)
+
+cotsoc_pat_commun_vieillessedeplaf = RateTaxScale(
+  [
+    RateBracket(
+      threshold = [
+        DateRangeValue(Date(1993, 07, 01), Date(2016, 12, 31), 0.0),
+      ],
+      rate = [
+        DateRangeValue(Date(2014, 01, 01), Date(2016, 12, 31), 0.0175),
+
+        DateRangeValue(Date(1993, 07, 01), Date(2013, 12, 31), 0.016),
+      ],
+    ),
+  ],
+  check_start_date = Date(2006, 01, 01),
+  check_stop_date = Date(2013, 12, 31),
+  description = "Vieillesse déplafonnée",
+)
+
+cotsoc_pat_commun_vieillesseplaf = RateTaxScale(
+  [
+    RateBracket(
+      threshold = [
+        DateRangeValue(Date(1979, 01, 01), Date(2016, 12, 31), 0.0),
+      ],
+      rate = [
+        DateRangeValue(Date(2016, 01, 01), Date(2016, 12, 31), 0.0855),
+
+        DateRangeValue(Date(2015, 01, 01), Date(2015, 12, 31), 0.085),
+
+        DateRangeValue(Date(2014, 01, 01), Date(2014, 12, 31), 0.0845),
+
+        DateRangeValue(Date(2012, 11, 01), Date(2013, 12, 31), 0.084),
+
+        DateRangeValue(Date(2006, 01, 01), Date(2012, 10, 31), 0.083),
+
+        DateRangeValue(Date(1979, 01, 01), Date(2005, 12, 31), 0.082),
+      ],
+    ),
+    RateBracket(
+      threshold = [
+        DateRangeValue(Date(1979, 01, 01), Date(2016, 12, 31), 1.0),
+      ],
+      rate = [
+        DateRangeValue(Date(1979, 01, 01), Date(2016, 12, 31), 0.0),
+      ],
+    ),
+  ],
+  check_start_date = Date(2006, 01, 01),
+  check_stop_date = Date(2013, 12, 31),
+  description = "Vieillesse plafonnée (régime de base)",
+)
+
+cotsoc_pat_fonc_colloc_atiacl = RateTaxScale(
+  [
+    RateBracket(
+      threshold = [
+        DateRangeValue(Date(2003, 01, 01), Date(2020, 12, 31), 0.0),
+      ],
+      rate = [
+        DateRangeValue(Date(2013, 01, 01), Date(2013, 12, 31), 0.004),
+
+        DateRangeValue(Date(1982, 01, 01), Date(2012, 12, 31), 0.005),
+      ],
+    ),
+  ],
+  check_start_date = Date(2006, 01, 01),
+  check_stop_date = Date(2013, 12, 31),
+  description = "Allocations temporaires d'invalidité (hors NBI)",
+)
+
+cotsoc_pat_fonc_colloc_cnracl = RateTaxScale(
+  [
+    RateBracket(
+      threshold = [
+        DateRangeValue(Date(1984, 01, 01), Date(2012, 12, 31), 0.0),
+      ],
+      rate = [
+        DateRangeValue(Date(2016, 01, 01), Date(2020, 12, 31), 0.3035),
+
+        DateRangeValue(Date(2015, 01, 01), Date(2015, 12, 31), 0.303),
+
+        DateRangeValue(Date(2014, 01, 01), Date(2014, 12, 31), 0.3025),
+
+        DateRangeValue(Date(2013, 01, 01), Date(2013, 12, 31), 0.2885),
+
+        DateRangeValue(Date(2012, 11, 01), Date(2012, 12, 31), 0.274),
+
+        DateRangeValue(Date(2005, 01, 01), Date(2012, 10, 31), 0.273),
+
+        DateRangeValue(Date(2004, 01, 01), Date(2004, 12, 31), 0.269),
+
+        DateRangeValue(Date(2003, 01, 01), Date(2003, 12, 31), 0.265),
+
+        DateRangeValue(Date(2001, 01, 01), Date(2002, 12, 31), 0.261),
+
+        DateRangeValue(Date(2000, 01, 01), Date(2000, 12, 31), 0.256),
+
+        DateRangeValue(Date(1995, 01, 01), Date(1999, 12, 31), 0.251),
+      ],
+    ),
+  ],
+  check_start_date = Date(2006, 01, 01),
+  check_stop_date = Date(2013, 12, 31),
+  description = "Retraites des agents des collectivités locales",
+)
+
+cotsoc_pat_fonc_colloc_hospitaliere_feh = RateTaxScale(
+  [
+    RateBracket(
+      threshold = [
+        DateRangeValue(Date(1995, 01, 01), Date(2014, 12, 31), 0.0),
+      ],
+      rate = [
+        DateRangeValue(Date(2002, 01, 01), Date(2020, 12, 31), 0.01),
+
+        DateRangeValue(Date(2000, 01, 01), Date(2001, 12, 31), 0.008),
+
+        DateRangeValue(Date(1999, 01, 01), Date(1999, 12, 31), 0.0067),
+
+        DateRangeValue(Date(1995, 01, 01), Date(1998, 12, 31), 0.0045),
+      ],
+    ),
+  ],
+  check_start_date = Date(2006, 01, 01),
+  check_stop_date = Date(2013, 12, 31),
+  description = "Fonds pour l'emploi hospitalier",
+)
+
+cotsoc_pat_fonc_colloc_maladie = RateTaxScale(
+  [
+    RateBracket(
+      threshold = [
+        DateRangeValue(Date(1984, 01, 01), Date(2014, 12, 31), 0.0),
+      ],
+      rate = [
+        DateRangeValue(Date(1984, 01, 01), Date(2014, 12, 31), 0.115),
+      ],
+    ),
+  ],
+  check_start_date = Date(2006, 01, 01),
+  check_stop_date = Date(2013, 12, 31),
+  description = "Maladie",
+)
+
+cotsoc_pat_fonc_colloc_rafp = RateTaxScale(
+  [
+    RateBracket(
+      threshold = [
+        DateRangeValue(Date(1993, 01, 01), Date(2020, 12, 31), 0.0),
+      ],
+      rate = [
+        DateRangeValue(Date(2005, 01, 01), Date(2020, 12, 31), 0.05),
+      ],
+    ),
+  ],
+  check_start_date = Date(2006, 01, 01),
+  check_stop_date = Date(2013, 12, 31),
+  description = "Régime additionnel de retraite (RAFP, totalité sauf TI et NBI, min 20% TI )",
+)
+
+cotsoc_pat_fonc_colloc_territoriale_fcppa = RateTaxScale(
+  [
+    RateBracket(
+      threshold = [
+        DateRangeValue(Date(1984, 01, 01), Date(2010, 12, 31), 0.0),
+      ],
+      rate = [
+        DateRangeValue(Date(2002, 01, 01), Date(2010, 12, 31), 0.005),
+
+        DateRangeValue(Date(1984, 01, 01), Date(2001, 12, 31), 0.002),
+      ],
+    ),
+  ],
+  check_start_date = Date(2006, 01, 01),
+  check_stop_date = Date(2013, 12, 31),
+  description = "Fonds de compensation de la cessation progressive d’activité",
+)
+
+cotsoc_pat_fonc_contract_ircantec = RateTaxScale(
+  [
+    RateBracket(
+      threshold = [
+        DateRangeValue(Date(1992, 01, 01), Date(2017, 12, 31), 0.0),
+      ],
+      rate = [
+        DateRangeValue(Date(2017, 01, 01), Date(2017, 12, 31), 0.0336),
+
+        DateRangeValue(Date(2016, 01, 01), Date(2016, 12, 31), 0.0326),
+
+        DateRangeValue(Date(2015, 01, 01), Date(2015, 12, 31), 0.0317),
+
+        DateRangeValue(Date(2014, 01, 01), Date(2014, 12, 31), 0.0304),
+
+        DateRangeValue(Date(2013, 01, 01), Date(2013, 12, 31), 0.0294),
+
+        DateRangeValue(Date(2012, 01, 01), Date(2012, 12, 31), 0.0282),
+
+        DateRangeValue(Date(2011, 01, 01), Date(2011, 12, 31), 0.0273),
+
+        DateRangeValue(Date(1992, 01, 01), Date(2010, 12, 31), 0.027),
+      ],
+      base = [
+        DateRangeValue(Date(1992, 01, 01), Date(2017, 12, 31), 1.25),
+      ],
+    ),
+    RateBracket(
+      threshold = [
+        DateRangeValue(Date(1992, 01, 01), Date(2017, 12, 31), 1.0),
+      ],
+      rate = [
+        DateRangeValue(Date(2017, 01, 01), Date(2017, 12, 31), 0.1004),
+
+        DateRangeValue(Date(2016, 01, 01), Date(2016, 12, 31), 0.0988),
+
+        DateRangeValue(Date(2015, 01, 01), Date(2015, 12, 31), 0.0974),
+
+        DateRangeValue(Date(2014, 01, 01), Date(2014, 12, 31), 0.0958),
+
+        DateRangeValue(Date(2013, 01, 01), Date(2013, 12, 31), 0.0946),
+
+        DateRangeValue(Date(2012, 01, 01), Date(2012, 12, 31), 0.0936),
+
+        DateRangeValue(Date(2011, 01, 01), Date(2011, 12, 31), 0.0928),
+
+        DateRangeValue(Date(1992, 01, 01), Date(2010, 12, 31), 0.0924),
+      ],
+      base = [
+        DateRangeValue(Date(1992, 01, 01), Date(2017, 12, 31), 1.25),
+      ],
+    ),
+    RateBracket(
+      threshold = [
+        DateRangeValue(Date(1992, 01, 01), Date(2017, 12, 31), 8.0),
+      ],
+      rate = [
+        DateRangeValue(Date(1992, 01, 01), Date(2017, 12, 31), 0.0),
+      ],
+    ),
+  ],
+  check_start_date = Date(2006, 01, 01),
+  check_stop_date = Date(2013, 12, 31),
+  description = "IRCANTEC",
+)
+
+cotsoc_pat_fonc_etat_ati = RateTaxScale(
+  [
+    RateBracket(
+      threshold = [
+        DateRangeValue(Date(2003, 01, 01), Date(2020, 12, 31), 0.0),
+      ],
+      rate = [
+        DateRangeValue(Date(2013, 01, 01), Date(2013, 12, 31), 0.0032),
+
+        DateRangeValue(Date(2010, 01, 01), Date(2012, 12, 31), 0.0033),
+
+        DateRangeValue(Date(2009, 01, 01), Date(2009, 12, 31), 0.0032),
+
+        DateRangeValue(Date(2007, 01, 01), Date(2008, 12, 31), 0.0031),
+
+        DateRangeValue(Date(2006, 01, 01), Date(2006, 12, 31), 0.003),
+      ],
+    ),
+  ],
+  check_start_date = Date(2006, 01, 01),
+  check_stop_date = Date(2013, 12, 31),
+  description = "Allocations temporaires d'invalidité (ATI)",
+)
+
+cotsoc_pat_fonc_etat_maladie = RateTaxScale(
+  [
+    RateBracket(
+      threshold = [
+        DateRangeValue(Date(1984, 01, 01), Date(2014, 12, 31), 0.0),
+      ],
+      rate = [
+        DateRangeValue(Date(1984, 01, 01), Date(2014, 12, 31), 0.097),
+      ],
+    ),
+  ],
+  check_start_date = Date(2006, 01, 01),
+  check_stop_date = Date(2013, 12, 31),
+  description = "Maladie",
+)
+
+cotsoc_pat_fonc_etat_pension = RateTaxScale(
+  [
+    RateBracket(
+      threshold = [
+        DateRangeValue(Date(1993, 01, 01), Date(2012, 12, 31), 0.0),
+      ],
+      rate = [
+        DateRangeValue(Date(2013, 01, 01), Date(2014, 12, 31), 0.7428),
+
+        DateRangeValue(Date(2012, 01, 01), Date(2012, 12, 31), 0.6859),
+
+        DateRangeValue(Date(2011, 01, 01), Date(2011, 12, 31), 0.6539),
+
+        DateRangeValue(Date(2010, 01, 01), Date(2010, 12, 31), 0.6214),
+
+        DateRangeValue(Date(2009, 12, 01), Date(2009, 12, 31), 0.4014),
+
+        DateRangeValue(Date(2009, 01, 01), Date(2009, 11, 30), 0.6014),
+
+        DateRangeValue(Date(2008, 01, 01), Date(2008, 12, 31), 0.5571),
+
+        DateRangeValue(Date(2007, 01, 01), Date(2007, 12, 31), 0.5074),
+
+        DateRangeValue(Date(2006, 01, 01), Date(2006, 12, 31), 0.499),
+      ],
+    ),
+  ],
+  check_start_date = Date(2006, 01, 01),
+  check_stop_date = Date(2013, 12, 31),
+  description = "Pensions civiles (TI et NBI)",
+)
+
+cotsoc_pat_fonc_etat_rafp = RateTaxScale(
+  [
+    RateBracket(
+      threshold = [
+        DateRangeValue(Date(1993, 01, 01), Date(2012, 12, 31), 0.0),
+      ],
+      rate = [
+        DateRangeValue(Date(2005, 01, 01), Date(2012, 12, 31), 0.05),
+      ],
+    ),
+  ],
+  check_start_date = Date(2006, 01, 01),
+  check_stop_date = Date(2013, 12, 31),
+  description = "Régime additionnel de retraite (RAFP, totalité sauf TI et NBI, min 20% TI )",
+)
+
+cotsoc_pat_noncadre_agffnc = RateTaxScale(
+  [
+    RateBracket(
+      threshold = [
+        DateRangeValue(Date(2001, 04, 01), Date(2014, 12, 31), 0.0),
+      ],
+      rate = [
+        DateRangeValue(Date(2001, 04, 01), Date(2014, 12, 31), 0.012),
+      ],
+    ),
+    RateBracket(
+      threshold = [
+        DateRangeValue(Date(2001, 04, 01), Date(2014, 12, 31), 1.0),
+      ],
+      rate = [
+        DateRangeValue(Date(2001, 04, 01), Date(2014, 12, 31), 0.013),
+      ],
+    ),
+    RateBracket(
+      threshold = [
+        DateRangeValue(Date(2001, 04, 01), Date(2014, 12, 31), 3.0),
+      ],
+      rate = [
+        DateRangeValue(Date(2001, 04, 01), Date(2014, 12, 31), 0.0),
+      ],
+    ),
+  ],
+  check_start_date = Date(2006, 01, 01),
+  check_stop_date = Date(2013, 12, 31),
+  description = "Cotisation AGFF",
+)
+
+cotsoc_pat_noncadre_arrco = RateTaxScale(
+  [
+    RateBracket(
+      threshold = [
+        DateRangeValue(Date(1993, 01, 01), Date(2015, 12, 31), 0.0),
+      ],
+      rate = [
+        DateRangeValue(Date(2015, 01, 01), Date(2015, 12, 31), 0.0465),
+
+        DateRangeValue(Date(2014, 01, 01), Date(2014, 12, 31), 0.0458),
+
+        DateRangeValue(Date(1999, 01, 01), Date(2013, 12, 31), 0.045),
+
+        DateRangeValue(Date(1998, 01, 01), Date(1998, 12, 31), 0.04125),
+
+        DateRangeValue(Date(1997, 01, 01), Date(1997, 12, 31), 0.0375),
+
+        DateRangeValue(Date(1996, 01, 01), Date(1996, 12, 31), 0.03375),
+
+        DateRangeValue(Date(1993, 07, 01), Date(1995, 12, 31), 0.02952),
+      ],
+    ),
+    RateBracket(
+      threshold = [
+        DateRangeValue(Date(2000, 01, 01), Date(2015, 12, 31), 1.0),
+      ],
+      rate = [
+        DateRangeValue(Date(2015, 01, 01), Date(2015, 12, 31), 0.1215),
+
+        DateRangeValue(Date(2014, 01, 01), Date(2014, 12, 31), 0.1208),
+
+        DateRangeValue(Date(2005, 01, 01), Date(2013, 12, 31), 0.12),
+
+        DateRangeValue(Date(2004, 01, 01), Date(2004, 12, 31), 0.105),
+
+        DateRangeValue(Date(2002, 01, 01), Date(2003, 12, 31), 0.09),
+
+        DateRangeValue(Date(2000, 01, 01), Date(2001, 12, 31), 0.075),
+      ],
+    ),
+    RateBracket(
+      threshold = [
+        DateRangeValue(Date(2000, 01, 01), Date(2015, 12, 31), 3.0),
+      ],
+      rate = [
+        DateRangeValue(Date(2000, 01, 01), Date(2015, 12, 31), 0.0),
+      ],
+    ),
+  ],
+  check_start_date = Date(2006, 01, 01),
+  check_stop_date = Date(2013, 12, 31),
+  description = "Retraite complémentaire",
+)
+
+cotsoc_sal_arti_famille = RateTaxScale(
+  [
+    RateBracket(
+      threshold = [
+        DateRangeValue(Date(2003, 01, 01), Date(2014, 12, 31), 0.0),
+      ],
+      rate = [
+        DateRangeValue(Date(2003, 01, 01), Date(2014, 12, 31), 0.054),
+      ],
+    ),
+  ],
+  check_start_date = Date(2006, 01, 01),
+  check_stop_date = Date(2013, 12, 31),
+  description = "Cotisation Famille",
+)
+
+cotsoc_sal_arti_forprof = RateTaxScale(
+  [
+    RateBracket(
+      threshold = [
+        DateRangeValue(Date(2003, 01, 01), Date(2014, 12, 31), 0.0),
+      ],
+      rate = [
+        DateRangeValue(Date(2008, 01, 01), Date(2014, 12, 31), 0.0029),
+
+        DateRangeValue(Date(2004, 01, 01), Date(2007, 12, 31), 0.0024),
+      ],
+    ),
+  ],
+  check_start_date = Date(2006, 01, 01),
+  check_stop_date = Date(2013, 12, 31),
+  description = "Formation professionnelle",
+)
+
+cotsoc_sal_arti_indjour = RateTaxScale(
+  [
+    RateBracket(
+      threshold = [
+        DateRangeValue(Date(2003, 01, 01), Date(2014, 12, 31), 0.0),
+      ],
+      rate = [
+        DateRangeValue(Date(2003, 01, 01), Date(2014, 12, 31), 0.007),
+      ],
+    ),
+    RateBracket(
+      threshold = [
+        DateRangeValue(Date(2003, 01, 01), Date(2014, 12, 31), 5.0),
+      ],
+      rate = [
+        DateRangeValue(Date(2003, 01, 01), Date(2014, 12, 31), 0.0),
+      ],
+    ),
+  ],
+  check_start_date = Date(2006, 01, 01),
+  check_stop_date = Date(2013, 12, 31),
+  description = "Sécurité sociale/ Indemnités journalières",
+)
+
+cotsoc_sal_arti_invdec = RateTaxScale(
+  [
+    RateBracket(
+      threshold = [
+        DateRangeValue(Date(2003, 01, 01), Date(2014, 12, 31), 0.0),
+      ],
+      rate = [
+        DateRangeValue(Date(2013, 01, 01), Date(2014, 12, 31), 0.016),
+
+        DateRangeValue(Date(2003, 01, 01), Date(2012, 12, 31), 0.018),
+      ],
+    ),
+    RateBracket(
+      threshold = [
+        DateRangeValue(Date(2003, 01, 01), Date(2014, 12, 31), 1.0),
+      ],
+      rate = [
+        DateRangeValue(Date(2003, 01, 01), Date(2014, 12, 31), 0.0),
+      ],
+    ),
+  ],
+  check_start_date = Date(2006, 01, 01),
+  check_stop_date = Date(2013, 12, 31),
+  description = "Invalidité, décès",
+)
+
+cotsoc_sal_arti_maladie = RateTaxScale(
+  [
+    RateBracket(
+      threshold = [
+        DateRangeValue(Date(2003, 01, 01), Date(2014, 12, 31), 0.0),
+      ],
+      rate = [
+        DateRangeValue(Date(2003, 01, 01), Date(2014, 12, 31), 0.065),
+      ],
+    ),
+    RateBracket(
+      threshold = [
+        DateRangeValue(Date(2003, 01, 01), Date(2012, 12, 31), 1.0),
+      ],
+      rate = [
+        DateRangeValue(Date(2003, 01, 01), Date(2012, 12, 31), 0.059),
+      ],
+    ),
+    RateBracket(
+      threshold = [
+        DateRangeValue(Date(2003, 01, 01), Date(2012, 12, 31), 5.0),
+      ],
+      rate = [
+        DateRangeValue(Date(2003, 01, 01), Date(2012, 12, 31), 0.0),
+      ],
+    ),
+  ],
+  check_start_date = Date(2006, 01, 01),
+  check_stop_date = Date(2013, 12, 31),
+  description = "Sécurité sociale/ Maladie, maternité",
+)
+
+cotsoc_sal_arti_retrbase = RateTaxScale(
+  [
+    RateBracket(
+      threshold = [
+        DateRangeValue(Date(2003, 01, 01), Date(2016, 12, 31), 0.0),
+      ],
+      rate = [
+        DateRangeValue(Date(2016, 01, 01), Date(2016, 12, 31), 0.1715),
+
+        DateRangeValue(Date(2015, 01, 01), Date(2015, 12, 31), 0.1705),
+
+        DateRangeValue(Date(2014, 01, 01), Date(2014, 12, 31), 0.1695),
+
+        DateRangeValue(Date(2012, 11, 01), Date(2013, 12, 31), 0.1685),
+
+        DateRangeValue(Date(2006, 01, 01), Date(2012, 10, 31), 0.1665),
+
+        DateRangeValue(Date(2004, 07, 01), Date(2005, 12, 31), 0.1645),
+
+        DateRangeValue(Date(1991, 02, 01), Date(2004, 06, 30), 0.1635),
+      ],
+    ),
+    RateBracket(
+      threshold = [
+        DateRangeValue(Date(2003, 01, 01), Date(2016, 12, 31), 1.0),
+      ],
+      rate = [
+        DateRangeValue(Date(2003, 01, 01), Date(2016, 12, 31), 0.0),
+      ],
+    ),
+  ],
+  check_start_date = Date(2006, 01, 01),
+  check_stop_date = Date(2013, 12, 31),
+  description = "Retraite de base",
+)
+
+cotsoc_sal_arti_retrcompl = RateTaxScale(
+  [
+    RateBracket(
+      threshold = [
+        DateRangeValue(Date(2003, 01, 01), Date(2014, 12, 31), 0.0),
+      ],
+      rate = [
+        DateRangeValue(Date(2013, 01, 01), Date(2014, 12, 31), 0.07),
+
+        DateRangeValue(Date(2003, 01, 01), Date(2012, 12, 31), 0.072),
+      ],
+    ),
+    RateBracket(
+      threshold = [
+        DateRangeValue(Date(2003, 01, 01), Date(2014, 12, 31), 1.0),
+      ],
+      rate = [
+        DateRangeValue(Date(2013, 01, 01), Date(2014, 12, 31), 0.08),
+
+        DateRangeValue(Date(2003, 01, 01), Date(2012, 12, 31), 0.076),
+      ],
+    ),
+    RateBracket(
+      threshold = [
+        DateRangeValue(Date(2003, 01, 01), Date(2014, 12, 31), 4.0),
+      ],
+      rate = [
+        DateRangeValue(Date(2003, 01, 01), Date(2014, 12, 31), 0.0),
+      ],
+    ),
+  ],
+  check_start_date = Date(2006, 01, 01),
+  check_stop_date = Date(2013, 12, 31),
+  description = "Retraite complémentaire",
+)
+
+cotsoc_sal_cadre_agff = RateTaxScale(
+  [
+    RateBracket(
+      threshold = [
+        DateRangeValue(Date(2001, 04, 01), Date(2014, 12, 31), 0.0),
+      ],
+      rate = [
+        DateRangeValue(Date(2001, 04, 01), Date(2014, 12, 31), 0.008),
+      ],
+    ),
+    RateBracket(
+      threshold = [
+        DateRangeValue(Date(2001, 04, 01), Date(2014, 12, 31), 1.0),
+      ],
+      rate = [
+        DateRangeValue(Date(2001, 04, 01), Date(2014, 12, 31), 0.009),
+      ],
+    ),
+    RateBracket(
+      threshold = [
+        DateRangeValue(Date(2001, 04, 01), Date(2014, 12, 31), 4.0),
+      ],
+      rate = [
+        DateRangeValue(Date(2001, 04, 01), Date(2014, 12, 31), 0.0),
+      ],
+    ),
+  ],
+  check_start_date = Date(2006, 01, 01),
+  check_stop_date = Date(2013, 12, 31),
+  description = "Cotisation AGFF",
+)
+
+cotsoc_sal_cadre_agirc = RateTaxScale(
+  [
+    RateBracket(
+      threshold = [
+        DateRangeValue(Date(1993, 07, 01), Date(2015, 12, 31), 0.0),
+      ],
+      rate = [
+        DateRangeValue(Date(1993, 07, 01), Date(2015, 12, 31), 0.0),
+      ],
+    ),
+    RateBracket(
+      threshold = [
+        DateRangeValue(Date(1993, 07, 01), Date(2015, 12, 31), 1.0),
+      ],
+      rate = [
+        DateRangeValue(Date(2015, 01, 01), Date(2015, 12, 31), 0.078),
+
+        DateRangeValue(Date(2014, 01, 01), Date(2014, 12, 31), 0.0775),
+
+        DateRangeValue(Date(2006, 01, 01), Date(2013, 12, 31), 0.077),
+
+        DateRangeValue(Date(1999, 01, 01), Date(2005, 12, 31), 0.075),
+
+        DateRangeValue(Date(1998, 01, 01), Date(1998, 12, 31), 0.06875),
+
+        DateRangeValue(Date(1997, 01, 01), Date(1997, 12, 31), 0.0625),
+
+        DateRangeValue(Date(1996, 01, 01), Date(1996, 12, 31), 0.05625),
+
+        DateRangeValue(Date(1995, 01, 01), Date(1995, 12, 31), 0.05),
+
+        DateRangeValue(Date(1994, 01, 01), Date(1994, 12, 31), 0.0363),
+
+        DateRangeValue(Date(1993, 07, 01), Date(1993, 12, 31), 0.0234),
+      ],
+    ),
+    RateBracket(
+      threshold = [
+        DateRangeValue(Date(1993, 07, 01), Date(2015, 12, 31), 4.0),
+      ],
+      rate = [
+        DateRangeValue(Date(2015, 01, 01), Date(2015, 12, 31), 0.078),
+
+        DateRangeValue(Date(2014, 01, 01), Date(2014, 12, 31), 0.0775),
+
+        DateRangeValue(Date(2006, 01, 01), Date(2013, 12, 31), 0.077),
+
+        DateRangeValue(Date(1999, 01, 01), Date(2005, 12, 31), 0.075),
+
+        DateRangeValue(Date(1998, 01, 01), Date(1998, 12, 31), 0.06875),
+
+        DateRangeValue(Date(1997, 01, 01), Date(1997, 12, 31), 0.0625),
+
+        DateRangeValue(Date(1996, 01, 01), Date(1996, 12, 31), 0.05625),
+
+        DateRangeValue(Date(1995, 01, 01), Date(1995, 12, 31), 0.05),
+
+        DateRangeValue(Date(1994, 01, 01), Date(1994, 12, 31), 0.0363),
+
+        DateRangeValue(Date(1993, 07, 01), Date(1993, 12, 31), 0.0234),
+      ],
+    ),
+    RateBracket(
+      threshold = [
+        DateRangeValue(Date(1993, 07, 01), Date(2015, 12, 31), 8.0),
+      ],
+      rate = [
+        DateRangeValue(Date(1993, 07, 01), Date(2015, 12, 31), 0.0),
+      ],
+    ),
+  ],
+  check_start_date = Date(2006, 01, 01),
+  check_stop_date = Date(2013, 12, 31),
+  description = "Retraite complémentaire AGIRC GMP (tranches B et C, avant 65 ans)",
+)
+
+cotsoc_sal_cadre_apec = RateTaxScale(
+  [
+    RateBracket(
+      threshold = [
+        DateRangeValue(Date(1993, 07, 01), Date(2014, 12, 31), 0.0),
+      ],
+      rate = [
+        DateRangeValue(Date(2011, 01, 01), Date(2014, 12, 31), 0.00024),
+
+        DateRangeValue(Date(1993, 07, 01), Date(2010, 12, 31), 0.0),
+      ],
+    ),
+    RateBracket(
+      threshold = [
+        DateRangeValue(Date(1993, 07, 01), Date(2014, 12, 31), 1.0),
+      ],
+      rate = [
+        DateRangeValue(Date(1993, 07, 01), Date(2014, 12, 31), 0.00024),
+      ],
+    ),
+    RateBracket(
+      threshold = [
+        DateRangeValue(Date(1993, 07, 01), Date(2014, 12, 31), 4.0),
+      ],
+      rate = [
+        DateRangeValue(Date(1993, 07, 01), Date(2014, 12, 31), 0.0),
+      ],
+    ),
+  ],
+  check_start_date = Date(2006, 01, 01),
+  check_stop_date = Date(2013, 12, 31),
+  description = "Chômage-emploi APEC",
+)
+
+cotsoc_sal_cadre_cet = RateTaxScale(
+  [
+    RateBracket(
+      threshold = [
+        DateRangeValue(Date(1997, 01, 01), Date(2014, 12, 31), 0.0),
+      ],
+      rate = [
+        DateRangeValue(Date(2001, 01, 01), Date(2014, 12, 31), 0.0013),
+
+        DateRangeValue(Date(2000, 01, 01), Date(2000, 12, 31), 0.0011),
+
+        DateRangeValue(Date(1999, 01, 01), Date(1999, 12, 31), 0.0008),
+
+        DateRangeValue(Date(1998, 01, 01), Date(1998, 12, 31), 0.0005),
+
+        DateRangeValue(Date(1997, 01, 01), Date(1997, 12, 31), 0.00026),
+      ],
+    ),
+    RateBracket(
+      threshold = [
+        DateRangeValue(Date(1997, 01, 01), Date(2014, 12, 31), 8.0),
+      ],
+      rate = [
+        DateRangeValue(Date(1997, 01, 01), Date(2014, 12, 31), 0.0),
+      ],
+    ),
+  ],
+  check_start_date = Date(2006, 01, 01),
+  check_stop_date = Date(2013, 12, 31),
+  description = "Cotisation exceptionelle temporaire",
+)
+
+cotsoc_sal_comind_famille = RateTaxScale(
+  [
+    RateBracket(
+      threshold = [
+        DateRangeValue(Date(2003, 01, 01), Date(2014, 12, 31), 0.0),
+      ],
+      rate = [
+        DateRangeValue(Date(2003, 01, 01), Date(2014, 12, 31), 0.054),
+      ],
+    ),
+  ],
+  check_start_date = Date(2006, 01, 01),
+  check_stop_date = Date(2013, 12, 31),
+  description = "Famille",
+)
+
+cotsoc_sal_comind_forprofcom = RateTaxScale(
+  [
+    RateBracket(
+      threshold = [
+        DateRangeValue(Date(2012, 01, 01), Date(2014, 12, 31), 0.0),
+      ],
+      rate = [
+        DateRangeValue(Date(2012, 01, 01), Date(2014, 12, 31), 0.0025),
+
+        DateRangeValue(Date(1992, 01, 01), Date(2011, 12, 31), 0.0015),
+      ],
+    ),
+  ],
+  check_start_date = Date(2006, 01, 01),
+  check_stop_date = Date(2013, 12, 31),
+  description = "Formation professionnelle",
+)
+
+cotsoc_sal_comind_indjour = RateTaxScale(
+  [
+    RateBracket(
+      threshold = [
+        DateRangeValue(Date(2003, 01, 01), Date(2013, 12, 31), 0.0),
+      ],
+      rate = [
+        DateRangeValue(Date(2003, 01, 01), Date(2013, 12, 31), 0.007),
+      ],
+    ),
+    RateBracket(
+      threshold = [
+        DateRangeValue(Date(2003, 01, 01), Date(2013, 12, 31), 5.0),
+      ],
+      rate = [
+        DateRangeValue(Date(2003, 01, 01), Date(2013, 12, 31), 0.0),
+      ],
+    ),
+  ],
+  check_start_date = Date(2006, 01, 01),
+  check_stop_date = Date(2013, 12, 31),
+  description = "Sécurité sociale/ Indemnités journalières",
+)
+
+cotsoc_sal_comind_invdec = RateTaxScale(
+  [
+    RateBracket(
+      threshold = [
+        DateRangeValue(Date(2007, 01, 01), Date(2014, 12, 31), 0.0),
+      ],
+      rate = [
+        DateRangeValue(Date(2013, 01, 01), Date(2014, 12, 31), 0.011),
+
+        DateRangeValue(Date(2007, 01, 01), Date(2012, 12, 31), 0.013),
+      ],
+    ),
+    RateBracket(
+      threshold = [
+        DateRangeValue(Date(2007, 01, 01), Date(2014, 12, 31), 1.0),
+      ],
+      rate = [
+        DateRangeValue(Date(2007, 01, 01), Date(2014, 12, 31), 0.0),
+      ],
+    ),
+  ],
+  check_start_date = Date(2006, 01, 01),
+  check_stop_date = Date(2013, 12, 31),
+  description = "Invalidité, décès",
+)
+
+cotsoc_sal_comind_maladie = RateTaxScale(
+  [
+    RateBracket(
+      threshold = [
+        DateRangeValue(Date(2003, 01, 01), Date(2013, 12, 31), 0.0),
+      ],
+      rate = [
+        DateRangeValue(Date(2012, 01, 01), Date(2012, 12, 31), 0.06),
+
+        DateRangeValue(Date(2003, 01, 01), Date(2011, 12, 31), 0.065),
+      ],
+    ),
+    RateBracket(
+      threshold = [
+        DateRangeValue(Date(2003, 01, 01), Date(2012, 12, 31), 1.0),
+      ],
+      rate = [
+        DateRangeValue(Date(2003, 01, 01), Date(2012, 12, 31), 0.059),
+      ],
+    ),
+    RateBracket(
+      threshold = [
+        DateRangeValue(Date(2003, 01, 01), Date(2012, 12, 31), 5.0),
+      ],
+      rate = [
+        DateRangeValue(Date(2003, 01, 01), Date(2012, 12, 31), 0.0),
+      ],
+    ),
+  ],
+  check_start_date = Date(2006, 01, 01),
+  check_stop_date = Date(2013, 12, 31),
+  description = "Sécurité sociale/ Maladie, maternité",
+)
+
+cotsoc_sal_comind_retrbase = RateTaxScale(
+  [
+    RateBracket(
+      threshold = [
+        DateRangeValue(Date(2003, 01, 01), Date(2014, 12, 31), 0.0),
+      ],
+      rate = [
+        DateRangeValue(Date(2016, 01, 01), Date(2016, 12, 31), 0.1715),
+
+        DateRangeValue(Date(2015, 01, 01), Date(2015, 12, 31), 0.1705),
+
+        DateRangeValue(Date(2014, 01, 01), Date(2014, 12, 31), 0.1695),
+
+        DateRangeValue(Date(2012, 11, 01), Date(2013, 12, 31), 0.1685),
+
+        DateRangeValue(Date(2006, 01, 01), Date(2012, 10, 31), 0.1665),
+
+        DateRangeValue(Date(2004, 07, 01), Date(2005, 12, 31), 0.1645),
+
+        DateRangeValue(Date(1991, 02, 01), Date(2004, 06, 30), 0.1635),
+      ],
+    ),
+    RateBracket(
+      threshold = [
+        DateRangeValue(Date(2003, 01, 01), Date(2014, 12, 31), 1.0),
+      ],
+      rate = [
+        DateRangeValue(Date(2003, 01, 01), Date(2014, 12, 31), 0.0),
+      ],
+    ),
+  ],
+  check_start_date = Date(2006, 01, 01),
+  check_stop_date = Date(2013, 12, 31),
+  description = "Retraite de base",
+)
+
+cotsoc_sal_comind_retrcompl = RateTaxScale(
+  [
+    RateBracket(
+      threshold = [
+        DateRangeValue(Date(2005, 01, 01), Date(2014, 12, 31), 0.0),
+      ],
+      rate = [
+        DateRangeValue(Date(2013, 01, 01), Date(2014, 12, 31), 0.07),
+
+        DateRangeValue(Date(2005, 01, 01), Date(2012, 12, 31), 0.065),
+      ],
+    ),
+    RateBracket(
+      threshold = [
+        DateRangeValue(Date(2005, 01, 01), Date(2014, 12, 31), 1.0),
+      ],
+      rate = [
+        DateRangeValue(Date(2013, 01, 01), Date(2014, 12, 31), 0.07),
+
+        DateRangeValue(Date(2005, 01, 01), Date(2012, 12, 31), 0.065),
+      ],
+    ),
+    RateBracket(
+      threshold = [
+        DateRangeValue(Date(2005, 01, 01), Date(2014, 12, 31), 3.0),
+      ],
+      rate = [
+        DateRangeValue(Date(2005, 01, 01), Date(2014, 12, 31), 0.0),
+      ],
+    ),
+  ],
+  check_start_date = Date(2006, 01, 01),
+  check_stop_date = Date(2013, 12, 31),
+  description = "Retraite complémentaire",
+)
+
+cotsoc_sal_commun_arrco = RateTaxScale(
+  [
+    RateBracket(
+      threshold = [
+        DateRangeValue(Date(1993, 07, 01), Date(2013, 12, 31), 0.0),
+      ],
+      rate = [
+        DateRangeValue(Date(2015, 01, 01), Date(2015, 12, 31), 0.031),
+
+        DateRangeValue(Date(2014, 01, 01), Date(2014, 12, 31), 0.0305),
+
+        DateRangeValue(Date(1999, 01, 01), Date(2013, 12, 31), 0.03),
+
+        DateRangeValue(Date(1998, 01, 01), Date(1998, 12, 31), 0.0275),
+
+        DateRangeValue(Date(1997, 01, 01), Date(1997, 12, 31), 0.025),
+
+        DateRangeValue(Date(1996, 01, 01), Date(1996, 12, 31), 0.0225),
+
+        DateRangeValue(Date(1993, 01, 01), Date(1995, 12, 31), 0.01968),
+      ],
+    ),
+    RateBracket(
+      threshold = [
+        DateRangeValue(Date(2000, 01, 01), Date(2013, 12, 31), 1.0),
+      ],
+      rate = [
+        DateRangeValue(Date(2000, 01, 01), Date(2013, 12, 31), 0.0),
+      ],
+    ),
+  ],
+  check_start_date = Date(2006, 01, 01),
+  check_stop_date = Date(2013, 12, 31),
+  description = "Retraite complémentaire ARRCO",
+)
+
+cotsoc_sal_commun_assedic = RateTaxScale(
+  [
+    RateBracket(
+      threshold = [
+        DateRangeValue(Date(1993, 07, 01), Date(2014, 12, 31), 0.0),
+      ],
+      rate = [
+        DateRangeValue(Date(2007, 01, 01), Date(2014, 12, 31), 0.024),
+
+        DateRangeValue(Date(2006, 01, 01), Date(2006, 12, 31), 0.0244),
+
+        DateRangeValue(Date(2003, 01, 01), Date(2005, 12, 31), 0.024),
+
+        DateRangeValue(Date(2002, 07, 01), Date(2002, 12, 31), 0.021),
+
+        DateRangeValue(Date(2002, 01, 01), Date(2002, 06, 30), 0.02),
+
+        DateRangeValue(Date(2001, 07, 01), Date(2001, 12, 31), 0.021),
+
+        DateRangeValue(Date(2001, 04, 01), Date(2001, 06, 30), 0.026),
+
+        DateRangeValue(Date(2001, 01, 01), Date(2001, 03, 31), 0.0349),
+
+        DateRangeValue(Date(1997, 01, 01), Date(2000, 12, 31), 0.036),
+
+        DateRangeValue(Date(1994, 01, 01), Date(1996, 12, 31), 0.0386),
+
+        DateRangeValue(Date(1993, 07, 01), Date(1993, 12, 31), 0.0377),
+      ],
+    ),
+    RateBracket(
+      threshold = [
+        DateRangeValue(Date(2003, 01, 01), Date(2014, 12, 31), 4.0),
+      ],
+      rate = [
+        DateRangeValue(Date(2003, 01, 01), Date(2014, 12, 31), 0.0),
+      ],
+    ),
+  ],
+  check_start_date = Date(2006, 01, 01),
+  check_stop_date = Date(2013, 12, 31),
+  description = "Chômage-emploi ASSEDIC",
+)
+
+cotsoc_sal_commun_maladie = RateTaxScale(
+  [
+    RateBracket(
+      threshold = [
+        DateRangeValue(Date(1993, 07, 01), Date(2013, 12, 31), 0.0),
+      ],
+      rate = [
+        DateRangeValue(Date(1998, 01, 01), Date(2013, 12, 31), 0.0075),
+
+        DateRangeValue(Date(1997, 01, 01), Date(1997, 12, 31), 0.055),
+
+        DateRangeValue(Date(1993, 07, 01), Date(1996, 12, 31), 0.068),
+      ],
+    ),
+  ],
+  check_start_date = Date(2006, 01, 01),
+  check_stop_date = Date(2013, 12, 31),
+  description = "Assurance maladie, maternité, invalidité, décès",
+)
+
+cotsoc_sal_commun_vieillesse = RateTaxScale(
+  [
+    RateBracket(
+      threshold = [
+        DateRangeValue(Date(1993, 07, 01), Date(2016, 12, 31), 0.0),
+      ],
+      rate = [
+        DateRangeValue(Date(2016, 01, 01), Date(2016, 12, 31), 0.069),
+
+        DateRangeValue(Date(2015, 01, 01), Date(2015, 12, 31), 0.0685),
+
+        DateRangeValue(Date(2014, 01, 01), Date(2014, 12, 31), 0.068),
+
+        DateRangeValue(Date(2012, 11, 01), Date(2013, 12, 31), 0.0675),
+
+        DateRangeValue(Date(2006, 01, 01), Date(2012, 10, 31), 0.0665),
+
+        DateRangeValue(Date(1993, 07, 01), Date(2005, 12, 31), 0.0655),
+      ],
+    ),
+    RateBracket(
+      threshold = [
+        DateRangeValue(Date(1993, 07, 01), Date(2016, 12, 31), 1.0),
+      ],
+      rate = [
+        DateRangeValue(Date(1993, 07, 01), Date(2016, 12, 31), 0.0),
+      ],
+    ),
+  ],
+  check_start_date = Date(2006, 01, 01),
+  check_stop_date = Date(2013, 12, 31),
+  description = "Vieillesse (régime de base de la retraite CNAV)",
+)
+
+cotsoc_sal_commun_vieillessedeplaf = RateTaxScale(
+  [
+    RateBracket(
+      threshold = [
+        DateRangeValue(Date(2004, 07, 01), Date(2014, 12, 31), 0.0),
+      ],
+      rate = [
+        DateRangeValue(Date(2014, 01, 01), Date(2014, 12, 31), 0.0025),
+
+        DateRangeValue(Date(2004, 07, 01), Date(2013, 12, 31), 0.001),
+      ],
+    ),
+  ],
+  check_start_date = Date(2006, 01, 01),
+  check_stop_date = Date(2013, 12, 31),
+  description = "Vieillesse déplafonnée (ancienne assurance veuvage transférée à la CNAV en 2004)",
+)
+
+cotsoc_sal_fonc_colloc_cnracl1 = RateTaxScale(
+  [
+    RateBracket(
+      threshold = [
+        DateRangeValue(Date(1984, 01, 01), Date(2020, 12, 31), 0.0),
+      ],
+      rate = [
+        DateRangeValue(Date(2020, 01, 01), Date(2020, 12, 31), 0.1055),
+
+        DateRangeValue(Date(2019, 01, 01), Date(2019, 12, 31), 0.1028),
+
+        DateRangeValue(Date(2018, 01, 01), Date(2018, 12, 31), 0.1001),
+
+        DateRangeValue(Date(2017, 01, 01), Date(2017, 12, 31), 0.0974),
+
+        DateRangeValue(Date(2016, 01, 01), Date(2016, 12, 31), 0.0947),
+
+        DateRangeValue(Date(2015, 01, 01), Date(2015, 12, 31), 0.092),
+
+        DateRangeValue(Date(2014, 01, 01), Date(2014, 12, 31), 0.0893),
+
+        DateRangeValue(Date(2013, 01, 01), Date(2013, 12, 31), 0.0876),
+
+        DateRangeValue(Date(2012, 01, 01), Date(2012, 12, 31), 0.0839),
+
+        DateRangeValue(Date(2011, 01, 01), Date(2011, 12, 31), 0.0812),
+
+        DateRangeValue(Date(1991, 02, 01), Date(2010, 12, 31), 0.0785),
+      ],
+    ),
+  ],
+  check_start_date = Date(2006, 01, 01),
+  check_stop_date = Date(2013, 12, 31),
+  description = "Retraites des agents des collectivités locales (taux hors NBI)",
+)
+
+cotsoc_sal_fonc_colloc_cnracl2 = RateTaxScale(
+  [
+    RateBracket(
+      threshold = [
+        DateRangeValue(Date(1984, 01, 01), Date(2020, 12, 31), 0.0),
+      ],
+      rate = [
+        DateRangeValue(Date(2020, 01, 01), Date(2020, 12, 31), 0.108, comment = "TODO: CHECK change because reforme"),
+
+        DateRangeValue(Date(2019, 01, 01), Date(2019, 12, 31), 0.1053),
+
+        DateRangeValue(Date(2018, 01, 01), Date(2018, 12, 31), 0.1026),
+
+        DateRangeValue(Date(2017, 01, 01), Date(2017, 12, 31), 0.0999),
+
+        DateRangeValue(Date(2016, 01, 01), Date(2016, 12, 31), 0.0972),
+
+        DateRangeValue(Date(2015, 01, 01), Date(2015, 12, 31), 0.094),
+
+        DateRangeValue(Date(2014, 01, 01), Date(2014, 12, 31), 0.0908),
+
+        DateRangeValue(Date(2013, 01, 01), Date(2013, 12, 31), 0.0876),
+
+        DateRangeValue(Date(2012, 11, 01), Date(2012, 12, 31), 0.0849),
+
+        DateRangeValue(Date(2012, 01, 01), Date(2012, 10, 31), 0.0839),
+
+        DateRangeValue(Date(2011, 01, 01), Date(2011, 12, 31), 0.0812),
+
+        DateRangeValue(Date(1991, 02, 01), Date(2010, 12, 31), 0.0785),
+      ],
+    ),
+  ],
+  check_start_date = Date(2006, 01, 01),
+  check_stop_date = Date(2013, 12, 31),
+  description = "Retraites des agents des collectivités locales (taux NBI)",
+)
+
 cotsoc_sal_fonc_commun_ind_maj_ref = Parameter{Int32}(
   [
     DateRangeValue(Date(2001, 05, 01), Date(2006, 06, 30), 285),
@@ -1464,7 +3188,7 @@ cotsoc_sal_fonc_commun_ind_maj_ref = Parameter{Int32}(
 
 cotsoc_sal_fonc_commun_plafond_base_solidarite = Parameter{Float32}(
   [
-    DateRangeValue(Date(2002, 01, 01), Date(2014, 12, 31), 12516.0),
+    DateRangeValue(Date(2002, 01, 01), Date(2014, 12, 31), 12516.0, comment = "TODO check. Pas dispo dans barème IPP"),
   ],
   unit = "currency",
   check_start_date = Date(2006, 01, 01),
@@ -1493,6 +3217,175 @@ cotsoc_sal_fonc_commun_pt_ind = Parameter{Float32}(
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
   description = "Valeur annuelle point de FP",
+)
+
+cotsoc_sal_fonc_commun_solidarite = RateTaxScale(
+  [
+    RateBracket(
+      threshold = [
+        DateRangeValue(Date(1983, 01, 01), Date(2014, 12, 31), 0.0),
+      ],
+      rate = [
+        DateRangeValue(Date(1983, 01, 01), Date(2014, 12, 31), 0.01),
+      ],
+    ),
+    RateBracket(
+      threshold = [
+        DateRangeValue(Date(1983, 01, 01), Date(2014, 12, 31), 4.0),
+      ],
+      rate = [
+        DateRangeValue(Date(1983, 01, 01), Date(2014, 12, 31), 0.0),
+      ],
+    ),
+  ],
+  check_start_date = Date(2006, 01, 01),
+  check_stop_date = Date(2013, 12, 31),
+  description = "Contribution exceptionnelle de solidarité (seuil d'assujetissment variable)",
+  comment = "TODO: c'est une contribution donc à mettre avec la CSG/CRDS",
+)
+
+cotsoc_sal_fonc_contract_ircantec = RateTaxScale(
+  [
+    RateBracket(
+      threshold = [
+        DateRangeValue(Date(1971, 01, 01), Date(2017, 12, 31), 0.0),
+      ],
+      rate = [
+        DateRangeValue(Date(2017, 01, 01), Date(2017, 12, 31), 0.0224),
+
+        DateRangeValue(Date(2016, 01, 01), Date(2016, 12, 31), 0.0218),
+
+        DateRangeValue(Date(2015, 01, 01), Date(2015, 12, 31), 0.0211),
+
+        DateRangeValue(Date(2014, 01, 01), Date(2014, 12, 31), 0.0203),
+
+        DateRangeValue(Date(2013, 01, 01), Date(2013, 12, 31), 0.0196),
+
+        DateRangeValue(Date(2012, 01, 01), Date(2012, 12, 31), 0.0188),
+
+        DateRangeValue(Date(2011, 01, 01), Date(2011, 12, 31), 0.0182),
+
+        DateRangeValue(Date(1989, 01, 01), Date(2010, 12, 31), 0.018),
+
+        DateRangeValue(Date(1971, 01, 01), Date(1988, 12, 31), 0.014),
+      ],
+      base = [
+        DateRangeValue(Date(1992, 01, 01), Date(2017, 12, 31), 1.25),
+
+        DateRangeValue(Date(1991, 04, 01), Date(1991, 12, 31), 1.2),
+
+        DateRangeValue(Date(1989, 01, 01), Date(1991, 03, 31), 1.09),
+
+        DateRangeValue(Date(1988, 01, 01), Date(1988, 12, 31), 1.0),
+
+        DateRangeValue(Date(1983, 01, 01), Date(1987, 12, 31), 0.8),
+
+        DateRangeValue(Date(1971, 01, 01), Date(1982, 12, 31), 0.6),
+      ],
+    ),
+    RateBracket(
+      threshold = [
+        DateRangeValue(Date(1971, 01, 01), Date(2017, 12, 31), 1.0),
+      ],
+      rate = [
+        DateRangeValue(Date(2017, 01, 01), Date(2017, 12, 31), 0.0556),
+
+        DateRangeValue(Date(2016, 01, 01), Date(2016, 12, 31), 0.054),
+
+        DateRangeValue(Date(2015, 01, 01), Date(2015, 12, 31), 0.0526),
+
+        DateRangeValue(Date(2014, 01, 01), Date(2014, 12, 31), 0.051),
+
+        DateRangeValue(Date(2013, 01, 01), Date(2013, 12, 31), 0.0498),
+
+        DateRangeValue(Date(2012, 01, 01), Date(2012, 12, 31), 0.0488),
+
+        DateRangeValue(Date(2011, 01, 01), Date(2011, 12, 31), 0.048),
+
+        DateRangeValue(Date(1989, 01, 01), Date(2010, 12, 31), 0.0476),
+
+        DateRangeValue(Date(1971, 01, 01), Date(1988, 12, 31), 0.0425),
+      ],
+      base = [
+        DateRangeValue(Date(1992, 01, 01), Date(2017, 12, 31), 1.25),
+
+        DateRangeValue(Date(1991, 04, 01), Date(1991, 12, 31), 1.2),
+
+        DateRangeValue(Date(1989, 01, 01), Date(1991, 03, 31), 1.09),
+
+        DateRangeValue(Date(1988, 01, 01), Date(1988, 12, 31), 1.0),
+
+        DateRangeValue(Date(1983, 01, 01), Date(1987, 12, 31), 0.8),
+
+        DateRangeValue(Date(1971, 01, 01), Date(1982, 12, 31), 0.6),
+      ],
+    ),
+    RateBracket(
+      threshold = [
+        DateRangeValue(Date(1992, 01, 01), Date(2017, 12, 31), 8.0),
+
+        DateRangeValue(Date(1971, 01, 01), Date(1991, 12, 31), 4.75),
+      ],
+      rate = [
+        DateRangeValue(Date(1971, 01, 01), Date(2017, 12, 31), 0.0),
+      ],
+    ),
+  ],
+  check_start_date = Date(2006, 01, 01),
+  check_stop_date = Date(2013, 12, 31),
+  description = "IRCANTEC",
+)
+
+cotsoc_sal_fonc_etat_pension = RateTaxScale(
+  [
+    RateBracket(
+      threshold = [
+        DateRangeValue(Date(2003, 01, 01), Date(2020, 12, 31), 0.0),
+      ],
+      rate = [
+        DateRangeValue(Date(2020, 01, 01), Date(2020, 12, 31), 0.1055),
+
+        DateRangeValue(Date(2019, 01, 01), Date(2019, 12, 31), 0.1028),
+
+        DateRangeValue(Date(2018, 01, 01), Date(2018, 12, 31), 0.1001),
+
+        DateRangeValue(Date(2017, 01, 01), Date(2017, 12, 31), 0.0974),
+
+        DateRangeValue(Date(2016, 01, 01), Date(2016, 12, 31), 0.0947),
+
+        DateRangeValue(Date(2015, 01, 01), Date(2015, 12, 31), 0.092),
+
+        DateRangeValue(Date(2014, 01, 01), Date(2014, 12, 31), 0.0893),
+
+        DateRangeValue(Date(2013, 01, 01), Date(2013, 12, 31), 0.0876),
+
+        DateRangeValue(Date(2012, 01, 01), Date(2012, 12, 31), 0.0839),
+
+        DateRangeValue(Date(2011, 01, 01), Date(2011, 12, 31), 0.0812),
+
+        DateRangeValue(Date(2003, 01, 01), Date(2010, 12, 31), 0.0785),
+      ],
+    ),
+  ],
+  check_start_date = Date(2006, 01, 01),
+  check_stop_date = Date(2013, 12, 31),
+  description = "Retenue pour pension civile (assiette=TI + NBI)",
+)
+
+cotsoc_sal_fonc_etat_rafp = RateTaxScale(
+  [
+    RateBracket(
+      threshold = [
+        DateRangeValue(Date(1993, 01, 01), Date(2014, 12, 31), 0.0),
+      ],
+      rate = [
+        DateRangeValue(Date(2005, 01, 01), Date(2014, 12, 31), 0.05),
+      ],
+    ),
+  ],
+  check_start_date = Date(2006, 01, 01),
+  check_stop_date = Date(2013, 12, 31),
+  description = "Régime additionnel de retraite (RAFP, totalité sauf TI et NBI, min 20% TI )",
 )
 
 cotsoc_sal_fonc_etat_rafp_plaf_assiette = Parameter{Float32}(
@@ -1547,6 +3440,80 @@ cotsoc_sal_microsocial_vente = Parameter{Float32}(
   description = "Taux pour les activités de ventes",
 )
 
+cotsoc_sal_noncadre_agff = RateTaxScale(
+  [
+    RateBracket(
+      threshold = [
+        DateRangeValue(Date(2001, 04, 01), Date(2014, 12, 31), 0.0),
+      ],
+      rate = [
+        DateRangeValue(Date(2001, 04, 01), Date(2014, 12, 31), 0.008),
+      ],
+    ),
+    RateBracket(
+      threshold = [
+        DateRangeValue(Date(2001, 04, 01), Date(2014, 12, 31), 1.0),
+      ],
+      rate = [
+        DateRangeValue(Date(2001, 04, 01), Date(2014, 12, 31), 0.009),
+      ],
+    ),
+    RateBracket(
+      threshold = [
+        DateRangeValue(Date(2001, 04, 01), Date(2014, 12, 31), 3.0),
+      ],
+      rate = [
+        DateRangeValue(Date(2001, 04, 01), Date(2014, 12, 31), 0.0),
+      ],
+    ),
+  ],
+  check_start_date = Date(2006, 01, 01),
+  check_stop_date = Date(2013, 12, 31),
+  description = "Cotisation AGFF",
+)
+
+cotsoc_sal_noncadre_arrconc = RateTaxScale(
+  [
+    RateBracket(
+      threshold = [
+        DateRangeValue(Date(2000, 01, 01), Date(2015, 12, 31), 0.0),
+      ],
+      rate = [
+        DateRangeValue(Date(2000, 01, 01), Date(2015, 12, 31), 0.0, comment = "1er tranche commune aux cadres et aux non-cadres"),
+      ],
+    ),
+    RateBracket(
+      threshold = [
+        DateRangeValue(Date(2000, 01, 01), Date(2015, 12, 31), 1.0),
+      ],
+      rate = [
+        DateRangeValue(Date(2015, 01, 01), Date(2015, 12, 31), 0.081),
+
+        DateRangeValue(Date(2014, 01, 01), Date(2014, 12, 31), 0.0805),
+
+        DateRangeValue(Date(2005, 01, 01), Date(2013, 12, 31), 0.08),
+
+        DateRangeValue(Date(2004, 01, 01), Date(2004, 12, 31), 0.07),
+
+        DateRangeValue(Date(2002, 01, 01), Date(2003, 12, 31), 0.06),
+
+        DateRangeValue(Date(2000, 01, 01), Date(2001, 12, 31), 0.05),
+      ],
+    ),
+    RateBracket(
+      threshold = [
+        DateRangeValue(Date(2003, 01, 01), Date(2015, 12, 31), 3.0),
+      ],
+      rate = [
+        DateRangeValue(Date(2003, 01, 01), Date(2015, 12, 31), 0.0),
+      ],
+    ),
+  ],
+  check_start_date = Date(2006, 01, 01),
+  check_stop_date = Date(2013, 12, 31),
+  description = "Retraite complémentaire ARRCO",
+)
+
 cotsoc_taxes_sal_taux_guy = Parameter{Float32}(
   [
     DateRangeValue(Date(2001, 01, 01), Date(2014, 12, 31), 0.0255),
@@ -1574,6 +3541,146 @@ cotsoc_taxes_sal_taux_mgr = Parameter{Float32}(
   description = "Taxes sur les salaires : Guadeloupe, Martinique, Réunion",
 )
 
+cotsoc_taxes_sal_taux_maj = RateTaxScale(
+  [
+    RateBracket(
+      threshold = [
+        DateRangeValue(Date(2001, 01, 01), Date(2014, 12, 31), 0.0),
+      ],
+      rate = [
+        DateRangeValue(Date(2001, 01, 01), Date(2014, 12, 31), 0.0),
+      ],
+    ),
+    RateBracket(
+      threshold = [
+        DateRangeValue(Date(2014, 01, 01), Date(2014, 12, 31), 7666.0),
+
+        DateRangeValue(Date(2011, 01, 01), Date(2013, 12, 31), 7604.0),
+
+        DateRangeValue(Date(2010, 01, 01), Date(2010, 12, 31), 7491.0),
+
+        DateRangeValue(Date(2009, 01, 01), Date(2009, 12, 31), 7461.0),
+
+        DateRangeValue(Date(2008, 01, 01), Date(2008, 12, 31), 7250.0),
+
+        DateRangeValue(Date(2007, 01, 01), Date(2007, 12, 31), 7156.0),
+
+        DateRangeValue(Date(2006, 01, 01), Date(2006, 12, 31), 7029.0),
+
+        DateRangeValue(Date(2005, 01, 01), Date(2005, 12, 31), 6904.0),
+
+        DateRangeValue(Date(2004, 01, 01), Date(2004, 12, 31), 6789.0),
+
+        DateRangeValue(Date(2003, 01, 01), Date(2003, 12, 31), 6675.0),
+
+        DateRangeValue(Date(2002, 01, 01), Date(2002, 12, 31), 6563.0),
+
+        DateRangeValue(Date(2001, 01, 01), Date(2001, 12, 31), 6459.26),
+      ],
+      rate = [
+        DateRangeValue(Date(2001, 01, 01), Date(2014, 12, 31), 0.0425),
+      ],
+    ),
+    RateBracket(
+      threshold = [
+        DateRangeValue(Date(2014, 01, 01), Date(2014, 12, 31), 15308.0),
+
+        DateRangeValue(Date(2011, 01, 01), Date(2013, 12, 31), 15185.0),
+
+        DateRangeValue(Date(2010, 01, 01), Date(2010, 12, 31), 14960.0),
+
+        DateRangeValue(Date(2009, 01, 01), Date(2009, 12, 31), 14902.0),
+
+        DateRangeValue(Date(2008, 01, 01), Date(2008, 12, 31), 14481.0),
+
+        DateRangeValue(Date(2007, 01, 01), Date(2007, 12, 31), 14295.0),
+
+        DateRangeValue(Date(2006, 01, 01), Date(2006, 12, 31), 14042.0),
+
+        DateRangeValue(Date(2005, 01, 01), Date(2005, 12, 31), 13793.0),
+
+        DateRangeValue(Date(2004, 01, 01), Date(2004, 12, 31), 13563.0),
+
+        DateRangeValue(Date(2003, 01, 01), Date(2003, 12, 31), 13337.0),
+
+        DateRangeValue(Date(2002, 01, 01), Date(2002, 12, 31), 13113.0),
+
+        DateRangeValue(Date(2001, 01, 01), Date(2001, 12, 31), 12906.33),
+      ],
+      rate = [
+        DateRangeValue(Date(2001, 01, 01), Date(2014, 12, 31), 0.0935),
+      ],
+    ),
+    RateBracket(
+      threshold = [
+        DateRangeValue(Date(2014, 01, 01), Date(2014, 12, 31), 151208.0),
+
+        DateRangeValue(Date(2013, 01, 01), Date(2013, 12, 31), 150000.0),
+      ],
+      rate = [
+        DateRangeValue(Date(2013, 01, 01), Date(2014, 12, 31), 0.1575),
+      ],
+    ),
+  ],
+  check_start_date = Date(2006, 01, 01),
+  check_stop_date = Date(2013, 12, 31),
+  description = "Taxes sur les salaires : taux majorés (France métropolitaine seulement)",
+)
+
+cotsoc_tehr = RateTaxScale(
+  [
+    RateBracket(
+      threshold = [
+        DateRangeValue(Date(2013, 01, 01), Date(2014, 12, 31), 1000000.0),
+      ],
+      rate = [
+        DateRangeValue(Date(2013, 01, 01), Date(2014, 12, 31), 0.5),
+      ],
+    ),
+  ],
+  check_start_date = Date(2006, 01, 01),
+  check_stop_date = Date(2013, 12, 31),
+  description = "Taxes exceptionnelles sur les hauts revenus",
+)
+
+crds_act = RateTaxScale(
+  [
+    RateBracket(
+      threshold = [
+        DateRangeValue(Date(1998, 01, 01), Date(2014, 12, 31), 0.0),
+      ],
+      rate = [
+        DateRangeValue(Date(1998, 01, 01), Date(2014, 12, 31), 0.005),
+      ],
+      base = [
+        DateRangeValue(Date(2012, 01, 01), Date(2014, 12, 31), 0.9825),
+
+        DateRangeValue(Date(2005, 01, 01), Date(2011, 12, 31), 0.97),
+
+        DateRangeValue(Date(1998, 01, 01), Date(2004, 12, 31), 0.95),
+      ],
+    ),
+    RateBracket(
+      threshold = [
+        DateRangeValue(Date(1998, 01, 01), Date(2014, 12, 31), 4.0),
+      ],
+      rate = [
+        DateRangeValue(Date(1998, 01, 01), Date(2014, 12, 31), 0.005),
+      ],
+      base = [
+        DateRangeValue(Date(2011, 01, 01), Date(2014, 12, 31), 1.0),
+
+        DateRangeValue(Date(2005, 01, 01), Date(2010, 12, 31), 0.97),
+
+        DateRangeValue(Date(1998, 01, 01), Date(2004, 12, 31), 0.95),
+      ],
+    ),
+  ],
+  check_start_date = Date(2006, 01, 01),
+  check_stop_date = Date(2013, 12, 31),
+  description = "Revenus d'activité, du chômage et des préretraites",
+)
+
 crds_capital = Parameter{Float32}(
   [
     DateRangeValue(Date(1998, 01, 01), Date(2013, 12, 31), 0.005),
@@ -1581,6 +3688,92 @@ crds_capital = Parameter{Float32}(
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
   description = "Revenus du capital",
+)
+
+crds_rst = RateTaxScale(
+  [
+    RateBracket(
+      threshold = [
+        DateRangeValue(Date(1998, 01, 01), Date(2014, 12, 31), 0.0),
+      ],
+      rate = [
+        DateRangeValue(Date(1998, 01, 01), Date(2014, 12, 31), 0.005),
+      ],
+    ),
+  ],
+  check_start_date = Date(2006, 01, 01),
+  check_stop_date = Date(2013, 12, 31),
+  description = "Retraites et pensions d'invalidité",
+)
+
+csg_act_deduc = RateTaxScale(
+  [
+    RateBracket(
+      threshold = [
+        DateRangeValue(Date(1998, 01, 01), Date(2014, 12, 31), 0.0),
+      ],
+      rate = [
+        DateRangeValue(Date(1998, 01, 01), Date(2014, 12, 31), 0.051),
+      ],
+      base = [
+        DateRangeValue(Date(2012, 01, 01), Date(2014, 12, 31), 0.9825),
+
+        DateRangeValue(Date(2005, 01, 01), Date(2011, 12, 31), 0.97),
+
+        DateRangeValue(Date(1998, 01, 01), Date(2004, 12, 31), 0.95),
+      ],
+    ),
+    RateBracket(
+      threshold = [
+        DateRangeValue(Date(2011, 01, 01), Date(2014, 12, 31), 4.0),
+      ],
+      rate = [
+        DateRangeValue(Date(2011, 01, 01), Date(2014, 12, 31), 0.051),
+      ],
+      base = [
+        DateRangeValue(Date(2011, 01, 01), Date(2014, 12, 31), 1.0),
+      ],
+    ),
+  ],
+  check_start_date = Date(2006, 01, 01),
+  check_stop_date = Date(2013, 12, 31),
+  description = "CSG déductible",
+)
+
+csg_act_impos = RateTaxScale(
+  [
+    RateBracket(
+      threshold = [
+        DateRangeValue(Date(1991, 02, 01), Date(2014, 12, 31), 0.0),
+      ],
+      rate = [
+        DateRangeValue(Date(1993, 07, 01), Date(2014, 12, 31), 0.024),
+
+        DateRangeValue(Date(1991, 02, 01), Date(1993, 06, 30), 0.011),
+      ],
+      base = [
+        DateRangeValue(Date(2012, 01, 01), Date(2014, 12, 31), 0.9825),
+
+        DateRangeValue(Date(2005, 01, 01), Date(2011, 12, 31), 0.97),
+
+        DateRangeValue(Date(1991, 02, 01), Date(2004, 12, 31), 0.95),
+      ],
+    ),
+    RateBracket(
+      threshold = [
+        DateRangeValue(Date(2011, 07, 01), Date(2014, 12, 31), 4.0),
+      ],
+      rate = [
+        DateRangeValue(Date(2011, 07, 01), Date(2014, 12, 31), 0.024),
+      ],
+      base = [
+        DateRangeValue(Date(2011, 07, 01), Date(2014, 12, 31), 1.0),
+      ],
+    ),
+  ],
+  check_start_date = Date(2006, 01, 01),
+  check_stop_date = Date(2013, 12, 31),
+  description = "CSG imposable",
 )
 
 csg_capital_deduc = Parameter{Float32}(
@@ -1611,6 +3804,366 @@ csg_chom_min_exo = Parameter{Float32}(
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
   description = "Revenu minimum imposable (en multiple du smic annuel brut)",
+)
+
+csg_chom_plein_deduc = RateTaxScale(
+  [
+    RateBracket(
+      threshold = [
+        DateRangeValue(Date(1998, 01, 01), Date(2014, 12, 31), 0.0),
+      ],
+      rate = [
+        DateRangeValue(Date(1998, 01, 01), Date(2014, 12, 31), 0.038),
+      ],
+      base = [
+        DateRangeValue(Date(2012, 01, 01), Date(2014, 12, 31), 0.9825),
+
+        DateRangeValue(Date(2005, 01, 01), Date(2011, 12, 31), 0.97),
+
+        DateRangeValue(Date(1998, 01, 01), Date(2004, 12, 31), 0.95),
+      ],
+    ),
+    RateBracket(
+      threshold = [
+        DateRangeValue(Date(1998, 01, 01), Date(2014, 12, 31), 4.0),
+      ],
+      rate = [
+        DateRangeValue(Date(1998, 01, 01), Date(2014, 12, 31), 0.038),
+      ],
+      base = [
+        DateRangeValue(Date(2012, 01, 01), Date(2014, 12, 31), 1.0),
+
+        DateRangeValue(Date(2005, 01, 01), Date(2011, 12, 31), 0.97),
+
+        DateRangeValue(Date(1998, 01, 01), Date(2004, 12, 31), 0.95),
+      ],
+    ),
+  ],
+  check_start_date = Date(2006, 01, 01),
+  check_stop_date = Date(2013, 12, 31),
+  description = "CSG déductible",
+)
+
+csg_chom_plein_impos = RateTaxScale(
+  [
+    RateBracket(
+      threshold = [
+        DateRangeValue(Date(1998, 01, 01), Date(2014, 12, 31), 0.0),
+      ],
+      rate = [
+        DateRangeValue(Date(1998, 01, 01), Date(2014, 12, 31), 0.024),
+      ],
+      base = [
+        DateRangeValue(Date(2012, 01, 01), Date(2014, 12, 31), 0.9825),
+
+        DateRangeValue(Date(2005, 01, 01), Date(2011, 12, 31), 0.97),
+
+        DateRangeValue(Date(1998, 01, 01), Date(2004, 12, 31), 0.95),
+      ],
+    ),
+    RateBracket(
+      threshold = [
+        DateRangeValue(Date(1998, 01, 01), Date(2014, 12, 31), 4.0),
+      ],
+      rate = [
+        DateRangeValue(Date(1998, 01, 01), Date(2014, 12, 31), 0.024),
+      ],
+      base = [
+        DateRangeValue(Date(2012, 01, 01), Date(2014, 12, 31), 1.0),
+
+        DateRangeValue(Date(2005, 01, 01), Date(2011, 12, 31), 0.97),
+
+        DateRangeValue(Date(1998, 01, 01), Date(2004, 12, 31), 0.95),
+      ],
+    ),
+  ],
+  check_start_date = Date(2006, 01, 01),
+  check_stop_date = Date(2013, 12, 31),
+  description = "CSG non déductible",
+)
+
+csg_chom_reduit_deduc = RateTaxScale(
+  [
+    RateBracket(
+      threshold = [
+        DateRangeValue(Date(1997, 01, 01), Date(2014, 12, 31), 0.0),
+      ],
+      rate = [
+        DateRangeValue(Date(1997, 01, 01), Date(2014, 12, 31), 0.038),
+      ],
+      base = [
+        DateRangeValue(Date(2012, 01, 01), Date(2014, 12, 31), 0.9825),
+
+        DateRangeValue(Date(2005, 01, 01), Date(2011, 12, 31), 0.97),
+
+        DateRangeValue(Date(1997, 01, 01), Date(2004, 12, 31), 0.95),
+      ],
+    ),
+    RateBracket(
+      threshold = [
+        DateRangeValue(Date(1998, 01, 01), Date(2014, 12, 31), 4.0),
+      ],
+      rate = [
+        DateRangeValue(Date(1998, 01, 01), Date(2014, 12, 31), 0.038),
+      ],
+      base = [
+        DateRangeValue(Date(2012, 01, 01), Date(2014, 12, 31), 1.0),
+
+        DateRangeValue(Date(2005, 01, 01), Date(2011, 12, 31), 0.97),
+
+        DateRangeValue(Date(1998, 01, 01), Date(2004, 12, 31), 0.95),
+      ],
+    ),
+  ],
+  check_start_date = Date(2006, 01, 01),
+  check_stop_date = Date(2013, 12, 31),
+  description = "CSG déductible",
+)
+
+csg_chom_reduit_impos = RateTaxScale(
+  [
+    RateBracket(
+      threshold = [
+        DateRangeValue(Date(1998, 01, 01), Date(2014, 12, 31), 0.0),
+      ],
+      rate = [
+        DateRangeValue(Date(1998, 01, 01), Date(2014, 12, 31), 0.0),
+      ],
+      base = [
+        DateRangeValue(Date(2012, 01, 01), Date(2014, 12, 31), 0.9825),
+
+        DateRangeValue(Date(2005, 01, 01), Date(2011, 12, 31), 0.97),
+
+        DateRangeValue(Date(1998, 01, 01), Date(2004, 12, 31), 0.95),
+      ],
+    ),
+    RateBracket(
+      threshold = [
+        DateRangeValue(Date(1998, 01, 01), Date(2014, 12, 31), 4.0),
+      ],
+      rate = [
+        DateRangeValue(Date(1998, 01, 01), Date(2014, 12, 31), 0.0),
+      ],
+      base = [
+        DateRangeValue(Date(2012, 01, 01), Date(2014, 12, 31), 1.0),
+
+        DateRangeValue(Date(2005, 01, 01), Date(2011, 12, 31), 0.97),
+
+        DateRangeValue(Date(1998, 01, 01), Date(2004, 12, 31), 0.95),
+      ],
+    ),
+  ],
+  check_start_date = Date(2006, 01, 01),
+  check_stop_date = Date(2013, 12, 31),
+  description = "CSG imposable",
+)
+
+csg_indemn_deduc = RateTaxScale(
+  [
+    RateBracket(
+      threshold = [
+        DateRangeValue(Date(1997, 01, 01), Date(2014, 12, 31), 0.0),
+      ],
+      rate = [
+        DateRangeValue(Date(1997, 01, 01), Date(2014, 12, 31), 0.038),
+      ],
+    ),
+  ],
+  check_start_date = Date(2006, 01, 01),
+  check_stop_date = Date(2013, 12, 31),
+  description = "CSG déductible",
+)
+
+csg_indemn_impos = RateTaxScale(
+  [
+    RateBracket(
+      threshold = [
+        DateRangeValue(Date(1998, 01, 01), Date(2014, 12, 31), 0.0),
+      ],
+      rate = [
+        DateRangeValue(Date(1998, 01, 01), Date(2014, 12, 31), 0.024),
+      ],
+    ),
+  ],
+  check_start_date = Date(2006, 01, 01),
+  check_stop_date = Date(2013, 12, 31),
+  description = "CSG non déductible",
+)
+
+csg_int_deduc = RateTaxScale(
+  [
+    RateBracket(
+      threshold = [
+        DateRangeValue(Date(1998, 01, 01), Date(2014, 12, 31), 0.0),
+      ],
+      rate = [
+        DateRangeValue(Date(1998, 01, 01), Date(2014, 12, 31), 0.051),
+      ],
+    ),
+  ],
+  check_start_date = Date(2006, 01, 01),
+  check_stop_date = Date(2013, 12, 31),
+  description = "CSG déductible",
+)
+
+csg_int_impos = RateTaxScale(
+  [
+    RateBracket(
+      threshold = [
+        DateRangeValue(Date(1998, 01, 01), Date(2014, 12, 31), 0.0),
+      ],
+      rate = [
+        DateRangeValue(Date(1998, 01, 01), Date(2014, 12, 31), 0.024),
+      ],
+    ),
+  ],
+  check_start_date = Date(2006, 01, 01),
+  check_stop_date = Date(2013, 12, 31),
+  description = "CSG imposable",
+)
+
+csg_preretraite_plein_deduc = RateTaxScale(
+  [
+    RateBracket(
+      threshold = [
+        DateRangeValue(Date(1997, 01, 01), Date(2014, 12, 31), 0.0),
+      ],
+      rate = [
+        DateRangeValue(Date(2005, 01, 01), Date(2014, 12, 31), 0.042),
+
+        DateRangeValue(Date(1998, 01, 01), Date(2004, 12, 31), 0.038),
+
+        DateRangeValue(Date(1997, 01, 01), Date(1997, 12, 31), 0.042),
+      ],
+    ),
+  ],
+  check_start_date = Date(2006, 01, 01),
+  check_stop_date = Date(2013, 12, 31),
+  description = "CSG déductible",
+)
+
+csg_preretraite_plein_impos = RateTaxScale(
+  [
+    RateBracket(
+      threshold = [
+        DateRangeValue(Date(1997, 01, 01), Date(2014, 12, 31), 0.0),
+      ],
+      rate = [
+        DateRangeValue(Date(2007, 10, 11), Date(2014, 12, 31), 0.033),
+
+        DateRangeValue(Date(1998, 01, 01), Date(2007, 10, 10), 0.024),
+      ],
+    ),
+  ],
+  check_start_date = Date(2006, 01, 01),
+  check_stop_date = Date(2013, 12, 31),
+  description = "CSG non déductible",
+)
+
+csg_preretraite_reduit_deduc = RateTaxScale(
+  [
+    RateBracket(
+      threshold = [
+        DateRangeValue(Date(1997, 01, 01), Date(2014, 12, 31), 0.0),
+      ],
+      rate = [
+        DateRangeValue(Date(2008, 01, 01), Date(2014, 12, 31), 0.038),
+
+        DateRangeValue(Date(1997, 01, 01), Date(2007, 12, 31), 0.0),
+      ],
+    ),
+  ],
+  check_start_date = Date(2006, 01, 01),
+  check_stop_date = Date(2013, 12, 31),
+  description = "CSG déductible",
+)
+
+csg_preretraite_reduit_impos = RateTaxScale(
+  [
+    RateBracket(
+      threshold = [
+        DateRangeValue(Date(1997, 01, 01), Date(2014, 12, 31), 0.0),
+      ],
+      rate = [
+        DateRangeValue(Date(1997, 01, 01), Date(2014, 12, 31), 0.0),
+      ],
+    ),
+  ],
+  check_start_date = Date(2006, 01, 01),
+  check_stop_date = Date(2013, 12, 31),
+  description = "CSG non déductible",
+)
+
+csg_retraite_plein_deduc = RateTaxScale(
+  [
+    RateBracket(
+      threshold = [
+        DateRangeValue(Date(1991, 02, 01), Date(2014, 12, 31), 0.0),
+      ],
+      rate = [
+        DateRangeValue(Date(2005, 01, 01), Date(2014, 12, 31), 0.042),
+
+        DateRangeValue(Date(1998, 01, 01), Date(2004, 12, 31), 0.038),
+
+        DateRangeValue(Date(1997, 01, 01), Date(1997, 12, 31), 0.042),
+      ],
+    ),
+  ],
+  check_start_date = Date(2006, 01, 01),
+  check_stop_date = Date(2013, 12, 31),
+  description = "CSG déductible",
+)
+
+csg_retraite_plein_impos = RateTaxScale(
+  [
+    RateBracket(
+      threshold = [
+        DateRangeValue(Date(1991, 02, 01), Date(2014, 12, 31), 0.0),
+      ],
+      rate = [
+        DateRangeValue(Date(1993, 07, 01), Date(2014, 12, 31), 0.024),
+
+        DateRangeValue(Date(1991, 02, 01), Date(1993, 06, 30), 0.011),
+      ],
+    ),
+  ],
+  check_start_date = Date(2006, 01, 01),
+  check_stop_date = Date(2013, 12, 31),
+  description = "CSG non déductible",
+)
+
+csg_retraite_reduit_deduc = RateTaxScale(
+  [
+    RateBracket(
+      threshold = [
+        DateRangeValue(Date(1997, 01, 01), Date(2014, 12, 31), 0.0),
+      ],
+      rate = [
+        DateRangeValue(Date(1998, 01, 01), Date(2014, 12, 31), 0.038),
+
+        DateRangeValue(Date(1997, 01, 01), Date(1997, 12, 31), 0.01),
+      ],
+    ),
+  ],
+  check_start_date = Date(2006, 01, 01),
+  check_stop_date = Date(2013, 12, 31),
+  description = "CSG déductible",
+)
+
+csg_retraite_reduit_impos = RateTaxScale(
+  [
+    RateBracket(
+      threshold = [
+        DateRangeValue(Date(1997, 01, 01), Date(2014, 12, 31), 0.0),
+      ],
+      rate = [
+        DateRangeValue(Date(1997, 01, 01), Date(2014, 12, 31), 0.0),
+      ],
+    ),
+  ],
+  check_start_date = Date(2006, 01, 01),
+  check_stop_date = Date(2013, 12, 31),
+  description = "CSG non déductible",
 )
 
 fam_aeeh_age = Parameter{Int32}(
@@ -2943,7 +5496,7 @@ fonc_indem_resid_min = Parameter{Int32}(
     DateRangeValue(Date(2011, 01, 01), Date(2011, 12, 31), 299),
     DateRangeValue(Date(2012, 01, 01), Date(2012, 07, 06), 306),
     DateRangeValue(Date(2012, 07, 07), Date(2012, 12, 31), 312),
-    DateRangeValue(Date(2013, 01, 01), Date(2014, 12, 31), 313),
+    DateRangeValue(Date(2013, 01, 01), Date(2014, 12, 31), 313, comment = "TODO: check in july 2014 for \"fin\""),
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
@@ -2990,7 +5543,7 @@ fonc_supp_fam_IM_min = Parameter{Int32}(
   [
     DateRangeValue(Date(1999, 06, 13), Date(1999, 11, 13), 447),
     DateRangeValue(Date(1999, 11, 14), Date(2006, 10, 31), 448),
-    DateRangeValue(Date(2006, 11, 01), Date(2014, 12, 31), 449),
+    DateRangeValue(Date(2006, 11, 01), Date(2014, 12, 31), 449, comment = "TODO: check in july 2014 for \"fin\""),
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
@@ -3169,6 +5722,271 @@ ir_autre_hsup_exo = Parameter{Bool}(
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
   description = "Exonération des heures supplémentaires",
+)
+
+ir_bareme = RateTaxScale(
+  [
+    RateBracket(
+      threshold = [
+        DateRangeValue(Date(2001, 01, 01), Date(2014, 12, 31), 0.0),
+      ],
+      rate = [
+        DateRangeValue(Date(2001, 01, 01), Date(2014, 12, 31), 0.0),
+      ],
+    ),
+    RateBracket(
+      threshold = [
+        DateRangeValue(Date(2014, 01, 01), Date(2014, 12, 31), 6041.0),
+
+        DateRangeValue(Date(2013, 01, 01), Date(2013, 12, 31), 6011.0),
+
+        DateRangeValue(Date(2010, 01, 01), Date(2012, 12, 31), 5963.0),
+
+        DateRangeValue(Date(2009, 01, 01), Date(2009, 12, 31), 5875.0),
+
+        DateRangeValue(Date(2008, 01, 01), Date(2008, 12, 31), 5852.0),
+
+        DateRangeValue(Date(2007, 01, 01), Date(2007, 12, 31), 5687.0),
+
+        DateRangeValue(Date(2006, 01, 01), Date(2006, 12, 31), 5614.0),
+
+        DateRangeValue(Date(2005, 01, 01), Date(2005, 12, 31), 4412.0),
+
+        DateRangeValue(Date(2004, 01, 01), Date(2004, 12, 31), 4334.0),
+
+        DateRangeValue(Date(2003, 01, 01), Date(2003, 12, 31), 4262.0),
+
+        DateRangeValue(Date(2002, 01, 01), Date(2002, 12, 31), 4191.0),
+
+        DateRangeValue(Date(2001, 01, 01), Date(2001, 12, 31), 4121.0),
+      ],
+      rate = [
+        DateRangeValue(Date(2006, 01, 01), Date(2014, 12, 31), 0.055),
+
+        DateRangeValue(Date(2003, 01, 01), Date(2005, 12, 31), 0.0683),
+
+        DateRangeValue(Date(2001, 01, 01), Date(2002, 12, 31), 0.0705),
+      ],
+    ),
+    RateBracket(
+      threshold = [
+        DateRangeValue(Date(2014, 01, 01), Date(2014, 12, 31), 12051.0),
+
+        DateRangeValue(Date(2013, 01, 01), Date(2013, 12, 31), 11991.0),
+
+        DateRangeValue(Date(2010, 01, 01), Date(2012, 12, 31), 11896.0),
+
+        DateRangeValue(Date(2009, 01, 01), Date(2009, 12, 31), 11720.0),
+
+        DateRangeValue(Date(2008, 01, 01), Date(2008, 12, 31), 11673.0),
+
+        DateRangeValue(Date(2007, 01, 01), Date(2007, 12, 31), 11344.0),
+
+        DateRangeValue(Date(2006, 01, 01), Date(2006, 12, 31), 11198.0),
+
+        DateRangeValue(Date(2005, 01, 01), Date(2005, 12, 31), 8677.0),
+
+        DateRangeValue(Date(2004, 01, 01), Date(2004, 12, 31), 8524.0),
+
+        DateRangeValue(Date(2003, 01, 01), Date(2003, 12, 31), 8382.0),
+
+        DateRangeValue(Date(2002, 01, 01), Date(2002, 12, 31), 8242.0),
+
+        DateRangeValue(Date(2001, 01, 01), Date(2001, 12, 31), 8104.0),
+      ],
+      rate = [
+        DateRangeValue(Date(2006, 01, 01), Date(2014, 12, 31), 0.14),
+
+        DateRangeValue(Date(2002, 01, 01), Date(2005, 12, 31), 0.1914),
+
+        DateRangeValue(Date(2001, 01, 01), Date(2001, 12, 31), 0.21),
+      ],
+    ),
+    RateBracket(
+      threshold = [
+        DateRangeValue(Date(2014, 01, 01), Date(2014, 12, 31), 26764.0),
+
+        DateRangeValue(Date(2013, 01, 01), Date(2013, 12, 31), 26631.0),
+
+        DateRangeValue(Date(2010, 01, 01), Date(2012, 12, 31), 26420.0),
+
+        DateRangeValue(Date(2009, 01, 01), Date(2009, 12, 31), 26030.0),
+
+        DateRangeValue(Date(2008, 01, 01), Date(2008, 12, 31), 25926.0),
+
+        DateRangeValue(Date(2007, 01, 01), Date(2007, 12, 31), 25195.0),
+
+        DateRangeValue(Date(2006, 01, 01), Date(2006, 12, 31), 24872.0),
+
+        DateRangeValue(Date(2005, 01, 01), Date(2005, 12, 31), 15274.0),
+
+        DateRangeValue(Date(2004, 01, 01), Date(2004, 12, 31), 15004.0),
+
+        DateRangeValue(Date(2003, 01, 01), Date(2003, 12, 31), 14753.0),
+
+        DateRangeValue(Date(2002, 01, 01), Date(2002, 12, 31), 14506.0),
+
+        DateRangeValue(Date(2001, 01, 01), Date(2001, 12, 31), 14264.0),
+      ],
+      rate = [
+        DateRangeValue(Date(2006, 01, 01), Date(2014, 12, 31), 0.3),
+
+        DateRangeValue(Date(2003, 01, 01), Date(2005, 12, 31), 0.2826),
+
+        DateRangeValue(Date(2002, 01, 01), Date(2002, 12, 31), 0.2914),
+
+        DateRangeValue(Date(2001, 01, 01), Date(2001, 12, 31), 0.31),
+      ],
+    ),
+    RateBracket(
+      threshold = [
+        DateRangeValue(Date(2014, 01, 01), Date(2014, 12, 31), 71754.0),
+
+        DateRangeValue(Date(2013, 01, 01), Date(2013, 12, 31), 71397.0),
+
+        DateRangeValue(Date(2010, 01, 01), Date(2012, 12, 31), 70830.0),
+
+        DateRangeValue(Date(2009, 01, 01), Date(2009, 12, 31), 69783.0),
+
+        DateRangeValue(Date(2008, 01, 01), Date(2008, 12, 31), 69505.0),
+
+        DateRangeValue(Date(2007, 01, 01), Date(2007, 12, 31), 67546.0),
+
+        DateRangeValue(Date(2006, 01, 01), Date(2006, 12, 31), 66679.0),
+
+        DateRangeValue(Date(2005, 01, 01), Date(2005, 12, 31), 24731.0),
+
+        DateRangeValue(Date(2004, 01, 01), Date(2004, 12, 31), 24294.0),
+
+        DateRangeValue(Date(2003, 01, 01), Date(2003, 12, 31), 23888.0),
+
+        DateRangeValue(Date(2002, 01, 01), Date(2002, 12, 31), 23489.0),
+
+        DateRangeValue(Date(2001, 01, 01), Date(2001, 12, 31), 23096.0),
+      ],
+      rate = [
+        DateRangeValue(Date(2010, 01, 01), Date(2014, 12, 31), 0.41),
+
+        DateRangeValue(Date(2006, 01, 01), Date(2009, 12, 31), 0.4),
+
+        DateRangeValue(Date(2003, 01, 01), Date(2005, 12, 31), 0.3738),
+
+        DateRangeValue(Date(2002, 01, 01), Date(2002, 12, 31), 0.3854),
+
+        DateRangeValue(Date(2001, 01, 01), Date(2001, 12, 31), 0.41),
+      ],
+    ),
+    RateBracket(
+      threshold = [
+        DateRangeValue(Date(2014, 01, 01), Date(2014, 12, 31), 151956.0),
+
+        DateRangeValue(Date(2013, 01, 01), Date(2013, 12, 31), 151200.0),
+
+        DateRangeValue(Date(2012, 01, 01), Date(2012, 12, 31), 150000.0),
+
+        DateRangeValue(Date(2005, 01, 01), Date(2005, 12, 31), 40241.0),
+
+        DateRangeValue(Date(2004, 01, 01), Date(2004, 12, 31), 39529.0),
+
+        DateRangeValue(Date(2003, 01, 01), Date(2003, 12, 31), 38868.0),
+
+        DateRangeValue(Date(2002, 01, 01), Date(2002, 12, 31), 38218.0),
+
+        DateRangeValue(Date(2001, 01, 01), Date(2001, 12, 31), 37579.0),
+      ],
+      rate = [
+        DateRangeValue(Date(2012, 01, 01), Date(2014, 12, 31), 0.45),
+
+        DateRangeValue(Date(2003, 01, 01), Date(2005, 12, 31), 0.4262),
+
+        DateRangeValue(Date(2002, 01, 01), Date(2002, 12, 31), 0.4394),
+
+        DateRangeValue(Date(2001, 01, 01), Date(2001, 12, 31), 0.4675),
+      ],
+    ),
+    RateBracket(
+      threshold = [
+        DateRangeValue(Date(2005, 01, 01), Date(2005, 12, 31), 49624.0),
+
+        DateRangeValue(Date(2004, 01, 01), Date(2004, 12, 31), 48747.0),
+
+        DateRangeValue(Date(2003, 01, 01), Date(2003, 12, 31), 47932.0),
+
+        DateRangeValue(Date(2002, 01, 01), Date(2002, 12, 31), 47131.0),
+
+        DateRangeValue(Date(2001, 01, 01), Date(2001, 12, 31), 46343.0),
+      ],
+      rate = [
+        DateRangeValue(Date(2003, 01, 01), Date(2005, 12, 31), 0.4809),
+
+        DateRangeValue(Date(2002, 01, 01), Date(2002, 12, 31), 0.4958),
+
+        DateRangeValue(Date(2001, 01, 01), Date(2001, 12, 31), 0.5275),
+      ],
+    ),
+  ],
+  unit = "currency",
+  check_start_date = Date(2006, 01, 01),
+  check_stop_date = Date(2013, 12, 31),
+  description = "Tranches de l'IR",
+)
+
+ir_cehr = RateTaxScale(
+  [
+    RateBracket(
+      threshold = [
+        DateRangeValue(Date(2011, 01, 01), Date(2013, 12, 31), 0.0),
+      ],
+      rate = [
+        DateRangeValue(Date(2011, 01, 01), Date(2013, 12, 31), 0.0),
+      ],
+    ),
+    RateBracket(
+      threshold = [
+        DateRangeValue(Date(2011, 01, 01), Date(2013, 12, 31), 250000.0),
+      ],
+      rate = [
+        DateRangeValue(Date(2011, 01, 01), Date(2013, 12, 31), 0.03),
+      ],
+    ),
+    RateBracket(
+      threshold = [
+        DateRangeValue(Date(2011, 01, 01), Date(2013, 12, 31), 500000.0),
+      ],
+      rate = [
+        DateRangeValue(Date(2011, 01, 01), Date(2013, 12, 31), 0.04),
+      ],
+    ),
+  ],
+  unit = "currency",
+  check_start_date = Date(2006, 01, 01),
+  check_stop_date = Date(2013, 12, 31),
+  description = "Contribution exceptionnelle sur les hauts revenus",
+)
+
+ir_cesthra = RateTaxScale(
+  [
+    RateBracket(
+      threshold = [
+        DateRangeValue(Date(2012, 01, 01), Date(2013, 12, 31), 0.0),
+      ],
+      rate = [
+        DateRangeValue(Date(2012, 01, 01), Date(2013, 12, 31), 0.0),
+      ],
+    ),
+    RateBracket(
+      threshold = [
+        DateRangeValue(Date(2012, 01, 01), Date(2013, 12, 31), 1000000.0),
+      ],
+      rate = [
+        DateRangeValue(Date(2012, 01, 01), Date(2013, 12, 31), 0.75),
+      ],
+    ),
+  ],
+  unit = "currency",
+  check_start_date = Date(2006, 01, 01),
+  check_stop_date = Date(2013, 12, 31),
+  description = "Contribution exceptionnelle de solidarité sur les très hauts revenus d'activité",
 )
 
 ir_charges_deductibles_acc75a_max = Parameter{Int32}(
@@ -3392,7 +6210,7 @@ ir_credits_impot_aidper_max = Parameter{Int32}(
 
 ir_credits_impot_aidper_pac1 = Parameter{Int32}(
   [
-    DateRangeValue(Date(2002, 01, 01), Date(2013, 12, 31), 400),
+    DateRangeValue(Date(2002, 01, 01), Date(2013, 12, 31), 400, comment = "TODO: 400 par pac"),
   ],
   unit = "currency",
   check_start_date = Date(2006, 01, 01),
@@ -4543,7 +7361,7 @@ ir_plus_values_caprisque = Parameter{Float32}(
     DateRangeValue(Date(2002, 01, 01), Date(2007, 12, 31), 0.16),
     DateRangeValue(Date(2008, 01, 01), Date(2010, 12, 31), 0.18),
     DateRangeValue(Date(2011, 01, 01), Date(2011, 12, 31), 0.19),
-    DateRangeValue(Date(2012, 01, 01), Date(2013, 12, 31), 0.24),
+    DateRangeValue(Date(2012, 01, 01), Date(2013, 12, 31), 0.24, comment = "TODO: Check 2013"),
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
@@ -4573,7 +7391,7 @@ ir_plus_values_taux1 = Parameter{Float32}(
     DateRangeValue(Date(2002, 01, 01), Date(2007, 12, 31), 0.16),
     DateRangeValue(Date(2008, 01, 01), Date(2010, 12, 31), 0.18),
     DateRangeValue(Date(2011, 01, 01), Date(2011, 12, 31), 0.19),
-    DateRangeValue(Date(2012, 01, 01), Date(2013, 12, 31), 0.24),
+    DateRangeValue(Date(2012, 01, 01), Date(2013, 12, 31), 0.24, comment = "TODO: à partir de 2013: imposition au barême progressif de l'ir avec abattement de  20 % (détention 2 à 4 ans), 30 % (4-6 ans), 40% (au-delà)"),
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
@@ -5408,7 +8226,7 @@ ir_reductions_impots_invlst_taux_xb = Parameter{Float32}(
 
 ir_reductions_impots_invlst_taux_xc = Parameter{Float32}(
   [
-    DateRangeValue(Date(2004, 01, 01), Date(2013, 12, 31), 0.25),
+    DateRangeValue(Date(2004, 01, 01), Date(2013, 12, 31), 0.25, comment = "TODO: check 2013"),
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
@@ -5451,7 +8269,7 @@ ir_reductions_impots_invlst_taux_xg = Parameter{Float32}(
   [
     DateRangeValue(Date(2004, 01, 01), Date(2004, 12, 31), 0.1),
     DateRangeValue(Date(2005, 01, 01), Date(2010, 12, 31), 0.4),
-    DateRangeValue(Date(2011, 01, 01), Date(2013, 12, 31), 0.36),
+    DateRangeValue(Date(2011, 01, 01), Date(2013, 12, 31), 0.36, comment = "TODO: check 2013"),
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
@@ -5462,7 +8280,7 @@ ir_reductions_impots_invlst_taux_xh = Parameter{Float32}(
   [
     DateRangeValue(Date(2004, 01, 01), Date(2004, 12, 31), 0.1),
     DateRangeValue(Date(2005, 01, 01), Date(2010, 12, 31), 0.2),
-    DateRangeValue(Date(2011, 01, 01), Date(2013, 12, 31), 0.18),
+    DateRangeValue(Date(2011, 01, 01), Date(2013, 12, 31), 0.18, comment = "TODO: check 2013"),
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
@@ -5665,7 +8483,7 @@ ir_reductions_impots_invrev_taux_xg = Parameter{Float32}(
 ir_reductions_impots_locmeu_max = Parameter{Int32}(
   [
     DateRangeValue(Date(2009, 01, 01), Date(2010, 12, 31), 300000),
-    DateRangeValue(Date(2011, 01, 01), Date(2013, 12, 31), 300000),
+    DateRangeValue(Date(2011, 01, 01), Date(2013, 12, 31), 300000, comment = "suppr"),
   ],
   unit = "currency",
   check_start_date = Date(2006, 01, 01),
@@ -6264,7 +9082,7 @@ ir_rpns_microentreprise_servi_taux = Parameter{Float32}(
   [
     DateRangeValue(Date(1991, 01, 01), Date(2001, 12, 31), 0.5),
     DateRangeValue(Date(2002, 01, 01), Date(2005, 12, 31), 0.52),
-    DateRangeValue(Date(2006, 01, 01), Date(2014, 12, 31), 0.5),
+    DateRangeValue(Date(2006, 01, 01), Date(2014, 12, 31), 0.5, comment = "Check 2014"),
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
@@ -6393,7 +9211,7 @@ ir_rvcm_abat_assvie = Parameter{Int32}(
 
 ir_rvcm_abatmob = Parameter{Int32}(
   [
-    DateRangeValue(Date(2001, 01, 01), Date(2005, 12, 31), 1220),
+    DateRangeValue(Date(2001, 01, 01), Date(2005, 12, 31), 1220, comment = "TODO: check doesn't seams consitent with fiche de calcul"),
     DateRangeValue(Date(2006, 01, 01), Date(2011, 12, 31), 1525),
     DateRangeValue(Date(2012, 01, 01), Date(2013, 12, 31), 0),
   ],
@@ -6416,7 +9234,7 @@ ir_rvcm_abatmob_taux = Parameter{Float32}(
 ir_rvcm_majGO = Parameter{Float32}(
   [
     DateRangeValue(Date(2002, 01, 01), Date(2005, 12, 31), 1.0),
-    DateRangeValue(Date(2006, 01, 01), Date(2014, 12, 31), 1.25),
+    DateRangeValue(Date(2006, 01, 01), Date(2014, 12, 31), 1.25, comment = "TODO: CHECK wild extension of date"),
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
@@ -6454,6 +9272,39 @@ ir_rvcm_prelevement_liberatoire_autre = Parameter{Float32}(
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
   description = "Autres produits de placement (case EE)",
+)
+
+ir_teicaa = RateTaxScale(
+  [
+    RateBracket(
+      threshold = [
+        DateRangeValue(Date(2001, 01, 01), Date(2012, 12, 31), 0.0),
+      ],
+      rate = [
+        DateRangeValue(Date(2001, 01, 01), Date(2012, 12, 31), 0.0),
+      ],
+    ),
+    RateBracket(
+      threshold = [
+        DateRangeValue(Date(2001, 01, 01), Date(2012, 12, 31), 23000.0),
+      ],
+      rate = [
+        DateRangeValue(Date(2001, 01, 01), Date(2012, 12, 31), 0.04),
+      ],
+    ),
+    RateBracket(
+      threshold = [
+        DateRangeValue(Date(2001, 01, 01), Date(2012, 12, 31), 107000.0),
+      ],
+      rate = [
+        DateRangeValue(Date(2001, 01, 01), Date(2012, 12, 31), 0.026),
+      ],
+    ),
+  ],
+  unit = "currency",
+  check_start_date = Date(2006, 01, 01),
+  check_stop_date = Date(2013, 12, 31),
+  description = "Taxe exceptionnelle sur l'indemnité compensatrice des agents d'assurance",
 )
 
 ir_tspr_abatpen_max = Parameter{Int32}(
@@ -6631,6 +9482,159 @@ ir_tspr_abatviag_taux4 = Parameter{Float32}(
   description = "À partir de 70 ans",
 )
 
+isf_bareme = RateTaxScale(
+  [
+    RateBracket(
+      threshold = [
+        DateRangeValue(Date(2001, 01, 01), Date(2014, 12, 31), 0.0),
+      ],
+      rate = [
+        DateRangeValue(Date(2001, 01, 01), Date(2014, 12, 31), 0.0),
+      ],
+    ),
+    RateBracket(
+      threshold = [
+        DateRangeValue(Date(2011, 01, 01), Date(2014, 12, 31), 800000.0),
+
+        DateRangeValue(Date(2010, 01, 01), Date(2010, 12, 31), 790000.0),
+
+        DateRangeValue(Date(2009, 01, 01), Date(2009, 12, 31), 790000.0),
+
+        DateRangeValue(Date(2008, 01, 01), Date(2008, 12, 31), 770000.0),
+
+        DateRangeValue(Date(2007, 01, 01), Date(2007, 12, 31), 760000.0),
+
+        DateRangeValue(Date(2005, 01, 01), Date(2006, 12, 31), 732000.0),
+
+        DateRangeValue(Date(2002, 01, 01), Date(2004, 12, 31), 720000.0),
+      ],
+      rate = [
+        DateRangeValue(Date(2013, 01, 01), Date(2014, 12, 31), 0.005),
+
+        DateRangeValue(Date(2002, 01, 01), Date(2012, 12, 31), 0.0055),
+      ],
+    ),
+    RateBracket(
+      threshold = [
+        DateRangeValue(Date(2013, 01, 01), Date(2014, 12, 31), 1300000.0),
+
+        DateRangeValue(Date(2011, 01, 01), Date(2012, 12, 31), 1310000.0),
+
+        DateRangeValue(Date(2010, 01, 01), Date(2010, 12, 31), 1290000.0),
+
+        DateRangeValue(Date(2009, 01, 01), Date(2009, 12, 31), 1280000.0),
+
+        DateRangeValue(Date(2008, 01, 01), Date(2008, 12, 31), 1240000.0),
+
+        DateRangeValue(Date(2007, 01, 01), Date(2007, 12, 31), 1220000.0),
+
+        DateRangeValue(Date(2005, 01, 01), Date(2006, 12, 31), 1180000.0),
+
+        DateRangeValue(Date(2002, 01, 01), Date(2004, 12, 31), 1160000.0),
+      ],
+      rate = [
+        DateRangeValue(Date(2013, 01, 01), Date(2014, 12, 31), 0.007),
+
+        DateRangeValue(Date(2002, 01, 01), Date(2012, 12, 31), 0.0075),
+      ],
+    ),
+    RateBracket(
+      threshold = [
+        DateRangeValue(Date(2013, 01, 01), Date(2014, 12, 31), 2570000.0),
+
+        DateRangeValue(Date(2011, 01, 01), Date(2012, 12, 31), 2570000.0),
+
+        DateRangeValue(Date(2010, 01, 01), Date(2010, 12, 31), 2530000.0),
+
+        DateRangeValue(Date(2009, 01, 01), Date(2009, 12, 31), 2520000.0),
+
+        DateRangeValue(Date(2008, 01, 01), Date(2008, 12, 31), 2450000.0),
+
+        DateRangeValue(Date(2007, 01, 01), Date(2007, 12, 31), 2420000.0),
+
+        DateRangeValue(Date(2005, 01, 01), Date(2006, 12, 31), 2339000.0),
+
+        DateRangeValue(Date(2002, 01, 01), Date(2004, 12, 31), 2300000.0),
+      ],
+      rate = [
+        DateRangeValue(Date(2002, 01, 01), Date(2014, 12, 31), 0.01),
+      ],
+    ),
+    RateBracket(
+      threshold = [
+        DateRangeValue(Date(2013, 01, 01), Date(2014, 12, 31), 5000000.0),
+
+        DateRangeValue(Date(2011, 01, 01), Date(2012, 12, 31), 4040000.0),
+
+        DateRangeValue(Date(2010, 01, 01), Date(2010, 12, 31), 3980000.0),
+
+        DateRangeValue(Date(2009, 01, 01), Date(2009, 12, 31), 3960000.0),
+
+        DateRangeValue(Date(2008, 01, 01), Date(2008, 12, 31), 3850000.0),
+
+        DateRangeValue(Date(2007, 01, 01), Date(2007, 12, 31), 3800000.0),
+
+        DateRangeValue(Date(2005, 01, 01), Date(2006, 12, 31), 3661000.0),
+
+        DateRangeValue(Date(2002, 01, 01), Date(2004, 12, 31), 3600000.0),
+      ],
+      rate = [
+        DateRangeValue(Date(2013, 01, 01), Date(2014, 12, 31), 0.0125),
+
+        DateRangeValue(Date(2002, 01, 01), Date(2012, 12, 31), 0.013),
+      ],
+    ),
+    RateBracket(
+      threshold = [
+        DateRangeValue(Date(2013, 01, 01), Date(2014, 12, 31), 10000000.0),
+
+        DateRangeValue(Date(2011, 01, 01), Date(2012, 12, 31), 7710000.0),
+
+        DateRangeValue(Date(2010, 01, 01), Date(2010, 12, 31), 7600000.0),
+
+        DateRangeValue(Date(2009, 01, 01), Date(2009, 12, 31), 7570000.0),
+
+        DateRangeValue(Date(2008, 01, 01), Date(2008, 12, 31), 7360000.0),
+
+        DateRangeValue(Date(2007, 01, 01), Date(2007, 12, 31), 7270000.0),
+
+        DateRangeValue(Date(2005, 01, 01), Date(2006, 12, 31), 7017000.0),
+
+        DateRangeValue(Date(2002, 01, 01), Date(2004, 12, 31), 6900000.0),
+      ],
+      rate = [
+        DateRangeValue(Date(2013, 01, 01), Date(2014, 12, 31), 0.015),
+
+        DateRangeValue(Date(2002, 01, 01), Date(2012, 12, 31), 0.0165),
+      ],
+    ),
+    RateBracket(
+      threshold = [
+        DateRangeValue(Date(2011, 01, 01), Date(2012, 12, 31), 16790000.0),
+
+        DateRangeValue(Date(2010, 01, 01), Date(2010, 12, 31), 16540000.0),
+
+        DateRangeValue(Date(2009, 01, 01), Date(2009, 12, 31), 16480000.0),
+
+        DateRangeValue(Date(2008, 01, 01), Date(2008, 12, 31), 16020000.0),
+
+        DateRangeValue(Date(2007, 01, 01), Date(2007, 12, 31), 15810000.0),
+
+        DateRangeValue(Date(2005, 01, 01), Date(2006, 12, 31), 15255000.0),
+
+        DateRangeValue(Date(2002, 01, 01), Date(2004, 12, 31), 15000000.0),
+      ],
+      rate = [
+        DateRangeValue(Date(2002, 01, 01), Date(2012, 12, 31), 0.018),
+      ],
+    ),
+  ],
+  unit = "currency",
+  check_start_date = Date(2006, 01, 01),
+  check_stop_date = Date(2013, 12, 31),
+  description = "Impôt de solidarité",
+)
+
 isf_decote_base = Parameter{Float32}(
   [
     DateRangeValue(Date(2013, 01, 01), Date(2014, 12, 31), 17500.0),
@@ -6793,8 +9797,8 @@ isf_plafonnement_taux = Parameter{Float32}(
 
 isf_pme_max = Parameter{Int32}(
   [
-    DateRangeValue(Date(2002, 01, 01), Date(2007, 12, 31), 0),
-    DateRangeValue(Date(2008, 01, 01), Date(2008, 12, 31), 50000000),
+    DateRangeValue(Date(2002, 01, 01), Date(2007, 12, 31), 0, comment = "taux set to 0 to avoid error- expect prog to pass when date inf to 2008 #"),
+    DateRangeValue(Date(2008, 01, 01), Date(2008, 12, 31), 50000000, comment = "no upperbound before 2009- set arbitrarily large"),
     DateRangeValue(Date(2009, 01, 01), Date(2010, 12, 31), 50000),
     DateRangeValue(Date(2011, 01, 01), Date(2013, 12, 31), 45000),
   ],
@@ -6807,7 +9811,7 @@ isf_pme_max = Parameter{Int32}(
 
 isf_pme_taux1 = Parameter{Float32}(
   [
-    DateRangeValue(Date(2002, 01, 01), Date(2007, 12, 31), 0.0),
+    DateRangeValue(Date(2002, 01, 01), Date(2007, 12, 31), 0.0, comment = "taux set to 0 to avoid error- expect prog to pass when date inf to 2008"),
     DateRangeValue(Date(2008, 01, 01), Date(2013, 12, 31), 0.5),
   ],
   check_start_date = Date(2006, 01, 01),
@@ -6817,7 +9821,7 @@ isf_pme_taux1 = Parameter{Float32}(
 
 isf_pme_taux2 = Parameter{Float32}(
   [
-    DateRangeValue(Date(2002, 01, 01), Date(2007, 12, 31), 0.0),
+    DateRangeValue(Date(2002, 01, 01), Date(2007, 12, 31), 0.0, comment = "taux set to 0 to avoid error- expect prog to pass when date inf to 2008"),
     DateRangeValue(Date(2008, 01, 01), Date(2013, 12, 31), 0.75),
   ],
   check_start_date = Date(2006, 01, 01),
@@ -6877,6 +9881,23 @@ lps_abatt_enfant = Parameter{Int32}(
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
   description = "Abattement forfaitaire sur le revenu par enfant",
+)
+
+lps_bareme = RateTaxScale(
+  [
+    RateBracket(
+      threshold = [
+        DateRangeValue(Date(2010, 01, 01), Date(2013, 12, 31), 0.0),
+      ],
+      rate = [
+        DateRangeValue(Date(2010, 01, 01), Date(2013, 12, 31), 0.0),
+      ],
+    ),
+  ],
+  unit = "currency",
+  check_start_date = Date(2006, 01, 01),
+  check_stop_date = Date(2013, 12, 31),
+  description = "Barème appliqué à l'assiette de la CSG",
 )
 
 lps_credit_enfant = Parameter{Int32}(
