@@ -76,6 +76,7 @@ end
 @define_entity(menage, index_variable_name = "idmen", role_variable_name ="quimen")
 
 
+include("formulas.jl")
 include("input_variables.jl")
 include("parameters.jl")
 
