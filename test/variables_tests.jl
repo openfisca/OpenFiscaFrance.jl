@@ -1,7 +1,7 @@
 # OpenFisca -- A versatile microsimulation software
 # By: OpenFisca Team <contact@openfisca.fr>
 #
-# Copyright (C) 2011, 2012, 2013, 2014 OpenFisca Team
+# Copyright (C) 2011, 2012, 2013, 2014, 2015 OpenFisca Team
 # https://github.com/openfisca
 #
 # This file is part of OpenFisca.
@@ -32,7 +32,7 @@ famille.step_size = 1
 individu = get_entity(simulation, "individu")
 individu.count = 2
 individu.step_size = 2
-# set_array_handle(simulation, "birth", [Date(1973, 1, 1), Date(1974, 1, 1)])
-# set_array_handle(simulation, "idfam", [1, 1])
-# set_array_handle(simulation, "quifam", [PARENT1, PARENT2])
+# set_array(simulation, "birth", [Date(1973, 1, 1), Date(1974, 1, 1)])
+# set_array(simulation, "idfam", [1, 1])
+# set_array(simulation, "quifam", [PARENT1, PARENT2])
 # @test_approx_eq(get_array(calculate(simulation, "age")), [Year(40), Year(39)])
