@@ -50,13 +50,23 @@ macro define_entity(entity, args...)
 end
 
 
-macro define_variable(variable, args...)
+macro define_variable(function_or_variable, args...)
   global variable_definition_by_name
-  variable_name = string(variable)
-  return esc(quote
-    @assert !($variable_name in variable_definition_by_name)
-    variable_definition_by_name[$variable_name] = VariableDefinition($variable_name, $(args...))
-  end)
+  if isa(function_or_variable, Symbol)
+    variable_name = string(function_or_variable)
+    return esc(quote
+      @assert !($variable_name in variable_definition_by_name)
+      variable_definition_by_name[$variable_name] = VariableDefinition($variable_name, $(args...))
+    end)
+  else
+    variable_name = string(args[1])
+    args = args[2:end]
+    return esc(quote
+      @assert !($variable_name in variable_definition_by_name)
+      variable_definition_by_name[$variable_name] = VariableDefinition($function_or_variable, $variable_name,
+        $(args...))
+    end)
+  end
 end
 
 
