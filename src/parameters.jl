@@ -4377,7 +4377,7 @@ fam_aeeh_maj6 = Parameter{Float32}(
 
 fam_af_age1 = Parameter{Int32}(
   [
-    DateRangeValue(Date(2002, 01, 01), Date(2014, 03, 31), 0),
+    DateRangeValue(Date(2002, 01, 01), Date(2015, 12, 31), 0),
   ],
   unit = "year",
   check_start_date = Date(2006, 01, 01),
@@ -4387,7 +4387,7 @@ fam_af_age1 = Parameter{Int32}(
 
 fam_af_age2 = Parameter{Int32}(
   [
-    DateRangeValue(Date(2002, 01, 01), Date(2014, 03, 31), 19),
+    DateRangeValue(Date(2002, 01, 01), Date(2015, 12, 31), 19),
   ],
   unit = "year",
   check_start_date = Date(2006, 01, 01),
@@ -4500,6 +4500,54 @@ fam_af_maj_age_taux2 = Parameter{Float32}(
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
   description = "Prestations familiales ; Allocations familiales ; Majorations pour âge ; 2ème majoration pour âge (14 ans pour les enfants né après le 30/04/97)",
+)
+
+fam_af_modulation_enfant_supp = Parameter{Float32}(
+  [
+    DateRangeValue(Date(2015, 07, 01), Date(2015, 12, 31), 500.0),
+  ],
+  unit = "currency",
+  check_start_date = Date(2006, 01, 01),
+  check_stop_date = Date(2013, 12, 31),
+  description = "Prestations familiales ; Allocations familiales ; Modulation des allocations familiales en fonction des ressources ; Majoration du plafond mensuel de ressources par enfant supplémentaire (à partir du 3e enfant)",
+)
+
+fam_af_modulation_plafond1 = Parameter{Float32}(
+  [
+    DateRangeValue(Date(2015, 07, 01), Date(2015, 12, 31), 6000.0),
+  ],
+  unit = "currency",
+  check_start_date = Date(2006, 01, 01),
+  check_stop_date = Date(2013, 12, 31),
+  description = "Prestations familiales ; Allocations familiales ; Modulation des allocations familiales en fonction des ressources ; Plafond mensuel de ressources n°1",
+)
+
+fam_af_modulation_plafond2 = Parameter{Float32}(
+  [
+    DateRangeValue(Date(2015, 07, 01), Date(2015, 12, 31), 8000.0),
+  ],
+  unit = "currency",
+  check_start_date = Date(2006, 01, 01),
+  check_stop_date = Date(2013, 12, 31),
+  description = "Prestations familiales ; Allocations familiales ; Modulation des allocations familiales en fonction des ressources ; Plafond mensuel de ressources n°2",
+)
+
+fam_af_modulation_taux1 = Parameter{Float32}(
+  [
+    DateRangeValue(Date(2015, 07, 01), Date(2015, 12, 31), 0.5),
+  ],
+  check_start_date = Date(2006, 01, 01),
+  check_stop_date = Date(2013, 12, 31),
+  description = "Prestations familiales ; Allocations familiales ; Modulation des allocations familiales en fonction des ressources ; Taux de modulation au delà du plafond 1",
+)
+
+fam_af_modulation_taux2 = Parameter{Float32}(
+  [
+    DateRangeValue(Date(2015, 07, 01), Date(2015, 12, 31), 0.25),
+  ],
+  check_start_date = Date(2006, 01, 01),
+  check_stop_date = Date(2013, 12, 31),
+  description = "Prestations familiales ; Allocations familiales ; Modulation des allocations familiales en fonction des ressources ; Taux de modulation au delà du plafond 2",
 )
 
 fam_af_seuil_rev_taux = Parameter{Float32}(
@@ -10640,6 +10688,7 @@ minim_rmi_rmi = Parameter{Float32}(
     DateRangeValue(Date(2013, 09, 01), Date(2013, 12, 31), 492.9),
     DateRangeValue(Date(2014, 01, 01), Date(2014, 08, 31), 499.31),
     DateRangeValue(Date(2014, 09, 01), Date(2014, 12, 31), 509.3),
+    DateRangeValue(Date(2015, 01, 01), Date(2015, 12, 31), 513.88),
   ],
   unit = "currency",
   check_start_date = Date(2006, 01, 01),

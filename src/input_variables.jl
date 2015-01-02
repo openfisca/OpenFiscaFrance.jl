@@ -5344,9 +5344,17 @@
   label = "Salaire de base",
 )
 
-@define_variable(taux_participation_ticket_restaurant, individu_definition, Float32,
+@define_variable(titre_restaurant_taux_employeur, individu_definition, Float32,
   cell_default = 0.5,
-  label = "Taux de participation de l'employeur au ticket restaurant",
+  label = "Taux de participation de l'employeur au titre restaurant",
+)
+
+@define_variable(titre_restaurant_valeur_unitaire, individu_definition, Float32,
+  label = "Valeur faciale unitaire du titre restaurant",
+)
+
+@define_variable(titre_restaurant_volume, individu_definition, Int32,
+  label = "Volume des titres restaurant",
 )
 
 @define_variable(type_sal, individu_definition, Int16,
@@ -5372,10 +5380,6 @@
 
 @define_variable(volume_jours_ijss, individu_definition, Int32,
   label = "Volume des jours pour lesquels sont versés une idemnité journalière par la sécurité sociale",
-)
-
-@define_variable(valeur_ticket_restaurant, individu_definition, Float32,
-  label = "Valeur du ticket restaurant",
 )
 
 @define_variable(tns_chiffre_affaires_micro_entreprise, individu_definition, Float32,
@@ -5481,4 +5485,15 @@
 
 @define_variable(depcom, menage_definition, UTF8String,
   label = "Code INSEE (depcom) du lieu de résidence",
+)
+
+@define_variable(zone_apl, menage_definition, Int16,
+  cell_default = 2,
+  label = "Zone APL",
+  values = [
+    0 => "Non renseigné",
+    1 => "Zone 1",
+    2 => "Zone 2",
+    3 => "Zone 3",
+  ],
 )
