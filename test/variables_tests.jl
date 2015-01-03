@@ -24,7 +24,8 @@ PARENT1 = Role(1)
 PARENT2 = Role(2)
 
 
-simulation = Simulation(tax_benefit_system, YearPeriod(2013))
+first_day_of_year = firstdayofyear(today())
+simulation = Simulation(tax_benefit_system, YearPeriod(first_day_of_year))
 famille = get_entity(simulation, "famille")
 famille.count = 1
 famille.roles_count = 2
@@ -32,7 +33,7 @@ famille.step_size = 1
 individu = get_entity(simulation, "individu")
 individu.count = 2
 individu.step_size = 2
-# set_array(simulation, "birth", [Date(1973, 1, 1), Date(1974, 1, 1)])
-# set_array(simulation, "idfam", [1, 1])
-# set_array(simulation, "quifam", [PARENT1, PARENT2])
-# @test_approx_eq(get_array(calculate(simulation, "age")), [Year(40), Year(39)])
+set_array(simulation, "birth", [first_day_of_year - Year(40), first_day_of_year - Year(39)])
+set_array(simulation, "idfam", [1, 1])
+set_array(simulation, "quifam", [PARENT1, PARENT2])
+assert_near(calculate(simulation, "age"), [40, 39], error_margin = 0)
