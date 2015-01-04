@@ -28,4 +28,5 @@ using OpenFiscaCore
 using OpenFiscaFrance
 
 
-include("variables_tests.jl")
+include("test_ages.jl")
+include("test_variables.jl")
