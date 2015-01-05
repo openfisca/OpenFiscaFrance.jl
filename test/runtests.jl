@@ -28,5 +28,5 @@ using OpenFiscaCore
 using OpenFiscaFrance
 
 
-include("test_ages.jl")
-include("test_variables.jl")
+include("test_age.jl")
+include("test_impot_revenu_personnes_physiques.jl")
