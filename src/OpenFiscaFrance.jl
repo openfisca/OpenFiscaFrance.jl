@@ -35,7 +35,9 @@ using OpenFiscaCore
 
 
 entity_definition_by_name = (String => EntityDefinition)[]
+parameter_by_name = (String => Union(Parameter, TaxScale))[]
 variable_definition_by_name = (String => VariableDefinition)[]
+VOUS = Role(1)
 
 
 macro define_entity(entity, args...)
@@ -46,6 +48,16 @@ macro define_entity(entity, args...)
     @assert !($entity_name in entity_definition_by_name)
     $entity_definition = EntityDefinition($entity_name, $(args...))
     entity_definition_by_name[$entity_name] = $entity_definition
+  end)
+end
+
+
+macro define_parameter(parameter_path, parameter)
+  global parameter_by_name
+  parameter_name = string(parameter_path)
+  return esc(quote
+    @assert !($parameter_name in parameter_by_name)
+    parameter_by_name[$parameter_name] = $parameter
   end)
 end
 
@@ -81,7 +93,7 @@ include("input_variables.jl")
 include("parameters.jl")
 
 
-tax_benefit_system = TaxBenefitSystem(entity_definition_by_name, variable_definition_by_name)
+tax_benefit_system = TaxBenefitSystem(entity_definition_by_name, parameter_by_name, variable_definition_by_name)
 
 
 end # module
