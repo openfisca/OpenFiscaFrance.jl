@@ -35,7 +35,7 @@ using OpenFiscaCore
 
 
 entity_definition_by_name = (String => EntityDefinition)[]
-parameter_by_name = (String => Union(Parameter, TaxScale))[]
+legislation = Legislation()
 variable_definition_by_name = (String => VariableDefinition)[]
 VOUS = Role(1)
 
@@ -53,11 +53,9 @@ end
 
 
 macro define_parameter(parameter_path, parameter)
-  global parameter_by_name
-  parameter_name = string(parameter_path)
+  global legislation
   return esc(quote
-    @assert !($parameter_name in parameter_by_name)
-    parameter_by_name[$parameter_name] = $parameter
+    add_to_legislation(legislation, $(string(parameter_path)), $parameter)
   end)
 end
 
@@ -93,7 +91,7 @@ include("input_variables.jl")
 include("parameters.jl")
 
 
-tax_benefit_system = TaxBenefitSystem(entity_definition_by_name, parameter_by_name, variable_definition_by_name)
+tax_benefit_system = TaxBenefitSystem(entity_definition_by_name, legislation, variable_definition_by_name)
 
 
 end # module

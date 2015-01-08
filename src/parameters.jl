@@ -1093,7 +1093,8 @@
 
 @define_parameter(cotsoc.assiette.cantines_titres_restaurants.seuil_prix_titre, Parameter{Float32}(
   [
-    DateRangeValue(Date(2014, 01, 01), Date(2014, 12, 31), 5.33),
+    DateRangeValue(Date(2000, 01, 01), Date(2014, 12, 31), 5.33, comment = "TODO check starting dates"),
+    DateRangeValue(Date(2015, 01, 01), Date(2015, 12, 31), 5.66),
   ],
   unit = "currency",
   check_start_date = Date(2006, 01, 01),
@@ -1103,7 +1104,7 @@
 
 @define_parameter(cotsoc.assiette.cantines_titres_restaurants.taux_maximum_exoneration, Parameter{Float32}(
   [
-    DateRangeValue(Date(2014, 01, 01), Date(2014, 12, 31), 0.6),
+    DateRangeValue(Date(2000, 01, 01), Date(2014, 12, 31), 0.6, comment = "TODO check starting dates"),
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
@@ -1112,7 +1113,7 @@
 
 @define_parameter(cotsoc.assiette.cantines_titres_restaurants.taux_minimum_exoneration, Parameter{Float32}(
   [
-    DateRangeValue(Date(2014, 01, 01), Date(2014, 12, 31), 0.5),
+    DateRangeValue(Date(2000, 01, 01), Date(2014, 12, 31), 0.5, comment = "TODO check starting dates"),
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),

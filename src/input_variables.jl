@@ -4241,6 +4241,14 @@
   ],
 )
 
+@define_variable(chobrut, individu_definition, Int32,
+  label = "Chômage brut",
+)
+
+@define_variable(rstbrut, individu_definition, Int32,
+  label = "Retraite brute",
+)
+
 @define_variable(aer, individu_definition, Int32,
   label = "Allocation équivalent retraite (AER)",
 )
