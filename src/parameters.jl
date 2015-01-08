@@ -1252,29 +1252,6 @@
   description = "Cotisations sociales ; Exonération sur les bas salaires ; Exonération Fillon ; Taux maximum (moins de 20 salariés)",
 ))
 
-@define_parameter(cotsoc.gen.plaf_ss, Parameter{Int32}(
-  [
-    DateRangeValue(Date(2001, 01, 01), Date(2001, 12, 31), 2279),
-    DateRangeValue(Date(2002, 01, 01), Date(2002, 12, 31), 2352),
-    DateRangeValue(Date(2003, 01, 01), Date(2003, 12, 31), 2432),
-    DateRangeValue(Date(2004, 01, 01), Date(2004, 12, 31), 2476),
-    DateRangeValue(Date(2005, 01, 01), Date(2005, 12, 31), 2516),
-    DateRangeValue(Date(2006, 01, 01), Date(2006, 12, 31), 2589),
-    DateRangeValue(Date(2007, 01, 01), Date(2007, 12, 31), 2689),
-    DateRangeValue(Date(2008, 01, 01), Date(2008, 12, 31), 2773),
-    DateRangeValue(Date(2009, 01, 01), Date(2009, 12, 31), 2859),
-    DateRangeValue(Date(2010, 01, 01), Date(2010, 12, 31), 2885),
-    DateRangeValue(Date(2011, 01, 01), Date(2011, 12, 31), 2946),
-    DateRangeValue(Date(2012, 01, 01), Date(2012, 12, 31), 3031),
-    DateRangeValue(Date(2013, 01, 01), Date(2013, 12, 31), 3086),
-    DateRangeValue(Date(2014, 01, 01), Date(2014, 12, 31), 3129),
-  ],
-  unit = "currency",
-  check_start_date = Date(2006, 01, 01),
-  check_stop_date = Date(2013, 12, 31),
-  description = "Cotisations sociales ; Paramètres généraux ; Plafond de la sécurité sociale",
-))
-
 @define_parameter(cotsoc.gen.plaf_th_1, Parameter{Int32}(
   [
     DateRangeValue(Date(2002, 01, 01), Date(2002, 12, 31), 6928),
@@ -1393,6 +1370,29 @@
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
   description = "Cotisations sociales ; Paramètres généraux ; Plafond d'exonération de la taxe d'habitation: 1ère demi-part supplémentaire Guyane",
+))
+
+@define_parameter(cotsoc.gen.plafond_securite_sociale, Parameter{Int32}(
+  [
+    DateRangeValue(Date(2001, 01, 01), Date(2001, 12, 31), 2279),
+    DateRangeValue(Date(2002, 01, 01), Date(2002, 12, 31), 2352),
+    DateRangeValue(Date(2003, 01, 01), Date(2003, 12, 31), 2432),
+    DateRangeValue(Date(2004, 01, 01), Date(2004, 12, 31), 2476),
+    DateRangeValue(Date(2005, 01, 01), Date(2005, 12, 31), 2516),
+    DateRangeValue(Date(2006, 01, 01), Date(2006, 12, 31), 2589),
+    DateRangeValue(Date(2007, 01, 01), Date(2007, 12, 31), 2689),
+    DateRangeValue(Date(2008, 01, 01), Date(2008, 12, 31), 2773),
+    DateRangeValue(Date(2009, 01, 01), Date(2009, 12, 31), 2859),
+    DateRangeValue(Date(2010, 01, 01), Date(2010, 12, 31), 2885),
+    DateRangeValue(Date(2011, 01, 01), Date(2011, 12, 31), 2946),
+    DateRangeValue(Date(2012, 01, 01), Date(2012, 12, 31), 3031),
+    DateRangeValue(Date(2013, 01, 01), Date(2013, 12, 31), 3086),
+    DateRangeValue(Date(2014, 01, 01), Date(2014, 12, 31), 3129),
+  ],
+  unit = "currency",
+  check_start_date = Date(2006, 01, 01),
+  check_stop_date = Date(2013, 12, 31),
+  description = "Cotisations sociales ; Paramètres généraux ; Plafond de la sécurité sociale",
 ))
 
 @define_parameter(cotsoc.gen.smic_h_b, Parameter{Float32}(
@@ -1816,16 +1816,15 @@
         DateRangeValue(Date(1991, 07, 01), Date(2014, 12, 31), 0.0),
       ],
       rate = [
-        DateRangeValue(Date(1991, 07, 01), Date(2014, 12, 31), 0.004),
+        DateRangeValue(Date(1991, 07, 01), Date(2014, 12, 31), 0.005),
       ],
     ),
     RateBracket(
       threshold = [
-        DateRangeValue(Date(1991, 07, 01), Date(2014, 12, 31), 1.0),
+        DateRangeValue(Date(1991, 07, 01), Date(2010, 12, 31), 1.0),
       ],
       rate = [
         DateRangeValue(Date(1991, 07, 01), Date(2010, 12, 31), 0.004),
-        DateRangeValue(Date(2011, 01, 01), Date(2014, 12, 31), 0.005),
       ],
     ),
   ],
@@ -3380,38 +3379,39 @@
   description = "Cotisations sociales ; Taxes exceptionnelles sur les hauts revenus",
 ))
 
-@define_parameter(crds.act, MarginalRateScale(
+@define_parameter(crds.activite.abattement, MarginalRateScale(
   [
     RateBracket(
       threshold = [
         DateRangeValue(Date(1998, 01, 01), Date(2014, 12, 31), 0.0),
       ],
       rate = [
-        DateRangeValue(Date(1998, 01, 01), Date(2014, 12, 31), 0.005),
-      ],
-      base = [
-        DateRangeValue(Date(1998, 01, 01), Date(2004, 12, 31), 0.95),
-        DateRangeValue(Date(2005, 01, 01), Date(2011, 12, 31), 0.97),
-        DateRangeValue(Date(2012, 01, 01), Date(2014, 12, 31), 0.9825),
+        DateRangeValue(Date(1998, 01, 01), Date(2004, 12, 31), 0.05),
+        DateRangeValue(Date(2005, 01, 01), Date(2011, 12, 31), 0.03),
+        DateRangeValue(Date(2012, 01, 01), Date(2014, 12, 31), 0.0175),
       ],
     ),
     RateBracket(
       threshold = [
-        DateRangeValue(Date(1998, 01, 01), Date(2014, 12, 31), 4.0),
+        DateRangeValue(Date(2011, 01, 01), Date(2014, 12, 31), 4.0),
       ],
       rate = [
-        DateRangeValue(Date(1998, 01, 01), Date(2014, 12, 31), 0.005),
-      ],
-      base = [
-        DateRangeValue(Date(1998, 01, 01), Date(2004, 12, 31), 0.95),
-        DateRangeValue(Date(2005, 01, 01), Date(2010, 12, 31), 0.97),
-        DateRangeValue(Date(2011, 01, 01), Date(2014, 12, 31), 1.0),
+        DateRangeValue(Date(2011, 01, 01), Date(2014, 12, 31), 0.0),
       ],
     ),
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Contribution au remboursement de la dette sociale (CRDS) ; Revenus d'activité, du chômage et des préretraites",
+  description = "Contribution au remboursement de la dette sociale (CRDS) ; Revenus d'activité ; Abattement sur les revenus d'activité, du chômage et des préretraites",
+))
+
+@define_parameter(crds.activite.taux, Parameter{Float32}(
+  [
+    DateRangeValue(Date(1998, 01, 01), Date(2014, 12, 31), 0.005),
+  ],
+  check_start_date = Date(2006, 01, 01),
+  check_stop_date = Date(2013, 12, 31),
+  description = "Contribution au remboursement de la dette sociale (CRDS) ; Revenus d'activité ; taux de la CRDS",
 ))
 
 @define_parameter(crds.capital, Parameter{Float32}(
@@ -3423,35 +3423,25 @@
   description = "Contribution au remboursement de la dette sociale (CRDS) ; Revenus du capital",
 ))
 
-@define_parameter(crds.rst, MarginalRateScale(
+@define_parameter(crds.retraite.taux, Parameter{Float32}(
   [
-    RateBracket(
-      threshold = [
-        DateRangeValue(Date(1998, 01, 01), Date(2014, 12, 31), 0.0),
-      ],
-      rate = [
-        DateRangeValue(Date(1998, 01, 01), Date(2014, 12, 31), 0.005),
-      ],
-    ),
+    DateRangeValue(Date(1998, 01, 01), Date(2014, 12, 31), 0.005),
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Contribution au remboursement de la dette sociale (CRDS) ; Retraites et pensions d'invalidité",
+  description = "Contribution au remboursement de la dette sociale (CRDS) ; Retraites et pensions d'invalidité ; taux de la CRDS",
 ))
 
-@define_parameter(csg.act.deduc, MarginalRateScale(
+@define_parameter(csg.activite.deductible.abattement, MarginalRateScale(
   [
     RateBracket(
       threshold = [
         DateRangeValue(Date(1998, 01, 01), Date(2014, 12, 31), 0.0),
       ],
       rate = [
-        DateRangeValue(Date(1998, 01, 01), Date(2014, 12, 31), 0.051),
-      ],
-      base = [
-        DateRangeValue(Date(1998, 01, 01), Date(2004, 12, 31), 0.95),
-        DateRangeValue(Date(2005, 01, 01), Date(2011, 12, 31), 0.97),
-        DateRangeValue(Date(2012, 01, 01), Date(2014, 12, 31), 0.9825),
+        DateRangeValue(Date(1998, 01, 01), Date(2004, 12, 31), 0.05),
+        DateRangeValue(Date(2005, 01, 01), Date(2011, 12, 31), 0.03),
+        DateRangeValue(Date(2012, 01, 01), Date(2014, 12, 31), 0.0175),
       ],
     ),
     RateBracket(
@@ -3459,49 +3449,58 @@
         DateRangeValue(Date(2011, 01, 01), Date(2014, 12, 31), 4.0),
       ],
       rate = [
-        DateRangeValue(Date(2011, 01, 01), Date(2014, 12, 31), 0.051),
-      ],
-      base = [
-        DateRangeValue(Date(2011, 01, 01), Date(2014, 12, 31), 1.0),
+        DateRangeValue(Date(2011, 01, 01), Date(2014, 12, 31), 0.0),
       ],
     ),
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Contribution sociale généralisée (CSG) ; Revenus d'activité ; CSG déductible",
+  description = "Contribution sociale généralisée (CSG) ; Revenus d'activité ; CSG déductible ; Abattement de la base de la CSG déductible",
 ))
 
-@define_parameter(csg.act.impos, MarginalRateScale(
+@define_parameter(csg.activite.deductible.taux, Parameter{Float32}(
+  [
+    DateRangeValue(Date(1998, 01, 01), Date(2014, 12, 31), 0.051),
+  ],
+  check_start_date = Date(2006, 01, 01),
+  check_stop_date = Date(2013, 12, 31),
+  description = "Contribution sociale généralisée (CSG) ; Revenus d'activité ; CSG déductible ; taux de la CSG déductible",
+))
+
+@define_parameter(csg.activite.imposable.abattement, MarginalRateScale(
   [
     RateBracket(
       threshold = [
-        DateRangeValue(Date(1991, 02, 01), Date(2014, 12, 31), 0.0),
+        DateRangeValue(Date(1998, 01, 01), Date(2014, 12, 31), 0.0),
       ],
       rate = [
-        DateRangeValue(Date(1991, 02, 01), Date(1993, 06, 30), 0.011),
-        DateRangeValue(Date(1993, 07, 01), Date(2014, 12, 31), 0.024),
-      ],
-      base = [
-        DateRangeValue(Date(1991, 02, 01), Date(2004, 12, 31), 0.95),
-        DateRangeValue(Date(2005, 01, 01), Date(2011, 12, 31), 0.97),
-        DateRangeValue(Date(2012, 01, 01), Date(2014, 12, 31), 0.9825),
+        DateRangeValue(Date(1998, 01, 01), Date(2004, 12, 31), 0.05),
+        DateRangeValue(Date(2005, 01, 01), Date(2011, 12, 31), 0.03),
+        DateRangeValue(Date(2012, 01, 01), Date(2014, 12, 31), 0.0175),
       ],
     ),
     RateBracket(
       threshold = [
-        DateRangeValue(Date(2011, 07, 01), Date(2014, 12, 31), 4.0),
+        DateRangeValue(Date(2011, 01, 01), Date(2014, 12, 31), 4.0),
       ],
       rate = [
-        DateRangeValue(Date(2011, 07, 01), Date(2014, 12, 31), 0.024),
-      ],
-      base = [
-        DateRangeValue(Date(2011, 07, 01), Date(2014, 12, 31), 1.0),
+        DateRangeValue(Date(2011, 01, 01), Date(2014, 12, 31), 0.0),
       ],
     ),
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Contribution sociale généralisée (CSG) ; Revenus d'activité ; CSG imposable",
+  description = "Contribution sociale généralisée (CSG) ; Revenus d'activité ; CSG imposable ; Abattement de la base de la CSG imposable",
+))
+
+@define_parameter(csg.activite.imposable.taux, Parameter{Float32}(
+  [
+    DateRangeValue(Date(1991, 02, 01), Date(1993, 06, 30), 0.011),
+    DateRangeValue(Date(1993, 07, 01), Date(2014, 12, 31), 0.024),
+  ],
+  check_start_date = Date(2006, 01, 01),
+  check_stop_date = Date(2013, 12, 31),
+  description = "Contribution sociale généralisée (CSG) ; Revenus d'activité ; CSG imposable ; taux de la CSG imposable",
 ))
 
 @define_parameter(csg.capital.deduc, Parameter{Float32}(
@@ -3525,7 +3524,89 @@
   description = "Contribution sociale généralisée (CSG) ; Revenus du capital ; Taux global",
 ))
 
-@define_parameter(csg.chom.min_exo, Parameter{Float32}(
+@define_parameter(csg.chomage.deductible.abattement, MarginalRateScale(
+  [
+    RateBracket(
+      threshold = [
+        DateRangeValue(Date(1998, 01, 01), Date(2014, 12, 31), 0.0),
+      ],
+      rate = [
+        DateRangeValue(Date(1997, 01, 01), Date(2004, 12, 31), 0.05),
+        DateRangeValue(Date(2005, 01, 01), Date(2011, 12, 31), 0.03),
+        DateRangeValue(Date(2012, 01, 01), Date(2014, 12, 31), 0.0175),
+      ],
+    ),
+    RateBracket(
+      threshold = [
+        DateRangeValue(Date(2011, 01, 01), Date(2014, 12, 31), 4.0),
+      ],
+      rate = [
+        DateRangeValue(Date(2011, 01, 01), Date(2014, 12, 31), 0.0),
+      ],
+    ),
+  ],
+  check_start_date = Date(2006, 01, 01),
+  check_stop_date = Date(2013, 12, 31),
+  description = "Contribution sociale généralisée (CSG) ; Allocations chômage ; CSG déductible ; Abattement de la base de la CSG déductible",
+))
+
+@define_parameter(csg.chomage.deductible.taux_plein, Parameter{Float32}(
+  [
+    DateRangeValue(Date(1997, 01, 01), Date(1997, 12, 31), 0.01),
+    DateRangeValue(Date(1998, 01, 01), Date(2004, 12, 31), 0.038),
+    DateRangeValue(Date(2005, 01, 01), Date(2014, 12, 31), 0.042),
+  ],
+  check_start_date = Date(2006, 01, 01),
+  check_stop_date = Date(2013, 12, 31),
+  description = "Contribution sociale généralisée (CSG) ; Allocations chômage ; CSG déductible ; taux plein de la CSG déductible",
+))
+
+@define_parameter(csg.chomage.deductible.taux_reduit, Parameter{Float32}(
+  [
+    DateRangeValue(Date(1997, 01, 01), Date(1997, 12, 31), 0.01),
+    DateRangeValue(Date(1998, 01, 01), Date(2014, 12, 31), 0.038),
+  ],
+  check_start_date = Date(2006, 01, 01),
+  check_stop_date = Date(2013, 12, 31),
+  description = "Contribution sociale généralisée (CSG) ; Allocations chômage ; CSG déductible ; taux réduit de la CSG déductible",
+))
+
+@define_parameter(csg.chomage.imposable.abattement, MarginalRateScale(
+  [
+    RateBracket(
+      threshold = [
+        DateRangeValue(Date(1998, 01, 01), Date(2014, 12, 31), 0.0),
+      ],
+      rate = [
+        DateRangeValue(Date(1998, 01, 01), Date(2004, 12, 31), 0.05),
+        DateRangeValue(Date(2005, 01, 01), Date(2011, 12, 31), 0.03),
+        DateRangeValue(Date(2012, 01, 01), Date(2014, 12, 31), 0.0175),
+      ],
+    ),
+    RateBracket(
+      threshold = [
+        DateRangeValue(Date(2011, 01, 01), Date(2014, 12, 31), 4.0),
+      ],
+      rate = [
+        DateRangeValue(Date(2011, 01, 01), Date(2014, 12, 31), 0.0),
+      ],
+    ),
+  ],
+  check_start_date = Date(2006, 01, 01),
+  check_stop_date = Date(2013, 12, 31),
+  description = "Contribution sociale généralisée (CSG) ; Allocations chômage ; CSG imposable ; Abattement de la base de la CSG imposable",
+))
+
+@define_parameter(csg.chomage.imposable.taux, Parameter{Float32}(
+  [
+    DateRangeValue(Date(1997, 01, 01), Date(2014, 12, 31), 0.024),
+  ],
+  check_start_date = Date(2006, 01, 01),
+  check_stop_date = Date(2013, 12, 31),
+  description = "Contribution sociale généralisée (CSG) ; Allocations chômage ; CSG imposable ; taux de la CSG imposable",
+))
+
+@define_parameter(csg.chomage.min_exo, Parameter{Float32}(
   [
     DateRangeValue(Date(2002, 01, 01), Date(2014, 12, 31), 1.0),
   ],
@@ -3534,340 +3615,83 @@
   description = "Contribution sociale généralisée (CSG) ; Allocations chômage ; Revenu minimum imposable (en multiple du smic annuel brut)",
 ))
 
-@define_parameter(csg.chom.plein.deduc, MarginalRateScale(
+@define_parameter(csg.indemnites_journalieres.deductible.taux, Parameter{Float32}(
   [
-    RateBracket(
-      threshold = [
-        DateRangeValue(Date(1998, 01, 01), Date(2014, 12, 31), 0.0),
-      ],
-      rate = [
-        DateRangeValue(Date(1998, 01, 01), Date(2014, 12, 31), 0.038),
-      ],
-      base = [
-        DateRangeValue(Date(1998, 01, 01), Date(2004, 12, 31), 0.95),
-        DateRangeValue(Date(2005, 01, 01), Date(2011, 12, 31), 0.97),
-        DateRangeValue(Date(2012, 01, 01), Date(2014, 12, 31), 0.9825),
-      ],
-    ),
-    RateBracket(
-      threshold = [
-        DateRangeValue(Date(1998, 01, 01), Date(2014, 12, 31), 4.0),
-      ],
-      rate = [
-        DateRangeValue(Date(1998, 01, 01), Date(2014, 12, 31), 0.038),
-      ],
-      base = [
-        DateRangeValue(Date(1998, 01, 01), Date(2004, 12, 31), 0.95),
-        DateRangeValue(Date(2005, 01, 01), Date(2011, 12, 31), 0.97),
-        DateRangeValue(Date(2012, 01, 01), Date(2014, 12, 31), 1.0),
-      ],
-    ),
+    DateRangeValue(Date(1997, 01, 01), Date(1997, 12, 31), 0.01),
+    DateRangeValue(Date(1998, 01, 01), Date(2014, 12, 31), 0.038),
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Contribution sociale généralisée (CSG) ; Allocations chômage ; Taux plein ; CSG déductible",
+  description = "Contribution sociale généralisée (CSG) ; Indemnités journalières ; CSG déductible ; taux plein de la CSG déductible",
 ))
 
-@define_parameter(csg.chom.plein.impos, MarginalRateScale(
+@define_parameter(csg.indemnites_journalieres.imposable.taux, Parameter{Float32}(
   [
-    RateBracket(
-      threshold = [
-        DateRangeValue(Date(1998, 01, 01), Date(2014, 12, 31), 0.0),
-      ],
-      rate = [
-        DateRangeValue(Date(1998, 01, 01), Date(2014, 12, 31), 0.024),
-      ],
-      base = [
-        DateRangeValue(Date(1998, 01, 01), Date(2004, 12, 31), 0.95),
-        DateRangeValue(Date(2005, 01, 01), Date(2011, 12, 31), 0.97),
-        DateRangeValue(Date(2012, 01, 01), Date(2014, 12, 31), 0.9825),
-      ],
-    ),
-    RateBracket(
-      threshold = [
-        DateRangeValue(Date(1998, 01, 01), Date(2014, 12, 31), 4.0),
-      ],
-      rate = [
-        DateRangeValue(Date(1998, 01, 01), Date(2014, 12, 31), 0.024),
-      ],
-      base = [
-        DateRangeValue(Date(1998, 01, 01), Date(2004, 12, 31), 0.95),
-        DateRangeValue(Date(2005, 01, 01), Date(2011, 12, 31), 0.97),
-        DateRangeValue(Date(2012, 01, 01), Date(2014, 12, 31), 1.0),
-      ],
-    ),
+    DateRangeValue(Date(1997, 01, 01), Date(2014, 10, 10), 0.024),
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Contribution sociale généralisée (CSG) ; Allocations chômage ; Taux plein ; CSG non déductible",
+  description = "Contribution sociale généralisée (CSG) ; Indemnités journalières ; CSG imposable ; taux de la CSG imposable",
 ))
 
-@define_parameter(csg.chom.reduit.deduc, MarginalRateScale(
+@define_parameter(csg.preretraite.deductible.taux_plein, Parameter{Float32}(
   [
-    RateBracket(
-      threshold = [
-        DateRangeValue(Date(1997, 01, 01), Date(2014, 12, 31), 0.0),
-      ],
-      rate = [
-        DateRangeValue(Date(1997, 01, 01), Date(2014, 12, 31), 0.038),
-      ],
-      base = [
-        DateRangeValue(Date(1997, 01, 01), Date(2004, 12, 31), 0.95),
-        DateRangeValue(Date(2005, 01, 01), Date(2011, 12, 31), 0.97),
-        DateRangeValue(Date(2012, 01, 01), Date(2014, 12, 31), 0.9825),
-      ],
-    ),
-    RateBracket(
-      threshold = [
-        DateRangeValue(Date(1998, 01, 01), Date(2014, 12, 31), 4.0),
-      ],
-      rate = [
-        DateRangeValue(Date(1998, 01, 01), Date(2014, 12, 31), 0.038),
-      ],
-      base = [
-        DateRangeValue(Date(1998, 01, 01), Date(2004, 12, 31), 0.95),
-        DateRangeValue(Date(2005, 01, 01), Date(2011, 12, 31), 0.97),
-        DateRangeValue(Date(2012, 01, 01), Date(2014, 12, 31), 1.0),
-      ],
-    ),
+    DateRangeValue(Date(1997, 01, 01), Date(1997, 12, 31), 0.01),
+    DateRangeValue(Date(1998, 01, 01), Date(2004, 12, 31), 0.038),
+    DateRangeValue(Date(2005, 01, 01), Date(2014, 12, 31), 0.042),
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Contribution sociale généralisée (CSG) ; Allocations chômage ; Taux réduit ; CSG déductible",
+  description = "Contribution sociale généralisée (CSG) ; Allocations de préretraite ; CSG déductible ; taux plein de la CSG déductible",
 ))
 
-@define_parameter(csg.chom.reduit.impos, MarginalRateScale(
+@define_parameter(csg.preretraite.deductible.taux_reduit, Parameter{Float32}(
   [
-    RateBracket(
-      threshold = [
-        DateRangeValue(Date(1998, 01, 01), Date(2014, 12, 31), 0.0),
-      ],
-      rate = [
-        DateRangeValue(Date(1998, 01, 01), Date(2014, 12, 31), 0.0),
-      ],
-      base = [
-        DateRangeValue(Date(1998, 01, 01), Date(2004, 12, 31), 0.95),
-        DateRangeValue(Date(2005, 01, 01), Date(2011, 12, 31), 0.97),
-        DateRangeValue(Date(2012, 01, 01), Date(2014, 12, 31), 0.9825),
-      ],
-    ),
-    RateBracket(
-      threshold = [
-        DateRangeValue(Date(1998, 01, 01), Date(2014, 12, 31), 4.0),
-      ],
-      rate = [
-        DateRangeValue(Date(1998, 01, 01), Date(2014, 12, 31), 0.0),
-      ],
-      base = [
-        DateRangeValue(Date(1998, 01, 01), Date(2004, 12, 31), 0.95),
-        DateRangeValue(Date(2005, 01, 01), Date(2011, 12, 31), 0.97),
-        DateRangeValue(Date(2012, 01, 01), Date(2014, 12, 31), 1.0),
-      ],
-    ),
+    DateRangeValue(Date(2008, 01, 01), Date(2014, 12, 31), 0.038),
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Contribution sociale généralisée (CSG) ; Allocations chômage ; Taux réduit ; CSG imposable",
+  description = "Contribution sociale généralisée (CSG) ; Allocations de préretraite ; CSG déductible ; taux réduit de la CSG déductible",
 ))
 
-@define_parameter(csg.indemn.deduc, MarginalRateScale(
+@define_parameter(csg.preretraite.imposable.taux, Parameter{Float32}(
   [
-    RateBracket(
-      threshold = [
-        DateRangeValue(Date(1997, 01, 01), Date(2014, 12, 31), 0.0),
-      ],
-      rate = [
-        DateRangeValue(Date(1997, 01, 01), Date(2014, 12, 31), 0.038),
-      ],
-    ),
+    DateRangeValue(Date(1998, 01, 01), Date(2007, 10, 10), 0.024),
+    DateRangeValue(Date(2007, 10, 11), Date(2014, 12, 31), 0.033),
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Contribution sociale généralisée (CSG) ; Indemnités journalières ; CSG déductible",
+  description = "Contribution sociale généralisée (CSG) ; Allocations de préretraite ; CSG imposable ; taux de la CSG imposable",
 ))
 
-@define_parameter(csg.indemn.impos, MarginalRateScale(
+@define_parameter(csg.retraite.deductible.taux_plein, Parameter{Float32}(
   [
-    RateBracket(
-      threshold = [
-        DateRangeValue(Date(1998, 01, 01), Date(2014, 12, 31), 0.0),
-      ],
-      rate = [
-        DateRangeValue(Date(1998, 01, 01), Date(2014, 12, 31), 0.024),
-      ],
-    ),
+    DateRangeValue(Date(1997, 01, 01), Date(1997, 12, 31), 0.01),
+    DateRangeValue(Date(1998, 01, 01), Date(2004, 12, 31), 0.038),
+    DateRangeValue(Date(2005, 01, 01), Date(2014, 12, 31), 0.042),
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Contribution sociale généralisée (CSG) ; Indemnités journalières ; CSG non déductible",
+  description = "Contribution sociale généralisée (CSG) ; Pensions de retraites et d'invalidité ; CSG déductible ; taux plein de la CSG déductible",
 ))
 
-@define_parameter(csg.int.deduc, MarginalRateScale(
+@define_parameter(csg.retraite.deductible.taux_reduit, Parameter{Float32}(
   [
-    RateBracket(
-      threshold = [
-        DateRangeValue(Date(1998, 01, 01), Date(2014, 12, 31), 0.0),
-      ],
-      rate = [
-        DateRangeValue(Date(1998, 01, 01), Date(2014, 12, 31), 0.051),
-      ],
-    ),
+    DateRangeValue(Date(1997, 01, 01), Date(1997, 12, 31), 0.01),
+    DateRangeValue(Date(1998, 01, 01), Date(2014, 12, 31), 0.038),
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Contribution sociale généralisée (CSG) ; Accessoires du salaire (intéressement etc) ; CSG déductible",
+  description = "Contribution sociale généralisée (CSG) ; Pensions de retraites et d'invalidité ; CSG déductible ; taux réduit de la CSG déductible",
 ))
 
-@define_parameter(csg.int.impos, MarginalRateScale(
+@define_parameter(csg.retraite.imposable.taux, Parameter{Float32}(
   [
-    RateBracket(
-      threshold = [
-        DateRangeValue(Date(1998, 01, 01), Date(2014, 12, 31), 0.0),
-      ],
-      rate = [
-        DateRangeValue(Date(1998, 01, 01), Date(2014, 12, 31), 0.024),
-      ],
-    ),
+    DateRangeValue(Date(1997, 01, 01), Date(2014, 12, 31), 0.024),
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Contribution sociale généralisée (CSG) ; Accessoires du salaire (intéressement etc) ; CSG imposable",
-))
-
-@define_parameter(csg.preretraite.plein.deduc, MarginalRateScale(
-  [
-    RateBracket(
-      threshold = [
-        DateRangeValue(Date(1997, 01, 01), Date(2014, 12, 31), 0.0),
-      ],
-      rate = [
-        DateRangeValue(Date(1997, 01, 01), Date(1997, 12, 31), 0.042),
-        DateRangeValue(Date(1998, 01, 01), Date(2004, 12, 31), 0.038),
-        DateRangeValue(Date(2005, 01, 01), Date(2014, 12, 31), 0.042),
-      ],
-    ),
-  ],
-  check_start_date = Date(2006, 01, 01),
-  check_stop_date = Date(2013, 12, 31),
-  description = "Contribution sociale généralisée (CSG) ; Allocations de préretraite ; Taux plein ; CSG déductible",
-))
-
-@define_parameter(csg.preretraite.plein.impos, MarginalRateScale(
-  [
-    RateBracket(
-      threshold = [
-        DateRangeValue(Date(1997, 01, 01), Date(2014, 12, 31), 0.0),
-      ],
-      rate = [
-        DateRangeValue(Date(1998, 01, 01), Date(2007, 10, 10), 0.024),
-        DateRangeValue(Date(2007, 10, 11), Date(2014, 12, 31), 0.033),
-      ],
-    ),
-  ],
-  check_start_date = Date(2006, 01, 01),
-  check_stop_date = Date(2013, 12, 31),
-  description = "Contribution sociale généralisée (CSG) ; Allocations de préretraite ; Taux plein ; CSG non déductible",
-))
-
-@define_parameter(csg.preretraite.reduit.deduc, MarginalRateScale(
-  [
-    RateBracket(
-      threshold = [
-        DateRangeValue(Date(1997, 01, 01), Date(2014, 12, 31), 0.0),
-      ],
-      rate = [
-        DateRangeValue(Date(1997, 01, 01), Date(2007, 12, 31), 0.0),
-        DateRangeValue(Date(2008, 01, 01), Date(2014, 12, 31), 0.038),
-      ],
-    ),
-  ],
-  check_start_date = Date(2006, 01, 01),
-  check_stop_date = Date(2013, 12, 31),
-  description = "Contribution sociale généralisée (CSG) ; Allocations de préretraite ; Taux réduit ; CSG déductible",
-))
-
-@define_parameter(csg.preretraite.reduit.impos, MarginalRateScale(
-  [
-    RateBracket(
-      threshold = [
-        DateRangeValue(Date(1997, 01, 01), Date(2014, 12, 31), 0.0),
-      ],
-      rate = [
-        DateRangeValue(Date(1997, 01, 01), Date(2014, 12, 31), 0.0),
-      ],
-    ),
-  ],
-  check_start_date = Date(2006, 01, 01),
-  check_stop_date = Date(2013, 12, 31),
-  description = "Contribution sociale généralisée (CSG) ; Allocations de préretraite ; Taux réduit ; CSG non déductible",
-))
-
-@define_parameter(csg.retraite.plein.deduc, MarginalRateScale(
-  [
-    RateBracket(
-      threshold = [
-        DateRangeValue(Date(1991, 02, 01), Date(2014, 12, 31), 0.0),
-      ],
-      rate = [
-        DateRangeValue(Date(1997, 01, 01), Date(1997, 12, 31), 0.042),
-        DateRangeValue(Date(1998, 01, 01), Date(2004, 12, 31), 0.038),
-        DateRangeValue(Date(2005, 01, 01), Date(2014, 12, 31), 0.042),
-      ],
-    ),
-  ],
-  check_start_date = Date(2006, 01, 01),
-  check_stop_date = Date(2013, 12, 31),
-  description = "Contribution sociale généralisée (CSG) ; Pensions de retraites et d'invalidité ; Taux plein ; CSG déductible",
-))
-
-@define_parameter(csg.retraite.plein.impos, MarginalRateScale(
-  [
-    RateBracket(
-      threshold = [
-        DateRangeValue(Date(1991, 02, 01), Date(2014, 12, 31), 0.0),
-      ],
-      rate = [
-        DateRangeValue(Date(1991, 02, 01), Date(1993, 06, 30), 0.011),
-        DateRangeValue(Date(1993, 07, 01), Date(2014, 12, 31), 0.024),
-      ],
-    ),
-  ],
-  check_start_date = Date(2006, 01, 01),
-  check_stop_date = Date(2013, 12, 31),
-  description = "Contribution sociale généralisée (CSG) ; Pensions de retraites et d'invalidité ; Taux plein ; CSG non déductible",
-))
-
-@define_parameter(csg.retraite.reduit.deduc, MarginalRateScale(
-  [
-    RateBracket(
-      threshold = [
-        DateRangeValue(Date(1997, 01, 01), Date(2014, 12, 31), 0.0),
-      ],
-      rate = [
-        DateRangeValue(Date(1997, 01, 01), Date(1997, 12, 31), 0.01),
-        DateRangeValue(Date(1998, 01, 01), Date(2014, 12, 31), 0.038),
-      ],
-    ),
-  ],
-  check_start_date = Date(2006, 01, 01),
-  check_stop_date = Date(2013, 12, 31),
-  description = "Contribution sociale généralisée (CSG) ; Pensions de retraites et d'invalidité ; Taux réduit ; CSG déductible",
-))
-
-@define_parameter(csg.retraite.reduit.impos, MarginalRateScale(
-  [
-    RateBracket(
-      threshold = [
-        DateRangeValue(Date(1997, 01, 01), Date(2014, 12, 31), 0.0),
-      ],
-      rate = [
-        DateRangeValue(Date(1997, 01, 01), Date(2014, 12, 31), 0.0),
-      ],
-    ),
-  ],
-  check_start_date = Date(2006, 01, 01),
-  check_stop_date = Date(2013, 12, 31),
-  description = "Contribution sociale généralisée (CSG) ; Pensions de retraites et d'invalidité ; Taux réduit ; CSG non déductible",
+  description = "Contribution sociale généralisée (CSG) ; Pensions de retraites et d'invalidité ; CSG imposable ; taux de la CSG imposable",
 ))
 
 @define_parameter(fam.aeeh.age, Parameter{Int32}(
