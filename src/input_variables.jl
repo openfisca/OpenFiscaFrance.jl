@@ -5260,6 +5260,18 @@
   ],
 )
 
+@define_variable(assujettie_taxe_salaires, individu_definition, Bool,
+  label = "Entreprise assujettie à la taxe sur les salaires",
+)
+
+@define_variable(avantages_en_nature_valeur_reelle, individu_definition, Bool,
+  label = "Avantages en nature (Valeur réelle)",
+)
+
+@define_variable(base_remboursement_transport, individu_definition, Bool,
+  label = "Base pour le calcul du remboursement des frais de transport",
+)
+
 @define_variable(contrat_de_travail, individu_definition, Int16,
   label = "Type contrat de travail, de forfait ou de convention de rémunération des heures travaillées",
   values = [
@@ -5290,18 +5302,6 @@
   ],
 )
 
-@define_variable(assujettie_taxe_salaires, individu_definition, Bool,
-  label = "Entreprise assujettie à la taxe sur les salaires",
-)
-
-@define_variable(avantages_en_nature_valeur_reelle, individu_definition, Bool,
-  label = "Avantages en nature (Valeur réelle)",
-)
-
-@define_variable(base_remboursement_transport, individu_definition, Bool,
-  label = "Base pour le calcul du remboursement des frais de transport",
-)
-
 @define_variable(effectif_entreprise, individu_definition, Int32,
   label = "Effectif de l'entreprise",
 )
@@ -5312,10 +5312,6 @@
 
 @define_variable(nombre_tickets_restaurant, individu_definition, Int32,
   label = "Nombre de tickets restaurant",
-)
-
-@define_variable(ratio_alternants, individu_definition, Float32,
-  label = "Ratio d'alternants dans l'effectif moyen",
 )
 
 @define_variable(prevoyance_obligatoire_cadre_taux, individu_definition, Float32,
@@ -5337,6 +5333,10 @@
 
 @define_variable(prise_en_charge_employeur_retraite_supplementaire, individu_definition, Float32,
   label = "Part salariale des cotisations de retraite supplémentaire prise en charge par l'employeur",
+)
+
+@define_variable(ratio_alternants, individu_definition, Float32,
+  label = "Ratio d'alternants dans l'effectif moyen",
 )
 
 @define_variable(redevable_taxe_apprentissage, individu_definition, Bool,
