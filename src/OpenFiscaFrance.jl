@@ -34,8 +34,10 @@ using OpenFiscaCore
 # typealias Enumeration Dict{Int, String}
 
 
+CONJ = Role(2)
 entity_definition_by_name = (String => EntityDefinition)[]
 legislation = Legislation()
+PAC1 = Role(3)
 variable_definition_by_name = (String => VariableDefinition)[]
 VOUS = Role(1)
 
