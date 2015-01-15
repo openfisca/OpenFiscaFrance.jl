@@ -5273,12 +5273,14 @@
 )
 
 @define_variable(contrat_de_travail, individu_definition, Int16,
-  label = "Type contrat de travail, de forfait ou de convention de rémunération des heures travaillées",
+  label = "Type contrat de travail",
   values = [
     0 => "temps_plein",
     1 => "temps_partiel",
-    2 => "forfait_heures_annee",
-    3 => "forfait_jours_annee",
+    2 => "forfait_heures_semaines",
+    3 => "forfait_heures_mois",
+    4 => "forfait_heures_annee",
+    5 => "forfait_jours_annee",
   ],
 )
 
@@ -5295,7 +5297,7 @@
 )
 
 @define_variable(contrat_de_travail_duree, individu_definition, Int16,
-  label = "Date de départ de l'entreprise",
+  label = "Type (durée determinée ou indéterminée) du contrat de travail",
   values = [
     0 => "cdi",
     1 => "cdd",
@@ -5314,7 +5316,12 @@
   label = "Nombre de tickets restaurant",
 )
 
-@define_variable(prevoyance_obligatoire_cadre_taux, individu_definition, Float32,
+@define_variable(prevoyance_obligatoire_cadre_taux_employe, individu_definition, Float32,
+  cell_default = 0.015,
+  label = "Taux de cotisation employeur pour la prévoyance obligatoire des cadres",
+)
+
+@define_variable(prevoyance_obligatoire_cadre_taux_employeur, individu_definition, Float32,
   cell_default = 0.015,
   label = "Taux de cotisation employeur pour la prévoyance obligatoire des cadres",
 )
@@ -5342,10 +5349,6 @@
 @define_variable(redevable_taxe_apprentissage, individu_definition, Bool,
   cell_default = true,
   label = "Entreprise redevable de la taxe d'apprentissage",
-)
-
-@define_variable(salarie_au_forfait, individu_definition, Bool,
-  label = "Salarié au forfait",
 )
 
 @define_variable(salaire_de_base, individu_definition, Float32,
@@ -5378,12 +5381,24 @@
   ],
 )
 
-@define_variable(volume_heures_non_remunerees, individu_definition, Int32,
+@define_variable(heures_duree_collective_entreprise, individu_definition, Int32,
+  label = "Durée mensuelle collective dans l'entreprise (heures, temps plein)",
+)
+
+@define_variable(heures_non_remunerees_volume, individu_definition, Int32,
   label = "Volume des heures non rémunérées (convenance personnelle hors contrat/forfait)",
 )
 
-@define_variable(volume_heures_remunerees, individu_definition, Int32,
-  label = "Volume des heures ou jours rémunérées",
+@define_variable(heures_remunerees_volume, individu_definition, Int32,
+  label = "Volume des heures rémunérées contractuellement (heures/mois)",
+)
+
+@define_variable(forfait_heures_remunerees_volume, individu_definition, Int32,
+  label = "Volume des heures rémunérées à un forfait heures",
+)
+
+@define_variable(forfait_jours_remuneres_volume, individu_definition, Int32,
+  label = "Volume des heures rémunérées à forfait jours",
 )
 
 @define_variable(volume_jours_ijss, individu_definition, Int32,

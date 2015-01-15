@@ -57,7 +57,14 @@ end
 
 
 @time test_irpp(2010, -1181, sal = 20000)
-@time test_irpp(2010, -1181, sal = 20000)
-@time test_irpp(2010, -1181, sal = 20000)
-@time test_irpp(2010, -1181, sal = 20000)
-@time test_irpp(2010, -1181, sal = 20000)
+@time test_irpp(2010, -7934, sal = 50000)
+test_irpp(2011, -1181, sal = 20000)
+@time test_irpp(2010, -42338, sal = 150000)
+@time test_irpp(2011, -7934, sal = 50000)
+@time test_irpp(2011, -42338, sal = 150000)
+@time test_irpp(2012, -1181, sal = 20000)
+@time test_irpp(2012, -7934, sal = 50000)
+@time test_irpp(2012, -43222, sal = 150000)
+@time test_irpp(2013, -1170, sal = 20000)
+@time test_irpp(2013, -7889, sal = 50000)
+@time test_irpp(2013, -43076, sal = 150000)

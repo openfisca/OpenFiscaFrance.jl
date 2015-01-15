@@ -5180,6 +5180,28 @@
   description = "Traitement des fonctionnaires ; Supplément familial de traitement ; Part proportionnelle au traitement ; Par nfant supplémentaire",
 ))
 
+@define_parameter(forfait_social.taux_plein, Parameter{Float32}(
+  [
+    DateRangeValue(Date(2009, 01, 01), Date(2009, 12, 31), 0.02),
+    DateRangeValue(Date(2010, 01, 01), Date(2010, 12, 31), 0.04),
+    DateRangeValue(Date(2011, 01, 01), Date(2011, 12, 31), 0.06),
+    DateRangeValue(Date(2012, 01, 01), Date(2012, 07, 31), 0.08),
+    DateRangeValue(Date(2012, 08, 01), Date(2014, 12, 31), 0.2),
+  ],
+  check_start_date = Date(2006, 01, 01),
+  check_stop_date = Date(2013, 12, 31),
+  description = "Forfait social ; Taux plein",
+))
+
+@define_parameter(forfait_social.taux_reduit, Parameter{Float32}(
+  [
+    DateRangeValue(Date(2009, 01, 01), Date(2014, 12, 31), 0.08),
+  ],
+  check_start_date = Date(2006, 01, 01),
+  check_stop_date = Date(2013, 12, 31),
+  description = "Forfait social ; Taux réduit",
+))
+
 @define_parameter(ir.abattements_speciaux.enf_montant, Parameter{Int32}(
   [
     DateRangeValue(Date(2001, 01, 01), Date(2001, 12, 31), 3824),
