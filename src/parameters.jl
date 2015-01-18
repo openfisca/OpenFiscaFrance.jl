@@ -3379,6 +3379,2536 @@
   description = "Cotisations sociales ; Taxes exceptionnelles sur les hauts revenus",
 ))
 
+@define_parameter(cotsoc.cotisations_employeur.prive_non_cadre.agffnc, MarginalRateScale(
+  [
+    RateBracket(
+      threshold = [
+        DateRangeValue(Date(2001, 04, 01), Date(2014, 12, 31), 0.0),
+      ],
+      rate = [
+        DateRangeValue(Date(2001, 04, 01), Date(2014, 12, 31), 0.012),
+      ],
+    ),
+    RateBracket(
+      threshold = [
+        DateRangeValue(Date(2001, 04, 01), Date(2014, 12, 31), 1.0),
+      ],
+      rate = [
+        DateRangeValue(Date(2001, 04, 01), Date(2014, 12, 31), 0.013),
+      ],
+    ),
+    RateBracket(
+      threshold = [
+        DateRangeValue(Date(2001, 04, 01), Date(2014, 12, 31), 3.0),
+      ],
+      rate = [
+        DateRangeValue(Date(2001, 04, 01), Date(2014, 12, 31), 0.0),
+      ],
+    ),
+  ],
+  check_start_date = Date(2006, 01, 01),
+  check_stop_date = Date(2013, 12, 31),
+  description = "Cotisations sociales ; Non cadres ; Cotisation AGFF",
+))
+
+@define_parameter(cotsoc.cotisations_employeur.prive_non_cadre.arrco, MarginalRateScale(
+  [
+    RateBracket(
+      threshold = [
+        DateRangeValue(Date(1993, 01, 01), Date(2015, 12, 31), 0.0),
+      ],
+      rate = [
+        DateRangeValue(Date(1993, 07, 01), Date(1995, 12, 31), 0.02952),
+        DateRangeValue(Date(1996, 01, 01), Date(1996, 12, 31), 0.03375),
+        DateRangeValue(Date(1997, 01, 01), Date(1997, 12, 31), 0.0375),
+        DateRangeValue(Date(1998, 01, 01), Date(1998, 12, 31), 0.04125),
+        DateRangeValue(Date(1999, 01, 01), Date(2013, 12, 31), 0.045),
+        DateRangeValue(Date(2014, 01, 01), Date(2014, 12, 31), 0.0458),
+        DateRangeValue(Date(2015, 01, 01), Date(2015, 12, 31), 0.0465),
+      ],
+    ),
+    RateBracket(
+      threshold = [
+        DateRangeValue(Date(2000, 01, 01), Date(2015, 12, 31), 1.0),
+      ],
+      rate = [
+        DateRangeValue(Date(2000, 01, 01), Date(2001, 12, 31), 0.075),
+        DateRangeValue(Date(2002, 01, 01), Date(2003, 12, 31), 0.09),
+        DateRangeValue(Date(2004, 01, 01), Date(2004, 12, 31), 0.105),
+        DateRangeValue(Date(2005, 01, 01), Date(2013, 12, 31), 0.12),
+        DateRangeValue(Date(2014, 01, 01), Date(2014, 12, 31), 0.1208),
+        DateRangeValue(Date(2015, 01, 01), Date(2015, 12, 31), 0.1215),
+      ],
+    ),
+    RateBracket(
+      threshold = [
+        DateRangeValue(Date(2000, 01, 01), Date(2015, 12, 31), 3.0),
+      ],
+      rate = [
+        DateRangeValue(Date(2000, 01, 01), Date(2015, 12, 31), 0.0),
+      ],
+    ),
+  ],
+  check_start_date = Date(2006, 01, 01),
+  check_stop_date = Date(2013, 12, 31),
+  description = "Cotisations sociales ; Non cadres ; Retraite complémentaire",
+))
+
+@define_parameter(cotsoc.cotisations_employeur.prive_non_cadre.assedic, MarginalRateScale(
+  [
+    RateBracket(
+      threshold = [
+        DateRangeValue(Date(1993, 07, 01), Date(2014, 12, 31), 0.0),
+      ],
+      rate = [
+        DateRangeValue(Date(1993, 07, 01), Date(1993, 07, 31), 0.0483),
+        DateRangeValue(Date(1993, 08, 01), Date(1993, 12, 31), 0.0538),
+        DateRangeValue(Date(1994, 01, 01), Date(1996, 12, 31), 0.0547),
+        DateRangeValue(Date(1997, 01, 01), Date(2000, 12, 31), 0.0526),
+        DateRangeValue(Date(2001, 01, 01), Date(2001, 03, 31), 0.0499),
+        DateRangeValue(Date(2001, 04, 01), Date(2001, 12, 31), 0.037),
+        DateRangeValue(Date(2002, 01, 01), Date(2002, 06, 30), 0.036),
+        DateRangeValue(Date(2002, 07, 01), Date(2002, 12, 31), 0.037),
+        DateRangeValue(Date(2003, 01, 01), Date(2005, 12, 31), 0.04),
+        DateRangeValue(Date(2006, 01, 01), Date(2006, 12, 31), 0.0404),
+        DateRangeValue(Date(2007, 01, 01), Date(2014, 12, 31), 0.04),
+      ],
+    ),
+    RateBracket(
+      threshold = [
+        DateRangeValue(Date(1993, 07, 01), Date(2014, 12, 31), 4.0),
+      ],
+      rate = [
+        DateRangeValue(Date(1993, 07, 01), Date(2014, 12, 31), 0.0),
+      ],
+    ),
+  ],
+  check_start_date = Date(2006, 01, 01),
+  check_stop_date = Date(2013, 12, 31),
+  description = "Cotisations sociales ; Non cadres ; Chômage ASSEDIC (non cadres et cadres)",
+))
+
+@define_parameter(cotsoc.cotisations_employeur.prive_non_cadre.chomfg, MarginalRateScale(
+  [
+    RateBracket(
+      threshold = [
+        DateRangeValue(Date(1993, 07, 01), Date(2014, 03, 31), 0.0),
+      ],
+      rate = [
+        DateRangeValue(Date(1993, 07, 01), Date(1995, 06, 30), 0.0035),
+        DateRangeValue(Date(1995, 07, 01), Date(1999, 06, 30), 0.0025),
+        DateRangeValue(Date(1999, 07, 01), Date(2000, 06, 30), 0.002),
+        DateRangeValue(Date(2000, 07, 01), Date(2000, 12, 31), 0.0015),
+        DateRangeValue(Date(2001, 01, 01), Date(2001, 12, 31), 0.001),
+        DateRangeValue(Date(2002, 01, 01), Date(2002, 06, 30), 0.002),
+        DateRangeValue(Date(2002, 07, 01), Date(2002, 12, 31), 0.003),
+        DateRangeValue(Date(2003, 01, 01), Date(2003, 08, 31), 0.0035),
+        DateRangeValue(Date(2003, 09, 01), Date(2005, 03, 31), 0.0045),
+        DateRangeValue(Date(2005, 04, 01), Date(2005, 12, 31), 0.0035),
+        DateRangeValue(Date(2006, 01, 01), Date(2006, 06, 30), 0.0025),
+        DateRangeValue(Date(2006, 07, 01), Date(2009, 07, 31), 0.0015),
+        DateRangeValue(Date(2009, 08, 01), Date(2009, 10, 31), 0.003),
+        DateRangeValue(Date(2009, 11, 01), Date(2011, 03, 31), 0.004),
+        DateRangeValue(Date(2011, 04, 01), Date(2014, 03, 31), 0.003),
+      ],
+    ),
+    RateBracket(
+      threshold = [
+        DateRangeValue(Date(1993, 07, 01), Date(2014, 03, 31), 4.0),
+      ],
+      rate = [
+        DateRangeValue(Date(1993, 07, 01), Date(2014, 03, 31), 0.0),
+      ],
+    ),
+  ],
+  check_start_date = Date(2006, 01, 01),
+  check_stop_date = Date(2013, 12, 31),
+  description = "Cotisations sociales ; Non cadres ; Chômage: fond national de garantie des salaires (FNGS)",
+))
+
+@define_parameter(cotsoc.cotisations_employeur.prive_non_cadre.csa, MarginalRateScale(
+  [
+    RateBracket(
+      threshold = [
+        DateRangeValue(Date(2004, 07, 01), Date(2014, 12, 31), 0.0),
+      ],
+      rate = [
+        DateRangeValue(Date(2004, 07, 01), Date(2014, 12, 31), 0.003),
+      ],
+    ),
+  ],
+  check_start_date = Date(2006, 01, 01),
+  check_stop_date = Date(2013, 12, 31),
+  description = "Cotisations sociales ; Non cadres ; Contribution solidarité autonomie (dépendance)",
+))
+
+@define_parameter(cotsoc.cotisations_employeur.prive_non_cadre.famille, MarginalRateScale(
+  [
+    RateBracket(
+      threshold = [
+        DateRangeValue(Date(1993, 07, 01), Date(2014, 12, 31), 0.0),
+      ],
+      rate = [
+        DateRangeValue(Date(1993, 07, 01), Date(2013, 12, 31), 0.054),
+        DateRangeValue(Date(2014, 01, 01), Date(2014, 12, 31), 0.0525),
+      ],
+    ),
+  ],
+  check_start_date = Date(2006, 01, 01),
+  check_stop_date = Date(2013, 12, 31),
+  description = "Cotisations sociales ; Non cadres ; Allocation familiales",
+))
+
+@define_parameter(cotsoc.cotisations_employeur.prive_non_cadre.fnal1, MarginalRateScale(
+  [
+    RateBracket(
+      threshold = [
+        DateRangeValue(Date(1993, 07, 01), Date(2014, 12, 31), 0.0),
+      ],
+      rate = [
+        DateRangeValue(Date(1993, 07, 01), Date(2014, 12, 31), 0.001),
+      ],
+    ),
+    RateBracket(
+      threshold = [
+        DateRangeValue(Date(1993, 07, 01), Date(2014, 12, 31), 1.0),
+      ],
+      rate = [
+        DateRangeValue(Date(1993, 07, 01), Date(2014, 12, 31), 0.0),
+      ],
+    ),
+  ],
+  check_start_date = Date(2006, 01, 01),
+  check_stop_date = Date(2013, 12, 31),
+  description = "Cotisations sociales ; Non cadres ; Fonds national action logement (FNAL, tout employeur)",
+))
+
+@define_parameter(cotsoc.cotisations_employeur.prive_non_cadre.fnal2, MarginalRateScale(
+  [
+    RateBracket(
+      threshold = [
+        DateRangeValue(Date(1991, 07, 01), Date(2014, 12, 31), 0.0),
+      ],
+      rate = [
+        DateRangeValue(Date(1991, 07, 01), Date(2014, 12, 31), 0.005),
+      ],
+    ),
+    RateBracket(
+      threshold = [
+        DateRangeValue(Date(1991, 07, 01), Date(2010, 12, 31), 1.0),
+      ],
+      rate = [
+        DateRangeValue(Date(1991, 07, 01), Date(2010, 12, 31), 0.004),
+      ],
+    ),
+  ],
+  check_start_date = Date(2006, 01, 01),
+  check_stop_date = Date(2013, 12, 31),
+  description = "Cotisations sociales ; Non cadres ; Fonds national action logement (FNAL, plus de 20 salariés)",
+))
+
+@define_parameter(cotsoc.cotisations_employeur.prive_non_cadre.maladie, MarginalRateScale(
+  [
+    RateBracket(
+      threshold = [
+        DateRangeValue(Date(1992, 07, 01), Date(2014, 12, 31), 0.0),
+      ],
+      rate = [
+        DateRangeValue(Date(1992, 07, 01), Date(2014, 12, 31), 0.128),
+      ],
+    ),
+  ],
+  check_start_date = Date(2006, 01, 01),
+  check_stop_date = Date(2013, 12, 31),
+  description = "Cotisations sociales ; Non cadres ; Maladie, maternité, invalidité, décès",
+))
+
+@define_parameter(cotsoc.cotisations_employeur.prive_non_cadre.transport, MarginalRateScale(
+  [
+    RateBracket(
+      threshold = [
+        DateRangeValue(Date(2003, 01, 01), Date(2014, 12, 31), 0.0),
+      ],
+      rate = [
+        DateRangeValue(Date(2003, 01, 01), Date(2014, 12, 31), 0.0175),
+      ],
+    ),
+  ],
+  check_start_date = Date(2006, 01, 01),
+  check_stop_date = Date(2013, 12, 31),
+  description = "Cotisations sociales ; Non cadres ; Transport (valeur non différenciée selon la localité, Lyon reférence)",
+))
+
+@define_parameter(cotsoc.cotisations_employeur.prive_non_cadre.vieillessedeplaf, MarginalRateScale(
+  [
+    RateBracket(
+      threshold = [
+        DateRangeValue(Date(1993, 07, 01), Date(2016, 12, 31), 0.0),
+      ],
+      rate = [
+        DateRangeValue(Date(1993, 07, 01), Date(2013, 12, 31), 0.016),
+        DateRangeValue(Date(2014, 01, 01), Date(2016, 12, 31), 0.0175),
+      ],
+    ),
+  ],
+  check_start_date = Date(2006, 01, 01),
+  check_stop_date = Date(2013, 12, 31),
+  description = "Cotisations sociales ; Non cadres ; Vieillesse déplafonnée",
+))
+
+@define_parameter(cotsoc.cotisations_employeur.prive_non_cadre.vieillesseplaf, MarginalRateScale(
+  [
+    RateBracket(
+      threshold = [
+        DateRangeValue(Date(1979, 01, 01), Date(2016, 12, 31), 0.0),
+      ],
+      rate = [
+        DateRangeValue(Date(1979, 01, 01), Date(2005, 12, 31), 0.082),
+        DateRangeValue(Date(2006, 01, 01), Date(2012, 10, 31), 0.083),
+        DateRangeValue(Date(2012, 11, 01), Date(2013, 12, 31), 0.084),
+        DateRangeValue(Date(2014, 01, 01), Date(2014, 12, 31), 0.0845),
+        DateRangeValue(Date(2015, 01, 01), Date(2015, 12, 31), 0.085),
+        DateRangeValue(Date(2016, 01, 01), Date(2016, 12, 31), 0.0855),
+      ],
+    ),
+    RateBracket(
+      threshold = [
+        DateRangeValue(Date(1979, 01, 01), Date(2016, 12, 31), 1.0),
+      ],
+      rate = [
+        DateRangeValue(Date(1979, 01, 01), Date(2016, 12, 31), 0.0),
+      ],
+    ),
+  ],
+  check_start_date = Date(2006, 01, 01),
+  check_stop_date = Date(2013, 12, 31),
+  description = "Cotisations sociales ; Non cadres ; Vieillesse plafonnée (régime de base)",
+))
+
+@define_parameter(cotsoc.cotisations_employeur.prive_non_cadre.apprentissage, MarginalRateScale(
+  [
+    RateBracket(
+      threshold = [
+        DateRangeValue(Date(1993, 07, 01), Date(2014, 12, 31), 0.0),
+      ],
+      rate = [
+        DateRangeValue(Date(1993, 07, 01), Date(2014, 12, 31), 0.005),
+      ],
+    ),
+  ],
+  check_start_date = Date(2006, 01, 01),
+  check_stop_date = Date(2013, 12, 31),
+  description = "Cotisations sociales ; Non cadres ; Taxe d'apprentissage (toutes entreprises)",
+))
+
+@define_parameter(cotsoc.cotisations_employeur.prive_non_cadre.apprentissage_add, MarginalRateScale(
+  [
+    RateBracket(
+      threshold = [
+        DateRangeValue(Date(2004, 01, 01), Date(2014, 12, 31), 0.0),
+      ],
+      rate = [
+        DateRangeValue(Date(2004, 01, 01), Date(2004, 12, 31), 0.0006),
+        DateRangeValue(Date(2005, 01, 01), Date(2005, 12, 31), 0.0012),
+        DateRangeValue(Date(2006, 01, 01), Date(2014, 12, 31), 0.0018),
+      ],
+    ),
+  ],
+  check_start_date = Date(2006, 01, 01),
+  check_stop_date = Date(2013, 12, 31),
+  description = "Cotisations sociales ; Non cadres ; Contribution additionnelle au développement de l'apprentissage (toutes entreprises)",
+))
+
+@define_parameter(cotsoc.cotisations_employeur.prive_non_cadre.formprof_09, MarginalRateScale(
+  [
+    RateBracket(
+      threshold = [
+        DateRangeValue(Date(1992, 01, 01), Date(2013, 12, 31), 0.0),
+      ],
+      rate = [
+        DateRangeValue(Date(1993, 07, 01), Date(2003, 12, 31), 0.0015),
+        DateRangeValue(Date(2004, 01, 01), Date(2004, 12, 31), 0.004),
+        DateRangeValue(Date(2005, 01, 01), Date(2013, 12, 31), 0.0055),
+      ],
+    ),
+  ],
+  check_start_date = Date(2006, 01, 01),
+  check_stop_date = Date(2013, 12, 31),
+  description = "Cotisations sociales ; Non cadres ; Formation professionnelle (0-9 salaries)",
+))
+
+@define_parameter(cotsoc.cotisations_employeur.prive_non_cadre.formprof_1019, MarginalRateScale(
+  [
+    RateBracket(
+      threshold = [
+        DateRangeValue(Date(1992, 07, 01), Date(2013, 12, 31), 0.0),
+      ],
+      rate = [
+        DateRangeValue(Date(1992, 01, 01), Date(1992, 12, 31), 0.014),
+        DateRangeValue(Date(1993, 01, 01), Date(2003, 12, 31), 0.015),
+        DateRangeValue(Date(2004, 01, 01), Date(2005, 08, 03), 0.016),
+        DateRangeValue(Date(2005, 08, 04), Date(2013, 12, 01), 0.0105),
+      ],
+    ),
+  ],
+  check_start_date = Date(2006, 01, 01),
+  check_stop_date = Date(2013, 12, 31),
+  description = "Cotisations sociales ; Non cadres ; Formation professionnelle (10-19 salaries)",
+))
+
+@define_parameter(cotsoc.cotisations_employeur.prive_non_cadre.formprof_20, MarginalRateScale(
+  [
+    RateBracket(
+      threshold = [
+        DateRangeValue(Date(1993, 07, 01), Date(2014, 12, 31), 0.0),
+      ],
+      rate = [
+        DateRangeValue(Date(1992, 01, 01), Date(1992, 12, 31), 0.014),
+        DateRangeValue(Date(1993, 01, 01), Date(2003, 12, 31), 0.015),
+        DateRangeValue(Date(2004, 01, 01), Date(2013, 12, 31), 0.016),
+      ],
+    ),
+  ],
+  check_start_date = Date(2006, 01, 01),
+  check_stop_date = Date(2013, 12, 31),
+  description = "Cotisations sociales ; Non cadres ; Formation professionnelle (plus de 20 salariés)",
+))
+
+@define_parameter(cotsoc.cotisations_employeur.prive_non_cadre.construction, MarginalRateScale(
+  [
+    RateBracket(
+      threshold = [
+        DateRangeValue(Date(1992, 01, 01), Date(2014, 12, 31), 0.0),
+      ],
+      rate = [
+        DateRangeValue(Date(1992, 01, 01), Date(2014, 12, 31), 0.0045),
+      ],
+    ),
+  ],
+  check_start_date = Date(2006, 01, 01),
+  check_stop_date = Date(2013, 12, 31),
+  description = "Cotisations sociales ; Non cadres ; Effort à la construction (plus de 20 salariés)",
+))
+
+@define_parameter(cotsoc.cotisations_employeur.prive_cadre.agffc, MarginalRateScale(
+  [
+    RateBracket(
+      threshold = [
+        DateRangeValue(Date(2001, 04, 01), Date(2014, 12, 31), 0.0),
+      ],
+      rate = [
+        DateRangeValue(Date(2001, 04, 01), Date(2014, 12, 31), 0.012),
+      ],
+    ),
+    RateBracket(
+      threshold = [
+        DateRangeValue(Date(2001, 04, 01), Date(2014, 12, 31), 1.0),
+      ],
+      rate = [
+        DateRangeValue(Date(2001, 04, 01), Date(2014, 12, 31), 0.013),
+      ],
+    ),
+    RateBracket(
+      threshold = [
+        DateRangeValue(Date(2001, 04, 01), Date(2014, 12, 31), 4.0),
+      ],
+      rate = [
+        DateRangeValue(Date(2001, 04, 01), Date(2014, 12, 31), 0.0),
+      ],
+    ),
+  ],
+  check_start_date = Date(2006, 01, 01),
+  check_stop_date = Date(2013, 12, 31),
+  description = "Cotisations sociales ; Spécifiques aux cadres ; AGFF",
+))
+
+@define_parameter(cotsoc.cotisations_employeur.prive_cadre.apec, MarginalRateScale(
+  [
+    RateBracket(
+      threshold = [
+        DateRangeValue(Date(1993, 07, 01), Date(2014, 12, 31), 0.0),
+      ],
+      rate = [
+        DateRangeValue(Date(1993, 07, 01), Date(2010, 12, 31), 0.0),
+        DateRangeValue(Date(2011, 01, 01), Date(2014, 12, 31), 0.00036),
+      ],
+    ),
+    RateBracket(
+      threshold = [
+        DateRangeValue(Date(1993, 07, 01), Date(2014, 12, 31), 1.0),
+      ],
+      rate = [
+        DateRangeValue(Date(1993, 07, 01), Date(2014, 12, 31), 0.00036),
+      ],
+    ),
+    RateBracket(
+      threshold = [
+        DateRangeValue(Date(1993, 07, 01), Date(2014, 12, 31), 4.0),
+      ],
+      rate = [
+        DateRangeValue(Date(1993, 07, 01), Date(2014, 12, 31), 0.0),
+      ],
+    ),
+  ],
+  check_start_date = Date(2006, 01, 01),
+  check_stop_date = Date(2013, 12, 31),
+  description = "Cotisations sociales ; Spécifiques aux cadres ; Chômage: APEC",
+))
+
+@define_parameter(cotsoc.cotisations_employeur.prive_cadre.arrco, MarginalRateScale(
+  [
+    RateBracket(
+      threshold = [
+        DateRangeValue(Date(1993, 01, 01), Date(2015, 12, 31), 0.0),
+      ],
+      rate = [
+        DateRangeValue(Date(1993, 01, 01), Date(1995, 12, 31), 0.02952),
+        DateRangeValue(Date(1996, 01, 01), Date(1996, 12, 31), 0.03375),
+        DateRangeValue(Date(1997, 01, 01), Date(1997, 12, 31), 0.0375),
+        DateRangeValue(Date(1998, 01, 01), Date(1998, 12, 31), 0.04125),
+        DateRangeValue(Date(1999, 01, 01), Date(2013, 12, 31), 0.045),
+        DateRangeValue(Date(2014, 01, 01), Date(2014, 12, 31), 0.0458),
+        DateRangeValue(Date(2015, 01, 01), Date(2015, 12, 31), 0.0465),
+      ],
+    ),
+    RateBracket(
+      threshold = [
+        DateRangeValue(Date(1993, 01, 01), Date(2015, 12, 31), 1.0),
+      ],
+      rate = [
+        DateRangeValue(Date(1993, 01, 01), Date(1993, 12, 31), 0.0702),
+        DateRangeValue(Date(1994, 01, 01), Date(1994, 12, 31), 0.0847),
+        DateRangeValue(Date(1995, 01, 01), Date(1995, 12, 31), 0.1),
+        DateRangeValue(Date(1996, 01, 01), Date(1996, 12, 31), 0.10625),
+        DateRangeValue(Date(1997, 01, 01), Date(1997, 12, 31), 0.1125),
+        DateRangeValue(Date(1998, 01, 01), Date(1998, 12, 31), 0.11875),
+        DateRangeValue(Date(1999, 01, 01), Date(2005, 12, 31), 0.125),
+        DateRangeValue(Date(2006, 01, 01), Date(2013, 12, 31), 0.126),
+        DateRangeValue(Date(2014, 01, 01), Date(2014, 12, 31), 0.1268),
+        DateRangeValue(Date(2015, 01, 01), Date(2015, 12, 31), 0.1275),
+      ],
+    ),
+    RateBracket(
+      threshold = [
+        DateRangeValue(Date(1993, 01, 01), Date(2015, 12, 31), 4.0),
+      ],
+      rate = [
+        DateRangeValue(Date(1993, 01, 01), Date(1993, 12, 31), 0.0702),
+        DateRangeValue(Date(1994, 01, 01), Date(1994, 12, 31), 0.0847),
+        DateRangeValue(Date(1995, 01, 01), Date(1995, 12, 31), 0.1),
+        DateRangeValue(Date(1996, 01, 01), Date(1996, 12, 31), 0.10625),
+        DateRangeValue(Date(1997, 01, 01), Date(1997, 12, 31), 0.1125),
+        DateRangeValue(Date(1998, 01, 01), Date(1998, 12, 31), 0.11875),
+        DateRangeValue(Date(1999, 01, 01), Date(2005, 12, 31), 0.125),
+        DateRangeValue(Date(2006, 01, 01), Date(2013, 12, 31), 0.126),
+        DateRangeValue(Date(2014, 01, 01), Date(2014, 12, 31), 0.1268),
+        DateRangeValue(Date(2015, 01, 01), Date(2015, 12, 31), 0.1275),
+      ],
+    ),
+    RateBracket(
+      threshold = [
+        DateRangeValue(Date(1993, 01, 01), Date(2014, 12, 31), 8.0),
+      ],
+      rate = [
+        DateRangeValue(Date(1993, 01, 01), Date(2014, 12, 31), 0.0),
+      ],
+    ),
+  ],
+  check_start_date = Date(2006, 01, 01),
+  check_stop_date = Date(2013, 12, 31),
+  description = "Cotisations sociales ; Spécifiques aux cadres ; Retraite complémentaire",
+))
+
+@define_parameter(cotsoc.cotisations_employeur.prive_cadre.cet, MarginalRateScale(
+  [
+    RateBracket(
+      threshold = [
+        DateRangeValue(Date(1997, 01, 01), Date(2014, 12, 31), 0.0),
+      ],
+      rate = [
+        DateRangeValue(Date(1997, 01, 01), Date(1997, 12, 31), 0.00044),
+        DateRangeValue(Date(1998, 01, 01), Date(1998, 12, 31), 0.0009),
+        DateRangeValue(Date(1999, 01, 01), Date(1999, 12, 31), 0.0013),
+        DateRangeValue(Date(2000, 01, 01), Date(2000, 12, 31), 0.0017),
+        DateRangeValue(Date(2001, 01, 01), Date(2014, 12, 31), 0.0022),
+      ],
+    ),
+    RateBracket(
+      threshold = [
+        DateRangeValue(Date(1997, 01, 01), Date(2014, 12, 31), 8.0),
+      ],
+      rate = [
+        DateRangeValue(Date(1997, 01, 01), Date(2014, 12, 31), 0.0),
+      ],
+    ),
+  ],
+  check_start_date = Date(2006, 01, 01),
+  check_stop_date = Date(2013, 12, 31),
+  description = "Cotisations sociales ; Spécifiques aux cadres ; Cotisation exceptionnelle temporaire",
+))
+
+@define_parameter(cotsoc.cotisations_employeur.prive_cadre.assedic, MarginalRateScale(
+  [
+    RateBracket(
+      threshold = [
+        DateRangeValue(Date(1993, 07, 01), Date(2014, 12, 31), 0.0),
+      ],
+      rate = [
+        DateRangeValue(Date(1993, 07, 01), Date(1993, 07, 31), 0.0483),
+        DateRangeValue(Date(1993, 08, 01), Date(1993, 12, 31), 0.0538),
+        DateRangeValue(Date(1994, 01, 01), Date(1996, 12, 31), 0.0547),
+        DateRangeValue(Date(1997, 01, 01), Date(2000, 12, 31), 0.0526),
+        DateRangeValue(Date(2001, 01, 01), Date(2001, 03, 31), 0.0499),
+        DateRangeValue(Date(2001, 04, 01), Date(2001, 12, 31), 0.037),
+        DateRangeValue(Date(2002, 01, 01), Date(2002, 06, 30), 0.036),
+        DateRangeValue(Date(2002, 07, 01), Date(2002, 12, 31), 0.037),
+        DateRangeValue(Date(2003, 01, 01), Date(2005, 12, 31), 0.04),
+        DateRangeValue(Date(2006, 01, 01), Date(2006, 12, 31), 0.0404),
+        DateRangeValue(Date(2007, 01, 01), Date(2014, 12, 31), 0.04),
+      ],
+    ),
+    RateBracket(
+      threshold = [
+        DateRangeValue(Date(1993, 07, 01), Date(2014, 12, 31), 4.0),
+      ],
+      rate = [
+        DateRangeValue(Date(1993, 07, 01), Date(2014, 12, 31), 0.0),
+      ],
+    ),
+  ],
+  check_start_date = Date(2006, 01, 01),
+  check_stop_date = Date(2013, 12, 31),
+  description = "Cotisations sociales ; Spécifiques aux cadres ; Chômage ASSEDIC (non cadres et cadres)",
+))
+
+@define_parameter(cotsoc.cotisations_employeur.prive_cadre.chomfg, MarginalRateScale(
+  [
+    RateBracket(
+      threshold = [
+        DateRangeValue(Date(1993, 07, 01), Date(2014, 03, 31), 0.0),
+      ],
+      rate = [
+        DateRangeValue(Date(1993, 07, 01), Date(1995, 06, 30), 0.0035),
+        DateRangeValue(Date(1995, 07, 01), Date(1999, 06, 30), 0.0025),
+        DateRangeValue(Date(1999, 07, 01), Date(2000, 06, 30), 0.002),
+        DateRangeValue(Date(2000, 07, 01), Date(2000, 12, 31), 0.0015),
+        DateRangeValue(Date(2001, 01, 01), Date(2001, 12, 31), 0.001),
+        DateRangeValue(Date(2002, 01, 01), Date(2002, 06, 30), 0.002),
+        DateRangeValue(Date(2002, 07, 01), Date(2002, 12, 31), 0.003),
+        DateRangeValue(Date(2003, 01, 01), Date(2003, 08, 31), 0.0035),
+        DateRangeValue(Date(2003, 09, 01), Date(2005, 03, 31), 0.0045),
+        DateRangeValue(Date(2005, 04, 01), Date(2005, 12, 31), 0.0035),
+        DateRangeValue(Date(2006, 01, 01), Date(2006, 06, 30), 0.0025),
+        DateRangeValue(Date(2006, 07, 01), Date(2009, 07, 31), 0.0015),
+        DateRangeValue(Date(2009, 08, 01), Date(2009, 10, 31), 0.003),
+        DateRangeValue(Date(2009, 11, 01), Date(2011, 03, 31), 0.004),
+        DateRangeValue(Date(2011, 04, 01), Date(2014, 03, 31), 0.003),
+      ],
+    ),
+    RateBracket(
+      threshold = [
+        DateRangeValue(Date(1993, 07, 01), Date(2014, 03, 31), 4.0),
+      ],
+      rate = [
+        DateRangeValue(Date(1993, 07, 01), Date(2014, 03, 31), 0.0),
+      ],
+    ),
+  ],
+  check_start_date = Date(2006, 01, 01),
+  check_stop_date = Date(2013, 12, 31),
+  description = "Cotisations sociales ; Spécifiques aux cadres ; Chômage: fond national de garantie des salaires (FNGS)",
+))
+
+@define_parameter(cotsoc.cotisations_employeur.prive_cadre.csa, MarginalRateScale(
+  [
+    RateBracket(
+      threshold = [
+        DateRangeValue(Date(2004, 07, 01), Date(2014, 12, 31), 0.0),
+      ],
+      rate = [
+        DateRangeValue(Date(2004, 07, 01), Date(2014, 12, 31), 0.003),
+      ],
+    ),
+  ],
+  check_start_date = Date(2006, 01, 01),
+  check_stop_date = Date(2013, 12, 31),
+  description = "Cotisations sociales ; Spécifiques aux cadres ; Contribution solidarité autonomie (dépendance)",
+))
+
+@define_parameter(cotsoc.cotisations_employeur.prive_cadre.famille, MarginalRateScale(
+  [
+    RateBracket(
+      threshold = [
+        DateRangeValue(Date(1993, 07, 01), Date(2014, 12, 31), 0.0),
+      ],
+      rate = [
+        DateRangeValue(Date(1993, 07, 01), Date(2013, 12, 31), 0.054),
+        DateRangeValue(Date(2014, 01, 01), Date(2014, 12, 31), 0.0525),
+      ],
+    ),
+  ],
+  check_start_date = Date(2006, 01, 01),
+  check_stop_date = Date(2013, 12, 31),
+  description = "Cotisations sociales ; Spécifiques aux cadres ; Allocation familiales",
+))
+
+@define_parameter(cotsoc.cotisations_employeur.prive_cadre.fnal1, MarginalRateScale(
+  [
+    RateBracket(
+      threshold = [
+        DateRangeValue(Date(1993, 07, 01), Date(2014, 12, 31), 0.0),
+      ],
+      rate = [
+        DateRangeValue(Date(1993, 07, 01), Date(2014, 12, 31), 0.001),
+      ],
+    ),
+    RateBracket(
+      threshold = [
+        DateRangeValue(Date(1993, 07, 01), Date(2014, 12, 31), 1.0),
+      ],
+      rate = [
+        DateRangeValue(Date(1993, 07, 01), Date(2014, 12, 31), 0.0),
+      ],
+    ),
+  ],
+  check_start_date = Date(2006, 01, 01),
+  check_stop_date = Date(2013, 12, 31),
+  description = "Cotisations sociales ; Spécifiques aux cadres ; Fonds national action logement (FNAL, tout employeur)",
+))
+
+@define_parameter(cotsoc.cotisations_employeur.prive_cadre.fnal2, MarginalRateScale(
+  [
+    RateBracket(
+      threshold = [
+        DateRangeValue(Date(1991, 07, 01), Date(2014, 12, 31), 0.0),
+      ],
+      rate = [
+        DateRangeValue(Date(1991, 07, 01), Date(2014, 12, 31), 0.005),
+      ],
+    ),
+    RateBracket(
+      threshold = [
+        DateRangeValue(Date(1991, 07, 01), Date(2010, 12, 31), 1.0),
+      ],
+      rate = [
+        DateRangeValue(Date(1991, 07, 01), Date(2010, 12, 31), 0.004),
+      ],
+    ),
+  ],
+  check_start_date = Date(2006, 01, 01),
+  check_stop_date = Date(2013, 12, 31),
+  description = "Cotisations sociales ; Spécifiques aux cadres ; Fonds national action logement (FNAL, plus de 20 salariés)",
+))
+
+@define_parameter(cotsoc.cotisations_employeur.prive_cadre.maladie, MarginalRateScale(
+  [
+    RateBracket(
+      threshold = [
+        DateRangeValue(Date(1992, 07, 01), Date(2014, 12, 31), 0.0),
+      ],
+      rate = [
+        DateRangeValue(Date(1992, 07, 01), Date(2014, 12, 31), 0.128),
+      ],
+    ),
+  ],
+  check_start_date = Date(2006, 01, 01),
+  check_stop_date = Date(2013, 12, 31),
+  description = "Cotisations sociales ; Spécifiques aux cadres ; Maladie, maternité, invalidité, décès",
+))
+
+@define_parameter(cotsoc.cotisations_employeur.prive_cadre.transport, MarginalRateScale(
+  [
+    RateBracket(
+      threshold = [
+        DateRangeValue(Date(2003, 01, 01), Date(2014, 12, 31), 0.0),
+      ],
+      rate = [
+        DateRangeValue(Date(2003, 01, 01), Date(2014, 12, 31), 0.0175),
+      ],
+    ),
+  ],
+  check_start_date = Date(2006, 01, 01),
+  check_stop_date = Date(2013, 12, 31),
+  description = "Cotisations sociales ; Spécifiques aux cadres ; Transport (valeur non différenciée selon la localité, Lyon reférence)",
+))
+
+@define_parameter(cotsoc.cotisations_employeur.prive_cadre.vieillessedeplaf, MarginalRateScale(
+  [
+    RateBracket(
+      threshold = [
+        DateRangeValue(Date(1993, 07, 01), Date(2016, 12, 31), 0.0),
+      ],
+      rate = [
+        DateRangeValue(Date(1993, 07, 01), Date(2013, 12, 31), 0.016),
+        DateRangeValue(Date(2014, 01, 01), Date(2016, 12, 31), 0.0175),
+      ],
+    ),
+  ],
+  check_start_date = Date(2006, 01, 01),
+  check_stop_date = Date(2013, 12, 31),
+  description = "Cotisations sociales ; Spécifiques aux cadres ; Vieillesse déplafonnée",
+))
+
+@define_parameter(cotsoc.cotisations_employeur.prive_cadre.vieillesseplaf, MarginalRateScale(
+  [
+    RateBracket(
+      threshold = [
+        DateRangeValue(Date(1979, 01, 01), Date(2016, 12, 31), 0.0),
+      ],
+      rate = [
+        DateRangeValue(Date(1979, 01, 01), Date(2005, 12, 31), 0.082),
+        DateRangeValue(Date(2006, 01, 01), Date(2012, 10, 31), 0.083),
+        DateRangeValue(Date(2012, 11, 01), Date(2013, 12, 31), 0.084),
+        DateRangeValue(Date(2014, 01, 01), Date(2014, 12, 31), 0.0845),
+        DateRangeValue(Date(2015, 01, 01), Date(2015, 12, 31), 0.085),
+        DateRangeValue(Date(2016, 01, 01), Date(2016, 12, 31), 0.0855),
+      ],
+    ),
+    RateBracket(
+      threshold = [
+        DateRangeValue(Date(1979, 01, 01), Date(2016, 12, 31), 1.0),
+      ],
+      rate = [
+        DateRangeValue(Date(1979, 01, 01), Date(2016, 12, 31), 0.0),
+      ],
+    ),
+  ],
+  check_start_date = Date(2006, 01, 01),
+  check_stop_date = Date(2013, 12, 31),
+  description = "Cotisations sociales ; Spécifiques aux cadres ; Vieillesse plafonnée (régime de base)",
+))
+
+@define_parameter(cotsoc.cotisations_employeur.prive_cadre.apprentissage, MarginalRateScale(
+  [
+    RateBracket(
+      threshold = [
+        DateRangeValue(Date(1993, 07, 01), Date(2014, 12, 31), 0.0),
+      ],
+      rate = [
+        DateRangeValue(Date(1993, 07, 01), Date(2014, 12, 31), 0.005),
+      ],
+    ),
+  ],
+  check_start_date = Date(2006, 01, 01),
+  check_stop_date = Date(2013, 12, 31),
+  description = "Cotisations sociales ; Spécifiques aux cadres ; Taxe d'apprentissage (toutes entreprises)",
+))
+
+@define_parameter(cotsoc.cotisations_employeur.prive_cadre.apprentissage_add, MarginalRateScale(
+  [
+    RateBracket(
+      threshold = [
+        DateRangeValue(Date(2004, 01, 01), Date(2014, 12, 31), 0.0),
+      ],
+      rate = [
+        DateRangeValue(Date(2004, 01, 01), Date(2004, 12, 31), 0.0006),
+        DateRangeValue(Date(2005, 01, 01), Date(2005, 12, 31), 0.0012),
+        DateRangeValue(Date(2006, 01, 01), Date(2014, 12, 31), 0.0018),
+      ],
+    ),
+  ],
+  check_start_date = Date(2006, 01, 01),
+  check_stop_date = Date(2013, 12, 31),
+  description = "Cotisations sociales ; Spécifiques aux cadres ; Contribution additionnelle au développement de l'apprentissage (toutes entreprises)",
+))
+
+@define_parameter(cotsoc.cotisations_employeur.prive_cadre.formprof_09, MarginalRateScale(
+  [
+    RateBracket(
+      threshold = [
+        DateRangeValue(Date(1992, 01, 01), Date(2013, 12, 31), 0.0),
+      ],
+      rate = [
+        DateRangeValue(Date(1993, 07, 01), Date(2003, 12, 31), 0.0015),
+        DateRangeValue(Date(2004, 01, 01), Date(2004, 12, 31), 0.004),
+        DateRangeValue(Date(2005, 01, 01), Date(2013, 12, 31), 0.0055),
+      ],
+    ),
+  ],
+  check_start_date = Date(2006, 01, 01),
+  check_stop_date = Date(2013, 12, 31),
+  description = "Cotisations sociales ; Spécifiques aux cadres ; Formation professionnelle (0-9 salaries)",
+))
+
+@define_parameter(cotsoc.cotisations_employeur.prive_cadre.formprof_1019, MarginalRateScale(
+  [
+    RateBracket(
+      threshold = [
+        DateRangeValue(Date(1992, 07, 01), Date(2013, 12, 31), 0.0),
+      ],
+      rate = [
+        DateRangeValue(Date(1992, 01, 01), Date(1992, 12, 31), 0.014),
+        DateRangeValue(Date(1993, 01, 01), Date(2003, 12, 31), 0.015),
+        DateRangeValue(Date(2004, 01, 01), Date(2005, 08, 03), 0.016),
+        DateRangeValue(Date(2005, 08, 04), Date(2013, 12, 01), 0.0105),
+      ],
+    ),
+  ],
+  check_start_date = Date(2006, 01, 01),
+  check_stop_date = Date(2013, 12, 31),
+  description = "Cotisations sociales ; Spécifiques aux cadres ; Formation professionnelle (10-19 salaries)",
+))
+
+@define_parameter(cotsoc.cotisations_employeur.prive_cadre.formprof_20, MarginalRateScale(
+  [
+    RateBracket(
+      threshold = [
+        DateRangeValue(Date(1993, 07, 01), Date(2014, 12, 31), 0.0),
+      ],
+      rate = [
+        DateRangeValue(Date(1992, 01, 01), Date(1992, 12, 31), 0.014),
+        DateRangeValue(Date(1993, 01, 01), Date(2003, 12, 31), 0.015),
+        DateRangeValue(Date(2004, 01, 01), Date(2013, 12, 31), 0.016),
+      ],
+    ),
+  ],
+  check_start_date = Date(2006, 01, 01),
+  check_stop_date = Date(2013, 12, 31),
+  description = "Cotisations sociales ; Spécifiques aux cadres ; Formation professionnelle (plus de 20 salariés)",
+))
+
+@define_parameter(cotsoc.cotisations_employeur.prive_cadre.construction, MarginalRateScale(
+  [
+    RateBracket(
+      threshold = [
+        DateRangeValue(Date(1992, 01, 01), Date(2014, 12, 31), 0.0),
+      ],
+      rate = [
+        DateRangeValue(Date(1992, 01, 01), Date(2014, 12, 31), 0.0045),
+      ],
+    ),
+  ],
+  check_start_date = Date(2006, 01, 01),
+  check_stop_date = Date(2013, 12, 31),
+  description = "Cotisations sociales ; Spécifiques aux cadres ; Effort à la construction (plus de 20 salariés)",
+))
+
+@define_parameter(cotsoc.cotisations_employeur.public_titulaire_etat.ati, MarginalRateScale(
+  [
+    RateBracket(
+      threshold = [
+        DateRangeValue(Date(2003, 01, 01), Date(2020, 12, 31), 0.0),
+      ],
+      rate = [
+        DateRangeValue(Date(2006, 01, 01), Date(2006, 12, 31), 0.003),
+        DateRangeValue(Date(2007, 01, 01), Date(2008, 12, 31), 0.0031),
+        DateRangeValue(Date(2009, 01, 01), Date(2009, 12, 31), 0.0032),
+        DateRangeValue(Date(2010, 01, 01), Date(2012, 12, 31), 0.0033),
+        DateRangeValue(Date(2013, 01, 01), Date(2013, 12, 31), 0.0032),
+      ],
+    ),
+  ],
+  check_start_date = Date(2006, 01, 01),
+  check_stop_date = Date(2013, 12, 31),
+  description = "Cotisations sociales ; Etat ; Allocations temporaires d'invalidité (ATI)",
+))
+
+@define_parameter(cotsoc.cotisations_employeur.public_titulaire_etat.maladie, MarginalRateScale(
+  [
+    RateBracket(
+      threshold = [
+        DateRangeValue(Date(1984, 01, 01), Date(2014, 12, 31), 0.0),
+      ],
+      rate = [
+        DateRangeValue(Date(1984, 01, 01), Date(2014, 12, 31), 0.097),
+      ],
+    ),
+  ],
+  check_start_date = Date(2006, 01, 01),
+  check_stop_date = Date(2013, 12, 31),
+  description = "Cotisations sociales ; Etat ; Maladie",
+))
+
+@define_parameter(cotsoc.cotisations_employeur.public_titulaire_etat.pension, MarginalRateScale(
+  [
+    RateBracket(
+      threshold = [
+        DateRangeValue(Date(1993, 01, 01), Date(2012, 12, 31), 0.0),
+      ],
+      rate = [
+        DateRangeValue(Date(2006, 01, 01), Date(2006, 12, 31), 0.499),
+        DateRangeValue(Date(2007, 01, 01), Date(2007, 12, 31), 0.5074),
+        DateRangeValue(Date(2008, 01, 01), Date(2008, 12, 31), 0.5571),
+        DateRangeValue(Date(2009, 01, 01), Date(2009, 11, 30), 0.6014),
+        DateRangeValue(Date(2009, 12, 01), Date(2009, 12, 31), 0.4014),
+        DateRangeValue(Date(2010, 01, 01), Date(2010, 12, 31), 0.6214),
+        DateRangeValue(Date(2011, 01, 01), Date(2011, 12, 31), 0.6539),
+        DateRangeValue(Date(2012, 01, 01), Date(2012, 12, 31), 0.6859),
+        DateRangeValue(Date(2013, 01, 01), Date(2014, 12, 31), 0.7428),
+      ],
+    ),
+  ],
+  check_start_date = Date(2006, 01, 01),
+  check_stop_date = Date(2013, 12, 31),
+  description = "Cotisations sociales ; Etat ; Pensions civiles (TI et NBI)",
+))
+
+@define_parameter(cotsoc.cotisations_employeur.public_titulaire_etat.rafp, MarginalRateScale(
+  [
+    RateBracket(
+      threshold = [
+        DateRangeValue(Date(1993, 01, 01), Date(2012, 12, 31), 0.0),
+      ],
+      rate = [
+        DateRangeValue(Date(2005, 01, 01), Date(2012, 12, 31), 0.05),
+      ],
+    ),
+  ],
+  check_start_date = Date(2006, 01, 01),
+  check_stop_date = Date(2013, 12, 31),
+  description = "Cotisations sociales ; Etat ; Régime additionnel de retraite (RAFP, totalité sauf TI et NBI, min 20% TI )",
+))
+
+@define_parameter(cotsoc.cotisations_employeur.public_titulaire_etat.csa, MarginalRateScale(
+  [
+    RateBracket(
+      threshold = [
+        DateRangeValue(Date(2004, 07, 01), Date(2014, 12, 31), 0.0),
+      ],
+      rate = [
+        DateRangeValue(Date(2004, 07, 01), Date(2014, 12, 31), 0.003),
+      ],
+    ),
+  ],
+  check_start_date = Date(2006, 01, 01),
+  check_stop_date = Date(2013, 12, 31),
+  description = "Cotisations sociales ; Etat ; Contribution solidarité autonomie (dépendance)",
+))
+
+@define_parameter(cotsoc.cotisations_employeur.public_titulaire_etat.famille, MarginalRateScale(
+  [
+    RateBracket(
+      threshold = [
+        DateRangeValue(Date(1993, 07, 01), Date(2014, 12, 31), 0.0),
+      ],
+      rate = [
+        DateRangeValue(Date(1993, 07, 01), Date(2013, 12, 31), 0.054),
+        DateRangeValue(Date(2014, 01, 01), Date(2014, 12, 31), 0.0525),
+      ],
+    ),
+  ],
+  check_start_date = Date(2006, 01, 01),
+  check_stop_date = Date(2013, 12, 31),
+  description = "Cotisations sociales ; Etat ; Allocation familiales",
+))
+
+@define_parameter(cotsoc.cotisations_employeur.public_titulaire_etat.fnal1, MarginalRateScale(
+  [
+    RateBracket(
+      threshold = [
+        DateRangeValue(Date(1993, 07, 01), Date(2014, 12, 31), 0.0),
+      ],
+      rate = [
+        DateRangeValue(Date(1993, 07, 01), Date(2014, 12, 31), 0.001),
+      ],
+    ),
+    RateBracket(
+      threshold = [
+        DateRangeValue(Date(1993, 07, 01), Date(2014, 12, 31), 1.0),
+      ],
+      rate = [
+        DateRangeValue(Date(1993, 07, 01), Date(2014, 12, 31), 0.0),
+      ],
+    ),
+  ],
+  check_start_date = Date(2006, 01, 01),
+  check_stop_date = Date(2013, 12, 31),
+  description = "Cotisations sociales ; Etat ; Fonds national action logement (FNAL, tout employeur)",
+))
+
+@define_parameter(cotsoc.cotisations_employeur.public_titulaire_etat.fnal2, MarginalRateScale(
+  [
+    RateBracket(
+      threshold = [
+        DateRangeValue(Date(1991, 07, 01), Date(2014, 12, 31), 0.0),
+      ],
+      rate = [
+        DateRangeValue(Date(1991, 07, 01), Date(2014, 12, 31), 0.005),
+      ],
+    ),
+    RateBracket(
+      threshold = [
+        DateRangeValue(Date(1991, 07, 01), Date(2010, 12, 31), 1.0),
+      ],
+      rate = [
+        DateRangeValue(Date(1991, 07, 01), Date(2010, 12, 31), 0.004),
+      ],
+    ),
+  ],
+  check_start_date = Date(2006, 01, 01),
+  check_stop_date = Date(2013, 12, 31),
+  description = "Cotisations sociales ; Etat ; Fonds national action logement (FNAL, plus de 20 salariés)",
+))
+
+@define_parameter(cotsoc.cotisations_employeur.public_titulaire_etat.transport, MarginalRateScale(
+  [
+    RateBracket(
+      threshold = [
+        DateRangeValue(Date(2003, 01, 01), Date(2014, 12, 31), 0.0),
+      ],
+      rate = [
+        DateRangeValue(Date(2003, 01, 01), Date(2014, 12, 31), 0.0175),
+      ],
+    ),
+  ],
+  check_start_date = Date(2006, 01, 01),
+  check_stop_date = Date(2013, 12, 31),
+  description = "Cotisations sociales ; Etat ; Transport (valeur non différenciée selon la localité, Lyon reférence)",
+))
+
+@define_parameter(cotsoc.cotisations_employeur.public_titulaire_territoriale.atiacl, MarginalRateScale(
+  [
+    RateBracket(
+      threshold = [
+        DateRangeValue(Date(2003, 01, 01), Date(2020, 12, 31), 0.0),
+      ],
+      rate = [
+        DateRangeValue(Date(1982, 01, 01), Date(2012, 12, 31), 0.005),
+        DateRangeValue(Date(2013, 01, 01), Date(2013, 12, 31), 0.004),
+      ],
+    ),
+  ],
+  check_start_date = Date(2006, 01, 01),
+  check_stop_date = Date(2013, 12, 31),
+  description = "Cotisations sociales ; Collectivités locales - Fonction publique hospitalière ; Allocations temporaires d'invalidité (hors NBI)",
+))
+
+@define_parameter(cotsoc.cotisations_employeur.public_titulaire_territoriale.cnracl, MarginalRateScale(
+  [
+    RateBracket(
+      threshold = [
+        DateRangeValue(Date(1984, 01, 01), Date(2012, 12, 31), 0.0),
+      ],
+      rate = [
+        DateRangeValue(Date(1995, 01, 01), Date(1999, 12, 31), 0.251),
+        DateRangeValue(Date(2000, 01, 01), Date(2000, 12, 31), 0.256),
+        DateRangeValue(Date(2001, 01, 01), Date(2002, 12, 31), 0.261),
+        DateRangeValue(Date(2003, 01, 01), Date(2003, 12, 31), 0.265),
+        DateRangeValue(Date(2004, 01, 01), Date(2004, 12, 31), 0.269),
+        DateRangeValue(Date(2005, 01, 01), Date(2012, 10, 31), 0.273),
+        DateRangeValue(Date(2012, 11, 01), Date(2012, 12, 31), 0.274),
+        DateRangeValue(Date(2013, 01, 01), Date(2013, 12, 31), 0.2885),
+        DateRangeValue(Date(2014, 01, 01), Date(2014, 12, 31), 0.3025),
+        DateRangeValue(Date(2015, 01, 01), Date(2015, 12, 31), 0.303),
+        DateRangeValue(Date(2016, 01, 01), Date(2020, 12, 31), 0.3035),
+      ],
+    ),
+  ],
+  check_start_date = Date(2006, 01, 01),
+  check_stop_date = Date(2013, 12, 31),
+  description = "Cotisations sociales ; Collectivités locales - Fonction publique hospitalière ; Retraites des agents des collectivités locales",
+))
+
+@define_parameter(cotsoc.cotisations_employeur.public_titulaire_territoriale.maladie, MarginalRateScale(
+  [
+    RateBracket(
+      threshold = [
+        DateRangeValue(Date(1984, 01, 01), Date(2014, 12, 31), 0.0),
+      ],
+      rate = [
+        DateRangeValue(Date(1984, 01, 01), Date(2014, 12, 31), 0.115),
+      ],
+    ),
+  ],
+  check_start_date = Date(2006, 01, 01),
+  check_stop_date = Date(2013, 12, 31),
+  description = "Cotisations sociales ; Collectivités locales - Fonction publique hospitalière ; Maladie",
+))
+
+@define_parameter(cotsoc.cotisations_employeur.public_titulaire_territoriale.rafp, MarginalRateScale(
+  [
+    RateBracket(
+      threshold = [
+        DateRangeValue(Date(1993, 01, 01), Date(2020, 12, 31), 0.0),
+      ],
+      rate = [
+        DateRangeValue(Date(2005, 01, 01), Date(2020, 12, 31), 0.05),
+      ],
+    ),
+  ],
+  check_start_date = Date(2006, 01, 01),
+  check_stop_date = Date(2013, 12, 31),
+  description = "Cotisations sociales ; Collectivités locales - Fonction publique hospitalière ; Régime additionnel de retraite (RAFP, totalité sauf TI et NBI, min 20% TI )",
+))
+
+@define_parameter(cotsoc.cotisations_employeur.public_titulaire_territoriale.csa, MarginalRateScale(
+  [
+    RateBracket(
+      threshold = [
+        DateRangeValue(Date(2004, 07, 01), Date(2014, 12, 31), 0.0),
+      ],
+      rate = [
+        DateRangeValue(Date(2004, 07, 01), Date(2014, 12, 31), 0.003),
+      ],
+    ),
+  ],
+  check_start_date = Date(2006, 01, 01),
+  check_stop_date = Date(2013, 12, 31),
+  description = "Cotisations sociales ; Collectivités locales - Fonction publique hospitalière ; Contribution solidarité autonomie (dépendance)",
+))
+
+@define_parameter(cotsoc.cotisations_employeur.public_titulaire_territoriale.famille, MarginalRateScale(
+  [
+    RateBracket(
+      threshold = [
+        DateRangeValue(Date(1993, 07, 01), Date(2014, 12, 31), 0.0),
+      ],
+      rate = [
+        DateRangeValue(Date(1993, 07, 01), Date(2013, 12, 31), 0.054),
+        DateRangeValue(Date(2014, 01, 01), Date(2014, 12, 31), 0.0525),
+      ],
+    ),
+  ],
+  check_start_date = Date(2006, 01, 01),
+  check_stop_date = Date(2013, 12, 31),
+  description = "Cotisations sociales ; Collectivités locales - Fonction publique hospitalière ; Allocation familiales",
+))
+
+@define_parameter(cotsoc.cotisations_employeur.public_titulaire_territoriale.fnal1, MarginalRateScale(
+  [
+    RateBracket(
+      threshold = [
+        DateRangeValue(Date(1993, 07, 01), Date(2014, 12, 31), 0.0),
+      ],
+      rate = [
+        DateRangeValue(Date(1993, 07, 01), Date(2014, 12, 31), 0.001),
+      ],
+    ),
+    RateBracket(
+      threshold = [
+        DateRangeValue(Date(1993, 07, 01), Date(2014, 12, 31), 1.0),
+      ],
+      rate = [
+        DateRangeValue(Date(1993, 07, 01), Date(2014, 12, 31), 0.0),
+      ],
+    ),
+  ],
+  check_start_date = Date(2006, 01, 01),
+  check_stop_date = Date(2013, 12, 31),
+  description = "Cotisations sociales ; Collectivités locales - Fonction publique hospitalière ; Fonds national action logement (FNAL, tout employeur)",
+))
+
+@define_parameter(cotsoc.cotisations_employeur.public_titulaire_territoriale.fnal2, MarginalRateScale(
+  [
+    RateBracket(
+      threshold = [
+        DateRangeValue(Date(1991, 07, 01), Date(2014, 12, 31), 0.0),
+      ],
+      rate = [
+        DateRangeValue(Date(1991, 07, 01), Date(2014, 12, 31), 0.005),
+      ],
+    ),
+    RateBracket(
+      threshold = [
+        DateRangeValue(Date(1991, 07, 01), Date(2010, 12, 31), 1.0),
+      ],
+      rate = [
+        DateRangeValue(Date(1991, 07, 01), Date(2010, 12, 31), 0.004),
+      ],
+    ),
+  ],
+  check_start_date = Date(2006, 01, 01),
+  check_stop_date = Date(2013, 12, 31),
+  description = "Cotisations sociales ; Collectivités locales - Fonction publique hospitalière ; Fonds national action logement (FNAL, plus de 20 salariés)",
+))
+
+@define_parameter(cotsoc.cotisations_employeur.public_titulaire_territoriale.transport, MarginalRateScale(
+  [
+    RateBracket(
+      threshold = [
+        DateRangeValue(Date(2003, 01, 01), Date(2014, 12, 31), 0.0),
+      ],
+      rate = [
+        DateRangeValue(Date(2003, 01, 01), Date(2014, 12, 31), 0.0175),
+      ],
+    ),
+  ],
+  check_start_date = Date(2006, 01, 01),
+  check_stop_date = Date(2013, 12, 31),
+  description = "Cotisations sociales ; Collectivités locales - Fonction publique hospitalière ; Transport (valeur non différenciée selon la localité, Lyon reférence)",
+))
+
+@define_parameter(cotsoc.cotisations_employeur.public_titulaire_territoriale.fcppa, MarginalRateScale(
+  [
+    RateBracket(
+      threshold = [
+        DateRangeValue(Date(1984, 01, 01), Date(2010, 12, 31), 0.0),
+      ],
+      rate = [
+        DateRangeValue(Date(1984, 01, 01), Date(2001, 12, 31), 0.002),
+        DateRangeValue(Date(2002, 01, 01), Date(2010, 12, 31), 0.005),
+      ],
+    ),
+  ],
+  check_start_date = Date(2006, 01, 01),
+  check_stop_date = Date(2013, 12, 31),
+  description = "Cotisations sociales ; Collectivités locales - Fonction publique hospitalière ; Fonds de compensation de la cessation progressive d’activité",
+))
+
+@define_parameter(cotsoc.cotisations_employeur.public_titulaire_hospitaliere.atiacl, MarginalRateScale(
+  [
+    RateBracket(
+      threshold = [
+        DateRangeValue(Date(2003, 01, 01), Date(2020, 12, 31), 0.0),
+      ],
+      rate = [
+        DateRangeValue(Date(1982, 01, 01), Date(2012, 12, 31), 0.005),
+        DateRangeValue(Date(2013, 01, 01), Date(2013, 12, 31), 0.004),
+      ],
+    ),
+  ],
+  check_start_date = Date(2006, 01, 01),
+  check_stop_date = Date(2013, 12, 31),
+  description = "Cotisations sociales ; Collectivités locales - Fonction publique hospitalière ; Allocations temporaires d'invalidité (hors NBI)",
+))
+
+@define_parameter(cotsoc.cotisations_employeur.public_titulaire_hospitaliere.cnracl, MarginalRateScale(
+  [
+    RateBracket(
+      threshold = [
+        DateRangeValue(Date(1984, 01, 01), Date(2012, 12, 31), 0.0),
+      ],
+      rate = [
+        DateRangeValue(Date(1995, 01, 01), Date(1999, 12, 31), 0.251),
+        DateRangeValue(Date(2000, 01, 01), Date(2000, 12, 31), 0.256),
+        DateRangeValue(Date(2001, 01, 01), Date(2002, 12, 31), 0.261),
+        DateRangeValue(Date(2003, 01, 01), Date(2003, 12, 31), 0.265),
+        DateRangeValue(Date(2004, 01, 01), Date(2004, 12, 31), 0.269),
+        DateRangeValue(Date(2005, 01, 01), Date(2012, 10, 31), 0.273),
+        DateRangeValue(Date(2012, 11, 01), Date(2012, 12, 31), 0.274),
+        DateRangeValue(Date(2013, 01, 01), Date(2013, 12, 31), 0.2885),
+        DateRangeValue(Date(2014, 01, 01), Date(2014, 12, 31), 0.3025),
+        DateRangeValue(Date(2015, 01, 01), Date(2015, 12, 31), 0.303),
+        DateRangeValue(Date(2016, 01, 01), Date(2020, 12, 31), 0.3035),
+      ],
+    ),
+  ],
+  check_start_date = Date(2006, 01, 01),
+  check_stop_date = Date(2013, 12, 31),
+  description = "Cotisations sociales ; Collectivités locales - Fonction publique hospitalière ; Retraites des agents des collectivités locales",
+))
+
+@define_parameter(cotsoc.cotisations_employeur.public_titulaire_hospitaliere.maladie, MarginalRateScale(
+  [
+    RateBracket(
+      threshold = [
+        DateRangeValue(Date(1984, 01, 01), Date(2014, 12, 31), 0.0),
+      ],
+      rate = [
+        DateRangeValue(Date(1984, 01, 01), Date(2014, 12, 31), 0.115),
+      ],
+    ),
+  ],
+  check_start_date = Date(2006, 01, 01),
+  check_stop_date = Date(2013, 12, 31),
+  description = "Cotisations sociales ; Collectivités locales - Fonction publique hospitalière ; Maladie",
+))
+
+@define_parameter(cotsoc.cotisations_employeur.public_titulaire_hospitaliere.rafp, MarginalRateScale(
+  [
+    RateBracket(
+      threshold = [
+        DateRangeValue(Date(1993, 01, 01), Date(2020, 12, 31), 0.0),
+      ],
+      rate = [
+        DateRangeValue(Date(2005, 01, 01), Date(2020, 12, 31), 0.05),
+      ],
+    ),
+  ],
+  check_start_date = Date(2006, 01, 01),
+  check_stop_date = Date(2013, 12, 31),
+  description = "Cotisations sociales ; Collectivités locales - Fonction publique hospitalière ; Régime additionnel de retraite (RAFP, totalité sauf TI et NBI, min 20% TI )",
+))
+
+@define_parameter(cotsoc.cotisations_employeur.public_titulaire_hospitaliere.csa, MarginalRateScale(
+  [
+    RateBracket(
+      threshold = [
+        DateRangeValue(Date(2004, 07, 01), Date(2014, 12, 31), 0.0),
+      ],
+      rate = [
+        DateRangeValue(Date(2004, 07, 01), Date(2014, 12, 31), 0.003),
+      ],
+    ),
+  ],
+  check_start_date = Date(2006, 01, 01),
+  check_stop_date = Date(2013, 12, 31),
+  description = "Cotisations sociales ; Collectivités locales - Fonction publique hospitalière ; Contribution solidarité autonomie (dépendance)",
+))
+
+@define_parameter(cotsoc.cotisations_employeur.public_titulaire_hospitaliere.famille, MarginalRateScale(
+  [
+    RateBracket(
+      threshold = [
+        DateRangeValue(Date(1993, 07, 01), Date(2014, 12, 31), 0.0),
+      ],
+      rate = [
+        DateRangeValue(Date(1993, 07, 01), Date(2013, 12, 31), 0.054),
+        DateRangeValue(Date(2014, 01, 01), Date(2014, 12, 31), 0.0525),
+      ],
+    ),
+  ],
+  check_start_date = Date(2006, 01, 01),
+  check_stop_date = Date(2013, 12, 31),
+  description = "Cotisations sociales ; Collectivités locales - Fonction publique hospitalière ; Allocation familiales",
+))
+
+@define_parameter(cotsoc.cotisations_employeur.public_titulaire_hospitaliere.fnal1, MarginalRateScale(
+  [
+    RateBracket(
+      threshold = [
+        DateRangeValue(Date(1993, 07, 01), Date(2014, 12, 31), 0.0),
+      ],
+      rate = [
+        DateRangeValue(Date(1993, 07, 01), Date(2014, 12, 31), 0.001),
+      ],
+    ),
+    RateBracket(
+      threshold = [
+        DateRangeValue(Date(1993, 07, 01), Date(2014, 12, 31), 1.0),
+      ],
+      rate = [
+        DateRangeValue(Date(1993, 07, 01), Date(2014, 12, 31), 0.0),
+      ],
+    ),
+  ],
+  check_start_date = Date(2006, 01, 01),
+  check_stop_date = Date(2013, 12, 31),
+  description = "Cotisations sociales ; Collectivités locales - Fonction publique hospitalière ; Fonds national action logement (FNAL, tout employeur)",
+))
+
+@define_parameter(cotsoc.cotisations_employeur.public_titulaire_hospitaliere.fnal2, MarginalRateScale(
+  [
+    RateBracket(
+      threshold = [
+        DateRangeValue(Date(1991, 07, 01), Date(2014, 12, 31), 0.0),
+      ],
+      rate = [
+        DateRangeValue(Date(1991, 07, 01), Date(2014, 12, 31), 0.005),
+      ],
+    ),
+    RateBracket(
+      threshold = [
+        DateRangeValue(Date(1991, 07, 01), Date(2010, 12, 31), 1.0),
+      ],
+      rate = [
+        DateRangeValue(Date(1991, 07, 01), Date(2010, 12, 31), 0.004),
+      ],
+    ),
+  ],
+  check_start_date = Date(2006, 01, 01),
+  check_stop_date = Date(2013, 12, 31),
+  description = "Cotisations sociales ; Collectivités locales - Fonction publique hospitalière ; Fonds national action logement (FNAL, plus de 20 salariés)",
+))
+
+@define_parameter(cotsoc.cotisations_employeur.public_titulaire_hospitaliere.transport, MarginalRateScale(
+  [
+    RateBracket(
+      threshold = [
+        DateRangeValue(Date(2003, 01, 01), Date(2014, 12, 31), 0.0),
+      ],
+      rate = [
+        DateRangeValue(Date(2003, 01, 01), Date(2014, 12, 31), 0.0175),
+      ],
+    ),
+  ],
+  check_start_date = Date(2006, 01, 01),
+  check_stop_date = Date(2013, 12, 31),
+  description = "Cotisations sociales ; Collectivités locales - Fonction publique hospitalière ; Transport (valeur non différenciée selon la localité, Lyon reférence)",
+))
+
+@define_parameter(cotsoc.cotisations_employeur.public_titulaire_hospitaliere.feh, MarginalRateScale(
+  [
+    RateBracket(
+      threshold = [
+        DateRangeValue(Date(1995, 01, 01), Date(2014, 12, 31), 0.0),
+      ],
+      rate = [
+        DateRangeValue(Date(1995, 01, 01), Date(1998, 12, 31), 0.0045),
+        DateRangeValue(Date(1999, 01, 01), Date(1999, 12, 31), 0.0067),
+        DateRangeValue(Date(2000, 01, 01), Date(2001, 12, 31), 0.008),
+        DateRangeValue(Date(2002, 01, 01), Date(2020, 12, 31), 0.01),
+      ],
+    ),
+  ],
+  check_start_date = Date(2006, 01, 01),
+  check_stop_date = Date(2013, 12, 31),
+  description = "Cotisations sociales ; Collectivités locales - Fonction publique hospitalière ; Fonds pour l'emploi hospitalier",
+))
+
+@define_parameter(cotsoc.cotisations_employeur.public_non_titulaire.ircantec, MarginalRateScale(
+  [
+    RateBracket(
+      threshold = [
+        DateRangeValue(Date(1992, 01, 01), Date(2017, 12, 31), 0.0),
+      ],
+      rate = [
+        DateRangeValue(Date(1992, 01, 01), Date(2010, 12, 31), 0.027),
+        DateRangeValue(Date(2011, 01, 01), Date(2011, 12, 31), 0.0273),
+        DateRangeValue(Date(2012, 01, 01), Date(2012, 12, 31), 0.0282),
+        DateRangeValue(Date(2013, 01, 01), Date(2013, 12, 31), 0.0294),
+        DateRangeValue(Date(2014, 01, 01), Date(2014, 12, 31), 0.0304),
+        DateRangeValue(Date(2015, 01, 01), Date(2015, 12, 31), 0.0317),
+        DateRangeValue(Date(2016, 01, 01), Date(2016, 12, 31), 0.0326),
+        DateRangeValue(Date(2017, 01, 01), Date(2017, 12, 31), 0.0336),
+      ],
+      base = [
+        DateRangeValue(Date(1992, 01, 01), Date(2017, 12, 31), 1.25),
+      ],
+    ),
+    RateBracket(
+      threshold = [
+        DateRangeValue(Date(1992, 01, 01), Date(2017, 12, 31), 1.0),
+      ],
+      rate = [
+        DateRangeValue(Date(1992, 01, 01), Date(2010, 12, 31), 0.0924),
+        DateRangeValue(Date(2011, 01, 01), Date(2011, 12, 31), 0.0928),
+        DateRangeValue(Date(2012, 01, 01), Date(2012, 12, 31), 0.0936),
+        DateRangeValue(Date(2013, 01, 01), Date(2013, 12, 31), 0.0946),
+        DateRangeValue(Date(2014, 01, 01), Date(2014, 12, 31), 0.0958),
+        DateRangeValue(Date(2015, 01, 01), Date(2015, 12, 31), 0.0974),
+        DateRangeValue(Date(2016, 01, 01), Date(2016, 12, 31), 0.0988),
+        DateRangeValue(Date(2017, 01, 01), Date(2017, 12, 31), 0.1004),
+      ],
+      base = [
+        DateRangeValue(Date(1992, 01, 01), Date(2017, 12, 31), 1.25),
+      ],
+    ),
+    RateBracket(
+      threshold = [
+        DateRangeValue(Date(1992, 01, 01), Date(2017, 12, 31), 8.0),
+      ],
+      rate = [
+        DateRangeValue(Date(1992, 01, 01), Date(2017, 12, 31), 0.0),
+      ],
+    ),
+  ],
+  check_start_date = Date(2006, 01, 01),
+  check_stop_date = Date(2013, 12, 31),
+  description = "Cotisations sociales ; Agents non titulaires ; IRCANTEC",
+))
+
+@define_parameter(cotsoc.cotisations_employeur.public_non_titulaire.csa, MarginalRateScale(
+  [
+    RateBracket(
+      threshold = [
+        DateRangeValue(Date(2004, 07, 01), Date(2014, 12, 31), 0.0),
+      ],
+      rate = [
+        DateRangeValue(Date(2004, 07, 01), Date(2014, 12, 31), 0.003),
+      ],
+    ),
+  ],
+  check_start_date = Date(2006, 01, 01),
+  check_stop_date = Date(2013, 12, 31),
+  description = "Cotisations sociales ; Agents non titulaires ; Contribution solidarité autonomie (dépendance)",
+))
+
+@define_parameter(cotsoc.cotisations_employeur.public_non_titulaire.famille, MarginalRateScale(
+  [
+    RateBracket(
+      threshold = [
+        DateRangeValue(Date(1993, 07, 01), Date(2014, 12, 31), 0.0),
+      ],
+      rate = [
+        DateRangeValue(Date(1993, 07, 01), Date(2013, 12, 31), 0.054),
+        DateRangeValue(Date(2014, 01, 01), Date(2014, 12, 31), 0.0525),
+      ],
+    ),
+  ],
+  check_start_date = Date(2006, 01, 01),
+  check_stop_date = Date(2013, 12, 31),
+  description = "Cotisations sociales ; Agents non titulaires ; Allocation familiales",
+))
+
+@define_parameter(cotsoc.cotisations_employeur.public_non_titulaire.fnal1, MarginalRateScale(
+  [
+    RateBracket(
+      threshold = [
+        DateRangeValue(Date(1993, 07, 01), Date(2014, 12, 31), 0.0),
+      ],
+      rate = [
+        DateRangeValue(Date(1993, 07, 01), Date(2014, 12, 31), 0.001),
+      ],
+    ),
+    RateBracket(
+      threshold = [
+        DateRangeValue(Date(1993, 07, 01), Date(2014, 12, 31), 1.0),
+      ],
+      rate = [
+        DateRangeValue(Date(1993, 07, 01), Date(2014, 12, 31), 0.0),
+      ],
+    ),
+  ],
+  check_start_date = Date(2006, 01, 01),
+  check_stop_date = Date(2013, 12, 31),
+  description = "Cotisations sociales ; Agents non titulaires ; Fonds national action logement (FNAL, tout employeur)",
+))
+
+@define_parameter(cotsoc.cotisations_employeur.public_non_titulaire.fnal2, MarginalRateScale(
+  [
+    RateBracket(
+      threshold = [
+        DateRangeValue(Date(1991, 07, 01), Date(2014, 12, 31), 0.0),
+      ],
+      rate = [
+        DateRangeValue(Date(1991, 07, 01), Date(2014, 12, 31), 0.005),
+      ],
+    ),
+    RateBracket(
+      threshold = [
+        DateRangeValue(Date(1991, 07, 01), Date(2010, 12, 31), 1.0),
+      ],
+      rate = [
+        DateRangeValue(Date(1991, 07, 01), Date(2010, 12, 31), 0.004),
+      ],
+    ),
+  ],
+  check_start_date = Date(2006, 01, 01),
+  check_stop_date = Date(2013, 12, 31),
+  description = "Cotisations sociales ; Agents non titulaires ; Fonds national action logement (FNAL, plus de 20 salariés)",
+))
+
+@define_parameter(cotsoc.cotisations_employeur.public_non_titulaire.maladie, MarginalRateScale(
+  [
+    RateBracket(
+      threshold = [
+        DateRangeValue(Date(1992, 07, 01), Date(2014, 12, 31), 0.0),
+      ],
+      rate = [
+        DateRangeValue(Date(1992, 07, 01), Date(2014, 12, 31), 0.128),
+      ],
+    ),
+  ],
+  check_start_date = Date(2006, 01, 01),
+  check_stop_date = Date(2013, 12, 31),
+  description = "Cotisations sociales ; Agents non titulaires ; Maladie, maternité, invalidité, décès",
+))
+
+@define_parameter(cotsoc.cotisations_employeur.public_non_titulaire.transport, MarginalRateScale(
+  [
+    RateBracket(
+      threshold = [
+        DateRangeValue(Date(2003, 01, 01), Date(2014, 12, 31), 0.0),
+      ],
+      rate = [
+        DateRangeValue(Date(2003, 01, 01), Date(2014, 12, 31), 0.0175),
+      ],
+    ),
+  ],
+  check_start_date = Date(2006, 01, 01),
+  check_stop_date = Date(2013, 12, 31),
+  description = "Cotisations sociales ; Agents non titulaires ; Transport (valeur non différenciée selon la localité, Lyon reférence)",
+))
+
+@define_parameter(cotsoc.cotisations_employeur.public_non_titulaire.vieillessedeplaf, MarginalRateScale(
+  [
+    RateBracket(
+      threshold = [
+        DateRangeValue(Date(1993, 07, 01), Date(2016, 12, 31), 0.0),
+      ],
+      rate = [
+        DateRangeValue(Date(1993, 07, 01), Date(2013, 12, 31), 0.016),
+        DateRangeValue(Date(2014, 01, 01), Date(2016, 12, 31), 0.0175),
+      ],
+    ),
+  ],
+  check_start_date = Date(2006, 01, 01),
+  check_stop_date = Date(2013, 12, 31),
+  description = "Cotisations sociales ; Agents non titulaires ; Vieillesse déplafonnée",
+))
+
+@define_parameter(cotsoc.cotisations_employeur.public_non_titulaire.vieillesseplaf, MarginalRateScale(
+  [
+    RateBracket(
+      threshold = [
+        DateRangeValue(Date(1979, 01, 01), Date(2016, 12, 31), 0.0),
+      ],
+      rate = [
+        DateRangeValue(Date(1979, 01, 01), Date(2005, 12, 31), 0.082),
+        DateRangeValue(Date(2006, 01, 01), Date(2012, 10, 31), 0.083),
+        DateRangeValue(Date(2012, 11, 01), Date(2013, 12, 31), 0.084),
+        DateRangeValue(Date(2014, 01, 01), Date(2014, 12, 31), 0.0845),
+        DateRangeValue(Date(2015, 01, 01), Date(2015, 12, 31), 0.085),
+        DateRangeValue(Date(2016, 01, 01), Date(2016, 12, 31), 0.0855),
+      ],
+    ),
+    RateBracket(
+      threshold = [
+        DateRangeValue(Date(1979, 01, 01), Date(2016, 12, 31), 1.0),
+      ],
+      rate = [
+        DateRangeValue(Date(1979, 01, 01), Date(2016, 12, 31), 0.0),
+      ],
+    ),
+  ],
+  check_start_date = Date(2006, 01, 01),
+  check_stop_date = Date(2013, 12, 31),
+  description = "Cotisations sociales ; Agents non titulaires ; Vieillesse plafonnée (régime de base)",
+))
+
+@define_parameter(cotsoc.cotisations_salarie.prive_non_cadre.agff, MarginalRateScale(
+  [
+    RateBracket(
+      threshold = [
+        DateRangeValue(Date(2001, 04, 01), Date(2014, 12, 31), 0.0),
+      ],
+      rate = [
+        DateRangeValue(Date(2001, 04, 01), Date(2014, 12, 31), 0.008),
+      ],
+    ),
+    RateBracket(
+      threshold = [
+        DateRangeValue(Date(2001, 04, 01), Date(2014, 12, 31), 1.0),
+      ],
+      rate = [
+        DateRangeValue(Date(2001, 04, 01), Date(2014, 12, 31), 0.009),
+      ],
+    ),
+    RateBracket(
+      threshold = [
+        DateRangeValue(Date(2001, 04, 01), Date(2014, 12, 31), 3.0),
+      ],
+      rate = [
+        DateRangeValue(Date(2001, 04, 01), Date(2014, 12, 31), 0.0),
+      ],
+    ),
+  ],
+  check_start_date = Date(2006, 01, 01),
+  check_stop_date = Date(2013, 12, 31),
+  description = "Cotisations sociales ; Spécifiques aux non cadres ; Cotisation AGFF",
+))
+
+@define_parameter(cotsoc.cotisations_salarie.prive_non_cadre.arrconc, MarginalRateScale(
+  [
+    RateBracket(
+      threshold = [
+        DateRangeValue(Date(2000, 01, 01), Date(2015, 12, 31), 0.0),
+      ],
+      rate = [
+        DateRangeValue(Date(2000, 01, 01), Date(2015, 12, 31), 0.0, comment = "1er tranche commune aux cadres et aux non-cadres"),
+      ],
+    ),
+    RateBracket(
+      threshold = [
+        DateRangeValue(Date(2000, 01, 01), Date(2015, 12, 31), 1.0),
+      ],
+      rate = [
+        DateRangeValue(Date(2000, 01, 01), Date(2001, 12, 31), 0.05),
+        DateRangeValue(Date(2002, 01, 01), Date(2003, 12, 31), 0.06),
+        DateRangeValue(Date(2004, 01, 01), Date(2004, 12, 31), 0.07),
+        DateRangeValue(Date(2005, 01, 01), Date(2013, 12, 31), 0.08),
+        DateRangeValue(Date(2014, 01, 01), Date(2014, 12, 31), 0.0805),
+        DateRangeValue(Date(2015, 01, 01), Date(2015, 12, 31), 0.081),
+      ],
+    ),
+    RateBracket(
+      threshold = [
+        DateRangeValue(Date(2003, 01, 01), Date(2015, 12, 31), 3.0),
+      ],
+      rate = [
+        DateRangeValue(Date(2003, 01, 01), Date(2015, 12, 31), 0.0),
+      ],
+    ),
+  ],
+  check_start_date = Date(2006, 01, 01),
+  check_stop_date = Date(2013, 12, 31),
+  description = "Cotisations sociales ; Spécifiques aux non cadres ; Retraite complémentaire ARRCO",
+))
+
+@define_parameter(cotsoc.cotisations_salarie.prive_non_cadre.arrco, MarginalRateScale(
+  [
+    RateBracket(
+      threshold = [
+        DateRangeValue(Date(1993, 07, 01), Date(2013, 12, 31), 0.0),
+      ],
+      rate = [
+        DateRangeValue(Date(1993, 01, 01), Date(1995, 12, 31), 0.01968),
+        DateRangeValue(Date(1996, 01, 01), Date(1996, 12, 31), 0.0225),
+        DateRangeValue(Date(1997, 01, 01), Date(1997, 12, 31), 0.025),
+        DateRangeValue(Date(1998, 01, 01), Date(1998, 12, 31), 0.0275),
+        DateRangeValue(Date(1999, 01, 01), Date(2013, 12, 31), 0.03),
+        DateRangeValue(Date(2014, 01, 01), Date(2014, 12, 31), 0.0305),
+        DateRangeValue(Date(2015, 01, 01), Date(2015, 12, 31), 0.031),
+      ],
+    ),
+    RateBracket(
+      threshold = [
+        DateRangeValue(Date(2000, 01, 01), Date(2013, 12, 31), 1.0),
+      ],
+      rate = [
+        DateRangeValue(Date(2000, 01, 01), Date(2013, 12, 31), 0.0),
+      ],
+    ),
+  ],
+  check_start_date = Date(2006, 01, 01),
+  check_stop_date = Date(2013, 12, 31),
+  description = "Cotisations sociales ; Spécifiques aux non cadres ; Retraite complémentaire ARRCO",
+))
+
+@define_parameter(cotsoc.cotisations_salarie.prive_non_cadre.assedic, MarginalRateScale(
+  [
+    RateBracket(
+      threshold = [
+        DateRangeValue(Date(1993, 07, 01), Date(2014, 12, 31), 0.0),
+      ],
+      rate = [
+        DateRangeValue(Date(1993, 07, 01), Date(1993, 12, 31), 0.0377),
+        DateRangeValue(Date(1994, 01, 01), Date(1996, 12, 31), 0.0386),
+        DateRangeValue(Date(1997, 01, 01), Date(2000, 12, 31), 0.036),
+        DateRangeValue(Date(2001, 01, 01), Date(2001, 03, 31), 0.0349),
+        DateRangeValue(Date(2001, 04, 01), Date(2001, 06, 30), 0.026),
+        DateRangeValue(Date(2001, 07, 01), Date(2001, 12, 31), 0.021),
+        DateRangeValue(Date(2002, 01, 01), Date(2002, 06, 30), 0.02),
+        DateRangeValue(Date(2002, 07, 01), Date(2002, 12, 31), 0.021),
+        DateRangeValue(Date(2003, 01, 01), Date(2005, 12, 31), 0.024),
+        DateRangeValue(Date(2006, 01, 01), Date(2006, 12, 31), 0.0244),
+        DateRangeValue(Date(2007, 01, 01), Date(2014, 12, 31), 0.024),
+      ],
+    ),
+    RateBracket(
+      threshold = [
+        DateRangeValue(Date(2003, 01, 01), Date(2014, 12, 31), 4.0),
+      ],
+      rate = [
+        DateRangeValue(Date(2003, 01, 01), Date(2014, 12, 31), 0.0),
+      ],
+    ),
+  ],
+  check_start_date = Date(2006, 01, 01),
+  check_stop_date = Date(2013, 12, 31),
+  description = "Cotisations sociales ; Spécifiques aux non cadres ; Chômage-emploi ASSEDIC",
+))
+
+@define_parameter(cotsoc.cotisations_salarie.prive_non_cadre.maladie, MarginalRateScale(
+  [
+    RateBracket(
+      threshold = [
+        DateRangeValue(Date(1993, 07, 01), Date(2013, 12, 31), 0.0),
+      ],
+      rate = [
+        DateRangeValue(Date(1993, 07, 01), Date(1996, 12, 31), 0.068),
+        DateRangeValue(Date(1997, 01, 01), Date(1997, 12, 31), 0.055),
+        DateRangeValue(Date(1998, 01, 01), Date(2013, 12, 31), 0.0075),
+      ],
+    ),
+  ],
+  check_start_date = Date(2006, 01, 01),
+  check_stop_date = Date(2013, 12, 31),
+  description = "Cotisations sociales ; Spécifiques aux non cadres ; Assurance maladie, maternité, invalidité, décès",
+))
+
+@define_parameter(cotsoc.cotisations_salarie.prive_non_cadre.vieillesse, MarginalRateScale(
+  [
+    RateBracket(
+      threshold = [
+        DateRangeValue(Date(1993, 07, 01), Date(2016, 12, 31), 0.0),
+      ],
+      rate = [
+        DateRangeValue(Date(1993, 07, 01), Date(2005, 12, 31), 0.0655),
+        DateRangeValue(Date(2006, 01, 01), Date(2012, 10, 31), 0.0665),
+        DateRangeValue(Date(2012, 11, 01), Date(2013, 12, 31), 0.0675),
+        DateRangeValue(Date(2014, 01, 01), Date(2014, 12, 31), 0.068),
+        DateRangeValue(Date(2015, 01, 01), Date(2015, 12, 31), 0.0685),
+        DateRangeValue(Date(2016, 01, 01), Date(2016, 12, 31), 0.069),
+      ],
+    ),
+    RateBracket(
+      threshold = [
+        DateRangeValue(Date(1993, 07, 01), Date(2016, 12, 31), 1.0),
+      ],
+      rate = [
+        DateRangeValue(Date(1993, 07, 01), Date(2016, 12, 31), 0.0),
+      ],
+    ),
+  ],
+  check_start_date = Date(2006, 01, 01),
+  check_stop_date = Date(2013, 12, 31),
+  description = "Cotisations sociales ; Spécifiques aux non cadres ; Vieillesse (régime de base de la retraite CNAV)",
+))
+
+@define_parameter(cotsoc.cotisations_salarie.prive_non_cadre.vieillessedeplaf, MarginalRateScale(
+  [
+    RateBracket(
+      threshold = [
+        DateRangeValue(Date(2004, 07, 01), Date(2014, 12, 31), 0.0),
+      ],
+      rate = [
+        DateRangeValue(Date(2004, 07, 01), Date(2013, 12, 31), 0.001),
+        DateRangeValue(Date(2014, 01, 01), Date(2014, 12, 31), 0.0025),
+      ],
+    ),
+  ],
+  check_start_date = Date(2006, 01, 01),
+  check_stop_date = Date(2013, 12, 31),
+  description = "Cotisations sociales ; Spécifiques aux non cadres ; Vieillesse déplafonnée (ancienne assurance veuvage transférée à la CNAV en 2004)",
+))
+
+@define_parameter(cotsoc.cotisations_salarie.prive_cadre.agff, MarginalRateScale(
+  [
+    RateBracket(
+      threshold = [
+        DateRangeValue(Date(2001, 04, 01), Date(2014, 12, 31), 0.0),
+      ],
+      rate = [
+        DateRangeValue(Date(2001, 04, 01), Date(2014, 12, 31), 0.008),
+      ],
+    ),
+    RateBracket(
+      threshold = [
+        DateRangeValue(Date(2001, 04, 01), Date(2014, 12, 31), 1.0),
+      ],
+      rate = [
+        DateRangeValue(Date(2001, 04, 01), Date(2014, 12, 31), 0.009),
+      ],
+    ),
+    RateBracket(
+      threshold = [
+        DateRangeValue(Date(2001, 04, 01), Date(2014, 12, 31), 4.0),
+      ],
+      rate = [
+        DateRangeValue(Date(2001, 04, 01), Date(2014, 12, 31), 0.0),
+      ],
+    ),
+  ],
+  check_start_date = Date(2006, 01, 01),
+  check_stop_date = Date(2013, 12, 31),
+  description = "Cotisations sociales ; Spécifiques aux cadres ; Cotisation AGFF",
+))
+
+@define_parameter(cotsoc.cotisations_salarie.prive_cadre.agirc, MarginalRateScale(
+  [
+    RateBracket(
+      threshold = [
+        DateRangeValue(Date(1993, 07, 01), Date(2015, 12, 31), 0.0),
+      ],
+      rate = [
+        DateRangeValue(Date(1993, 07, 01), Date(2015, 12, 31), 0.0),
+      ],
+    ),
+    RateBracket(
+      threshold = [
+        DateRangeValue(Date(1993, 07, 01), Date(2015, 12, 31), 1.0),
+      ],
+      rate = [
+        DateRangeValue(Date(1993, 07, 01), Date(1993, 12, 31), 0.0234),
+        DateRangeValue(Date(1994, 01, 01), Date(1994, 12, 31), 0.0363),
+        DateRangeValue(Date(1995, 01, 01), Date(1995, 12, 31), 0.05),
+        DateRangeValue(Date(1996, 01, 01), Date(1996, 12, 31), 0.05625),
+        DateRangeValue(Date(1997, 01, 01), Date(1997, 12, 31), 0.0625),
+        DateRangeValue(Date(1998, 01, 01), Date(1998, 12, 31), 0.06875),
+        DateRangeValue(Date(1999, 01, 01), Date(2005, 12, 31), 0.075),
+        DateRangeValue(Date(2006, 01, 01), Date(2013, 12, 31), 0.077),
+        DateRangeValue(Date(2014, 01, 01), Date(2014, 12, 31), 0.0775),
+        DateRangeValue(Date(2015, 01, 01), Date(2015, 12, 31), 0.078),
+      ],
+    ),
+    RateBracket(
+      threshold = [
+        DateRangeValue(Date(1993, 07, 01), Date(2015, 12, 31), 4.0),
+      ],
+      rate = [
+        DateRangeValue(Date(1993, 07, 01), Date(1993, 12, 31), 0.0234),
+        DateRangeValue(Date(1994, 01, 01), Date(1994, 12, 31), 0.0363),
+        DateRangeValue(Date(1995, 01, 01), Date(1995, 12, 31), 0.05),
+        DateRangeValue(Date(1996, 01, 01), Date(1996, 12, 31), 0.05625),
+        DateRangeValue(Date(1997, 01, 01), Date(1997, 12, 31), 0.0625),
+        DateRangeValue(Date(1998, 01, 01), Date(1998, 12, 31), 0.06875),
+        DateRangeValue(Date(1999, 01, 01), Date(2005, 12, 31), 0.075),
+        DateRangeValue(Date(2006, 01, 01), Date(2013, 12, 31), 0.077),
+        DateRangeValue(Date(2014, 01, 01), Date(2014, 12, 31), 0.0775),
+        DateRangeValue(Date(2015, 01, 01), Date(2015, 12, 31), 0.078),
+      ],
+    ),
+    RateBracket(
+      threshold = [
+        DateRangeValue(Date(1993, 07, 01), Date(2015, 12, 31), 8.0),
+      ],
+      rate = [
+        DateRangeValue(Date(1993, 07, 01), Date(2015, 12, 31), 0.0),
+      ],
+    ),
+  ],
+  check_start_date = Date(2006, 01, 01),
+  check_stop_date = Date(2013, 12, 31),
+  description = "Cotisations sociales ; Spécifiques aux cadres ; Retraite complémentaire AGIRC GMP (tranches B et C, avant 65 ans)",
+))
+
+@define_parameter(cotsoc.cotisations_salarie.prive_cadre.apec, MarginalRateScale(
+  [
+    RateBracket(
+      threshold = [
+        DateRangeValue(Date(1993, 07, 01), Date(2014, 12, 31), 0.0),
+      ],
+      rate = [
+        DateRangeValue(Date(1993, 07, 01), Date(2010, 12, 31), 0.0),
+        DateRangeValue(Date(2011, 01, 01), Date(2014, 12, 31), 0.00024),
+      ],
+    ),
+    RateBracket(
+      threshold = [
+        DateRangeValue(Date(1993, 07, 01), Date(2014, 12, 31), 1.0),
+      ],
+      rate = [
+        DateRangeValue(Date(1993, 07, 01), Date(2014, 12, 31), 0.00024),
+      ],
+    ),
+    RateBracket(
+      threshold = [
+        DateRangeValue(Date(1993, 07, 01), Date(2014, 12, 31), 4.0),
+      ],
+      rate = [
+        DateRangeValue(Date(1993, 07, 01), Date(2014, 12, 31), 0.0),
+      ],
+    ),
+  ],
+  check_start_date = Date(2006, 01, 01),
+  check_stop_date = Date(2013, 12, 31),
+  description = "Cotisations sociales ; Spécifiques aux cadres ; Chômage-emploi APEC",
+))
+
+@define_parameter(cotsoc.cotisations_salarie.prive_cadre.cet, MarginalRateScale(
+  [
+    RateBracket(
+      threshold = [
+        DateRangeValue(Date(1997, 01, 01), Date(2014, 12, 31), 0.0),
+      ],
+      rate = [
+        DateRangeValue(Date(1997, 01, 01), Date(1997, 12, 31), 0.00026),
+        DateRangeValue(Date(1998, 01, 01), Date(1998, 12, 31), 0.0005),
+        DateRangeValue(Date(1999, 01, 01), Date(1999, 12, 31), 0.0008),
+        DateRangeValue(Date(2000, 01, 01), Date(2000, 12, 31), 0.0011),
+        DateRangeValue(Date(2001, 01, 01), Date(2014, 12, 31), 0.0013),
+      ],
+    ),
+    RateBracket(
+      threshold = [
+        DateRangeValue(Date(1997, 01, 01), Date(2014, 12, 31), 8.0),
+      ],
+      rate = [
+        DateRangeValue(Date(1997, 01, 01), Date(2014, 12, 31), 0.0),
+      ],
+    ),
+  ],
+  check_start_date = Date(2006, 01, 01),
+  check_stop_date = Date(2013, 12, 31),
+  description = "Cotisations sociales ; Spécifiques aux cadres ; Cotisation exceptionelle temporaire",
+))
+
+@define_parameter(cotsoc.cotisations_salarie.prive_cadre.arrco, MarginalRateScale(
+  [
+    RateBracket(
+      threshold = [
+        DateRangeValue(Date(1993, 07, 01), Date(2013, 12, 31), 0.0),
+      ],
+      rate = [
+        DateRangeValue(Date(1993, 01, 01), Date(1995, 12, 31), 0.01968),
+        DateRangeValue(Date(1996, 01, 01), Date(1996, 12, 31), 0.0225),
+        DateRangeValue(Date(1997, 01, 01), Date(1997, 12, 31), 0.025),
+        DateRangeValue(Date(1998, 01, 01), Date(1998, 12, 31), 0.0275),
+        DateRangeValue(Date(1999, 01, 01), Date(2013, 12, 31), 0.03),
+        DateRangeValue(Date(2014, 01, 01), Date(2014, 12, 31), 0.0305),
+        DateRangeValue(Date(2015, 01, 01), Date(2015, 12, 31), 0.031),
+      ],
+    ),
+    RateBracket(
+      threshold = [
+        DateRangeValue(Date(2000, 01, 01), Date(2013, 12, 31), 1.0),
+      ],
+      rate = [
+        DateRangeValue(Date(2000, 01, 01), Date(2013, 12, 31), 0.0),
+      ],
+    ),
+  ],
+  check_start_date = Date(2006, 01, 01),
+  check_stop_date = Date(2013, 12, 31),
+  description = "Cotisations sociales ; Spécifiques aux cadres ; Retraite complémentaire ARRCO",
+))
+
+@define_parameter(cotsoc.cotisations_salarie.prive_cadre.assedic, MarginalRateScale(
+  [
+    RateBracket(
+      threshold = [
+        DateRangeValue(Date(1993, 07, 01), Date(2014, 12, 31), 0.0),
+      ],
+      rate = [
+        DateRangeValue(Date(1993, 07, 01), Date(1993, 12, 31), 0.0377),
+        DateRangeValue(Date(1994, 01, 01), Date(1996, 12, 31), 0.0386),
+        DateRangeValue(Date(1997, 01, 01), Date(2000, 12, 31), 0.036),
+        DateRangeValue(Date(2001, 01, 01), Date(2001, 03, 31), 0.0349),
+        DateRangeValue(Date(2001, 04, 01), Date(2001, 06, 30), 0.026),
+        DateRangeValue(Date(2001, 07, 01), Date(2001, 12, 31), 0.021),
+        DateRangeValue(Date(2002, 01, 01), Date(2002, 06, 30), 0.02),
+        DateRangeValue(Date(2002, 07, 01), Date(2002, 12, 31), 0.021),
+        DateRangeValue(Date(2003, 01, 01), Date(2005, 12, 31), 0.024),
+        DateRangeValue(Date(2006, 01, 01), Date(2006, 12, 31), 0.0244),
+        DateRangeValue(Date(2007, 01, 01), Date(2014, 12, 31), 0.024),
+      ],
+    ),
+    RateBracket(
+      threshold = [
+        DateRangeValue(Date(2003, 01, 01), Date(2014, 12, 31), 4.0),
+      ],
+      rate = [
+        DateRangeValue(Date(2003, 01, 01), Date(2014, 12, 31), 0.0),
+      ],
+    ),
+  ],
+  check_start_date = Date(2006, 01, 01),
+  check_stop_date = Date(2013, 12, 31),
+  description = "Cotisations sociales ; Spécifiques aux cadres ; Chômage-emploi ASSEDIC",
+))
+
+@define_parameter(cotsoc.cotisations_salarie.prive_cadre.maladie, MarginalRateScale(
+  [
+    RateBracket(
+      threshold = [
+        DateRangeValue(Date(1993, 07, 01), Date(2013, 12, 31), 0.0),
+      ],
+      rate = [
+        DateRangeValue(Date(1993, 07, 01), Date(1996, 12, 31), 0.068),
+        DateRangeValue(Date(1997, 01, 01), Date(1997, 12, 31), 0.055),
+        DateRangeValue(Date(1998, 01, 01), Date(2013, 12, 31), 0.0075),
+      ],
+    ),
+  ],
+  check_start_date = Date(2006, 01, 01),
+  check_stop_date = Date(2013, 12, 31),
+  description = "Cotisations sociales ; Spécifiques aux cadres ; Assurance maladie, maternité, invalidité, décès",
+))
+
+@define_parameter(cotsoc.cotisations_salarie.prive_cadre.vieillesse, MarginalRateScale(
+  [
+    RateBracket(
+      threshold = [
+        DateRangeValue(Date(1993, 07, 01), Date(2016, 12, 31), 0.0),
+      ],
+      rate = [
+        DateRangeValue(Date(1993, 07, 01), Date(2005, 12, 31), 0.0655),
+        DateRangeValue(Date(2006, 01, 01), Date(2012, 10, 31), 0.0665),
+        DateRangeValue(Date(2012, 11, 01), Date(2013, 12, 31), 0.0675),
+        DateRangeValue(Date(2014, 01, 01), Date(2014, 12, 31), 0.068),
+        DateRangeValue(Date(2015, 01, 01), Date(2015, 12, 31), 0.0685),
+        DateRangeValue(Date(2016, 01, 01), Date(2016, 12, 31), 0.069),
+      ],
+    ),
+    RateBracket(
+      threshold = [
+        DateRangeValue(Date(1993, 07, 01), Date(2016, 12, 31), 1.0),
+      ],
+      rate = [
+        DateRangeValue(Date(1993, 07, 01), Date(2016, 12, 31), 0.0),
+      ],
+    ),
+  ],
+  check_start_date = Date(2006, 01, 01),
+  check_stop_date = Date(2013, 12, 31),
+  description = "Cotisations sociales ; Spécifiques aux cadres ; Vieillesse (régime de base de la retraite CNAV)",
+))
+
+@define_parameter(cotsoc.cotisations_salarie.prive_cadre.vieillessedeplaf, MarginalRateScale(
+  [
+    RateBracket(
+      threshold = [
+        DateRangeValue(Date(2004, 07, 01), Date(2014, 12, 31), 0.0),
+      ],
+      rate = [
+        DateRangeValue(Date(2004, 07, 01), Date(2013, 12, 31), 0.001),
+        DateRangeValue(Date(2014, 01, 01), Date(2014, 12, 31), 0.0025),
+      ],
+    ),
+  ],
+  check_start_date = Date(2006, 01, 01),
+  check_stop_date = Date(2013, 12, 31),
+  description = "Cotisations sociales ; Spécifiques aux cadres ; Vieillesse déplafonnée (ancienne assurance veuvage transférée à la CNAV en 2004)",
+))
+
+@define_parameter(cotsoc.cotisations_salarie.public_titulaire_etat.pension, MarginalRateScale(
+  [
+    RateBracket(
+      threshold = [
+        DateRangeValue(Date(2003, 01, 01), Date(2020, 12, 31), 0.0),
+      ],
+      rate = [
+        DateRangeValue(Date(2003, 01, 01), Date(2010, 12, 31), 0.0785),
+        DateRangeValue(Date(2011, 01, 01), Date(2011, 12, 31), 0.0812),
+        DateRangeValue(Date(2012, 01, 01), Date(2012, 12, 31), 0.0839),
+        DateRangeValue(Date(2013, 01, 01), Date(2013, 12, 31), 0.0876),
+        DateRangeValue(Date(2014, 01, 01), Date(2014, 12, 31), 0.0893),
+        DateRangeValue(Date(2015, 01, 01), Date(2015, 12, 31), 0.092),
+        DateRangeValue(Date(2016, 01, 01), Date(2016, 12, 31), 0.0947),
+        DateRangeValue(Date(2017, 01, 01), Date(2017, 12, 31), 0.0974),
+        DateRangeValue(Date(2018, 01, 01), Date(2018, 12, 31), 0.1001),
+        DateRangeValue(Date(2019, 01, 01), Date(2019, 12, 31), 0.1028),
+        DateRangeValue(Date(2020, 01, 01), Date(2020, 12, 31), 0.1055),
+      ],
+    ),
+  ],
+  check_start_date = Date(2006, 01, 01),
+  check_stop_date = Date(2013, 12, 31),
+  description = "Cotisations sociales ; Etat ; Retenue pour pension civile (assiette=TI + NBI)",
+))
+
+@define_parameter(cotsoc.cotisations_salarie.public_titulaire_etat.rafp, MarginalRateScale(
+  [
+    RateBracket(
+      threshold = [
+        DateRangeValue(Date(1993, 01, 01), Date(2014, 12, 31), 0.0),
+      ],
+      rate = [
+        DateRangeValue(Date(2005, 01, 01), Date(2014, 12, 31), 0.05),
+      ],
+    ),
+  ],
+  check_start_date = Date(2006, 01, 01),
+  check_stop_date = Date(2013, 12, 31),
+  description = "Cotisations sociales ; Etat ; Régime additionnel de retraite (RAFP, totalité sauf TI et NBI, min 20% TI )",
+))
+
+@define_parameter(cotsoc.cotisations_salarie.public_titulaire_etat.rafp_plaf_assiette, Parameter{Float32}(
+  [
+    DateRangeValue(Date(2005, 01, 01), Date(2014, 12, 31), 0.2),
+  ],
+  check_start_date = Date(2006, 01, 01),
+  check_stop_date = Date(2013, 12, 31),
+  description = "Cotisations sociales ; Etat ; Plafond d'assiette",
+))
+
+@define_parameter(cotsoc.cotisations_salarie.public_titulaire_etat.excep_solidarite, MarginalRateScale(
+  [
+    RateBracket(
+      threshold = [
+        DateRangeValue(Date(1983, 01, 01), Date(2014, 12, 31), 0.0),
+      ],
+      rate = [
+        DateRangeValue(Date(1983, 01, 01), Date(2014, 12, 31), 0.01),
+      ],
+    ),
+    RateBracket(
+      threshold = [
+        DateRangeValue(Date(1983, 01, 01), Date(2014, 12, 31), 4.0),
+      ],
+      rate = [
+        DateRangeValue(Date(1983, 01, 01), Date(2014, 12, 31), 0.0),
+      ],
+    ),
+  ],
+  check_start_date = Date(2006, 01, 01),
+  check_stop_date = Date(2013, 12, 31),
+  description = "Cotisations sociales ; Etat ; Contribution exceptionnelle de solidarité (seuil d'assujetissment variable)",
+  comment = "TODO: c'est une contribution donc à mettre avec la CSG/CRDS",
+))
+
+@define_parameter(cotsoc.cotisations_salarie.public_titulaire_territoriale.cnracl1, MarginalRateScale(
+  [
+    RateBracket(
+      threshold = [
+        DateRangeValue(Date(1984, 01, 01), Date(2020, 12, 31), 0.0),
+      ],
+      rate = [
+        DateRangeValue(Date(1991, 02, 01), Date(2010, 12, 31), 0.0785),
+        DateRangeValue(Date(2011, 01, 01), Date(2011, 12, 31), 0.0812),
+        DateRangeValue(Date(2012, 01, 01), Date(2012, 12, 31), 0.0839),
+        DateRangeValue(Date(2013, 01, 01), Date(2013, 12, 31), 0.0876),
+        DateRangeValue(Date(2014, 01, 01), Date(2014, 12, 31), 0.0893),
+        DateRangeValue(Date(2015, 01, 01), Date(2015, 12, 31), 0.092),
+        DateRangeValue(Date(2016, 01, 01), Date(2016, 12, 31), 0.0947),
+        DateRangeValue(Date(2017, 01, 01), Date(2017, 12, 31), 0.0974),
+        DateRangeValue(Date(2018, 01, 01), Date(2018, 12, 31), 0.1001),
+        DateRangeValue(Date(2019, 01, 01), Date(2019, 12, 31), 0.1028),
+        DateRangeValue(Date(2020, 01, 01), Date(2020, 12, 31), 0.1055),
+      ],
+    ),
+  ],
+  check_start_date = Date(2006, 01, 01),
+  check_stop_date = Date(2013, 12, 31),
+  description = "Cotisations sociales ; Collectivités locales - Fonction publique hospitalière ; Retraites des agents des collectivités locales (taux hors NBI)",
+))
+
+@define_parameter(cotsoc.cotisations_salarie.public_titulaire_territoriale.cnracl2, MarginalRateScale(
+  [
+    RateBracket(
+      threshold = [
+        DateRangeValue(Date(1984, 01, 01), Date(2020, 12, 31), 0.0),
+      ],
+      rate = [
+        DateRangeValue(Date(1991, 02, 01), Date(2010, 12, 31), 0.0785),
+        DateRangeValue(Date(2011, 01, 01), Date(2011, 12, 31), 0.0812),
+        DateRangeValue(Date(2012, 01, 01), Date(2012, 10, 31), 0.0839),
+        DateRangeValue(Date(2012, 11, 01), Date(2012, 12, 31), 0.0849),
+        DateRangeValue(Date(2013, 01, 01), Date(2013, 12, 31), 0.0876),
+        DateRangeValue(Date(2014, 01, 01), Date(2014, 12, 31), 0.0908),
+        DateRangeValue(Date(2015, 01, 01), Date(2015, 12, 31), 0.094),
+        DateRangeValue(Date(2016, 01, 01), Date(2016, 12, 31), 0.0972),
+        DateRangeValue(Date(2017, 01, 01), Date(2017, 12, 31), 0.0999),
+        DateRangeValue(Date(2018, 01, 01), Date(2018, 12, 31), 0.1026),
+        DateRangeValue(Date(2019, 01, 01), Date(2019, 12, 31), 0.1053),
+        DateRangeValue(Date(2020, 01, 01), Date(2020, 12, 31), 0.108, comment = "TODO: CHECK change because reforme"),
+      ],
+    ),
+  ],
+  check_start_date = Date(2006, 01, 01),
+  check_stop_date = Date(2013, 12, 31),
+  description = "Cotisations sociales ; Collectivités locales - Fonction publique hospitalière ; Retraites des agents des collectivités locales (taux NBI)",
+))
+
+@define_parameter(cotsoc.cotisations_salarie.public_titulaire_territoriale.excep_solidarite, MarginalRateScale(
+  [
+    RateBracket(
+      threshold = [
+        DateRangeValue(Date(1983, 01, 01), Date(2014, 12, 31), 0.0),
+      ],
+      rate = [
+        DateRangeValue(Date(1983, 01, 01), Date(2014, 12, 31), 0.01),
+      ],
+    ),
+    RateBracket(
+      threshold = [
+        DateRangeValue(Date(1983, 01, 01), Date(2014, 12, 31), 4.0),
+      ],
+      rate = [
+        DateRangeValue(Date(1983, 01, 01), Date(2014, 12, 31), 0.0),
+      ],
+    ),
+  ],
+  check_start_date = Date(2006, 01, 01),
+  check_stop_date = Date(2013, 12, 31),
+  description = "Cotisations sociales ; Collectivités locales - Fonction publique hospitalière ; Contribution exceptionnelle de solidarité (seuil d'assujetissment variable)",
+  comment = "TODO: c'est une contribution donc à mettre avec la CSG/CRDS",
+))
+
+@define_parameter(cotsoc.cotisations_salarie.public_titulaire_hospitaliere.cnracl1, MarginalRateScale(
+  [
+    RateBracket(
+      threshold = [
+        DateRangeValue(Date(1984, 01, 01), Date(2020, 12, 31), 0.0),
+      ],
+      rate = [
+        DateRangeValue(Date(1991, 02, 01), Date(2010, 12, 31), 0.0785),
+        DateRangeValue(Date(2011, 01, 01), Date(2011, 12, 31), 0.0812),
+        DateRangeValue(Date(2012, 01, 01), Date(2012, 12, 31), 0.0839),
+        DateRangeValue(Date(2013, 01, 01), Date(2013, 12, 31), 0.0876),
+        DateRangeValue(Date(2014, 01, 01), Date(2014, 12, 31), 0.0893),
+        DateRangeValue(Date(2015, 01, 01), Date(2015, 12, 31), 0.092),
+        DateRangeValue(Date(2016, 01, 01), Date(2016, 12, 31), 0.0947),
+        DateRangeValue(Date(2017, 01, 01), Date(2017, 12, 31), 0.0974),
+        DateRangeValue(Date(2018, 01, 01), Date(2018, 12, 31), 0.1001),
+        DateRangeValue(Date(2019, 01, 01), Date(2019, 12, 31), 0.1028),
+        DateRangeValue(Date(2020, 01, 01), Date(2020, 12, 31), 0.1055),
+      ],
+    ),
+  ],
+  check_start_date = Date(2006, 01, 01),
+  check_stop_date = Date(2013, 12, 31),
+  description = "Cotisations sociales ; Collectivités locales - Fonction publique hospitalière ; Retraites des agents des collectivités locales (taux hors NBI)",
+))
+
+@define_parameter(cotsoc.cotisations_salarie.public_titulaire_hospitaliere.cnracl2, MarginalRateScale(
+  [
+    RateBracket(
+      threshold = [
+        DateRangeValue(Date(1984, 01, 01), Date(2020, 12, 31), 0.0),
+      ],
+      rate = [
+        DateRangeValue(Date(1991, 02, 01), Date(2010, 12, 31), 0.0785),
+        DateRangeValue(Date(2011, 01, 01), Date(2011, 12, 31), 0.0812),
+        DateRangeValue(Date(2012, 01, 01), Date(2012, 10, 31), 0.0839),
+        DateRangeValue(Date(2012, 11, 01), Date(2012, 12, 31), 0.0849),
+        DateRangeValue(Date(2013, 01, 01), Date(2013, 12, 31), 0.0876),
+        DateRangeValue(Date(2014, 01, 01), Date(2014, 12, 31), 0.0908),
+        DateRangeValue(Date(2015, 01, 01), Date(2015, 12, 31), 0.094),
+        DateRangeValue(Date(2016, 01, 01), Date(2016, 12, 31), 0.0972),
+        DateRangeValue(Date(2017, 01, 01), Date(2017, 12, 31), 0.0999),
+        DateRangeValue(Date(2018, 01, 01), Date(2018, 12, 31), 0.1026),
+        DateRangeValue(Date(2019, 01, 01), Date(2019, 12, 31), 0.1053),
+        DateRangeValue(Date(2020, 01, 01), Date(2020, 12, 31), 0.108, comment = "TODO: CHECK change because reforme"),
+      ],
+    ),
+  ],
+  check_start_date = Date(2006, 01, 01),
+  check_stop_date = Date(2013, 12, 31),
+  description = "Cotisations sociales ; Collectivités locales - Fonction publique hospitalière ; Retraites des agents des collectivités locales (taux NBI)",
+))
+
+@define_parameter(cotsoc.cotisations_salarie.public_titulaire_hospitaliere.excep_solidarite, MarginalRateScale(
+  [
+    RateBracket(
+      threshold = [
+        DateRangeValue(Date(1983, 01, 01), Date(2014, 12, 31), 0.0),
+      ],
+      rate = [
+        DateRangeValue(Date(1983, 01, 01), Date(2014, 12, 31), 0.01),
+      ],
+    ),
+    RateBracket(
+      threshold = [
+        DateRangeValue(Date(1983, 01, 01), Date(2014, 12, 31), 4.0),
+      ],
+      rate = [
+        DateRangeValue(Date(1983, 01, 01), Date(2014, 12, 31), 0.0),
+      ],
+    ),
+  ],
+  check_start_date = Date(2006, 01, 01),
+  check_stop_date = Date(2013, 12, 31),
+  description = "Cotisations sociales ; Collectivités locales - Fonction publique hospitalière ; Contribution exceptionnelle de solidarité (seuil d'assujetissment variable)",
+  comment = "TODO: c'est une contribution donc à mettre avec la CSG/CRDS",
+))
+
+@define_parameter(cotsoc.cotisations_salarie.public_non_titulaire.ircantec, MarginalRateScale(
+  [
+    RateBracket(
+      threshold = [
+        DateRangeValue(Date(1971, 01, 01), Date(2017, 12, 31), 0.0),
+      ],
+      rate = [
+        DateRangeValue(Date(1971, 01, 01), Date(1988, 12, 31), 0.014),
+        DateRangeValue(Date(1989, 01, 01), Date(2010, 12, 31), 0.018),
+        DateRangeValue(Date(2011, 01, 01), Date(2011, 12, 31), 0.0182),
+        DateRangeValue(Date(2012, 01, 01), Date(2012, 12, 31), 0.0188),
+        DateRangeValue(Date(2013, 01, 01), Date(2013, 12, 31), 0.0196),
+        DateRangeValue(Date(2014, 01, 01), Date(2014, 12, 31), 0.0203),
+        DateRangeValue(Date(2015, 01, 01), Date(2015, 12, 31), 0.0211),
+        DateRangeValue(Date(2016, 01, 01), Date(2016, 12, 31), 0.0218),
+        DateRangeValue(Date(2017, 01, 01), Date(2017, 12, 31), 0.0224),
+      ],
+      base = [
+        DateRangeValue(Date(1971, 01, 01), Date(1982, 12, 31), 0.6),
+        DateRangeValue(Date(1983, 01, 01), Date(1987, 12, 31), 0.8),
+        DateRangeValue(Date(1988, 01, 01), Date(1988, 12, 31), 1.0),
+        DateRangeValue(Date(1989, 01, 01), Date(1991, 03, 31), 1.09),
+        DateRangeValue(Date(1991, 04, 01), Date(1991, 12, 31), 1.2),
+        DateRangeValue(Date(1992, 01, 01), Date(2017, 12, 31), 1.25),
+      ],
+    ),
+    RateBracket(
+      threshold = [
+        DateRangeValue(Date(1971, 01, 01), Date(2017, 12, 31), 1.0),
+      ],
+      rate = [
+        DateRangeValue(Date(1971, 01, 01), Date(1988, 12, 31), 0.0425),
+        DateRangeValue(Date(1989, 01, 01), Date(2010, 12, 31), 0.0476),
+        DateRangeValue(Date(2011, 01, 01), Date(2011, 12, 31), 0.048),
+        DateRangeValue(Date(2012, 01, 01), Date(2012, 12, 31), 0.0488),
+        DateRangeValue(Date(2013, 01, 01), Date(2013, 12, 31), 0.0498),
+        DateRangeValue(Date(2014, 01, 01), Date(2014, 12, 31), 0.051),
+        DateRangeValue(Date(2015, 01, 01), Date(2015, 12, 31), 0.0526),
+        DateRangeValue(Date(2016, 01, 01), Date(2016, 12, 31), 0.054),
+        DateRangeValue(Date(2017, 01, 01), Date(2017, 12, 31), 0.0556),
+      ],
+      base = [
+        DateRangeValue(Date(1971, 01, 01), Date(1982, 12, 31), 0.6),
+        DateRangeValue(Date(1983, 01, 01), Date(1987, 12, 31), 0.8),
+        DateRangeValue(Date(1988, 01, 01), Date(1988, 12, 31), 1.0),
+        DateRangeValue(Date(1989, 01, 01), Date(1991, 03, 31), 1.09),
+        DateRangeValue(Date(1991, 04, 01), Date(1991, 12, 31), 1.2),
+        DateRangeValue(Date(1992, 01, 01), Date(2017, 12, 31), 1.25),
+      ],
+    ),
+    RateBracket(
+      threshold = [
+        DateRangeValue(Date(1971, 01, 01), Date(1991, 12, 31), 4.75),
+        DateRangeValue(Date(1992, 01, 01), Date(2017, 12, 31), 8.0),
+      ],
+      rate = [
+        DateRangeValue(Date(1971, 01, 01), Date(2017, 12, 31), 0.0),
+      ],
+    ),
+  ],
+  check_start_date = Date(2006, 01, 01),
+  check_stop_date = Date(2013, 12, 31),
+  description = "Cotisations sociales ; Agents non titulaires ; IRCANTEC",
+))
+
+@define_parameter(cotsoc.cotisations_salarie.public_non_titulaire.excep_solidarite, MarginalRateScale(
+  [
+    RateBracket(
+      threshold = [
+        DateRangeValue(Date(1983, 01, 01), Date(2014, 12, 31), 0.0),
+      ],
+      rate = [
+        DateRangeValue(Date(1983, 01, 01), Date(2014, 12, 31), 0.01),
+      ],
+    ),
+    RateBracket(
+      threshold = [
+        DateRangeValue(Date(1983, 01, 01), Date(2014, 12, 31), 4.0),
+      ],
+      rate = [
+        DateRangeValue(Date(1983, 01, 01), Date(2014, 12, 31), 0.0),
+      ],
+    ),
+  ],
+  check_start_date = Date(2006, 01, 01),
+  check_stop_date = Date(2013, 12, 31),
+  description = "Cotisations sociales ; Agents non titulaires ; Contribution exceptionnelle de solidarité (seuil d'assujetissment variable)",
+  comment = "TODO: c'est une contribution donc à mettre avec la CSG/CRDS",
+))
+
+@define_parameter(cotsoc.cotisations_salarie.public_non_titulaire.maladie, MarginalRateScale(
+  [
+    RateBracket(
+      threshold = [
+        DateRangeValue(Date(1993, 07, 01), Date(2013, 12, 31), 0.0),
+      ],
+      rate = [
+        DateRangeValue(Date(1993, 07, 01), Date(1996, 12, 31), 0.068),
+        DateRangeValue(Date(1997, 01, 01), Date(1997, 12, 31), 0.055),
+        DateRangeValue(Date(1998, 01, 01), Date(2013, 12, 31), 0.0075),
+      ],
+    ),
+  ],
+  check_start_date = Date(2006, 01, 01),
+  check_stop_date = Date(2013, 12, 31),
+  description = "Cotisations sociales ; Agents non titulaires ; Assurance maladie, maternité, invalidité, décès",
+))
+
+@define_parameter(cotsoc.cotisations_salarie.public_non_titulaire.vieillesse, MarginalRateScale(
+  [
+    RateBracket(
+      threshold = [
+        DateRangeValue(Date(1993, 07, 01), Date(2016, 12, 31), 0.0),
+      ],
+      rate = [
+        DateRangeValue(Date(1993, 07, 01), Date(2005, 12, 31), 0.0655),
+        DateRangeValue(Date(2006, 01, 01), Date(2012, 10, 31), 0.0665),
+        DateRangeValue(Date(2012, 11, 01), Date(2013, 12, 31), 0.0675),
+        DateRangeValue(Date(2014, 01, 01), Date(2014, 12, 31), 0.068),
+        DateRangeValue(Date(2015, 01, 01), Date(2015, 12, 31), 0.0685),
+        DateRangeValue(Date(2016, 01, 01), Date(2016, 12, 31), 0.069),
+      ],
+    ),
+    RateBracket(
+      threshold = [
+        DateRangeValue(Date(1993, 07, 01), Date(2016, 12, 31), 1.0),
+      ],
+      rate = [
+        DateRangeValue(Date(1993, 07, 01), Date(2016, 12, 31), 0.0),
+      ],
+    ),
+  ],
+  check_start_date = Date(2006, 01, 01),
+  check_stop_date = Date(2013, 12, 31),
+  description = "Cotisations sociales ; Agents non titulaires ; Vieillesse (régime de base de la retraite CNAV)",
+))
+
+@define_parameter(cotsoc.cotisations_salarie.public_non_titulaire.vieillessedeplaf, MarginalRateScale(
+  [
+    RateBracket(
+      threshold = [
+        DateRangeValue(Date(2004, 07, 01), Date(2014, 12, 31), 0.0),
+      ],
+      rate = [
+        DateRangeValue(Date(2004, 07, 01), Date(2013, 12, 31), 0.001),
+        DateRangeValue(Date(2014, 01, 01), Date(2014, 12, 31), 0.0025),
+      ],
+    ),
+  ],
+  check_start_date = Date(2006, 01, 01),
+  check_stop_date = Date(2013, 12, 31),
+  description = "Cotisations sociales ; Agents non titulaires ; Vieillesse déplafonnée (ancienne assurance veuvage transférée à la CNAV en 2004)",
+))
+
 @define_parameter(crds.activite.abattement, MarginalRateScale(
   [
     RateBracket(

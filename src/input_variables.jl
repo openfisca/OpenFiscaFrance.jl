@@ -5444,6 +5444,18 @@
   ],
 )
 
+@define_variable(coefficient_proratisation, individu_definition, Float32,
+  label = "Coefficient de proratisation pour le calcul du SMIC et du plafond de la Sécurité socialele",
+)
+
+@define_variable(nombre_heures_remunerees, individu_definition, Float32,
+  label = "Nombre d'heures rémunérées mensuellement",
+)
+
+@define_variable(nombre_jours_calendaires, individu_definition, Float32,
+  label = "Nombre de jours calendaires travaillés",
+)
+
 @define_variable(nom_famille, famille_definition, UTF8String,
   label = "Nom",
   permanent = true,
