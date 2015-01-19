@@ -41,7 +41,7 @@ function test_irpp(year, irpp; args...)
   add_member(foyer_fiscal; get(args_by_entity, foyer_fiscal, {})...)
   add_member(menage; get(args_by_entity, menage, {})...)
   add_member(individu; quifam = 1, quifoy = 1, quimen = 1, get(args_by_entity, individu, {})...)
-  assert_near(calculate(simulation, "irpp"), irpp, error_margin = 0.5)
+  assert_near(calculate(simulation, "irpp"), irpp, error_margin = 0.51)
 end
 
 
