@@ -28,6 +28,7 @@ function build_pat(legislation)
   for common_node_name in ["apprentissage_node", "formprof_node", "construction_node"]
     merge!(commun, pop!(commun, common_node_name))
   end
+  commun["construction"] = pop!(commun, "construction_20")
 
   merge!(pat["fonc"]["contract"], commun)
   pat["prive_cadre"] = pop!(pat, "cadre")
