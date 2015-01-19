@@ -29,4 +29,5 @@ using OpenFiscaFrance
 
 
 include("test_age.jl")
+include("test_fiche_de_paie.jl")
 include("test_impot_revenu_personnes_physiques.jl")
