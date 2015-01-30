@@ -148,6 +148,69 @@ function single_entity_scenario(tax_benefit_system::TaxBenefitSystem, period; ax
 end
 
 
+function suggest(scenario::Scenario)
+  period_start = scenario.period.start
+  period_start_year = year(scenario.period.start)
+  test_case = scenario.test_case
+  suggestions = (String => Any)[]
+
+  for (individu_id, individu) in test_case["individus"]
+    if get(individu, "age", nothing) === nothing && get(individu, "agem", nothing) === nothing &&
+        get(individu, "birth", nothing) === nothing
+      # Add missing birth date to person (a parent is 40 years old and a child is 10 years old.
+      is_parent = any(famille -> individu_id in famille["parents"], values(test_case["familles"]))
+      birth_year = is_parent ? period_start_year - 40 : period_start_year - 10
+      individu["birth"] = birth = Date(birth_year, 1, 1)
+      suggested_test_case = get!(() -> (String => Any)[], suggestions, "test_case")
+      suggested_individus = get!(() -> (String => Dict{String, Any})[], suggested_test_case, "individus")
+      suggested_individu = get!(() -> (String => Any)[], suggested_individus, individu_id)
+      suggested_individu["birth"] = string(birth)
+    end
+    if get(individu, "activite", nothing) === nothing && find_age(individu, period_start) < 16
+      individu["activite"] = activite = 2  # Étudiant, élève
+      suggested_test_case = get!(() -> (String => Any)[], suggestions, "test_case")
+      suggested_individus = get!(() -> (String => Dict{String, Any})[], suggested_test_case, "individus")
+      suggested_individu = get!(() -> (String => Any)[], suggested_individus, individu_id)
+      suggested_individu["activite"] = string(activite)
+    end
+  end
+
+  for (foyer_fiscal_id, foyer_fiscal) in test_case["foyers_fiscaux"]
+    if length(foyer_fiscal["declarants"]) == 1 && !isempty(foyer_fiscal["personnes_a_charge"])
+      # Suggest "parent isolé" when foyer_fiscal contains a single "declarant" with "personnes_a_charge".
+      if get(foyer_fiscal, "caseT", nothing) === nothing
+        suggested_test_case = get!(() -> (String => Any)[], suggestions, "test_case")
+        suggested_foyers_fiscaux = get!(() -> (String => Dict{String, Any})[], suggested_test_case, "foyers_fiscaux")
+        suggested_foyer_fiscal = get!(() -> (String => Any)[], suggested_foyers_fiscaux, foyer_fiscal_id)
+        suggested_foyer_fiscal["caseT"] = foyer_fiscal["caseT"] = true
+      end
+    elseif length(foyer_fiscal["declarants"]) == 2
+      # Suggest "PACSé" or "Marié" instead of "Célibataire" when foyer_fiscal contains 2 "declarants" without
+      # "statmarit".
+      statmarit = 5  # PACSé
+      for individu_id in foyer_fiscal["declarants"]
+        individu = test_case["individus"][individu_id]
+        if get(individu, "statmarit", nothing) == 1  # Marié
+          statmarit = 1
+        end
+      end
+      for individu_id in foyer_fiscal["declarants"]
+        individu = test_case["individus"][individu_id]
+        if get(individu, "statmarit", nothing) === nothing
+          individu["statmarit"] = statmarit
+          suggested_test_case = get!(() -> (String => Any)[], suggestions, "test_case")
+          suggested_individus = get!(() -> (String => Dict{String, Any})[], suggested_test_case, "individus")
+          suggested_individu = get!(() -> (String => Any)[], suggested_individus, individu_id)
+          suggested_individu["statmarit"] = string(statmarit)
+        end
+      end
+    end
+  end
+
+  return isempty(suggestions) ? nothing : suggestions
+end
+
+
 test_in_pop(values; error = nothing) = pipe(
   test_in(values, error = error),
   call(value -> begin

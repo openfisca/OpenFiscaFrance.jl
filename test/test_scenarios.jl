@@ -40,3 +40,13 @@ Convertible([
 ]) |> to_scenario(tax_benefit_system, to_test_case, repair = true) |> test_isa(Scenario) |> to_value
 
 @test isa(single_entity_scenario(tax_benefit_system, 2014, parent1 = (String => Any)[]), Scenario)
+
+@test suggest(single_entity_scenario(tax_benefit_system, 2014, parent1 = (String => Any)[])) == [
+  "test_case" => [
+    "individus" => [
+      "ind1" => [
+        "birth" => "1974-01-01",
+      ],
+    ],
+  ],
+]
