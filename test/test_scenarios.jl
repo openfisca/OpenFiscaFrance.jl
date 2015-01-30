@@ -20,21 +20,21 @@
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 
-using Base.Test
+Convertible([
+  "axes" => [["count" => 2, "max" =>  20000, "min" => 0, "name" => "salbrut"]],
+  "test_case" => [
+    "familles" => [["parents" => ["1"]]],
+    "foyers_fiscaux" => [["declarants" => ["1"]]],
+    "individus" => [["id" => "1"]],
+    "menages" => [["personne_de_reference" => "1"]],
+  ],
+  "year" => 2014,
+]) |> to_scenario(tax_benefit_system, to_test_case) |> test_isa(Scenario) |> to_value
 
-using Converters
-using Dates
-using YAML
-
-using OpenFiscaCore
-using OpenFiscaFrance
-
-
-# Technical Tests
-include("test_age.jl")
-include("test_scenarios.jl")
-
-# Functional Tests
-include("test_fiche_de_paie.jl")
-include("test_impot_revenu_personnes_physiques.jl")
-include("test_niches.jl")
+Convertible([
+  "axes" => [["count" => 2, "max" =>  20000, "min" => 0, "name" => "salbrut"]],
+  "test_case" => [
+    "individus" => [(String => Any)[]],
+  ],
+  "year" => 2014,
+]) |> to_scenario(tax_benefit_system, to_test_case, repair = true) |> test_isa(Scenario) |> to_value
