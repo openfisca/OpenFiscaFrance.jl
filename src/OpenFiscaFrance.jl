@@ -107,10 +107,10 @@ macro define_variable(function_or_variable, args...)
 end
 
 
-@define_entity(famille, index_variable_name = "idfam", role_variable_name ="quifam")
-@define_entity(foyer_fiscal, index_variable_name = "idfoy", role_variable_name ="quifoy")
-@define_entity(individu, is_person = true)
-@define_entity(menage, index_variable_name = "idmen", role_variable_name ="quimen")
+@define_entity(famille, "familles", index_variable_name = "idfam", role_variable_name ="quifam")
+@define_entity(foyer_fiscal, "foyers_fiscaux", index_variable_name = "idfoy", role_variable_name ="quifoy")
+@define_entity(individu, "individus", is_person = true)
+@define_entity(menage, "menages", index_variable_name = "idmen", role_variable_name ="quimen")
 
 
 include("formulas.jl")
