@@ -23,12 +23,15 @@
 module OpenFiscaFrance
 
 
-export tax_benefit_system
+export tax_benefit_system, to_test_case
 
 
+import DataStructures: OrderedDict, OrderedSet
 using Dates
 
+using Converters
 using OpenFiscaCore
+using UUID
 
 
 # typealias Enumeration Dict{Int, String}
@@ -36,21 +39,21 @@ typealias Enumeration Dict{String, Int}
 
 
 const CAT = Enumeration([
-    # 0 => "prive_non_cadre",
-    # 1 => "prive_cadre",
-    # 2 => "public_titulaire_etat",
-    # 3 => "public_titulaire_militaire",
-    # 4 => "public_titulaire_territoriale",
-    # 5 => "public_titulaire_hospitaliere",
-    # 6 => "public_non_titulaire",
-    "prive_non_cadre" => 0,
-    "prive_cadre" => 1,
-    "public_titulaire_etat" => 2,
-    "public_titulaire_militaire" => 3,
-    "public_titulaire_territoriale" => 4,
-    "public_titulaire_hospitaliere" => 5,
-    "public_non_titulaire" => 6,
-    ])
+  # 0 => "prive_non_cadre",
+  # 1 => "prive_cadre",
+  # 2 => "public_titulaire_etat",
+  # 3 => "public_titulaire_militaire",
+  # 4 => "public_titulaire_territoriale",
+  # 5 => "public_titulaire_hospitaliere",
+  # 6 => "public_non_titulaire",
+  "prive_non_cadre" => 0,
+  "prive_cadre" => 1,
+  "public_titulaire_etat" => 2,
+  "public_titulaire_militaire" => 3,
+  "public_titulaire_territoriale" => 4,
+  "public_titulaire_hospitaliere" => 5,
+  "public_non_titulaire" => 6,
+])
 const CHEF = Role(1)
 const CONJ = Role(2)
 const ENFS = [Role(3), Role(4), Role(5), Role(6), Role(7), Role(8), Role(9), Role(10), Role(11)]
@@ -114,6 +117,7 @@ include("formulas.jl")
 include("input_variables.jl")
 include("legislations.jl")
 include("parameters.jl")
+include("scenarios.jl")
 
 
 preprocess(legislation)
