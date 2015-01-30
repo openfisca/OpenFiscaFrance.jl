@@ -38,3 +38,5 @@ Convertible([
   ],
   "year" => 2014,
 ]) |> to_scenario(tax_benefit_system, to_test_case, repair = true) |> test_isa(Scenario) |> to_value
+
+@test isa(single_entity_scenario(tax_benefit_system, 2014, parent1 = (String => Any)[]), Scenario)

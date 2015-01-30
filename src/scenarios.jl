@@ -101,6 +101,53 @@ function find_menage_and_role(test_case, individu_id)
 end
 
 
+function single_entity_scenario(tax_benefit_system::TaxBenefitSystem, period; axes = nothing, enfants = nothing,
+    famille = nothing, foyer_fiscal = nothing, menage = nothing, parent1 = nothing, parent2 = nothing)
+  if enfants === nothing
+    enfants = Any[]
+  end
+  @assert parent1 !== nothing
+  famille = famille === nothing ? (String => Any)[] : copy(famille)
+  foyer_fiscal = foyer_fiscal === nothing ? (String => Any)[] : copy(foyer_fiscal)
+  individus = Any[]
+  menage = menage === nothing ? (String => Any)[] : copy(menage)
+  for (index, individu) in enumerate(union([parent1, parent2], enfants))
+    if individu === nothing
+      continue
+    end
+    id = get(individu, "id", nothing)
+    if id === nothing
+      individu = copy(individu)
+      individu["id"] = id = string("ind", index)
+    end
+    push!(individus, individu)
+    if index <= 2
+      push!(get!(() -> String[], famille, "parents"), id)
+      push!(get!(() -> String[], foyer_fiscal, "declarants"), id)
+      if index == 1
+        menage["personne_de_reference"] = id
+      else:
+        menage["conjoint"] = id
+      end
+    else
+      push!(get!(() -> String[], famille, "enfants"), id)
+      push!(get!(() -> String[], foyer_fiscal, "personnes_a_charge"), id)
+      push!(get!(() -> String[], menage, "enfants"), id)
+    end
+  end
+  return Convertible([
+    "axes" => axes,
+    "period" => period,
+    "test_case" => [
+      "familles" => [famille],
+      "foyers_fiscaux" => [foyer_fiscal],
+      "individus" => individus,
+      "menages" => [menage],
+    ],
+  ]) |> to_scenario(tax_benefit_system, to_test_case) |> to_value
+end
+
+
 test_in_pop(values; error = nothing) = pipe(
   test_in(values, error = error),
   call(value -> begin

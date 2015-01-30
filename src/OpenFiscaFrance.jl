@@ -23,7 +23,7 @@
 module OpenFiscaFrance
 
 
-export tax_benefit_system, to_test_case
+export single_entity_scenario, tax_benefit_system, to_test_case
 
 
 import DataStructures: OrderedDict, OrderedSet
