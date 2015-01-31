@@ -194,7 +194,7 @@
 @define_parameter(al.autres.abat_sal, Parameter{Float32}(
   [
     DateRangeValue(Date(2002, 01, 01), Date(2005, 12, 31), 0.28),
-    DateRangeValue(Date(2006, 01, 01), Date(2014, 12, 31), 0.1),
+    DateRangeValue(Date(2006, 01, 01), Date(2015, 12, 31), 0.1),
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
@@ -234,7 +234,8 @@
     DateRangeValue(Date(2010, 01, 01), Date(2010, 12, 31), 50.75),
     DateRangeValue(Date(2011, 01, 01), Date(2011, 12, 31), 51.31),
     DateRangeValue(Date(2012, 01, 01), Date(2012, 12, 31), 51.82),
-    DateRangeValue(Date(2013, 01, 01), Date(2014, 12, 31), 52.93),
+    DateRangeValue(Date(2013, 01, 01), Date(2014, 09, 30), 52.93),
+    DateRangeValue(Date(2014, 10, 01), Date(2015, 09, 30), 53.23),
   ],
   unit = "currency",
   check_start_date = Date(2006, 01, 01),
@@ -252,7 +253,8 @@
     DateRangeValue(Date(2010, 01, 01), Date(2010, 12, 31), 11.49),
     DateRangeValue(Date(2011, 01, 01), Date(2011, 12, 31), 11.62),
     DateRangeValue(Date(2012, 01, 01), Date(2012, 12, 31), 11.74),
-    DateRangeValue(Date(2013, 01, 01), Date(2014, 12, 31), 11.99),
+    DateRangeValue(Date(2013, 01, 01), Date(2014, 09, 30), 11.99),
+    DateRangeValue(Date(2014, 10, 01), Date(2015, 09, 30), 12.06),
   ],
   unit = "currency",
   check_start_date = Date(2006, 01, 01),
@@ -262,7 +264,7 @@
 
 @define_parameter(al.loyers_plafond.autre, Parameter{Float32}(
   [
-    DateRangeValue(Date(2002, 01, 01), Date(2013, 12, 31), 0.75),
+    DateRangeValue(Date(2002, 01, 01), Date(2015, 12, 31), 0.75),
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
@@ -271,7 +273,7 @@
 
 @define_parameter(al.loyers_plafond.chambre, Parameter{Float32}(
   [
-    DateRangeValue(Date(2002, 01, 01), Date(2013, 12, 31), 0.9),
+    DateRangeValue(Date(2002, 01, 01), Date(2015, 12, 31), 0.9),
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
@@ -280,11 +282,11 @@
 
 @define_parameter(al.loyers_plafond.colocation, Parameter{Float32}(
   [
-    DateRangeValue(Date(2002, 01, 01), Date(2013, 12, 31), 0.75),
+    DateRangeValue(Date(2002, 01, 01), Date(2015, 12, 31), 0.75),
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Allocations logement ; Loyers plafond ; Si co-location",
+  description = "Allocations logement ; Loyers plafond ; Abattement des loyers plafonds pour colocations",
 ))
 
 @define_parameter(al.loyers_plafond.zone1.L1, Parameter{Float32}(
@@ -300,6 +302,7 @@
     DateRangeValue(Date(2011, 01, 01), Date(2011, 12, 31), 282.02),
     DateRangeValue(Date(2012, 01, 01), Date(2012, 12, 31), 284.84),
     DateRangeValue(Date(2013, 01, 01), Date(2014, 09, 30), 290.96),
+    DateRangeValue(Date(2014, 10, 01), Date(2015, 09, 30), 292.62),
   ],
   unit = "currency",
   check_start_date = Date(2006, 01, 01),
@@ -320,6 +323,7 @@
     DateRangeValue(Date(2011, 01, 01), Date(2011, 12, 31), 340.13),
     DateRangeValue(Date(2012, 01, 01), Date(2012, 12, 31), 343.53),
     DateRangeValue(Date(2013, 01, 01), Date(2014, 09, 30), 350.92),
+    DateRangeValue(Date(2014, 10, 01), Date(2015, 09, 30), 352.92),
   ],
   unit = "currency",
   check_start_date = Date(2006, 01, 01),
@@ -340,6 +344,7 @@
     DateRangeValue(Date(2011, 01, 01), Date(2011, 12, 31), 384.42),
     DateRangeValue(Date(2012, 01, 01), Date(2012, 12, 31), 388.26),
     DateRangeValue(Date(2013, 01, 01), Date(2014, 09, 30), 396.61),
+    DateRangeValue(Date(2014, 10, 01), Date(2015, 09, 30), 398.87),
   ],
   unit = "currency",
   check_start_date = Date(2006, 01, 01),
@@ -360,6 +365,7 @@
     DateRangeValue(Date(2011, 01, 01), Date(2011, 12, 31), 55.76),
     DateRangeValue(Date(2012, 01, 01), Date(2012, 12, 31), 56.32),
     DateRangeValue(Date(2013, 01, 01), Date(2014, 09, 30), 57.53),
+    DateRangeValue(Date(2014, 10, 01), Date(2015, 09, 30), 57.86),
   ],
   unit = "currency",
   check_start_date = Date(2006, 01, 01),
@@ -380,6 +386,7 @@
     DateRangeValue(Date(2011, 01, 01), Date(2011, 12, 31), 245.78),
     DateRangeValue(Date(2012, 01, 01), Date(2012, 12, 31), 248.24),
     DateRangeValue(Date(2013, 01, 01), Date(2014, 09, 30), 253.58),
+    DateRangeValue(Date(2014, 10, 01), Date(2015, 09, 30), 255.03),
   ],
   unit = "currency",
   check_start_date = Date(2006, 01, 01),
@@ -400,6 +407,7 @@
     DateRangeValue(Date(2011, 01, 01), Date(2011, 12, 31), 300.84),
     DateRangeValue(Date(2012, 01, 01), Date(2012, 12, 31), 303.85),
     DateRangeValue(Date(2013, 01, 01), Date(2014, 09, 30), 310.38),
+    DateRangeValue(Date(2014, 10, 01), Date(2015, 09, 30), 312.15),
   ],
   unit = "currency",
   check_start_date = Date(2006, 01, 01),
@@ -420,6 +428,7 @@
     DateRangeValue(Date(2011, 01, 01), Date(2011, 12, 31), 338.52),
     DateRangeValue(Date(2012, 01, 01), Date(2012, 12, 31), 341.91),
     DateRangeValue(Date(2013, 01, 01), Date(2014, 09, 30), 349.26),
+    DateRangeValue(Date(2014, 10, 01), Date(2015, 09, 30), 351.25),
   ],
   unit = "currency",
   check_start_date = Date(2006, 01, 01),
@@ -440,6 +449,7 @@
     DateRangeValue(Date(2011, 01, 01), Date(2011, 12, 31), 49.27),
     DateRangeValue(Date(2012, 01, 01), Date(2012, 12, 31), 49.76),
     DateRangeValue(Date(2013, 01, 01), Date(2014, 09, 30), 50.83),
+    DateRangeValue(Date(2014, 10, 01), Date(2015, 09, 30), 51.12),
   ],
   unit = "currency",
   check_start_date = Date(2006, 01, 01),
@@ -460,6 +470,7 @@
     DateRangeValue(Date(2011, 01, 01), Date(2011, 12, 31), 230.37),
     DateRangeValue(Date(2012, 01, 01), Date(2012, 12, 31), 232.67),
     DateRangeValue(Date(2013, 01, 01), Date(2014, 09, 30), 237.67),
+    DateRangeValue(Date(2014, 10, 01), Date(2015, 09, 30), 239.02),
   ],
   unit = "currency",
   check_start_date = Date(2006, 01, 01),
@@ -480,6 +491,7 @@
     DateRangeValue(Date(2011, 01, 01), Date(2011, 12, 31), 279.27),
     DateRangeValue(Date(2012, 01, 01), Date(2012, 12, 31), 282.06),
     DateRangeValue(Date(2013, 01, 01), Date(2014, 09, 30), 288.12),
+    DateRangeValue(Date(2014, 10, 01), Date(2015, 09, 30), 289.76),
   ],
   unit = "currency",
   check_start_date = Date(2006, 01, 01),
@@ -500,6 +512,7 @@
     DateRangeValue(Date(2011, 01, 01), Date(2011, 12, 31), 313.12),
     DateRangeValue(Date(2012, 01, 01), Date(2012, 12, 31), 316.25),
     DateRangeValue(Date(2013, 01, 01), Date(2014, 09, 30), 323.05),
+    DateRangeValue(Date(2014, 10, 01), Date(2015, 09, 30), 324.89),
   ],
   unit = "currency",
   check_start_date = Date(2006, 01, 01),
@@ -520,6 +533,7 @@
     DateRangeValue(Date(2011, 01, 01), Date(2011, 12, 31), 44.88),
     DateRangeValue(Date(2012, 01, 01), Date(2012, 12, 31), 45.33),
     DateRangeValue(Date(2013, 01, 01), Date(2014, 09, 30), 46.3),
+    DateRangeValue(Date(2014, 10, 01), Date(2015, 09, 30), 46.56),
   ],
   unit = "currency",
   check_start_date = Date(2006, 01, 01),
@@ -537,7 +551,8 @@
     DateRangeValue(Date(2009, 01, 01), Date(2010, 12, 31), 33.0),
     DateRangeValue(Date(2011, 01, 01), Date(2011, 12, 31), 33.47),
     DateRangeValue(Date(2012, 01, 01), Date(2012, 12, 31), 33.8),
-    DateRangeValue(Date(2013, 01, 01), Date(2014, 12, 31), 34.53),
+    DateRangeValue(Date(2013, 01, 01), Date(2014, 09, 30), 34.53),
+    DateRangeValue(Date(2014, 10, 01), Date(2015, 09, 30), 34.73),
   ],
   unit = "currency",
   check_start_date = Date(2006, 01, 01),
@@ -600,7 +615,6 @@
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
   description = "Allocations logement ; Dispositions applicables aux ressources ; Plancher ressources AL en secteur accession R. 351-7-1",
-  comment = "non trouvé",
 ))
 
 @define_parameter(al.ressources.dar_3, Parameter{Float32}(
@@ -626,7 +640,7 @@
   unit = "currency",
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Allocations logement ; Dispositions applicables aux ressources ; Montant R. 351-7-2",
+  description = "Allocations logement ; Dispositions applicables aux ressources ; Plancher de ressources pour les étudiants (R. 351-7-2)",
 ))
 
 @define_parameter(al.ressources.dar_5, Parameter{Float32}(
@@ -639,7 +653,7 @@
   unit = "currency",
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Allocations logement ; Dispositions applicables aux ressources ; Minoration si titulaire d'une bourse de l'enseignement supérieur",
+  description = "Allocations logement ; Dispositions applicables aux ressources ; Minoration du plancher de ressources étudiants pour boursiers",
 ))
 
 @define_parameter(al.ressources.dar_6, Parameter{Float32}(
@@ -1091,6 +1105,72 @@
   comment = "Wild distinction between the rates. TODO: handle the extreme diversity...",
 ))
 
+@define_parameter(cotsoc.agirc_gmp.cotisation_employeur, Parameter{Float32}(
+  [
+    DateRangeValue(Date(2002, 01, 01), Date(2002, 12, 31), 32.42),
+    DateRangeValue(Date(2003, 01, 01), Date(2003, 12, 31), 32.97),
+    DateRangeValue(Date(2004, 01, 01), Date(2004, 12, 31), 33.75),
+    DateRangeValue(Date(2005, 01, 01), Date(2005, 12, 31), 34.58),
+    DateRangeValue(Date(2006, 01, 01), Date(2006, 12, 31), 35.27),
+    DateRangeValue(Date(2007, 01, 01), Date(2007, 12, 31), 36.57),
+    DateRangeValue(Date(2008, 01, 01), Date(2008, 12, 31), 37.81),
+    DateRangeValue(Date(2009, 01, 01), Date(2009, 12, 31), 38.48),
+    DateRangeValue(Date(2010, 01, 01), Date(2010, 12, 31), 38.99),
+    DateRangeValue(Date(2011, 01, 01), Date(2011, 12, 31), 39.84),
+    DateRangeValue(Date(2012, 01, 01), Date(2012, 12, 31), 40.74),
+    DateRangeValue(Date(2013, 01, 01), Date(2013, 12, 31), 41.13),
+    DateRangeValue(Date(2014, 01, 01), Date(2014, 12, 31), 41.17),
+  ],
+  check_start_date = Date(2006, 01, 01),
+  check_stop_date = Date(2013, 12, 31),
+  description = "Cotisations sociales ; Garantie minimale de points AGIRC ; Cotisation forfaitaire mensuelle employeur",
+  comment = "Find a better place",
+))
+
+@define_parameter(cotsoc.agirc_gmp.cotisation_salarie, Parameter{Float32}(
+  [
+    DateRangeValue(Date(2002, 01, 01), Date(2002, 12, 31), 19.45),
+    DateRangeValue(Date(2003, 01, 01), Date(2003, 12, 31), 19.78),
+    DateRangeValue(Date(2004, 01, 01), Date(2004, 12, 31), 20.25),
+    DateRangeValue(Date(2005, 01, 01), Date(2005, 12, 31), 20.75),
+    DateRangeValue(Date(2006, 01, 01), Date(2006, 12, 31), 21.56),
+    DateRangeValue(Date(2007, 01, 01), Date(2007, 12, 31), 22.35),
+    DateRangeValue(Date(2008, 01, 01), Date(2008, 12, 31), 23.11),
+    DateRangeValue(Date(2009, 01, 01), Date(2009, 12, 31), 23.52),
+    DateRangeValue(Date(2010, 01, 01), Date(2010, 12, 31), 23.82),
+    DateRangeValue(Date(2011, 01, 01), Date(2011, 12, 31), 24.35),
+    DateRangeValue(Date(2012, 01, 01), Date(2012, 12, 31), 24.9),
+    DateRangeValue(Date(2013, 01, 01), Date(2013, 12, 31), 25.13),
+    DateRangeValue(Date(2014, 01, 01), Date(2014, 12, 31), 25.17),
+  ],
+  check_start_date = Date(2006, 01, 01),
+  check_stop_date = Date(2013, 12, 31),
+  description = "Cotisations sociales ; Garantie minimale de points AGIRC ; Cotisation forfaitaire mensuelle salarié",
+  comment = "Find a better place",
+))
+
+@define_parameter(cotsoc.agirc_gmp.salaire_charniere, Parameter{Float32}(
+  [
+    DateRangeValue(Date(2002, 01, 01), Date(2002, 12, 31), 31337.0),
+    DateRangeValue(Date(2003, 01, 01), Date(2003, 12, 31), 32349.0),
+    DateRangeValue(Date(2004, 01, 01), Date(2004, 12, 31), 32952.0),
+    DateRangeValue(Date(2005, 01, 01), Date(2005, 12, 31), 33512.0),
+    DateRangeValue(Date(2006, 01, 01), Date(2006, 12, 31), 34428.0),
+    DateRangeValue(Date(2007, 01, 01), Date(2007, 12, 31), 35666.0),
+    DateRangeValue(Date(2008, 01, 01), Date(2008, 12, 31), 36877.0),
+    DateRangeValue(Date(2009, 01, 01), Date(2009, 12, 31), 37973.0),
+    DateRangeValue(Date(2010, 01, 01), Date(2010, 12, 31), 38332.92),
+    DateRangeValue(Date(2011, 01, 01), Date(2011, 12, 31), 39146.63),
+    DateRangeValue(Date(2012, 01, 01), Date(2012, 12, 31), 40251.98),
+    DateRangeValue(Date(2013, 01, 01), Date(2013, 12, 31), 40948.7),
+    DateRangeValue(Date(2014, 01, 01), Date(2014, 12, 31), 41444.64),
+  ],
+  check_start_date = Date(2006, 01, 01),
+  check_stop_date = Date(2013, 12, 31),
+  description = "Cotisations sociales ; Garantie minimale de points AGIRC ; Salaire charnière annuel",
+  comment = "Find a better place",
+))
+
 @define_parameter(cotsoc.assiette.cantines_titres_restaurants.seuil_prix_titre, Parameter{Float32}(
   [
     DateRangeValue(Date(2000, 01, 01), Date(2014, 12, 31), 5.33, comment = "TODO check starting dates"),
@@ -1414,11 +1494,24 @@
     DateRangeValue(Date(2012, 07, 01), Date(2012, 12, 31), 9.4),
     DateRangeValue(Date(2013, 01, 01), Date(2013, 12, 31), 9.43),
     DateRangeValue(Date(2014, 01, 01), Date(2014, 12, 31), 9.53),
+    DateRangeValue(Date(2015, 01, 01), Date(2015, 12, 31), 9.61),
   ],
   unit = "currency",
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
   description = "Cotisations sociales ; Paramètres généraux ; SMIC horaire brut",
+))
+
+@define_parameter(cotsoc.hsup_exo, Parameter{Bool}(
+  [
+    DateRangeValue(Date(2002, 01, 01), Date(2006, 12, 31), false),
+    DateRangeValue(Date(2007, 01, 01), Date(2011, 12, 31), true),
+    DateRangeValue(Date(2012, 01, 01), Date(2013, 12, 31), false),
+  ],
+  check_start_date = Date(2006, 01, 01),
+  check_stop_date = Date(2013, 12, 31),
+  description = "Cotisations sociales ; Exonération des heures supplémentaires",
+  comment = "TODO: find a better place",
 ))
 
 @define_parameter(cotsoc.microsocial.cipav, Parameter{Float32}(
@@ -2545,7 +2638,7 @@
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Cotisations sociales ; Salariales ; Spécifiques aux cadres ; Retraite complémentaire AGIRC GMP (tranches B et C, avant 65 ans)",
+  description = "Cotisations sociales ; Salariales ; Spécifiques aux cadres ; Retraite complémentaire AGIRC (tranches B et C, avant 65 ans)",
 ))
 
 @define_parameter(cotsoc.sal.cadre.apec, MarginalRateScale(
@@ -2989,7 +3082,7 @@
 
 @define_parameter(cotsoc.sal.fonc.commun.plafond_base_solidarite, Parameter{Float32}(
   [
-    DateRangeValue(Date(2002, 01, 01), Date(2014, 12, 31), 12516.0, comment = "TODO check. Pas dispo dans barème IPP"),
+    DateRangeValue(Date(2002, 01, 01), Date(2014, 12, 31), 12516.0, comment = "TODO check. Pas dispo dans barème IPP"),
   ],
   unit = "currency",
   check_start_date = Date(2006, 01, 01),
@@ -3243,7 +3336,7 @@
         DateRangeValue(Date(2000, 01, 01), Date(2015, 12, 31), 0.0),
       ],
       rate = [
-        DateRangeValue(Date(2000, 01, 01), Date(2015, 12, 31), 0.0, comment = "1er tranche commune aux cadres et aux non-cadres"),
+        DateRangeValue(Date(2000, 01, 01), Date(2015, 12, 31), 0.0, comment = "Voir L 1ère tranche commune aux cadres et aux non-cadres"),
       ],
     ),
     RateBracket(
@@ -5086,7 +5179,7 @@
         DateRangeValue(Date(2000, 01, 01), Date(2015, 12, 31), 0.0),
       ],
       rate = [
-        DateRangeValue(Date(2000, 01, 01), Date(2015, 12, 31), 0.0, comment = "1er tranche commune aux cadres et aux non-cadres"),
+        DateRangeValue(Date(2000, 01, 01), Date(2015, 12, 31), 0.0, comment = "Voir L 1ère tranche commune aux cadres et aux non-cadres"),
       ],
     ),
     RateBracket(
@@ -5331,7 +5424,7 @@
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Cotisations sociales ; Spécifiques aux cadres ; Retraite complémentaire AGIRC GMP (tranches B et C, avant 65 ans)",
+  description = "Cotisations sociales ; Spécifiques aux cadres ; Retraite complémentaire AGIRC (tranches B et C, avant 65 ans)",
 ))
 
 @define_parameter(cotsoc.cotisations_salarie.prive_cadre.apec, MarginalRateScale(
@@ -7743,7 +7836,7 @@
     DateRangeValue(Date(2007, 01, 01), Date(2007, 12, 31), 5568),
     DateRangeValue(Date(2008, 01, 01), Date(2008, 12, 31), 5729),
     DateRangeValue(Date(2009, 01, 01), Date(2009, 12, 31), 5753),
-    DateRangeValue(Date(2010, 01, 01), Date(2012, 12, 31), 5698),
+    DateRangeValue(Date(2010, 01, 01), Date(2012, 12, 31), 5698, comment = "TODO: Check quel article de loi"),
     DateRangeValue(Date(2013, 01, 01), Date(2013, 12, 31), 5753),
   ],
   unit = "currency",
@@ -7841,17 +7934,6 @@
   description = "Impôt sur le revenu ; Variables pour scénario de réforme ; Indicatrice pour imposition des revenus du capital au barème",
 ))
 
-@define_parameter(ir.autre.hsup_exo, Parameter{Bool}(
-  [
-    DateRangeValue(Date(2002, 01, 01), Date(2006, 12, 31), false),
-    DateRangeValue(Date(2007, 01, 01), Date(2011, 12, 31), true),
-    DateRangeValue(Date(2012, 01, 01), Date(2013, 12, 31), false),
-  ],
-  check_start_date = Date(2006, 01, 01),
-  check_stop_date = Date(2013, 12, 31),
-  description = "Impôt sur le revenu ; Variables pour scénario de réforme ; Exonération des heures supplémentaires",
-))
-
 @define_parameter(ir.bareme, MarginalRateScale(
   [
     RateBracket(
@@ -7875,12 +7957,13 @@
         DateRangeValue(Date(2009, 01, 01), Date(2009, 12, 31), 5875.0),
         DateRangeValue(Date(2010, 01, 01), Date(2012, 12, 31), 5963.0),
         DateRangeValue(Date(2013, 01, 01), Date(2013, 12, 31), 6011.0),
-        DateRangeValue(Date(2014, 01, 01), Date(2014, 12, 31), 6041.0),
+        DateRangeValue(Date(2014, 01, 01), Date(2014, 12, 31), 9690.0),
       ],
       rate = [
         DateRangeValue(Date(2001, 01, 01), Date(2002, 12, 31), 0.0705),
         DateRangeValue(Date(2003, 01, 01), Date(2005, 12, 31), 0.0683),
-        DateRangeValue(Date(2006, 01, 01), Date(2014, 12, 31), 0.055),
+        DateRangeValue(Date(2006, 01, 01), Date(2013, 12, 31), 0.055),
+        DateRangeValue(Date(2014, 01, 01), Date(2014, 12, 31), 0.14),
       ],
     ),
     RateBracket(
@@ -7896,12 +7979,13 @@
         DateRangeValue(Date(2009, 01, 01), Date(2009, 12, 31), 11720.0),
         DateRangeValue(Date(2010, 01, 01), Date(2012, 12, 31), 11896.0),
         DateRangeValue(Date(2013, 01, 01), Date(2013, 12, 31), 11991.0),
-        DateRangeValue(Date(2014, 01, 01), Date(2014, 12, 31), 12051.0),
+        DateRangeValue(Date(2014, 01, 01), Date(2014, 12, 31), 26764.0),
       ],
       rate = [
         DateRangeValue(Date(2001, 01, 01), Date(2001, 12, 31), 0.21),
         DateRangeValue(Date(2002, 01, 01), Date(2005, 12, 31), 0.1914),
-        DateRangeValue(Date(2006, 01, 01), Date(2014, 12, 31), 0.14),
+        DateRangeValue(Date(2006, 01, 01), Date(2013, 12, 31), 0.14),
+        DateRangeValue(Date(2014, 01, 01), Date(2014, 12, 31), 0.3),
       ],
     ),
     RateBracket(
@@ -7917,13 +8001,14 @@
         DateRangeValue(Date(2009, 01, 01), Date(2009, 12, 31), 26030.0),
         DateRangeValue(Date(2010, 01, 01), Date(2012, 12, 31), 26420.0),
         DateRangeValue(Date(2013, 01, 01), Date(2013, 12, 31), 26631.0),
-        DateRangeValue(Date(2014, 01, 01), Date(2014, 12, 31), 26764.0),
+        DateRangeValue(Date(2014, 01, 01), Date(2014, 12, 31), 71754.0),
       ],
       rate = [
         DateRangeValue(Date(2001, 01, 01), Date(2001, 12, 31), 0.31),
         DateRangeValue(Date(2002, 01, 01), Date(2002, 12, 31), 0.2914),
         DateRangeValue(Date(2003, 01, 01), Date(2005, 12, 31), 0.2826),
-        DateRangeValue(Date(2006, 01, 01), Date(2014, 12, 31), 0.3),
+        DateRangeValue(Date(2006, 01, 01), Date(2013, 12, 31), 0.3),
+        DateRangeValue(Date(2014, 01, 01), Date(2014, 12, 31), 0.41),
       ],
     ),
     RateBracket(
@@ -7939,14 +8024,15 @@
         DateRangeValue(Date(2009, 01, 01), Date(2009, 12, 31), 69783.0),
         DateRangeValue(Date(2010, 01, 01), Date(2012, 12, 31), 70830.0),
         DateRangeValue(Date(2013, 01, 01), Date(2013, 12, 31), 71397.0),
-        DateRangeValue(Date(2014, 01, 01), Date(2014, 12, 31), 71754.0),
+        DateRangeValue(Date(2014, 01, 01), Date(2014, 12, 31), 151956.0),
       ],
       rate = [
         DateRangeValue(Date(2001, 01, 01), Date(2001, 12, 31), 0.41),
         DateRangeValue(Date(2002, 01, 01), Date(2002, 12, 31), 0.3854),
         DateRangeValue(Date(2003, 01, 01), Date(2005, 12, 31), 0.3738),
         DateRangeValue(Date(2006, 01, 01), Date(2009, 12, 31), 0.4),
-        DateRangeValue(Date(2010, 01, 01), Date(2014, 12, 31), 0.41),
+        DateRangeValue(Date(2010, 01, 01), Date(2013, 12, 31), 0.41),
+        DateRangeValue(Date(2014, 01, 01), Date(2014, 12, 31), 0.45),
       ],
     ),
     RateBracket(
@@ -7958,13 +8044,12 @@
         DateRangeValue(Date(2005, 01, 01), Date(2005, 12, 31), 40241.0),
         DateRangeValue(Date(2012, 01, 01), Date(2012, 12, 31), 150000.0),
         DateRangeValue(Date(2013, 01, 01), Date(2013, 12, 31), 151200.0),
-        DateRangeValue(Date(2014, 01, 01), Date(2014, 12, 31), 151956.0),
       ],
       rate = [
         DateRangeValue(Date(2001, 01, 01), Date(2001, 12, 31), 0.4675),
         DateRangeValue(Date(2002, 01, 01), Date(2002, 12, 31), 0.4394),
         DateRangeValue(Date(2003, 01, 01), Date(2005, 12, 31), 0.4262),
-        DateRangeValue(Date(2012, 01, 01), Date(2014, 12, 31), 0.45),
+        DateRangeValue(Date(2012, 01, 01), Date(2013, 12, 31), 0.45),
       ],
     ),
     RateBracket(
@@ -8161,6 +8246,7 @@
     DateRangeValue(Date(2008, 01, 01), Date(2008, 12, 31), 5729),
     DateRangeValue(Date(2009, 01, 01), Date(2009, 12, 31), 5753),
     DateRangeValue(Date(2010, 01, 01), Date(2013, 12, 31), 5698),
+    DateRangeValue(Date(2014, 01, 01), Date(2014, 12, 31), 5726, comment = "TODO : Quel article de loi"),
   ],
   unit = "currency",
   check_start_date = Date(2006, 01, 01),
@@ -9325,11 +9411,12 @@
     DateRangeValue(Date(2008, 01, 01), Date(2008, 12, 31), 880),
     DateRangeValue(Date(2009, 01, 01), Date(2009, 12, 31), 884),
     DateRangeValue(Date(2010, 01, 01), Date(2013, 12, 31), 897),
+    DateRangeValue(Date(2014, 01, 01), Date(2014, 12, 31), 901),
   ],
   unit = "currency",
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
-  description = "Impôt sur le revenu ; Plafonnement du quotient familial ; Non mariés ou PACS",
+  description = "Impôt sur le revenu ; Plafonnement du quotient familial ; Non mariés ou non PACS",
 ))
 
 @define_parameter(ir.plafond_qf.celib_enf, Parameter{Int32}(
@@ -9345,6 +9432,7 @@
     DateRangeValue(Date(2009, 01, 01), Date(2009, 12, 31), 3980),
     DateRangeValue(Date(2010, 01, 01), Date(2012, 12, 31), 4040),
     DateRangeValue(Date(2013, 01, 01), Date(2013, 12, 31), 3540),
+    DateRangeValue(Date(2014, 01, 01), Date(2014, 12, 31), 3558),
   ],
   unit = "currency",
   check_start_date = Date(2006, 01, 01),
@@ -9366,6 +9454,7 @@
     DateRangeValue(Date(2010, 01, 01), Date(2011, 12, 31), 2336),
     DateRangeValue(Date(2012, 01, 01), Date(2012, 12, 31), 2000),
     DateRangeValue(Date(2013, 01, 01), Date(2013, 12, 31), 1500),
+    DateRangeValue(Date(2014, 01, 01), Date(2014, 12, 31), 1508),
   ],
   unit = "currency",
   check_start_date = Date(2006, 01, 01),
@@ -9386,6 +9475,7 @@
     DateRangeValue(Date(2010, 01, 01), Date(2011, 12, 31), 661),
     DateRangeValue(Date(2012, 01, 01), Date(2012, 12, 31), 997),
     DateRangeValue(Date(2013, 01, 01), Date(2013, 12, 31), 1497),
+    DateRangeValue(Date(2014, 01, 01), Date(2014, 12, 31), 1504),
   ],
   unit = "currency",
   check_start_date = Date(2006, 01, 01),
@@ -9406,6 +9496,7 @@
     DateRangeValue(Date(2009, 01, 01), Date(2009, 12, 31), 2301),
     DateRangeValue(Date(2010, 01, 01), Date(2012, 12, 31), 2236),
     DateRangeValue(Date(2013, 01, 01), Date(2013, 12, 31), 1672),
+    DateRangeValue(Date(2014, 01, 01), Date(2014, 12, 31), 1680),
   ],
   unit = "currency",
   check_start_date = Date(2006, 01, 01),
@@ -11899,73 +11990,6 @@
   comment = "Réforme sarkozy jamais appliquée",
 ))
 
-@define_parameter(lps.abatt_conj, Parameter{Int32}(
-  [
-    DateRangeValue(Date(2010, 01, 01), Date(2013, 12, 31), 0),
-  ],
-  unit = "currency",
-  check_start_date = Date(2006, 01, 01),
-  check_stop_date = Date(2013, 12, 31),
-  description = "Fusion IR - CSG (à la Landais, Piketty, Saez) ; Abattement forfaitaire sur le revenu si conjoint",
-))
-
-@define_parameter(lps.abatt_enfant, Parameter{Int32}(
-  [
-    DateRangeValue(Date(2010, 01, 01), Date(2013, 12, 31), 0),
-  ],
-  unit = "currency",
-  check_start_date = Date(2006, 01, 01),
-  check_stop_date = Date(2013, 12, 31),
-  description = "Fusion IR - CSG (à la Landais, Piketty, Saez) ; Abattement forfaitaire sur le revenu par enfant",
-))
-
-@define_parameter(lps.bareme, MarginalRateScale(
-  [
-    RateBracket(
-      threshold = [
-        DateRangeValue(Date(2010, 01, 01), Date(2013, 12, 31), 0.0),
-      ],
-      rate = [
-        DateRangeValue(Date(2010, 01, 01), Date(2013, 12, 31), 0.0),
-      ],
-    ),
-  ],
-  unit = "currency",
-  check_start_date = Date(2006, 01, 01),
-  check_stop_date = Date(2013, 12, 31),
-  description = "Fusion IR - CSG (à la Landais, Piketty, Saez) ; Barème appliqué à l'assiette de la CSG",
-))
-
-@define_parameter(lps.credit_enfant, Parameter{Int32}(
-  [
-    DateRangeValue(Date(2010, 01, 01), Date(2013, 12, 31), 0),
-  ],
-  unit = "currency",
-  check_start_date = Date(2006, 01, 01),
-  check_stop_date = Date(2013, 12, 31),
-  description = "Fusion IR - CSG (à la Landais, Piketty, Saez) ; Crédit d'impôt forfaitaire par enfant",
-))
-
-@define_parameter(lps.reduc_conj, Parameter{Int32}(
-  [
-    DateRangeValue(Date(2010, 01, 01), Date(2013, 12, 31), 0),
-  ],
-  unit = "currency",
-  check_start_date = Date(2006, 01, 01),
-  check_stop_date = Date(2013, 12, 31),
-  description = "Fusion IR - CSG (à la Landais, Piketty, Saez) ; Réduction d'impôt forfaitaire si conjoint",
-))
-
-@define_parameter(lps.reduc_enfant, Parameter{Int32}(
-  [
-    DateRangeValue(Date(2010, 01, 01), Date(2013, 12, 31), 0),
-  ],
-  unit = "currency",
-  check_start_date = Date(2006, 01, 01),
-  check_stop_date = Date(2013, 12, 31),
-  description = "Fusion IR - CSG (à la Landais, Piketty, Saez) ; Réduction d'impôt forfaitaire par enfant",
-))
-
 @define_parameter(minim.aah.age_legal_retraite, Parameter{Float32}(
   [
     DateRangeValue(Date(1983, 07, 01), Date(2011, 10, 31), 60.0),
@@ -12340,6 +12364,7 @@
     DateRangeValue(Date(2012, 01, 01), Date(2012, 12, 31), 22.44),
     DateRangeValue(Date(2013, 01, 01), Date(2013, 12, 31), 22.82),
     DateRangeValue(Date(2014, 01, 01), Date(2014, 12, 31), 23.12),
+    DateRangeValue(Date(2015, 01, 01), Date(2015, 12, 31), 23.32),
   ],
   unit = "currency",
   check_start_date = Date(2006, 01, 01),
@@ -12363,6 +12388,7 @@
     DateRangeValue(Date(2012, 01, 01), Date(2012, 12, 31), 15.63),
     DateRangeValue(Date(2013, 01, 01), Date(2013, 12, 31), 15.9),
     DateRangeValue(Date(2014, 01, 01), Date(2014, 12, 31), 16.11),
+    DateRangeValue(Date(2015, 01, 01), Date(2015, 12, 31), 16.25),
   ],
   unit = "currency",
   check_start_date = Date(2006, 01, 01),
@@ -12569,7 +12595,7 @@
 
 @define_parameter(minim.rmi.patrimoine.abattement_valeur_locative_immo_non_loue, Parameter{Float32}(
   [
-    DateRangeValue(Date(2010, 01, 01), Date(2014, 12, 31), 0.5),
+    DateRangeValue(Date(2009, 01, 01), Date(2014, 12, 31), 0.5),
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
@@ -12578,7 +12604,7 @@
 
 @define_parameter(minim.rmi.patrimoine.abattement_valeur_locative_terrains_non_loue, Parameter{Float32}(
   [
-    DateRangeValue(Date(2010, 01, 01), Date(2014, 12, 31), 0.8),
+    DateRangeValue(Date(2009, 01, 01), Date(2014, 12, 31), 0.8),
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
@@ -12587,7 +12613,7 @@
 
 @define_parameter(minim.rmi.patrimoine.taux_interet_forfaitaire_epargne_non_remunere, Parameter{Float32}(
   [
-    DateRangeValue(Date(2010, 01, 01), Date(2014, 12, 31), 0.03),
+    DateRangeValue(Date(2009, 01, 01), Date(2014, 12, 31), 0.03),
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),

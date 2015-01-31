@@ -4241,11 +4241,11 @@
   ],
 )
 
-@define_variable(chobrut, individu_definition, Int32,
+@define_variable(chobrut, individu_definition, Float32,
   label = "Chômage brut",
 )
 
-@define_variable(rstbrut, individu_definition, Int32,
+@define_variable(rstbrut, individu_definition, Float32,
   label = "Retraite brute",
 )
 
@@ -5260,16 +5260,20 @@
   ],
 )
 
+@define_variable(arrco_tranche_a_taux_employeur, individu_definition, Float32,
+  label = "Taux ARRCO tranche A employeur) propre à l'entreprise",
+)
+
+@define_variable(arrco_tranche_a_taux_salarie, individu_definition, Float32,
+  label = "Taux ARRCO tranche A salarié) propre à l'entreprise",
+)
+
 @define_variable(assujettie_taxe_salaires, individu_definition, Bool,
   label = "Entreprise assujettie à la taxe sur les salaires",
 )
 
 @define_variable(avantages_en_nature_valeur_reelle, individu_definition, Bool,
   label = "Avantages en nature (Valeur réelle)",
-)
-
-@define_variable(base_remboursement_transport, individu_definition, Bool,
-  label = "Base pour le calcul du remboursement des frais de transport",
 )
 
 @define_variable(contrat_de_travail, individu_definition, Int16,
@@ -5351,6 +5355,10 @@
   label = "Entreprise redevable de la taxe d'apprentissage",
 )
 
+@define_variable(remboursement_transport_base, individu_definition, Int32,
+  label = "Base pour le calcul du remboursement des frais de transport",
+)
+
 @define_variable(salaire_de_base, individu_definition, Float32,
   label = "Salaire de base",
 )
@@ -5385,12 +5393,12 @@
   label = "Durée mensuelle collective dans l'entreprise (heures, temps plein)",
 )
 
-@define_variable(heures_non_remunerees_volume, individu_definition, Int32,
+@define_variable(heures_non_remunerees_volume, individu_definition, Float32,
   label = "Volume des heures non rémunérées (convenance personnelle hors contrat/forfait)",
 )
 
 @define_variable(heures_remunerees_volume, individu_definition, Int32,
-  label = "Volume des heures rémunérées contractuellement (heures/mois)",
+  label = "Volume des heures rémunérées contractuellement (heures/mois, temps partiel)",
 )
 
 @define_variable(forfait_heures_remunerees_volume, individu_definition, Int32,
@@ -5446,10 +5454,6 @@
 
 @define_variable(coefficient_proratisation, individu_definition, Float32,
   label = "Coefficient de proratisation pour le calcul du SMIC et du plafond de la Sécurité socialele",
-)
-
-@define_variable(nombre_heures_remunerees, individu_definition, Float32,
-  label = "Nombre d'heures rémunérées mensuellement",
 )
 
 @define_variable(nombre_jours_calendaires, individu_definition, Float32,
