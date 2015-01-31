@@ -29,7 +29,7 @@ Convertible([
     "menages" => [["personne_de_reference" => "1"]],
   ],
   "year" => 2014,
-]) |> to_scenario(tax_benefit_system, to_test_case) |> test_isa(Scenario) |> to_value
+]) |> to_scenario(tax_benefit_system) |> test_isa(Scenario) |> to_value |> Simulation
 
 Convertible([
   "axes" => [["count" => 2, "max" =>  20000, "min" => 0, "name" => "salbrut"]],
@@ -37,7 +37,7 @@ Convertible([
     "individus" => [(String => Any)[]],
   ],
   "year" => 2014,
-]) |> to_scenario(tax_benefit_system, to_test_case, repair = true) |> test_isa(Scenario) |> to_value
+]) |> to_scenario(tax_benefit_system, repair = true) |> test_isa(Scenario) |> to_value |> Simulation
 
 @test isa(single_entity_scenario(tax_benefit_system, 2014, parent1 = (String => Any)[]), Scenario)
 

@@ -144,7 +144,7 @@ function single_entity_scenario(tax_benefit_system::TaxBenefitSystem, period; ax
       "individus" => individus,
       "menages" => [menage],
     ],
-  ]) |> to_scenario(tax_benefit_system, to_test_case) |> to_value
+  ]) |> to_scenario(tax_benefit_system) |> to_value
 end
 
 

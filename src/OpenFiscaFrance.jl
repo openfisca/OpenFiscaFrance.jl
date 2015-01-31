@@ -23,7 +23,7 @@
 module OpenFiscaFrance
 
 
-export single_entity_scenario, suggest, tax_benefit_system, to_test_case
+export single_entity_scenario, suggest, tax_benefit_system
 
 
 import DataStructures: OrderedDict, OrderedSet
@@ -107,10 +107,83 @@ macro define_variable(function_or_variable, args...)
 end
 
 
-@define_entity(famille, "familles", index_variable_name = "idfam", role_variable_name ="quifam")
-@define_entity(foyer_fiscal, "foyers_fiscaux", index_variable_name = "idfoy", role_variable_name ="quifoy")
+function each_famille_person_id_and_role(member)
+  id_and_role_couples = (String, Int)[]
+
+  role = 1
+  parents_id = member["parents"]
+  @assert 1 <= length(parents_id) <= 2
+  for (parent_index, parent_id) in enumerate(parents_id)
+    @assert parent_id !== nothing
+    push!(id_and_role_couples, (parent_id, role + parent_index - 1))
+  end
+
+  role += 2
+  enfants_id = get(member, "enfants", [])
+  for (enfant_index, enfant_id) in enumerate(enfants_id)
+    @assert enfant_id !== nothing
+    push!(id_and_role_couples, (enfant_id, role + enfant_index - 1))
+  end
+
+  return id_and_role_couples
+end
+
+
+function each_foyer_fiscal_person_id_and_role(member)
+  id_and_role_couples = (String, Int)[]
+
+  role = 1
+  declarants_id = member["declarants"]
+  @assert 1 <= length(declarants_id) <= 2
+  for (declarant_index, declarant_id) in enumerate(declarants_id)
+    @assert declarant_id !== nothing
+    push!(id_and_role_couples, (declarant_id, role + declarant_index - 1))
+  end
+
+  role += 2
+  personnes_a_charge_id = get(member, "personnes_a_charge", [])
+  for (personne_a_charge_index, personne_a_charge_id) in enumerate(personnes_a_charge_id)
+    @assert personne_a_charge_id !== nothing
+    push!(id_and_role_couples, (personne_a_charge_id, role + personne_a_charge_index - 1))
+  end
+
+  return id_and_role_couples
+end
+
+
+function each_menage_person_id_and_role(member)
+  id_and_role_couples = (String, Int)[]
+
+  role = 1
+  personne_de_reference_id = member["personne_de_reference"]
+  @assert personne_de_reference_id !== nothing
+  push!(id_and_role_couples, (personne_de_reference_id, role))
+
+  role += 1
+  conjoint_id = get(member, "conjoint", nothing)
+  if conjoint_id !== nothing
+    push!(id_and_role_couples, (conjoint_id, role))
+  end
+
+  role += 1
+  enfants_id = get(member, "enfants", [])
+  autres_id = get(member, "autres", [])
+  for (enfant_index, enfant_id) in enumerate(union(enfants_id, autres_id))
+    @assert enfant_id !== nothing
+    push!(id_and_role_couples, (enfant_id, role + enfant_index - 1))
+  end
+
+  return id_and_role_couples
+end
+
+
+@define_entity(famille, "familles", each_person_id_and_role = each_famille_person_id_and_role,
+  index_variable_name = "idfam", role_variable_name ="quifam")
+@define_entity(foyer_fiscal, "foyers_fiscaux", each_person_id_and_role = each_foyer_fiscal_person_id_and_role,
+  index_variable_name = "idfoy", role_variable_name ="quifoy")
 @define_entity(individu, "individus", is_person = true)
-@define_entity(menage, "menages", index_variable_name = "idmen", role_variable_name ="quimen")
+@define_entity(menage, "menages", each_person_id_and_role = each_menage_person_id_and_role,
+  index_variable_name = "idmen", role_variable_name ="quimen")
 
 
 include("formulas.jl")
@@ -121,7 +194,8 @@ include("scenarios.jl")
 
 
 preprocess(legislation)
-tax_benefit_system = TaxBenefitSystem(entity_definition_by_name, legislation, variable_definition_by_name)
+tax_benefit_system = TaxBenefitSystem(entity_definition_by_name, legislation, variable_definition_by_name,
+  to_test_case = to_test_case)
 
 
 end # module
