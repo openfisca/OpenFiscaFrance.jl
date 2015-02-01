@@ -168,7 +168,7 @@ function each_menage_person_id_and_role(member)
   role += 1
   enfants_id = get(member, "enfants", [])
   autres_id = get(member, "autres", [])
-  for (enfant_index, enfant_id) in enumerate(union(enfants_id, autres_id))
+  for (enfant_index, enfant_id) in enumerate(vcat(enfants_id, autres_id))
     @assert enfant_id !== nothing
     push!(id_and_role_couples, (enfant_id, role + enfant_index - 1))
   end

@@ -111,7 +111,7 @@ function single_entity_scenario(tax_benefit_system::TaxBenefitSystem, period; ax
   foyer_fiscal = foyer_fiscal === nothing ? (String => Any)[] : copy(foyer_fiscal)
   individus = Any[]
   menage = menage === nothing ? (String => Any)[] : copy(menage)
-  for (index, individu) in enumerate(union([parent1, parent2], enfants))
+  for (index, individu) in enumerate(vcat([parent1, parent2], enfants))
     if individu === nothing
       continue
     end
@@ -791,7 +791,7 @@ function to_test_case(tax_benefit_system::TaxBenefitSystem, period::DatePeriod; 
     end
 
     # Third validation step
-    parents_id = OrderedSet(union([
+    parents_id = OrderedSet(vcat([
       famille["parents"]
       for famille in values(test_case["familles"])
     ]...)...)
