@@ -26,12 +26,12 @@ module OpenFiscaFrance
 export single_entity_scenario, suggest, tax_benefit_system
 
 
+importall Converters
+importall Converters.DatesConverters
 import DataStructures: OrderedDict, OrderedSet
-using Dates
-
-using Converters
-using OpenFiscaCore
-using UUID
+import Dates: Date, day, firstdayofmonth, firstdayofyear, month, year
+importall OpenFiscaCore
+import UUID: UUID
 
 
 # typealias Enumeration Dict{Int, String}

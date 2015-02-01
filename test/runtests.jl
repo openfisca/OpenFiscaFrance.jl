@@ -22,12 +22,13 @@
 
 using Base.Test
 
-using Converters
-using Dates
-using YAML
+importall Converters
+importall Converters.DatesConverters
+import Dates: Date
+importall YAML
 
-using OpenFiscaCore
-using OpenFiscaFrance
+importall OpenFiscaCore
+importall OpenFiscaFrance
 
 
 # Technical Tests
