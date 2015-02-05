@@ -184,68 +184,81 @@
 @define_variable(nbN, foyer_fiscal_definition, Int32,
   cerfa_field = "N",
   label = "Nombre d'enfants mariés/pacsés et d'enfants non mariés chargés de famille",
+  return_last_period_value = true,
 )
 
 @define_variable(nbR, foyer_fiscal_definition, Int32,
   cerfa_field = "R",
   label = "Nombre de titulaires (autres que les enfants) de la carte invalidité d'au moins 80 %",
+  return_last_period_value = true,
 )
 
 @define_variable(caseE, foyer_fiscal_definition, Bool,
   cerfa_field = "E",
   label = "Situation pouvant donner droit à une demi-part supplémentaire : vous vivez seul au 1er janvier de l'année de perception des revenus et vous avez élevé un enfant pendant moins de 5 ans durant la période où vous viviez seul",
+  return_last_period_value = true,
   stop_date = Date(2012, 12, 31),
 )
 
 @define_variable(caseF, foyer_fiscal_definition, Bool,
   cerfa_field = "F",
   label = "Situation pouvant donner droit à une demi-part supplémentaire : conjoint titulaire d'une pension ou d'une carte d'invalidité (vivant ou décédé l'année de perception des revenus)",
+  return_last_period_value = true,
 )
 
 @define_variable(caseG, foyer_fiscal_definition, Bool,
   cerfa_field = "G",
   label = "Titulaire d'une pension de veuve de guerre",
+  return_last_period_value = true,
 )
 
 @define_variable(caseH, foyer_fiscal_definition, Int32,
   cerfa_field = "H",
   label = "Année de naissance des enfants à charge en garde alternée",
+  return_last_period_value = true,
 )
 
 @define_variable(caseK, foyer_fiscal_definition, Bool,
   cerfa_field = "K",
   label = "Situation pouvant donner droit à une demi-part supplémentaire: vous avez eu un enfant décédé après l’âge de 16 ans ou par suite de faits de guerre",
+  return_last_period_value = true,
   stop_date = Date(2011, 12, 31),
 )
 
 @define_variable(caseL, foyer_fiscal_definition, Bool,
   cerfa_field = "L",
   label = "Situation pouvant donner droit à une demi-part supplémentaire: vous vivez seul au 1er janvier de l'année de perception des revenus et vous avez élevé un enfant pendant au moins 5 ans durant la période où vous viviez seul",
+  return_last_period_value = true,
 )
 
 @define_variable(caseN, foyer_fiscal_definition, Bool,
   cerfa_field = "N",
   label = "Vous ne viviez pas seul au 1er janvier de l'année de perception des revenus",
+  return_last_period_value = true,
 )
 
 @define_variable(caseP, foyer_fiscal_definition, Bool,
   cerfa_field = "P",
   label = "Titulaire d'une pension pour une invalidité d'au moins 40 % ou d'une carte d'invalidité d'au moins 80%",
+  return_last_period_value = true,
 )
 
 @define_variable(caseS, foyer_fiscal_definition, Bool,
   cerfa_field = "S",
   label = "Vous êtes mariés/pacsés et l'un des deux déclarants âgé de plus de 75 ans est titulaire de la carte du combattant ou d'une pension militaire d'invalidité ou de victime de guerre",
+  return_last_period_value = true,
 )
 
 @define_variable(caseT, foyer_fiscal_definition, Bool,
   cerfa_field = "T",
   label = "Vous êtes parent isolé au 1er janvier de l'année de perception des revenus",
+  return_last_period_value = true,
 )
 
 @define_variable(caseW, foyer_fiscal_definition, Bool,
   cerfa_field = "W",
   label = "Vous ou votre conjoint (même s'il est décédé), âgés de plus de 75 ans, êtes titulaire de la carte du combattant ou d'une pension militaire d'invalidité ou de victime de guerre",
+  return_last_period_value = true,
 )
 
 @define_variable(rfr_n_1, foyer_fiscal_definition, Int32,
@@ -261,6 +274,7 @@
 @define_variable(nbptr_n_2, foyer_fiscal_definition, Int32,
   cell_format = "monetary",
   label = "Nombre de parts année n - 2",
+  return_last_period_value = true,
 )
 
 @define_variable(f2da, foyer_fiscal_definition, Int32,
@@ -821,6 +835,7 @@
 @define_variable(f6ev, foyer_fiscal_definition, Int32,
   cerfa_field = "6EV",
   label = "Nombre de personnes de plus de 75 ans dans le besoin accueillies sous votre toit",
+  return_last_period_value = true,
 )
 
 @define_variable(f6dd, foyer_fiscal_definition, Int32,
@@ -1012,12 +1027,14 @@
 @define_variable(f7dq, foyer_fiscal_definition, Bool,
   cerfa_field = "7DQ",
   label = "Emploi direct pour la première fois d'un salarié à domicile durant l'année de perception des revenus déclarés",
+  return_last_period_value = true,
   start_date = Date(2009, 1, 1),
 )
 
 @define_variable(f7dg, foyer_fiscal_definition, Bool,
   cerfa_field = "7DG",
   label = "Vous, votre conjoint ou une personne à votre charge à une carte d'invalidité d'au moins 80 % l'année de perception des revenus déclarés",
+  return_last_period_value = true,
 )
 
 @define_variable(f7dl, foyer_fiscal_definition, Int32,
@@ -1132,31 +1149,37 @@
 @define_variable(f7ea, foyer_fiscal_definition, Int32,
   cerfa_field = "7EA",
   label = "Nombre d'enfants à charge poursuivant leurs études au collège",
+  return_last_period_value = true,
 )
 
 @define_variable(f7eb, foyer_fiscal_definition, Int32,
   cerfa_field = "7EB",
   label = "Nombre d'enfants à charge en résidence alternée poursuivant leurs études au collège",
+  return_last_period_value = true,
 )
 
 @define_variable(f7ec, foyer_fiscal_definition, Int32,
   cerfa_field = "7EC",
   label = "Nombre d'enfants à charge poursuivant leurs études au lycée",
+  return_last_period_value = true,
 )
 
 @define_variable(f7ed, foyer_fiscal_definition, Int32,
   cerfa_field = "7ED",
   label = "Nombre d'enfants à charge en résidence alternée poursuivant leurs études au lycée",
+  return_last_period_value = true,
 )
 
 @define_variable(f7ef, foyer_fiscal_definition, Int32,
   cerfa_field = "7EF",
   label = "Nombre d'enfants à charge poursuivant leurs études dans l'enseignement supérieur",
+  return_last_period_value = true,
 )
 
 @define_variable(f7eg, foyer_fiscal_definition, Int32,
   cerfa_field = "7EG",
   label = "Nombre d'enfants à charge en résidence alternée poursuivant leurs études dans l'enseignement supérieur",
+  return_last_period_value = true,
 )
 
 @define_variable(f7td, foyer_fiscal_definition, Int32,
@@ -1169,6 +1192,7 @@
 @define_variable(f7vo, foyer_fiscal_definition, Int32,
   cerfa_field = "7VO",
   label = "Nombre d'années de remboursement du prêt étudiant avant l'année de perception des revenus déclarés",
+  return_last_period_value = true,
   start_date = Date(2006, 1, 1),
 )
 
@@ -1211,6 +1235,7 @@
 @define_variable(f7we, foyer_fiscal_definition, Bool,
   cerfa_field = "7WE",
   label = "Dépenses en faveur de la qualité environnementale de l'habitation principale: éco-prêt à taux zéro avec offre de prêt émise l'année de perception des revenus déclarés",
+  return_last_period_value = true,
   start_date = Date(2009, 1, 1),
 )
 
@@ -1218,6 +1243,7 @@
   cell_format = "monetary",
   cerfa_field = "7WG",
   label = "Dépenses en faveur de la qualité environnementale de l'habitation principale: éco-prêt à taux zéro avec offre de prêt émise l'année de perception des revenus déclarés -1",
+  return_last_period_value = true,
   start_date = Date(2012, 1, 1),
 )
 
@@ -1354,6 +1380,7 @@
 @define_variable(f7wq, foyer_fiscal_definition, Bool,
   cerfa_field = "7WQ",
   label = "Dépenses en faveur de la qualité environnementale de l'habitation principale: dépenses d'isolation thermique des parois vitrées du 01/01/2012 au 03/04/2012",
+  return_last_period_value = true,
   start_date = Date(2010, 1, 1),
   stop_date = Date(2012, 12, 31),
 )
@@ -1361,6 +1388,7 @@
 @define_variable(f7ws, foyer_fiscal_definition, Bool,
   cerfa_field = "7WS",
   label = "Dépenses en faveur de la qualité environnementale de l'habitation principale: dépenses d'isolations des parois vitrées à compter du 04/04/2012",
+  return_last_period_value = true,
   start_date = Date(2012, 1, 1),
   stop_date = Date(2012, 12, 31),
 )
@@ -1368,6 +1396,7 @@
 @define_variable(f7wt, foyer_fiscal_definition, Bool,
   cerfa_field = "7WT",
   label = "Dépenses en faveur de la qualité environnementale de l'habitation principale: dépenses d'isolation thermique des parois vitrées réalisées sur au moins la moitié des fenêtres du logement ",
+  return_last_period_value = true,
   start_date = Date(2012, 1, 1),
   stop_date = Date(2012, 12, 31),
 )
@@ -1375,6 +1404,7 @@
 @define_variable(f7wu, foyer_fiscal_definition, Bool,
   cerfa_field = "7WU",
   label = "Dépenses en faveur de la qualité environnementale de l'habitation principale: achat de volets avant 2012",
+  return_last_period_value = true,
   start_date = Date(2012, 1, 1),
   stop_date = Date(2012, 12, 31),
 )
@@ -1382,6 +1412,7 @@
 @define_variable(f7wv, foyer_fiscal_definition, Bool,
   cerfa_field = "7WV",
   label = "Dépenses en faveur de la qualité environnementale de l'habitation principale: achat de volets en 2012",
+  return_last_period_value = true,
   start_date = Date(2012, 1, 1),
   stop_date = Date(2012, 12, 31),
 )
@@ -1389,6 +1420,7 @@
 @define_variable(f7ww, foyer_fiscal_definition, Bool,
   cerfa_field = "7WW",
   label = "Dépenses en faveur de la qualité environnementale de l'habitation principale: achat de portes avant 2012",
+  return_last_period_value = true,
   start_date = Date(2012, 1, 1),
   stop_date = Date(2012, 12, 31),
 )
@@ -1396,6 +1428,7 @@
 @define_variable(f7wx, foyer_fiscal_definition, Bool,
   cerfa_field = "7WX",
   label = "Dépenses en faveur de la qualité environnementale de l'habitation principale: achat de portes en 2012",
+  return_last_period_value = true,
   start_date = Date(2012, 1, 1),
   stop_date = Date(2012, 12, 31),
 )
@@ -1403,18 +1436,21 @@
 @define_variable(f7wh, foyer_fiscal_definition, Bool,
   cerfa_field = "7WH",
   label = "Dépenses en faveur de la qualité environnementale de l'habitation principale (logement achevé depuis plus de 2 ans): bouquet de travaux réalisé pendant l'année de perception des revenus",
+  return_last_period_value = true,
   start_date = Date(2013, 1, 1),
 )
 
 @define_variable(f7wk, foyer_fiscal_definition, Bool,
   cerfa_field = "7WK",
   label = "Votre habitation principale est une maison individuelle",
+  return_last_period_value = true,
   start_date = Date(2009, 1, 1),
 )
 
 @define_variable(f7wf, foyer_fiscal_definition, Bool,
   cerfa_field = "7WF",
   label = "Dépenses en faveur de la qualité environnementale de l'habitation principale: dépenses d'isolation thermique des parois vitrées avant le 01/01/n-1",
+  return_last_period_value = true,
   stop_date = Date(2013, 12, 31),
 )
 
@@ -2224,6 +2260,7 @@
 @define_variable(f7xd, foyer_fiscal_definition, Bool,
   cerfa_field = "7XD",
   label = "Investissements locatifs dans le secteur de touristique: logement neuf, demande d'étalement du solde de la réduction d'impôt sur 6 ans",
+  return_last_period_value = true,
   start_date = Date(2009, 1, 1),
   stop_date = Date(2012, 12, 31),
 )
@@ -2231,6 +2268,7 @@
 @define_variable(f7xe, foyer_fiscal_definition, Bool,
   cerfa_field = "7XE",
   label = "Investissements locatifs dans le secteur de touristique: réhabilitation d'un logement, demande d'étalement du solde de la réduction d'impôt sur 6 ans",
+  return_last_period_value = true,
   start_date = Date(2009, 1, 1),
   stop_date = Date(2012, 12, 31),
 )
@@ -3812,30 +3850,35 @@
 @define_variable(f1ar, foyer_fiscal_definition, Bool,
   cerfa_field = "1AR",
   label = "Crédit d'impôt aide à la mobilité : le déclarant déménage à plus de 200 km pour son emploi",
+  return_last_period_value = true,
   stop_date = Date(2080, 12, 31),
 )
 
 @define_variable(f1br, foyer_fiscal_definition, Bool,
   cerfa_field = "1BR",
   label = "Crédit d'impôt aide à la mobilité : le conjoint déménage à plus de 200 km pour son emploi",
+  return_last_period_value = true,
   stop_date = Date(2008, 12, 31),
 )
 
 @define_variable(f1cr, foyer_fiscal_definition, Bool,
   cerfa_field = "1CR",
   label = "Crédit d'impôt aide à la mobilité : la 1ère personne à charge déménage à plus de 200 km pour son emploi",
+  return_last_period_value = true,
   stop_date = Date(2008, 12, 31),
 )
 
 @define_variable(f1dr, foyer_fiscal_definition, Bool,
   cerfa_field = "1DR",
   label = "Crédit d'impôt aide à la mobilité : la 2è personne à charge déménage à plus de 200 km pour son emploi",
+  return_last_period_value = true,
   stop_date = Date(2008, 12, 31),
 )
 
 @define_variable(f1er, foyer_fiscal_definition, Bool,
   cerfa_field = "1ER",
   label = "Crédit d'impôt aide à la mobilité : la 3è personne à charge déménage à plus de 200 km pour son emploi",
+  return_last_period_value = true,
   stop_date = Date(2006, 12, 31),
 )
 
@@ -3975,6 +4018,7 @@
 @define_variable(f8td, foyer_fiscal_definition, Bool,
   cerfa_field = "8TD",
   label = "Revenus non imposables dépassent la moitié du RFR",
+  return_last_period_value = true,
   start_date = Date(2011, 1, 1),
   stop_date = Date(2014, 12, 31),
 )
@@ -4220,19 +4264,23 @@
 
 @define_variable(enceinte, individu_definition, Bool,
   label = "Est enceinte",
+  return_last_period_value = true,
 )
 
 @define_variable(categ_inv, individu_definition, Int32,
   label = "Catégorie de handicap (AEEH)",
+  return_last_period_value = true,
 )
 
 @define_variable(coloc, individu_definition, Bool,
   label = "Vie en colocation",
+  return_last_period_value = true,
 )
 
 @define_variable(csg_rempl, individu_definition, Int16,
   cell_default = 3,
   label = "Taux retenu sur la CSG des revenus de remplacment",
+  return_last_period_value = true,
   values = [
     0 => "Non renseigné/non pertinent",
     1 => "Exonéré",
@@ -4257,14 +4305,17 @@
 
 @define_variable(adoption, individu_definition, Bool,
   label = "Enfant adopté",
+  return_last_period_value = true,
 )
 
 @define_variable(ass_precondition_remplie, individu_definition, Bool,
   label = "Éligible à l'ASS",
+  return_last_period_value = true,
 )
 
 @define_variable(elig_creimp_jeunes, individu_definition, Bool,
   label = "Éligible au crédit d'impôt jeunes",
+  return_last_period_value = true,
   start_date = Date(2005, 1, 1),
   stop_date = Date(2008, 1, 1),
 )
@@ -4395,6 +4446,7 @@
 @define_variable(cho_ld, individu_definition, Bool,
   cerfa_field = [0 => "1AI", 1 => "1BI", 2 => "1CI", 3 => "1DI", 4 => "1EI"],
   label = "Demandeur d'emploi inscrit depuis plus d'un an",
+  return_last_period_value = true,
 )
 
 @define_variable(sali, individu_definition, Int32,
@@ -4418,6 +4470,7 @@
 @define_variable(alr_decl, individu_definition, Bool,
   cell_default = true,
   label = "Pension déclarée",
+  return_last_period_value = true,
 )
 
 @define_variable(choi, individu_definition, Int32,
@@ -4441,10 +4494,12 @@
 
 @define_variable(inv, individu_definition, Bool,
   label = "Invalide",
+  return_last_period_value = true,
 )
 
 @define_variable(alt, individu_definition, Bool,
   label = "Enfant en garde alternée",
+  return_last_period_value = true,
 )
 
 @define_variable(ppe_du_sa, individu_definition, Int32,
@@ -4455,11 +4510,13 @@
 @define_variable(ppe_tp_sa, individu_definition, Bool,
   cerfa_field = [0 => "1AX", 1 => "1BX", 2 => "1CX", 3 => "1DX", 4 => "1QX"],
   label = "Prime pour l'emploi des salariés: indicateur de travail à temps plein sur l'année entière",
+  return_last_period_value = true,
 )
 
 @define_variable(activite, individu_definition, Int16,
   cell_default = 4,
   label = "Activité",
+  return_last_period_value = true,
   values = [
     0 => "Actif occupé",
     1 => "Chômeur",
@@ -4471,6 +4528,7 @@
 
 @define_variable(nbsala, individu_definition, Int16,
   label = "Nombre de salariés dans l'établissement de l'emploi actuel",
+  return_last_period_value = true,
   values = [
     0 => "Sans objet",
     1 => "Aucun salarié",
@@ -4489,10 +4547,12 @@
 @define_variable(tva_ent, individu_definition, Bool,
   cell_default = true,
   label = "L'entreprise employant le salarié paye de la TVA",
+  return_last_period_value = true,
 )
 
 @define_variable(exposition_accident, individu_definition, Int16,
   label = "Exposition au risque pour les accidents du travail",
+  return_last_period_value = true,
   values = [
     0 => "Faible",
     1 => "Moyen",
@@ -4503,11 +4563,13 @@
 
 @define_variable(boursier, individu_definition, Bool,
   label = "Élève ou étudiant boursier",
+  return_last_period_value = true,
 )
 
 @define_variable(statmarit, individu_definition, Int16,
   cell_default = 2,
   label = "Statut marital",
+  return_last_period_value = true,
   values = [
     1 => "Marié",
     2 => "Célibataire",
@@ -4590,6 +4652,7 @@
 @define_variable(ppe_tp_ns, individu_definition, Bool,
   cerfa_field = [0 => "5NW", 1 => "5OW", 2 => "5PW"],
   label = "Prime pour l'emploi des non-salariés: indicateur de travail à temps plein sur l'année entière",
+  return_last_period_value = true,
   stop_date = Date(2006, 12, 31),
 )
 
@@ -5253,6 +5316,7 @@
 
 @define_variable(allegement_fillon_mode_recouvrement, individu_definition, Int16,
   label = "Mode de recouvrement des allègements Fillon",
+  return_last_period_value = true,
   values = [
     0 => "fin_d_annee",
     1 => "anticipe_regularisation_fin_de_periode",
@@ -5270,14 +5334,17 @@
 
 @define_variable(assujettie_taxe_salaires, individu_definition, Bool,
   label = "Entreprise assujettie à la taxe sur les salaires",
+  return_last_period_value = true,
 )
 
 @define_variable(avantages_en_nature_valeur_reelle, individu_definition, Bool,
   label = "Avantages en nature (Valeur réelle)",
+  return_last_period_value = true,
 )
 
 @define_variable(contrat_de_travail, individu_definition, Int16,
   label = "Type contrat de travail",
+  return_last_period_value = true,
   values = [
     0 => "temps_plein",
     1 => "temps_partiel",
@@ -5292,16 +5359,19 @@
   cell_default = Date(1870, 1, 1),
   cell_format = "date",
   label = "Date d'arrivée dans l'entreprise",
+  return_last_period_value = true,
 )
 
 @define_variable(contrat_de_travail_depart, individu_definition, Date,
   cell_default = Date(2099, 12, 31),
   cell_format = "date",
   label = "Date de départ de l'entreprise",
+  return_last_period_value = true,
 )
 
 @define_variable(contrat_de_travail_duree, individu_definition, Int16,
   label = "Type (durée determinée ou indéterminée) du contrat de travail",
+  return_last_period_value = true,
   values = [
     0 => "cdi",
     1 => "cdd",
@@ -5314,6 +5384,7 @@
 
 @define_variable(localisation_entreprise, individu_definition, UTF8String,
   label = "Localisation entreprise",
+  return_last_period_value = true,
 )
 
 @define_variable(nombre_tickets_restaurant, individu_definition, Int32,
@@ -5353,6 +5424,7 @@
 @define_variable(redevable_taxe_apprentissage, individu_definition, Bool,
   cell_default = true,
   label = "Entreprise redevable de la taxe d'apprentissage",
+  return_last_period_value = true,
 )
 
 @define_variable(remboursement_transport_base, individu_definition, Int32,
@@ -5378,6 +5450,7 @@
 
 @define_variable(type_sal, individu_definition, Int16,
   label = "Catégorie de salarié",
+  return_last_period_value = true,
   values = [
     0 => "prive_non_cadre",
     1 => "prive_cadre",
@@ -5445,6 +5518,7 @@
 
 @define_variable(scolarite, individu_definition, Int16,
   label = "Scolarité de l'enfant : collège, lycée...",
+  return_last_period_value = true,
   values = [
     0 => "Inconnue",
     1 => "Collège",
@@ -5467,34 +5541,42 @@
 
 @define_variable(inactif, famille_definition, Bool,
   label = "Parent inactif (PAJE-CLCA)",
+  return_last_period_value = true,
 )
 
 @define_variable(partiel1, famille_definition, Bool,
   label = "Parent actif à moins de 50% (PAJE-CLCA)",
+  return_last_period_value = true,
 )
 
 @define_variable(partiel2, famille_definition, Bool,
   label = "Parent actif entre 50% et 80% (PAJE-CLCA)",
+  return_last_period_value = true,
 )
 
 @define_variable(opt_colca, famille_definition, Bool,
   label = "Opte pour le COLCA",
+  return_last_period_value = true,
 )
 
 @define_variable(empl_dir, famille_definition, Bool,
   label = "Emploi direct (CLCMG)",
+  return_last_period_value = true,
 )
 
 @define_variable(ass_mat, famille_definition, Bool,
   label = "Assistante maternelle (CLCMG)",
+  return_last_period_value = true,
 )
 
 @define_variable(gar_dom, famille_definition, Bool,
   label = "Garde à domicile (CLCMG)",
+  return_last_period_value = true,
 )
 
 @define_variable(proprietaire_proche_famille, famille_definition, Bool,
   label = "Le propriétaire du logement a un lien de parenté avec la personne de référence ou son conjoint",
+  return_last_period_value = true,
 )
 
 @define_variable(nom_menage, menage_definition, UTF8String,
@@ -5511,6 +5593,7 @@
 
 @define_variable(so, menage_definition, Int16,
   label = "Statut d'occupation",
+  return_last_period_value = true,
   values = [
     0 => "Non renseigné",
     1 => "Accédant à la propriété",
@@ -5524,6 +5607,7 @@
 
 @define_variable(depcom, menage_definition, UTF8String,
   label = "Code INSEE (depcom) du lieu de résidence",
+  return_last_period_value = true,
 )
 
 @define_variable(zone_apl, menage_definition, Int16,
