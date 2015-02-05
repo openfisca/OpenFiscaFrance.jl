@@ -1,0 +1,38 @@
+name: "Isolé RSA - non meublé - zone 2 sns ressources N-2 (al)"
+description: |
+  isolé
+  RSA 
+  pas de ressources déclarées en N-2
+  non meublé
+  loyer 150 €
+  zone 2
+  Commentaire : même résultat d'AL en meublé comme en non meublé : problème
+  simulateur CAF indique : 167 €
+period: "month:2014-12"
+individus:
+  activite: 1
+  age: 43
+  ass_precondition_remplie: true
+  birth: "1972-01-09"
+  epargne_non_remuneree: 0
+  etu: 0
+  id: 549437e65db991d97a5eb070
+  interets_epargne_sur_livrets: 0
+  inv: 0
+  valeur_locative_immo_non_loue: 0
+  valeur_locative_terrains_non_loue: 0
+familles:
+  enfants:
+  parents: 549437e65db991d97a5eb070
+  proprietaire_proche_famille: false
+foyers_fiscaux:
+  declarants: 549437e65db991d97a5eb070
+  personnes_a_charge:
+menages:
+  depcom: 13209
+  enfants:
+  loyer: 150
+  personne_de_reference: 549437e65db991d97a5eb070
+  so: 4
+output_variables:
+  aide_logement: 167

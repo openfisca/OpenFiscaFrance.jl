@@ -1,0 +1,73 @@
+name: "Cas salarié - RNC supérieur à 1015 fois le SMIC (al, eval forfaitaire)"
+description: |
+  Pas d'application de l'évaluation forfaitaire dans le cas d'un allocataire qui perçoit une rémunération mensuelle en m-1 et dont les RNC N-2 sont supérieurs à 1015 fois le SMIC horaire brut n-2.
+  
+  Résultat caf.fr = 22,53€
+period: "month:2015-01"
+individus:
+  age: 36
+  alr:
+    2013: 0
+  birth: "1978-04-12"
+  cho:
+    2013: 0
+  epargne_non_remuneree: 0
+  etu: 0
+  id: 54be835fd337b5d372377c19
+  interets_epargne_sur_livrets: 0
+  inv: 0
+  rst:
+    2013: 0
+  sal:
+    2013: 11000
+  salbrut:
+    2013: 51948.01298701299
+    2014-01: 4329
+    2014-02: 4329
+    2014-03: 4329
+    2014-04: 4329
+    2014-05: 4329
+    2014-06: 4329
+    2014-07: 4329
+    2014-08: 4329
+    2014-09: 4329
+    2014-10: 0
+    2014-10:3: 12987.012987012986
+    2014-11: 0
+    2014-12: 12987.012987012986
+    year:2014-01: 51948.01298701299
+  salnet:
+    2013: 39999.97000000001
+    2014-01: 3333.33
+    2014-02: 3333.33
+    2014-03: 3333.33
+    2014-04: 3333.33
+    2014-05: 3333.33
+    2014-06: 3333.33
+    2014-07: 3333.33
+    2014-08: 3333.33
+    2014-09: 3333.33
+    2014-10: 0
+    2014-10:3: 10000
+    2014-11: 0
+    2014-12: 10000
+    year:2014-01: 39999.97000000001
+  valeur_locative_immo_non_loue: 0
+  valeur_locative_terrains_non_loue: 0
+familles:
+  enfants:
+  parents: 54be835fd337b5d372377c19
+  proprietaire_proche_famille: false
+foyers_fiscaux:
+  declarants: 54be835fd337b5d372377c19
+  personnes_a_charge:
+  rfr:
+    2013: 0
+menages:
+  depcom: 62263
+  enfants:
+  loyer: 160
+  personne_de_reference: 54be835fd337b5d372377c19
+  so: 4
+output_variables:
+  aide_logement: 22.53

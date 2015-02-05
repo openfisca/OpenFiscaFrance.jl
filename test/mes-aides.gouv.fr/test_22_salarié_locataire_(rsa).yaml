@@ -1,0 +1,42 @@
+name: Salarié locataire (rsa)
+description:
+period: "month:2014-07"
+individus:
+  age: 35
+  birth: "1980-01-01"
+  enceinte: false
+  epargne_non_remuneree: 0
+  etu: 0
+  id: 53d7a000f6aa390200a6cd46
+  interets_epargne_sur_livrets: 0
+  inv: 0
+  salbrut:
+    2012: 3896.1038961038957
+    2014-04: 1298.7012987012986
+    2014-04:3: 3896.1038961038957
+    2014-05: 1298.7012987012986
+    2014-06: 1298.7012987012986
+    year:2013-07: 3896.1038961038957
+  salnet:
+    2012: 3000
+    2014-04: 1000
+    2014-04:3: 3000
+    2014-05: 1000
+    2014-06: 1000
+    year:2013-07: 3000
+  valeur_locative_immo_non_loue: 0
+  valeur_locative_terrains_non_loue: 0
+familles:
+  enfants:
+  parents: 53d7a000f6aa390200a6cd46
+  proprietaire_proche_famille: false
+foyers_fiscaux:
+  declarants: 53d7a000f6aa390200a6cd46
+  personnes_a_charge:
+menages:
+  enfants:
+  loyer: 50
+  personne_de_reference: 53d7a000f6aa390200a6cd46
+  so: 4
+output_variables:
+  rsa: 59.39

@@ -1,0 +1,89 @@
+name: Bénéficiaire de l'AAH (al, eval forfaitaire)
+description: |
+  Dans le cas d'un allocataire, bénéficiaire de l'AAH, percevant des ressources en m-1 et dont les RNC n-2 < 1015 fois le SMIC, on n'applique pas l'évaluation forfaitaire.
+  
+  Résultat caf.fr = 175,79€
+period: "month:2015-01"
+individus:
+  aah:
+    2013: 2400
+    2014-01: 200
+    2014-02: 200
+    2014-03: 200
+    2014-04: 200
+    2014-05: 200
+    2014-06: 200
+    2014-07: 200
+    2014-08: 200
+    2014-09: 200
+    2014-10: 200
+    2014-10:3: 600
+    2014-11: 200
+    2014-12: 200
+    year:2014-01: 2400
+  age: 35
+  alr:
+    2013: 0
+  birth: "1979-07-12"
+  cho:
+    2013: 0
+  epargne_non_remuneree: 0
+  etu: 0
+  id: 54be86a5d337b5d372377c27
+  interets_epargne_sur_livrets: 0
+  inv: 1
+  rst:
+    2013: 0
+  sal:
+    2013: 9570
+  salbrut:
+    2013: 4155.883116883117
+    2014-01: 346.32467532467535
+    2014-02: 346.32467532467535
+    2014-03: 346.32467532467535
+    2014-04: 346.32467532467535
+    2014-05: 346.32467532467535
+    2014-06: 346.32467532467535
+    2014-07: 346.32467532467535
+    2014-08: 346.32467532467535
+    2014-09: 346.32467532467535
+    2014-10: 0
+    2014-10:3: 1038.9610389610389
+    2014-11: 0
+    2014-12: 1038.9610389610389
+    year:2014-01: 4155.883116883117
+  salnet:
+    2013: 3200.0300000000007
+    2014-01: 266.67
+    2014-02: 266.67
+    2014-03: 266.67
+    2014-04: 266.67
+    2014-05: 266.67
+    2014-06: 266.67
+    2014-07: 266.67
+    2014-08: 266.67
+    2014-09: 266.67
+    2014-10: 0
+    2014-10:3: 800
+    2014-11: 0
+    2014-12: 800
+    year:2014-01: 3200.0300000000007
+  valeur_locative_immo_non_loue: 0
+  valeur_locative_terrains_non_loue: 0
+familles:
+  enfants:
+  parents: 54be86a5d337b5d372377c27
+  proprietaire_proche_famille: false
+foyers_fiscaux:
+  declarants: 54be86a5d337b5d372377c27
+  personnes_a_charge:
+  rfr:
+    2013: 9570
+menages:
+  depcom: 75114
+  enfants:
+  loyer: 750
+  personne_de_reference: 54be86a5d337b5d372377c27
+  so: 4
+output_variables:
+  aide_logement: 175.79

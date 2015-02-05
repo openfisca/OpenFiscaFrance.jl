@@ -1,0 +1,57 @@
+name: Zone 3, 1 enfant, sans ressources (al, caf.fr)
+description: |
+  L = 323.05
+  C = 64.92
+  P0 = 34.53 = Pp
+  ALF = (64.92+323.05) - 34.53 = 353.44
+  Montant CAF.FR : 353,68 €
+period: "month:2015-01"
+individus:
+  - age: 34
+    birth: "1980-08-12"
+    epargne_non_remuneree: 0
+    etu: 0
+    id: 54abb15f608e752d1629e1e3
+    interets_epargne_sur_livrets: 0
+    inv: 0
+    statmarit: 1
+    valeur_locative_immo_non_loue: 0
+    valeur_locative_terrains_non_loue: 0
+  - age: 34
+    birth: "1980-08-12"
+    epargne_non_remuneree: 0
+    etu: 0
+    id: 54abb15f608e752d1629e1e2
+    interets_epargne_sur_livrets: 0
+    inv: 0
+    valeur_locative_immo_non_loue: 0
+    valeur_locative_terrains_non_loue: 0
+  - age: 5
+    birth: "2009-07-12"
+    epargne_non_remuneree: 0
+    etu: 0
+    id: 54abb15f608e752d1629e1e1
+    interets_epargne_sur_livrets: 0
+    inv: 0
+    valeur_locative_immo_non_loue: 0
+    valeur_locative_terrains_non_loue: 0
+familles:
+  enfants: 54abb15f608e752d1629e1e1
+  parents:
+    - 54abb15f608e752d1629e1e3
+    - 54abb15f608e752d1629e1e2
+  proprietaire_proche_famille: false
+foyers_fiscaux:
+  declarants:
+    - 54abb15f608e752d1629e1e3
+    - 54abb15f608e752d1629e1e2
+  personnes_a_charge: 54abb15f608e752d1629e1e1
+menages:
+  conjoint: 54abb15f608e752d1629e1e2
+  depcom: 67382
+  enfants: 54abb15f608e752d1629e1e1
+  loyer: 500
+  personne_de_reference: 54abb15f608e752d1629e1e3
+  so: 4
+output_variables:
+  alf: 353.44

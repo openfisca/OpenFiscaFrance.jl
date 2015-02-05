@@ -1,0 +1,69 @@
+name: "Salarié 1 enfant - Evaluation forfaitaire (al, caf.fr)"
+description: "teste l'évaluation forfaitaire des ressources car montant n-2 déclaré < 9000"
+period: "month:2014-10"
+individus:
+  - age: 34
+    birth: "1980-08-12"
+    epargne_non_remuneree: 0
+    etu: 0
+    id: 543e3ca9b01af0cb34d22bbc
+    interets_epargne_sur_livrets: 0
+    inv: 0
+    salbrut:
+      2012: 9479.220779220777
+      2013-10: 789.6103896103896
+      2013-11: 789.6103896103896
+      2013-12: 789.6103896103896
+      2014-01: 789.6103896103896
+      2014-02: 789.6103896103896
+      2014-03: 789.6103896103896
+      2014-04: 789.6103896103896
+      2014-05: 789.6103896103896
+      2014-06: 789.6103896103896
+      2014-07: 790.9090909090909
+      2014-07:3: 2372.7272727272725
+      2014-08: 790.9090909090909
+      2014-09: 790.9090909090909
+      year:2013-10: 9479.220779220777
+    salnet:
+      2012: 7299
+      2013-10: 608
+      2013-11: 608
+      2013-12: 608
+      2014-01: 608
+      2014-02: 608
+      2014-03: 608
+      2014-04: 608
+      2014-05: 608
+      2014-06: 608
+      2014-07: 609
+      2014-07:3: 1827
+      2014-08: 609
+      2014-09: 609
+      year:2013-10: 7299
+    valeur_locative_immo_non_loue: 0
+    valeur_locative_terrains_non_loue: 0
+  - age: 4
+    birth: "2010-08-12"
+    epargne_non_remuneree: 0
+    etu: 0
+    id: 543e3ca9b01af0cb34d22bbb
+    interets_epargne_sur_livrets: 0
+    inv: 0
+    valeur_locative_immo_non_loue: 0
+    valeur_locative_terrains_non_loue: 0
+familles:
+  enfants: 543e3ca9b01af0cb34d22bbb
+  parents: 543e3ca9b01af0cb34d22bbc
+  proprietaire_proche_famille: false
+foyers_fiscaux:
+  declarants: 543e3ca9b01af0cb34d22bbc
+  personnes_a_charge: 543e3ca9b01af0cb34d22bbb
+menages:
+  depcom: 44109
+  enfants: 543e3ca9b01af0cb34d22bbb
+  loyer: 1000
+  personne_de_reference: 543e3ca9b01af0cb34d22bbc
+  so: 3
+output_variables:
+  apl: 377.08

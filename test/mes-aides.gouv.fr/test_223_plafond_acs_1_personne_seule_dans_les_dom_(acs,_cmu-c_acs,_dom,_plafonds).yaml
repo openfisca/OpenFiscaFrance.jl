@@ -1,0 +1,61 @@
+name: "Plafond ACS 1 personne seule dans les DOM (acs, cmu-c/acs, dom, plafonds)"
+description: Test réalisé avec des ressources immédiatement inférieures au plafond ACS pour une personne seule
+period: "month:2014-12"
+individus:
+  age: 51
+  birth: "1964-01-01"
+  epargne_non_remuneree: 0
+  etu: 0
+  id: 549189c5df990f5b0286d009
+  interets_epargne_sur_livrets: 0
+  inv: 0
+  salbrut:
+    2012: 16867.519480519477
+    2013-12: 1874.168831168831
+    2014-01: 1874.168831168831
+    2014-02: 1874.168831168831
+    2014-03: 1874.168831168831
+    2014-04: 1874.168831168831
+    2014-05: 1874.168831168831
+    2014-06: 1874.168831168831
+    2014-07: 1874.168831168831
+    2014-08: 1874.168831168831
+    2014-09: 0
+    2014-09:3: 0
+    2014-10: 0
+    2014-11: 0
+    year:2013-12: 16867.519480519477
+  salnet:
+    2012: 12987.990000000002
+    2013-12: 1443.11
+    2014-01: 1443.11
+    2014-02: 1443.11
+    2014-03: 1443.11
+    2014-04: 1443.11
+    2014-05: 1443.11
+    2014-06: 1443.11
+    2014-07: 1443.11
+    2014-08: 1443.11
+    2014-09: 0
+    2014-09:3: 0
+    2014-10: 0
+    2014-11: 0
+    year:2013-12: 12987.990000000002
+  valeur_locative_immo_non_loue: 0
+  valeur_locative_terrains_non_loue: 0
+familles:
+  enfants:
+  parents: 549189c5df990f5b0286d009
+  proprietaire_proche_famille: false
+foyers_fiscaux:
+  declarants: 549189c5df990f5b0286d009
+  personnes_a_charge:
+menages:
+  depcom: 97209
+  enfants:
+  loyer: 50
+  personne_de_reference: 549189c5df990f5b0286d009
+  so: 4
+output_variables:
+  acs: 350
+  cmu_c: false

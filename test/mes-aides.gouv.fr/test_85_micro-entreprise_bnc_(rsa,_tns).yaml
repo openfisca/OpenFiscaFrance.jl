@@ -1,0 +1,33 @@
+name: "Micro-entreprise BNC (rsa, tns)"
+description: |
+  Revenu brut mensuel : 1000
+  Brut abattu (34%) : 660
+  Net abattu : 330
+  = 509.3 - 61.12 - 38% * 330 = 322.78
+period: "month:2014-10"
+individus:
+  age: 34
+  birth: "1980-10-10"
+  epargne_non_remuneree: 0
+  etu: 0
+  id: 545102b0e9a2e9863225f512
+  interets_epargne_sur_livrets: 0
+  inv: 0
+  tns_chiffre_affaires_micro_entreprise: 12000
+  tns_type_activite: bnc
+  tns_type_structure: 1
+  valeur_locative_immo_non_loue: 0
+  valeur_locative_terrains_non_loue: 0
+familles:
+  enfants:
+  parents: 545102b0e9a2e9863225f512
+foyers_fiscaux:
+  declarants: 545102b0e9a2e9863225f512
+  personnes_a_charge:
+menages:
+  depcom: 92050
+  enfants:
+  personne_de_reference: 545102b0e9a2e9863225f512
+  so: 6
+output_variables:
+  rsa: 322.78

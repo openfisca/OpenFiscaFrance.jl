@@ -1,0 +1,82 @@
+name: "1 allocataire - couple - Ressource retenue = ASS du conjoint pour un montant moyen mensuel de 488,33 (aspa)"
+description: |
+  Total des revenus perçus par le couple = 1088,33
+  Plafond de ressources couple = 1242,00
+  Dépassement de ressources = 646,33
+  => l'Aspa s'élève à 153,67 pour le retraité
+period: "month:2014-12"
+individus:
+  - activite: 3
+    age: 65
+    birth: "1949-08-14"
+    epargne_non_remuneree: 0
+    etu: 0
+    id: 5485ab9ead7a80d20646bad0
+    interets_epargne_sur_livrets: 0
+    inv: 0
+    rstbrut:
+      2012: 7775.377969762419
+      2013-12: 647.9481641468682
+      2014-01: 647.9481641468682
+      2014-02: 647.9481641468682
+      2014-03: 647.9481641468682
+      2014-04: 647.9481641468682
+      2014-05: 647.9481641468682
+      2014-06: 647.9481641468682
+      2014-07: 647.9481641468682
+      2014-08: 647.9481641468682
+      2014-09: 647.9481641468682
+      2014-09:3: 1943.8444924406044
+      2014-10: 647.9481641468682
+      2014-11: 647.9481641468682
+      year:2013-12: 7775.377969762419
+    rstnet:
+      2012: 7200
+      2013-12: 600
+      2014-01: 600
+      2014-02: 600
+      2014-03: 600
+      2014-04: 600
+      2014-05: 600
+      2014-06: 600
+      2014-07: 600
+      2014-08: 600
+      2014-09: 600
+      2014-09:3: 1800
+      2014-10: 600
+      2014-11: 600
+      year:2013-12: 7200
+    statmarit: 1
+    valeur_locative_immo_non_loue: 0
+    valeur_locative_terrains_non_loue: 0
+  - activite: 1
+    age: 54
+    ass_precondition_remplie: true
+    birth: "1960-08-17"
+    epargne_non_remuneree: 0
+    etu: 0
+    id: 5485ab9ead7a80d20646bac2
+    interets_epargne_sur_livrets: 0
+    inv: 0
+    valeur_locative_immo_non_loue: 0
+    valeur_locative_terrains_non_loue: 0
+familles:
+  enfants:
+  parents:
+    - 5485ab9ead7a80d20646bad0
+    - 5485ab9ead7a80d20646bac2
+  proprietaire_proche_famille: false
+foyers_fiscaux:
+  declarants:
+    - 5485ab9ead7a80d20646bad0
+    - 5485ab9ead7a80d20646bac2
+  personnes_a_charge:
+menages:
+  conjoint: 5485ab9ead7a80d20646bac2
+  depcom: 75119
+  enfants:
+  loyer: 700
+  personne_de_reference: 5485ab9ead7a80d20646bad0
+  so: 3
+output_variables:
+  aspa: 153.67

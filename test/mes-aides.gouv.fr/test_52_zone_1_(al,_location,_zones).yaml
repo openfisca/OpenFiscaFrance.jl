@@ -1,0 +1,43 @@
+name: Zone 1 (al, location, zones)
+description: |
+  ALS = L + C - Pp
+  L = Loyer plafonné = 290.96 € (zone 1, une personne).
+  C = 52.93 € (isolé sans personne à charge).
+  Pp = P0 + Tp * Rp
+  P0 = 34.53 € = max(34.53, 0.085*(290.96+52.93))
+  Tp = Tf + Tl
+  Tf = 2.83%
+  Tl = 0 car RL = L / Loyer de référence = 290.96/248.24 = 1.15 = 15% < 45%
+  Donc Tp = 2.83
+  Rp = max(0, Assiette ressources - R0) = 0 car assiette ressources < R0
+  R0 = 12 * (R1 - R2) * 0.9
+  R1 = 0.88 * RSA n - 2 = 0.88 * 474.93 = 417.93
+  R2 = 0
+  Donc Pp = 34.53
+  Donc ALS = 290.96 + 52.93 - 34.53 = 309.36
+period: "month:2014-10"
+individus:
+  age: 34
+  birth: "1980-08-12"
+  epargne_non_remuneree: 0
+  etu: 0
+  id: 542ec2625e3a9c02007e90c3
+  interets_epargne_sur_livrets: 0
+  inv: 0
+  valeur_locative_immo_non_loue: 0
+  valeur_locative_terrains_non_loue: 0
+familles:
+  enfants:
+  parents: 542ec2625e3a9c02007e90c3
+  proprietaire_proche_famille: false
+foyers_fiscaux:
+  declarants: 542ec2625e3a9c02007e90c3
+  personnes_a_charge:
+menages:
+  depcom: 75111
+  enfants:
+  loyer: 500
+  personne_de_reference: 542ec2625e3a9c02007e90c3
+  so: 4
+output_variables:
+  als: 309.36

@@ -1,0 +1,90 @@
+name: "Femme enceinte isolée : calcul sur base couple (al, location)"
+description: |
+  Pour une femme enceinte isolée sans enfants, on utilise une base couple.
+  Ici, loyer > loyer plafond en zone 1, ressources n-2 = 9000 euros
+  
+  Fiche de calcul avec paramètres 2015 :
+  L = 350.92 (couple)
+  C = 52.93
+  E = L + C = 350.92 + 52.93 = 403.85
+  P0 = 34.53
+  R = 9000 * 0.9 = 8100
+  Rp = 8100 - 6576 = 1524
+  LR = 310.38
+  RL = L/LR*100 = 113.06
+  Tl =  ( (113.06 * 68 / 100) - 37.5) / 100 = 0.394
+  Tf = 3.15
+  Tp = Tf + Tl = 3.15 + 0.394 = 3.544
+  P1 = Tp * Rp / 100 = 3.544 * 1524 / 100 = 54.01
+  Donc Pp = P0 + P1 = 34.53 + 54.01 = 88.54
+  
+  AL = E - Pp = 403.85 - 88.54 = 315.31 euros
+period: "month:2015-01"
+individus:
+  age: 34
+  alr:
+    2013: 0
+  birth: "1980-08-12"
+  cho:
+    2013: 0
+  enceinte: true
+  epargne_non_remuneree: 0
+  etu: 0
+  id: 54c22a358a248fab3505d37a
+  interets_epargne_sur_livrets: 0
+  inv: 0
+  rst:
+    2013: 0
+  sal:
+    2013: 9000
+  salbrut:
+    2013: 12467.532467532466
+    2014-01: 1038.9610389610389
+    2014-02: 1038.9610389610389
+    2014-03: 1038.9610389610389
+    2014-04: 1038.9610389610389
+    2014-05: 1038.9610389610389
+    2014-06: 1038.9610389610389
+    2014-07: 1038.9610389610389
+    2014-08: 1038.9610389610389
+    2014-09: 1038.9610389610389
+    2014-10: 1038.9610389610389
+    2014-10:3: 3116.8831168831166
+    2014-11: 1038.9610389610389
+    2014-12: 1038.9610389610389
+    year:2014-01: 12467.532467532466
+  salnet:
+    2013: 9600
+    2014-01: 800
+    2014-02: 800
+    2014-03: 800
+    2014-04: 800
+    2014-05: 800
+    2014-06: 800
+    2014-07: 800
+    2014-08: 800
+    2014-09: 800
+    2014-10: 800
+    2014-10:3: 2400
+    2014-11: 800
+    2014-12: 800
+    year:2014-01: 9600
+  valeur_locative_immo_non_loue: 0
+  valeur_locative_terrains_non_loue: 0
+familles:
+  enfants:
+  parents: 54c22a358a248fab3505d37a
+  proprietaire_proche_famille: false
+foyers_fiscaux:
+  declarants: 54c22a358a248fab3505d37a
+  personnes_a_charge:
+  rfr:
+    2013: 0
+menages:
+  depcom: 75111
+  enfants:
+  loyer: 1000
+  personne_de_reference: 54c22a358a248fab3505d37a
+  so: 4
+output_variables:
+  aide_logement: 315.31

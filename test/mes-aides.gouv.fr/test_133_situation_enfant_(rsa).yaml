@@ -1,0 +1,38 @@
+name: situation enfant (rsa)
+description: "situation testée:  femme seul avec enfant né en 2005 \"enceinte\", hébergement à titre gratuit, aucune ressource : pas de message d'erreur sur une grossesse pour un enfant de 9 ans. Adapter les situations professionnelle possibles pour les enfants mineurs"
+period: "month:2014-11"
+individus:
+  - age: 35
+    birth: "1980-01-01"
+    epargne_non_remuneree: 0
+    etu: 0
+    id: 546b05a5492eaff5637e3b7b
+    interets_epargne_sur_livrets: 0
+    inv: 0
+    valeur_locative_immo_non_loue: 0
+    valeur_locative_terrains_non_loue: 0
+  - age: 10
+    birth: "2005-01-01"
+    enceinte: true
+    epargne_non_remuneree: 0
+    etu: 0
+    id: 546b05a5492eaff5637e3b7a
+    interets_epargne_sur_livrets: 0
+    inv: 0
+    valeur_locative_immo_non_loue: 0
+    valeur_locative_terrains_non_loue: 0
+familles:
+  enfants: 546b05a5492eaff5637e3b7a
+  parents: 546b05a5492eaff5637e3b7b
+foyers_fiscaux:
+  declarants: 546b05a5492eaff5637e3b7b
+  personnes_a_charge: 546b05a5492eaff5637e3b7a
+menages:
+  depcom: 75114
+  enfants: 546b05a5492eaff5637e3b7a
+  personne_de_reference: 546b05a5492eaff5637e3b7b
+  so: 6
+output_variables:
+  asf: 95.99
+  cmu_c: true
+  rsa: 658.21

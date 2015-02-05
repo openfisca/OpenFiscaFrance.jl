@@ -1,0 +1,96 @@
+name: "Conjoint salarié - RNC n-2 supérieurs à 1015 fois le SMIC (al, eval forfaitaire)"
+description: |
+  L'évaluation forfaitaire des ressources ne s'appliquent pas au foyer où le conjoint perçoit des ressources mensuelles et que ses RNC n-2 sont supérieurs à 1015 fois le SMIC brut horaire.
+  
+  Résultat caf.fr = 249,96€
+period: "month:2015-01"
+individus:
+  - age: 27
+    alr:
+      2013: 0
+    birth: "1987-07-12"
+    cho:
+      2013: 0
+    epargne_non_remuneree: 0
+    etu: 0
+    id: 54be92109ed370cf725aa16f
+    interets_epargne_sur_livrets: 0
+    inv: 0
+    rst:
+      2013: 0
+    sal:
+      2013: 0
+    statmarit: 1
+    valeur_locative_immo_non_loue: 0
+    valeur_locative_terrains_non_loue: 0
+  - age: 28
+    alr:
+      2013: 0
+    birth: "1986-08-13"
+    cho:
+      2013: 0
+    epargne_non_remuneree: 0
+    etu: 0
+    id: 54be92109ed370cf725aa162
+    interets_epargne_sur_livrets: 0
+    inv: 0
+    rst:
+      2013: 0
+    sal:
+      2013: 11000
+    salbrut:
+      2013: 7532.428571428571
+      2014-01: 627.7012987012987
+      2014-02: 627.7012987012987
+      2014-03: 627.7012987012987
+      2014-04: 627.7012987012987
+      2014-05: 627.7012987012987
+      2014-06: 627.7012987012987
+      2014-07: 627.7012987012987
+      2014-08: 627.7012987012987
+      2014-09: 627.7012987012987
+      2014-10: 0
+      2014-10:3: 1883.1168831168832
+      2014-11: 0
+      2014-12: 1883.1168831168832
+      year:2014-01: 7532.428571428571
+    salnet:
+      2013: 5799.969999999999
+      2014-01: 483.33
+      2014-02: 483.33
+      2014-03: 483.33
+      2014-04: 483.33
+      2014-05: 483.33
+      2014-06: 483.33
+      2014-07: 483.33
+      2014-08: 483.33
+      2014-09: 483.33
+      2014-10: 0
+      2014-10:3: 1450
+      2014-11: 0
+      2014-12: 1450
+      year:2014-01: 5799.969999999999
+    valeur_locative_immo_non_loue: 0
+    valeur_locative_terrains_non_loue: 0
+familles:
+  enfants:
+  parents:
+    - 54be92109ed370cf725aa16f
+    - 54be92109ed370cf725aa162
+  proprietaire_proche_famille: false
+foyers_fiscaux:
+  declarants:
+    - 54be92109ed370cf725aa16f
+    - 54be92109ed370cf725aa162
+  personnes_a_charge:
+  rfr:
+    2013: 10000
+menages:
+  conjoint: 54be92109ed370cf725aa162
+  depcom: 75115
+  enfants:
+  loyer: 1200
+  personne_de_reference: 54be92109ed370cf725aa16f
+  so: 4
+output_variables:
+  aide_logement: 249.96

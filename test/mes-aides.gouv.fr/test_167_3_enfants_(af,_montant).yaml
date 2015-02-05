@@ -1,0 +1,62 @@
+name: 3 enfants (af, montant)
+description: Le petit écart est dû à la CRDS qui n'est pas prise en compte dans le simulateur...
+period: "month:2014-11"
+individus:
+  - age: 34
+    birth: "1980-08-12"
+    epargne_non_remuneree: 0
+    etu: 0
+    id: 5473419b1fdfd7423d81fb10
+    interets_epargne_sur_livrets: 0
+    inv: 0
+    valeur_locative_immo_non_loue: 0
+    valeur_locative_terrains_non_loue: 0
+  - age: 4
+    birth: "2010-08-12"
+    epargne_non_remuneree: 0
+    etu: 0
+    id: 5473419b1fdfd7423d81fb0f
+    interets_epargne_sur_livrets: 0
+    inv: 0
+    valeur_locative_immo_non_loue: 0
+    valeur_locative_terrains_non_loue: 0
+  - age: 4
+    birth: "2010-08-12"
+    epargne_non_remuneree: 0
+    etu: 0
+    id: 5473419b1fdfd7423d81fb0e
+    interets_epargne_sur_livrets: 0
+    inv: 0
+    valeur_locative_immo_non_loue: 0
+    valeur_locative_terrains_non_loue: 0
+  - age: 4
+    birth: "2010-08-12"
+    epargne_non_remuneree: 0
+    etu: 0
+    id: 5473419b1fdfd7423d81fb0d
+    interets_epargne_sur_livrets: 0
+    inv: 0
+    valeur_locative_immo_non_loue: 0
+    valeur_locative_terrains_non_loue: 0
+familles:
+  enfants:
+    - 5473419b1fdfd7423d81fb0f
+    - 5473419b1fdfd7423d81fb0e
+    - 5473419b1fdfd7423d81fb0d
+  parents: 5473419b1fdfd7423d81fb10
+foyers_fiscaux:
+  declarants: 5473419b1fdfd7423d81fb10
+  personnes_a_charge:
+    - 5473419b1fdfd7423d81fb0f
+    - 5473419b1fdfd7423d81fb0e
+    - 5473419b1fdfd7423d81fb0d
+menages:
+  depcom: 67482
+  enfants:
+    - 5473419b1fdfd7423d81fb0f
+    - 5473419b1fdfd7423d81fb0e
+    - 5473419b1fdfd7423d81fb0d
+  personne_de_reference: 5473419b1fdfd7423d81fb10
+  so: 6
+output_variables:
+  af: 295.05

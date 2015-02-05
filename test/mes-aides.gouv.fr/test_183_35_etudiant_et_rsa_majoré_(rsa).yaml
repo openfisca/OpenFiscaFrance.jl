@@ -1,0 +1,41 @@
+name: 35_Etudiant et RSA majoré (rsa)
+description: |
+  Accès au RSA de l'étudiant, si remplit les conditions du L. 262-9 CASF => parent isolé
+  Idem pour les élèves et stagiaires au sens du L. 612-8 du code de l'éducation.
+  => Compléter la case à cocher.
+period: "month:2014-12"
+individus:
+  - activite: 2
+    age: 35
+    birth: "1980-01-01"
+    boursier: false
+    epargne_non_remuneree: 0
+    etu: 1
+    id: 54818d591c33cd86661874e2
+    interets_epargne_sur_livrets: 0
+    inv: 0
+    valeur_locative_immo_non_loue: 0
+    valeur_locative_terrains_non_loue: 0
+  - age: 5
+    birth: "2010-01-01"
+    epargne_non_remuneree: 0
+    etu: 0
+    id: 54818d591c33cd86661874e1
+    interets_epargne_sur_livrets: 0
+    inv: 0
+    valeur_locative_immo_non_loue: 0
+    valeur_locative_terrains_non_loue: 0
+familles:
+  enfants: 54818d591c33cd86661874e1
+  parents: 54818d591c33cd86661874e2
+foyers_fiscaux:
+  declarants: 54818d591c33cd86661874e2
+  personnes_a_charge: 54818d591c33cd86661874e1
+menages:
+  depcom: 57287
+  enfants: 54818d591c33cd86661874e1
+  personne_de_reference: 54818d591c33cd86661874e2
+  so: 6
+output_variables:
+  asf: 95.99
+  rsa: 653.78

@@ -1,0 +1,127 @@
+name: isolé 3 enfants non meublé (al, caf.fr)
+description: |
+  Dans l'exemple, personne seule avec 3 enfants en zone 3, loyer = 500 euros, salaires n-2 = 27542 euros = 2 smic
+  
+  Fiche de calcul avec paramètres 2014 :
+  L = 415.65
+  C = 88.90
+  E = L + C = 415.65 + 88.90 = 504.55
+  P0 = 42.89
+  R = 27542 * 0.9 = 24787 ~= 24800
+  Rp = 24800 - 7996 = 16804
+  LR = 450.92
+  RL = L/LR*100 = 92.18
+  Tl = 0.252
+  Tf = 2.01
+  Tp = Tf + Tl = 2.01 + 0.252 = 2.262
+  P1 = Tp * Rp / 100 = 2.262 * 16804 / 100 = 380.11
+  Donc Pp = P0 + P1 = 42,89 + 380.11 = 423
+  
+  AL = E - Pp = 504.55 - 423 = 81.55 euros
+  Caf.fr annonce 111 €
+period: "month:2014-12"
+individus:
+  - age: 43
+    alr:
+      2012: 0
+    birth: "1972-01-09"
+    cho:
+      2012: 0
+    epargne_non_remuneree: 0
+    etu: 0
+    id: 54931326c85c31d77ab6bd4c
+    interets_epargne_sur_livrets: 0
+    inv: 0
+    rst:
+      2012: 0
+    sal:
+      2012: 27542
+    salbrut:
+      2012: 35768.805194805194
+      2013-12: 3974.311688311688
+      2014-01: 3974.311688311688
+      2014-02: 3974.311688311688
+      2014-03: 3974.311688311688
+      2014-04: 3974.311688311688
+      2014-05: 3974.311688311688
+      2014-06: 3974.311688311688
+      2014-07: 3974.311688311688
+      2014-08: 3974.311688311688
+      2014-09: 0
+      2014-09:3: 0
+      2014-10: 0
+      2014-11: 0
+      year:2013-12: 35768.805194805194
+    salnet:
+      2012: 27541.980000000003
+      2013-12: 3060.22
+      2014-01: 3060.22
+      2014-02: 3060.22
+      2014-03: 3060.22
+      2014-04: 3060.22
+      2014-05: 3060.22
+      2014-06: 3060.22
+      2014-07: 3060.22
+      2014-08: 3060.22
+      2014-09: 0
+      2014-09:3: 0
+      2014-10: 0
+      2014-11: 0
+      year:2013-12: 27541.980000000003
+    valeur_locative_immo_non_loue: 0
+    valeur_locative_terrains_non_loue: 0
+  - age: 13
+    birth: "2001-03-08"
+    epargne_non_remuneree: 0
+    etu: 0
+    id: 54931326c85c31d77ab6bd4b
+    interets_epargne_sur_livrets: 0
+    inv: 0
+    scolarite: 1
+    valeur_locative_immo_non_loue: 0
+    valeur_locative_terrains_non_loue: 0
+  - age: 11
+    birth: "2003-11-23"
+    epargne_non_remuneree: 0
+    etu: 0
+    id: 54931326c85c31d77ab6bd4a
+    interets_epargne_sur_livrets: 0
+    inv: 0
+    scolarite: 1
+    valeur_locative_immo_non_loue: 0
+    valeur_locative_terrains_non_loue: 0
+  - age: 8
+    birth: "2007-01-17"
+    epargne_non_remuneree: 0
+    etu: 0
+    id: 54931326c85c31d77ab6bd49
+    interets_epargne_sur_livrets: 0
+    inv: 0
+    valeur_locative_immo_non_loue: 0
+    valeur_locative_terrains_non_loue: 0
+familles:
+  enfants:
+    - 54931326c85c31d77ab6bd4b
+    - 54931326c85c31d77ab6bd4a
+    - 54931326c85c31d77ab6bd49
+  parents: 54931326c85c31d77ab6bd4c
+  proprietaire_proche_famille: false
+foyers_fiscaux:
+  declarants: 54931326c85c31d77ab6bd4c
+  personnes_a_charge:
+    - 54931326c85c31d77ab6bd4b
+    - 54931326c85c31d77ab6bd4a
+    - 54931326c85c31d77ab6bd49
+  rfr:
+    2012: 0
+menages:
+  depcom: 59619
+  enfants:
+    - 54931326c85c31d77ab6bd4b
+    - 54931326c85c31d77ab6bd4a
+    - 54931326c85c31d77ab6bd49
+  loyer: 500
+  personne_de_reference: 54931326c85c31d77ab6bd4c
+  so: 4
+output_variables:
+  aide_logement: 81.55

@@ -1,0 +1,46 @@
+name: Locataire étudiant boursier (al, caf.fr)
+description:
+period: "month:2015-01"
+individus:
+  activite: 2
+  age: 34
+  birth: "1980-08-12"
+  bourse_enseignement_sup:
+    2013: 1440
+    2014-01: 120
+    2014-02: 120
+    2014-03: 120
+    2014-04: 120
+    2014-05: 120
+    2014-06: 120
+    2014-07: 120
+    2014-08: 120
+    2014-09: 120
+    2014-10: 120
+    2014-10:3: 360
+    2014-11: 120
+    2014-12: 120
+    year:2014-01: 1440
+  boursier: true
+  epargne_non_remuneree: 0
+  etu: 1
+  id: 54aeb6188c6c5d38149d4d34
+  interets_epargne_sur_livrets: 0
+  inv: 0
+  valeur_locative_immo_non_loue: 0
+  valeur_locative_terrains_non_loue: 0
+familles:
+  enfants:
+  parents: 54aeb6188c6c5d38149d4d34
+  proprietaire_proche_famille: false
+foyers_fiscaux:
+  declarants: 54aeb6188c6c5d38149d4d34
+  personnes_a_charge:
+menages:
+  depcom: 92071
+  enfants:
+  loyer: 500
+  personne_de_reference: 54aeb6188c6c5d38149d4d34
+  so: 4
+output_variables:
+  aide_logement: 259.48

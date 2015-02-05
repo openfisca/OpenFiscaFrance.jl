@@ -1,0 +1,89 @@
+name: Cas RL compris entre 45 et 75 (al, location, taux loyer)
+description: |
+  On veut rentrer dans ce test dans le cas où RL est compris entre 45 et 75
+  Dans l'exemple, personne seule en zone 1, loyer = 150 euros, salaires 2013 = 9000 euros
+  
+  Fiche de calcul avec paramètres 2015 :
+  L = 150
+  C = 52.93
+  E = L + C = 150 + 52.93 = 202.93
+  P0 = 34.53
+  R = 9000 * 0.9 = 8100
+  Rp = 8100 - 4593 = 3507
+  LR = 253.58
+  RL = L/LR*100 = 59.15 => on est bien dans le cas 45 < RL < 75
+  Tl = ( ( (59.15 * 45) / 100) - 20.25) / 100 = 0.064
+  Tf = 2.83
+  Tp = Tf + Tl = 2.83 + 0.064 = 2.894
+  P1 = Tp * Rp / 100 = 2.894 * 3507 / 100 = 101.49
+  Donc Pp = P0 + P1 = 34.53 + 101.49 = 136.02
+  
+  AL = E - Pp = 202.93 - 136.02 = 66.91 euros
+period: "month:2015-01"
+individus:
+  age: 34
+  alr:
+    2013: 0
+  birth: "1980-08-12"
+  cho:
+    2013: 0
+  epargne_non_remuneree: 0
+  etu: 0
+  id: 54c2237e315293a23516f86c
+  interets_epargne_sur_livrets: 0
+  inv: 0
+  rst:
+    2013: 0
+  sal:
+    2013: 9000
+  salbrut:
+    2013: 12467.532467532466
+    2014-01: 1038.9610389610389
+    2014-02: 1038.9610389610389
+    2014-03: 1038.9610389610389
+    2014-04: 1038.9610389610389
+    2014-05: 1038.9610389610389
+    2014-06: 1038.9610389610389
+    2014-07: 1038.9610389610389
+    2014-08: 1038.9610389610389
+    2014-09: 1038.9610389610389
+    2014-10: 1038.9610389610389
+    2014-10:3: 3116.8831168831166
+    2014-11: 1038.9610389610389
+    2014-12: 1038.9610389610389
+    year:2014-01: 12467.532467532466
+  salnet:
+    2013: 9600
+    2014-01: 800
+    2014-02: 800
+    2014-03: 800
+    2014-04: 800
+    2014-05: 800
+    2014-06: 800
+    2014-07: 800
+    2014-08: 800
+    2014-09: 800
+    2014-10: 800
+    2014-10:3: 2400
+    2014-11: 800
+    2014-12: 800
+    year:2014-01: 9600
+  valeur_locative_immo_non_loue: 0
+  valeur_locative_terrains_non_loue: 0
+familles:
+  enfants:
+  parents: 54c2237e315293a23516f86c
+  proprietaire_proche_famille: false
+foyers_fiscaux:
+  declarants: 54c2237e315293a23516f86c
+  personnes_a_charge:
+  rfr:
+    2013: 0
+menages:
+  depcom: 75111
+  enfants:
+  loyer: 150
+  personne_de_reference: 54c2237e315293a23516f86c
+  so: 4
+output_variables:
+  aide_logement: 66.91

@@ -1,0 +1,74 @@
+name: Couple sans enfant (al, location, ménage)
+description: |
+  Zone 2
+  AL = L + C - Pp
+  L = Loyer plafonné = 310.38 € (zone 2, couple).
+  C = 52.93 € (couple sans personne à charge).
+  Pp = P0 + Tp * Rp
+  P0 = 34.53 € = max(34.53, 0.085*(310.38 + 52.93))
+  Tp = Tf + Tl
+  Tf = 3.15%
+  RL = L / Loyer de référence = 310.38/310.38 = 1 = 100%
+  Tl = ((100*68/100) - 37.5)/100 = 0.305
+  Donc Tp = 3.15+0.305 = 3.455
+  Rp = max(0, Assiette ressources - R0) = 0 car assiette ressources < R0
+  R0 = 12 * (R1 - R2) * 0.9
+  R1 = 0.88 * RSA n - 2 = 0.88 * 474.93 = 417.93
+  R2 = 0
+  Donc Pp = 34.53
+  Donc AL = 310.38 + 52.93 - 34.53 = 328.78
+period: "month:2014-09"
+individus:
+  - age: 34
+    birth: "1980-07-12"
+    enceinte: false
+    epargne_non_remuneree: 0
+    etu: 0
+    id: 540439ce035b5c02000393ed
+    interets_epargne_sur_livrets: 0
+    inv: 0
+    salbrut:
+      2012: 779.2207792207791
+      2014-06: 259.7402597402597
+      2014-06:3: 779.2207792207791
+      2014-07: 259.7402597402597
+      2014-08: 259.7402597402597
+      year:2013-09: 779.2207792207791
+    salnet:
+      2012: 600
+      2014-06: 200
+      2014-06:3: 600
+      2014-07: 200
+      2014-08: 200
+      year:2013-09: 600
+    statmarit: 2
+    valeur_locative_immo_non_loue: 0
+    valeur_locative_terrains_non_loue: 0
+  - age: 34
+    birth: "1980-07-12"
+    epargne_non_remuneree: 0
+    etu: 0
+    id: 540439ce035b5c02000393ec
+    interets_epargne_sur_livrets: 0
+    inv: 0
+    valeur_locative_immo_non_loue: 0
+    valeur_locative_terrains_non_loue: 0
+familles:
+  enfants:
+  parents:
+    - 540439ce035b5c02000393ed
+    - 540439ce035b5c02000393ec
+  proprietaire_proche_famille: false
+foyers_fiscaux:
+  declarants:
+    - 540439ce035b5c02000393ed
+    - 540439ce035b5c02000393ec
+  personnes_a_charge:
+menages:
+  conjoint: 540439ce035b5c02000393ec
+  enfants:
+  loyer: 500
+  personne_de_reference: 540439ce035b5c02000393ed
+  so: 4
+output_variables:
+  aide_logement: 328.78

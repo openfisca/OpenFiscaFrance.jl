@@ -1,0 +1,86 @@
+name: "isolé - 1 enfant à charge - non meublé - zone 3 (al)"
+description: |
+  isolé
+  1 enfant moins de 16 ans
+  non meublé
+  loyer 400 €
+  zone 3 
+  2 smic
+period: "month:2014-12"
+individus:
+  - age: 43
+    alr:
+      2012: 0
+    birth: "1972-01-09"
+    cho:
+      2012: 0
+    epargne_non_remuneree: 0
+    etu: 0
+    id: 54930927c85c31d77ab6bd3b
+    interets_epargne_sur_livrets: 0
+    inv: 0
+    rst:
+      2012: 0
+    sal:
+      2012: 27542
+    salbrut:
+      2012: 35768.83116883116
+      2013-12: 3974.314574314574
+      2014-01: 3974.314574314574
+      2014-02: 3974.314574314574
+      2014-03: 3974.314574314574
+      2014-04: 3974.314574314574
+      2014-05: 3974.314574314574
+      2014-06: 3974.314574314574
+      2014-07: 3974.314574314574
+      2014-08: 3974.314574314574
+      2014-09: 0
+      2014-09:3: 0
+      2014-10: 0
+      2014-11: 0
+      year:2013-12: 35768.83116883116
+    salnet:
+      2012: 27542
+      2013-12: 3060.222222222222
+      2014-01: 3060.222222222222
+      2014-02: 3060.222222222222
+      2014-03: 3060.222222222222
+      2014-04: 3060.222222222222
+      2014-05: 3060.222222222222
+      2014-06: 3060.222222222222
+      2014-07: 3060.222222222222
+      2014-08: 3060.222222222222
+      2014-09: 0
+      2014-09:3: 0
+      2014-10: 0
+      2014-11: 0
+      year:2013-12: 27542
+    valeur_locative_immo_non_loue: 0
+    valeur_locative_terrains_non_loue: 0
+  - age: 13
+    birth: "2001-03-08"
+    epargne_non_remuneree: 0
+    etu: 0
+    id: 54930927c85c31d77ab6bd3a
+    interets_epargne_sur_livrets: 0
+    inv: 0
+    scolarite: 1
+    valeur_locative_immo_non_loue: 0
+    valeur_locative_terrains_non_loue: 0
+familles:
+  enfants: 54930927c85c31d77ab6bd3a
+  parents: 54930927c85c31d77ab6bd3b
+  proprietaire_proche_famille: false
+foyers_fiscaux:
+  declarants: 54930927c85c31d77ab6bd3b
+  personnes_a_charge: 54930927c85c31d77ab6bd3a
+  rfr:
+    2012: 0
+menages:
+  depcom: 59619
+  enfants: 54930927c85c31d77ab6bd3a
+  loyer: 400
+  personne_de_reference: 54930927c85c31d77ab6bd3b
+  so: 4
+output_variables:
+  aide_logement: 0

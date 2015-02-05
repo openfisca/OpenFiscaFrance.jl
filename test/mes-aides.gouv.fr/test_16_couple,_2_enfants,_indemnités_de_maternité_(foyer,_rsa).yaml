@@ -1,0 +1,72 @@
+name: Couple, 2 enfants, indemnités de maternité (foyer, rsa)
+description:
+period: "month:2014-07"
+individus:
+  - age: 35
+    birth: "1980-01-01"
+    enceinte: false
+    epargne_non_remuneree: 0
+    etu: 0
+    id: 53d79c63f6aa390200a6cd1f
+    indemnites_journalieres_maternite:
+      2012: 600
+      2014-04: 200
+      2014-04:3: 600
+      2014-05: 200
+      2014-06: 200
+      year:2013-07: 600
+    interets_epargne_sur_livrets: 0
+    inv: 0
+    statmarit: 2
+    valeur_locative_immo_non_loue: 0
+    valeur_locative_terrains_non_loue: 0
+  - age: 35
+    birth: "1980-01-01"
+    epargne_non_remuneree: 0
+    etu: 0
+    id: 53d79c63f6aa390200a6cd1e
+    interets_epargne_sur_livrets: 0
+    inv: 0
+    valeur_locative_immo_non_loue: 0
+    valeur_locative_terrains_non_loue: 0
+  - age: 5
+    birth: "2010-01-01"
+    epargne_non_remuneree: 0
+    etu: 0
+    id: 53d79c63f6aa390200a6cd1d
+    interets_epargne_sur_livrets: 0
+    inv: 0
+    valeur_locative_immo_non_loue: 0
+    valeur_locative_terrains_non_loue: 0
+  - age: 5
+    birth: "2010-01-01"
+    epargne_non_remuneree: 0
+    etu: 0
+    id: 53d79c63f6aa390200a6cd1c
+    interets_epargne_sur_livrets: 0
+    inv: 0
+    valeur_locative_immo_non_loue: 0
+    valeur_locative_terrains_non_loue: 0
+familles:
+  enfants:
+    - 53d79c63f6aa390200a6cd1d
+    - 53d79c63f6aa390200a6cd1c
+  parents:
+    - 53d79c63f6aa390200a6cd1f
+    - 53d79c63f6aa390200a6cd1e
+foyers_fiscaux:
+  declarants:
+    - 53d79c63f6aa390200a6cd1f
+    - 53d79c63f6aa390200a6cd1e
+  personnes_a_charge:
+    - 53d79c63f6aa390200a6cd1d
+    - 53d79c63f6aa390200a6cd1c
+menages:
+  conjoint: 53d79c63f6aa390200a6cd1e
+  enfants:
+    - 53d79c63f6aa390200a6cd1d
+    - 53d79c63f6aa390200a6cd1c
+  personne_de_reference: 53d79c63f6aa390200a6cd1f
+  so: 6
+output_variables:
+  rsa: 694.26

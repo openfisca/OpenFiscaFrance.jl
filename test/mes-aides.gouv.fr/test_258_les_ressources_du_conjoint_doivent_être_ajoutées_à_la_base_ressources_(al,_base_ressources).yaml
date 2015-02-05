@@ -1,0 +1,108 @@
+name: Les ressources du conjoint doivent être ajoutées à la base ressources (al, base ressources)
+description: |
+  Ce test vérifie simplement que les ressources n-2 déclarées par le conjoint sont bien intégrées dans la base de ressources.
+  L	352,92
+  C	53,23
+  E	406,15
+  R	10300
+  R0	6576
+  Rp	3724
+  Tf	3,15
+  LR	312,15
+  RL	113,06
+  Tl	0,394
+  Tp	3,544
+  P0	34,73
+  P1	131,98
+  Pp	166,71
+  AL	238,24
+period: "month:2015-01"
+individus:
+  - age: 34
+    alr:
+      2013: 0
+    birth: "1980-08-12"
+    cho:
+      2013: 0
+    epargne_non_remuneree: 0
+    etu: 0
+    id: 54c61ba694cccbb0584256c1
+    interets_epargne_sur_livrets: 0
+    inv: 0
+    rst:
+      2013: 0
+    sal:
+      2013: 0
+    statmarit: 1
+    valeur_locative_immo_non_loue: 0
+    valeur_locative_terrains_non_loue: 0
+  - age: 34
+    alr:
+      2013: 0
+    birth: "1980-08-12"
+    cho:
+      2013: 0
+    epargne_non_remuneree: 0
+    etu: 0
+    id: 54c61ba694cccbb0584256b4
+    interets_epargne_sur_livrets: 0
+    inv: 0
+    rst:
+      2013: 0
+    sal:
+      2013: 11387
+    salbrut:
+      2013: 14788.31168831169
+      2014-01: 1643.1457431457432
+      2014-02: 1643.1457431457432
+      2014-03: 1643.1457431457432
+      2014-04: 1643.1457431457432
+      2014-05: 1643.1457431457432
+      2014-06: 1643.1457431457432
+      2014-07: 1643.1457431457432
+      2014-08: 1643.1457431457432
+      2014-09: 1643.1457431457432
+      2014-10: 0
+      2014-10:3: 0
+      2014-11: 0
+      2014-12: 0
+      year:2014-01: 14788.31168831169
+    salnet:
+      2013: 11387.000000000002
+      2014-01: 1265.2222222222222
+      2014-02: 1265.2222222222222
+      2014-03: 1265.2222222222222
+      2014-04: 1265.2222222222222
+      2014-05: 1265.2222222222222
+      2014-06: 1265.2222222222222
+      2014-07: 1265.2222222222222
+      2014-08: 1265.2222222222222
+      2014-09: 1265.2222222222222
+      2014-10: 0
+      2014-10:3: 0
+      2014-11: 0
+      2014-12: 0
+      year:2014-01: 11387.000000000002
+    valeur_locative_immo_non_loue: 0
+    valeur_locative_terrains_non_loue: 0
+familles:
+  enfants:
+  parents:
+    - 54c61ba694cccbb0584256c1
+    - 54c61ba694cccbb0584256b4
+  proprietaire_proche_famille: false
+foyers_fiscaux:
+  declarants:
+    - 54c61ba694cccbb0584256c1
+    - 54c61ba694cccbb0584256b4
+  personnes_a_charge:
+  rfr:
+menages:
+  conjoint: 54c61ba694cccbb0584256b4
+  depcom: 75111
+  enfants:
+  loyer: 1000
+  personne_de_reference: 54c61ba694cccbb0584256c1
+  so: 4
+output_variables:
+  aide_logement: 238.24

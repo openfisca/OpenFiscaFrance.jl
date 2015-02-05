@@ -1,0 +1,43 @@
+name: 83_ Pas de forfait logement pour un couple hébergé à titre onéreux (forfait logement, rsa)
+description: Lorsque le couple déclare un hébergement à titre onéreux, pas de d'action de forfait a effectuer
+period: "month:2014-11"
+individus:
+  - age: 29
+    birth: "1986-01-01"
+    epargne_non_remuneree: 0
+    etu: 0
+    id: 546c98bfefc21c287d798167
+    interets_epargne_sur_livrets: 0
+    inv: 0
+    statmarit: 1
+    valeur_locative_immo_non_loue: 0
+    valeur_locative_terrains_non_loue: 0
+  - age: 30
+    birth: "1985-01-01"
+    epargne_non_remuneree: 0
+    etu: 0
+    id: 546c98bfefc21c287d798166
+    interets_epargne_sur_livrets: 0
+    inv: 0
+    valeur_locative_immo_non_loue: 0
+    valeur_locative_terrains_non_loue: 0
+familles:
+  enfants:
+  parents:
+    - 546c98bfefc21c287d798167
+    - 546c98bfefc21c287d798166
+  proprietaire_proche_famille: true
+foyers_fiscaux:
+  declarants:
+    - 546c98bfefc21c287d798167
+    - 546c98bfefc21c287d798166
+  personnes_a_charge:
+menages:
+  conjoint: 546c98bfefc21c287d798166
+  depcom: 75120
+  enfants:
+  loyer: 100
+  personne_de_reference: 546c98bfefc21c287d798167
+  so: 5
+output_variables:
+  rsa: 763

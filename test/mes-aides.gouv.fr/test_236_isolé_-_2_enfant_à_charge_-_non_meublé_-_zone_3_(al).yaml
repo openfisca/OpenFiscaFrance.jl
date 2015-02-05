@@ -1,0 +1,92 @@
+name: "Isolé - 2 enfant à charge - non meublé - zone 3 (al)"
+description: |
+  isolé
+  2 enfants à charge moins de 16 ans
+  non meublé
+  zone 3
+  400 € loyer
+  2 smic
+period: "month:2014-12"
+individus:
+  - age: 43
+    birth: "1972-01-09"
+    epargne_non_remuneree: 0
+    etu: 0
+    id: 54931226145ac2e27afc00ab
+    interets_epargne_sur_livrets: 0
+    inv: 0
+    salbrut:
+      2012: 35768.805194805194
+      2013-12: 3974.311688311688
+      2014-01: 3974.311688311688
+      2014-02: 3974.311688311688
+      2014-03: 3974.311688311688
+      2014-04: 3974.311688311688
+      2014-05: 3974.311688311688
+      2014-06: 3974.311688311688
+      2014-07: 3974.311688311688
+      2014-08: 3974.311688311688
+      2014-09: 0
+      2014-09:3: 0
+      2014-10: 0
+      2014-11: 0
+      year:2013-12: 35768.805194805194
+    salnet:
+      2012: 27541.980000000003
+      2013-12: 3060.22
+      2014-01: 3060.22
+      2014-02: 3060.22
+      2014-03: 3060.22
+      2014-04: 3060.22
+      2014-05: 3060.22
+      2014-06: 3060.22
+      2014-07: 3060.22
+      2014-08: 3060.22
+      2014-09: 0
+      2014-09:3: 0
+      2014-10: 0
+      2014-11: 0
+      year:2013-12: 27541.980000000003
+    valeur_locative_immo_non_loue: 0
+    valeur_locative_terrains_non_loue: 0
+  - age: 13
+    birth: "2001-03-08"
+    epargne_non_remuneree: 0
+    etu: 0
+    id: 54931226145ac2e27afc00aa
+    interets_epargne_sur_livrets: 0
+    inv: 0
+    scolarite: 1
+    valeur_locative_immo_non_loue: 0
+    valeur_locative_terrains_non_loue: 0
+  - age: 11
+    birth: "2003-11-23"
+    epargne_non_remuneree: 0
+    etu: 0
+    id: 54931226145ac2e27afc00a9
+    interets_epargne_sur_livrets: 0
+    inv: 0
+    scolarite: 1
+    valeur_locative_immo_non_loue: 0
+    valeur_locative_terrains_non_loue: 0
+familles:
+  enfants:
+    - 54931226145ac2e27afc00aa
+    - 54931226145ac2e27afc00a9
+  parents: 54931226145ac2e27afc00ab
+  proprietaire_proche_famille: false
+foyers_fiscaux:
+  declarants: 54931226145ac2e27afc00ab
+  personnes_a_charge:
+    - 54931226145ac2e27afc00aa
+    - 54931226145ac2e27afc00a9
+menages:
+  depcom: 59619
+  enfants:
+    - 54931226145ac2e27afc00aa
+    - 54931226145ac2e27afc00a9
+  loyer: 400
+  personne_de_reference: 54931226145ac2e27afc00ab
+  so: 4
+output_variables:
+  aide_logement: 0
