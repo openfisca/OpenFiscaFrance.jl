@@ -1,0 +1,190 @@
+# OpenFisca -- A versatile microsimulation software
+# By: OpenFisca Team <contact@openfisca.fr>
+#
+# Copyright (C) 2011, 2012, 2013, 2014, 2015 OpenFisca Team
+# https://github.com/openfisca
+#
+# This file is part of OpenFisca.
+#
+# OpenFisca is free software; you can redistribute it and/or modify
+# it under the terms of the GNU Affero General Public License as
+# published by the Free Software Foundation, either version 3 of the
+# License, or (at your option) any later version.
+#
+# OpenFisca is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU Affero General Public License for more details.
+#
+# You should have received a copy of the GNU Affero General Public License
+# along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+
+"""Download tests from mes-aides and store them at JSON tests."""
+
+
+using Biryani
+import JSON
+using OpenFiscaCore
+using OpenFiscaFrance
+using Requests
+using YAML
+
+
+const server_url = "https://mes-aides.gouv.fr"
+const tests_dir = "test/mes-aides.gouv.fr"
+
+
+function print_yaml_field(file::IO, key::String, value; indent = 0, indent_first_line = true)
+  first_indent = indent_first_line ? indent : 0
+  if isa(value, Array)
+    if length(value) == 0
+      value = nothing
+    elseif length(value) == 1
+      value = value[1]
+    end
+  end
+
+  if value === nothing
+    println(file, "  " ^ first_indent, key, ':')
+  elseif isa(value, Array)
+    println(file, "  " ^ first_indent, key, ':')
+    for item in value
+      print_yaml_item(file, item; indent = indent + 1, indent_first_line = true)
+    end
+  elseif isa(value, Dict)
+    println(file, "  " ^ first_indent, key, ':')
+    for key in sort(collect(keys(value)))
+      print_yaml_field(file, key, value[key]; indent = indent + 1, indent_first_line = true)
+    end
+  elseif isa(value, String)
+    if '\n' in value
+      println(file, "  " ^ first_indent, key, ": |")
+      println(file, join([
+        string("  " ^ (indent + 1), line)
+        for line in split(value, '\n')
+      ], '\n'))
+    elseif ':' in value || '-' in value
+      println(file, "  " ^ first_indent, key, ": ", '"', replace(value, '"', "\\\""), '"')
+    else
+      println(file, "  " ^ first_indent, key, ": ", value)
+    end
+  else
+    println(file, "  " ^ first_indent, key, ": ", value)
+  end
+end
+
+
+function print_yaml_item(file::IO, value; indent = 0, indent_first_line = true)
+  first_indent = indent_first_line ? indent : 0
+  print(file, "  " ^ first_indent, "- ")
+
+  if isa(value, Array)
+    if length(value) == 0
+      value = nothing
+    elseif length(value) == 1
+      value = value[1]
+    end
+  end
+
+  @assert value !== nothing
+  if isa(value, Array)
+    for (index, item) in enumerate(value)
+      print_yaml_item(file, item; indent = indent + 1, indent_first_line = index > 1)
+    end
+  elseif isa(value, Dict)
+    for (index, key) in enumerate(sort(collect(keys(value))))
+      print_yaml_field(file, key, value[key]; indent = indent + 1, indent_first_line = index > 1)
+    end
+  elseif isa(value, String)
+    if '\n' in value
+      println(file, '|')
+      println(file, join([
+        string("  " ^ (indent + 1), line)
+        for line in split(value, '\n')
+      ], '\n'))
+    elseif ':' in value || '-' in value
+      println(file, '"', replace(value, '"', "\\\""), '"')
+    else
+      println(file, value)
+    end
+  else
+    println(file, value)
+  end
+end
+
+
+url = string(server_url, "/api/acceptance-tests/public")
+println("GET ", url)
+response = get(url)
+tests = JSON.parse(response.data)
+
+if !isdir(tests_dir)
+  mkdir(tests_dir)
+end
+existing_yaml_files_name = readdir(tests_dir)
+
+for (test_index, test) in enumerate(tests)
+  @assert(test["currentStatus"] in ("accepted-exact", "accepted-2pct", "accepted-10pct", "rejected"))
+  if test["currentStatus"] == "rejected"
+    continue
+  end
+  error_percent = [
+    "accepted-exact" => 0.,
+    "accepted-2pct" => 0.02,
+    "accepted-10pct" => 0.1,
+  ][test["currentStatus"]]
+  last_execution = test["lastExecution"]
+  @assert(test["currentStatus"] == last_execution["status"])
+
+  if any([
+      "expectedValue" in result && result["result"] != result["expectedValue"]
+      for result in test["lastExecution"]["results"]
+    ])
+    # Test doesn't return the expected value (yet), so skip it.
+    continue
+  end
+  test_name = string(test["name"], " (", join(sort(test["keywords"]), ", "), ")")
+  println(test_name)
+  expected_value_by_variable_name = [
+    result["code"] => result["result"]
+    for result in test["lastExecution"]["results"]
+  ]
+
+  url = string(server_url, "/api/situations/", test["situation"], "/openfisca-request")
+  println("GET ", url)
+  response = get(url)
+  openfisca_request = JSON.parse(response.data)
+
+  scenarios = openfisca_request["scenarios"]
+  @assert(length(scenarios) == 1)
+  scenario = scenarios[1]
+  # period = scenario["period"]
+  test_case = scenario["test_case"]
+
+  file_path = string(tests_dir, "/test_", test_index, '_', Convertible(test_name) |> input_to_url_name |> to_value,
+    ".yaml")
+  open(file_path, "w") do file
+    print_yaml_field(file, "name", test_name)
+    print_yaml_field(file, "description", get(test, "description", nothing))
+    print_yaml_field(file, "period", scenario["period"])
+    print_yaml_field(file, "individus", test_case["individus"])
+    print_yaml_field(file, "familles", test_case["familles"])
+    print_yaml_field(file, "foyers_fiscaux", test_case["foyers_fiscaux"])
+    print_yaml_field(file, "menages", test_case["menages"])
+    print_yaml_field(file, "output_variables", [
+      expected_result["code"] => expected_result["expectedValue"]
+      for expected_result in test["expectedResults"]
+    ])
+  end
+
+  # Verify YAML syntax of generated file.
+  scenario = YAML.load_file(file_path)
+
+  # simulation = Simulation(scenario1, debug = true)
+  # scenario1 = Convertible(scenario) |> to_scenario(tax_benefit_system) |> to_value
+  # for variable_name in requested_variables_name
+  #   variable_at_period = calculate(simulation, variable_name)
+  #   println(variable_name, "@", variable_at_period.period, ": ", get_array(variable_at_period))
+  # end
+end
