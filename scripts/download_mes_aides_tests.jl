@@ -180,11 +180,6 @@ for (test_index, test) in enumerate(tests)
 
   # Verify YAML syntax of generated file.
   scenario = YAML.load_file(file_path)
-
-  # simulation = Simulation(scenario1, debug = true)
-  # scenario1 = Convertible(scenario) |> to_scenario(tax_benefit_system) |> to_value
-  # for variable_name in requested_variables_name
-  #   variable_at_period = calculate(simulation, variable_name)
-  #   println(variable_name, "@", variable_at_period.period, ": ", get_array(variable_at_period))
-  # end
 end
+
+# TODO: Remove obsolete files.
