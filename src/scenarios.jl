@@ -236,6 +236,7 @@ function to_test_case(tax_benefit_system::TaxBenefitSystem, period::DatePeriod; 
       struct(
         [
           "familles" => pipe(
+            item_to_singleton,
             entities_to_entity_by_id,
             test_isa(Union(Dict, OrderedDict)),
             uniform_mapping(
@@ -248,6 +249,7 @@ function to_test_case(tax_benefit_system::TaxBenefitSystem, period::DatePeriod; 
                 merge(
                   [
                     "enfants" => pipe(
+                      item_to_singleton,
                       test_isa(Array),
                       uniform_sequence(
                         test_isa(Union(Int, String)),
@@ -256,6 +258,7 @@ function to_test_case(tax_benefit_system::TaxBenefitSystem, period::DatePeriod; 
                       default(Any[]),
                     ),
                     "parents" => pipe(
+                      item_to_singleton,
                       test_isa(Array),
                       uniform_sequence(
                         test_isa(Union(Int, String)),
@@ -278,6 +281,7 @@ function to_test_case(tax_benefit_system::TaxBenefitSystem, period::DatePeriod; 
             default((String => Any)[]),
           ),
           "foyers_fiscaux" => pipe(
+            item_to_singleton,
             entities_to_entity_by_id,
             test_isa(Union(Dict, OrderedDict)),
             uniform_mapping(
@@ -290,6 +294,7 @@ function to_test_case(tax_benefit_system::TaxBenefitSystem, period::DatePeriod; 
                 merge(
                   [
                     "declarants" => pipe(
+                      item_to_singleton,
                       test_isa(Array),
                       uniform_sequence(
                         test_isa(Union(Int, String)),
@@ -298,6 +303,7 @@ function to_test_case(tax_benefit_system::TaxBenefitSystem, period::DatePeriod; 
                       default(Any[]),
                     ),
                     "personnes_a_charge" => pipe(
+                      item_to_singleton,
                       test_isa(Array),
                       uniform_sequence(
                         test_isa(Union(Int, String)),
@@ -320,6 +326,7 @@ function to_test_case(tax_benefit_system::TaxBenefitSystem, period::DatePeriod; 
             default((String => Any)[]),
           ),
           "individus" => pipe(
+            item_to_singleton,
             entities_to_entity_by_id,
             test_isa(Union(Dict, OrderedDict)),
             uniform_mapping(
@@ -344,6 +351,7 @@ function to_test_case(tax_benefit_system::TaxBenefitSystem, period::DatePeriod; 
             require,
           ),
           "menages" => pipe(
+            item_to_singleton,
             entities_to_entity_by_id,
             test_isa(Union(Dict, OrderedDict)),
             uniform_mapping(
@@ -357,6 +365,7 @@ function to_test_case(tax_benefit_system::TaxBenefitSystem, period::DatePeriod; 
                   [
                     "autres" => pipe(
                       # personnes ayant un lien autre avec la personne de référence
+                      item_to_singleton,
                       test_isa(Array),
                       uniform_sequence(
                         test_isa(Union(Int, String)),
@@ -368,6 +377,7 @@ function to_test_case(tax_benefit_system::TaxBenefitSystem, period::DatePeriod; 
                     "conjoint" => test_isa(Union(Int, String)),
                     "enfants" => pipe(
                       # enfants de la personne de référence ou de son conjoint
+                      item_to_singleton,
                       test_isa(Array),
                       uniform_sequence(
                         test_isa(Union(Int, String)),
