@@ -26,8 +26,8 @@ module OpenFiscaFrance
 export single_entity_scenario, suggest, tax_benefit_system
 
 
-importall Converters
-importall Converters.DatesConverters
+importall Biryani
+importall Biryani.DatesConverters
 import DataStructures: OrderedDict, OrderedSet
 import Dates: Date, day, firstdayofmonth, firstdayofyear, month, year
 importall OpenFiscaCore
