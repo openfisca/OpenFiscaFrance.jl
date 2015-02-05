@@ -29,7 +29,7 @@ export single_entity_scenario, suggest, tax_benefit_system
 importall Biryani
 importall Biryani.DatesConverters
 import DataStructures: OrderedDict, OrderedSet
-import Dates: Date, day, firstdayofmonth, firstdayofyear, month, year
+import Dates: Date, Day, day, firstdayofmonth, firstdayofyear, Month, month, Year, year
 importall OpenFiscaCore
 import UUID: UUID
 
@@ -58,6 +58,7 @@ const CHEF = Role(1)
 const CONJ = Role(2)
 const ENFS = [Role(3), Role(4), Role(5), Role(6), Role(7), Role(8), Role(9), Role(10), Role(11)]
 const PAC1 = Role(3)
+const PART = Role(2)
 const TAUX_DE_PRIME = 1 / 4  # primes_fonction_publique (hors suppl. familial et indemnité de résidence)/rémunération brute
 const VOUS = Role(1)
 
