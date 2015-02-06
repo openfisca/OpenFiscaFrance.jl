@@ -20,22 +20,20 @@
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 
-entities_to_entity_by_id(convertible::Convertible) = condition(
+entities_to_entity_by_id(convertible::Convertible) = pipe(
   test_isa(Array),
-  pipe(
-    uniform_sequence(
-      test_isa(Union(Dict, OrderedDict)),
-      drop_nothing = true,
-    ),
-    call(values -> begin
-      value_by_name = OrderedDict(String, Any)
-      for (index, value) in enumerate(values)
-        id = pop!(value, "id", string(index))
-        value_by_name[id] = value
-      end
-      return value_by_name
-    end),
+  uniform_sequence(
+    test_isa(Union(Dict, OrderedDict)),
+    drop_nothing = true,
   ),
+  call(values -> begin
+    value_by_name = OrderedDict(String, Any)
+    for (index, value) in enumerate(values)
+      id = pop!(value, "id", string(index))
+      value_by_name[id] = value
+    end
+    return value_by_name
+  end),
 )(convertible)
 
 
