@@ -266,7 +266,7 @@ function to_test_case(tax_benefit_system::TaxBenefitSystem, period::DatePeriod; 
                     ),
                   ],
                   [
-                    variable_definition.name => json_to_cell(variable_definition)
+                    variable_definition.name => to_cell(variable_definition)
                     for variable_definition in filter(values(variable_definition_by_name)) do variable_definition
                       return variable_definition.entity_definition.name == "famille"
                     end
@@ -311,7 +311,7 @@ function to_test_case(tax_benefit_system::TaxBenefitSystem, period::DatePeriod; 
                     ),
                   ],
                   [
-                    variable_definition.name => json_to_cell(variable_definition)
+                    variable_definition.name => to_cell(variable_definition)
                     for variable_definition in filter(values(variable_definition_by_name)) do variable_definition
                       return variable_definition.entity_definition.name == "foyer_fiscal"
                     end
@@ -335,7 +335,7 @@ function to_test_case(tax_benefit_system::TaxBenefitSystem, period::DatePeriod; 
               test_isa(Union(Dict, OrderedDict)),
               struct(
                 [
-                  variable_definition.name => json_to_cell(variable_definition)
+                  variable_definition.name => to_cell(variable_definition)
                   for variable_definition in filter(values(variable_definition_by_name)) do variable_definition
                     return variable_definition.entity_definition.name == "individu" && !(variable_definition.name in (
                       "idfam", "idfoy", "idmen", "quifam", "quifoy", "quimen"))
@@ -386,7 +386,7 @@ function to_test_case(tax_benefit_system::TaxBenefitSystem, period::DatePeriod; 
                     "personne_de_reference" => test_isa(Union(Int, String)),
                   ],
                   [
-                    variable_definition.name => json_to_cell(variable_definition)
+                    variable_definition.name => to_cell(variable_definition)
                     for variable_definition in filter(values(variable_definition_by_name)) do variable_definition
                       return variable_definition.entity_definition.name == "menage"
                     end

@@ -5608,6 +5608,21 @@
 @define_variable(depcom, menage_definition, UTF8String,
   label = "Code INSEE (depcom) du lieu de résidence",
   return_last_period_value = true,
+  value_at_date_to_cell = variable_definition::VariableDefinition -> pipe(
+    condition(
+      test_isa(Integer),
+      call(string),
+      test_isa(String),
+      noop,
+      fail(error = N_("Unexpected type for Insee depcom.")),
+    ),
+    condition(
+      test(value -> length(value) == 4),
+      call(value -> string('0', value)),
+    ),
+    test(value -> ismatch(r"^(\d{2}|2A|2B)\d{3}$", value),
+      error = N_("Invalid Insee depcom format for commune.")),
+  ),
 )
 
 @define_variable(zone_apl, menage_definition, Int16,
