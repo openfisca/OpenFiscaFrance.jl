@@ -636,6 +636,7 @@
     DateRangeValue(Date(2011, 01, 01), Date(2011, 12, 31), 7200.0),
     DateRangeValue(Date(2012, 01, 01), Date(2012, 12, 31), 7300.0),
     DateRangeValue(Date(2013, 01, 01), Date(2013, 12, 31), 7500.0),
+    DateRangeValue(Date(2014, 01, 01), Date(2014, 12, 31), 7600.0),
   ],
   unit = "currency",
   check_start_date = Date(2006, 01, 01),
@@ -648,7 +649,7 @@
     DateRangeValue(Date(2002, 01, 01), Date(2002, 11, 30), 990.86),
     DateRangeValue(Date(2002, 12, 01), Date(2007, 06, 30), 1100.0),
     DateRangeValue(Date(2007, 07, 01), Date(2012, 12, 31), 1400.0),
-    DateRangeValue(Date(2013, 01, 01), Date(2013, 12, 31), 1500.0),
+    DateRangeValue(Date(2013, 01, 01), Date(2014, 12, 31), 1500.0),
   ],
   unit = "currency",
   check_start_date = Date(2006, 01, 01),
@@ -769,7 +770,7 @@
 
 @define_parameter(al.ressources.efress.dar_3b, Parameter{Float32}(
   [
-    DateRangeValue(Date(2007, 07, 01), Date(2012, 12, 31), 1500.0),
+    DateRangeValue(Date(2007, 07, 01), Date(2015, 12, 31), 1500.0),
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
@@ -11566,7 +11567,7 @@
 
 @define_parameter(ir.tspr.abatpro.taux, Parameter{Float32}(
   [
-    DateRangeValue(Date(1944, 01, 01), Date(2013, 12, 31), 0.1),
+    DateRangeValue(Date(1944, 01, 01), Date(2015, 12, 31), 0.1),
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),

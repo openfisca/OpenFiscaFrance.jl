@@ -83,23 +83,13 @@ macro define_parameter(parameter_path, parameter)
 end
 
 
-macro define_variable(function_or_variable, args...)
+macro define_variable(function_definition, variable, args...)
   global variable_definition_by_name
-  if isa(function_or_variable, Symbol)
-    variable_name = string(function_or_variable)
-    return esc(quote
-      @assert !($variable_name in variable_definition_by_name)
-      variable_definition_by_name[$variable_name] = VariableDefinition($variable_name, $(args...))
-    end)
-  else
-    variable_name = string(args[1])
-    args = args[2:end]
-    return esc(quote
-      @assert !($variable_name in variable_definition_by_name)
-      variable_definition_by_name[$variable_name] = VariableDefinition($function_or_variable, $variable_name,
-        $(args...))
-    end)
-  end
+  variable_name = string(variable)
+  return esc(quote
+    @assert !haskey(variable_definition_by_name, $variable_name)
+    variable_definition_by_name[$variable_name] = VariableDefinition($function_definition, $variable_name, $(args...))
+  end)
 end
 
 
@@ -192,6 +182,7 @@ include("scenarios.jl")
 preprocess(legislation)
 tax_benefit_system = TaxBenefitSystem(entity_definition_by_name, legislation, variable_definition_by_name,
   to_test_case = to_test_case)
+preload_zone_apl()
 
 
 end # module
