@@ -64,7 +64,7 @@ function print_yaml_field(file::IO, key::String, value; indent = 0, indent_first
         string("  " ^ (indent + 1), line)
         for line in split(value, '\n')
       ], '\n'))
-    elseif ':' in value || '-' in value
+    elseif ':' in value || '-' in value || ismatch(r"^0\d+$", value)
       println(file, "  " ^ first_indent, key, ": ", '"', replace(value, '"', "\\\""), '"')
     else
       println(file, "  " ^ first_indent, key, ": ", value)
@@ -103,7 +103,7 @@ function print_yaml_item(file::IO, value; indent = 0, indent_first_line = true)
         string("  " ^ (indent + 1), line)
         for line in split(value, '\n')
       ], '\n'))
-    elseif ':' in value || '-' in value
+    elseif ':' in value || '-' in value || ismatch(r"^0\d+$", value)
       println(file, '"', replace(value, '"', "\\\""), '"')
     else
       println(file, value)
@@ -122,7 +122,7 @@ tests = JSON.parse(response.data)
 if !isdir(tests_dir)
   mkdir(tests_dir)
 end
-existing_yaml_files_name = readdir(tests_dir)
+existing_yaml_files_name = Set(readdir(tests_dir))
 
 for (test_index, test) in enumerate(tests)
   @assert(test["currentStatus"] in ("accepted-exact", "accepted-2pct", "accepted-10pct", "rejected"))
@@ -137,10 +137,8 @@ for (test_index, test) in enumerate(tests)
   last_execution = test["lastExecution"]
   @assert(test["currentStatus"] == last_execution["status"])
 
-  if any([
-      "expectedValue" in result && result["result"] != result["expectedValue"]
-      for result in test["lastExecution"]["results"]
-    ])
+  if any(result -> haskey(result, "expectedValue") && result["result"] != result["expectedValue"],
+      last_execution["results"])
     # Test doesn't return the expected value (yet), so skip it.
     continue
   end
@@ -148,7 +146,7 @@ for (test_index, test) in enumerate(tests)
   println(test_name)
   expected_value_by_variable_name = [
     result["code"] => result["result"]
-    for result in test["lastExecution"]["results"]
+    for result in last_execution["results"]
   ]
 
   url = string(server_url, "/api/situations/", test["situation"], "/openfisca-request")
@@ -162,8 +160,8 @@ for (test_index, test) in enumerate(tests)
   # period = scenario["period"]
   test_case = scenario["test_case"]
 
-  file_path = string(tests_dir, "/test_", test_index, '_', Convertible(test_name) |> input_to_url_name |> to_value,
-    ".yaml")
+  file_name = string("test_", test_index, '_', Convertible(test_name) |> input_to_url_name |> to_value, ".yaml")
+  file_path = string(tests_dir, '/', file_name)
   open(file_path, "w") do file
     print_yaml_field(file, "name", test_name)
     print_yaml_field(file, "description", get(test, "description", nothing))
@@ -177,9 +175,16 @@ for (test_index, test) in enumerate(tests)
       for expected_result in test["expectedResults"]
     ])
   end
+  if file_name in existing_yaml_files_name
+    pop!(existing_yaml_files_name, file_name)
+  end
 
   # Verify YAML syntax of generated file.
   scenario = YAML.load_file(file_path)
 end
 
-# TODO: Remove obsolete files.
+for file_name in sort(collect(existing_yaml_files_name))
+  println("Deleting obsolete test: ", file_name)
+  file_path = string(tests_dir, '/', file_name)
+  rm(file_path)
+end
