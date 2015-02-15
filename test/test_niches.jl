@@ -21,34 +21,26 @@
 
 
 function test_niches()
-  scenarios = YAML.load_file("test/niches.yaml")
-  for scenario in scenarios
-    name = scenario["name"]
-    period = YearPeriod(scenario["period"])  # TODO
-
-    simulation = Simulation(tax_benefit_system, period, debug = true)
-    famille = get_entity(simulation, "famille")
-    foyer_fiscal = get_entity(simulation, "foyer_fiscal")
-    individu = get_entity(simulation, "individu")
-    menage = get_entity(simulation, "menage")
-
-    # Dispatch arguments to their respective entities.
-    args_by_entity = Dict{Entity, Dict{Symbol, Any}}()
-    for (variable_name, value) in scenario["input_variables"]
-      variable = get_variable!(simulation, variable_name)
-      entity_args = get!(args_by_entity, get_entity(variable)) do
-        return Dict{Symbol, Any}()
-      end
-      entity_args[symbol(variable_name)] = value
+  tests_data = YAML.load_file("test/niches.yaml")
+  for (test_index, test_data) in enumerate(tests_data)
+    test = Convertible(test_data) |> to_test(tax_benefit_system) |> to_value
+    info("=" ^ 120)
+    info("Test ", string(test_index), ": ", get(test, "name", ""))
+    info("=" ^ 120)
+    if get(test, "ignore", false)
+      info("  Ignoring test.")
+      continue
     end
 
-    add_member(famille; get(args_by_entity, famille, {})...)
-    add_member(foyer_fiscal; get(args_by_entity, foyer_fiscal, {})...)
-    add_member(menage; get(args_by_entity, menage, {})...)
-    add_member(individu; quifam = 1, quifoy = 1, quimen = 1, get(args_by_entity, individu, {})...)
-
-    for (variable_name, expected_value) in scenario["output_variables"]
-      assert_near(calculate(simulation, variable_name), expected_value, error_margin = 1)
+    scenario = test["scenario"]
+    suggest(scenario)
+    simulation = Simulation(scenario, debug = true)
+    output_variables = get(test, "output_variables", nothing)
+    if output_variables !== nothing
+      for (variable_name, expected_value) in output_variables
+        assert_near(calculate(simulation, variable_name), expected_value, error_margin = 1,
+          message = "$variable_name: ")
+      end
     end
   end
 end

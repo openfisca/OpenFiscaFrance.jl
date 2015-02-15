@@ -36,7 +36,7 @@ include("test_age.jl")
 include("test_scenarios.jl")
 
 # Functional Tests
-include("test_fiche_de_paie.jl")
+include("test_fiches_de_paie.jl")
 include("test_impot_revenu_personnes_physiques.jl")
 include("test_mes-aides.gouv.fr.jl")
 include("test_niches.jl")

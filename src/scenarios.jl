@@ -20,23 +20,6 @@
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 
-entities_to_entity_by_id(convertible::Convertible) = pipe(
-  test_isa(Array),
-  uniform_sequence(
-    test_isa(Union(Dict, OrderedDict)),
-    drop_nothing = true,
-  ),
-  call(values -> begin
-    value_by_name = OrderedDict(String, Any)
-    for (index, value) in enumerate(values)
-      id = pop!(value, "id", string(index))
-      value_by_name[id] = value
-    end
-    return value_by_name
-  end),
-)(convertible)
-
-
 function find_age(individu, date; default = nothing)
   birth = get(individu, "birth", nothing)
   if birth !== nothing
@@ -226,9 +209,7 @@ function to_test_case(tax_benefit_system::TaxBenefitSystem, period::DatePeriod; 
       return convertible
     end
 
-    variable_definition_by_name = tax_benefit_system.variable_definition_by_name
-
-    # First validation && rsion step
+    # First validation && conversion step
     converted = pipe(
       test_isa(Union(Dict, OrderedDict)),
       struct(
