@@ -6184,9 +6184,14 @@
   label = "Entreprise redevable de la taxe d'apprentissage",
 )
 
-@define_variable(requested_period_default_value, remboursement_transport_base, individu_definition, Int32,
+@define_variable(requested_period_default_value, remboursement_transport_base, individu_definition, Float32,
   input_variable = true,
   label = "Base pour le calcul du remboursement des frais de transport",
+)
+
+@define_variable(requested_period_default_value, indemnites_forfaitaires, individu_definition, Float32,
+  input_variable = true,
+  label = "Indemnités forfaitaires (transport, nourriture)",
 )
 
 @define_variable(requested_period_default_value, salaire_de_base, individu_definition, Float32,
