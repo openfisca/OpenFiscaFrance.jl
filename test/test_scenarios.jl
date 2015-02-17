@@ -23,10 +23,10 @@
 Convertible([
   "axes" => [["count" => 2, "max" =>  20000, "min" => 0, "name" => "salbrut"]],
   "test_case" => [
-    "familles" => [["parents" => ["1"]]],
-    "foyers_fiscaux" => [["declarants" => ["1"]]],
-    "individus" => [["id" => "1"]],
-    "menages" => [["personne_de_reference" => "1"]],
+    "familles" => (String => Any)["parents" => ["1"]],
+    "foyers_fiscaux" => (String => Any)["declarants" => ["1"]],
+    "individus" => (String => Any)["id" => "1"],
+    "menages" => (String => Any)["personne_de_reference" => "1"],
   ],
   "year" => 2014,
 ]) |> to_scenario(tax_benefit_system) |> test_isa(Scenario) |> to_value |> Simulation

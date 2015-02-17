@@ -82,16 +82,6 @@ function find_menage_and_role(test_case, individu_id)
 end
 
 
-function set_entities_json_id(entities_json)
-  for (index, entity_json) in enumerate(entities_json)
-    if !haskey(entity_json, "id")
-      entity_json["id"] = index
-    end
-  end
-  return entities_json
-end
-
-
 function single_entity_scenario(tax_benefit_system::TaxBenefitSystem, period; axes = nothing, enfants = nothing,
     famille = nothing, foyer_fiscal = nothing, menage = nothing, parent1 = nothing, parent2 = nothing)
   if enfants === nothing
@@ -253,6 +243,7 @@ function to_test_case(tax_benefit_system::TaxBenefitSystem, period::DatePeriod; 
                     ),
                     "id" => pipe(
                       test_isa(Union(Int, String)),
+                      to_string,
                       require,
                     ),
                     "parents" => pipe(
@@ -301,6 +292,7 @@ function to_test_case(tax_benefit_system::TaxBenefitSystem, period::DatePeriod; 
                     ),
                     "id" => pipe(
                       test_isa(Union(Int, String)),
+                      to_string,
                       require,
                     ),
                     "personnes_a_charge" => pipe(
@@ -340,6 +332,7 @@ function to_test_case(tax_benefit_system::TaxBenefitSystem, period::DatePeriod; 
                   [
                     "id" => pipe(
                       test_isa(Union(Int, String)),
+                      to_string,
                       require,
                     ),
                   ],
@@ -394,6 +387,7 @@ function to_test_case(tax_benefit_system::TaxBenefitSystem, period::DatePeriod; 
                     ),
                     "id" => pipe(
                       test_isa(Union(Int, String)),
+                      to_string,
                       require,
                     ),
                     "personne_de_reference" => test_isa(Union(Int, String)),
@@ -787,25 +781,31 @@ function to_test_case(tax_benefit_system::TaxBenefitSystem, period::DatePeriod; 
 
     remaining_individus_id = unique(union(familles_individus_id, foyers_fiscaux_individus_id, menages_individus_id))
     if !isempty(remaining_individus_id)
+      individu_index_by_id = [
+        individu["id"] => individu_index
+        for (individu_index, individu) in enumerate(test_case["individus"])
+      ]
       if error === nothing
-        error = (String => Any)[]
+        error = (Int => Any)[]
       end
       for individu_id in remaining_individus_id
-        get!(() -> (String => Any)[], error, "individus")[individu_id] = context -> _(context, string(
-          "Individual is missing from ",
-          join(
-            filter(
-              word -> !isempty(word),
-              [
-                individu_id in familles_individus_id ? "familles" : "",
-                individu_id in foyers_fiscaux_individus_id ? "foyers_fiscaux" : "",
-                individu_id in menages_individus_id ? "menages" : "",
-              ],
+        get!(() -> (String => Any)[], error, "individus")[individu_index_by_id[individu_id]] = context -> _(context,
+          string(
+            "Individual is missing from ",
+            join(
+              filter(
+                word -> !isempty(word),
+                [
+                  individu_id in familles_individus_id ? "familles" : "",
+                  individu_id in foyers_fiscaux_individus_id ? "foyers_fiscaux" : "",
+                  individu_id in menages_individus_id ? "menages" : "",
+                ],
+              ),
+              ", ",
+              " & ",
             ),
-            ", ",
-            " & ",
-          ),
-        ))
+          )
+        )
       end
     end
     if error !== nothing
