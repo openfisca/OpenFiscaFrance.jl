@@ -42,43 +42,53 @@ end
 
 
 function find_famille_and_role(test_case, individu_id)
-  for (famille_id, famille) in test_case["familles"]
+  for famille in test_case["familles"]
     for role in ("parents", "enfants")
       if individu_id in famille[role]
-        return famille_id, famille, role
+        return famille, role
       end
     end
   end
-  return nothing, nothing, nothing
+  return nothing, nothing
 end
 
 
 function find_foyer_fiscal_and_role(test_case, individu_id)
-  for (foyer_fiscal_id, foyer_fiscal) in test_case["foyers_fiscaux"]
+  for foyer_fiscal in test_case["foyers_fiscaux"]
     for role in ("declarants", "personnes_a_charge")
       if individu_id in foyer_fiscal[role]
-        return foyer_fiscal_id, foyer_fiscal, role
+        return foyer_fiscal, role
       end
     end
   end
-  return nothing, nothing, nothing
+  return nothing, nothing
 end
 
 
 function find_menage_and_role(test_case, individu_id)
-  for (menage_id, menage) in test_case["menages"]
+  for menage in test_case["menages"]
     for role in ("personne_de_reference", "conjoint")
       if menage[role] == individu_id
-        return menage_id, menage, role
+        return menage, role
       end
     end
     for role in ("enfants", "autres")
       if individu_id in menage[role]
-        return menage_id, menage, role
+        return menage, role
       end
     end
   end
-  return nothing, nothing, nothing
+  return nothing, nothing
+end
+
+
+function set_entities_json_id(entities_json)
+  for (index, entity_json) in enumerate(entities_json)
+    if !haskey(entity_json, "id")
+      entity_json["id"] = index
+    end
+  end
+  return entities_json
 end
 
 
@@ -135,11 +145,12 @@ function suggest(scenario::Scenario)
   test_case = scenario.test_case
   suggestions = (String => Any)[]
 
-  for (individu_id, individu) in test_case["individus"]
+  for individu in test_case["individus"]
+    individu_id = individu["id"]
     if get(individu, "age", nothing) === nothing && get(individu, "agem", nothing) === nothing &&
         get(individu, "birth", nothing) === nothing
       # Add missing birth date to person (a parent is 40 years old and a child is 10 years old.
-      is_parent = any(famille -> individu_id in famille["parents"], values(test_case["familles"]))
+      is_parent = any(famille -> individu_id in famille["parents"], test_case["familles"])
       birth_year = is_parent ? period_start_year - 40 : period_start_year - 10
       individu["birth"] = birth = Date(birth_year, 1, 1)
       suggested_test_case = get!(() -> (String => Any)[], suggestions, "test_case")
@@ -156,13 +167,18 @@ function suggest(scenario::Scenario)
     end
   end
 
-  for (foyer_fiscal_id, foyer_fiscal) in test_case["foyers_fiscaux"]
+  individu_by_id = [
+    individu["id"] => individu
+    for individu in test_case["individus"]
+    ]
+
+  for foyer_fiscal in test_case["foyers_fiscaux"]
     if length(foyer_fiscal["declarants"]) == 1 && !isempty(foyer_fiscal["personnes_a_charge"])
       # Suggest "parent isolé" when foyer_fiscal contains a single "declarant" with "personnes_a_charge".
       if get(foyer_fiscal, "caseT", nothing) === nothing
         suggested_test_case = get!(() -> (String => Any)[], suggestions, "test_case")
         suggested_foyers_fiscaux = get!(() -> (String => Dict{String, Any})[], suggested_test_case, "foyers_fiscaux")
-        suggested_foyer_fiscal = get!(() -> (String => Any)[], suggested_foyers_fiscaux, foyer_fiscal_id)
+        suggested_foyer_fiscal = get!(() -> (String => Any)[], suggested_foyers_fiscaux, foyer_fiscal["id"])
         suggested_foyer_fiscal["caseT"] = foyer_fiscal["caseT"] = true
       end
     elseif length(foyer_fiscal["declarants"]) == 2
@@ -170,13 +186,13 @@ function suggest(scenario::Scenario)
       # "statmarit".
       statmarit = 5  # PACSé
       for individu_id in foyer_fiscal["declarants"]
-        individu = test_case["individus"][individu_id]
+        individu = individu_by_id[individu_id]
         if get(individu, "statmarit", nothing) == 1  # Marié
           statmarit = 1
         end
       end
       for individu_id in foyer_fiscal["declarants"]
-        individu = test_case["individus"][individu_id]
+        individu = individu_by_id[individu_id]
         if get(individu, "statmarit", nothing) === nothing
           individu["statmarit"] = statmarit
           suggested_test_case = get!(() -> (String => Any)[], suggestions, "test_case")
@@ -216,14 +232,13 @@ function to_test_case(tax_benefit_system::TaxBenefitSystem, period::DatePeriod; 
         [
           "familles" => pipe(
             item_to_singleton,
-            entities_to_entity_by_id,
-            test_isa(Union(Dict, OrderedDict)),
-            uniform_mapping(
-              pipe(
-                test_isa(String),
-                require,
-              ),
+            test_isa(Array),
+            uniform_sequence(
               test_isa(Union(Dict, OrderedDict)),
+              drop_nothing = true,
+            ),
+            call(set_entities_json_id),
+            uniform_sequence(
               struct(
                 merge(
                   [
@@ -235,6 +250,10 @@ function to_test_case(tax_benefit_system::TaxBenefitSystem, period::DatePeriod; 
                         drop_nothing = true,
                       ),
                       default(Any[]),
+                    ),
+                    "id" => pipe(
+                      test_isa(Union(Int, String)),
+                      require,
                     ),
                     "parents" => pipe(
                       item_to_singleton,
@@ -257,18 +276,17 @@ function to_test_case(tax_benefit_system::TaxBenefitSystem, period::DatePeriod; 
               ),
               drop_nothing = true,
             ),
-            default((String => Any)[]),
+            default(Dict{String, Any}[]),
           ),
           "foyers_fiscaux" => pipe(
             item_to_singleton,
-            entities_to_entity_by_id,
-            test_isa(Union(Dict, OrderedDict)),
-            uniform_mapping(
-              pipe(
-                test_isa(String),
-                require,
-              ),
+            test_isa(Array),
+            uniform_sequence(
               test_isa(Union(Dict, OrderedDict)),
+              drop_nothing = true,
+            ),
+            call(set_entities_json_id),
+            uniform_sequence(
               struct(
                 merge(
                   [
@@ -280,6 +298,10 @@ function to_test_case(tax_benefit_system::TaxBenefitSystem, period::DatePeriod; 
                         drop_nothing = true,
                       ),
                       default(Any[]),
+                    ),
+                    "id" => pipe(
+                      test_isa(Union(Int, String)),
+                      require,
                     ),
                     "personnes_a_charge" => pipe(
                       item_to_singleton,
@@ -302,26 +324,33 @@ function to_test_case(tax_benefit_system::TaxBenefitSystem, period::DatePeriod; 
               ),
               drop_nothing = true,
             ),
-            default((String => Any)[]),
+            default(Dict{String, Any}[]),
           ),
           "individus" => pipe(
             item_to_singleton,
-            entities_to_entity_by_id,
-            test_isa(Union(Dict, OrderedDict)),
-            uniform_mapping(
-              pipe(
-                test_isa(Union(Int, String)),
-                require,
-              ),
+            test_isa(Array),
+            uniform_sequence(
               test_isa(Union(Dict, OrderedDict)),
+              drop_nothing = true,
+            ),
+            call(set_entities_json_id),
+            uniform_sequence(
               struct(
-                [
-                  variable_definition.name => to_cell(variable_definition)
-                  for variable_definition in filter(values(variable_definition_by_name)) do variable_definition
-                    return variable_definition.entity_definition.name == "individu" && !(variable_definition.name in (
-                      "idfam", "idfoy", "idmen", "quifam", "quifoy", "quimen"))
-                  end
-                ],
+                merge(
+                  [
+                    "id" => pipe(
+                      test_isa(Union(Int, String)),
+                      require,
+                    ),
+                  ],
+                  [
+                    variable_definition.name => to_cell(variable_definition)
+                    for variable_definition in filter(values(variable_definition_by_name)) do variable_definition
+                      return variable_definition.entity_definition.name == "individu" && !(variable_definition.name in (
+                        "idfam", "idfoy", "idmen", "quifam", "quifoy", "quimen"))
+                    end
+                  ],
+                ),
                 drop_nothing = true,
               ),
               drop_nothing = true,
@@ -331,14 +360,13 @@ function to_test_case(tax_benefit_system::TaxBenefitSystem, period::DatePeriod; 
           ),
           "menages" => pipe(
             item_to_singleton,
-            entities_to_entity_by_id,
-            test_isa(Union(Dict, OrderedDict)),
-            uniform_mapping(
-              pipe(
-                test_isa(String),
-                require,
-              ),
+            test_isa(Array),
+            uniform_sequence(
               test_isa(Union(Dict, OrderedDict)),
+              drop_nothing = true,
+            ),
+            call(set_entities_json_id),
+            uniform_sequence(
               struct(
                 merge(
                   [
@@ -364,6 +392,10 @@ function to_test_case(tax_benefit_system::TaxBenefitSystem, period::DatePeriod; 
                       ),
                       default(Any[]),
                     ),
+                    "id" => pipe(
+                      test_isa(Union(Int, String)),
+                      require,
+                    ),
                     "personne_de_reference" => test_isa(Union(Int, String)),
                   ],
                   [
@@ -377,7 +409,7 @@ function to_test_case(tax_benefit_system::TaxBenefitSystem, period::DatePeriod; 
               ),
               drop_nothing = true,
             ),
-            default((String => Any)[]),
+            default(Dict{String, Any}[]),
           ),
         ],
       ),
@@ -388,13 +420,12 @@ function to_test_case(tax_benefit_system::TaxBenefitSystem, period::DatePeriod; 
     test_case = converted.value
 
     # Second validation step
-    familles_individus_id = OrderedSet(keys(test_case["individus"])...)
-    foyers_fiscaux_individus_id = OrderedSet(keys(test_case["individus"])...)
-    menages_individus_id = OrderedSet(keys(test_case["individus"])...)
+    familles_individus_id = OrderedSet([individu["id"] for individu in test_case["individus"]]...)
+    foyers_fiscaux_individus_id = OrderedSet([individu["id"] for individu in test_case["individus"]]...)
+    menages_individus_id = OrderedSet([individu["id"] for individu in test_case["individus"]]...)
     converted = struct(
       [
-        "familles" => uniform_mapping(
-          noop,
+        "familles" => uniform_sequence(
           struct(
             [
               "enfants" => uniform_sequence(test_in_pop(familles_individus_id)),
@@ -403,8 +434,7 @@ function to_test_case(tax_benefit_system::TaxBenefitSystem, period::DatePeriod; 
             default = noop,
           ),
         ),
-        "foyers_fiscaux" => uniform_mapping(
-          noop,
+        "foyers_fiscaux" => uniform_sequence(
           struct(
             [
               "declarants" => uniform_sequence(test_in_pop(foyers_fiscaux_individus_id)),
@@ -413,8 +443,7 @@ function to_test_case(tax_benefit_system::TaxBenefitSystem, period::DatePeriod; 
             default = noop,
           ),
         ),
-        "menages" => uniform_mapping(
-          noop,
+        "menages" => uniform_sequence(
           struct(
             [
               "autres" => uniform_sequence(test_in_pop(menages_individus_id)),
@@ -430,20 +459,25 @@ function to_test_case(tax_benefit_system::TaxBenefitSystem, period::DatePeriod; 
     )(converted)
     test_case, error = to_value_error(converted)
 
+    individu_by_id = [
+      individu["id"] => individu
+      for individu in test_case["individus"]
+      ]
+
     if repair
       # Affecte à une famille chaque individu qui n'appartient à aucune d'entre elles.
-      new_famille = [
+      new_famille = (String => Any)[
         "enfants" => Any[],
         "parents" => Any[],
       ]
       new_famille_id = nothing
       for individu_id in copy(familles_individus_id)
         # Tente d'affecter l'individu à une famille d'après son foyer fiscal.
-        foyer_fiscal_id, foyer_fiscal, foyer_fiscal_role = find_foyer_fiscal_and_role(test_case, individu_id)
+        foyer_fiscal, foyer_fiscal_role = find_foyer_fiscal_and_role(test_case, individu_id)
         if foyer_fiscal_role == "declarants" && length(foyer_fiscal["declarants"]) == 2
           for declarant_id in foyer_fiscal["declarants"]
             if declarant_id != individu_id
-              famille_id, famille, other_role = find_famille_and_role(test_case, declarant_id)
+              famille, other_role = find_famille_and_role(test_case, declarant_id)
               if other_role == "parents" && length(famille["parents"]) == 1
                 # Quand l'individu n'est pas encore dans une famille, mais qu'il est déclarant
                 # dans un foyer fiscal, qu'il y a un autre déclarant dans ce même foyer fiscal
@@ -457,7 +491,7 @@ function to_test_case(tax_benefit_system::TaxBenefitSystem, period::DatePeriod; 
           end
         elseif foyer_fiscal_role == "personnes_a_charge" && foyer_fiscal["declarants"]
           for declarant_id in foyer_fiscal["declarants"]
-            famille_id, famille, other_role = find_famille_and_role(test_case, declarant_id)
+            famille, other_role = find_famille_and_role(test_case, declarant_id)
             if other_role == "parents"
               # Quand l'individu n'est pas encore dans une famille, mais qu'il est personne à charge
               # dans un foyer fiscal, qu'il y a un déclarant dans ce foyer fiscal et que ce déclarant
@@ -472,11 +506,11 @@ function to_test_case(tax_benefit_system::TaxBenefitSystem, period::DatePeriod; 
         if individu_id in familles_individus_id
           # L'individu n'est toujours pas affecté à une famille.
           # Tente d'affecter l'individu à une famille d'après son ménage.
-          menage_id, menage, menage_role = find_menage_and_role(test_case, individu_id)
+          menage, menage_role = find_menage_and_role(test_case, individu_id)
           if menage_role == "personne_de_reference"
             conjoint_id = menage["conjoint"]
             if conjoint_id !== nothing
-              famille_id, famille, other_role = find_famille_and_role(test_case, conjoint_id)
+              famille, other_role = find_famille_and_role(test_case, conjoint_id)
               if other_role == "parents" && length(famille["parents"]) == 1
                 # Quand l'individu n'est pas encore dans une famille, mais qu'il est personne de
                 # référence dans un ménage, qu'il y a un conjoint dans ce ménage et que ce
@@ -489,7 +523,7 @@ function to_test_case(tax_benefit_system::TaxBenefitSystem, period::DatePeriod; 
           elseif menage_role == "conjoint"
             personne_de_reference_id = menage["personne_de_reference"]
             if personne_de_reference_id !== nothing
-              famille_id, famille, other_role = find_famille_and_role(test_case, personne_de_reference_id)
+              famille, other_role = find_famille_and_role(test_case, personne_de_reference_id)
               if other_role == "parents" && length(famille["parents"]) == 1
                 # Quand l'individu n'est pas encore dans une famille, mais qu'il est conjoint
                 # dans un ménage, qu'il y a une personne de référence dans ce ménage et que
@@ -505,7 +539,7 @@ function to_test_case(tax_benefit_system::TaxBenefitSystem, period::DatePeriod; 
               if other_id === nothing
                 continue
               end
-              famille_id, famille, other_role = find_famille_and_role(test_case, other_id)
+              famille, other_role = find_famille_and_role(test_case, other_id)
               if other_role == "parents"
                 # Quand l'individu n'est pas encore dans une famille, mais qu'il est enfant dans un
                 # ménage, qu'il y a une personne à charge ou un conjoint dans ce ménage et que
@@ -521,7 +555,7 @@ function to_test_case(tax_benefit_system::TaxBenefitSystem, period::DatePeriod; 
 
         if individu_id in familles_individus_id
           # L'individu n'est toujours pas affecté à une famille.
-          individu = test_case["individus"][individu_id]
+          individu = individu_by_id[individu_id]
           age = find_age(individu, period.start)
           if length(new_famille["parents"]) < 2 && (age === nothing || age >= 18)
             push!(new_famille["parents"], individu_id)
@@ -529,26 +563,26 @@ function to_test_case(tax_benefit_system::TaxBenefitSystem, period::DatePeriod; 
             push!(new_famille["enfants"], individu_id)
           end
           if new_famille_id === nothing
-            new_famille_id = string(UUID.v4())
-            test_case["familles"][new_famille_id] = new_famille
+            new_famille["id"] = new_famille_id = string(UUID.v4())
+            push!(test_case["familles"], new_famille)
           end
           delete!(familles_individus_id, individu_id)
         end
       end
 
       # Affecte à un foyer fiscal chaque individu qui n'appartient à aucun d'entre eux.
-      new_foyer_fiscal = [
+      new_foyer_fiscal = (String => Any)[
         "declarants" => Any[],
         "personnes_a_charge" => Any[],
       ]
       new_foyer_fiscal_id = nothing
       for individu_id in copy(foyers_fiscaux_individus_id)
         # Tente d'affecter l'individu à un foyer fiscal d'après sa famille.
-        famille_id, famille, famille_role = find_famille_and_role(test_case, individu_id)
+        famille, famille_role = find_famille_and_role(test_case, individu_id)
         if famille_role == "parents" && length(famille["parents"]) == 2
           for parent_id in famille["parents"]
             if parent_id != individu_id
-              foyer_fiscal_id, foyer_fiscal, other_role = find_foyer_fiscal_and_role(test_case, parent_id)
+              foyer_fiscal, other_role = find_foyer_fiscal_and_role(test_case, parent_id)
               if other_role == "declarants" && length(foyer_fiscal["declarants"]) == 1
                 # Quand l'individu n'est pas encore dans un foyer fiscal, mais qu'il est parent
                 # dans une famille, qu'il y a un autre parent dans cette famille et que cet autre
@@ -562,7 +596,7 @@ function to_test_case(tax_benefit_system::TaxBenefitSystem, period::DatePeriod; 
           end
         elseif famille_role == "enfants" && famille["parents"]
           for parent_id in famille["parents"]
-            foyer_fiscal_id, foyer_fiscal, other_role = find_foyer_fiscal_and_role(test_case, parent_id)
+            foyer_fiscal, other_role = find_foyer_fiscal_and_role(test_case, parent_id)
             if other_role == "declarants"
               # Quand l'individu n'est pas encore dans un foyer fiscal, mais qu'il est enfant dans une
               # famille, qu'il y a un parent dans cette famille et que ce parent est déclarant dans
@@ -577,11 +611,11 @@ function to_test_case(tax_benefit_system::TaxBenefitSystem, period::DatePeriod; 
         if individu_id in foyers_fiscaux_individus_id
           # L'individu n'est toujours pas affecté à un foyer fiscal.
           # Tente d'affecter l'individu à un foyer fiscal d'après son ménage.
-          menage_id, menage, menage_role = find_menage_and_role(test_case, individu_id)
+          menage, menage_role = find_menage_and_role(test_case, individu_id)
           if menage_role == "personne_de_reference"
             conjoint_id = menage["conjoint"]
             if conjoint_id !== nothing
-              foyer_fiscal_id, foyer_fiscal, other_role = find_foyer_fiscal_and_role(test_case, conjoint_id)
+              foyer_fiscal, other_role = find_foyer_fiscal_and_role(test_case, conjoint_id)
               if other_role == "declarants" && length(foyer_fiscal["declarants"]) == 1
                 # Quand l'individu n'est pas encore dans un foyer fiscal, mais qu'il est personne de
                 # référence dans un ménage, qu'il y a un conjoint dans ce ménage et que ce
@@ -594,8 +628,7 @@ function to_test_case(tax_benefit_system::TaxBenefitSystem, period::DatePeriod; 
           elseif menage_role == "conjoint"
             personne_de_reference_id = menage["personne_de_reference"]
             if personne_de_reference_id !== nothing
-              foyer_fiscal_id, foyer_fiscal, other_role = find_foyer_fiscal_and_role(test_case,
-                personne_de_reference_id)
+              foyer_fiscal, other_role = find_foyer_fiscal_and_role(test_case, personne_de_reference_id)
               if other_role == "declarants" && length(foyer_fiscal["declarants"]) == 1
                 # Quand l'individu n'est pas encore dans un foyer fiscal, mais qu'il est conjoint
                 # dans un ménage, qu'il y a une personne de référence dans ce ménage et que
@@ -611,7 +644,7 @@ function to_test_case(tax_benefit_system::TaxBenefitSystem, period::DatePeriod; 
               if other_id === nothing
                 continue
               end
-              foyer_fiscal_id, foyer_fiscal, other_role = find_foyer_fiscal_and_role(test_case, other_id)
+              foyer_fiscal, other_role = find_foyer_fiscal_and_role(test_case, other_id)
               if other_role == "declarants"
                 # Quand l'individu n'est pas encore dans un foyer fiscal, mais qu'il est enfant dans
                 # un ménage, qu'il y a une personne à charge ou un conjoint dans ce ménage et que
@@ -627,7 +660,7 @@ function to_test_case(tax_benefit_system::TaxBenefitSystem, period::DatePeriod; 
 
         if individu_id in foyers_fiscaux_individus_id
           # L'individu n'est toujours pas affecté à un foyer fiscal.
-          individu = test_case["individus"][individu_id]
+          individu = individu_by_id[individu_id]
           age = find_age(individu, period.start)
           if length(new_foyer_fiscal["declarants"]) < 2 && (age === nothing || age >= 18)
             push!(new_foyer_fiscal["declarants"], individu_id)
@@ -635,15 +668,15 @@ function to_test_case(tax_benefit_system::TaxBenefitSystem, period::DatePeriod; 
             push!(new_foyer_fiscal["personnes_a_charge"], individu_id)
           end
           if new_foyer_fiscal_id === nothing
-            new_foyer_fiscal_id = string(UUID.v4())
-            test_case["foyers_fiscaux"][new_foyer_fiscal_id] = new_foyer_fiscal
+            new_foyer_fiscal["id"] = new_foyer_fiscal_id = string(UUID.v4())
+            push!(test_case["foyers_fiscaux"], new_foyer_fiscal)
           end
           delete!(foyers_fiscaux_individus_id, individu_id)
         end
       end
 
       # Affecte à un ménage chaque individu qui n'appartient à aucun d'entre eux.
-      new_menage = [
+      new_menage = (String => Any)[
         "autres" => Any[],
         "conjoint" => nothing,
         "enfants" => Any[],
@@ -652,11 +685,11 @@ function to_test_case(tax_benefit_system::TaxBenefitSystem, period::DatePeriod; 
       new_menage_id = nothing
       for individu_id in copy(menages_individus_id)
         # Tente d'affecter l'individu à un ménage d'après sa famille.
-        famille_id, famille, famille_role = find_famille_and_role(test_case, individu_id)
+        famille, famille_role = find_famille_and_role(test_case, individu_id)
         if famille_role == "parents" && length(famille["parents"]) == 2
           for parent_id in famille["parents"]
             if parent_id != individu_id
-              menage_id, menage, other_role = find_menage_and_role(test_case, parent_id)
+              menage, other_role = find_menage_and_role(test_case, parent_id)
               if other_role == "personne_de_reference" && menage["conjoint"] === nothing
                 # Quand l'individu n'est pas encore dans un ménage, mais qu'il est parent
                 # dans une famille, qu'il y a un autre parent dans cette famille et que cet autre
@@ -677,7 +710,7 @@ function to_test_case(tax_benefit_system::TaxBenefitSystem, period::DatePeriod; 
           end
         elseif famille_role == "enfants" && famille["parents"]
           for parent_id in famille["parents"]
-            menage_id, menage, other_role = find_menage_and_role(test_case, parent_id)
+            menage, other_role = find_menage_and_role(test_case, parent_id)
             if other_role in ("personne_de_reference", "conjoint")
               # Quand l'individu n'est pas encore dans un ménage, mais qu'il est enfant dans une
               # famille, qu'il y a un parent dans cette famille et que ce parent est personne de
@@ -693,11 +726,11 @@ function to_test_case(tax_benefit_system::TaxBenefitSystem, period::DatePeriod; 
         if individu_id in menages_individus_id
           # L'individu n'est toujours pas affecté à un ménage.
           # Tente d'affecter l'individu à un ménage d'après son foyer fiscal.
-          foyer_fiscal_id, foyer_fiscal, foyer_fiscal_role = find_foyer_fiscal_and_role(test_case, individu_id)
+          foyer_fiscal, foyer_fiscal_role = find_foyer_fiscal_and_role(test_case, individu_id)
           if foyer_fiscal_role == "declarants" && length(foyer_fiscal["declarants"]) == 2
             for declarant_id in foyer_fiscal["declarants"]
               if declarant_id != individu_id
-                menage_id, menage, other_role = find_menage_and_role(test_case, declarant_id)
+                menage, other_role = find_menage_and_role(test_case, declarant_id)
                 if other_role == "personne_de_reference" && menage["conjoint"] === nothing
                   # Quand l'individu n'est pas encore dans un ménage, mais qu'il est déclarant
                   # dans un foyer fiscal, qu'il y a un autre déclarant dans ce foyer fiscal et que
@@ -720,7 +753,7 @@ function to_test_case(tax_benefit_system::TaxBenefitSystem, period::DatePeriod; 
             end
           elseif foyer_fiscal_role == "personnes_a_charge" && foyer_fiscal["declarants"]
             for declarant_id in foyer_fiscal["declarants"]
-              menage_id, menage, other_role = find_menage_and_role(test_case, declarant_id)
+              menage, other_role = find_menage_and_role(test_case, declarant_id)
               if other_role in ("personne_de_reference", "conjoint")
                 # Quand l'individu n'est pas encore dans un ménage, mais qu'il est personne à charge
                 # dans un foyer fiscal, qu'il y a un déclarant dans ce foyer fiscal et que ce
@@ -744,8 +777,8 @@ function to_test_case(tax_benefit_system::TaxBenefitSystem, period::DatePeriod; 
             push!(new_menage["enfants"], individu_id)
           end
           if new_menage_id === nothing
-            new_menage_id = string(UUID.v4())
-            test_case["menages"][new_menage_id] = new_menage
+            new_menage["id"] = new_menage_id = string(UUID.v4())
+            push!(test_case["menages"], new_menage)
           end
           delete!(menages_individus_id, individu_id)
         end
@@ -782,14 +815,12 @@ function to_test_case(tax_benefit_system::TaxBenefitSystem, period::DatePeriod; 
     # Third validation step
     parents_id = OrderedSet(vcat([
       famille["parents"]
-      for famille in values(test_case["familles"])
+      for famille in test_case["familles"]
     ]...)...)
-    individu_by_id = test_case["individus"]
     return struct(
       [
         "familles" => pipe(
-          uniform_mapping(
-            noop,
+          uniform_sequence(
             struct(
               [
                 "enfants" => uniform_sequence(
@@ -814,8 +845,7 @@ function to_test_case(tax_benefit_system::TaxBenefitSystem, period::DatePeriod; 
           require,
         ),
         "foyers_fiscaux" => pipe(
-          uniform_mapping(
-            noop,
+          uniform_sequence(
             struct(
               [
                 "declarants" => pipe(
@@ -851,8 +881,7 @@ function to_test_case(tax_benefit_system::TaxBenefitSystem, period::DatePeriod; 
           empty_to_nothing,
           require,
         ),
-        # "individus" => uniform_mapping(
-        #   noop,
+        # "individus" => uniform_sequence(
         #   struct(
         #     [
         #       "birth" => test(
@@ -865,8 +894,7 @@ function to_test_case(tax_benefit_system::TaxBenefitSystem, period::DatePeriod; 
         #   ),
         # ),
         "menages" => pipe(
-          uniform_mapping(
-            noop,
+          uniform_sequence(
             struct(
               [
                 "personne_de_reference" => require,
