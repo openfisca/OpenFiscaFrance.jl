@@ -58,10 +58,19 @@ function test_fiches_de_paie()
     end
 
     test_data = YAML.load_file(string(tests_dir, '/', file_name))
-	continue  # TODO: Remove!
-    test = Convertible(test_data) |> to_test(tax_benefit_system) |> to_value
-    scenario = test["scenario"]
+    test, error = Convertible(test_data) |> to_test(tax_benefit_system) |> to_value_error
+    if error !== nothing
+      info("=" ^ 120)
+      info("Test ", string(test_index), ": ", file_name)
+      info("=" ^ 120)
+      embedding_error = embed_error(test, error)
+      @assert(embedding_error === nothing, embedding_error)
+      warn("Error: ", string(error))
+      warn("Value: ", string(test))
+	    continue
+    end
     info("=" ^ 120)
+    scenario = test["scenario"]
     info("Test ", string(test_index), ": ", get(test, "name", file_name), " - ", string(scenario.period))
     info("=" ^ 120)
     if get(test, "ignore", false)
