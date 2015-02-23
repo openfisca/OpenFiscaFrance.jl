@@ -23,7 +23,6 @@
 """Download tests from mes-aides and store them at JSON tests."""
 
 
-using Biryani
 import JSON
 using OpenFiscaCore
 using OpenFiscaFrance
@@ -114,7 +113,7 @@ function print_yaml_item(file::IO, value; indent = 0, indent_first_line = true)
 end
 
 
-url = string(server_url, "/api/acceptance-tests/public")
+url = string(server_url, "/api/public/acceptance-tests")
 println("GET ", url)
 response = get(url)
 tests = JSON.parse(response.data)
@@ -149,7 +148,7 @@ for (test_index, test) in enumerate(tests)
     for result in last_execution["results"]
   ]
 
-  url = string(server_url, "/api/situations/", test["situation"], "/openfisca-request")
+  url = string(server_url, "/api/situations/", test["scenario"]["situationId"], "/openfisca-request")
   println("GET ", url)
   response = get(url)
   openfisca_request = JSON.parse(response.data)
@@ -160,7 +159,7 @@ for (test_index, test) in enumerate(tests)
   # period = scenario["period"]
   test_case = scenario["test_case"]
 
-  file_name = string("test_", test_index, '_', Convertible(test_name) |> input_to_url_name |> to_value, ".yaml")
+  file_name = string("test_mes_aides_", test["_id"], ".yaml")
   file_path = string(tests_dir, '/', file_name)
   open(file_path, "w") do file
     print_yaml_field(file, "name", test_name)
