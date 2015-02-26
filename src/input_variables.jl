@@ -6397,7 +6397,7 @@
 @define_variable(requested_period_last_value, depcom, menage_definition, UTF8String,
   input_variable = true,
   label = "Code INSEE (depcom) du lieu de résidence",
-  value_at_date_to_cell = variable_definition::VariableDefinition -> pipe(
+  value_at_period_to_cell = variable_definition::VariableDefinition -> pipe(
     condition(
       test_isa(Integer),
       call(string),
