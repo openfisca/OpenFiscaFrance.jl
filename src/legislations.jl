@@ -75,8 +75,8 @@ function build_sal(legislation)
 
   sal["prive_cadre"] = pop!(sal, "cadre")
   merge!(sal["prive_cadre"], commun)
-  sal["prive_noncadre"] = pop!(sal, "noncadre")
-  merge!(sal["prive_noncadre"], commun)
+  sal["prive_non_cadre"] = pop!(sal, "noncadre")
+  merge!(sal["prive_non_cadre"], commun)
 
   sal["public_non_titulaire"] = pop!(sal["fonc"], "contract")
   merge!(sal["public_non_titulaire"], commun)
