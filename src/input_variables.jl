@@ -5475,10 +5475,6 @@
   label = "Coefficient de proratisation pour le calcul du SMIC et du plafond de la Sécurité socialele",
 )
 
-@define_variable(nombre_jours_calendaires, individu_definition, Float32, requested_period_default_value,
-  label = "Nombre de jours calendaires travaillés",
-)
-
 @define_variable(scolarite, individu_definition, Int16, requested_period_last_value,
   label = "Scolarité de l'enfant : collège, lycée...",
   values = [

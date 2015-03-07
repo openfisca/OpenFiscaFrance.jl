@@ -29,7 +29,7 @@ export single_entity_scenario, suggest, tax_benefit_system
 importall Biryani
 importall Biryani.DatesConverters
 import DataStructures: OrderedDict, OrderedSet
-import Dates: Date, Day, day, firstdayofmonth, firstdayofyear, Month, month, Year, year
+import Dates: Date, Day, day, firstdayofmonth, firstdayofyear, lastdayofmonth, Month, month, Year, year
 import JSON: JSON
 importall OpenFiscaCore
 import UUID: UUID
