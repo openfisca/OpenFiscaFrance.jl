@@ -21,7 +21,7 @@
 
 
 Convertible([
-  "axes" => [["count" => 2, "max" =>  20000, "min" => 0, "name" => "salbrut"]],
+  "axes" => [["count" => 2, "max" =>  20000, "min" => 0, "name" => "salaire_de_base"]],
   "test_case" => [
     "familles" => (String => Any)["parents" => ["1"]],
     "foyers_fiscaux" => (String => Any)["declarants" => ["1"]],
@@ -32,7 +32,7 @@ Convertible([
 ]) |> to_scenario(tax_benefit_system) |> test_isa(Scenario) |> to_value |> Simulation
 
 Convertible([
-  "axes" => [["count" => 2, "max" =>  20000, "min" => 0, "name" => "salbrut"]],
+  "axes" => [["count" => 2, "max" =>  20000, "min" => 0, "name" => "salaire_de_base"]],
   "test_case" => [
     "individus" => [(String => Any)[]],
   ],
