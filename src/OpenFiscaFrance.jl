@@ -75,6 +75,16 @@ macro define_entity(entity, args...)
 end
 
 
+macro define_formula(function_definition, variable, args...)
+  global variable_definition_by_name
+  variable_name = string(variable)
+  return esc(quote
+    @assert !haskey(variable_definition_by_name, $variable_name)
+    variable_definition_by_name[$variable_name] = VariableDefinition($function_definition, $variable_name, $(args...))
+  end)
+end
+
+
 macro define_parameter(parameter_path, parameter)
   global legislation
   return esc(quote
@@ -83,12 +93,12 @@ macro define_parameter(parameter_path, parameter)
 end
 
 
-macro define_variable(function_definition, variable, args...)
+macro define_variable(variable, args...)
   global variable_definition_by_name
   variable_name = string(variable)
   return esc(quote
     @assert !haskey(variable_definition_by_name, $variable_name)
-    variable_definition_by_name[$variable_name] = VariableDefinition($function_definition, $variable_name, $(args...))
+    variable_definition_by_name[$variable_name] = VariableDefinition(nothing, $variable_name, $(args...))
   end)
 end
 

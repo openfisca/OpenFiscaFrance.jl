@@ -52,17 +52,20 @@ assert_near2(left::ArrayHandle, right::ArrayHandle; error_margin = 1, message = 
 function test_mes_aides()
   const tests_dir = "test/mes-aides.gouv.fr"
 
-  for file_name in sort(readdir(tests_dir), by = name -> int(split(name, '_', 3)[2]))
+  for file_name in sort(readdir(tests_dir), by = name -> split(name, '_', 5)[4])
     if !endswith(file_name, ".yaml")
       continue
     end
 
-    test_number = split(file_name, '_', 3)[2]
+    test_id = split(split(file_name, '_', 5)[4], '.', 2)[1]
+    # if test_id != "225"
+    #   continue
+    # end
     file_path = string(tests_dir, '/', file_name)
     open(file_path, "r") do file
       test = YAML.load_file(file_path)
       info("=" ^ 120)
-      info("Test ", test_number, ": ", pop!(test, "name"))
+      info("Test ", test_id, ": ", pop!(test, "name"))
       info("=" ^ 120)
       if pop!(test, "ignore", false)
         info("  Ignoring test.")

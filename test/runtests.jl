@@ -32,11 +32,11 @@ importall OpenFiscaFrance
 
 
 # Technical Tests
-include("test_age.jl")
-include("test_scenarios.jl")
+# include("test_age.jl")
+# include("test_scenarios.jl")
 
 # Functional Tests
-include("test_fiches_de_paie.jl")
-include("test_impot_revenu_personnes_physiques.jl")
+# include("test_fiches_de_paie.jl")
+# include("test_impot_revenu_personnes_physiques.jl")
 include("test_mes-aides.gouv.fr.jl")
-include("test_niches.jl")
+# include("test_niches.jl")

@@ -569,6 +569,15 @@
   description = "Allocations logement ; Participation personnelle minimale ; Taux de participation",
 ))
 
+@define_parameter(al.ressources.abattement_chomage_indemnise, Parameter{Float32}(
+  [
+    DateRangeValue(Date(2002, 01, 01), Date(2017, 12, 31), 0.3),
+  ],
+  check_start_date = Date(2006, 01, 01),
+  check_stop_date = Date(2013, 12, 31),
+  description = "Allocations logement ; Dispositions applicables aux ressources ; Abattement pour chômage indemnisé (R351-13)",
+))
+
 @define_parameter(al.ressources.dar_1, Parameter{Int32}(
   [
     DateRangeValue(Date(2002, 01, 01), Date(2007, 06, 30), 76),
@@ -1203,7 +1212,7 @@
 
 @define_parameter(cotsoc.conge_individuel_formation.cdd, Parameter{Float32}(
   [
-    DateRangeValue(Date(2010, 01, 01), Date(2015, 12, 31), 0.01, comment = "TODO: dates inconnues"),
+    DateRangeValue(Date(1990, 07, 14), Date(2015, 12, 31), 0.01),
   ],
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
@@ -6568,31 +6577,6 @@
   description = "Prestations familiales ; Allocations familiales ; Base mensuelle des allocations familiales",
 ))
 
-@define_parameter(fam.af.bmaf_n_2, Parameter{Float32}(
-  [
-    DateRangeValue(Date(2001, 01, 01), Date(2001, 12, 31), 327.27),
-    DateRangeValue(Date(2002, 01, 01), Date(2002, 12, 31), 328.91),
-    DateRangeValue(Date(2003, 01, 01), Date(2003, 12, 31), 334.84),
-    DateRangeValue(Date(2004, 01, 01), Date(2004, 12, 31), 341.87),
-    DateRangeValue(Date(2005, 01, 01), Date(2005, 12, 31), 347.68),
-    DateRangeValue(Date(2006, 01, 01), Date(2006, 12, 31), 353.59),
-    DateRangeValue(Date(2007, 01, 01), Date(2007, 12, 31), 361.37),
-    DateRangeValue(Date(2008, 01, 01), Date(2008, 12, 31), 367.87),
-    DateRangeValue(Date(2009, 01, 01), Date(2009, 12, 31), 374.12),
-    DateRangeValue(Date(2010, 01, 01), Date(2010, 12, 31), 377.86),
-    DateRangeValue(Date(2011, 01, 01), Date(2011, 12, 31), 389.2),
-    DateRangeValue(Date(2012, 01, 01), Date(2012, 12, 31), 389.2),
-    DateRangeValue(Date(2013, 01, 01), Date(2013, 12, 31), 395.04),
-    DateRangeValue(Date(2014, 01, 01), Date(2014, 12, 31), 399.0),
-    DateRangeValue(Date(2015, 01, 01), Date(2015, 12, 31), 403.79),
-    DateRangeValue(Date(2016, 01, 01), Date(2016, 12, 31), 406.21),
-  ],
-  unit = "currency",
-  check_start_date = Date(2006, 01, 01),
-  check_stop_date = Date(2013, 12, 31),
-  description = "Prestations familiales ; Allocations familiales ; Bmaf de l'année n-2",
-))
-
 @define_parameter(fam.af.crds, Parameter{Float32}(
   [
     DateRangeValue(Date(1996, 01, 01), Date(2013, 12, 31), 0.005),
@@ -7217,6 +7201,36 @@
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
   description = "Prestations familiales ; Complément familial ; Taux du complément familial",
+))
+
+@define_parameter(fam.enfants.age_intermediaire, Parameter{Int32}(
+  [
+    DateRangeValue(Date(2001, 01, 01), Date(2015, 12, 31), 16),
+  ],
+  unit = "year",
+  check_start_date = Date(2006, 01, 01),
+  check_stop_date = Date(2013, 12, 31),
+  description = "Prestations familiales ; Enfants à charge ; Âge intermédiaire à partir duquel une condition de ressource s'applique pour être considéré comme enfant à charge",
+))
+
+@define_parameter(fam.enfants.age_limite, Parameter{Int32}(
+  [
+    DateRangeValue(Date(2001, 01, 01), Date(2015, 12, 31), 20),
+  ],
+  unit = "year",
+  check_start_date = Date(2006, 01, 01),
+  check_stop_date = Date(2013, 12, 31),
+  description = "Prestations familiales ; Enfants à charge ; Âge limite (strict) pour être considéré comme enfant à charge",
+))
+
+@define_parameter(fam.enfants.age_minimal, Parameter{Int32}(
+  [
+    DateRangeValue(Date(2001, 01, 01), Date(2015, 12, 31), 0),
+  ],
+  unit = "year",
+  check_start_date = Date(2006, 01, 01),
+  check_stop_date = Date(2013, 12, 31),
+  description = "Prestations familiales ; Enfants à charge ; Âge minimal pour être considéré comme enfant à charge",
 ))
 
 @define_parameter(fam.paje.base.age, Parameter{Int32}(
@@ -8105,31 +8119,6 @@
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
   description = "Impôt sur le revenu ; Contribution exceptionnelle sur les hauts revenus",
-))
-
-@define_parameter(ir.cesthra, MarginalRateScale(
-  [
-    RateBracket(
-      threshold = [
-        DateRangeValue(Date(2012, 01, 01), Date(2013, 12, 31), 0.0),
-      ],
-      rate = [
-        DateRangeValue(Date(2012, 01, 01), Date(2013, 12, 31), 0.0),
-      ],
-    ),
-    RateBracket(
-      threshold = [
-        DateRangeValue(Date(2012, 01, 01), Date(2013, 12, 31), 1000000.0),
-      ],
-      rate = [
-        DateRangeValue(Date(2012, 01, 01), Date(2013, 12, 31), 0.75),
-      ],
-    ),
-  ],
-  unit = "currency",
-  check_start_date = Date(2006, 01, 01),
-  check_stop_date = Date(2013, 12, 31),
-  description = "Impôt sur le revenu ; Contribution exceptionnelle de solidarité sur les très hauts revenus d'activité",
 ))
 
 @define_parameter(ir.charges_deductibles.acc75a.max, Parameter{Int32}(
@@ -12231,6 +12220,36 @@
   check_start_date = Date(2006, 01, 01),
   check_stop_date = Date(2013, 12, 31),
   description = "Minima sociaux ; Allocation supplémentaire d'invalidité ; Plafond de ressources (allocation comprise) pour une personne seule",
+))
+
+@define_parameter(minim.aspa.abattement_forfaitaire_nb_h, Parameter{Float32}(
+  [
+    DateRangeValue(Date(2002, 01, 01), Date(2014, 12, 31), 0.0),
+    DateRangeValue(Date(2015, 01, 01), Date(2015, 12, 31), 151.67),
+  ],
+  check_start_date = Date(2006, 01, 01),
+  check_stop_date = Date(2013, 12, 31),
+  description = "Minima sociaux ; Allocation solidarité aux personne agées (ASPA - Minimum vieillesse) ; Nombre d'heures travaillées forfaitaires",
+))
+
+@define_parameter(minim.aspa.abattement_forfaitaire_tx_couple, Parameter{Float32}(
+  [
+    DateRangeValue(Date(2002, 01, 01), Date(2014, 12, 31), 0.0),
+    DateRangeValue(Date(2015, 01, 01), Date(2015, 12, 31), 1.5),
+  ],
+  check_start_date = Date(2006, 01, 01),
+  check_stop_date = Date(2013, 12, 31),
+  description = "Minima sociaux ; Allocation solidarité aux personne agées (ASPA - Minimum vieillesse) ; Fraction du SMIC pour l'abattement (couple)",
+))
+
+@define_parameter(minim.aspa.abattement_forfaitaire_tx_seul, Parameter{Float32}(
+  [
+    DateRangeValue(Date(2002, 01, 01), Date(2014, 12, 31), 0.0),
+    DateRangeValue(Date(2015, 01, 01), Date(2015, 12, 31), 0.9),
+  ],
+  check_start_date = Date(2006, 01, 01),
+  check_stop_date = Date(2013, 12, 31),
+  description = "Minima sociaux ; Allocation solidarité aux personne agées (ASPA - Minimum vieillesse) ; Fraction du SMIC pour l'abattement (personne seule)",
 ))
 
 @define_parameter(minim.aspa.age_min, Parameter{Int32}(
