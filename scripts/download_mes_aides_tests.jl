@@ -20,7 +20,7 @@
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 
-"""Download tests from mes-aides and store them at JSON tests."""
+"""Download tests from mes-aides and store them as YAML tests."""
 
 
 import JSON
