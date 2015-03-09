@@ -52,41 +52,41 @@ assert_near2(left::ArrayHandle, right::ArrayHandle; error_margin = 1, message = 
 function test_mes_aides()
   const tests_dir = "test/mes-aides.gouv.fr"
 
-  for file_name in sort(readdir(tests_dir), by = name -> split(name, '_', 5)[4])
+  for (test_index, file_name) in enumerate(sort(readdir(tests_dir)))
     if !endswith(file_name, ".yaml")
       continue
     end
 
-    test_id = split(split(file_name, '_', 5)[4], '.', 2)[1]
-    # if test_id != "225"
-    #   continue
-    # end
-    file_path = string(tests_dir, '/', file_name)
-    open(file_path, "r") do file
-      test = YAML.load_file(file_path)
+    test_data = YAML.load_file(string(tests_dir, '/', file_name))
+    test, error = Convertible(test_data) |> to_test(tax_benefit_system) |> to_value_error
+    if error !== nothing
       info("=" ^ 120)
-      info("Test ", test_id, ": ", pop!(test, "name"))
+      info("Test ", string(test_index), ": ", file_name)
       info("=" ^ 120)
-      if pop!(test, "ignore", false)
-        info("  Ignoring test.")
-      else
-        pop!(test, "description")
-        output_variables = pop!(test, "output_variables")
-        scenario_data = [
-          "period" => pop!(test, "period"),
-          "test_case" => test,
-        ]
-        scenario = Convertible(scenario_data) |> to_scenario(tax_benefit_system) |> to_value
-        suggest(scenario)
-        simulation = Simulation(scenario, debug = true)
-        if output_variables !== nothing
-          for (variable_name, expected_value) in output_variables
-            # assert_near(calculate(simulation, variable_name, accept_other_period = true), expected_value,
-            #   error_margin = 0.016, message = "$variable_name: ")
-            assert_near2(calculate(simulation, variable_name, accept_other_period = true), expected_value,
-              error_margin = 0.016, message = "$variable_name: ")
-          end
-        end
+      embedding_error = embed_error(test, error)
+      @assert(embedding_error === nothing, embedding_error)
+      warn("Error: ", string(error))
+      warn("Value: ", string(test))
+	    continue
+    end
+    info("=" ^ 120)
+    scenario = test["scenario"]
+    info("Test ", string(test_index), ": ", get(test, "name", file_name), " - ", string(scenario.period))
+    info("=" ^ 120)
+    if get(test, "ignore", false)
+      info("  Ignoring test.")
+      continue
+    end
+
+    suggest(scenario)
+    simulation = Simulation(scenario, debug = true)
+    output_variables = get(test, "output_variables", nothing)
+    if output_variables !== nothing
+      for (variable_name, expected_value) in output_variables
+        # assert_near(calculate(simulation, variable_name), expected_value, error_margin = 0.016,
+        #   message = "$variable_name: ")
+        assert_near2(calculate(simulation, variable_name, accept_other_period = true), expected_value,
+          error_margin = 0.016, message = "$variable_name: ")
       end
     end
   end

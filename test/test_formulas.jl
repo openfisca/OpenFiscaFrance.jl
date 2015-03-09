@@ -28,19 +28,20 @@ function test_formulas()
     if !endswith(filename, ".yaml")
       continue
     end
+    filename_core = rsplit(filename, '.', 2)[1]
 
     test_data = YAML.load_file(string(tests_dir, '/', filename))
     tests, error = Convertible(test_data) |> pipe(
       item_to_singleton,
       uniform_sequence(
-        to_test(tax_benefit_system),
+        noop,
         drop_nothing = true,
       ),
     ) |> to_value_error
     if error !== nothing
       test_index += 1
       info("=" ^ 120)
-      info("Test ", string(test_index), ": ", filename)
+      info("Test ", string(test_index), ": ", filename_core)
       info("=" ^ 120)
       embedding_error = embed_error(tests, error)
       @assert(embedding_error === nothing, embedding_error)
@@ -50,9 +51,21 @@ function test_formulas()
     end
     for test in tests
       test_index += 1
+      test, error = Convertible(test) |> to_test(tax_benefit_system) |> to_value_error
+      if error !== nothing
+        test_index += 1
+        info("=" ^ 120)
+        info("Test ", string(test_index), ": ", filename_core)
+        info("=" ^ 120)
+        embedding_error = embed_error(test, error)
+        @assert(embedding_error === nothing, embedding_error)
+        warn("Error: ", string(error))
+        warn("Value: ", string(test))
+        continue
+      end
       info("=" ^ 120)
       scenario = test["scenario"]
-      info("Test ", string(test_index), ": ", get(test, "name", filename), " - ", string(scenario.period))
+      info("Test ", string(test_index), ": ", get(test, "name", filename_core), " - ", string(scenario.period))
       info("=" ^ 120)
       if get(test, "ignore", false)
         info("  Ignoring test.")
