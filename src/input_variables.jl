@@ -155,97 +155,30 @@
 @define_variable(f1aw, foyer_fiscal_definition, Int32, requested_period_default_value,
   cell_format = "monetary",
   cerfa_field = "1AW",
-  label = "Rentes viagères à titre onéreux perçues par le foyer par âge d'entrée en jouissance : Moins de 50 ans",
+  label = "Rentes viagères à titre onéreux perçues par le foyer par âge d'entrée en jouissance : Moins de 50 ans",
 )
 
 @define_variable(f1bw, foyer_fiscal_definition, Int32, requested_period_default_value,
   cell_format = "monetary",
   cerfa_field = "1BW",
-  label = "Rentes viagères à titre onéreux perçues par le foyer par âge d'entrée en jouissance : De 50 à 59 ans",
+  label = "Rentes viagères à titre onéreux perçues par le foyer par âge d'entrée en jouissance : De 50 à 59 ans",
 )
 
 @define_variable(f1cw, foyer_fiscal_definition, Int32, requested_period_default_value,
   cell_format = "monetary",
   cerfa_field = "1CW",
-  label = "Rentes viagères à titre onéreux perçues par le foyer par âge d'entrée en jouissance : De 60 à 69 ans",
+  label = "Rentes viagères à titre onéreux perçues par le foyer par âge d'entrée en jouissance : De 60 à 69 ans",
 )
 
 @define_variable(f1dw, foyer_fiscal_definition, Int32, requested_period_default_value,
   cell_format = "monetary",
   cerfa_field = "1DW",
-  label = "Rentes viagères à titre onéreux perçues par le foyer par âge d'entrée en jouissance : A partir de 70 ans",
+  label = "Rentes viagères à titre onéreux perçues par le foyer par âge d'entrée en jouissance : A partir de 70 ans",
 )
 
 @define_variable(jour_xyz, foyer_fiscal_definition, Int32, requested_period_default_value,
   cell_default = 360,
   label = "Jours décomptés au titre de cette déclaration",
-)
-
-@define_variable(nbN, foyer_fiscal_definition, Int32, requested_period_last_value,
-  cerfa_field = "N",
-  label = "Nombre d'enfants mariés/pacsés et d'enfants non mariés chargés de famille",
-)
-
-@define_variable(nbR, foyer_fiscal_definition, Int32, requested_period_last_value,
-  cerfa_field = "R",
-  label = "Nombre de titulaires (autres que les enfants) de la carte invalidité d'au moins 80 %",
-)
-
-@define_variable(caseE, foyer_fiscal_definition, Bool, requested_period_last_value,
-  cerfa_field = "E",
-  label = "Situation pouvant donner droit à une demi-part supplémentaire : vous vivez seul au 1er janvier de l'année de perception des revenus et vous avez élevé un enfant pendant moins de 5 ans durant la période où vous viviez seul",
-  stop_date = Date(2012, 12, 31),
-)
-
-@define_variable(caseF, foyer_fiscal_definition, Bool, requested_period_last_value,
-  cerfa_field = "F",
-  label = "Situation pouvant donner droit à une demi-part supplémentaire : conjoint titulaire d'une pension ou d'une carte d'invalidité (vivant ou décédé l'année de perception des revenus)",
-)
-
-@define_variable(caseG, foyer_fiscal_definition, Bool, requested_period_last_value,
-  cerfa_field = "G",
-  label = "Titulaire d'une pension de veuve de guerre",
-)
-
-@define_variable(caseH, foyer_fiscal_definition, Int32, requested_period_last_value,
-  cerfa_field = "H",
-  label = "Année de naissance des enfants à charge en garde alternée",
-)
-
-@define_variable(caseK, foyer_fiscal_definition, Bool, requested_period_last_value,
-  cerfa_field = "K",
-  label = "Situation pouvant donner droit à une demi-part supplémentaire: vous avez eu un enfant décédé après l’âge de 16 ans ou par suite de faits de guerre",
-  stop_date = Date(2011, 12, 31),
-)
-
-@define_variable(caseL, foyer_fiscal_definition, Bool, requested_period_last_value,
-  cerfa_field = "L",
-  label = "Situation pouvant donner droit à une demi-part supplémentaire: vous vivez seul au 1er janvier de l'année de perception des revenus et vous avez élevé un enfant pendant au moins 5 ans durant la période où vous viviez seul",
-)
-
-@define_variable(caseN, foyer_fiscal_definition, Bool, requested_period_last_value,
-  cerfa_field = "N",
-  label = "Vous ne viviez pas seul au 1er janvier de l'année de perception des revenus",
-)
-
-@define_variable(caseP, foyer_fiscal_definition, Bool, requested_period_last_value,
-  cerfa_field = "P",
-  label = "Titulaire d'une pension pour une invalidité d'au moins 40 % ou d'une carte d'invalidité d'au moins 80%",
-)
-
-@define_variable(caseS, foyer_fiscal_definition, Bool, requested_period_last_value,
-  cerfa_field = "S",
-  label = "Vous êtes mariés/pacsés et l'un des deux déclarants âgé de plus de 75 ans est titulaire de la carte du combattant ou d'une pension militaire d'invalidité ou de victime de guerre",
-)
-
-@define_variable(caseT, foyer_fiscal_definition, Bool, requested_period_last_value,
-  cerfa_field = "T",
-  label = "Vous êtes parent isolé au 1er janvier de l'année de perception des revenus",
-)
-
-@define_variable(caseW, foyer_fiscal_definition, Bool, requested_period_last_value,
-  cerfa_field = "W",
-  label = "Vous ou votre conjoint (même s'il est décédé), âgés de plus de 75 ans, êtes titulaire de la carte du combattant ou d'une pension militaire d'invalidité ou de victime de guerre",
 )
 
 @define_variable(rfr_n_1, foyer_fiscal_definition, Int32, requested_period_default_value,
@@ -4141,6 +4074,73 @@
   start_date = Date(2009, 1, 1),
 )
 
+@define_variable(nbN, foyer_fiscal_definition, Int32, requested_period_last_value,
+  cerfa_field = "N",
+  label = "Nombre d'enfants mariés/pacsés et d'enfants non mariés chargés de famille",
+)
+
+@define_variable(nbR, foyer_fiscal_definition, Int32, requested_period_last_value,
+  cerfa_field = "R",
+  label = "Nombre de titulaires (autres que les enfants) de la carte invalidité d'au moins 80 %",
+)
+
+@define_variable(caseE, foyer_fiscal_definition, Bool, requested_period_last_value,
+  cerfa_field = "E",
+  label = "Situation pouvant donner droit à une demi-part supplémentaire : vous vivez seul au 1er janvier de l'année de perception des revenus et vous avez élevé un enfant pendant moins de 5 ans durant la période où vous viviez seul",
+  stop_date = Date(2012, 12, 31),
+)
+
+@define_variable(caseF, foyer_fiscal_definition, Bool, requested_period_last_value,
+  cerfa_field = "F",
+  label = "Situation pouvant donner droit à une demi-part supplémentaire : conjoint titulaire d'une pension ou d'une carte d'invalidité (vivant ou décédé l'année de perception des revenus)",
+)
+
+@define_variable(caseG, foyer_fiscal_definition, Bool, requested_period_last_value,
+  cerfa_field = "G",
+  label = "Titulaire d'une pension de veuve de guerre",
+)
+
+@define_variable(caseH, foyer_fiscal_definition, Int32, requested_period_last_value,
+  cerfa_field = "H",
+  label = "Année de naissance des enfants à charge en garde alternée",
+)
+
+@define_variable(caseK, foyer_fiscal_definition, Bool, requested_period_last_value,
+  cerfa_field = "K",
+  label = "Situation pouvant donner droit à une demi-part supplémentaire: vous avez eu un enfant décédé après l’âge de 16 ans ou par suite de faits de guerre",
+  stop_date = Date(2011, 12, 31),
+)
+
+@define_variable(caseL, foyer_fiscal_definition, Bool, requested_period_last_value,
+  cerfa_field = "L",
+  label = "Situation pouvant donner droit à une demi-part supplémentaire: vous vivez seul au 1er janvier de l'année de perception des revenus et vous avez élevé un enfant pendant au moins 5 ans durant la période où vous viviez seul",
+)
+
+@define_variable(caseN, foyer_fiscal_definition, Bool, requested_period_last_value,
+  cerfa_field = "N",
+  label = "Vous ne viviez pas seul au 1er janvier de l'année de perception des revenus",
+)
+
+@define_variable(caseP, foyer_fiscal_definition, Bool, requested_period_last_value,
+  cerfa_field = "P",
+  label = "Titulaire d'une pension pour une invalidité d'au moins 40 % ou d'une carte d'invalidité d'au moins 80%",
+)
+
+@define_variable(caseS, foyer_fiscal_definition, Bool, requested_period_last_value,
+  cerfa_field = "S",
+  label = "Vous êtes mariés/pacsés et l'un des deux déclarants âgé de plus de 75 ans est titulaire de la carte du combattant ou d'une pension militaire d'invalidité ou de victime de guerre",
+)
+
+@define_variable(caseT, foyer_fiscal_definition, Bool, requested_period_last_value,
+  cerfa_field = "T",
+  label = "Vous êtes parent isolé au 1er janvier de l'année de perception des revenus",
+)
+
+@define_variable(caseW, foyer_fiscal_definition, Bool, requested_period_last_value,
+  cerfa_field = "W",
+  label = "Vous ou votre conjoint (même s'il est décédé), âgés de plus de 75 ans, êtes titulaire de la carte du combattant ou d'une pension militaire d'invalidité ou de victime de guerre",
+)
+
 @define_variable(idmen, individu_definition, Int32, permanent_default_value,
   label = "Identifiant du ménage",
   permanent = true,
@@ -4397,18 +4397,6 @@
   label = "Demandeur d'emploi inscrit depuis plus d'un an",
 )
 
-@define_variable(sali, individu_definition, Int32, requested_period_default_value,
-  cell_format = "monetary",
-  cerfa_field = [0 => "1AJ", 1 => "1BJ", 2 => "1CJ", 3 => "1DJ", 4 => "1EJ"],
-  label = "Revenus d'activité imposables",
-)
-
-@define_variable(fra, individu_definition, Int32, requested_period_default_value,
-  cell_format = "monetary",
-  cerfa_field = [0 => "1AK", 1 => "1BK", 2 => "1CK", 3 => "1DK", 4 => "1EK"],
-  label = "Frais réels",
-)
-
 @define_variable(alr, individu_definition, Int32, requested_period_default_value,
   cell_format = "monetary",
   cerfa_field = [0 => "1AO", 1 => "1BO", 2 => "1CO", 3 => "1DO", 4 => "1EO"],
@@ -4432,90 +4420,8 @@
   label = "Pensions, retraites, rentes connues imposables",
 )
 
-@define_variable(hsup, individu_definition, Int32, requested_period_default_value,
-  cell_format = "monetary",
-  cerfa_field = [0 => "1AU", 1 => "1BU", 2 => "1CU", 3 => "1DU"],
-  label = "Heures supplémentaires : revenus exonérés connus",
-  start_date = Date(2007, 1, 1),
-)
-
 @define_variable(inv, individu_definition, Bool, requested_period_last_value,
   label = "Invalide",
-)
-
-@define_variable(alt, individu_definition, Bool, requested_period_last_value,
-  label = "Enfant en garde alternée",
-)
-
-@define_variable(ppe_du_sa, individu_definition, Int32, requested_period_default_value,
-  cerfa_field = [0 => "1AV", 1 => "1BV", 2 => "1CV", 3 => "1DV", 4 => "1QV"],
-  label = "Prime pour l'emploi des salariés: nombre d'heures payées dans l'année",
-)
-
-@define_variable(ppe_tp_sa, individu_definition, Bool, requested_period_last_value,
-  cerfa_field = [0 => "1AX", 1 => "1BX", 2 => "1CX", 3 => "1DX", 4 => "1QX"],
-  label = "Prime pour l'emploi des salariés: indicateur de travail à temps plein sur l'année entière",
-)
-
-@define_variable(activite, individu_definition, Int16, requested_period_last_value,
-  cell_default = 4,
-  label = "Activité",
-  values = [
-    "Actif occupé" => 0,
-    "Chômeur" => 1,
-    "Étudiant, élève" => 2,
-    "Retraité" => 3,
-    "Autre inactif" => 4,
-  ],
-)
-
-@define_variable(nbsala, individu_definition, Int16, requested_period_last_value,
-  label = "Nombre de salariés dans l'établissement de l'emploi actuel",
-  values = [
-    "Sans objet" => 0,
-    "Aucun salarié" => 1,
-    "1 à 4 salariés" => 2,
-    "5 à 9 salariés" => 3,
-    "10 à 19 salariés" => 4,
-    "20 à 49 salariés" => 5,
-    "50 à 199 salariés" => 6,
-    "200 à 499 salariés" => 7,
-    "500 à 999 salariés" => 8,
-    "1000 salariés ou plus" => 9,
-    "Ne sait pas" => 10,
-  ],
-)
-
-@define_variable(tva_ent, individu_definition, Bool, requested_period_last_value,
-  cell_default = true,
-  label = "L'entreprise employant le salarié paye de la TVA",
-)
-
-@define_variable(exposition_accident, individu_definition, Int16, requested_period_last_value,
-  label = "Exposition au risque pour les accidents du travail",
-  values = [
-    "Faible" => 0,
-    "Moyen" => 1,
-    "Élevé" => 2,
-    "Très élevé" => 3,
-  ],
-)
-
-@define_variable(boursier, individu_definition, Bool, requested_period_last_value,
-  label = "Élève ou étudiant boursier",
-)
-
-@define_variable(statmarit, individu_definition, Int16, requested_period_last_value,
-  cell_default = 2,
-  label = "Statut marital",
-  values = [
-    "Marié" => 1,
-    "Célibataire" => 2,
-    "Divorcé" => 3,
-    "Veuf" => 4,
-    "Pacsé" => 5,
-    "Jeune veuf" => 6,
-  ],
 )
 
 @define_variable(f1tv, individu_definition, Int32, requested_period_default_value,
@@ -5471,6 +5377,35 @@
   label = "Rempli l'obligation scolaire",
 )
 
+@define_variable(alt, individu_definition, Bool, requested_period_last_value,
+  label = "Enfant en garde alternée",
+)
+
+@define_variable(activite, individu_definition, Int16, requested_period_last_value,
+  cell_default = 4,
+  label = "Activité",
+  values = [
+    "Actif occupé" => 0,
+    "Chômeur" => 1,
+    "Étudiant, élève" => 2,
+    "Retraité" => 3,
+    "Autre inactif" => 4,
+  ],
+)
+
+@define_variable(statmarit, individu_definition, Int16, requested_period_last_value,
+  cell_default = 2,
+  label = "Statut marital",
+  values = [
+    "Marié" => 1,
+    "Célibataire" => 2,
+    "Divorcé" => 3,
+    "Veuf" => 4,
+    "Pacsé" => 5,
+    "Jeune veuf" => 6,
+  ],
+)
+
 @define_variable(coefficient_proratisation, individu_definition, Float32, requested_period_default_value,
   label = "Coefficient de proratisation pour le calcul du SMIC et du plafond de la Sécurité socialele",
 )
@@ -5484,12 +5419,77 @@
   ],
 )
 
+@define_variable(boursier, individu_definition, Bool, requested_period_last_value,
+  label = "Élève ou étudiant boursier",
+)
+
 @define_variable(inapte_travail, individu_definition, Bool, requested_period_last_value,
   label = "Reconnu inapte au travail",
 )
 
 @define_variable(taux_invalidite, individu_definition, Int32, requested_period_default_value,
   label = "Taux d'invalidité",
+)
+
+@define_variable(sali, individu_definition, Int32, requested_period_default_value,
+  cell_format = "monetary",
+  cerfa_field = [0 => "1AJ", 1 => "1BJ", 2 => "1CJ", 3 => "1DJ", 4 => "1EJ"],
+  label = "Revenus d'activité imposables",
+)
+
+@define_variable(fra, individu_definition, Int32, requested_period_default_value,
+  cell_format = "monetary",
+  cerfa_field = [0 => "1AK", 1 => "1BK", 2 => "1CK", 3 => "1DK", 4 => "1EK"],
+  label = "Frais réels",
+)
+
+@define_variable(hsup, individu_definition, Int32, requested_period_default_value,
+  cell_format = "monetary",
+  cerfa_field = [0 => "1AU", 1 => "1BU", 2 => "1CU", 3 => "1DU"],
+  label = "Heures supplémentaires : revenus exonérés connus",
+  start_date = Date(2007, 1, 1),
+)
+
+@define_variable(ppe_du_sa, individu_definition, Int32, requested_period_default_value,
+  cerfa_field = [0 => "1AV", 1 => "1BV", 2 => "1CV", 3 => "1DV", 4 => "1QV"],
+  label = "Prime pour l'emploi des salariés: nombre d'heures payées dans l'année",
+)
+
+@define_variable(ppe_tp_sa, individu_definition, Bool, requested_period_last_value,
+  cerfa_field = [0 => "1AX", 1 => "1BX", 2 => "1CX", 3 => "1DX", 4 => "1QX"],
+  label = "Prime pour l'emploi des salariés: indicateur de travail à temps plein sur l'année entière",
+)
+
+@define_variable(nbsala, individu_definition, Int16, requested_period_last_value,
+  label = "Nombre de salariés dans l'établissement de l'emploi actuel",
+  values = [
+    "Sans objet" => 0,
+    "Aucun salarié" => 1,
+    "1 à 4 salariés" => 2,
+    "5 à 9 salariés" => 3,
+    "10 à 19 salariés" => 4,
+    "20 à 49 salariés" => 5,
+    "50 à 199 salariés" => 6,
+    "200 à 499 salariés" => 7,
+    "500 à 999 salariés" => 8,
+    "1000 salariés ou plus" => 9,
+    "Ne sait pas" => 10,
+  ],
+)
+
+@define_variable(tva_ent, individu_definition, Bool, requested_period_last_value,
+  cell_default = true,
+  label = "L'entreprise employant le salarié paye de la TVA",
+)
+
+@define_variable(exposition_accident, individu_definition, Int16, requested_period_last_value,
+  label = "Exposition au risque pour les accidents du travail",
+  values = [
+    "Faible" => 0,
+    "Moyen" => 1,
+    "Élevé" => 2,
+    "Très élevé" => 3,
+  ],
 )
 
 @define_variable(nom_famille, famille_definition, UTF8String, permanent_default_value,
@@ -5539,7 +5539,7 @@
   label = "Loyer mensuel",
 )
 
-@define_variable(so, menage_definition, Int16, requested_period_last_value,
+@define_variable(statut_occupation, menage_definition, Int16, requested_period_last_value,
   label = "Statut d'occupation",
   values = [
     "Non renseigné" => 0,
