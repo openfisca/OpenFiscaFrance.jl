@@ -64,8 +64,15 @@ function test_formulas()
       output_variables = get(test, "output_variables", nothing)
       if output_variables !== nothing
         for (variable_name, expected_value) in output_variables
-          assert_near(calculate(simulation, variable_name, accept_other_period = true), expected_value,
-            error_margin = 0.005, message = "$variable_name: ")
+          if isa(expected_value, Union(Dict, OrderedDict))
+            for (requested_period, expected_value_at_period) in expected_value
+              assert_near(calculate(simulation, variable_name, requested_period), expected_value_at_period,
+                error_margin = 0.005, message = "$variable_name@$requested_period: ")
+            end
+          else
+            assert_near(calculate(simulation, variable_name), expected_value, error_margin = 0.005,
+              message = "$variable_name@$(scenario.period): ")
+          end
         end
       end
     end

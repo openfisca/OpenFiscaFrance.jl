@@ -24,6 +24,7 @@ using Base.Test
 
 importall Biryani
 importall Biryani.DatesConverters
+import DataStructures: OrderedDict
 import Dates: Date
 importall YAML
 
