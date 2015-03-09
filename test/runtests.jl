@@ -34,6 +34,7 @@ importall OpenFiscaFrance
 # Technical Tests
 include("test_age.jl")
 include("test_scenarios.jl")
+include("test_formulas.jl")
 
 # Functional Tests
 # include("test_fiches_de_paie.jl")
