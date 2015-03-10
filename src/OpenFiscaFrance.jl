@@ -195,4 +195,7 @@ tax_benefit_system = TaxBenefitSystem(entity_definition_by_name, legislation, va
 preload_zone_apl()
 
 
+include("decompositions.jl")
+
+
 end # module
