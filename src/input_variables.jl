@@ -25,6 +25,73 @@
   permanent = true,
 )
 
+@define_variable(nbN, foyer_fiscal_definition, Int32, requested_period_last_value,
+  cerfa_field = "N",
+  label = "Nombre d'enfants mariés/pacsés et d'enfants non mariés chargés de famille",
+)
+
+@define_variable(nbR, foyer_fiscal_definition, Int32, requested_period_last_value,
+  cerfa_field = "R",
+  label = "Nombre de titulaires (autres que les enfants) de la carte invalidité d'au moins 80 %",
+)
+
+@define_variable(caseE, foyer_fiscal_definition, Bool, requested_period_last_value,
+  cerfa_field = "E",
+  label = "Situation pouvant donner droit à une demi-part supplémentaire : vous vivez seul au 1er janvier de l'année de perception des revenus et vous avez élevé un enfant pendant moins de 5 ans durant la période où vous viviez seul",
+  stop_date = Date(2012, 12, 31),
+)
+
+@define_variable(caseF, foyer_fiscal_definition, Bool, requested_period_last_value,
+  cerfa_field = "F",
+  label = "Situation pouvant donner droit à une demi-part supplémentaire : conjoint titulaire d'une pension ou d'une carte d'invalidité (vivant ou décédé l'année de perception des revenus)",
+)
+
+@define_variable(caseG, foyer_fiscal_definition, Bool, requested_period_last_value,
+  cerfa_field = "G",
+  label = "Titulaire d'une pension de veuve de guerre",
+)
+
+@define_variable(caseH, foyer_fiscal_definition, Int32, requested_period_last_value,
+  cerfa_field = "H",
+  label = "Année de naissance des enfants à charge en garde alternée",
+)
+
+@define_variable(caseK, foyer_fiscal_definition, Bool, requested_period_last_value,
+  cerfa_field = "K",
+  label = "Situation pouvant donner droit à une demi-part supplémentaire: vous avez eu un enfant décédé après l’âge de 16 ans ou par suite de faits de guerre",
+  stop_date = Date(2011, 12, 31),
+)
+
+@define_variable(caseL, foyer_fiscal_definition, Bool, requested_period_last_value,
+  cerfa_field = "L",
+  label = "Situation pouvant donner droit à une demi-part supplémentaire: vous vivez seul au 1er janvier de l'année de perception des revenus et vous avez élevé un enfant pendant au moins 5 ans durant la période où vous viviez seul",
+)
+
+@define_variable(caseN, foyer_fiscal_definition, Bool, requested_period_last_value,
+  cerfa_field = "N",
+  label = "Vous ne viviez pas seul au 1er janvier de l'année de perception des revenus",
+)
+
+@define_variable(caseP, foyer_fiscal_definition, Bool, requested_period_last_value,
+  cerfa_field = "P",
+  label = "Titulaire d'une pension pour une invalidité d'au moins 40 % ou d'une carte d'invalidité d'au moins 80%",
+)
+
+@define_variable(caseS, foyer_fiscal_definition, Bool, requested_period_last_value,
+  cerfa_field = "S",
+  label = "Vous êtes mariés/pacsés et l'un des deux déclarants âgé de plus de 75 ans est titulaire de la carte du combattant ou d'une pension militaire d'invalidité ou de victime de guerre",
+)
+
+@define_variable(caseT, foyer_fiscal_definition, Bool, requested_period_last_value,
+  cerfa_field = "T",
+  label = "Vous êtes parent isolé au 1er janvier de l'année de perception des revenus",
+)
+
+@define_variable(caseW, foyer_fiscal_definition, Bool, requested_period_last_value,
+  cerfa_field = "W",
+  label = "Vous ou votre conjoint (même s'il est décédé), âgés de plus de 75 ans, êtes titulaire de la carte du combattant ou d'une pension militaire d'invalidité ou de victime de guerre",
+)
+
 @define_variable(b1ab, foyer_fiscal_definition, Int32, requested_period_default_value,
   cell_format = "monetary",
   label = "Valeur de la résidence principale avant abattement",
@@ -37,22 +104,22 @@
 
 @define_variable(b1bc, foyer_fiscal_definition, Int32, requested_period_default_value,
   cell_format = "monetary",
-  label = "Immeubles non bâtis : bois, fôrets et parts de groupements forestiers",
+  label = "Immeubles non bâtis : bois, fôrets et parts de groupements forestiers",
 )
 
 @define_variable(b1be, foyer_fiscal_definition, Int32, requested_period_default_value,
   cell_format = "monetary",
-  label = "Immeubles non bâtis : biens ruraux loués à long termes",
+  label = "Immeubles non bâtis : biens ruraux loués à long termes",
 )
 
 @define_variable(b1bh, foyer_fiscal_definition, Int32, requested_period_default_value,
   cell_format = "monetary",
-  label = "Immeubles non bâtis : parts de groupements fonciers agricoles et de groupements agricoles fonciers",
+  label = "Immeubles non bâtis : parts de groupements fonciers agricoles et de groupements agricoles fonciers",
 )
 
 @define_variable(b1bk, foyer_fiscal_definition, Int32, requested_period_default_value,
   cell_format = "monetary",
-  label = "Immeubles non bâtis : autres biens",
+  label = "Immeubles non bâtis : autres biens",
 )
 
 @define_variable(b1cl, foyer_fiscal_definition, Int32, requested_period_default_value,
@@ -87,7 +154,7 @@
 
 @define_variable(b1co, foyer_fiscal_definition, Int32, requested_period_default_value,
   cell_format = "monetary",
-  label = "Autres biens meubles : contrats d'assurance-vie",
+  label = "Autres biens meubles : contrats d'assurance-vie",
 )
 
 @define_variable(b2gh, foyer_fiscal_definition, Int32, requested_period_default_value,
@@ -150,554 +217,6 @@
 
 @define_variable(restit_imp, foyer_fiscal_definition, Int32, requested_period_default_value,
   cell_format = "monetary",
-)
-
-@define_variable(f1aw, foyer_fiscal_definition, Int32, requested_period_default_value,
-  cell_format = "monetary",
-  cerfa_field = "1AW",
-  label = "Rentes viagères à titre onéreux perçues par le foyer par âge d'entrée en jouissance : Moins de 50 ans",
-)
-
-@define_variable(f1bw, foyer_fiscal_definition, Int32, requested_period_default_value,
-  cell_format = "monetary",
-  cerfa_field = "1BW",
-  label = "Rentes viagères à titre onéreux perçues par le foyer par âge d'entrée en jouissance : De 50 à 59 ans",
-)
-
-@define_variable(f1cw, foyer_fiscal_definition, Int32, requested_period_default_value,
-  cell_format = "monetary",
-  cerfa_field = "1CW",
-  label = "Rentes viagères à titre onéreux perçues par le foyer par âge d'entrée en jouissance : De 60 à 69 ans",
-)
-
-@define_variable(f1dw, foyer_fiscal_definition, Int32, requested_period_default_value,
-  cell_format = "monetary",
-  cerfa_field = "1DW",
-  label = "Rentes viagères à titre onéreux perçues par le foyer par âge d'entrée en jouissance : A partir de 70 ans",
-)
-
-@define_variable(jour_xyz, foyer_fiscal_definition, Int32, requested_period_default_value,
-  cell_default = 360,
-  label = "Jours décomptés au titre de cette déclaration",
-)
-
-@define_variable(rfr_n_1, foyer_fiscal_definition, Int32, requested_period_default_value,
-  cell_format = "monetary",
-  label = "Revenu fiscal de référence année n - 1",
-)
-
-@define_variable(rfr_n_2, foyer_fiscal_definition, Int32, requested_period_default_value,
-  cell_format = "monetary",
-  label = "Revenu fiscal de référence année n - 2",
-)
-
-@define_variable(nbptr_n_2, foyer_fiscal_definition, Int32, requested_period_last_value,
-  cell_format = "monetary",
-  label = "Nombre de parts année n - 2",
-)
-
-@define_variable(f2da, foyer_fiscal_definition, Int32, requested_period_default_value,
-  cell_format = "monetary",
-  cerfa_field = "2DA",
-  label = "Revenus des actions et parts soumis au prélèvement libératoire de 21 %",
-  start_date = Date(2008, 1, 1),
-  stop_date = Date(2012, 12, 31),
-)
-
-@define_variable(f2dh, foyer_fiscal_definition, Int32, requested_period_default_value,
-  cell_format = "monetary",
-  cerfa_field = "2DH",
-  label = "Produits d’assurance-vie et de capitalisation soumis au prélèvement libératoire de 7.5 %",
-)
-
-@define_variable(f2ee, foyer_fiscal_definition, Int32, requested_period_default_value,
-  cell_format = "monetary",
-  cerfa_field = "2EE",
-  label = "Autres produits de placement soumis aux prélèvements libératoires",
-)
-
-@define_variable(f2dc, foyer_fiscal_definition, Int32, requested_period_default_value,
-  cell_format = "monetary",
-  cerfa_field = "2DC",
-  label = "Revenus des actions et parts donnant droit à abattement",
-)
-
-@define_variable(f2fu, foyer_fiscal_definition, Int32, requested_period_default_value,
-  cell_format = "monetary",
-  cerfa_field = "2FU",
-  label = "Revenus imposables des titres non côtés détenus dans le PEA et distributions perçues via votre entreprise donnant droit à abattement",
-)
-
-@define_variable(f2ch, foyer_fiscal_definition, Int32, requested_period_default_value,
-  cell_format = "monetary",
-  cerfa_field = "2CH",
-  label = "Produits des contrats d'assurance-vie et de capitalisation d'une durée d'au moins 6 ou 8 ans donnant droit à abattement",
-)
-
-@define_variable(f2ts, foyer_fiscal_definition, Int32, requested_period_default_value,
-  cell_format = "monetary",
-  cerfa_field = "2TS",
-  label = "Revenus de valeurs mobilières, produits des contrats d'assurance-vie d'une durée inférieure à 8 ans et distributions (n'ouvrant pas droit à abattement)",
-)
-
-@define_variable(f2go, foyer_fiscal_definition, Int32, requested_period_default_value,
-  cell_format = "monetary",
-  cerfa_field = "2GO",
-  label = "Autres revenus distribués et revenus des structures soumises hors de France à un régime fiscal privilégié (n'ouvrant pas droit à abattement)",
-)
-
-@define_variable(f2tr, foyer_fiscal_definition, Int32, requested_period_default_value,
-  cell_format = "monetary",
-  cerfa_field = "2TR",
-  label = "Produits de placements à revenu fixe, intérêts et autres revenus assimilés (n'ouvrant pas droit à abattement)",
-)
-
-@define_variable(f2cg, foyer_fiscal_definition, Int32, requested_period_default_value,
-  cell_format = "monetary",
-  cerfa_field = "2CG",
-  label = "Revenus des lignes 2DC, 2CH, 2TS, 2TR déjà soumis au prélèvement sociaux sans CSG déductible",
-)
-
-@define_variable(f2bh, foyer_fiscal_definition, Int32, requested_period_default_value,
-  cell_format = "monetary",
-  cerfa_field = "2BH",
-  label = "Revenus des lignes 2DC, 2CH, 2TS, 2TR déjà soumis au prélèvement sociaux avec CSG déductible",
-  start_date = Date(2007, 1, 1),
-)
-
-@define_variable(f2ca, foyer_fiscal_definition, Int32, requested_period_default_value,
-  cell_format = "monetary",
-  cerfa_field = "2CA",
-  label = "Frais et charges déductibles",
-)
-
-@define_variable(f2ck, foyer_fiscal_definition, Int32, requested_period_default_value,
-  cell_format = "monetary",
-  cerfa_field = "2CK",
-  label = "Crédit d'impôt égal au prélèvement forfaitaire déjà versé",
-  start_date = Date(2013, 1, 1),
-)
-
-@define_variable(f2ab, foyer_fiscal_definition, Int32, requested_period_default_value,
-  cell_format = "monetary",
-  cerfa_field = "2AB",
-  label = "Crédits d'impôt sur valeurs étrangères",
-)
-
-@define_variable(f2bg, foyer_fiscal_definition, Int32, requested_period_default_value,
-  cell_format = "monetary",
-  cerfa_field = "2BG",
-  label = "Crédits d'impôt 'directive épargne' et autres crédits d'impôt restituables",
-)
-
-@define_variable(f2aa, foyer_fiscal_definition, Int32, requested_period_default_value,
-  cell_format = "monetary",
-  cerfa_field = "2AA",
-  label = "Déficits des années antérieures non encore déduits",
-  start_date = Date(2007, 1, 1),
-)
-
-@define_variable(f2al, foyer_fiscal_definition, Int32, requested_period_default_value,
-  cell_format = "monetary",
-  cerfa_field = "2AL",
-  label = "Déficits des années antérieures non encore déduits",
-  start_date = Date(2008, 1, 1),
-)
-
-@define_variable(f2am, foyer_fiscal_definition, Int32, requested_period_default_value,
-  cell_format = "monetary",
-  cerfa_field = "2AM",
-  label = "Déficits des années antérieures non encore déduits",
-  start_date = Date(2009, 1, 1),
-)
-
-@define_variable(f2an, foyer_fiscal_definition, Int32, requested_period_default_value,
-  cell_format = "monetary",
-  cerfa_field = "2AN",
-  label = "Déficits des années antérieures non encore déduits",
-  start_date = Date(2010, 1, 1),
-)
-
-@define_variable(f2aq, foyer_fiscal_definition, Int32, requested_period_default_value,
-  cell_format = "monetary",
-  cerfa_field = "2AQ",
-  label = "Déficits des années antérieures non encore déduits",
-  start_date = Date(2011, 1, 1),
-)
-
-@define_variable(f2ar, foyer_fiscal_definition, Int32, requested_period_default_value,
-  cell_format = "monetary",
-  cerfa_field = "2AR",
-  label = "Déficits des années antérieures non encore déduits",
-  start_date = Date(2012, 1, 1),
-)
-
-@define_variable(f2as, foyer_fiscal_definition, Int32, requested_period_default_value,
-  cell_format = "monetary",
-  label = "Déficits des années antérieures non encore déduits: année 2012",
-  stop_date = Date(2011, 12, 31),
-)
-
-@define_variable(f2dm, foyer_fiscal_definition, Int32, requested_period_default_value,
-  cell_format = "monetary",
-  cerfa_field = "2DM",
-  label = "Impatriés: revenus de capitaux mobiliers perçus à l'étranger, abattement de 50 %",
-  start_date = Date(2008, 1, 1),
-)
-
-@define_variable(f2gr, foyer_fiscal_definition, Int32, requested_period_default_value,
-  cell_format = "monetary",
-  cerfa_field = "2GR",
-  label = "Revenus distribués dans le PEA (pour le calcul du crédit d'impôt de 50 %)",
-  start_date = Date(2005, 1, 1),
-  stop_date = Date(2009, 12, 31),
-)
-
-@define_variable(f3si, foyer_fiscal_definition, Int32, requested_period_default_value,
-  start_date = Date(2012, 1, 1),
-)
-
-@define_variable(f3sa, foyer_fiscal_definition, Int32, requested_period_default_value,
-  stop_date = Date(2009, 12, 31),
-)
-
-@define_variable(f3sf, foyer_fiscal_definition, Int32, requested_period_default_value,
-  start_date = Date(2012, 1, 1),
-)
-
-@define_variable(f3sd, foyer_fiscal_definition, Int32, requested_period_default_value,
-  start_date = Date(2012, 1, 1),
-)
-
-@define_variable(f3vc, foyer_fiscal_definition, Int32, requested_period_default_value,
-  cell_format = "monetary",
-  cerfa_field = "3VC",
-  label = "Produits et plus-values exonérés provenant de structure de capital-risque",
-  start_date = Date(2006, 1, 1),
-)
-
-@define_variable(f3ve, foyer_fiscal_definition, Int32, requested_period_default_value,
-  cell_format = "monetary",
-  cerfa_field = "3VE",
-  label = "Plus-values réalisées par les non-résidents pour lesquelles vous demandez le remboursement de l'excédent du prélèvement de 45 %",
-)
-
-@define_variable(f3vl, foyer_fiscal_definition, Int32, requested_period_default_value,
-  cell_format = "monetary",
-  cerfa_field = "3VL",
-  label = "Distributions par des sociétés de capital-risque taxables à 19 %",
-)
-
-@define_variable(f3vm, foyer_fiscal_definition, Int32, requested_period_default_value,
-  cell_format = "monetary",
-  cerfa_field = "3VM",
-  label = "Clôture du PEA avant l'expiration de la 2e année: gains taxables à 22.5 %",
-)
-
-@define_variable(f3vt, foyer_fiscal_definition, Int32, requested_period_default_value,
-  cell_format = "monetary",
-  cerfa_field = "3VT",
-  label = "Clôture du PEA  entre la 2e et la 5e année: gains taxables à 19 %",
-  start_date = Date(2010, 1, 1),
-)
-
-@define_variable(f3vg, foyer_fiscal_definition, Int32, requested_period_default_value,
-  cell_format = "monetary",
-  cerfa_field = "3VG",
-  label = "Plus-value imposable sur gains de cession de valeurs mobilières, de droits sociaux et gains assimilés",
-)
-
-@define_variable(f3vh, foyer_fiscal_definition, Int32, requested_period_default_value,
-  cell_format = "monetary",
-  cerfa_field = "3VH",
-  label = "Perte de l'année de perception des revenus",
-)
-
-@define_variable(f3vu, foyer_fiscal_definition, Int32, requested_period_default_value,
-  stop_date = Date(2009, 12, 31),
-)
-
-@define_variable(f3vv, foyer_fiscal_definition, Int32, requested_period_default_value,
-  cell_format = "monetary",
-  cerfa_field = "3VV",
-  label = "Plus-values réalisées par les non-résidents: montant du prélèvement de 45 % déjà versé",
-  start_date = Date(2013, 1, 1),
-)
-
-@define_variable(f3vv_end_2010, foyer_fiscal_definition, Int32, requested_period_default_value,
-  cell_format = "monetary",
-  cerfa_field = "3VV",
-  label = "Pertes ouvrant droit au crédit d’impôt de 19 % ",
-  start_date = Date(2010, 1, 1),
-  stop_date = Date(2010, 12, 31),
-)
-
-@define_variable(f3vz, foyer_fiscal_definition, Int32, requested_period_default_value,
-  cell_format = "monetary",
-  cerfa_field = "3VZ",
-  label = "Plus-values imposables sur cessions d’immeubles ou de biens meubles",
-  start_date = Date(2011, 1, 1),
-)
-
-@define_variable(f4ba, foyer_fiscal_definition, Int32, requested_period_default_value,
-  cell_format = "monetary",
-  cerfa_field = "4BA",
-  label = "Revenus fonciers imposables",
-)
-
-@define_variable(f4bb, foyer_fiscal_definition, Int32, requested_period_default_value,
-  cell_format = "monetary",
-  cerfa_field = "4BB",
-  label = "Déficit imputable sur les revenus fonciers",
-)
-
-@define_variable(f4bc, foyer_fiscal_definition, Int32, requested_period_default_value,
-  cell_format = "monetary",
-  cerfa_field = "4BC",
-  label = "Déficit imputable sur le revenu global",
-)
-
-@define_variable(f4bd, foyer_fiscal_definition, Int32, requested_period_default_value,
-  cell_format = "monetary",
-  cerfa_field = "4BD",
-  label = "Déficits antérieurs non encore imputés",
-)
-
-@define_variable(f4be, foyer_fiscal_definition, Int32, requested_period_default_value,
-  cell_format = "monetary",
-  cerfa_field = "4BE",
-  label = "Micro foncier: recettes brutes sans abattement",
-)
-
-@define_variable(f4bf, foyer_fiscal_definition, Int32, requested_period_default_value,
-  cell_format = "monetary",
-  cerfa_field = "4BF",
-  label = "Primes d'assurance pour loyers impayés des locations conventionnées",
-)
-
-@define_variable(f4bl, foyer_fiscal_definition, Int32, requested_period_default_value,
-  stop_date = Date(2009, 12, 31),
-)
-
-@define_variable(mbic_mvct, foyer_fiscal_definition, Int32, requested_period_default_value,
-  cell_format = "monetary",
-  cerfa_field = "5HU",
-  label = "Moins-values industrielles et commerciales nettes à court terme du foyer (régime micro entreprise)",
-  stop_date = Date(2011, 12, 31),
-)
-
-@define_variable(macc_mvct, foyer_fiscal_definition, Int32, requested_period_default_value,
-  cell_format = "monetary",
-  cerfa_field = "5IU",
-  label = "Moins-values industrielles et commerciales non professionnelles nettes à court terme du foyer (régime micro entreprise)",
-)
-
-@define_variable(mncn_mvct, foyer_fiscal_definition, Int32, requested_period_default_value,
-  cell_format = "monetary",
-  cerfa_field = "JU",
-  label = "Moins-values non commerciales non professionnelles nettes à court terme du foyer (régime déclaratif spécial ou micro BNC)",
-)
-
-@define_variable(f5qf, foyer_fiscal_definition, Int32, requested_period_default_value,
-  cell_format = "monetary",
-  cerfa_field = "5QF",
-  label = "Déficits des revenus agricoles des années antérieures non encore déduits (n-6)",
-  start_date = Date(2007, 1, 1),
-)
-
-@define_variable(f5qg, foyer_fiscal_definition, Int32, requested_period_default_value,
-  cell_format = "monetary",
-  cerfa_field = "5QG",
-  label = "Déficits des revenus agricoles des années antérieures non encore déduits (n-5)",
-  start_date = Date(2007, 1, 1),
-)
-
-@define_variable(f5qn, foyer_fiscal_definition, Int32, requested_period_default_value,
-  cell_format = "monetary",
-  cerfa_field = "5QN",
-  label = "Déficits des revenus agricoles des années antérieures non encore déduits (n-4)",
-  start_date = Date(2007, 1, 1),
-)
-
-@define_variable(f5qo, foyer_fiscal_definition, Int32, requested_period_default_value,
-  cell_format = "monetary",
-  cerfa_field = "5QO",
-  label = "Déficits des revenus agricoles des années antérieures non encore déduits (n-3)",
-  start_date = Date(2007, 1, 1),
-)
-
-@define_variable(f5qp, foyer_fiscal_definition, Int32, requested_period_default_value,
-  cell_format = "monetary",
-  cerfa_field = "5QP",
-  label = "Déficits des revenus agricoles des années antérieures non encore déduits (n-2)",
-  start_date = Date(2007, 1, 1),
-)
-
-@define_variable(f5qq, foyer_fiscal_definition, Int32, requested_period_default_value,
-  cell_format = "monetary",
-  cerfa_field = "5QQ",
-  label = "Déficits des revenus agricoles des années antérieures non encore déduits (n-1)",
-  start_date = Date(2007, 1, 1),
-)
-
-@define_variable(f5ga, foyer_fiscal_definition, Int32, requested_period_default_value,
-  cell_format = "monetary",
-  cerfa_field = "5GA",
-  label = "Déficits des revenus de locations meublées non professionnelles années antérieures non encore déduits (n-10)",
-  start_date = Date(2010, 1, 1),
-  stop_date = Date(2010, 12, 31),
-)
-
-@define_variable(f5gb, foyer_fiscal_definition, Int32, requested_period_default_value,
-  cell_format = "monetary",
-  cerfa_field = "5GB",
-  label = "Déficits des revenus de locations meublées non professionnelles années antérieures non encore déduits (n-9)",
-  start_date = Date(2010, 1, 1),
-  stop_date = Date(2010, 12, 31),
-)
-
-@define_variable(f5gc, foyer_fiscal_definition, Int32, requested_period_default_value,
-  cell_format = "monetary",
-  cerfa_field = "5GC",
-  label = "Déficits des revenus de locations meublées non professionnelles années antérieures non encore déduits (n-8)",
-  start_date = Date(2010, 1, 1),
-  stop_date = Date(2010, 12, 31),
-)
-
-@define_variable(f5gd, foyer_fiscal_definition, Int32, requested_period_default_value,
-  cell_format = "monetary",
-  cerfa_field = "5GD",
-  label = "Déficits des revenus de locations meublées non professionnelles années antérieures non encore déduits (n-7)",
-  start_date = Date(2010, 1, 1),
-  stop_date = Date(2010, 12, 31),
-)
-
-@define_variable(f5ge, foyer_fiscal_definition, Int32, requested_period_default_value,
-  cell_format = "monetary",
-  cerfa_field = "5GE",
-  label = "Déficits des revenus de locations meublées non professionnelles années antérieures non encore déduits (n-6)",
-  start_date = Date(2010, 1, 1),
-  stop_date = Date(2010, 12, 31),
-)
-
-@define_variable(f5gf, foyer_fiscal_definition, Int32, requested_period_default_value,
-  cell_format = "monetary",
-  cerfa_field = "5GF",
-  label = "Déficits des revenus de locations meublées non professionnelles années antérieures non encore déduits (n-5)",
-  start_date = Date(2010, 1, 1),
-  stop_date = Date(2010, 12, 31),
-)
-
-@define_variable(f5gg, foyer_fiscal_definition, Int32, requested_period_default_value,
-  cell_format = "monetary",
-  cerfa_field = "5GG",
-  label = "Déficits des revenus de locations meublées non professionnelles années antérieures non encore déduits (n-4)",
-  start_date = Date(2010, 1, 1),
-  stop_date = Date(2010, 12, 31),
-)
-
-@define_variable(f5gh, foyer_fiscal_definition, Int32, requested_period_default_value,
-  cell_format = "monetary",
-  cerfa_field = "5GH",
-  label = "Déficits des revenus de locations meublées non professionnelles années antérieures non encore déduits (n-3)",
-  start_date = Date(2010, 1, 1),
-  stop_date = Date(2010, 12, 31),
-)
-
-@define_variable(f5gi, foyer_fiscal_definition, Int32, requested_period_default_value,
-  cell_format = "monetary",
-  cerfa_field = "5GI",
-  label = "Déficits des revenus de locations meublées non professionnelles années antérieures non encore déduits (n-2)",
-  start_date = Date(2010, 1, 1),
-  stop_date = Date(2010, 12, 31),
-)
-
-@define_variable(f5gj, foyer_fiscal_definition, Int32, requested_period_default_value,
-  cell_format = "monetary",
-  cerfa_field = "5GJ",
-  label = "Déficits des revenus de locations meublées non professionnelles années antérieures non encore déduits (n-1)",
-  start_date = Date(2010, 1, 1),
-  stop_date = Date(2010, 12, 31),
-)
-
-@define_variable(f5rn, foyer_fiscal_definition, Int32, requested_period_default_value,
-  cell_format = "monetary",
-  cerfa_field = "5RN",
-  label = "Déficits des revenus industriels et commerciaux non professionnelles années antérieures non encore déduits (n-6)",
-  start_date = Date(2010, 1, 1),
-  stop_date = Date(2010, 12, 31),
-)
-
-@define_variable(f5ro, foyer_fiscal_definition, Int32, requested_period_default_value,
-  cell_format = "monetary",
-  cerfa_field = "5RO",
-  label = "Déficits des revenus industriels et commerciaux non professionnelles années antérieures non encore déduits (n-5)",
-)
-
-@define_variable(f5rp, foyer_fiscal_definition, Int32, requested_period_default_value,
-  cell_format = "monetary",
-  cerfa_field = "5RP",
-  label = "Déficits des revenus industriels et commerciaux non professionnelles années antérieures non encore déduits (n-4)",
-)
-
-@define_variable(f5rq, foyer_fiscal_definition, Int32, requested_period_default_value,
-  cell_format = "monetary",
-  cerfa_field = "5RQ",
-  label = "Déficits des revenus industriels et commerciaux non professionnelles années antérieures non encore déduits (n-3)",
-)
-
-@define_variable(f5rr, foyer_fiscal_definition, Int32, requested_period_default_value,
-  cell_format = "monetary",
-  cerfa_field = "5RR",
-  label = "Déficits des revenus industriels et commerciaux non professionnelles années antérieures non encore déduits (n-2)",
-)
-
-@define_variable(f5rw, foyer_fiscal_definition, Int32, requested_period_default_value,
-  cell_format = "monetary",
-  cerfa_field = "5RW",
-  label = "Déficits des revenus industriels et commerciaux non professionnelles années antérieures non encore déduits (n-1)",
-)
-
-@define_variable(f5ht, foyer_fiscal_definition, Int32, requested_period_default_value,
-  cell_format = "monetary",
-  cerfa_field = "5HT",
-  label = "Déficits des revenus non commerciaux non professionnelles années antérieures non encore déduits (n-6)",
-  start_date = Date(2007, 1, 1),
-)
-
-@define_variable(f5it, foyer_fiscal_definition, Int32, requested_period_default_value,
-  cell_format = "monetary",
-  cerfa_field = "5IT",
-  label = "Déficits des revenus non commerciaux non professionnelles années antérieures non encore déduits (n-5)",
-  start_date = Date(2007, 1, 1),
-)
-
-@define_variable(f5jt, foyer_fiscal_definition, Int32, requested_period_default_value,
-  cell_format = "monetary",
-  cerfa_field = "5JT",
-  label = "Déficits des revenus non commerciaux non professionnelles années antérieures non encore déduits (n-4)",
-  start_date = Date(2007, 1, 1),
-)
-
-@define_variable(f5kt, foyer_fiscal_definition, Int32, requested_period_default_value,
-  cell_format = "monetary",
-  cerfa_field = "5KT",
-  label = "Déficits des revenus non commerciaux non professionnelles années antérieures non encore déduits (n-3)",
-  start_date = Date(2007, 1, 1),
-)
-
-@define_variable(f5lt, foyer_fiscal_definition, Int32, requested_period_default_value,
-  cell_format = "monetary",
-  cerfa_field = "5LT",
-  label = "Déficits des revenus non commerciaux non professionnelles années antérieures non encore déduits (n-2)",
-  start_date = Date(2007, 1, 1),
-)
-
-@define_variable(f5mt, foyer_fiscal_definition, Int32, requested_period_default_value,
-  cell_format = "monetary",
-  cerfa_field = "5MT",
-  label = "Déficits des revenus non commerciaux non professionnelles années antérieures non encore déduits (n-1)",
-  start_date = Date(2007, 1, 1),
 )
 
 @define_variable(f6de, foyer_fiscal_definition, Int32, requested_period_default_value,
@@ -868,6 +387,26 @@
   cell_format = "monetary",
   cerfa_field = "6FL",
   label = "Deficits globaux des années antérieures non encore déduits: année de perception des revenus -1",
+)
+
+@define_variable(jour_xyz, foyer_fiscal_definition, Int32, requested_period_default_value,
+  cell_default = 360,
+  label = "Jours décomptés au titre de cette déclaration",
+)
+
+@define_variable(rfr_n_1, foyer_fiscal_definition, Int32, requested_period_default_value,
+  cell_format = "monetary",
+  label = "Revenu fiscal de référence année n - 1",
+)
+
+@define_variable(rfr_n_2, foyer_fiscal_definition, Int32, requested_period_default_value,
+  cell_format = "monetary",
+  label = "Revenu fiscal de référence année n - 2",
+)
+
+@define_variable(nbptr_n_2, foyer_fiscal_definition, Int32, requested_period_last_value,
+  cell_format = "monetary",
+  label = "Nombre de parts année n - 2",
 )
 
 @define_variable(f7ud, foyer_fiscal_definition, Int32, requested_period_default_value,
@@ -3861,16 +3400,23 @@
   start_date = Date(2013, 1, 1),
 )
 
-@define_variable(f8ta, foyer_fiscal_definition, Int32, requested_period_default_value,
+@define_variable(f8tc, foyer_fiscal_definition, Int32, requested_period_default_value,
   cell_format = "monetary",
-  cerfa_field = "8TA",
-  label = "Retenue à la source en France ou impôt payé à l'étranger",
+  cerfa_field = "8TC",
+  label = "Crédit d'impôt autres entreprises (recherche non encore remboursé (années antérieures))",
+  stop_date = Date(2008, 12, 31),
 )
 
 @define_variable(f8tb, foyer_fiscal_definition, Int32, requested_period_default_value,
   cell_format = "monetary",
   cerfa_field = "8TB",
   label = "Crédit d'impôt recherche (entreprises bénéficiant de la restitution immédiate)",
+)
+
+@define_variable(f8te, foyer_fiscal_definition, Int32, requested_period_default_value,
+  cell_format = "monetary",
+  cerfa_field = "8TE",
+  label = "Crédit d'impôt en faveur des entreprises: adhésion à un groupement de prévention agréé",
 )
 
 @define_variable(f8tf, foyer_fiscal_definition, Int32, requested_period_default_value,
@@ -3883,51 +3429,6 @@
   cell_format = "monetary",
   cerfa_field = "8TG",
   label = "Crédits d'impôt en faveur des entreprises: Investissement en Corse",
-)
-
-@define_variable(f8th, foyer_fiscal_definition, Int32, requested_period_default_value,
-  cell_format = "monetary",
-  cerfa_field = "8TH",
-  label = "Retenue à la source élus locaux",
-)
-
-@define_variable(f8tc, foyer_fiscal_definition, Int32, requested_period_default_value,
-  cell_format = "monetary",
-  cerfa_field = "8TC",
-  label = "Crédit d'impôt autres entreprises (recherche non encore remboursé (années antérieures))",
-  stop_date = Date(2008, 12, 31),
-)
-
-@define_variable(f8td_2002_2005, foyer_fiscal_definition, Int32, requested_period_default_value,
-  cerfa_field = "8TD",
-  label = "Contribution exceptionnelle sur les hauts revenus",
-  start_date = Date(2002, 1, 1),
-  stop_date = Date(2005, 12, 31),
-)
-
-@define_variable(f8td, foyer_fiscal_definition, Bool, requested_period_last_value,
-  cerfa_field = "8TD",
-  label = "Revenus non imposables dépassent la moitié du RFR",
-  start_date = Date(2011, 1, 1),
-  stop_date = Date(2014, 12, 31),
-)
-
-@define_variable(f8te, foyer_fiscal_definition, Int32, requested_period_default_value,
-  cell_format = "monetary",
-  cerfa_field = "8TE",
-  label = "Crédit d'impôt en faveur des entreprises: adhésion à un groupement de prévention agréé",
-)
-
-@define_variable(f8ti, foyer_fiscal_definition, Int32, requested_period_default_value,
-  cell_format = "monetary",
-  cerfa_field = "8TK",
-  label = "Revenus de l'étranger exonérés d'impôt",
-)
-
-@define_variable(f8tk, foyer_fiscal_definition, Int32, requested_period_default_value,
-  cell_format = "monetary",
-  cerfa_field = "8TK",
-  label = "Revenus de l'étranger imposables",
 )
 
 @define_variable(f8tl, foyer_fiscal_definition, Int32, requested_period_default_value,
@@ -4067,6 +3568,44 @@
   stop_date = Date(2008, 12, 31),
 )
 
+@define_variable(f8ta, foyer_fiscal_definition, Int32, requested_period_default_value,
+  cell_format = "monetary",
+  cerfa_field = "8TA",
+  label = "Retenue à la source en France ou impôt payé à l'étranger",
+)
+
+@define_variable(f8th, foyer_fiscal_definition, Int32, requested_period_default_value,
+  cell_format = "monetary",
+  cerfa_field = "8TH",
+  label = "Retenue à la source élus locaux",
+)
+
+@define_variable(f8td_2002_2005, foyer_fiscal_definition, Int32, requested_period_default_value,
+  cerfa_field = "8TD",
+  label = "Contribution exceptionnelle sur les hauts revenus",
+  start_date = Date(2002, 1, 1),
+  stop_date = Date(2005, 12, 31),
+)
+
+@define_variable(f8td, foyer_fiscal_definition, Bool, requested_period_last_value,
+  cerfa_field = "8TD",
+  label = "Revenus non imposables dépassent la moitié du RFR",
+  start_date = Date(2011, 1, 1),
+  stop_date = Date(2014, 12, 31),
+)
+
+@define_variable(f8ti, foyer_fiscal_definition, Int32, requested_period_default_value,
+  cell_format = "monetary",
+  cerfa_field = "8TK",
+  label = "Revenus de l'étranger exonérés d'impôt",
+)
+
+@define_variable(f8tk, foyer_fiscal_definition, Int32, requested_period_default_value,
+  cell_format = "monetary",
+  cerfa_field = "8TK",
+  label = "Revenus de l'étranger imposables",
+)
+
 @define_variable(f8uy, foyer_fiscal_definition, Int32, requested_period_default_value,
   cell_format = "monetary",
   cerfa_field = "8UY",
@@ -4074,71 +3613,537 @@
   start_date = Date(2009, 1, 1),
 )
 
-@define_variable(nbN, foyer_fiscal_definition, Int32, requested_period_last_value,
-  cerfa_field = "N",
-  label = "Nombre d'enfants mariés/pacsés et d'enfants non mariés chargés de famille",
-)
-
-@define_variable(nbR, foyer_fiscal_definition, Int32, requested_period_last_value,
-  cerfa_field = "R",
-  label = "Nombre de titulaires (autres que les enfants) de la carte invalidité d'au moins 80 %",
-)
-
-@define_variable(caseE, foyer_fiscal_definition, Bool, requested_period_last_value,
-  cerfa_field = "E",
-  label = "Situation pouvant donner droit à une demi-part supplémentaire : vous vivez seul au 1er janvier de l'année de perception des revenus et vous avez élevé un enfant pendant moins de 5 ans durant la période où vous viviez seul",
-  stop_date = Date(2012, 12, 31),
-)
-
-@define_variable(caseF, foyer_fiscal_definition, Bool, requested_period_last_value,
-  cerfa_field = "F",
-  label = "Situation pouvant donner droit à une demi-part supplémentaire : conjoint titulaire d'une pension ou d'une carte d'invalidité (vivant ou décédé l'année de perception des revenus)",
-)
-
-@define_variable(caseG, foyer_fiscal_definition, Bool, requested_period_last_value,
-  cerfa_field = "G",
-  label = "Titulaire d'une pension de veuve de guerre",
-)
-
-@define_variable(caseH, foyer_fiscal_definition, Int32, requested_period_last_value,
-  cerfa_field = "H",
-  label = "Année de naissance des enfants à charge en garde alternée",
-)
-
-@define_variable(caseK, foyer_fiscal_definition, Bool, requested_period_last_value,
-  cerfa_field = "K",
-  label = "Situation pouvant donner droit à une demi-part supplémentaire: vous avez eu un enfant décédé après l’âge de 16 ans ou par suite de faits de guerre",
+@define_variable(mbic_mvct, foyer_fiscal_definition, Int32, requested_period_default_value,
+  cell_format = "monetary",
+  cerfa_field = "5HU",
+  label = "Moins-values industrielles et commerciales nettes à court terme du foyer (régime micro entreprise)",
   stop_date = Date(2011, 12, 31),
 )
 
-@define_variable(caseL, foyer_fiscal_definition, Bool, requested_period_last_value,
-  cerfa_field = "L",
-  label = "Situation pouvant donner droit à une demi-part supplémentaire: vous vivez seul au 1er janvier de l'année de perception des revenus et vous avez élevé un enfant pendant au moins 5 ans durant la période où vous viviez seul",
+@define_variable(macc_mvct, foyer_fiscal_definition, Int32, requested_period_default_value,
+  cell_format = "monetary",
+  cerfa_field = "5IU",
+  label = "Moins-values industrielles et commerciales non professionnelles nettes à court terme du foyer (régime micro entreprise)",
 )
 
-@define_variable(caseN, foyer_fiscal_definition, Bool, requested_period_last_value,
-  cerfa_field = "N",
-  label = "Vous ne viviez pas seul au 1er janvier de l'année de perception des revenus",
+@define_variable(mncn_mvct, foyer_fiscal_definition, Int32, requested_period_default_value,
+  cell_format = "monetary",
+  cerfa_field = "JU",
+  label = "Moins-values non commerciales non professionnelles nettes à court terme du foyer (régime déclaratif spécial ou micro BNC)",
 )
 
-@define_variable(caseP, foyer_fiscal_definition, Bool, requested_period_last_value,
-  cerfa_field = "P",
-  label = "Titulaire d'une pension pour une invalidité d'au moins 40 % ou d'une carte d'invalidité d'au moins 80%",
+@define_variable(f5qf, foyer_fiscal_definition, Int32, requested_period_default_value,
+  cell_format = "monetary",
+  cerfa_field = "5QF",
+  label = "Déficits des revenus agricoles des années antérieures non encore déduits (n-6)",
+  start_date = Date(2007, 1, 1),
 )
 
-@define_variable(caseS, foyer_fiscal_definition, Bool, requested_period_last_value,
-  cerfa_field = "S",
-  label = "Vous êtes mariés/pacsés et l'un des deux déclarants âgé de plus de 75 ans est titulaire de la carte du combattant ou d'une pension militaire d'invalidité ou de victime de guerre",
+@define_variable(f5qg, foyer_fiscal_definition, Int32, requested_period_default_value,
+  cell_format = "monetary",
+  cerfa_field = "5QG",
+  label = "Déficits des revenus agricoles des années antérieures non encore déduits (n-5)",
+  start_date = Date(2007, 1, 1),
 )
 
-@define_variable(caseT, foyer_fiscal_definition, Bool, requested_period_last_value,
-  cerfa_field = "T",
-  label = "Vous êtes parent isolé au 1er janvier de l'année de perception des revenus",
+@define_variable(f5qn, foyer_fiscal_definition, Int32, requested_period_default_value,
+  cell_format = "monetary",
+  cerfa_field = "5QN",
+  label = "Déficits des revenus agricoles des années antérieures non encore déduits (n-4)",
+  start_date = Date(2007, 1, 1),
 )
 
-@define_variable(caseW, foyer_fiscal_definition, Bool, requested_period_last_value,
-  cerfa_field = "W",
-  label = "Vous ou votre conjoint (même s'il est décédé), âgés de plus de 75 ans, êtes titulaire de la carte du combattant ou d'une pension militaire d'invalidité ou de victime de guerre",
+@define_variable(f5qo, foyer_fiscal_definition, Int32, requested_period_default_value,
+  cell_format = "monetary",
+  cerfa_field = "5QO",
+  label = "Déficits des revenus agricoles des années antérieures non encore déduits (n-3)",
+  start_date = Date(2007, 1, 1),
+)
+
+@define_variable(f5qp, foyer_fiscal_definition, Int32, requested_period_default_value,
+  cell_format = "monetary",
+  cerfa_field = "5QP",
+  label = "Déficits des revenus agricoles des années antérieures non encore déduits (n-2)",
+  start_date = Date(2007, 1, 1),
+)
+
+@define_variable(f5qq, foyer_fiscal_definition, Int32, requested_period_default_value,
+  cell_format = "monetary",
+  cerfa_field = "5QQ",
+  label = "Déficits des revenus agricoles des années antérieures non encore déduits (n-1)",
+  start_date = Date(2007, 1, 1),
+)
+
+@define_variable(f5ga, foyer_fiscal_definition, Int32, requested_period_default_value,
+  cell_format = "monetary",
+  cerfa_field = "5GA",
+  label = "Déficits des revenus de locations meublées non professionnelles années antérieures non encore déduits (n-10)",
+  start_date = Date(2010, 1, 1),
+  stop_date = Date(2010, 12, 31),
+)
+
+@define_variable(f5gb, foyer_fiscal_definition, Int32, requested_period_default_value,
+  cell_format = "monetary",
+  cerfa_field = "5GB",
+  label = "Déficits des revenus de locations meublées non professionnelles années antérieures non encore déduits (n-9)",
+  start_date = Date(2010, 1, 1),
+  stop_date = Date(2010, 12, 31),
+)
+
+@define_variable(f5gc, foyer_fiscal_definition, Int32, requested_period_default_value,
+  cell_format = "monetary",
+  cerfa_field = "5GC",
+  label = "Déficits des revenus de locations meublées non professionnelles années antérieures non encore déduits (n-8)",
+  start_date = Date(2010, 1, 1),
+  stop_date = Date(2010, 12, 31),
+)
+
+@define_variable(f5gd, foyer_fiscal_definition, Int32, requested_period_default_value,
+  cell_format = "monetary",
+  cerfa_field = "5GD",
+  label = "Déficits des revenus de locations meublées non professionnelles années antérieures non encore déduits (n-7)",
+  start_date = Date(2010, 1, 1),
+  stop_date = Date(2010, 12, 31),
+)
+
+@define_variable(f5ge, foyer_fiscal_definition, Int32, requested_period_default_value,
+  cell_format = "monetary",
+  cerfa_field = "5GE",
+  label = "Déficits des revenus de locations meublées non professionnelles années antérieures non encore déduits (n-6)",
+  start_date = Date(2010, 1, 1),
+  stop_date = Date(2010, 12, 31),
+)
+
+@define_variable(f5gf, foyer_fiscal_definition, Int32, requested_period_default_value,
+  cell_format = "monetary",
+  cerfa_field = "5GF",
+  label = "Déficits des revenus de locations meublées non professionnelles années antérieures non encore déduits (n-5)",
+  start_date = Date(2010, 1, 1),
+  stop_date = Date(2010, 12, 31),
+)
+
+@define_variable(f5gg, foyer_fiscal_definition, Int32, requested_period_default_value,
+  cell_format = "monetary",
+  cerfa_field = "5GG",
+  label = "Déficits des revenus de locations meublées non professionnelles années antérieures non encore déduits (n-4)",
+  start_date = Date(2010, 1, 1),
+  stop_date = Date(2010, 12, 31),
+)
+
+@define_variable(f5gh, foyer_fiscal_definition, Int32, requested_period_default_value,
+  cell_format = "monetary",
+  cerfa_field = "5GH",
+  label = "Déficits des revenus de locations meublées non professionnelles années antérieures non encore déduits (n-3)",
+  start_date = Date(2010, 1, 1),
+  stop_date = Date(2010, 12, 31),
+)
+
+@define_variable(f5gi, foyer_fiscal_definition, Int32, requested_period_default_value,
+  cell_format = "monetary",
+  cerfa_field = "5GI",
+  label = "Déficits des revenus de locations meublées non professionnelles années antérieures non encore déduits (n-2)",
+  start_date = Date(2010, 1, 1),
+  stop_date = Date(2010, 12, 31),
+)
+
+@define_variable(f5gj, foyer_fiscal_definition, Int32, requested_period_default_value,
+  cell_format = "monetary",
+  cerfa_field = "5GJ",
+  label = "Déficits des revenus de locations meublées non professionnelles années antérieures non encore déduits (n-1)",
+  start_date = Date(2010, 1, 1),
+  stop_date = Date(2010, 12, 31),
+)
+
+@define_variable(f5rn, foyer_fiscal_definition, Int32, requested_period_default_value,
+  cell_format = "monetary",
+  cerfa_field = "5RN",
+  label = "Déficits des revenus industriels et commerciaux non professionnelles années antérieures non encore déduits (n-6)",
+  start_date = Date(2010, 1, 1),
+  stop_date = Date(2010, 12, 31),
+)
+
+@define_variable(f5ro, foyer_fiscal_definition, Int32, requested_period_default_value,
+  cell_format = "monetary",
+  cerfa_field = "5RO",
+  label = "Déficits des revenus industriels et commerciaux non professionnelles années antérieures non encore déduits (n-5)",
+)
+
+@define_variable(f5rp, foyer_fiscal_definition, Int32, requested_period_default_value,
+  cell_format = "monetary",
+  cerfa_field = "5RP",
+  label = "Déficits des revenus industriels et commerciaux non professionnelles années antérieures non encore déduits (n-4)",
+)
+
+@define_variable(f5rq, foyer_fiscal_definition, Int32, requested_period_default_value,
+  cell_format = "monetary",
+  cerfa_field = "5RQ",
+  label = "Déficits des revenus industriels et commerciaux non professionnelles années antérieures non encore déduits (n-3)",
+)
+
+@define_variable(f5rr, foyer_fiscal_definition, Int32, requested_period_default_value,
+  cell_format = "monetary",
+  cerfa_field = "5RR",
+  label = "Déficits des revenus industriels et commerciaux non professionnelles années antérieures non encore déduits (n-2)",
+)
+
+@define_variable(f5rw, foyer_fiscal_definition, Int32, requested_period_default_value,
+  cell_format = "monetary",
+  cerfa_field = "5RW",
+  label = "Déficits des revenus industriels et commerciaux non professionnelles années antérieures non encore déduits (n-1)",
+)
+
+@define_variable(f5ht, foyer_fiscal_definition, Int32, requested_period_default_value,
+  cell_format = "monetary",
+  cerfa_field = "5HT",
+  label = "Déficits des revenus non commerciaux non professionnelles années antérieures non encore déduits (n-6)",
+  start_date = Date(2007, 1, 1),
+)
+
+@define_variable(f5it, foyer_fiscal_definition, Int32, requested_period_default_value,
+  cell_format = "monetary",
+  cerfa_field = "5IT",
+  label = "Déficits des revenus non commerciaux non professionnelles années antérieures non encore déduits (n-5)",
+  start_date = Date(2007, 1, 1),
+)
+
+@define_variable(f5jt, foyer_fiscal_definition, Int32, requested_period_default_value,
+  cell_format = "monetary",
+  cerfa_field = "5JT",
+  label = "Déficits des revenus non commerciaux non professionnelles années antérieures non encore déduits (n-4)",
+  start_date = Date(2007, 1, 1),
+)
+
+@define_variable(f5kt, foyer_fiscal_definition, Int32, requested_period_default_value,
+  cell_format = "monetary",
+  cerfa_field = "5KT",
+  label = "Déficits des revenus non commerciaux non professionnelles années antérieures non encore déduits (n-3)",
+  start_date = Date(2007, 1, 1),
+)
+
+@define_variable(f5lt, foyer_fiscal_definition, Int32, requested_period_default_value,
+  cell_format = "monetary",
+  cerfa_field = "5LT",
+  label = "Déficits des revenus non commerciaux non professionnelles années antérieures non encore déduits (n-2)",
+  start_date = Date(2007, 1, 1),
+)
+
+@define_variable(f5mt, foyer_fiscal_definition, Int32, requested_period_default_value,
+  cell_format = "monetary",
+  cerfa_field = "5MT",
+  label = "Déficits des revenus non commerciaux non professionnelles années antérieures non encore déduits (n-1)",
+  start_date = Date(2007, 1, 1),
+)
+
+@define_variable(f2da, foyer_fiscal_definition, Int32, requested_period_default_value,
+  cell_format = "monetary",
+  cerfa_field = "2DA",
+  label = "Revenus des actions et parts soumis au prélèvement libératoire de 21 %",
+  start_date = Date(2008, 1, 1),
+  stop_date = Date(2012, 12, 31),
+)
+
+@define_variable(f2dh, foyer_fiscal_definition, Int32, requested_period_default_value,
+  cell_format = "monetary",
+  cerfa_field = "2DH",
+  label = "Produits d’assurance-vie et de capitalisation soumis au prélèvement libératoire de 7.5 %",
+)
+
+@define_variable(f2ee, foyer_fiscal_definition, Int32, requested_period_default_value,
+  cell_format = "monetary",
+  cerfa_field = "2EE",
+  label = "Autres produits de placement soumis aux prélèvements libératoires",
+)
+
+@define_variable(f2dc, foyer_fiscal_definition, Int32, requested_period_default_value,
+  cell_format = "monetary",
+  cerfa_field = "2DC",
+  label = "Revenus des actions et parts donnant droit à abattement",
+)
+
+@define_variable(f2fu, foyer_fiscal_definition, Int32, requested_period_default_value,
+  cell_format = "monetary",
+  cerfa_field = "2FU",
+  label = "Revenus imposables des titres non côtés détenus dans le PEA et distributions perçues via votre entreprise donnant droit à abattement",
+)
+
+@define_variable(f2ch, foyer_fiscal_definition, Int32, requested_period_default_value,
+  cell_format = "monetary",
+  cerfa_field = "2CH",
+  label = "Produits des contrats d'assurance-vie et de capitalisation d'une durée d'au moins 6 ou 8 ans donnant droit à abattement",
+)
+
+@define_variable(f2ts, foyer_fiscal_definition, Int32, requested_period_default_value,
+  cell_format = "monetary",
+  cerfa_field = "2TS",
+  label = "Revenus de valeurs mobilières, produits des contrats d'assurance-vie d'une durée inférieure à 8 ans et distributions (n'ouvrant pas droit à abattement)",
+)
+
+@define_variable(f2go, foyer_fiscal_definition, Int32, requested_period_default_value,
+  cell_format = "monetary",
+  cerfa_field = "2GO",
+  label = "Autres revenus distribués et revenus des structures soumises hors de France à un régime fiscal privilégié (n'ouvrant pas droit à abattement)",
+)
+
+@define_variable(f2tr, foyer_fiscal_definition, Int32, requested_period_default_value,
+  cell_format = "monetary",
+  cerfa_field = "2TR",
+  label = "Produits de placements à revenu fixe, intérêts et autres revenus assimilés (n'ouvrant pas droit à abattement)",
+)
+
+@define_variable(f2cg, foyer_fiscal_definition, Int32, requested_period_default_value,
+  cell_format = "monetary",
+  cerfa_field = "2CG",
+  label = "Revenus des lignes 2DC, 2CH, 2TS, 2TR déjà soumis au prélèvement sociaux sans CSG déductible",
+)
+
+@define_variable(f2bh, foyer_fiscal_definition, Int32, requested_period_default_value,
+  cell_format = "monetary",
+  cerfa_field = "2BH",
+  label = "Revenus des lignes 2DC, 2CH, 2TS, 2TR déjà soumis au prélèvement sociaux avec CSG déductible",
+  start_date = Date(2007, 1, 1),
+)
+
+@define_variable(f2ca, foyer_fiscal_definition, Int32, requested_period_default_value,
+  cell_format = "monetary",
+  cerfa_field = "2CA",
+  label = "Frais et charges déductibles",
+)
+
+@define_variable(f2ck, foyer_fiscal_definition, Int32, requested_period_default_value,
+  cell_format = "monetary",
+  cerfa_field = "2CK",
+  label = "Crédit d'impôt égal au prélèvement forfaitaire déjà versé",
+  start_date = Date(2013, 1, 1),
+)
+
+@define_variable(f2ab, foyer_fiscal_definition, Int32, requested_period_default_value,
+  cell_format = "monetary",
+  cerfa_field = "2AB",
+  label = "Crédits d'impôt sur valeurs étrangères",
+)
+
+@define_variable(f2bg, foyer_fiscal_definition, Int32, requested_period_default_value,
+  cell_format = "monetary",
+  cerfa_field = "2BG",
+  label = "Crédits d'impôt 'directive épargne' et autres crédits d'impôt restituables",
+)
+
+@define_variable(f2aa, foyer_fiscal_definition, Int32, requested_period_default_value,
+  cell_format = "monetary",
+  cerfa_field = "2AA",
+  label = "Déficits des années antérieures non encore déduits",
+  start_date = Date(2007, 1, 1),
+)
+
+@define_variable(f2al, foyer_fiscal_definition, Int32, requested_period_default_value,
+  cell_format = "monetary",
+  cerfa_field = "2AL",
+  label = "Déficits des années antérieures non encore déduits",
+  start_date = Date(2008, 1, 1),
+)
+
+@define_variable(f2am, foyer_fiscal_definition, Int32, requested_period_default_value,
+  cell_format = "monetary",
+  cerfa_field = "2AM",
+  label = "Déficits des années antérieures non encore déduits",
+  start_date = Date(2009, 1, 1),
+)
+
+@define_variable(f2an, foyer_fiscal_definition, Int32, requested_period_default_value,
+  cell_format = "monetary",
+  cerfa_field = "2AN",
+  label = "Déficits des années antérieures non encore déduits",
+  start_date = Date(2010, 1, 1),
+)
+
+@define_variable(f2aq, foyer_fiscal_definition, Int32, requested_period_default_value,
+  cell_format = "monetary",
+  cerfa_field = "2AQ",
+  label = "Déficits des années antérieures non encore déduits",
+  start_date = Date(2011, 1, 1),
+)
+
+@define_variable(f2ar, foyer_fiscal_definition, Int32, requested_period_default_value,
+  cell_format = "monetary",
+  cerfa_field = "2AR",
+  label = "Déficits des années antérieures non encore déduits",
+  start_date = Date(2012, 1, 1),
+)
+
+@define_variable(f2as, foyer_fiscal_definition, Int32, requested_period_default_value,
+  cell_format = "monetary",
+  label = "Déficits des années antérieures non encore déduits: année 2012",
+  stop_date = Date(2011, 12, 31),
+)
+
+@define_variable(f2dm, foyer_fiscal_definition, Int32, requested_period_default_value,
+  cell_format = "monetary",
+  cerfa_field = "2DM",
+  label = "Impatriés: revenus de capitaux mobiliers perçus à l'étranger, abattement de 50 %",
+  start_date = Date(2008, 1, 1),
+)
+
+@define_variable(f2gr, foyer_fiscal_definition, Int32, requested_period_default_value,
+  cell_format = "monetary",
+  cerfa_field = "2GR",
+  label = "Revenus distribués dans le PEA (pour le calcul du crédit d'impôt de 50 %)",
+  start_date = Date(2005, 1, 1),
+  stop_date = Date(2009, 12, 31),
+)
+
+@define_variable(f1aw, foyer_fiscal_definition, Int32, requested_period_default_value,
+  cell_format = "monetary",
+  cerfa_field = "1AW",
+  label = "Rentes viagères à titre onéreux perçues par le foyer par âge d'entrée en jouissance : Moins de 50 ans",
+)
+
+@define_variable(f1bw, foyer_fiscal_definition, Int32, requested_period_default_value,
+  cell_format = "monetary",
+  cerfa_field = "1BW",
+  label = "Rentes viagères à titre onéreux perçues par le foyer par âge d'entrée en jouissance : De 50 à 59 ans",
+)
+
+@define_variable(f1cw, foyer_fiscal_definition, Int32, requested_period_default_value,
+  cell_format = "monetary",
+  cerfa_field = "1CW",
+  label = "Rentes viagères à titre onéreux perçues par le foyer par âge d'entrée en jouissance : De 60 à 69 ans",
+)
+
+@define_variable(f1dw, foyer_fiscal_definition, Int32, requested_period_default_value,
+  cell_format = "monetary",
+  cerfa_field = "1DW",
+  label = "Rentes viagères à titre onéreux perçues par le foyer par âge d'entrée en jouissance : A partir de 70 ans",
+)
+
+@define_variable(f4ba, foyer_fiscal_definition, Int32, requested_period_default_value,
+  cell_format = "monetary",
+  cerfa_field = "4BA",
+  label = "Revenus fonciers imposables",
+)
+
+@define_variable(f4bb, foyer_fiscal_definition, Int32, requested_period_default_value,
+  cell_format = "monetary",
+  cerfa_field = "4BB",
+  label = "Déficit imputable sur les revenus fonciers",
+)
+
+@define_variable(f4bc, foyer_fiscal_definition, Int32, requested_period_default_value,
+  cell_format = "monetary",
+  cerfa_field = "4BC",
+  label = "Déficit imputable sur le revenu global",
+)
+
+@define_variable(f4bd, foyer_fiscal_definition, Int32, requested_period_default_value,
+  cell_format = "monetary",
+  cerfa_field = "4BD",
+  label = "Déficits antérieurs non encore imputés",
+)
+
+@define_variable(f4be, foyer_fiscal_definition, Int32, requested_period_default_value,
+  cell_format = "monetary",
+  cerfa_field = "4BE",
+  label = "Micro foncier: recettes brutes sans abattement",
+)
+
+@define_variable(f4bf, foyer_fiscal_definition, Int32, requested_period_default_value,
+  cell_format = "monetary",
+  cerfa_field = "4BF",
+  label = "Primes d'assurance pour loyers impayés des locations conventionnées",
+)
+
+@define_variable(f4bl, foyer_fiscal_definition, Int32, requested_period_default_value,
+  stop_date = Date(2009, 12, 31),
+)
+
+@define_variable(f3si, foyer_fiscal_definition, Int32, requested_period_default_value,
+  start_date = Date(2012, 1, 1),
+)
+
+@define_variable(f3sa, foyer_fiscal_definition, Int32, requested_period_default_value,
+  stop_date = Date(2009, 12, 31),
+)
+
+@define_variable(f3sf, foyer_fiscal_definition, Int32, requested_period_default_value,
+  start_date = Date(2012, 1, 1),
+)
+
+@define_variable(f3sd, foyer_fiscal_definition, Int32, requested_period_default_value,
+  start_date = Date(2012, 1, 1),
+)
+
+@define_variable(f3vc, foyer_fiscal_definition, Int32, requested_period_default_value,
+  cell_format = "monetary",
+  cerfa_field = "3VC",
+  label = "Produits et plus-values exonérés provenant de structure de capital-risque",
+  start_date = Date(2006, 1, 1),
+)
+
+@define_variable(f3ve, foyer_fiscal_definition, Int32, requested_period_default_value,
+  cell_format = "monetary",
+  cerfa_field = "3VE",
+  label = "Plus-values réalisées par les non-résidents pour lesquelles vous demandez le remboursement de l'excédent du prélèvement de 45 %",
+)
+
+@define_variable(f3vl, foyer_fiscal_definition, Int32, requested_period_default_value,
+  cell_format = "monetary",
+  cerfa_field = "3VL",
+  label = "Distributions par des sociétés de capital-risque taxables à 19 %",
+)
+
+@define_variable(f3vm, foyer_fiscal_definition, Int32, requested_period_default_value,
+  cell_format = "monetary",
+  cerfa_field = "3VM",
+  label = "Clôture du PEA avant l'expiration de la 2e année: gains taxables à 22.5 %",
+)
+
+@define_variable(f3vt, foyer_fiscal_definition, Int32, requested_period_default_value,
+  cell_format = "monetary",
+  cerfa_field = "3VT",
+  label = "Clôture du PEA  entre la 2e et la 5e année: gains taxables à 19 %",
+  start_date = Date(2010, 1, 1),
+)
+
+@define_variable(f3vg, foyer_fiscal_definition, Int32, requested_period_default_value,
+  cell_format = "monetary",
+  cerfa_field = "3VG",
+  label = "Plus-value imposable sur gains de cession de valeurs mobilières, de droits sociaux et gains assimilés",
+)
+
+@define_variable(f3vh, foyer_fiscal_definition, Int32, requested_period_default_value,
+  cell_format = "monetary",
+  cerfa_field = "3VH",
+  label = "Perte de l'année de perception des revenus",
+)
+
+@define_variable(f3vu, foyer_fiscal_definition, Int32, requested_period_default_value,
+  stop_date = Date(2009, 12, 31),
+)
+
+@define_variable(f3vv, foyer_fiscal_definition, Int32, requested_period_default_value,
+  cell_format = "monetary",
+  cerfa_field = "3VV",
+  label = "Plus-values réalisées par les non-résidents: montant du prélèvement de 45 % déjà versé",
+  start_date = Date(2013, 1, 1),
+)
+
+@define_variable(f3vv_end_2010, foyer_fiscal_definition, Int32, requested_period_default_value,
+  cell_format = "monetary",
+  cerfa_field = "3VV",
+  label = "Pertes ouvrant droit au crédit d’impôt de 19 % ",
+  start_date = Date(2010, 1, 1),
+  stop_date = Date(2010, 12, 31),
+)
+
+@define_variable(f3vz, foyer_fiscal_definition, Int32, requested_period_default_value,
+  cell_format = "monetary",
+  cerfa_field = "3VZ",
+  label = "Plus-values imposables sur cessions d’immeubles ou de biens meubles",
+  start_date = Date(2011, 1, 1),
+)
+
+@define_variable(rempli_obligation_scolaire, individu_definition, Bool, requested_period_last_value,
+  cell_default = true,
+  label = "Rempli l'obligation scolaire",
 )
 
 @define_variable(idmen, individu_definition, Int32, permanent_default_value,
@@ -4219,12 +4224,45 @@
   permanent = true,
 )
 
+@define_variable(adoption, individu_definition, Bool, requested_period_last_value,
+  label = "Enfant adopté",
+)
+
+@define_variable(alt, individu_definition, Bool, requested_period_last_value,
+  label = "Enfant en garde alternée",
+)
+
+@define_variable(activite, individu_definition, Int16, requested_period_last_value,
+  cell_default = 4,
+  label = "Activité",
+  values = [
+    "Actif occupé" => 0,
+    "Chômeur" => 1,
+    "Étudiant, élève" => 2,
+    "Retraité" => 3,
+    "Autre inactif" => 4,
+  ],
+)
+
 @define_variable(enceinte, individu_definition, Bool, requested_period_last_value,
   label = "Est enceinte",
 )
 
-@define_variable(categ_inv, individu_definition, Int32, requested_period_last_value,
-  label = "Catégorie de handicap (AEEH)",
+@define_variable(statmarit, individu_definition, Int16, requested_period_last_value,
+  cell_default = 2,
+  label = "Statut marital",
+  values = [
+    "Marié" => 1,
+    "Célibataire" => 2,
+    "Divorcé" => 3,
+    "Veuf" => 4,
+    "Pacsé" => 5,
+    "Jeune veuf" => 6,
+  ],
+)
+
+@define_variable(inv, individu_definition, Bool, requested_period_last_value,
+  label = "Invalide",
 )
 
 @define_variable(coloc, individu_definition, Bool, requested_period_last_value,
@@ -4233,6 +4271,39 @@
 
 @define_variable(logement_chambre, individu_definition, Bool, requested_period_last_value,
   label = "Le logement est considéré comme une chambre",
+)
+
+@define_variable(etr, individu_definition, Int32, requested_period_default_value)
+
+@define_variable(f6ps, individu_definition, Int32, requested_period_default_value,
+  cell_format = "monetary",
+  cerfa_field = [0 => "6PS", 1 => "6PT", 2 => "6PU"],
+  label = "Plafond de déduction épargne retraite (plafond calculé sur les revenus perçus en n-1)",
+)
+
+@define_variable(f6rs, individu_definition, Int32, requested_period_default_value,
+  cell_format = "monetary",
+  cerfa_field = [0 => "6RS", 1 => "6RT", 2 => "6RU"],
+  label = "Cotisations d'épargne retraite versées au titre d'un PERP, PREFON, COREM et C.G.O.S",
+)
+
+@define_variable(f6ss, individu_definition, Int32, requested_period_default_value,
+  cell_format = "monetary",
+  cerfa_field = [0 => "6SS", 1 => "6ST", 2 => "6SU"],
+  label = "Rachat de cotisations PERP, PREFON, COREM et C.G.O.S",
+)
+
+@define_variable(f7ac, individu_definition, Int32, requested_period_default_value,
+  cell_format = "monetary",
+  cerfa_field = [0 => "7AC", 1 => "7AE", 2 => "7AG"],
+  label = "Cotisations syndicales des salariées et pensionnés",
+  start_date = Date(2013, 1, 1),
+)
+
+@define_variable(elig_creimp_jeunes, individu_definition, Bool, requested_period_last_value,
+  label = "Éligible au crédit d'impôt jeunes",
+  start_date = Date(2005, 1, 1),
+  stop_date = Date(2008, 1, 1),
 )
 
 @define_variable(csg_rempl, individu_definition, Int16, requested_period_last_value,
@@ -4246,60 +4317,64 @@
   ],
 )
 
-@define_variable(chobrut, individu_definition, Float32, requested_period_default_value,
-  label = "Chômage brut",
+@define_variable(coefficient_proratisation, individu_definition, Float32, requested_period_default_value,
+  label = "Coefficient de proratisation pour le calcul du SMIC et du plafond de la Sécurité socialele",
 )
 
-@define_variable(rstbrut, individu_definition, Float32, requested_period_default_value,
-  label = "Retraite brute",
+@define_variable(scolarite, individu_definition, Int16, requested_period_last_value,
+  label = "Scolarité de l'enfant : collège, lycée...",
+  values = [
+    "Inconnue" => 0,
+    "Collège" => 1,
+    "Lycée" => 2,
+  ],
 )
 
-@define_variable(aer, individu_definition, Int32, requested_period_default_value,
-  label = "Allocation équivalent retraite (AER)",
+@define_variable(boursier, individu_definition, Bool, requested_period_last_value,
+  label = "Élève ou étudiant boursier",
 )
 
-@define_variable(f5sq, individu_definition, Int32, requested_period_default_value)
+@define_variable(aah, individu_definition, Float32, requested_period_default_value,
+  label = "Allocation de l'adulte handicapé",
+)
 
-@define_variable(adoption, individu_definition, Bool, requested_period_last_value,
-  label = "Enfant adopté",
+@define_variable(caah, individu_definition, Float32, requested_period_default_value,
+  label = "Complément de l'allocation de l'adulte handicapé",
+)
+
+@define_variable(inapte_travail, individu_definition, Bool, requested_period_last_value,
+  label = "Reconnu inapte au travail",
+)
+
+@define_variable(taux_invalidite, individu_definition, Int32, requested_period_default_value,
+  label = "Taux d'invalidité",
 )
 
 @define_variable(ass_precondition_remplie, individu_definition, Bool, requested_period_last_value,
   label = "Éligible à l'ASS",
 )
 
-@define_variable(elig_creimp_jeunes, individu_definition, Bool, requested_period_last_value,
-  label = "Éligible au crédit d'impôt jeunes",
-  start_date = Date(2005, 1, 1),
-  stop_date = Date(2008, 1, 1),
+@define_variable(categ_inv, individu_definition, Int32, requested_period_last_value,
+  label = "Catégorie de handicap (AEEH)",
 )
 
-@define_variable(indemnites_journalieres_maternite, individu_definition, Float32, requested_period_default_value,
-  label = "Indemnités journalières de maternité",
+@define_variable(alr, individu_definition, Int32, requested_period_default_value,
+  cell_format = "monetary",
+  cerfa_field = [0 => "1AO", 1 => "1BO", 2 => "1CO", 3 => "1DO", 4 => "1EO"],
+  label = "Pensions alimentaires perçues",
 )
 
-@define_variable(indemnites_journalieres_paternite, individu_definition, Float32, requested_period_default_value,
-  label = "Indemnités journalières de paternité",
+@define_variable(alr_decl, individu_definition, Bool, requested_period_last_value,
+  cell_default = true,
+  label = "Pension déclarée",
 )
 
-@define_variable(indemnites_journalieres_adoption, individu_definition, Float32, requested_period_default_value,
-  label = "Indemnités journalières d'adoption",
+@define_variable(pensions_alimentaires_percues, individu_definition, Float32, requested_period_default_value,
+  label = "Pensions alimentaires perçues",
 )
 
-@define_variable(indemnites_journalieres_maladie, individu_definition, Float32, requested_period_default_value,
-  label = "Indemnités journalières de maladie",
-)
-
-@define_variable(indemnites_journalieres_accident_travail, individu_definition, Float32, requested_period_default_value,
-  label = "Indemnités journalières d'accident du travail",
-)
-
-@define_variable(indemnites_journalieres_maladie_professionnelle, individu_definition, Float32, requested_period_default_value,
-  label = "Indemnités journalières de maladie professionnelle",
-)
-
-@define_variable(indemnites_chomage_partiel, individu_definition, Float32, requested_period_default_value,
-  label = "Indemnités de chômage partiel",
+@define_variable(gains_exceptionnels, individu_definition, Float32, requested_period_default_value,
+  label = "Gains exceptionnels",
 )
 
 @define_variable(allocation_aide_retour_emploi, individu_definition, Float32, requested_period_default_value,
@@ -4326,159 +4401,12 @@
   label = "Dédommagement versé aux victimes de l'amiante",
 )
 
-@define_variable(aah, individu_definition, Float32, requested_period_default_value,
-  label = "Allocation de l'adulte handicapé",
-)
-
-@define_variable(caah, individu_definition, Float32, requested_period_default_value,
-  label = "Complément de l'allocation de l'adulte handicapé",
-)
-
-@define_variable(gains_exceptionnels, individu_definition, Float32, requested_period_default_value,
-  label = "Gains exceptionnels",
-)
-
 @define_variable(pensions_invalidite, individu_definition, Float32, requested_period_default_value,
   label = "Pensions d'invalidité",
 )
 
 @define_variable(bourse_enseignement_sup, individu_definition, Float32, requested_period_default_value,
   label = "Bourse de l'enseignement supérieur",
-)
-
-@define_variable(bourse_recherche, individu_definition, Float32, requested_period_default_value,
-  label = "Bourse de recherche",
-)
-
-@define_variable(retraite_combattant, individu_definition, Float32, requested_period_default_value,
-  label = "Retraite du combattant",
-)
-
-@define_variable(indemnites_stage, individu_definition, Float32, requested_period_default_value,
-  label = "Indemnités de stage",
-)
-
-@define_variable(revenus_stage_formation_pro, individu_definition, Float32, requested_period_default_value,
-  label = "Revenus de stage de formation professionnelle",
-)
-
-@define_variable(pensions_alimentaires_percues, individu_definition, Float32, requested_period_default_value,
-  label = "Pensions alimentaires perçues",
-)
-
-@define_variable(etr, individu_definition, Int32, requested_period_default_value)
-
-@define_variable(epargne_non_remuneree, individu_definition, Float32, requested_period_last_value,
-  label = "Épargne non rémunérée",
-)
-
-@define_variable(interets_epargne_sur_livrets, individu_definition, Float32, requested_period_last_value,
-  label = "Intérêts versés pour l'épargne sur livret",
-)
-
-@define_variable(revenus_capital, individu_definition, Float32, requested_period_default_value,
-  label = "Revenus du capital",
-)
-
-@define_variable(revenus_locatifs, individu_definition, Float32, requested_period_default_value,
-  label = "Revenus locatifs",
-)
-
-@define_variable(valeur_locative_immo_non_loue, individu_definition, Float32, requested_period_last_value,
-  label = "Valeur locative des biens immobiliers possédés et non loués",
-)
-
-@define_variable(valeur_locative_terrains_non_loue, individu_definition, Float32, requested_period_last_value,
-  label = "Valeur locative des terrains possédés et non loués",
-)
-
-@define_variable(cho_ld, individu_definition, Bool, requested_period_last_value,
-  cerfa_field = [0 => "1AI", 1 => "1BI", 2 => "1CI", 3 => "1DI", 4 => "1EI"],
-  label = "Demandeur d'emploi inscrit depuis plus d'un an",
-)
-
-@define_variable(alr, individu_definition, Int32, requested_period_default_value,
-  cell_format = "monetary",
-  cerfa_field = [0 => "1AO", 1 => "1BO", 2 => "1CO", 3 => "1DO", 4 => "1EO"],
-  label = "Pensions alimentaires perçues",
-)
-
-@define_variable(alr_decl, individu_definition, Bool, requested_period_last_value,
-  cell_default = true,
-  label = "Pension déclarée",
-)
-
-@define_variable(choi, individu_definition, Int32, requested_period_default_value,
-  cell_format = "monetary",
-  cerfa_field = [0 => "1AP", 1 => "1BP", 2 => "1CP", 3 => "1DP", 4 => "1EP"],
-  label = "Autres revenus imposables (chômage, préretraite)",
-)
-
-@define_variable(rsti, individu_definition, Int32, requested_period_default_value,
-  cell_format = "monetary",
-  cerfa_field = [0 => "1AS", 1 => "1BS", 2 => "1CS", 3 => "1DS", 4 => "1ES"],
-  label = "Pensions, retraites, rentes connues imposables",
-)
-
-@define_variable(inv, individu_definition, Bool, requested_period_last_value,
-  label = "Invalide",
-)
-
-@define_variable(f1tv, individu_definition, Int32, requested_period_default_value,
-  cell_format = "monetary",
-  cerfa_field = [0 => "1TV", 1 => "1UV"],
-  label = "Gains de levée d'options sur titres en cas de cession ou de conversion au porteur dans le délai d'indisponibilité: entre 1 et 2 ans",
-)
-
-@define_variable(f1tw, individu_definition, Int32, requested_period_default_value,
-  cell_format = "monetary",
-  cerfa_field = [0 => "1TW", 1 => "1UW"],
-  label = "Gains de levée d'options sur titres en cas de cession ou de conversion au porteur dans le délai d'indisponibilité: entre 2 et 3 ans",
-)
-
-@define_variable(f1tx, individu_definition, Int32, requested_period_default_value,
-  cell_format = "monetary",
-  cerfa_field = [0 => "1TX", 1 => "1UX"],
-  label = "Gains de levée d'options sur titres en cas de cession ou de conversion au porteur dans le délai d'indisponibilité: entre 3 et 4 ans",
-)
-
-@define_variable(sal_pen_exo_etr, individu_definition, Int32, requested_period_default_value,
-  cell_format = "monetary",
-  cerfa_field = [0 => "1AC", 1 => "1BC", 2 => "1CC", 3 => "1DC"],
-  label = "Salaires et pensions exonérés de source étrangère retenus pour le calcul du taux effectif",
-  start_date = Date(2013, 1, 1),
-)
-
-@define_variable(f3vd, individu_definition, Int32, requested_period_default_value,
-  cell_format = "monetary",
-  cerfa_field = [0 => "3VD", 1 => "3SD"],
-  label = "Gains de levée d'options sur titres et gains d'acquisition d'actions taxables à 18 %",
-  start_date = Date(2008, 1, 1),
-)
-
-@define_variable(f3vf, individu_definition, Int32, requested_period_default_value,
-  cell_format = "monetary",
-  cerfa_field = [0 => "3VF", 1 => "3SF"],
-  label = "Gains de levée d'options sur titres et gains d'acquisition d'actions taxables à 41 %",
-)
-
-@define_variable(f3vi, individu_definition, Int32, requested_period_default_value,
-  cell_format = "monetary",
-  cerfa_field = [0 => "3VI", 1 => "3SI"],
-  label = "Gains de levée d'options sur titres et gains d'acquisition d'actions taxables à 30 %",
-)
-
-@define_variable(f3vj, individu_definition, Int32, requested_period_default_value,
-  cell_format = "monetary",
-  cerfa_field = [0 => "3VJ", 1 => "3VK"],
-  label = "Gains imposables sur option dans la catégorie des salaires",
-)
-
-@define_variable(f3va, individu_definition, Int32, requested_period_default_value,
-  cell_format = "monetary",
-  cerfa_field = [0 => "3VA", 1 => "3VB"],
-  label = "Abattement pour durée de détention des titres en cas de départ à la retraite d'un dirigeant appliqué sur des plus-values",
-  start_date = Date(2006, 1, 1),
 )
 
 @define_variable(f5qm, individu_definition, Int32, requested_period_default_value,
@@ -5132,29 +5060,116 @@
   stop_date = Date(2009, 12, 31),
 )
 
-@define_variable(f6ps, individu_definition, Int32, requested_period_default_value,
-  cell_format = "monetary",
-  cerfa_field = [0 => "6PS", 1 => "6PT", 2 => "6PU"],
-  label = "Plafond de déduction épargne retraite (plafond calculé sur les revenus perçus en n-1)",
+@define_variable(f5sq, individu_definition, Int32, requested_period_default_value)
+
+@define_variable(tns_chiffre_affaires_micro_entreprise, individu_definition, Float32, permanent_default_value,
+  label = "Chiffre d'affaires de micro-entreprise ou assimilée",
+  permanent = true,
 )
 
-@define_variable(f6rs, individu_definition, Int32, requested_period_default_value,
-  cell_format = "monetary",
-  cerfa_field = [0 => "6RS", 1 => "6RT", 2 => "6RU"],
-  label = "Cotisations d'épargne retraite versées au titre d'un PERP, PREFON, COREM et C.G.O.S",
+@define_variable(tns_autres_revenus, individu_definition, Float32, permanent_default_value,
+  label = "Autres revenus non salariés",
+  permanent = true,
 )
 
-@define_variable(f6ss, individu_definition, Int32, requested_period_default_value,
-  cell_format = "monetary",
-  cerfa_field = [0 => "6SS", 1 => "6ST", 2 => "6SU"],
-  label = "Rachat de cotisations PERP, PREFON, COREM et C.G.O.S",
+@define_variable(tns_type_structure, individu_definition, Int16, permanent_default_value,
+  cell_default = 1,
+  label = "Type de structure associée au travailleur non salarié",
+  permanent = true,
+  values = [
+    "auto_entrepreneur" => 0,
+    "micro_entreprise" => 1,
+  ],
 )
 
-@define_variable(f7ac, individu_definition, Int32, requested_period_default_value,
+@define_variable(tns_type_activite, individu_definition, Int16, permanent_default_value,
+  label = "Valeur locative des biens immobiliés possédés et non loués",
+  permanent = true,
+  values = [
+    "achat_revente" => 0,
+    "bic" => 1,
+    "bnc" => 2,
+  ],
+)
+
+@define_variable(indemnites_stage, individu_definition, Float32, requested_period_default_value,
+  label = "Indemnités de stage",
+)
+
+@define_variable(revenus_stage_formation_pro, individu_definition, Float32, requested_period_default_value,
+  label = "Revenus de stage de formation professionnelle",
+)
+
+@define_variable(bourse_recherche, individu_definition, Float32, requested_period_default_value,
+  label = "Bourse de recherche",
+)
+
+@define_variable(sali, individu_definition, Int32, requested_period_default_value,
   cell_format = "monetary",
-  cerfa_field = [0 => "7AC", 1 => "7AE", 2 => "7AG"],
-  label = "Cotisations syndicales des salariées et pensionnés",
+  cerfa_field = [0 => "1AJ", 1 => "1BJ", 2 => "1CJ", 3 => "1DJ", 4 => "1EJ"],
+  label = "Revenus d'activité imposables",
+)
+
+@define_variable(sal_pen_exo_etr, individu_definition, Int32, requested_period_default_value,
+  cell_format = "monetary",
+  cerfa_field = [0 => "1AC", 1 => "1BC", 2 => "1CC", 3 => "1DC"],
+  label = "Salaires et pensions exonérés de source étrangère retenus pour le calcul du taux effectif",
   start_date = Date(2013, 1, 1),
+)
+
+@define_variable(fra, individu_definition, Int32, requested_period_default_value,
+  cell_format = "monetary",
+  cerfa_field = [0 => "1AK", 1 => "1BK", 2 => "1CK", 3 => "1DK", 4 => "1EK"],
+  label = "Frais réels",
+)
+
+@define_variable(hsup, individu_definition, Int32, requested_period_default_value,
+  cell_format = "monetary",
+  cerfa_field = [0 => "1AU", 1 => "1BU", 2 => "1CU", 3 => "1DU"],
+  label = "Heures supplémentaires : revenus exonérés connus",
+  start_date = Date(2007, 1, 1),
+)
+
+@define_variable(ppe_du_sa, individu_definition, Int32, requested_period_default_value,
+  cerfa_field = [0 => "1AV", 1 => "1BV", 2 => "1CV", 3 => "1DV", 4 => "1QV"],
+  label = "Prime pour l'emploi des salariés: nombre d'heures payées dans l'année",
+)
+
+@define_variable(ppe_tp_sa, individu_definition, Bool, requested_period_last_value,
+  cerfa_field = [0 => "1AX", 1 => "1BX", 2 => "1CX", 3 => "1DX", 4 => "1QX"],
+  label = "Prime pour l'emploi des salariés: indicateur de travail à temps plein sur l'année entière",
+)
+
+@define_variable(nbsala, individu_definition, Int16, requested_period_last_value,
+  label = "Nombre de salariés dans l'établissement de l'emploi actuel",
+  values = [
+    "Sans objet" => 0,
+    "Aucun salarié" => 1,
+    "1 à 4 salariés" => 2,
+    "5 à 9 salariés" => 3,
+    "10 à 19 salariés" => 4,
+    "20 à 49 salariés" => 5,
+    "50 à 199 salariés" => 6,
+    "200 à 499 salariés" => 7,
+    "500 à 999 salariés" => 8,
+    "1000 salariés ou plus" => 9,
+    "Ne sait pas" => 10,
+  ],
+)
+
+@define_variable(tva_ent, individu_definition, Bool, requested_period_last_value,
+  cell_default = true,
+  label = "L'entreprise employant le salarié paye de la TVA",
+)
+
+@define_variable(exposition_accident, individu_definition, Int16, requested_period_last_value,
+  label = "Exposition au risque pour les accidents du travail",
+  values = [
+    "Faible" => 0,
+    "Moyen" => 1,
+    "Élevé" => 2,
+    "Très élevé" => 3,
+  ],
 )
 
 @define_variable(allegement_fillon_mode_recouvrement, individu_definition, Int16, requested_period_last_value,
@@ -5342,159 +5357,148 @@
   label = "Volume des jours pour lesquels sont versés une idemnité journalière par la sécurité sociale",
 )
 
-@define_variable(tns_chiffre_affaires_micro_entreprise, individu_definition, Float32, permanent_default_value,
-  label = "Chiffre d'affaires de micro-entreprise ou assimilée",
-  permanent = true,
+@define_variable(epargne_non_remuneree, individu_definition, Float32, requested_period_last_value,
+  label = "Épargne non rémunérée",
 )
 
-@define_variable(tns_autres_revenus, individu_definition, Float32, permanent_default_value,
-  label = "Autres revenus non salariés",
-  permanent = true,
+@define_variable(interets_epargne_sur_livrets, individu_definition, Float32, requested_period_last_value,
+  label = "Intérêts versés pour l'épargne sur livret",
 )
 
-@define_variable(tns_type_structure, individu_definition, Int16, permanent_default_value,
-  cell_default = 1,
-  label = "Type de structure associée au travailleur non salarié",
-  permanent = true,
-  values = [
-    "auto_entrepreneur" => 0,
-    "micro_entreprise" => 1,
-  ],
+@define_variable(revenus_capital, individu_definition, Float32, requested_period_default_value,
+  label = "Revenus du capital",
 )
 
-@define_variable(tns_type_activite, individu_definition, Int16, permanent_default_value,
-  label = "Valeur locative des biens immobiliés possédés et non loués",
-  permanent = true,
-  values = [
-    "achat_revente" => 0,
-    "bic" => 1,
-    "bnc" => 2,
-  ],
+@define_variable(revenus_locatifs, individu_definition, Float32, requested_period_default_value,
+  label = "Revenus locatifs",
 )
 
-@define_variable(rempli_obligation_scolaire, individu_definition, Bool, requested_period_last_value,
-  cell_default = true,
-  label = "Rempli l'obligation scolaire",
+@define_variable(valeur_locative_immo_non_loue, individu_definition, Float32, requested_period_last_value,
+  label = "Valeur locative des biens immobiliers possédés et non loués",
 )
 
-@define_variable(alt, individu_definition, Bool, requested_period_last_value,
-  label = "Enfant en garde alternée",
+@define_variable(valeur_locative_terrains_non_loue, individu_definition, Float32, requested_period_last_value,
+  label = "Valeur locative des terrains possédés et non loués",
 )
 
-@define_variable(activite, individu_definition, Int16, requested_period_last_value,
-  cell_default = 4,
-  label = "Activité",
-  values = [
-    "Actif occupé" => 0,
-    "Chômeur" => 1,
-    "Étudiant, élève" => 2,
-    "Retraité" => 3,
-    "Autre inactif" => 4,
-  ],
-)
-
-@define_variable(statmarit, individu_definition, Int16, requested_period_last_value,
-  cell_default = 2,
-  label = "Statut marital",
-  values = [
-    "Marié" => 1,
-    "Célibataire" => 2,
-    "Divorcé" => 3,
-    "Veuf" => 4,
-    "Pacsé" => 5,
-    "Jeune veuf" => 6,
-  ],
-)
-
-@define_variable(coefficient_proratisation, individu_definition, Float32, requested_period_default_value,
-  label = "Coefficient de proratisation pour le calcul du SMIC et du plafond de la Sécurité socialele",
-)
-
-@define_variable(scolarite, individu_definition, Int16, requested_period_last_value,
-  label = "Scolarité de l'enfant : collège, lycée...",
-  values = [
-    "Inconnue" => 0,
-    "Collège" => 1,
-    "Lycée" => 2,
-  ],
-)
-
-@define_variable(boursier, individu_definition, Bool, requested_period_last_value,
-  label = "Élève ou étudiant boursier",
-)
-
-@define_variable(inapte_travail, individu_definition, Bool, requested_period_last_value,
-  label = "Reconnu inapte au travail",
-)
-
-@define_variable(taux_invalidite, individu_definition, Int32, requested_period_default_value,
-  label = "Taux d'invalidité",
-)
-
-@define_variable(sali, individu_definition, Int32, requested_period_default_value,
+@define_variable(f1tv, individu_definition, Int32, requested_period_default_value,
   cell_format = "monetary",
-  cerfa_field = [0 => "1AJ", 1 => "1BJ", 2 => "1CJ", 3 => "1DJ", 4 => "1EJ"],
-  label = "Revenus d'activité imposables",
+  cerfa_field = [0 => "1TV", 1 => "1UV"],
+  label = "Gains de levée d'options sur titres en cas de cession ou de conversion au porteur dans le délai d'indisponibilité: entre 1 et 2 ans",
 )
 
-@define_variable(fra, individu_definition, Int32, requested_period_default_value,
+@define_variable(f1tw, individu_definition, Int32, requested_period_default_value,
   cell_format = "monetary",
-  cerfa_field = [0 => "1AK", 1 => "1BK", 2 => "1CK", 3 => "1DK", 4 => "1EK"],
-  label = "Frais réels",
+  cerfa_field = [0 => "1TW", 1 => "1UW"],
+  label = "Gains de levée d'options sur titres en cas de cession ou de conversion au porteur dans le délai d'indisponibilité: entre 2 et 3 ans",
 )
 
-@define_variable(hsup, individu_definition, Int32, requested_period_default_value,
+@define_variable(f1tx, individu_definition, Int32, requested_period_default_value,
   cell_format = "monetary",
-  cerfa_field = [0 => "1AU", 1 => "1BU", 2 => "1CU", 3 => "1DU"],
-  label = "Heures supplémentaires : revenus exonérés connus",
-  start_date = Date(2007, 1, 1),
+  cerfa_field = [0 => "1TX", 1 => "1UX"],
+  label = "Gains de levée d'options sur titres en cas de cession ou de conversion au porteur dans le délai d'indisponibilité: entre 3 et 4 ans",
 )
 
-@define_variable(ppe_du_sa, individu_definition, Int32, requested_period_default_value,
-  cerfa_field = [0 => "1AV", 1 => "1BV", 2 => "1CV", 3 => "1DV", 4 => "1QV"],
-  label = "Prime pour l'emploi des salariés: nombre d'heures payées dans l'année",
+@define_variable(f3vd, individu_definition, Int32, requested_period_default_value,
+  cell_format = "monetary",
+  cerfa_field = [0 => "3VD", 1 => "3SD"],
+  label = "Gains de levée d'options sur titres et gains d'acquisition d'actions taxables à 18 %",
+  start_date = Date(2008, 1, 1),
 )
 
-@define_variable(ppe_tp_sa, individu_definition, Bool, requested_period_last_value,
-  cerfa_field = [0 => "1AX", 1 => "1BX", 2 => "1CX", 3 => "1DX", 4 => "1QX"],
-  label = "Prime pour l'emploi des salariés: indicateur de travail à temps plein sur l'année entière",
+@define_variable(f3vf, individu_definition, Int32, requested_period_default_value,
+  cell_format = "monetary",
+  cerfa_field = [0 => "3VF", 1 => "3SF"],
+  label = "Gains de levée d'options sur titres et gains d'acquisition d'actions taxables à 41 %",
 )
 
-@define_variable(nbsala, individu_definition, Int16, requested_period_last_value,
-  label = "Nombre de salariés dans l'établissement de l'emploi actuel",
-  values = [
-    "Sans objet" => 0,
-    "Aucun salarié" => 1,
-    "1 à 4 salariés" => 2,
-    "5 à 9 salariés" => 3,
-    "10 à 19 salariés" => 4,
-    "20 à 49 salariés" => 5,
-    "50 à 199 salariés" => 6,
-    "200 à 499 salariés" => 7,
-    "500 à 999 salariés" => 8,
-    "1000 salariés ou plus" => 9,
-    "Ne sait pas" => 10,
-  ],
+@define_variable(f3vi, individu_definition, Int32, requested_period_default_value,
+  cell_format = "monetary",
+  cerfa_field = [0 => "3VI", 1 => "3SI"],
+  label = "Gains de levée d'options sur titres et gains d'acquisition d'actions taxables à 30 %",
 )
 
-@define_variable(tva_ent, individu_definition, Bool, requested_period_last_value,
-  cell_default = true,
-  label = "L'entreprise employant le salarié paye de la TVA",
+@define_variable(f3vj, individu_definition, Int32, requested_period_default_value,
+  cell_format = "monetary",
+  cerfa_field = [0 => "3VJ", 1 => "3VK"],
+  label = "Gains imposables sur option dans la catégorie des salaires",
 )
 
-@define_variable(exposition_accident, individu_definition, Int16, requested_period_last_value,
-  label = "Exposition au risque pour les accidents du travail",
-  values = [
-    "Faible" => 0,
-    "Moyen" => 1,
-    "Élevé" => 2,
-    "Très élevé" => 3,
-  ],
+@define_variable(f3va, individu_definition, Int32, requested_period_default_value,
+  cell_format = "monetary",
+  cerfa_field = [0 => "3VA", 1 => "3VB"],
+  label = "Abattement pour durée de détention des titres en cas de départ à la retraite d'un dirigeant appliqué sur des plus-values",
+  start_date = Date(2006, 1, 1),
+)
+
+@define_variable(cho_ld, individu_definition, Bool, requested_period_last_value,
+  cerfa_field = [0 => "1AI", 1 => "1BI", 2 => "1CI", 3 => "1DI", 4 => "1EI"],
+  label = "Demandeur d'emploi inscrit depuis plus d'un an",
+)
+
+@define_variable(choi, individu_definition, Int32, requested_period_default_value,
+  cell_format = "monetary",
+  cerfa_field = [0 => "1AP", 1 => "1BP", 2 => "1CP", 3 => "1DP", 4 => "1EP"],
+  label = "Autres revenus imposables (chômage, préretraite)",
+)
+
+@define_variable(chobrut, individu_definition, Float32, requested_period_default_value,
+  label = "Chômage brut",
+)
+
+@define_variable(indemnites_chomage_partiel, individu_definition, Float32, requested_period_default_value,
+  label = "Indemnités de chômage partiel",
+)
+
+@define_variable(rsti, individu_definition, Int32, requested_period_default_value,
+  cell_format = "monetary",
+  cerfa_field = [0 => "1AS", 1 => "1BS", 2 => "1CS", 3 => "1DS", 4 => "1ES"],
+  label = "Pensions, retraites, rentes connues imposables",
+)
+
+@define_variable(rstbrut, individu_definition, Float32, requested_period_default_value,
+  label = "Retraite brute",
+)
+
+@define_variable(aer, individu_definition, Int32, requested_period_default_value,
+  label = "Allocation équivalent retraite (AER)",
+)
+
+@define_variable(retraite_combattant, individu_definition, Float32, requested_period_default_value,
+  label = "Retraite du combattant",
+)
+
+@define_variable(indemnites_journalieres_maternite, individu_definition, Float32, requested_period_default_value,
+  label = "Indemnités journalières de maternité",
+)
+
+@define_variable(indemnites_journalieres_paternite, individu_definition, Float32, requested_period_default_value,
+  label = "Indemnités journalières de paternité",
+)
+
+@define_variable(indemnites_journalieres_adoption, individu_definition, Float32, requested_period_default_value,
+  label = "Indemnités journalières d'adoption",
+)
+
+@define_variable(indemnites_journalieres_maladie, individu_definition, Float32, requested_period_default_value,
+  label = "Indemnités journalières de maladie",
+)
+
+@define_variable(indemnites_journalieres_accident_travail, individu_definition, Float32, requested_period_default_value,
+  label = "Indemnités journalières d'accident du travail",
+)
+
+@define_variable(indemnites_journalieres_maladie_professionnelle, individu_definition, Float32, requested_period_default_value,
+  label = "Indemnités journalières de maladie professionnelle",
 )
 
 @define_variable(nom_famille, famille_definition, UTF8String, permanent_default_value,
   label = "Nom",
   permanent = true,
+)
+
+@define_variable(proprietaire_proche_famille, famille_definition, Bool, requested_period_last_value,
+  label = "Le propriétaire du logement a un lien de parenté avec la personne de référence ou son conjoint",
 )
 
 @define_variable(inactif, famille_definition, Bool, requested_period_last_value,
@@ -5525,31 +5529,9 @@
   label = "Garde à domicile (CLCMG)",
 )
 
-@define_variable(proprietaire_proche_famille, famille_definition, Bool, requested_period_last_value,
-  label = "Le propriétaire du logement a un lien de parenté avec la personne de référence ou son conjoint",
-)
-
 @define_variable(nom_menage, menage_definition, UTF8String, permanent_default_value,
   label = "Nom",
   permanent = true,
-)
-
-@define_variable(loyer, menage_definition, Int32, requested_period_default_value,
-  cell_format = "monetary",
-  label = "Loyer mensuel",
-)
-
-@define_variable(statut_occupation, menage_definition, Int16, requested_period_last_value,
-  label = "Statut d'occupation",
-  values = [
-    "Non renseigné" => 0,
-    "Accédant à la propriété" => 1,
-    "Propriétaire (non accédant) du logement" => 2,
-    "Locataire d'un logement HLM" => 3,
-    "Locataire ou sous-locataire d'un logement loué vide non-HLM" => 4,
-    "Locataire ou sous-locataire d'un logement loué meublé ou d'une chambre d'hôtel" => 5,
-    "Logé gratuitement par des parents, des amis ou l'employeur" => 6,
-  ],
 )
 
 @define_variable(depcom, menage_definition, UTF8String, requested_period_last_value,
@@ -5569,4 +5551,22 @@
     test(value -> ismatch(r"^(\d{2}|2A|2B)\d{3}$", value),
       error = N_("Invalid Insee depcom format for commune.")),
   ),
+)
+
+@define_variable(loyer, menage_definition, Int32, requested_period_default_value,
+  cell_format = "monetary",
+  label = "Loyer mensuel",
+)
+
+@define_variable(statut_occupation, menage_definition, Int16, requested_period_last_value,
+  label = "Statut d'occupation",
+  values = [
+    "Non renseigné" => 0,
+    "Accédant à la propriété" => 1,
+    "Propriétaire (non accédant) du logement" => 2,
+    "Locataire d'un logement HLM" => 3,
+    "Locataire ou sous-locataire d'un logement loué vide non-HLM" => 4,
+    "Locataire ou sous-locataire d'un logement loué meublé ou d'une chambre d'hôtel" => 5,
+    "Logé gratuitement par des parents, des amis ou l'employeur" => 6,
+  ],
 )
