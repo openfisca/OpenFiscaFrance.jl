@@ -4141,6 +4141,11 @@
   start_date = Date(2011, 1, 1),
 )
 
+@define_variable(rempli_obligation_scolaire, individu_definition, Bool, requested_period_last_value,
+  cell_default = true,
+  label = "Rempli l'obligation scolaire",
+)
+
 @define_variable(idmen, individu_definition, Int32, permanent_default_value,
   label = "Identifiant du ménage",
   permanent = true,
@@ -4261,11 +4266,6 @@
 
 @define_variable(inv, individu_definition, Bool, requested_period_last_value,
   label = "Invalide",
-)
-
-@define_variable(rempli_obligation_scolaire, individu_definition, Bool, requested_period_last_value,
-  cell_default = true,
-  label = "Rempli l'obligation scolaire",
 )
 
 @define_variable(coloc, individu_definition, Bool, requested_period_last_value,
