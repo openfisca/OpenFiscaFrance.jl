@@ -25,129 +25,129 @@
 # WARNING: Any manual modification may be lost.
 
 
-const DECOMPOSITION = @decomposition_node revdisp [
-    @decomposition_node rev_net [
-        @decomposition_node rev_trav [
-            @decomposition_node salnet [
-                @decomposition_node sal [
-                    @decomposition_node salbrut [
-                        @decomposition_node salsuperbrut []
-                        @decomposition_node cotisations_patronales []
-                        @decomposition_node allegement_fillon []
-                        @decomposition_node credit_impot_competitivite_emploi []
-                        @decomposition_node tehr []
+const DECOMPOSITION = @define_decomposition revdisp [
+    rev_net [
+        rev_trav [
+            salnet [
+                sal [
+                    salbrut [
+                        salsuperbrut
+                        cotisations_patronales
+                        allegement_fillon
+                        credit_impot_competitivite_emploi
+                        tehr
                     ]
-                    @decomposition_node cotisations_salariales []
-                    @decomposition_node csgsald []
-                    @decomposition_node mhsup []
+                    cotisations_salariales
+                    csgsald
+                    mhsup
                 ]
-                @decomposition_node csgsali []
-                @decomposition_node crdssal []
-                @decomposition_node forfait_social []
-                @decomposition_node hsup []
+                csgsali
+                crdssal
+                forfait_social
+                hsup
             ]
-            @decomposition_node rag []
-            @decomposition_node ric []
-            @decomposition_node rnc []
+            rag
+            ric
+            rnc
         ]
-        @decomposition_node pen [
-            @decomposition_node chonet [
-                @decomposition_node cho [
-                    @decomposition_node chobrut []
-                    @decomposition_node csgchod []
+        pen [
+            chonet [
+                cho [
+                    chobrut
+                    csgchod
                 ]
-                @decomposition_node csgchoi []
-                @decomposition_node crdscho []
+                csgchoi
+                crdscho
             ]
-            @decomposition_node rstnet [
-                @decomposition_node rst [
-                    @decomposition_node rstbrut []
-                    @decomposition_node csgrstd []
+            rstnet [
+                rst [
+                    rstbrut
+                    csgrstd
                 ]
-                @decomposition_node csgrsti []
-                @decomposition_node crdsrst []
+                csgrsti
+                crdsrst
             ]
-            @decomposition_node alr []
-            @decomposition_node alv []
-            @decomposition_node rto []
+            alr
+            alv
+            rto
         ]
-        @decomposition_node rev_cap_net [
-            @decomposition_node rev_cap_brut [
-                @decomposition_node fon []
-                @decomposition_node f3vg []
-                @decomposition_node f3vz []
-                @decomposition_node rev_cap_bar []
-                @decomposition_node rev_cap_lib []
-                @decomposition_node rac []
+        rev_cap_net [
+            rev_cap_brut [
+                fon
+                f3vg
+                f3vz
+                rev_cap_bar
+                rev_cap_lib
+                rac
             ]
-            @decomposition_node cotsoc_cap [
-                @decomposition_node prelsoc_cap [
-                    @decomposition_node prelsoc_fon []
-                    @decomposition_node prelsoc_pv_mo []
-                    @decomposition_node prelsoc_pv_immo []
-                    @decomposition_node prelsoc_cap_bar []
-                    @decomposition_node prelsoc_cap_lib []
+            cotsoc_cap [
+                prelsoc_cap [
+                    prelsoc_fon
+                    prelsoc_pv_mo
+                    prelsoc_pv_immo
+                    prelsoc_cap_bar
+                    prelsoc_cap_lib
                 ]
-                @decomposition_node csg_cap [
-                    @decomposition_node csg_fon []
-                    @decomposition_node csg_pv_mo []
-                    @decomposition_node csg_pv_immo []
-                    @decomposition_node csg_cap_bar []
-                    @decomposition_node csg_cap_lib []
+                csg_cap [
+                    csg_fon
+                    csg_pv_mo
+                    csg_pv_immo
+                    csg_cap_bar
+                    csg_cap_lib
                 ]
-                @decomposition_node crds_cap [
-                    @decomposition_node crds_fon []
-                    @decomposition_node crds_pv_mo []
-                    @decomposition_node crds_pv_immo []
-                    @decomposition_node crds_cap_bar []
-                    @decomposition_node crds_cap_lib []
+                crds_cap [
+                    crds_fon
+                    crds_pv_mo
+                    crds_pv_immo
+                    crds_cap_bar
+                    crds_cap_lib
                 ]
             ]
-            @decomposition_node imp_lib []
+            imp_lib
         ]
     ]
-    @decomposition_node psoc [
-        @decomposition_node pfam [
-            @decomposition_node af []
-            @decomposition_node cf []
-            @decomposition_node ars []
-            @decomposition_node aeeh []
-            @decomposition_node paje [
-                @decomposition_node paje_base []
-                @decomposition_node paje_nais []
-                @decomposition_node paje_clca []
-                @decomposition_node paje_colca []
-                @decomposition_node paje_clmg []
+    psoc [
+        pfam [
+            af
+            cf
+            ars
+            aeeh
+            paje [
+                paje_base
+                paje_nais
+                paje_clca
+                paje_colca
+                paje_clmg
             ]
-            @decomposition_node asf []
-            @decomposition_node crds_pfam []
+            asf
+            crds_pfam
         ]
-        @decomposition_node mini [
-            @decomposition_node aspa []
-            @decomposition_node aah []
-            @decomposition_node caah []
-            @decomposition_node asi []
-            @decomposition_node rsa []
-            @decomposition_node psa []
-            @decomposition_node aefa []
-            @decomposition_node api []
+        mini [
+            aspa
+            aah
+            caah
+            asi
+            rsa
+            psa
+            aefa
+            api
         ]
-        @decomposition_node aides_logement [
-            @decomposition_node apl []
-            @decomposition_node als []
-            @decomposition_node alf []
-            @decomposition_node alset []
-            @decomposition_node crds_logement []
+        aides_logement [
+            apl
+            als
+            alf
+            alset
+            crds_logement
         ]
     ]
-    @decomposition_node ppe []
-    @decomposition_node impo [
-        @decomposition_node irpp []
-        @decomposition_node ir_pv_immo []
-        @decomposition_node isf_net [
-            @decomposition_node isf_tot []
-            @decomposition_node bouclier_fiscal []
+    ppe
+    impo [
+        irpp
+        ir_pv_immo
+        isf_net [
+            isf_tot
+            bouclier_fiscal
         ]
-        @decomposition_node taxe_habitation []
+        taxe_habitation
     ]
 ]
