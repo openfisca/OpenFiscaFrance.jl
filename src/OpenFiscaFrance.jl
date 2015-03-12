@@ -195,6 +195,11 @@ tax_benefit_system = TaxBenefitSystem(entity_definition_by_name, legislation, va
 preload_zone_apl()
 
 
+macro define_decomposition(args...)
+    decomposition(tax_benefit_system, args...)
+end
+
+
 include("decompositions.jl")
 
 
