@@ -82,11 +82,13 @@ function test_fiches_de_paie()
     simulation = Simulation(scenario, debug = true)
     output_variables = get(test, "output_variables", nothing)
     if output_variables !== nothing
-      for (variable_name, expected_value) in output_variables
-        # assert_near(calculate(simulation, variable_name), expected_value, error_margin = 0.51,
-        #   message = "$variable_name: ")
-        assert_near2(calculate(simulation, variable_name, accept_other_period = true), expected_value,
-          error_margin = 0.51, message = "$variable_name: ")
+      for (variable_name, expected_value_by_period) in output_variables
+        for (requested_period, expected_value) in expected_value_by_period
+          # assert_near(calculate(simulation, variable_name, requested_period), expected_value, error_margin = 0.51,
+          #   message = "$variable_name: ")
+          assert_near2(calculate(simulation, variable_name, requested_period, accept_other_period = true), expected_value,
+            error_margin = 0.51, message = "$variable_name: ")
+        end
       end
     end
   end

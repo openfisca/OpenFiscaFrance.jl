@@ -53,7 +53,6 @@ function test_formulas()
       test_index += 1
       test, error = Convertible(test) |> to_test(tax_benefit_system) |> to_value_error
       if error !== nothing
-        test_index += 1
         info("=" ^ 120)
         info("Test ", string(test_index), ": ", filename_core)
         info("=" ^ 120)
@@ -76,15 +75,10 @@ function test_formulas()
       simulation = Simulation(scenario, debug = true)
       output_variables = get(test, "output_variables", nothing)
       if output_variables !== nothing
-        for (variable_name, expected_value) in output_variables
-          if isa(expected_value, Union(Dict, OrderedDict))
-            for (requested_period, expected_value_at_period) in expected_value
-              assert_near(calculate(simulation, variable_name, requested_period), expected_value_at_period,
-                error_margin = 0.005, message = "$variable_name@$requested_period: ")
-            end
-          else
-            assert_near(calculate(simulation, variable_name), expected_value, error_margin = 0.005,
-              message = "$variable_name@$(scenario.period): ")
+        for (variable_name, expected_value_by_period) in output_variables
+          for (requested_period, expected_value) in expected_value_by_period
+            assert_near(calculate(simulation, variable_name, requested_period), expected_value, error_margin = 0.005,
+              message = "$variable_name@$requested_period: ")
           end
         end
       end

@@ -129,7 +129,9 @@ function single_entity_scenario(tax_benefit_system::TaxBenefitSystem, period; ax
 end
 
 
-function suggest(scenario::Scenario)
+suggest(scenario::InputVariablesScenario) = nothing
+
+function suggest(scenario::TestCaseScenario)
   period_start = scenario.period.start
   period_start_year = year(scenario.period.start)
   test_case = scenario.test_case

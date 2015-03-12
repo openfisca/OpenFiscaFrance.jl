@@ -33,7 +33,7 @@ function assert_near2(value::Union(Array, Number), target_value::Union(Array, Nu
   end
 end
 
-function assert_near2(value::Union(Array{Bool}, BitArray, Bool), target_value::Union(Array{Bool}, BitArray, Bool);
+function assert_near2(value::Union(Array{Bool}, BitArray, Bool), target_value::Union(Array, BitArray, Bool);
     error_margin = 0, message = "")
   # Note: Ignore error_margin when comparing booleans.
   @assert(all(target_value .== value), "$message$value differs from $target_value")
@@ -82,11 +82,13 @@ function test_mes_aides()
     simulation = Simulation(scenario, debug = true)
     output_variables = get(test, "output_variables", nothing)
     if output_variables !== nothing
-      for (variable_name, expected_value) in output_variables
-        # assert_near(calculate(simulation, variable_name), expected_value, error_margin = 0.016,
-        #   message = "$variable_name: ")
-        assert_near2(calculate(simulation, variable_name, accept_other_period = true), expected_value,
-          error_margin = 0.016, message = "$variable_name: ")
+      for (variable_name, expected_value_by_period) in output_variables
+        for (requested_period, expected_value) in expected_value_by_period
+          # assert_near(calculate(simulation, variable_name, requested_period), expected_value, error_margin = 0.016,
+          #   message = "$variable_name: ")
+          assert_near2(calculate(simulation, variable_name, requested_period, accept_other_period = true), expected_value,
+            error_margin = 0.016, message = "$variable_name: ")
+        end
       end
     end
   end
