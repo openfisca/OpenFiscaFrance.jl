@@ -210,7 +210,7 @@ test_in_pop(values; error = nothing) = pipe(
 function to_test_case(tax_benefit_system::TaxBenefitSystem, period::DatePeriod; repair = false)
   variable_definition_by_name = tax_benefit_system.variable_definition_by_name
 
-  return convertible::Convertible -> begin
+  return function run_to_test_case(convertible::Convertible)
     if convertible.error !== nothing || convertible.value === nothing
       return convertible
     end
