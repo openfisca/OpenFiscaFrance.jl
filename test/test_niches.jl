@@ -37,9 +37,11 @@ function test_niches()
     simulation = Simulation(scenario, debug = true)
     output_variables = get(test, "output_variables", nothing)
     if output_variables !== nothing
-      for (variable_name, expected_value) in output_variables
-        assert_near(calculate(simulation, variable_name), expected_value, error_margin = 1,
-          message = "$variable_name: ")
+      for (variable_name, expected_value_by_period) in output_variables
+        for (requested_period, expected_value) in expected_value_by_period
+          assert_near(calculate(simulation, variable_name, requested_period), expected_value, error_margin = 1,
+            message = "$variable_name@$requested_period: ")
+        end
       end
     end
   end
