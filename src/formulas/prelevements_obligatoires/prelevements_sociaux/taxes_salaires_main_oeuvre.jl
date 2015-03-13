@@ -106,7 +106,7 @@ end
   aot_salarie = 0
   smt_salarie = 0
   entreprise_seuil_employe_aot = 0
-  rate = _P["cotsoc"]["cotisations_employeur"]["prive_non_cadre"]["transport"].rates[0]
+  rate = _P["cotsoc"]["cotisations_employeur"]["prive_non_cadre"]["transport"].rates[1] # MANUAL_FIX changed [0] to [1]
   return period, rate * ones(length(localisation_entreprise))
 end
 
