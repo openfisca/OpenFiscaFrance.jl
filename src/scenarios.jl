@@ -414,9 +414,9 @@ function to_test_case(tax_benefit_system::TaxBenefitSystem, period::DatePeriod; 
     test_case = converted.value
 
     # Second validation step
-    familles_individus_id = OrderedSet([individu["id"] for individu in test_case["individus"]]...)
-    foyers_fiscaux_individus_id = OrderedSet([individu["id"] for individu in test_case["individus"]]...)
-    menages_individus_id = OrderedSet([individu["id"] for individu in test_case["individus"]]...)
+    familles_individus_id = OrderedSet([individu["id"] for individu in test_case["individus"]])
+    foyers_fiscaux_individus_id = OrderedSet([individu["id"] for individu in test_case["individus"]])
+    menages_individus_id = OrderedSet([individu["id"] for individu in test_case["individus"]])
     converted = struct(
       [
         "familles" => uniform_sequence(
@@ -816,7 +816,7 @@ function to_test_case(tax_benefit_system::TaxBenefitSystem, period::DatePeriod; 
     parents_id = OrderedSet(vcat([
       famille["parents"]
       for famille in test_case["familles"]
-    ]...)...)
+    ]...))
     return struct(
       [
         "familles" => pipe(
