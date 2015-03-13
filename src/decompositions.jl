@@ -26,128 +26,128 @@
 
 
 decomposition = @define_decomposition revdisp [
-    rev_net [
-        rev_trav [
-            salnet [
-                sal [
-                    salbrut [
-                        salsuperbrut
-                        cotisations_patronales
-                        allegement_fillon
-                        credit_impot_competitivite_emploi
-                        tehr
-                    ]
-                    cotisations_salariales
-                    csgsald
-                    mhsup
-                ]
-                csgsali
-                crdssal
-                forfait_social
-                hsup
-            ]
-            rag
-            ric
-            rnc
+  rev_net [
+    rev_trav [
+      salnet [
+        sal [
+          salbrut [
+            salsuperbrut
+            cotisations_patronales
+            allegement_fillon
+            credit_impot_competitivite_emploi
+            tehr
+          ]
+          cotisations_salariales
+          csgsald
+          mhsup
         ]
-        pen [
-            chonet [
-                cho [
-                    chobrut
-                    csgchod
-                ]
-                csgchoi
-                crdscho
-            ]
-            rstnet [
-                rst [
-                    rstbrut
-                    csgrstd
-                ]
-                csgrsti
-                crdsrst
-            ]
-            alr
-            alv
-            rto
-        ]
-        rev_cap_net [
-            rev_cap_brut [
-                fon
-                f3vg
-                f3vz
-                rev_cap_bar
-                rev_cap_lib
-                rac
-            ]
-            cotsoc_cap [
-                prelsoc_cap [
-                    prelsoc_fon
-                    prelsoc_pv_mo
-                    prelsoc_pv_immo
-                    prelsoc_cap_bar
-                    prelsoc_cap_lib
-                ]
-                csg_cap [
-                    csg_fon
-                    csg_pv_mo
-                    csg_pv_immo
-                    csg_cap_bar
-                    csg_cap_lib
-                ]
-                crds_cap [
-                    crds_fon
-                    crds_pv_mo
-                    crds_pv_immo
-                    crds_cap_bar
-                    crds_cap_lib
-                ]
-            ]
-            imp_lib
-        ]
+        csgsali
+        crdssal
+        forfait_social
+        hsup
+      ]
+      rag
+      ric
+      rnc
     ]
-    psoc [
-        pfam [
-            af
-            cf
-            ars
-            aeeh
-            paje [
-                paje_base
-                paje_nais
-                paje_clca
-                paje_colca
-                paje_clmg
-            ]
-            asf
-            crds_pfam
+    pen [
+      chonet [
+        cho [
+          chobrut
+          csgchod
         ]
-        mini [
-            aspa
-            aah
-            caah
-            asi
-            rsa
-            psa
-            aefa
-            api
+        csgchoi
+        crdscho
+      ]
+      rstnet [
+        rst [
+          rstbrut
+          csgrstd
         ]
-        aides_logement [
-            apl
-            als
-            alf
-            alset
-            crds_logement
-        ]
+        csgrsti
+        crdsrst
+      ]
+      alr
+      alv
+      rto
     ]
-    ppe
-    impo [
-        irpp
-        ir_pv_immo
-        isf_net [
-            isf_tot
-            bouclier_fiscal
+    rev_cap_net [
+      rev_cap_brut [
+        fon
+        f3vg
+        f3vz
+        rev_cap_bar
+        rev_cap_lib
+        rac
+      ]
+      cotsoc_cap [
+        prelsoc_cap [
+          prelsoc_fon
+          prelsoc_pv_mo
+          prelsoc_pv_immo
+          prelsoc_cap_bar
+          prelsoc_cap_lib
         ]
-        taxe_habitation
+        csg_cap [
+          csg_fon
+          csg_pv_mo
+          csg_pv_immo
+          csg_cap_bar
+          csg_cap_lib
+        ]
+        crds_cap [
+          crds_fon
+          crds_pv_mo
+          crds_pv_immo
+          crds_cap_bar
+          crds_cap_lib
+        ]
+      ]
+      imp_lib
     ]
+  ]
+  psoc [
+    pfam [
+      af
+      cf
+      ars
+      aeeh
+      paje [
+        paje_base
+        paje_nais
+        paje_clca
+        paje_colca
+        paje_clmg
+      ]
+      asf
+      crds_pfam
+    ]
+    mini [
+      aspa
+      aah
+      caah
+      asi
+      rsa
+      psa
+      aefa
+      api
+    ]
+    aides_logement [
+      apl
+      als
+      alf
+      alset
+      crds_logement
+    ]
+  ]
+  ppe
+  impo [
+    irpp
+    ir_pv_immo
+    isf_net [
+      isf_tot
+      bouclier_fiscal
+    ]
+    taxe_habitation
+  ]
 ]
