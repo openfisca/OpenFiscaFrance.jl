@@ -25,7 +25,7 @@
 # WARNING: Any manual modification may be lost.
 
 
-const DECOMPOSITION = @define_decomposition revdisp [
+decomposition = @define_decomposition revdisp [
     rev_net [
         rev_trav [
             salnet [
