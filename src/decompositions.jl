@@ -44,7 +44,7 @@ default_decomposition = @define_decomposition revdisp [
         csgsali
         crdssal
         forfait_social
-        hsup
+        # hsup
       ]
       rag
       ric
