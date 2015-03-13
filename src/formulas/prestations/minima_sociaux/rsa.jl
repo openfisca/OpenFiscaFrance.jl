@@ -45,7 +45,7 @@
     dummy_rmi = rsa .> 0
     maj = 0
     condition = (dummy_ass .+ dummy_aer .+ dummy_api .+ dummy_rmi .> 0)
-    if hasattr(af, "age3")
+    if haskey(af, "age3") # MANUAL_FIX replace hasattr with haskey
       nbPAC = nb_enf(age, smic55, af["age1"], af["age3"])
     else
       nbPAC = af_nbenf
