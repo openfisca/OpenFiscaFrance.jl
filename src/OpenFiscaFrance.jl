@@ -23,7 +23,7 @@
 module OpenFiscaFrance
 
 
-export single_entity_scenario, suggest, tax_benefit_system
+export default_decomposition, single_entity_scenario, suggest, tax_benefit_system
 
 
 importall Biryani
