@@ -81,7 +81,7 @@ function compute_allegement_fillon_anticipe(simulation, period)
   end
   if month(period.start) == 12
     cumul = calculate_add(simulation, "allegement_fillon", MonthPeriod((firstdayofmonth(period.start) - Month(11)), 11))
-    return compute_allegement_fillon(simulation, period = YearPeriod(firstdayofyear(period.start))) .- cumul
+    return compute_allegement_fillon(simulation, YearPeriod(firstdayofyear(period.start))) .- cumul
   end
 end
 
