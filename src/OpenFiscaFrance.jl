@@ -196,6 +196,7 @@ preload_zone_apl()
 
 
 macro define_decomposition(args...)
+  global tax_benefit_system
   visit_decomposition(tax_benefit_system, args...)
 end
 
