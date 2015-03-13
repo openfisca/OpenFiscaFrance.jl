@@ -378,7 +378,8 @@ end
   end
   nbenf = nbaf + nbnais
   paje_plaf = P["paje"]["base"]["plaf"]
-  plaf_tx = (nbenf > 0) .+ P["paje"]["base"]["plaf_tx1"] .* min(af_nbenf, 2) .+ P["paje"]["base"]["plaf_tx2"] .* max(af_nbenf .- 2, 0)
+  # MANUAL_FIX replaced nbenf > 0 by .>
+  plaf_tx = (nbenf .> 0) .+ P["paje"]["base"]["plaf_tx1"] .* min(af_nbenf, 2) .+ P["paje"]["base"]["plaf_tx2"] .* max(af_nbenf .- 2, 0)
   majo = isol | biact
   plaf = P["paje"]["base"]["plaf"] .* plaf_tx .+ (plaf_tx .> 0) .* P["paje"]["base"]["plaf_maj"] .* majo
   elig = (br_pf .<= plaf) .* (nbnais != 0)
