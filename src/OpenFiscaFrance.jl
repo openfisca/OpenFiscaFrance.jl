@@ -55,6 +55,7 @@ const PAC1 = Role(3)
 const PAC2 = Role(4)
 const PAC3 = Role(5)
 const PART = Role(2)
+const PREF = Role(1)
 const SCOLARITE_COLLEGE = 1
 const TAUX_DE_PRIME = 1 / 4  # primes_fonction_publique (hors suppl. familial et indemnité de résidence)/rémunération brute
 const VOUS = Role(1)
