@@ -23,7 +23,7 @@
 module OpenFiscaFrance
 
 
-export decomposition, single_entity_scenario, suggest, tax_benefit_system
+export single_entity_scenario, suggest, tax_benefit_system
 
 
 importall Biryani
@@ -196,7 +196,7 @@ preload_zone_apl()
 
 
 macro define_decomposition(args...)
-    decomposition(tax_benefit_system, args...)
+    visit_decomposition(tax_benefit_system, args...)
 end
 
 
