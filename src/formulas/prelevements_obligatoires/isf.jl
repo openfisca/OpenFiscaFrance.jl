@@ -306,7 +306,7 @@ end
   @calculate(isf_avant_plaf, period)
   @calculate(isf_apres_plaf, period)
   @calculate(irpp, period)
-  return period, min(-((isf_apres_plaf .- b4rs) .* ((-irpp) > 0) .+ (isf_avant_plaf .- b4rs) .* ((-irpp) <= 0)), 0)
+  return period, min(-((isf_apres_plaf .- b4rs) .* ((-irpp) .> 0) .+ (isf_avant_plaf .- b4rs) .* ((-irpp) .<= 0)), 0) # MANUAL_FIX used undotted operators
 end
 
 
