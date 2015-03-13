@@ -472,7 +472,7 @@ end
     chef_filter = quifam .== 0
     rsa_act_i[chef_filter] = rsa_act[chef_filter] / (1 + conj[chef_filter])
     partenaire_filter = quifam .== 1
-    rsa_act_i[partenaire_filter] = rsa_act[partenaire_filter] * conj[partenaire_filter] / 2
+    rsa_act_i[partenaire_filter] = rsa_act[partenaire_filter] .* conj[partenaire_filter] ./ 2 # MANUAL_FIX use .* and ./
     return period, rsa_act_i
   else
     return period, default_array(variable)
