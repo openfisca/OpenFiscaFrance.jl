@@ -4141,6 +4141,11 @@
   start_date = Date(2011, 1, 1),
 )
 
+@define_variable(rempli_obligation_scolaire, individu_definition, Bool, requested_period_last_value,
+  cell_default = true,
+  label = "Rempli l'obligation scolaire",
+)
+
 @define_variable(idmen, individu_definition, Int32, permanent_default_value,
   label = "Identifiant du ménage",
   permanent = true,
@@ -4157,53 +4162,56 @@
 )
 
 @define_variable(quimen, individu_definition, Int16, permanent_default_value,
+  cell_default = 1,
   permanent = true,
   values = [
-    "pref" => 0,
-    "cref" => 1,
-    "enf1" => 2,
-    "enf2" => 3,
-    "enf3" => 4,
-    "enf4" => 5,
-    "enf5" => 6,
-    "enf6" => 7,
-    "enf7" => 8,
-    "enf8" => 9,
-    "enf9" => 10,
+    "pref" => 1,
+    "cref" => 2,
+    "enf1" => 3,
+    "enf2" => 4,
+    "enf3" => 5,
+    "enf4" => 6,
+    "enf5" => 7,
+    "enf6" => 8,
+    "enf7" => 9,
+    "enf8" => 10,
+    "enf9" => 11,
   ],
 )
 
 @define_variable(quifoy, individu_definition, Int16, permanent_default_value,
+  cell_default = 1,
   permanent = true,
   values = [
-    "vous" => 0,
-    "conj" => 1,
-    "pac1" => 2,
-    "pac2" => 3,
-    "pac3" => 4,
-    "pac4" => 5,
-    "pac5" => 6,
-    "pac6" => 7,
-    "pac7" => 8,
-    "pac8" => 9,
-    "pac9" => 10,
+    "vous" => 1,
+    "conj" => 2,
+    "pac1" => 3,
+    "pac2" => 4,
+    "pac3" => 5,
+    "pac4" => 6,
+    "pac5" => 7,
+    "pac6" => 8,
+    "pac7" => 9,
+    "pac8" => 10,
+    "pac9" => 11,
   ],
 )
 
 @define_variable(quifam, individu_definition, Int16, permanent_default_value,
+  cell_default = 1,
   permanent = true,
   values = [
-    "chef" => 0,
-    "part" => 1,
-    "enf1" => 2,
-    "enf2" => 3,
-    "enf3" => 4,
-    "enf4" => 5,
-    "enf5" => 6,
-    "enf6" => 7,
-    "enf7" => 8,
-    "enf8" => 9,
-    "enf9" => 10,
+    "chef" => 1,
+    "part" => 2,
+    "enf1" => 3,
+    "enf2" => 4,
+    "enf3" => 5,
+    "enf4" => 6,
+    "enf5" => 7,
+    "enf6" => 8,
+    "enf7" => 9,
+    "enf8" => 10,
+    "enf9" => 11,
   ],
 )
 
@@ -4258,11 +4266,6 @@
 
 @define_variable(inv, individu_definition, Bool, requested_period_last_value,
   label = "Invalide",
-)
-
-@define_variable(rempli_obligation_scolaire, individu_definition, Bool, requested_period_last_value,
-  cell_default = true,
-  label = "Rempli l'obligation scolaire",
 )
 
 @define_variable(coloc, individu_definition, Bool, requested_period_last_value,
