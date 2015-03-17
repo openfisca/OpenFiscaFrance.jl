@@ -445,7 +445,7 @@ end
     Note: le partage en moitié est un point de législation, pas un choix arbitraire
     """
     period = period
-    @calculate(rsa, period)
+    @calculate_add(rsa, period) # MANUAL_FIX Use calculate_add
     @calculate(rmi, period)
     return period, max(rsa .- rmi, 0)
   else
@@ -468,7 +468,7 @@ end
     maries = entity_to_person(maries_holder, period)
     rsa_act = entity_to_person(rsa_act_holder, period)
     conj = (concub | maries)
-    rsa_act_i = 0 .* quifam
+    rsa_act_i = zeros(variable) # MANUAL_FIX use zeros
     chef_filter = quifam .== 0
     rsa_act_i[chef_filter] = rsa_act[chef_filter] / (1 + conj[chef_filter])
     partenaire_filter = quifam .== 1
