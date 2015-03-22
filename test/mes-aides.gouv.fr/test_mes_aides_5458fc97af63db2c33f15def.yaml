@@ -1,4 +1,8 @@
-name: 0_Personne seule, 1 enfant < 3 ans (enfants à charge, majoration, rsa)
+name: 0_Personne seule, 1 enfant < 3 ans
+keywords:
+  - enfants à charge
+  - majoration
+  - rsa
 description: |
   Le résultat du droit RSA semble prendre en compte l'allocation de base PAJE de la personne alors qu'elle n'a déclaré aucune ressource. Il serait plus cohérent et lisible sur la page des résultats, :
   - ou bien de recenser l'ensemble des prestations prises en compte pour le calcul du RSA (et autres peut-être),

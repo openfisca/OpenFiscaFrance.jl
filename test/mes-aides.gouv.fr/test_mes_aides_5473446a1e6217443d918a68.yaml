@@ -1,4 +1,7 @@
-name: "2 enfants de plus de 14 ans : majoration seulement pour le plus jeune (af, majoration)"
+name: "2 enfants de plus de 14 ans : majoration seulement pour le plus jeune"
+keywords:
+  - af
+  - majoration
 description: Les deux enfants ont plus de 14 ans, ce qui ouvre droit à majoration de 64,67 euros sur le deuxième enfant
 period: "month:2014-11"
 relative_error_margin: 0.02

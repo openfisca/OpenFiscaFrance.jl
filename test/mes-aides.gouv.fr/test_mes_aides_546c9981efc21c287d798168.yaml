@@ -1,4 +1,7 @@
-name: 83_ Pas de forfait logement pour un couple hébergé à titre onéreux (forfait logement, rsa)
+name: 83_ Pas de forfait logement pour un couple hébergé à titre onéreux
+keywords:
+  - forfait logement
+  - rsa
 description: Lorsque le couple déclare un hébergement à titre onéreux, pas de d'action de forfait a effectuer
 period: "month:2014-11"
 relative_error_margin: 0.02

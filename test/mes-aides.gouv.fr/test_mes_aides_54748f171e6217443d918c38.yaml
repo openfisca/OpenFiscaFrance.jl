@@ -1,4 +1,7 @@
-name: "Personne seule, ressources > plafond de  644,40 €, montant = plafond haut - ressources (ass, montant)"
+name: "Personne seule, ressources > plafond de  644,40 €, montant = plafond haut - ressources"
+keywords:
+  - ass
+  - montant
 description: "1127 - 1000 = 127"
 period: "month:2014-11"
 relative_error_margin: 0.02

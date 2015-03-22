@@ -1,4 +1,7 @@
-name: 38_RSA majoré et Congé parental, sabbatique, sans solde ou en disponibilité (majoration, rsa)
+name: 38_RSA majoré et Congé parental, sabbatique, sans solde ou en disponibilité
+keywords:
+  - majoration
+  - rsa
 description: |
   Ici, la personne est en congé parental, sabbatique, sans solde ou en disponibilité. Mais comme elle ouvre droit au RSA majoré, elle est éligible au RSA (L. 262-4, 4°).
   

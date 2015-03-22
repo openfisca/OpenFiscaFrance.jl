@@ -1,4 +1,7 @@
-name: Les ressources du conjoint doivent être ajoutées à la base ressources (al, base ressources)
+name: Les ressources du conjoint doivent être ajoutées à la base ressources
+keywords:
+  - al
+  - base ressources
 description: |
   Ce test vérifie simplement que les ressources n-2 déclarées par le conjoint sont bien intégrées dans la base de ressources.
   Ici il déclare 3597 * 4 = 14388 euros de revenus et 3000 euros de pensions alimentaires versées donc R = (14388 * 0.9) - 3000 ~= 10000

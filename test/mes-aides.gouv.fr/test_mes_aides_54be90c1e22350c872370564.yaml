@@ -1,4 +1,8 @@
-name: Application eval forfaitaire si le conjoint touche un salaire (al, base ressources, eval forfaitaire)
+name: Application eval forfaitaire si le conjoint touche un salaire
+keywords:
+  - al
+  - base ressources
+  - eval forfaitaire
 description: |
   Application d'une évaluation forfaitaire des ressources égale à 12 fois le salaire mensuel déclaré dans le cas d'un conjoint percevant des ressources mensuelles et dont les RNC n-2 sont inférieurs à 1015 fois le SMIC.
   Salaire net, m-1 = 1000 euros, donc 1000 / 0.971 = 1030 imposable (0.971 = csg non déductible + crds).

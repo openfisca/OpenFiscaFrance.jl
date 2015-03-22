@@ -1,4 +1,7 @@
-name: 3 enfants (af, montant)
+name: 3 enfants
+keywords:
+  - af
+  - montant
 description: Le petit écart est dû à la CRDS qui n'est pas prise en compte dans le simulateur...
 period: "month:2014-11"
 relative_error_margin: 0.02

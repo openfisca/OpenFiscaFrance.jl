@@ -1,4 +1,7 @@
-name: 16_Couple + 3 enfants (foyer, rsa)
+name: 16_Couple + 3 enfants
+keywords:
+  - foyer
+  - rsa
 description: |
   Sans revenu, le foyer a droit au complément familial majoré.
   Sur le RSA ;

@@ -1,4 +1,7 @@
-name: Couple deux enfants de + de 3 ans sans ressources (foyer, rsa)
+name: Couple deux enfants de + de 3 ans sans ressources
+keywords:
+  - foyer
+  - rsa
 description: "1048,55 - 148,3 - 129,99 = 770,26"
 period: "month:2014-08"
 relative_error_margin: 0.02

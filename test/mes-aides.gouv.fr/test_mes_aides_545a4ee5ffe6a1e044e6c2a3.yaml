@@ -1,4 +1,7 @@
-name: 13_Couple + 1 enfant (foyer, rsa)
+name: 13_Couple + 1 enfant
+keywords:
+  - foyer
+  - rsa
 description: |
   Ecart de qq centimes sur le RSA ?
   MF = 765.48

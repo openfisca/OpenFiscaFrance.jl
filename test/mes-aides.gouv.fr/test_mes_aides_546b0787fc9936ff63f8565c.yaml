@@ -1,4 +1,8 @@
-name: Déduction ASF (base ressources, majoration, rsa)
+name: Déduction ASF
+keywords:
+  - base ressources
+  - majoration
+  - rsa
 description: |
   situation femme seul avec enfant né en 2005, hébergement à titre gratuit, aucune ressource :
   droit rsa calculé 650€ et droit Asf 90 et droit Cmu

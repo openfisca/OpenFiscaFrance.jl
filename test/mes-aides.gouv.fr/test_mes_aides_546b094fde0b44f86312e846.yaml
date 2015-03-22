@@ -1,4 +1,8 @@
-name: Déduction ASF et PAJE (base ressources, majoration, rsa)
+name: Déduction ASF et PAJE
+keywords:
+  - base ressources
+  - majoration
+  - rsa
 description: |
   femme seule, française, sans ressources, 1 enfant né en 07/2012 : le droit Rsa affiché  = 470 soit 763 - 122(FL)  - 180 (PAJE)
   anomalie: le droit Asf est affiché en résultat mais pas déduit du Rsa alors que la PAje est déduite du montant Rsa affiché

@@ -1,4 +1,8 @@
-name: 1 enfant (al, location, ménage)
+name: 1 enfant
+keywords:
+  - al
+  - location
+  - ménage
 description: |
   L	398,87
   C	65,29

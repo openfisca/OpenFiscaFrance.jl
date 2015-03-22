@@ -1,4 +1,7 @@
-name: 4 enfants (af, montant)
+name: 4 enfants
+keywords:
+  - af
+  - montant
 description: "isolé avec 4 enfants à charge de moins de 14 ans : droit aux AF4"
 period: "month:2015-01"
 relative_error_margin: 0.02

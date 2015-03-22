@@ -1,4 +1,7 @@
-name: Couple, 2 enfants, retraite (foyer, rsa)
+name: Couple, 2 enfants, retraite
+keywords:
+  - foyer
+  - rsa
 description:
 period: "month:2014-07"
 relative_error_margin: 0.02

@@ -1,4 +1,7 @@
-name: Micro Entreprise Achat Vente (rsa, tns)
+name: Micro Entreprise Achat Vente
+keywords:
+  - rsa
+  - tns
 description: |
   Revenu brut mensuel : 1000
   Brut abattu (71%) : 290

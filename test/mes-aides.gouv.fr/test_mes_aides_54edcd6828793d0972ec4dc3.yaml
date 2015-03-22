@@ -1,4 +1,7 @@
-name: Prise en compte de tous les revenus nets catégoriels (al, base ressources)
+name: Prise en compte de tous les revenus nets catégoriels
+keywords:
+  - al
+  - base ressources
 description: |
   Ce test vérifie que les cases "autres montants imposables" (préretraite, chômage), "pensions, retraites, rentes" et "pensions alimentaires reçues", sont bien prises en compte de la même manière que les revenus d'activité (abattement de 10% pour frais professionnels).
   Ici, somme des revenus = 2738 * 4 = 10952

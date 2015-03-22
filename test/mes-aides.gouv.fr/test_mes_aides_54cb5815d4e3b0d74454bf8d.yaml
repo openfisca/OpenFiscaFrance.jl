@@ -1,4 +1,8 @@
-name: 2 enfants tous les deux âgés de plus de 14 ans (af, dom, majoration)
+name: 2 enfants tous les deux âgés de plus de 14 ans
+keywords:
+  - af
+  - dom
+  - majoration
 description: "isolé avec 2 enfants de plus de 14 ans dans les DOM : droit aux AF 2 + 1 majoration pour âge soit 129,35 +64,67=194,02 €"
 period: "month:2015-01"
 relative_error_margin: 0.02

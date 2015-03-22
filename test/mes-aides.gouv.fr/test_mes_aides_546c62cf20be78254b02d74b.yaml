@@ -1,4 +1,5 @@
-name: 62_remuneration de stage hors formation professionnelle #OpenLab (rsa)
+name: 62_remuneration de stage hors formation professionnelle #OpenLab
+keywords: rsa
 description: 
 period: "month:2014-11"
 relative_error_margin: 0.02

@@ -1,4 +1,7 @@
-name: "28_Personne seule, 1 enfant : RSA majoré (majoration, rsa)"
+name: "28_Personne seule, 1 enfant : RSA majoré"
+keywords:
+  - majoration
+  - rsa
 description: |
   RSA majoré pour 1 personne = 749,77 €
   AB PAJE : 184,09 (résultat)

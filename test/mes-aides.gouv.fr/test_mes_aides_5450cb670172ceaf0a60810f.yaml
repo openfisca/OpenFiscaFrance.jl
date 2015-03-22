@@ -1,4 +1,7 @@
-name: Locataire meublé non conventionné (al, caf.fr)
+name: Locataire meublé non conventionné
+keywords:
+  - al
+  - caf.fr
 description:
 period: "month:2014-10"
 relative_error_margin: 0.02

@@ -1,4 +1,8 @@
-name: "3 enfants - couple (al, location, ménage)"
+name: "3 enfants - couple"
+keywords:
+  - al
+  - location
+  - ménage
 description: |
   couple salariés
   3 enfants moins de 16 ans

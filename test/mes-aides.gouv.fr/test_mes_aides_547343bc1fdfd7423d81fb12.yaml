@@ -1,4 +1,7 @@
-name: Pas de majoration pour l'aîné si deux enfants (af, majoration)
+name: Pas de majoration pour l'aîné si deux enfants
+keywords:
+  - af
+  - majoration
 description: |
   Montant de base = 129.35
   L'aîné a plus de 14 ans, le deuxième a moins de 14 ans, ce qui ouvre en théorie la majoration de 64,67 euros pour l'aîné, mais cette majoration ne doit pas s'appliquer s'il n'y a que 2 enfants dans le foyer

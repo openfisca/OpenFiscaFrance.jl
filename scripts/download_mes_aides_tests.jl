@@ -141,8 +141,7 @@ for (test_index, test) in enumerate(tests)
     # Test doesn't return the expected value (yet), so skip it.
     continue
   end
-  test_name = string(test["name"], " (", join(sort(test["keywords"]), ", "), ")")
-  println(test_name)
+  println(string("[", join(sort(test["keywords"]), ", "), "] "), test["name"])
   expected_value_by_variable_name = [
     result["code"] => result["result"]
     for result in last_execution["results"]
@@ -162,7 +161,8 @@ for (test_index, test) in enumerate(tests)
   file_name = string("test_mes_aides_", test["_id"], ".yaml")
   file_path = string(tests_dir, '/', file_name)
   open(file_path, "w") do file
-    print_yaml_field(file, "name", test_name)
+    print_yaml_field(file, "name", test["name"])
+    print_yaml_field(file, "keywords", sort(test["keywords"]))
     print_yaml_field(file, "description", get(test, "description", nothing))
     print_yaml_field(file, "period", scenario["period"])
     if relative_error_margin > 0

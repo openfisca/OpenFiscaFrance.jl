@@ -1,4 +1,7 @@
-name: 15_Couple + 2 enfants (foyer, rsa)
+name: 15_Couple + 2 enfants
+keywords:
+  - foyer
+  - rsa
 description: |
   MF RSA : 918,27 
   AF : 129,99

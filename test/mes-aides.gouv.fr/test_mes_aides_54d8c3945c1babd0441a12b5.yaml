@@ -1,4 +1,8 @@
-name: Le plancher de ressources spécifique aux boursiers ne s'applique pas si c'est le conjoint qui est boursier (al, base ressources, étudiants)
+name: Le plancher de ressources spécifique aux boursiers ne s'applique pas si c'est le conjoint qui est boursier
+keywords:
+  - al
+  - base ressources
+  - étudiants
 description: |
   on ne doit pas tenir compte du statut étudiant boursier du conjoint pour le calcul de l'aide, le plafond spécifique s'applique uniquement lorsque l'allocataire est boursier, cf. article D542-10 du CSS
   http://www.legifrance.gouv.fr/affichCodeArticle.do?cidTexte=LEGITEXT000006073189&idArticle=LEGIARTI000006737381
