@@ -128,7 +128,7 @@ for (test_index, test) in enumerate(tests)
   if test["currentStatus"] == "rejected"
     continue
   end
-  error_percent = [
+  relative_error_margin = [
     "accepted-exact" => 0.,
     "accepted-2pct" => 0.02,
     "accepted-10pct" => 0.1,
@@ -136,7 +136,7 @@ for (test_index, test) in enumerate(tests)
   last_execution = test["lastExecution"]
   @assert(test["currentStatus"] == last_execution["status"])
 
-  if any(result -> haskey(result, "expectedValue") && result["result"] != result["expectedValue"],
+  if any(result -> haskey(result, "expectedValue") && !(result["status"] in ("accepted-exact", "accepted-2pct")),
       last_execution["results"])
     # Test doesn't return the expected value (yet), so skip it.
     continue
@@ -165,6 +165,9 @@ for (test_index, test) in enumerate(tests)
     print_yaml_field(file, "name", test_name)
     print_yaml_field(file, "description", get(test, "description", nothing))
     print_yaml_field(file, "period", scenario["period"])
+    if relative_error_margin > 0
+      print_yaml_field(file, "relative_error_margin", relative_error_margin)
+    end
     print_yaml_field(file, "individus", test_case["individus"])
     print_yaml_field(file, "familles", test_case["familles"])
     print_yaml_field(file, "foyers_fiscaux", test_case["foyers_fiscaux"])
