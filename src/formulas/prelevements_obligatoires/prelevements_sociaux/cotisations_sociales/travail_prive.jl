@@ -134,8 +134,8 @@ end
 ) do simulation, variable, period
   cotisation_minimale = apply_bareme(simulation, period, cotisation_type = "salarie", bareme_name = "arrco", variable_name = variable.definition.name)
   @calculate(arrco_tranche_a_taux_salarie, period)
-  @calculate(assiette_cotisations_sociales, period)
-  @calculate(plafond_securite_sociale, period)
+  @calculate_add(assiette_cotisations_sociales, period)
+  @calculate_add(plafond_securite_sociale, period)
   @calculate(type_sal, period)
   cotisation_entreprise = -(min(max(assiette_cotisations_sociales, 0), plafond_securite_sociale) .* arrco_tranche_a_taux_salarie)
   return period, (cotisation_minimale .* (arrco_tranche_a_taux_salarie .== 0) .+ cotisation_entreprise) .* (type_sal .<= 1)
