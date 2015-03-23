@@ -77,8 +77,8 @@ function test_formulas()
       if output_variables !== nothing
         for (variable_name, expected_value_by_period) in output_variables
           for (requested_period, expected_value) in expected_value_by_period
-            assert_near(calculate(simulation, variable_name, requested_period), expected_value, error_margin = 0.005,
-              message = "$variable_name@$requested_period: ")
+            assert_near(calculate(simulation, variable_name, requested_period), expected_value,
+              absolute_error_margin = 0.005, message = "$variable_name@$requested_period: ")
           end
         end
       end

@@ -32,7 +32,7 @@ function test_age_from_agem()
   add_member(foyer_fiscal)
   add_member(menage)
   add_member(individu, agem = 40 * 12 + 6, quifam = 1, quifoy = 1, quimen = 1)
-  assert_near(calculate(simulation, "age"), [40], error_margin = 0)
+  assert_near(calculate(simulation, "age"), [40], absolute_error_margin = 0)
 end
 
 
@@ -48,8 +48,8 @@ function test_age_from_birth()
   add_member(foyer_fiscal)
   add_member(menage)
   add_member(individu, birth = Date(year - 40, 1, 1), quifam = 1, quifoy = 1, quimen = 1)
-  assert_near(calculate(simulation, "age"), [40], error_margin = 0)
-  assert_near(calculate(simulation, "agem"), [40 * 12], error_margin = 0)
+  assert_near(calculate(simulation, "age"), [40], absolute_error_margin = 0)
+  assert_near(calculate(simulation, "agem"), [40 * 12], absolute_error_margin = 0)
 end
 
 
@@ -65,7 +65,7 @@ function test_agem_from_age()
   add_member(foyer_fiscal)
   add_member(menage)
   add_member(individu, age = 40, quifam = 1, quifoy = 1, quimen = 1)
-  assert_near(calculate(simulation, "agem"), [40 * 12], error_margin = 0)
+  assert_near(calculate(simulation, "agem"), [40 * 12], absolute_error_margin = 0)
 end
 
 
@@ -81,8 +81,8 @@ function test_agem_from_birth()
   add_member(foyer_fiscal)
   add_member(menage)
   add_member(individu, birth = Date(year - 40, 1, 1), quifam = 1, quifoy = 1, quimen = 1)
-  assert_near(calculate(simulation, "agem"), [40 * 12], error_margin = 0)
-  assert_near(calculate(simulation, "age"), [40], error_margin = 0)
+  assert_near(calculate(simulation, "agem"), [40 * 12], absolute_error_margin = 0)
+  assert_near(calculate(simulation, "age"), [40], absolute_error_margin = 0)
 end
 
 

@@ -89,7 +89,7 @@ end
   label = "Cotisation AGIRC tranche B (employé)",
 ) do simulation, variable, period
   cotisation = apply_bareme(simulation, period, cotisation_type = "salarie", bareme_name = "agirc", variable_name = variable.definition.name)
-  gmp_employe = calculate(simulation, "agirc_gmp_employe", period)
+  gmp_employe = calculate_add(simulation, "agirc_gmp_employe", period)
   @calculate(type_sal, period)
   return period, cotisation .+ gmp_employe .* (cotisation .== 0) .* (type_sal .== 1)
 end

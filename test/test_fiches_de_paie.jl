@@ -20,33 +20,45 @@
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 
-function assert_near2(value::Union(Array, Number), target_value::Union(Array, Number); error_margin = 1, message = "")
+function assert_near2(value::Union(Array, Number), target_value::Union(Array, Number); absolute_error_margin = 0,
+    message = "", relative_error_margin = -1)
   # A rewrite of assert near that considers that two values are nearly equal also when one is 12 times the other.
-  if error_margin <= 0
-    @assert(all(target_value .== value || target_value .* 12 .== value || target_value ./ 12 .== value),
-      "$message$value differs from $target_value")
-  else
-    @assert(all(target_value .- error_margin .< value) && all(value .< target_value .+ error_margin) ||
-      all(target_value .- error_margin .< value .* 12) && all(value .* 12 .< target_value .+ error_margin) ||
-      all(target_value .- error_margin .< value ./ 12) && all(value ./ 12 .< target_value .+ error_margin),
-      "$message$value differs from $target_value with a margin $(abs(value .- target_value)) .>= $error_margin")
+  @assert absolute_error_margin >= 0 || relative_error_margin >= 0
+  if absolute_error_margin >= 0
+    @assert(all(abs(target_value .- value) .<= absolute_error_margin) ||
+      all(abs(target_value .- value .* 12) .<= absolute_error_margin) ||
+      all(abs(target_value .- value ./ 12) .<= absolute_error_margin),
+      "$message$value differs from $target_value with an absolute margin $(abs(target_value .- value)) .>" *
+      " $absolute_error_margin")
+  end
+  if relative_error_margin >= 0
+    @assert(all(abs(target_value .- value) .<= abs(relative_error_margin .* target_value)) ||
+      all(abs(target_value .- value .* 12) .<= abs(relative_error_margin .* target_value)) ||
+      all(abs(target_value .- value ./ 12) .<= abs(relative_error_margin .* target_value)),
+      "$message$value differs from $target_value with a relative margin $(abs(target_value .- value)) .>" *
+      " $(abs(relative_error_margin .* target_value))")
   end
 end
 
 function assert_near2(value::Union(Array{Bool}, BitArray, Bool), target_value::Union(Array{Bool}, BitArray, Bool);
-    error_margin = 0, message = "")
-  # Note: Ignore error_margin when comparing booleans.
+    absolute_error_margin = 0, message = "", relative_error_margin = -1)
+  # Note: Ignore error margin when comparing booleans.
   @assert(all(target_value .== value), "$message$value differs from $target_value")
 end
 
-assert_near2(left::Union(Array, BitArray, Number), right::ArrayHandle; error_margin = 1, message = "") = assert_near2(left,
-  get_array(right), error_margin = error_margin, message = message)
+assert_near2(left::Union(Array, BitArray, Number), right::ArrayHandle; absolute_error_margin = 0, message = "",
+  relative_error_margin = -1
+) = assert_near2(left, get_array(right), absolute_error_margin = absolute_error_margin, message = message,
+  relative_error_margin = relative_error_margin)
 
-assert_near2(left::ArrayHandle, right::Union(Array, BitArray, Number); error_margin = 1, message = "") = assert_near2(
-  get_array(left), right, error_margin = error_margin, message = message)
+assert_near2(left::ArrayHandle, right::Union(Array, BitArray, Number); absolute_error_margin = 0, message = "",
+  relative_error_margin = -1
+) = assert_near2(get_array(left), right, absolute_error_margin = absolute_error_margin, message = message,
+  relative_error_margin = relative_error_margin)
 
-assert_near2(left::ArrayHandle, right::ArrayHandle; error_margin = 1, message = "") = assert_near2(get_array(left),
-  get_array(right), error_margin = error_margin, message = message)
+assert_near2(left::ArrayHandle, right::ArrayHandle; absolute_error_margin = 0, message = "", relative_error_margin = -1
+) = assert_near2(get_array(left), get_array(right), absolute_error_margin = absolute_error_margin, message = message,
+  relative_error_margin = relative_error_margin)
 
 
 function test_fiches_de_paie()
@@ -84,10 +96,10 @@ function test_fiches_de_paie()
     if output_variables !== nothing
       for (variable_name, expected_value_by_period) in output_variables
         for (requested_period, expected_value) in expected_value_by_period
-          # assert_near(calculate(simulation, variable_name, requested_period), expected_value, error_margin = 0.51,
-          #   message = "$variable_name: ")
+          # assert_near(calculate(simulation, variable_name, requested_period), expected_value,
+          #   absolute_error_margin = 0.51, message = "$variable_name: ")
           assert_near2(calculate(simulation, variable_name, requested_period, accept_other_period = true), expected_value,
-            error_margin = 0.51, message = "$variable_name: ")
+            absolute_error_margin = 0.51, message = "$variable_name: ")
         end
       end
     end
