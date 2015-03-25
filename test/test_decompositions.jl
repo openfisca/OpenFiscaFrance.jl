@@ -20,26 +20,4 @@
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 
-using Base.Test
-
-importall Biryani
-importall Biryani.DatesConverters
-import DataStructures: OrderedDict
-import Dates: Date
-importall YAML
-
-importall OpenFiscaCore
-importall OpenFiscaFrance
-
-
-# Technical Tests
-include("test_decompositions.jl")
-include("test_age.jl")
-include("test_formulas.jl")
-include("test_scenarios.jl")
-
-# Functional Tests
-# include("test_fiches_de_paie.jl")
-include("test_impot_revenu_personnes_physiques.jl")
-include("test_mes-aides.gouv.fr.jl")
-include("test_niches.jl")
+@test isa(default_decomposition, DecompositionNode)
