@@ -25,129 +25,129 @@
 # WARNING: Any manual modification may be lost.
 
 
-default_decomposition = @define_decomposition revdisp [
-  rev_net [
-    rev_trav [
-      salnet [
-        sal [
-          salbrut [
-            salsuperbrut
-            cotisations_patronales
-            allegement_fillon
-            credit_impot_competitivite_emploi
-            tehr
+default_decomposition = @define_decomposition revdisp "Revenu disponible" "Rev. disp." [0,0,255] [
+  rev_net "Revenus nets" "Rev. nets" [0,155,204] [
+    rev_trav "Revenu du travail" "Rev. travail" [0,155,204] [
+      salnet "Salaires nets" "Sal. nets" [0,138,201] [
+        sal "Salaires imposables" "Sal. impos." [0,115,170] [
+          salbrut "Salaires bruts" "Sal. bruts" [0,99,143] [
+            salsuperbrut "Salaires super bruts" "Coût travail" [0,66,92]
+            cotisations_patronales "Cotisations sociales patronales" "Cotsoc pat" [249,208,211]
+            allegement_fillon "Allègement sur les bas salaires (Fillon)" "Allèg. sal." [0,171,208]
+            credit_impot_competitivite_emploi "Crédit d'impôt compétitivité-emploi" "CICE" [0,171,255]
+            tehr "Taxe exceptionnelle sur les hauts revenus" "TEHR" [0,0,0]
           ]
-          cotisations_salariales
-          csgsald
-          mhsup
+          cotisations_salariales "Cotisations sociales salariées" "Cotsoc sal" [243,166,171]
+          csgsald "CSG déductible (salaires)" "CSG deduc" [235,114,118]
+          mhsup "Heures supplémentaires éxonérées" "Heures sup" [0,115,170]
         ]
-        csgsali
-        crdssal
-        forfait_social
-        # hsup
+        csgsali "CSG non déductible (salaires)" "CSG imp. sal." [235,114,118]
+        crdssal "CRDS (salaires)" "CRDS sal." [229,48,56]
+        forfait_social "Forfait social" "Forfait social" [235,114,118]
+        hsup "Heures supplémentaires" "Heures sup" [0,115,170]
       ]
-      rag
-      ric
-      rnc
+      rag "Revenus agricoles" "Rev. agric." [0,0,0]
+      ric "Revenus industriels et commerciaux" "R. ind. comm." [0,0,0]
+      rnc "Revenus non commerciaux" "R. non comm." [0,0,0]
     ]
-    pen [
-      chonet [
-        cho [
-          chobrut
-          csgchod
+    pen "Pensions" "Pensions" [97,75,150] [
+      chonet "Chômage net" "Chômage net" [136,120,178] [
+        cho "Chômage" "Chômage decl." [0,0,0] [
+          chobrut "Chômage brut" "Chômage brut" [0,0,0]
+          csgchod "CSG déductible (chômage)" "CSG déd. chôm." [235,114,118]
         ]
-        csgchoi
-        crdscho
+        csgchoi "CSG non déductible (chômage)" "CSG imp. chôm." [235,114,118]
+        crdscho "CRDS (chômage)" "CRDS chôm." [229,48,56]
       ]
-      rstnet [
-        rst [
-          rstbrut
-          csgrstd
+      rstnet "Retraites nettes" "Retraites nettes" [87,88,138] [
+        rst "Retraites" "Retr. décl." [0,0,0] [
+          rstbrut "Retraites brutes" "Retr. brutes" [0,0,0]
+          csgrstd "CSG déductible (retraite)" "CSG déd. ret." [235,114,118]
         ]
-        csgrsti
-        crdsrst
+        csgrsti "CSG non déductible (pensions)" "CSG imp. pens." [235,114,118]
+        crdsrst "CRDS (pensions)" "CRDS (pens.)" [229,48,56]
       ]
-      alr
-      alv
-      rto
+      alr "Pensions alimentaires reçues" "P. alim. reç." [136,120,178]
+      alv "Pensions alimentaires versée" "P. alim. vers." [136,120,178]
+      rto "Rentes viagères" "Rentes viag." [125,185,86]
     ]
-    rev_cap_net [
-      rev_cap_brut [
-        fon
-        f3vg
-        f3vz
-        rev_cap_bar
-        rev_cap_lib
-        rac
+    rev_cap_net "Revenus du capital net" "Rev. cap. net" [255,222,48] [
+      rev_cap_brut "Revenus du capital brut" "Rev. cap. brut" [255,222,48] [
+        fon "Revenus fonciers" "Rev. fonciers" [255,245,155]
+        f3vg "Plus-values de cessions de valeurs mobilières" "Plus.-values mo." [255,245,155]
+        f3vz "Plus-values immobilières" "Plus.-values immo." [255,245,155]
+        rev_cap_bar "Revenus du capital soumis au barème" "Rev cap bar" [255,239,103]
+        rev_cap_lib "Revenus du capital soumis au prélèvement libératoire" "Rev cap lib" [255,233,28]
+        rac "Revenus accessoires" "Rev. accesoires" [247,221,0]
       ]
-      cotsoc_cap [
-        prelsoc_cap [
-          prelsoc_fon
-          prelsoc_pv_mo
-          prelsoc_pv_immo
-          prelsoc_cap_bar
-          prelsoc_cap_lib
+      cotsoc_cap "Cotisations sociales sur les revenus du capital" "Cotsoc. capital" [243,166,171] [
+        prelsoc_cap "Prélèvement social sur les revenus du capital" "Pr. s. cap." [243,166,171] [
+          prelsoc_fon "Prélèvement social sur les revenus fonciers" "Pr. s. foncier" [243,166,171]
+          prelsoc_pv_mo "Prélèvement social sur les plus-values de cessions de valeurs mobilières" "Prel. soc. p.-v. mo." [243,166,171]
+          prelsoc_pv_immo "Prélèvement social sur les plus-values immobilières" "Prel. soc. p.-v." [243,166,171]
+          prelsoc_cap_bar "Prélèvement social sur les revenus du capital soumis au barème" "Pr. s. cap. bar." [243,166,171]
+          prelsoc_cap_lib "Prélèvement social sur les revenus du capital soumis au prélèvement libératoire" "Prel. soc. lib." [243,166,171]
         ]
-        csg_cap [
-          csg_fon
-          csg_pv_mo
-          csg_pv_immo
-          csg_cap_bar
-          csg_cap_lib
+        csg_cap "CSG des revenus du capital" "CSG cap." [235,114,118] [
+          csg_fon "CSG (revenus fonciers)" "CSG foncier" [235,114,118]
+          csg_pv_mo "CSG (plus-values de cessions de valeurs mobilières)" "CSG p.-v. mo." [235,114,118]
+          csg_pv_immo "CSG (plus-values immobilières)" "CSG p.-v. immo." [235,114,118]
+          csg_cap_bar "CSG (revenus du capital au barème)" "CSG cap. bar." [235,114,118]
+          csg_cap_lib "CSG (revenus du capital soumis au prélèvement libératoire)" "CSG cap. lib." [235,114,118]
         ]
-        crds_cap [
-          crds_fon
-          crds_pv_mo
-          crds_pv_immo
-          crds_cap_bar
-          crds_cap_lib
+        crds_cap "CRDS" "CRDS cap." [229,48,56] [
+          crds_fon "CRDS (revenus fonciers)" "CRDS foncier" [229,48,56]
+          crds_pv_mo "CRDS (plus-values de cessions de valeurs mobilières)" "CRDS p.-v. mo." [229,48,56]
+          crds_pv_immo "CRDS (plus-values immobilières)" "CRDS p.-v. immo." [229,48,56]
+          crds_cap_bar "CRDS (revenus du capital au barème)" "CRDS cap. bar." [229,48,56]
+          crds_cap_lib "CRDS (revenus du capital soumis au prélèvement libératoire)" "CRDS cap. lib." [229,48,56]
         ]
       ]
-      imp_lib
+      imp_lib "Prélèvement libératoire sur les revenus du patrimoine" "Prél. libérat." [232,79,95]
     ]
   ]
-  psoc [
-    pfam [
-      af
-      cf
-      ars
-      aeeh
-      paje [
-        paje_base
-        paje_nais
-        paje_clca
-        paje_colca
-        paje_clmg
+  psoc "Prestations sociales" "Prest. soc." [255,102,63] [
+    pfam "Prestations familiales" "Prest. fam." [83,170,49] [
+      af "Allocations familiales" "Alloc. fam." [181,213,154]
+      cf "Complément familial" "Compl. fam." [125,185,86]
+      ars "Allocation de rentrée scolaire" "ARS" [91,172,38]
+      aeeh "Allocation d'éducation de l'enfant handicapé" "AEEH" [80,160,38]
+      paje "Prestation d'accueil du jeune enfant" "PAJE" [77,144,34] [
+        paje_base "Paje - Allocation de base" "PAJE" [0,0,0]
+        paje_nais "Paje - Prime de naissance" "Prime naiss." [0,0,0]
+        paje_clca "Paje - Complément de libre choix d'activité" "CLCA" [0,0,0]
+        paje_colca "Paje - Complément optionnel de libre choix d'activité" "COLCA" [0,0,0]
+        paje_clmg "Paje - Complément de libre choix du mode de garde" "CLCMG" [0,0,0]
       ]
-      asf
-      crds_pfam
+      asf "Allocation de soutien familial" "ASF" [77,144,34]
+      crds_pfam "CRDS (prestations familiales)" "CRDS fam." [229,48,56]
     ]
-    mini [
-      aspa
-      aah
-      caah
-      asi
-      rsa
-      psa
-      aefa
-      api
+    mini "Minima sociaux" "Min. sociaux" [240,138,76] [
+      aspa "Allocation de solidarité aux personnes agées" "ASPA" [249,193,148]
+      aah "Allocation adulte handicapé" "AAH" [244,160,80]
+      caah "Complément de l'allocation adulte handicapé" "CAAH" [244,160,80]
+      asi "Allocation supplémentaire d'invalidité" "ASI" [244,160,80]
+      rsa "Revenu de solidarité active" "RSA" [239,130,19]
+      psa "Prime de solidarité active" "PSA" [239,130,19]
+      aefa "Aide exceptionelle de fin d'année" "AEFA" [237,119,3]
+      api "Allocation parent isolé" "API" [208,112,4]
     ]
-    aides_logement [
-      apl
-      als
-      alf
-      alset
-      crds_logement
+    aides_logement "Prestations logement" "Prest. logement" [255,222,48] [
+      apl "Aide personalisée au logement" "APL" [255,245,155]
+      als "Allocation logement social" "ALS" [255,239,103]
+      alf "Allocation de logement familiale" "ALF" [255,233,28]
+      alset "Allocation logement étudiant" "AL étudiant" [247,221,0]
+      crds_logement "CRDS (allocation logement)" "CRDS log." [229,48,56]
     ]
   ]
-  ppe
-  impo [
-    irpp
-    ir_pv_immo
-    isf_net [
-      isf_tot
-      bouclier_fiscal
+  ppe "Prime pour l'emploi" "PPE" [182,34,131]
+  impo "Impôts directs" "Impôts directs" [232,79,95] [
+    irpp "Impôt sur le revenu" "IRPP" [232,79,95]
+    ir_pv_immo "Impôt sur le revenu afférent à la plus-value immobilière" "IR immo." [232,79,95]
+    isf_net "ISF net" "ISF net" [182,34,131] [
+      isf_tot "Impôt de solidarité sur la fortune" "ISF" [232,79,95]
+      bouclier_fiscal "Bouclier fiscal" "Bouclier fiscal" [182,34,131]
     ]
-    taxe_habitation
+    taxe_habitation "Taxe d'habitation" "TH" [232,79,95]
   ]
 ]
