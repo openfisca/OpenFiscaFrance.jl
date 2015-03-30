@@ -20,11 +20,6 @@
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 
-@define_variable(nom_foyer_fiscal, foyer_fiscal_definition, UTF8String, permanent_default_value,
-  label = "Nom",
-  permanent = true,
-)
-
 @define_variable(nbN, foyer_fiscal_definition, Int32, requested_period_last_value,
   cerfa_field = "N",
   label = "Nombre d'enfants mariés/pacsés et d'enfants non mariés chargés de famille",
@@ -4222,11 +4217,6 @@
   permanent = true,
 )
 
-@define_variable(nom_individu, individu_definition, UTF8String, permanent_default_value,
-  label = "Prénom",
-  permanent = true,
-)
-
 @define_variable(adoption, individu_definition, Bool, requested_period_last_value,
   label = "Enfant adopté",
 )
@@ -5495,11 +5485,6 @@
   label = "Indemnités journalières de maladie professionnelle",
 )
 
-@define_variable(nom_famille, famille_definition, UTF8String, permanent_default_value,
-  label = "Nom",
-  permanent = true,
-)
-
 @define_variable(proprietaire_proche_famille, famille_definition, Bool, requested_period_last_value,
   label = "Le propriétaire du logement a un lien de parenté avec la personne de référence ou son conjoint",
 )
@@ -5530,11 +5515,6 @@
 
 @define_variable(gar_dom, famille_definition, Bool, requested_period_last_value,
   label = "Garde à domicile (CLCMG)",
-)
-
-@define_variable(nom_menage, menage_definition, UTF8String, permanent_default_value,
-  label = "Nom",
-  permanent = true,
 )
 
 @define_variable(depcom, menage_definition, UTF8String, requested_period_last_value,
