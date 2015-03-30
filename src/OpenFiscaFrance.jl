@@ -176,13 +176,42 @@ function each_menage_person_id_and_role(member)
 end
 
 
-@define_entity(famille, "familles", each_person_id_and_role = each_famille_person_id_and_role,
-  index_variable_name = "idfam", role_variable_name ="quifam")
-@define_entity(foyer_fiscal, "foyers_fiscaux", each_person_id_and_role = each_foyer_fiscal_person_id_and_role,
-  index_variable_name = "idfoy", role_variable_name ="quifoy")
-@define_entity(individu, "individus", is_person = true)
-@define_entity(menage, "menages", each_person_id_and_role = each_menage_person_id_and_role,
-  index_variable_name = "idmen", role_variable_name ="quimen")
+@define_entity(famille, "familles",
+  each_person_id_and_role = each_famille_person_id_and_role,
+  index_variable_name = "idfam",
+  label = "famille",
+  label_by_role_name = ["enfants" => "enfants", "parents" => "parents"],
+  label_plural = "familles",
+  max_persons_by_role_name = ["parents" => 2],
+  roles_name = ["parents", "enfants"],
+  role_variable_name = "quifam",
+)
+@define_entity(foyer_fiscal, "foyers_fiscaux",
+  each_person_id_and_role = each_foyer_fiscal_person_id_and_role,
+  index_variable_name = "idfoy",
+  label = "foyer fiscal",
+  label_by_role_name = ["declarants" => "déclarants", "personnes_a_charge" => "personnes à charge"],
+  label_plural = "foyers fiscaux",
+  max_persons_by_role_name = ["declarants" => 2],
+  roles_name = ["declarants", "personnes_a_charge"],
+  role_variable_name = "quifoy",
+)
+@define_entity(individu, "individus", is_person = true, label = "personne", label_plural = "personnes")
+@define_entity(menage, "menages",
+  each_person_id_and_role = each_menage_person_id_and_role,
+  index_variable_name = "idmen",
+  label = "ménage",
+  label_by_role_name = [
+    "autres" => "autres",
+    "conjoint" => "conjoint",
+    "enfants" => "enfants",
+    "personne_de_reference" => "personne de référence",
+  ],
+  label_plural = "ménages",
+  max_persons_by_role_name = ["conjoint" => 1, "personne_de_reference" => 1],
+  roles_name = ["personne_de_reference", "conjoint", "enfants", "autres"],
+  role_variable_name = "quimen",
+)
 
 
 include("formulas.jl")
