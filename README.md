@@ -3,25 +3,19 @@
 ## Install
 
     julia
-    Pkg.clone("https://github.com/openfisca/OpenFiscaCore.jl")
-    Pkg.clone("https://github.com/openfisca/OpenFiscaFrance.jl")
-    Pkg.update()
-    exit()
+    > Pkg.clone("https://github.com/openfisca/OpenFiscaCore.jl")
+    > Pkg.clone("https://github.com/openfisca/OpenFiscaFrance.jl")
+    > Pkg.update()
+    > exit()
 
 ## Test
 
     julia
-    Pkg.test("OpenFiscaCore")
-    Pkg.test("OpenFiscaFrance")
-    exit()
+    > Pkg.test("OpenFiscaCore")
+    > Pkg.test("OpenFiscaFrance")
+    > exit()
 
-To download tests from [Ludwig](https://mes-aides.gouv.fr/tests/):
-
-    julia
-    Pkg.test("Requests")
-    Pkg.test("YAML")
-    Pkg.update()
-    exit()
+To download tests from [Ludwig](https://mes-aides.gouv.fr/tests/), first execute the commands above in order, then:
 
     julia scripts/download_mes_aides_tests.jl
 
