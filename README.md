@@ -25,4 +25,6 @@ To download tests from [Ludwig](https://mes-aides.gouv.fr/tests/), first execute
 
     julia scripts/download_mes_aides_tests.jl
 
+> The `Pkg.test` commands have to be executed first to ensure that `test/REQUIRE` dependencies are installed.
+
 Then copy back `test/mes-aides.gouv.fr` directory to OpenFisca-France Python repository if needed.
