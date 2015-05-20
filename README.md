@@ -1,5 +1,11 @@
 # OpenFiscaFrance
 
+## Dependencies
+
+- [Julia runtime](http://julialang.org/downloads/).
+
+> Under OSX with [brew](http://brew.sh) [cask](http://caskroom.io): `brew cask install julia`.
+
 ## Install
 
     julia
