@@ -136,7 +136,7 @@ for (test_index, test) in enumerate(tests)
   last_execution = test["lastExecution"]
   @assert(test["currentStatus"] == last_execution["status"])
 
-  if any(result -> haskey(result, "expectedValue") && !(result["status"] in ("accepted-exact", "accepted-2pct")),
+  if any(result -> haskey(result, "expectedValue") && haskey(result, "status") && !(result["status"] in ("accepted-exact", "accepted-2pct")),
       last_execution["results"])
     # Test doesn't return the expected value (yet), so skip it.
     continue
