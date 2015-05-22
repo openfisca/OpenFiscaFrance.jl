@@ -8,6 +8,8 @@
 
 ## Install
 
+This package is not yet registered on http://pkg.julialang.org/, this is why the following steps are required:
+
     julia
     > Pkg.clone("https://github.com/openfisca/OpenFiscaCore.jl")
     > Pkg.clone("https://github.com/openfisca/OpenFiscaFrance.jl")
@@ -23,6 +25,7 @@
 
 To download tests from [Ludwig](https://mes-aides.gouv.fr/tests/), first execute the commands above in order, then:
 
+    cd ~/.julia/v0.3/OpenFiscaFrance
     julia scripts/download_mes_aides_tests.jl
 
 > The `Pkg.test` commands have to be executed first to ensure that `test/REQUIRE` dependencies are installed.
