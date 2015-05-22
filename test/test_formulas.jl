@@ -21,7 +21,7 @@
 
 
 function test_formulas()
-  const tests_dir = "test/formulas"
+  const tests_dir = Pkg.dir("OpenFiscaFrance", "test", "formulas")
 
   test_index = 0
   for filename in sort(readdir(tests_dir))

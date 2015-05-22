@@ -62,7 +62,7 @@ assert_near2(left::ArrayHandle, right::ArrayHandle; absolute_error_margin = 0, m
 
 
 function test_mes_aides()
-  const tests_dir = "test/mes-aides.gouv.fr"
+  const tests_dir = Pkg.dir("OpenFiscaFrance", "test", "mes-aides.gouv.fr")
 
   for (test_index, file_name) in enumerate(sort(readdir(tests_dir)))
     if !endswith(file_name, ".yaml")

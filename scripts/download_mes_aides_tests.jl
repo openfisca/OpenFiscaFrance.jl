@@ -31,7 +31,7 @@ using YAML
 
 
 const server_url = "https://mes-aides.gouv.fr"
-const tests_dir = "test/mes-aides.gouv.fr"
+const tests_dir = Pkg.dir("OpenFiscaFrance", "test", "mes-aides.gouv.fr")
 
 
 function print_yaml_field(file::IO, key::String, value; indent = 0, indent_first_line = true)

@@ -377,15 +377,14 @@ zone_apl_by_depcom = nothing
 function preload_zone_apl()
   global zone_apl_by_depcom
   if zone_apl_by_depcom === nothing
-    module_dir = Pkg.dir("OpenFiscaFrance")
-    array = readcsv(joinpath(module_dir, "assets/apl/20110914_zonage.csv"), String)
+    array = readcsv(Pkg.dir("OpenFiscaFrance", "assets", "apl", "20110914_zonage.csv"), String)
     zone_apl_by_depcom = [
       # Keep only first char of Zonage column because of 1bis value considered equivalent to 1.
       depcom => Convertible(string(zone_apl_string[1])) |> input_to_int |> to_value
       for (depcom, zone_apl_string) in zip(array[2:end, 1], array[2:end, 5])
     ]
     commune_depcom_by_subcommune_depcom = JSON.parsefile(
-      joinpath(module_dir, "assets/apl/commune_depcom_by_subcommune_depcom.json"))
+      Pkg.dir("OpenFiscaFrance", "assets", "apl", "commune_depcom_by_subcommune_depcom.json"))
     for (subcommune_depcom, commune_depcom) in commune_depcom_by_subcommune_depcom
       zone_apl_by_depcom[subcommune_depcom] = zone_apl_by_depcom[commune_depcom]
     end
