@@ -21,7 +21,7 @@
 
 
 function test_niches()
-  tests_data = YAML.load_file("test/niches.yaml")
+  tests_data = YAML.load_file(Pkg.dir("OpenFiscaFrance", "test", "niches.yaml"))
   for (test_index, test_data) in enumerate(tests_data)
     test = Convertible(test_data) |> to_test(tax_benefit_system) |> to_value
     info("=" ^ 120)
