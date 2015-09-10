@@ -1,0 +1,24 @@
+name: Cotisations vieillesse salarié à 5000 euros brut
+keywords: Vieillesse
+description: |
+  Déplafonné : 
+  PP : 1,8% = 90€
+  PS : 0,3% = 15€
+  
+  Plafonné : (sur salaire de 3170€)
+  PP : 8,5% = 269,45
+  PS : 6,85% = 217,145
+period: "month:2015-9-1"
+relative_error_margin: 0.02
+input_variables:
+  allegement_fillon_mode_recouvrement: 2
+  contrat_de_travail_debut: "2015-01-01"
+  effectif_entreprise: 1
+  jeune_entreprise_innovante: false
+  salaire_de_base: 5000.0
+  type_sal: 0
+output_variables:
+  vieillesse_deplafonnee_employeur: -90
+  vieillesse_deplafonnee_salarie: -15
+  vieillesse_plafonnee_employeur: -269.45
+  vieillesse_plafonnee_salarie: -217.145

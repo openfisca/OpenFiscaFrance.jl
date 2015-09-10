@@ -1,0 +1,24 @@
+name: Cotisations vieillesse salarié à 3000 euros brut
+keywords: Vieillesse
+description: |
+  Déplafonné :
+  PP : 1,8 % = 54€
+  PS : 0,3% = 9€
+  
+  Plafonné : 
+  
+  PP : 8,5% = 255€
+  PS : 6,85% = 205,5€
+period: "month:2015-9-1"
+input_variables:
+  allegement_fillon_mode_recouvrement: 2
+  contrat_de_travail_debut: "2015-01-01"
+  effectif_entreprise: 1
+  jeune_entreprise_innovante: false
+  salaire_de_base: 3000.0
+  type_sal: 0
+output_variables:
+  vieillesse_deplafonnee_employeur: -54
+  vieillesse_deplafonnee_salarie: -9
+  vieillesse_plafonnee_employeur: -255
+  vieillesse_plafonnee_salarie: -205.5

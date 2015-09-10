@@ -1,0 +1,21 @@
+name: CSG/CRDS pour salarié au dessus de 4 fois le plafond sécu
+keywords:
+  - CRDS
+  - CSG
+description: |
+  Au-delà de 4 fois le plafond sécu (PSS = 3170€/mois), l'assiette de la CSG CRDS est 100% de la rem brute (au lieu de 98,25% en dessous).
+  
+  Donc par exemple pour 15000€ 
+  CSG déductible = 15000*5,1% = 765€
+period: "month:2015-9-1"
+input_variables:
+  allegement_fillon_mode_recouvrement: 2
+  contrat_de_travail_debut: "2015-01-01"
+  effectif_entreprise: 1
+  jeune_entreprise_innovante: false
+  salaire_de_base: 15000.0
+  type_sal: 0
+output_variables:
+  crds_salaire: 75
+  csg_deductible_salaire: 765
+  csg_imposable_salaire: 360
