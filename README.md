@@ -18,10 +18,14 @@ This package is not yet registered on http://pkg.julialang.org/, this is why the
 
 ## Test
 
+### Run tests
+
     julia
     > Pkg.test("OpenFiscaCore")
     > Pkg.test("OpenFiscaFrance")
     > exit()
+
+### Download YAML tests
 
 To download tests from [Ludwig](https://mes-aides.gouv.fr/tests/), first execute the commands above in order, then:
 
