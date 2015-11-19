@@ -116,7 +116,7 @@ end
 url = string(server_url, "/api/public/acceptance-tests")
 println("GET ", url)
 response = get(url)
-tests = JSON.parse(response.data)
+tests = JSON.parse(Requests.text(response))
 
 if !isdir(tests_dir)
   mkdir(tests_dir)
@@ -150,7 +150,7 @@ for (test_index, test) in enumerate(tests)
   url = string(server_url, "/api/situations/", test["scenario"]["situationId"], "/openfisca-request")
   println("GET ", url)
   response = get(url)
-  openfisca_request = JSON.parse(response.data)
+  openfisca_request = JSON.parse(Requests.text(response))
 
   scenarios = openfisca_request["scenarios"]
   @assert(length(scenarios) == 1)
