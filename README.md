@@ -27,12 +27,4 @@ This package is not yet registered on http://pkg.julialang.org/, this is why the
 
 ### Download YAML tests
 
-To download tests from [Ludwig](https://mes-aides.gouv.fr/tests/), first execute the commands above in order, then:
-
-    cd ~/.julia/v0.3/OpenFiscaFrance
-    julia scripts/download_mes_aides_tests.jl
-    julia scripts/download_embauche_tests.jl
-
-> The `Pkg.test` commands have to be executed first to ensure that `test/REQUIRE` dependencies are installed.
-
-Then copy back the `test/mes-aides.gouv.fr` and `test/embauche.sgmap.fr` directories to OpenFisca-France Python repository if needed.
+To download tests from [Ludwig](https://mes-aides.gouv.fr/tests/), please use the new script in Python repo: [download_mes_aides_tests.py](https://github.com/openfisca/openfisca-france/blob/master/openfisca_france/scripts/download_mes_aides_tests.py) (see https://github.com/openfisca/openfisca-france/issues/359)
